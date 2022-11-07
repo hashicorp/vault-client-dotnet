@@ -178,268 +178,173 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*Auth* | [**DeleteAuthAlicloudRoleRole**](docs/Auth.md#deleteauthalicloudrolerole) | **DELETE** /auth/alicloud/role/{role} | Create a role and associate policies to it.
-*Auth* | [**DeleteAuthApproleRoleRoleName**](docs/Auth.md#deleteauthapprolerolerolename) | **DELETE** /auth/approle/role/{role_name} | Register an role with the backend.
-*Auth* | [**DeleteAuthApproleRoleRoleNameBindSecretId**](docs/Auth.md#deleteauthapprolerolerolenamebindsecretid) | **DELETE** /auth/approle/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
-*Auth* | [**DeleteAuthApproleRoleRoleNameBoundCidrList**](docs/Auth.md#deleteauthapprolerolerolenameboundcidrlist) | **DELETE** /auth/approle/role/{role_name}/bound-cidr-list | Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-*Auth* | [**DeleteAuthApproleRoleRoleNamePeriod**](docs/Auth.md#deleteauthapprolerolerolenameperiod) | **DELETE** /auth/approle/role/{role_name}/period | Updates the value of 'period' on the role
-*Auth* | [**DeleteAuthApproleRoleRoleNamePolicies**](docs/Auth.md#deleteauthapprolerolerolenamepolicies) | **DELETE** /auth/approle/role/{role_name}/policies | Policies of the role.
-*Auth* | [**DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroy**](docs/Auth.md#deleteauthapprolerolerolenamesecretidaccessordestroy) | **DELETE** /auth/approle/role/{role_name}/secret-id-accessor/destroy | 
-*Auth* | [**DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs**](docs/Auth.md#deleteauthapprolerolerolenamesecretidboundcidrs) | **DELETE** /auth/approle/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-*Auth* | [**DeleteAuthApproleRoleRoleNameSecretIdDestroy**](docs/Auth.md#deleteauthapprolerolerolenamesecretiddestroy) | **DELETE** /auth/approle/role/{role_name}/secret-id/destroy | Invalidate an issued secret_id
-*Auth* | [**DeleteAuthApproleRoleRoleNameSecretIdNumUses**](docs/Auth.md#deleteauthapprolerolerolenamesecretidnumuses) | **DELETE** /auth/approle/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
-*Auth* | [**DeleteAuthApproleRoleRoleNameSecretIdTtl**](docs/Auth.md#deleteauthapprolerolerolenamesecretidttl) | **DELETE** /auth/approle/role/{role_name}/secret-id-ttl | Duration in seconds of the SecretID generated against the role.
-*Auth* | [**DeleteAuthApproleRoleRoleNameTokenBoundCidrs**](docs/Auth.md#deleteauthapprolerolerolenametokenboundcidrs) | **DELETE** /auth/approle/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
-*Auth* | [**DeleteAuthApproleRoleRoleNameTokenMaxTtl**](docs/Auth.md#deleteauthapprolerolerolenametokenmaxttl) | **DELETE** /auth/approle/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
-*Auth* | [**DeleteAuthApproleRoleRoleNameTokenNumUses**](docs/Auth.md#deleteauthapprolerolerolenametokennumuses) | **DELETE** /auth/approle/role/{role_name}/token-num-uses | Number of times issued tokens can be used
-*Auth* | [**DeleteAuthApproleRoleRoleNameTokenTtl**](docs/Auth.md#deleteauthapprolerolerolenametokenttl) | **DELETE** /auth/approle/role/{role_name}/token-ttl | Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
-*Auth* | [**DeleteAuthAwsConfigCertificateCertName**](docs/Auth.md#deleteauthawsconfigcertificatecertname) | **DELETE** /auth/aws/config/certificate/{cert_name} | 
-*Auth* | [**DeleteAuthAwsConfigClient**](docs/Auth.md#deleteauthawsconfigclient) | **DELETE** /auth/aws/config/client | 
-*Auth* | [**DeleteAuthAwsConfigStsAccountId**](docs/Auth.md#deleteauthawsconfigstsaccountid) | **DELETE** /auth/aws/config/sts/{account_id} | 
-*Auth* | [**DeleteAuthAwsConfigTidyIdentityAccesslist**](docs/Auth.md#deleteauthawsconfigtidyidentityaccesslist) | **DELETE** /auth/aws/config/tidy/identity-accesslist | 
-*Auth* | [**DeleteAuthAwsConfigTidyIdentityWhitelist**](docs/Auth.md#deleteauthawsconfigtidyidentitywhitelist) | **DELETE** /auth/aws/config/tidy/identity-whitelist | 
-*Auth* | [**DeleteAuthAwsConfigTidyRoletagBlacklist**](docs/Auth.md#deleteauthawsconfigtidyroletagblacklist) | **DELETE** /auth/aws/config/tidy/roletag-blacklist | 
-*Auth* | [**DeleteAuthAwsConfigTidyRoletagDenylist**](docs/Auth.md#deleteauthawsconfigtidyroletagdenylist) | **DELETE** /auth/aws/config/tidy/roletag-denylist | 
-*Auth* | [**DeleteAuthAwsIdentityAccesslistInstanceId**](docs/Auth.md#deleteauthawsidentityaccesslistinstanceid) | **DELETE** /auth/aws/identity-accesslist/{instance_id} | 
-*Auth* | [**DeleteAuthAwsIdentityWhitelistInstanceId**](docs/Auth.md#deleteauthawsidentitywhitelistinstanceid) | **DELETE** /auth/aws/identity-whitelist/{instance_id} | 
-*Auth* | [**DeleteAuthAwsRoleRole**](docs/Auth.md#deleteauthawsrolerole) | **DELETE** /auth/aws/role/{role} | 
-*Auth* | [**DeleteAuthAwsRoletagBlacklistRoleTag**](docs/Auth.md#deleteauthawsroletagblacklistroletag) | **DELETE** /auth/aws/roletag-blacklist/{role_tag} | 
-*Auth* | [**DeleteAuthAwsRoletagDenylistRoleTag**](docs/Auth.md#deleteauthawsroletagdenylistroletag) | **DELETE** /auth/aws/roletag-denylist/{role_tag} | 
-*Auth* | [**DeleteAuthAzureConfig**](docs/Auth.md#deleteauthazureconfig) | **DELETE** /auth/azure/config | 
-*Auth* | [**DeleteAuthAzureRoleName**](docs/Auth.md#deleteauthazurerolename) | **DELETE** /auth/azure/role/{name} | 
-*Auth* | [**DeleteAuthCertCertsName**](docs/Auth.md#deleteauthcertcertsname) | **DELETE** /auth/cert/certs/{name} | Manage trusted certificates used for authentication.
-*Auth* | [**DeleteAuthCertCrlsName**](docs/Auth.md#deleteauthcertcrlsname) | **DELETE** /auth/cert/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
-*Auth* | [**DeleteAuthCfConfig**](docs/Auth.md#deleteauthcfconfig) | **DELETE** /auth/cf/config | 
-*Auth* | [**DeleteAuthCfRolesRole**](docs/Auth.md#deleteauthcfrolesrole) | **DELETE** /auth/cf/roles/{role} | 
-*Auth* | [**DeleteAuthGcpRoleName**](docs/Auth.md#deleteauthgcprolename) | **DELETE** /auth/gcp/role/{name} | Create a GCP role with associated policies and required attributes.
-*Auth* | [**DeleteAuthGithubMapTeamsKey**](docs/Auth.md#deleteauthgithubmapteamskey) | **DELETE** /auth/github/map/teams/{key} | Read/write/delete a single teams mapping
-*Auth* | [**DeleteAuthGithubMapUsersKey**](docs/Auth.md#deleteauthgithubmapuserskey) | **DELETE** /auth/github/map/users/{key} | Read/write/delete a single users mapping
-*Auth* | [**DeleteAuthJwtRoleName**](docs/Auth.md#deleteauthjwtrolename) | **DELETE** /auth/jwt/role/{name} | Delete an existing role.
-*Auth* | [**DeleteAuthKerberosGroupsName**](docs/Auth.md#deleteauthkerberosgroupsname) | **DELETE** /auth/kerberos/groups/{name} | 
-*Auth* | [**DeleteAuthKubernetesRoleName**](docs/Auth.md#deleteauthkubernetesrolename) | **DELETE** /auth/kubernetes/role/{name} | Register an role with the backend.
-*Auth* | [**DeleteAuthLdapGroupsName**](docs/Auth.md#deleteauthldapgroupsname) | **DELETE** /auth/ldap/groups/{name} | Manage additional groups for users allowed to authenticate.
-*Auth* | [**DeleteAuthLdapUsersName**](docs/Auth.md#deleteauthldapusersname) | **DELETE** /auth/ldap/users/{name} | Manage users allowed to authenticate.
-*Auth* | [**DeleteAuthOciConfig**](docs/Auth.md#deleteauthociconfig) | **DELETE** /auth/oci/config | Manages the configuration for the Vault Auth Plugin.
-*Auth* | [**DeleteAuthOciRoleRole**](docs/Auth.md#deleteauthocirolerole) | **DELETE** /auth/oci/role/{role} | Create a role and associate policies to it.
-*Auth* | [**DeleteAuthOidcRoleName**](docs/Auth.md#deleteauthoidcrolename) | **DELETE** /auth/oidc/role/{name} | Delete an existing role.
-*Auth* | [**DeleteAuthOktaGroupsName**](docs/Auth.md#deleteauthoktagroupsname) | **DELETE** /auth/okta/groups/{name} | Manage users allowed to authenticate.
-*Auth* | [**DeleteAuthOktaUsersName**](docs/Auth.md#deleteauthoktausersname) | **DELETE** /auth/okta/users/{name} | Manage additional groups for users allowed to authenticate.
-*Auth* | [**DeleteAuthRadiusUsersName**](docs/Auth.md#deleteauthradiususersname) | **DELETE** /auth/radius/users/{name} | Manage users allowed to authenticate.
-*Auth* | [**DeleteAuthTokenRolesRoleName**](docs/Auth.md#deleteauthtokenrolesrolename) | **DELETE** /auth/token/roles/{role_name} | 
-*Auth* | [**DeleteAuthUserpassUsersUsername**](docs/Auth.md#deleteauthuserpassusersusername) | **DELETE** /auth/userpass/users/{username} | Manage users allowed to authenticate.
-*Auth* | [**GetAuthAlicloudRole**](docs/Auth.md#getauthalicloudrole) | **GET** /auth/alicloud/role | Lists all the roles that are registered with Vault.
-*Auth* | [**GetAuthAlicloudRoleRole**](docs/Auth.md#getauthalicloudrolerole) | **GET** /auth/alicloud/role/{role} | Create a role and associate policies to it.
-*Auth* | [**GetAuthAlicloudRoles**](docs/Auth.md#getauthalicloudroles) | **GET** /auth/alicloud/roles | Lists all the roles that are registered with Vault.
-*Auth* | [**GetAuthApproleRole**](docs/Auth.md#getauthapprolerole) | **GET** /auth/approle/role | Lists all the roles registered with the backend.
-*Auth* | [**GetAuthApproleRoleRoleName**](docs/Auth.md#getauthapprolerolerolename) | **GET** /auth/approle/role/{role_name} | Register an role with the backend.
-*Auth* | [**GetAuthApproleRoleRoleNameBindSecretId**](docs/Auth.md#getauthapprolerolerolenamebindsecretid) | **GET** /auth/approle/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
-*Auth* | [**GetAuthApproleRoleRoleNameBoundCidrList**](docs/Auth.md#getauthapprolerolerolenameboundcidrlist) | **GET** /auth/approle/role/{role_name}/bound-cidr-list | Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-*Auth* | [**GetAuthApproleRoleRoleNameLocalSecretIds**](docs/Auth.md#getauthapprolerolerolenamelocalsecretids) | **GET** /auth/approle/role/{role_name}/local-secret-ids | Enables cluster local secret IDs
-*Auth* | [**GetAuthApproleRoleRoleNamePeriod**](docs/Auth.md#getauthapprolerolerolenameperiod) | **GET** /auth/approle/role/{role_name}/period | Updates the value of 'period' on the role
-*Auth* | [**GetAuthApproleRoleRoleNamePolicies**](docs/Auth.md#getauthapprolerolerolenamepolicies) | **GET** /auth/approle/role/{role_name}/policies | Policies of the role.
-*Auth* | [**GetAuthApproleRoleRoleNameRoleId**](docs/Auth.md#getauthapprolerolerolenameroleid) | **GET** /auth/approle/role/{role_name}/role-id | Returns the 'role_id' of the role.
-*Auth* | [**GetAuthApproleRoleRoleNameSecretId**](docs/Auth.md#getauthapprolerolerolenamesecretid) | **GET** /auth/approle/role/{role_name}/secret-id | Generate a SecretID against this role.
-*Auth* | [**GetAuthApproleRoleRoleNameSecretIdBoundCidrs**](docs/Auth.md#getauthapprolerolerolenamesecretidboundcidrs) | **GET** /auth/approle/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-*Auth* | [**GetAuthApproleRoleRoleNameSecretIdNumUses**](docs/Auth.md#getauthapprolerolerolenamesecretidnumuses) | **GET** /auth/approle/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
-*Auth* | [**GetAuthApproleRoleRoleNameSecretIdTtl**](docs/Auth.md#getauthapprolerolerolenamesecretidttl) | **GET** /auth/approle/role/{role_name}/secret-id-ttl | Duration in seconds of the SecretID generated against the role.
-*Auth* | [**GetAuthApproleRoleRoleNameTokenBoundCidrs**](docs/Auth.md#getauthapprolerolerolenametokenboundcidrs) | **GET** /auth/approle/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
-*Auth* | [**GetAuthApproleRoleRoleNameTokenMaxTtl**](docs/Auth.md#getauthapprolerolerolenametokenmaxttl) | **GET** /auth/approle/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
-*Auth* | [**GetAuthApproleRoleRoleNameTokenNumUses**](docs/Auth.md#getauthapprolerolerolenametokennumuses) | **GET** /auth/approle/role/{role_name}/token-num-uses | Number of times issued tokens can be used
-*Auth* | [**GetAuthApproleRoleRoleNameTokenTtl**](docs/Auth.md#getauthapprolerolerolenametokenttl) | **GET** /auth/approle/role/{role_name}/token-ttl | Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
-*Auth* | [**GetAuthAwsConfigCertificateCertName**](docs/Auth.md#getauthawsconfigcertificatecertname) | **GET** /auth/aws/config/certificate/{cert_name} | 
-*Auth* | [**GetAuthAwsConfigCertificates**](docs/Auth.md#getauthawsconfigcertificates) | **GET** /auth/aws/config/certificates | 
-*Auth* | [**GetAuthAwsConfigClient**](docs/Auth.md#getauthawsconfigclient) | **GET** /auth/aws/config/client | 
-*Auth* | [**GetAuthAwsConfigIdentity**](docs/Auth.md#getauthawsconfigidentity) | **GET** /auth/aws/config/identity | 
-*Auth* | [**GetAuthAwsConfigSts**](docs/Auth.md#getauthawsconfigsts) | **GET** /auth/aws/config/sts | 
-*Auth* | [**GetAuthAwsConfigStsAccountId**](docs/Auth.md#getauthawsconfigstsaccountid) | **GET** /auth/aws/config/sts/{account_id} | 
-*Auth* | [**GetAuthAwsConfigTidyIdentityAccesslist**](docs/Auth.md#getauthawsconfigtidyidentityaccesslist) | **GET** /auth/aws/config/tidy/identity-accesslist | 
-*Auth* | [**GetAuthAwsConfigTidyIdentityWhitelist**](docs/Auth.md#getauthawsconfigtidyidentitywhitelist) | **GET** /auth/aws/config/tidy/identity-whitelist | 
-*Auth* | [**GetAuthAwsConfigTidyRoletagBlacklist**](docs/Auth.md#getauthawsconfigtidyroletagblacklist) | **GET** /auth/aws/config/tidy/roletag-blacklist | 
-*Auth* | [**GetAuthAwsConfigTidyRoletagDenylist**](docs/Auth.md#getauthawsconfigtidyroletagdenylist) | **GET** /auth/aws/config/tidy/roletag-denylist | 
-*Auth* | [**GetAuthAwsIdentityAccesslist**](docs/Auth.md#getauthawsidentityaccesslist) | **GET** /auth/aws/identity-accesslist | 
-*Auth* | [**GetAuthAwsIdentityAccesslistInstanceId**](docs/Auth.md#getauthawsidentityaccesslistinstanceid) | **GET** /auth/aws/identity-accesslist/{instance_id} | 
-*Auth* | [**GetAuthAwsIdentityWhitelist**](docs/Auth.md#getauthawsidentitywhitelist) | **GET** /auth/aws/identity-whitelist | 
-*Auth* | [**GetAuthAwsIdentityWhitelistInstanceId**](docs/Auth.md#getauthawsidentitywhitelistinstanceid) | **GET** /auth/aws/identity-whitelist/{instance_id} | 
-*Auth* | [**GetAuthAwsRole**](docs/Auth.md#getauthawsrole) | **GET** /auth/aws/role | 
-*Auth* | [**GetAuthAwsRoleRole**](docs/Auth.md#getauthawsrolerole) | **GET** /auth/aws/role/{role} | 
-*Auth* | [**GetAuthAwsRoles**](docs/Auth.md#getauthawsroles) | **GET** /auth/aws/roles | 
-*Auth* | [**GetAuthAwsRoletagBlacklist**](docs/Auth.md#getauthawsroletagblacklist) | **GET** /auth/aws/roletag-blacklist | 
-*Auth* | [**GetAuthAwsRoletagBlacklistRoleTag**](docs/Auth.md#getauthawsroletagblacklistroletag) | **GET** /auth/aws/roletag-blacklist/{role_tag} | 
-*Auth* | [**GetAuthAwsRoletagDenylist**](docs/Auth.md#getauthawsroletagdenylist) | **GET** /auth/aws/roletag-denylist | 
-*Auth* | [**GetAuthAwsRoletagDenylistRoleTag**](docs/Auth.md#getauthawsroletagdenylistroletag) | **GET** /auth/aws/roletag-denylist/{role_tag} | 
-*Auth* | [**GetAuthAzureConfig**](docs/Auth.md#getauthazureconfig) | **GET** /auth/azure/config | 
-*Auth* | [**GetAuthAzureRole**](docs/Auth.md#getauthazurerole) | **GET** /auth/azure/role | 
-*Auth* | [**GetAuthAzureRoleName**](docs/Auth.md#getauthazurerolename) | **GET** /auth/azure/role/{name} | 
-*Auth* | [**GetAuthCentrifyConfig**](docs/Auth.md#getauthcentrifyconfig) | **GET** /auth/centrify/config | This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
-*Auth* | [**GetAuthCertCerts**](docs/Auth.md#getauthcertcerts) | **GET** /auth/cert/certs | Manage trusted certificates used for authentication.
-*Auth* | [**GetAuthCertCertsName**](docs/Auth.md#getauthcertcertsname) | **GET** /auth/cert/certs/{name} | Manage trusted certificates used for authentication.
-*Auth* | [**GetAuthCertConfig**](docs/Auth.md#getauthcertconfig) | **GET** /auth/cert/config | 
-*Auth* | [**GetAuthCertCrlsName**](docs/Auth.md#getauthcertcrlsname) | **GET** /auth/cert/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
-*Auth* | [**GetAuthCfConfig**](docs/Auth.md#getauthcfconfig) | **GET** /auth/cf/config | 
-*Auth* | [**GetAuthCfRoles**](docs/Auth.md#getauthcfroles) | **GET** /auth/cf/roles | 
-*Auth* | [**GetAuthCfRolesRole**](docs/Auth.md#getauthcfrolesrole) | **GET** /auth/cf/roles/{role} | 
-*Auth* | [**GetAuthGcpConfig**](docs/Auth.md#getauthgcpconfig) | **GET** /auth/gcp/config | Configure credentials used to query the GCP IAM API to verify authenticating service accounts
-*Auth* | [**GetAuthGcpRole**](docs/Auth.md#getauthgcprole) | **GET** /auth/gcp/role | Lists all the roles that are registered with Vault.
-*Auth* | [**GetAuthGcpRoleName**](docs/Auth.md#getauthgcprolename) | **GET** /auth/gcp/role/{name} | Create a GCP role with associated policies and required attributes.
-*Auth* | [**GetAuthGcpRoles**](docs/Auth.md#getauthgcproles) | **GET** /auth/gcp/roles | Lists all the roles that are registered with Vault.
-*Auth* | [**GetAuthGithubConfig**](docs/Auth.md#getauthgithubconfig) | **GET** /auth/github/config | 
-*Auth* | [**GetAuthGithubMapTeams**](docs/Auth.md#getauthgithubmapteams) | **GET** /auth/github/map/teams | Read mappings for teams
-*Auth* | [**GetAuthGithubMapTeamsKey**](docs/Auth.md#getauthgithubmapteamskey) | **GET** /auth/github/map/teams/{key} | Read/write/delete a single teams mapping
-*Auth* | [**GetAuthGithubMapUsers**](docs/Auth.md#getauthgithubmapusers) | **GET** /auth/github/map/users | Read mappings for users
-*Auth* | [**GetAuthGithubMapUsersKey**](docs/Auth.md#getauthgithubmapuserskey) | **GET** /auth/github/map/users/{key} | Read/write/delete a single users mapping
-*Auth* | [**GetAuthJwtConfig**](docs/Auth.md#getauthjwtconfig) | **GET** /auth/jwt/config | Read the current JWT authentication backend configuration.
-*Auth* | [**GetAuthJwtOidcCallback**](docs/Auth.md#getauthjwtoidccallback) | **GET** /auth/jwt/oidc/callback | Callback endpoint to complete an OIDC login.
-*Auth* | [**GetAuthJwtRole**](docs/Auth.md#getauthjwtrole) | **GET** /auth/jwt/role | Lists all the roles registered with the backend.
-*Auth* | [**GetAuthJwtRoleName**](docs/Auth.md#getauthjwtrolename) | **GET** /auth/jwt/role/{name} | Read an existing role.
-*Auth* | [**GetAuthKerberosConfig**](docs/Auth.md#getauthkerberosconfig) | **GET** /auth/kerberos/config | 
-*Auth* | [**GetAuthKerberosConfigLdap**](docs/Auth.md#getauthkerberosconfigldap) | **GET** /auth/kerberos/config/ldap | 
-*Auth* | [**GetAuthKerberosGroups**](docs/Auth.md#getauthkerberosgroups) | **GET** /auth/kerberos/groups | 
-*Auth* | [**GetAuthKerberosGroupsName**](docs/Auth.md#getauthkerberosgroupsname) | **GET** /auth/kerberos/groups/{name} | 
-*Auth* | [**GetAuthKerberosLogin**](docs/Auth.md#getauthkerberoslogin) | **GET** /auth/kerberos/login | 
-*Auth* | [**GetAuthKubernetesConfig**](docs/Auth.md#getauthkubernetesconfig) | **GET** /auth/kubernetes/config | Configures the JWT Public Key and Kubernetes API information.
-*Auth* | [**GetAuthKubernetesRole**](docs/Auth.md#getauthkubernetesrole) | **GET** /auth/kubernetes/role | Lists all the roles registered with the backend.
-*Auth* | [**GetAuthKubernetesRoleName**](docs/Auth.md#getauthkubernetesrolename) | **GET** /auth/kubernetes/role/{name} | Register an role with the backend.
-*Auth* | [**GetAuthLdapConfig**](docs/Auth.md#getauthldapconfig) | **GET** /auth/ldap/config | Configure the LDAP server to connect to, along with its options.
-*Auth* | [**GetAuthLdapGroups**](docs/Auth.md#getauthldapgroups) | **GET** /auth/ldap/groups | Manage additional groups for users allowed to authenticate.
-*Auth* | [**GetAuthLdapGroupsName**](docs/Auth.md#getauthldapgroupsname) | **GET** /auth/ldap/groups/{name} | Manage additional groups for users allowed to authenticate.
-*Auth* | [**GetAuthLdapUsers**](docs/Auth.md#getauthldapusers) | **GET** /auth/ldap/users | Manage users allowed to authenticate.
-*Auth* | [**GetAuthLdapUsersName**](docs/Auth.md#getauthldapusersname) | **GET** /auth/ldap/users/{name} | Manage users allowed to authenticate.
-*Auth* | [**GetAuthOciConfig**](docs/Auth.md#getauthociconfig) | **GET** /auth/oci/config | Manages the configuration for the Vault Auth Plugin.
-*Auth* | [**GetAuthOciRole**](docs/Auth.md#getauthocirole) | **GET** /auth/oci/role | Lists all the roles that are registered with Vault.
-*Auth* | [**GetAuthOciRoleRole**](docs/Auth.md#getauthocirolerole) | **GET** /auth/oci/role/{role} | Create a role and associate policies to it.
-*Auth* | [**GetAuthOidcConfig**](docs/Auth.md#getauthoidcconfig) | **GET** /auth/oidc/config | Read the current JWT authentication backend configuration.
-*Auth* | [**GetAuthOidcOidcCallback**](docs/Auth.md#getauthoidcoidccallback) | **GET** /auth/oidc/oidc/callback | Callback endpoint to complete an OIDC login.
-*Auth* | [**GetAuthOidcRole**](docs/Auth.md#getauthoidcrole) | **GET** /auth/oidc/role | Lists all the roles registered with the backend.
-*Auth* | [**GetAuthOidcRoleName**](docs/Auth.md#getauthoidcrolename) | **GET** /auth/oidc/role/{name} | Read an existing role.
-*Auth* | [**GetAuthOktaConfig**](docs/Auth.md#getauthoktaconfig) | **GET** /auth/okta/config | This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
-*Auth* | [**GetAuthOktaGroups**](docs/Auth.md#getauthoktagroups) | **GET** /auth/okta/groups | Manage users allowed to authenticate.
-*Auth* | [**GetAuthOktaGroupsName**](docs/Auth.md#getauthoktagroupsname) | **GET** /auth/okta/groups/{name} | Manage users allowed to authenticate.
-*Auth* | [**GetAuthOktaUsers**](docs/Auth.md#getauthoktausers) | **GET** /auth/okta/users | Manage additional groups for users allowed to authenticate.
-*Auth* | [**GetAuthOktaUsersName**](docs/Auth.md#getauthoktausersname) | **GET** /auth/okta/users/{name} | Manage additional groups for users allowed to authenticate.
-*Auth* | [**GetAuthOktaVerifyNonce**](docs/Auth.md#getauthoktaverifynonce) | **GET** /auth/okta/verify/{nonce} | 
-*Auth* | [**GetAuthRadiusConfig**](docs/Auth.md#getauthradiusconfig) | **GET** /auth/radius/config | Configure the RADIUS server to connect to, along with its options.
-*Auth* | [**GetAuthRadiusUsers**](docs/Auth.md#getauthradiususers) | **GET** /auth/radius/users | Manage users allowed to authenticate.
-*Auth* | [**GetAuthRadiusUsersName**](docs/Auth.md#getauthradiususersname) | **GET** /auth/radius/users/{name} | Manage users allowed to authenticate.
-*Auth* | [**GetAuthTokenAccessors**](docs/Auth.md#getauthtokenaccessors) | **GET** /auth/token/accessors/ | List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires 'sudo' capability in addition to 'list'.
-*Auth* | [**GetAuthTokenLookup**](docs/Auth.md#getauthtokenlookup) | **GET** /auth/token/lookup | This endpoint will lookup a token and its properties.
-*Auth* | [**GetAuthTokenLookupSelf**](docs/Auth.md#getauthtokenlookupself) | **GET** /auth/token/lookup-self | This endpoint will lookup a token and its properties.
-*Auth* | [**GetAuthTokenRoles**](docs/Auth.md#getauthtokenroles) | **GET** /auth/token/roles | This endpoint lists configured roles.
-*Auth* | [**GetAuthTokenRolesRoleName**](docs/Auth.md#getauthtokenrolesrolename) | **GET** /auth/token/roles/{role_name} | 
-*Auth* | [**GetAuthUserpassUsers**](docs/Auth.md#getauthuserpassusers) | **GET** /auth/userpass/users | Manage users allowed to authenticate.
-*Auth* | [**GetAuthUserpassUsersUsername**](docs/Auth.md#getauthuserpassusersusername) | **GET** /auth/userpass/users/{username} | Manage users allowed to authenticate.
-*Auth* | [**PostAuthAlicloudLogin**](docs/Auth.md#postauthalicloudlogin) | **POST** /auth/alicloud/login | Authenticates an RAM entity with Vault.
-*Auth* | [**PostAuthAlicloudRoleRole**](docs/Auth.md#postauthalicloudrolerole) | **POST** /auth/alicloud/role/{role} | Create a role and associate policies to it.
-*Auth* | [**PostAuthApproleLogin**](docs/Auth.md#postauthapprolelogin) | **POST** /auth/approle/login | 
-*Auth* | [**PostAuthApproleRoleRoleName**](docs/Auth.md#postauthapprolerolerolename) | **POST** /auth/approle/role/{role_name} | Register an role with the backend.
-*Auth* | [**PostAuthApproleRoleRoleNameBindSecretId**](docs/Auth.md#postauthapprolerolerolenamebindsecretid) | **POST** /auth/approle/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
-*Auth* | [**PostAuthApproleRoleRoleNameBoundCidrList**](docs/Auth.md#postauthapprolerolerolenameboundcidrlist) | **POST** /auth/approle/role/{role_name}/bound-cidr-list | Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-*Auth* | [**PostAuthApproleRoleRoleNameCustomSecretId**](docs/Auth.md#postauthapprolerolerolenamecustomsecretid) | **POST** /auth/approle/role/{role_name}/custom-secret-id | Assign a SecretID of choice against the role.
-*Auth* | [**PostAuthApproleRoleRoleNamePeriod**](docs/Auth.md#postauthapprolerolerolenameperiod) | **POST** /auth/approle/role/{role_name}/period | Updates the value of 'period' on the role
-*Auth* | [**PostAuthApproleRoleRoleNamePolicies**](docs/Auth.md#postauthapprolerolerolenamepolicies) | **POST** /auth/approle/role/{role_name}/policies | Policies of the role.
-*Auth* | [**PostAuthApproleRoleRoleNameRoleId**](docs/Auth.md#postauthapprolerolerolenameroleid) | **POST** /auth/approle/role/{role_name}/role-id | Returns the 'role_id' of the role.
-*Auth* | [**PostAuthApproleRoleRoleNameSecretId**](docs/Auth.md#postauthapprolerolerolenamesecretid) | **POST** /auth/approle/role/{role_name}/secret-id | Generate a SecretID against this role.
-*Auth* | [**PostAuthApproleRoleRoleNameSecretIdAccessorDestroy**](docs/Auth.md#postauthapprolerolerolenamesecretidaccessordestroy) | **POST** /auth/approle/role/{role_name}/secret-id-accessor/destroy | 
-*Auth* | [**PostAuthApproleRoleRoleNameSecretIdAccessorLookup**](docs/Auth.md#postauthapprolerolerolenamesecretidaccessorlookup) | **POST** /auth/approle/role/{role_name}/secret-id-accessor/lookup | 
-*Auth* | [**PostAuthApproleRoleRoleNameSecretIdBoundCidrs**](docs/Auth.md#postauthapprolerolerolenamesecretidboundcidrs) | **POST** /auth/approle/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-*Auth* | [**PostAuthApproleRoleRoleNameSecretIdDestroy**](docs/Auth.md#postauthapprolerolerolenamesecretiddestroy) | **POST** /auth/approle/role/{role_name}/secret-id/destroy | Invalidate an issued secret_id
-*Auth* | [**PostAuthApproleRoleRoleNameSecretIdLookup**](docs/Auth.md#postauthapprolerolerolenamesecretidlookup) | **POST** /auth/approle/role/{role_name}/secret-id/lookup | Read the properties of an issued secret_id
-*Auth* | [**PostAuthApproleRoleRoleNameSecretIdNumUses**](docs/Auth.md#postauthapprolerolerolenamesecretidnumuses) | **POST** /auth/approle/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
-*Auth* | [**PostAuthApproleRoleRoleNameSecretIdTtl**](docs/Auth.md#postauthapprolerolerolenamesecretidttl) | **POST** /auth/approle/role/{role_name}/secret-id-ttl | Duration in seconds of the SecretID generated against the role.
-*Auth* | [**PostAuthApproleRoleRoleNameTokenBoundCidrs**](docs/Auth.md#postauthapprolerolerolenametokenboundcidrs) | **POST** /auth/approle/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
-*Auth* | [**PostAuthApproleRoleRoleNameTokenMaxTtl**](docs/Auth.md#postauthapprolerolerolenametokenmaxttl) | **POST** /auth/approle/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
-*Auth* | [**PostAuthApproleRoleRoleNameTokenNumUses**](docs/Auth.md#postauthapprolerolerolenametokennumuses) | **POST** /auth/approle/role/{role_name}/token-num-uses | Number of times issued tokens can be used
-*Auth* | [**PostAuthApproleRoleRoleNameTokenTtl**](docs/Auth.md#postauthapprolerolerolenametokenttl) | **POST** /auth/approle/role/{role_name}/token-ttl | Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
-*Auth* | [**PostAuthApproleTidySecretId**](docs/Auth.md#postauthapproletidysecretid) | **POST** /auth/approle/tidy/secret-id | Trigger the clean-up of expired SecretID entries.
-*Auth* | [**PostAuthAwsConfigCertificateCertName**](docs/Auth.md#postauthawsconfigcertificatecertname) | **POST** /auth/aws/config/certificate/{cert_name} | 
-*Auth* | [**PostAuthAwsConfigClient**](docs/Auth.md#postauthawsconfigclient) | **POST** /auth/aws/config/client | 
-*Auth* | [**PostAuthAwsConfigIdentity**](docs/Auth.md#postauthawsconfigidentity) | **POST** /auth/aws/config/identity | 
-*Auth* | [**PostAuthAwsConfigRotateRoot**](docs/Auth.md#postauthawsconfigrotateroot) | **POST** /auth/aws/config/rotate-root | 
-*Auth* | [**PostAuthAwsConfigStsAccountId**](docs/Auth.md#postauthawsconfigstsaccountid) | **POST** /auth/aws/config/sts/{account_id} | 
-*Auth* | [**PostAuthAwsConfigTidyIdentityAccesslist**](docs/Auth.md#postauthawsconfigtidyidentityaccesslist) | **POST** /auth/aws/config/tidy/identity-accesslist | 
-*Auth* | [**PostAuthAwsConfigTidyIdentityWhitelist**](docs/Auth.md#postauthawsconfigtidyidentitywhitelist) | **POST** /auth/aws/config/tidy/identity-whitelist | 
-*Auth* | [**PostAuthAwsConfigTidyRoletagBlacklist**](docs/Auth.md#postauthawsconfigtidyroletagblacklist) | **POST** /auth/aws/config/tidy/roletag-blacklist | 
-*Auth* | [**PostAuthAwsConfigTidyRoletagDenylist**](docs/Auth.md#postauthawsconfigtidyroletagdenylist) | **POST** /auth/aws/config/tidy/roletag-denylist | 
-*Auth* | [**PostAuthAwsLogin**](docs/Auth.md#postauthawslogin) | **POST** /auth/aws/login | 
-*Auth* | [**PostAuthAwsRoleRole**](docs/Auth.md#postauthawsrolerole) | **POST** /auth/aws/role/{role} | 
-*Auth* | [**PostAuthAwsRoleRoleTag**](docs/Auth.md#postauthawsroleroletag) | **POST** /auth/aws/role/{role}/tag | 
-*Auth* | [**PostAuthAwsRoletagBlacklistRoleTag**](docs/Auth.md#postauthawsroletagblacklistroletag) | **POST** /auth/aws/roletag-blacklist/{role_tag} | 
-*Auth* | [**PostAuthAwsRoletagDenylistRoleTag**](docs/Auth.md#postauthawsroletagdenylistroletag) | **POST** /auth/aws/roletag-denylist/{role_tag} | 
-*Auth* | [**PostAuthAwsTidyIdentityAccesslist**](docs/Auth.md#postauthawstidyidentityaccesslist) | **POST** /auth/aws/tidy/identity-accesslist | 
-*Auth* | [**PostAuthAwsTidyIdentityWhitelist**](docs/Auth.md#postauthawstidyidentitywhitelist) | **POST** /auth/aws/tidy/identity-whitelist | 
-*Auth* | [**PostAuthAwsTidyRoletagBlacklist**](docs/Auth.md#postauthawstidyroletagblacklist) | **POST** /auth/aws/tidy/roletag-blacklist | 
-*Auth* | [**PostAuthAwsTidyRoletagDenylist**](docs/Auth.md#postauthawstidyroletagdenylist) | **POST** /auth/aws/tidy/roletag-denylist | 
-*Auth* | [**PostAuthAzureConfig**](docs/Auth.md#postauthazureconfig) | **POST** /auth/azure/config | 
-*Auth* | [**PostAuthAzureLogin**](docs/Auth.md#postauthazurelogin) | **POST** /auth/azure/login | 
-*Auth* | [**PostAuthAzureRoleName**](docs/Auth.md#postauthazurerolename) | **POST** /auth/azure/role/{name} | 
-*Auth* | [**PostAuthCentrifyConfig**](docs/Auth.md#postauthcentrifyconfig) | **POST** /auth/centrify/config | This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
-*Auth* | [**PostAuthCentrifyLogin**](docs/Auth.md#postauthcentrifylogin) | **POST** /auth/centrify/login | Log in with a username and password.
-*Auth* | [**PostAuthCertCertsName**](docs/Auth.md#postauthcertcertsname) | **POST** /auth/cert/certs/{name} | Manage trusted certificates used for authentication.
-*Auth* | [**PostAuthCertConfig**](docs/Auth.md#postauthcertconfig) | **POST** /auth/cert/config | 
-*Auth* | [**PostAuthCertCrlsName**](docs/Auth.md#postauthcertcrlsname) | **POST** /auth/cert/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
-*Auth* | [**PostAuthCertLogin**](docs/Auth.md#postauthcertlogin) | **POST** /auth/cert/login | 
-*Auth* | [**PostAuthCfConfig**](docs/Auth.md#postauthcfconfig) | **POST** /auth/cf/config | 
-*Auth* | [**PostAuthCfLogin**](docs/Auth.md#postauthcflogin) | **POST** /auth/cf/login | 
-*Auth* | [**PostAuthCfRolesRole**](docs/Auth.md#postauthcfrolesrole) | **POST** /auth/cf/roles/{role} | 
-*Auth* | [**PostAuthGcpConfig**](docs/Auth.md#postauthgcpconfig) | **POST** /auth/gcp/config | Configure credentials used to query the GCP IAM API to verify authenticating service accounts
-*Auth* | [**PostAuthGcpLogin**](docs/Auth.md#postauthgcplogin) | **POST** /auth/gcp/login | 
-*Auth* | [**PostAuthGcpRoleName**](docs/Auth.md#postauthgcprolename) | **POST** /auth/gcp/role/{name} | Create a GCP role with associated policies and required attributes.
-*Auth* | [**PostAuthGcpRoleNameLabels**](docs/Auth.md#postauthgcprolenamelabels) | **POST** /auth/gcp/role/{name}/labels | Add or remove labels for an existing 'gce' role
-*Auth* | [**PostAuthGcpRoleNameServiceAccounts**](docs/Auth.md#postauthgcprolenameserviceaccounts) | **POST** /auth/gcp/role/{name}/service-accounts | Add or remove service accounts for an existing `iam` role
-*Auth* | [**PostAuthGithubConfig**](docs/Auth.md#postauthgithubconfig) | **POST** /auth/github/config | 
-*Auth* | [**PostAuthGithubLogin**](docs/Auth.md#postauthgithublogin) | **POST** /auth/github/login | 
-*Auth* | [**PostAuthGithubMapTeamsKey**](docs/Auth.md#postauthgithubmapteamskey) | **POST** /auth/github/map/teams/{key} | Read/write/delete a single teams mapping
-*Auth* | [**PostAuthGithubMapUsersKey**](docs/Auth.md#postauthgithubmapuserskey) | **POST** /auth/github/map/users/{key} | Read/write/delete a single users mapping
-*Auth* | [**PostAuthJwtConfig**](docs/Auth.md#postauthjwtconfig) | **POST** /auth/jwt/config | Configure the JWT authentication backend.
-*Auth* | [**PostAuthJwtLogin**](docs/Auth.md#postauthjwtlogin) | **POST** /auth/jwt/login | Authenticates to Vault using a JWT (or OIDC) token.
-*Auth* | [**PostAuthJwtOidcAuthUrl**](docs/Auth.md#postauthjwtoidcauthurl) | **POST** /auth/jwt/oidc/auth_url | Request an authorization URL to start an OIDC login flow.
-*Auth* | [**PostAuthJwtOidcCallback**](docs/Auth.md#postauthjwtoidccallback) | **POST** /auth/jwt/oidc/callback | Callback endpoint to handle form_posts.
-*Auth* | [**PostAuthJwtRoleName**](docs/Auth.md#postauthjwtrolename) | **POST** /auth/jwt/role/{name} | Register an role with the backend.
-*Auth* | [**PostAuthKerberosConfig**](docs/Auth.md#postauthkerberosconfig) | **POST** /auth/kerberos/config | 
-*Auth* | [**PostAuthKerberosConfigLdap**](docs/Auth.md#postauthkerberosconfigldap) | **POST** /auth/kerberos/config/ldap | 
-*Auth* | [**PostAuthKerberosGroupsName**](docs/Auth.md#postauthkerberosgroupsname) | **POST** /auth/kerberos/groups/{name} | 
-*Auth* | [**PostAuthKerberosLogin**](docs/Auth.md#postauthkerberoslogin) | **POST** /auth/kerberos/login | 
-*Auth* | [**PostAuthKubernetesConfig**](docs/Auth.md#postauthkubernetesconfig) | **POST** /auth/kubernetes/config | Configures the JWT Public Key and Kubernetes API information.
-*Auth* | [**PostAuthKubernetesLogin**](docs/Auth.md#postauthkuberneteslogin) | **POST** /auth/kubernetes/login | Authenticates Kubernetes service accounts with Vault.
-*Auth* | [**PostAuthKubernetesRoleName**](docs/Auth.md#postauthkubernetesrolename) | **POST** /auth/kubernetes/role/{name} | Register an role with the backend.
-*Auth* | [**PostAuthLdapConfig**](docs/Auth.md#postauthldapconfig) | **POST** /auth/ldap/config | Configure the LDAP server to connect to, along with its options.
-*Auth* | [**PostAuthLdapGroupsName**](docs/Auth.md#postauthldapgroupsname) | **POST** /auth/ldap/groups/{name} | Manage additional groups for users allowed to authenticate.
-*Auth* | [**PostAuthLdapLoginUsername**](docs/Auth.md#postauthldaploginusername) | **POST** /auth/ldap/login/{username} | Log in with a username and password.
-*Auth* | [**PostAuthLdapUsersName**](docs/Auth.md#postauthldapusersname) | **POST** /auth/ldap/users/{name} | Manage users allowed to authenticate.
-*Auth* | [**PostAuthOciConfig**](docs/Auth.md#postauthociconfig) | **POST** /auth/oci/config | Manages the configuration for the Vault Auth Plugin.
-*Auth* | [**PostAuthOciLoginRole**](docs/Auth.md#postauthociloginrole) | **POST** /auth/oci/login/{role} | Authenticates to Vault using OCI credentials
-*Auth* | [**PostAuthOciRoleRole**](docs/Auth.md#postauthocirolerole) | **POST** /auth/oci/role/{role} | Create a role and associate policies to it.
-*Auth* | [**PostAuthOidcConfig**](docs/Auth.md#postauthoidcconfig) | **POST** /auth/oidc/config | Configure the JWT authentication backend.
-*Auth* | [**PostAuthOidcLogin**](docs/Auth.md#postauthoidclogin) | **POST** /auth/oidc/login | Authenticates to Vault using a JWT (or OIDC) token.
-*Auth* | [**PostAuthOidcOidcAuthUrl**](docs/Auth.md#postauthoidcoidcauthurl) | **POST** /auth/oidc/oidc/auth_url | Request an authorization URL to start an OIDC login flow.
-*Auth* | [**PostAuthOidcOidcCallback**](docs/Auth.md#postauthoidcoidccallback) | **POST** /auth/oidc/oidc/callback | Callback endpoint to handle form_posts.
-*Auth* | [**PostAuthOidcRoleName**](docs/Auth.md#postauthoidcrolename) | **POST** /auth/oidc/role/{name} | Register an role with the backend.
-*Auth* | [**PostAuthOktaConfig**](docs/Auth.md#postauthoktaconfig) | **POST** /auth/okta/config | This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
-*Auth* | [**PostAuthOktaGroupsName**](docs/Auth.md#postauthoktagroupsname) | **POST** /auth/okta/groups/{name} | Manage users allowed to authenticate.
-*Auth* | [**PostAuthOktaLoginUsername**](docs/Auth.md#postauthoktaloginusername) | **POST** /auth/okta/login/{username} | Log in with a username and password.
-*Auth* | [**PostAuthOktaUsersName**](docs/Auth.md#postauthoktausersname) | **POST** /auth/okta/users/{name} | Manage additional groups for users allowed to authenticate.
-*Auth* | [**PostAuthRadiusConfig**](docs/Auth.md#postauthradiusconfig) | **POST** /auth/radius/config | Configure the RADIUS server to connect to, along with its options.
-*Auth* | [**PostAuthRadiusLogin**](docs/Auth.md#postauthradiuslogin) | **POST** /auth/radius/login | Log in with a username and password.
-*Auth* | [**PostAuthRadiusLoginUrlusername**](docs/Auth.md#postauthradiusloginurlusername) | **POST** /auth/radius/login/{urlusername} | Log in with a username and password.
-*Auth* | [**PostAuthRadiusUsersName**](docs/Auth.md#postauthradiususersname) | **POST** /auth/radius/users/{name} | Manage users allowed to authenticate.
-*Auth* | [**PostAuthTokenCreate**](docs/Auth.md#postauthtokencreate) | **POST** /auth/token/create | The token create path is used to create new tokens.
-*Auth* | [**PostAuthTokenCreateOrphan**](docs/Auth.md#postauthtokencreateorphan) | **POST** /auth/token/create-orphan | The token create path is used to create new orphan tokens.
-*Auth* | [**PostAuthTokenCreateRoleName**](docs/Auth.md#postauthtokencreaterolename) | **POST** /auth/token/create/{role_name} | This token create path is used to create new tokens adhering to the given role.
-*Auth* | [**PostAuthTokenLookup**](docs/Auth.md#postauthtokenlookup) | **POST** /auth/token/lookup | This endpoint will lookup a token and its properties.
-*Auth* | [**PostAuthTokenLookupAccessor**](docs/Auth.md#postauthtokenlookupaccessor) | **POST** /auth/token/lookup-accessor | This endpoint will lookup a token associated with the given accessor and its properties. Response will not contain the token ID.
-*Auth* | [**PostAuthTokenLookupSelf**](docs/Auth.md#postauthtokenlookupself) | **POST** /auth/token/lookup-self | This endpoint will lookup a token and its properties.
-*Auth* | [**PostAuthTokenRenew**](docs/Auth.md#postauthtokenrenew) | **POST** /auth/token/renew | This endpoint will renew the given token and prevent expiration.
-*Auth* | [**PostAuthTokenRenewAccessor**](docs/Auth.md#postauthtokenrenewaccessor) | **POST** /auth/token/renew-accessor | This endpoint will renew a token associated with the given accessor and its properties. Response will not contain the token ID.
-*Auth* | [**PostAuthTokenRenewSelf**](docs/Auth.md#postauthtokenrenewself) | **POST** /auth/token/renew-self | This endpoint will renew the token used to call it and prevent expiration.
-*Auth* | [**PostAuthTokenRevoke**](docs/Auth.md#postauthtokenrevoke) | **POST** /auth/token/revoke | This endpoint will delete the given token and all of its child tokens.
-*Auth* | [**PostAuthTokenRevokeAccessor**](docs/Auth.md#postauthtokenrevokeaccessor) | **POST** /auth/token/revoke-accessor | This endpoint will delete the token associated with the accessor and all of its child tokens.
-*Auth* | [**PostAuthTokenRevokeOrphan**](docs/Auth.md#postauthtokenrevokeorphan) | **POST** /auth/token/revoke-orphan | This endpoint will delete the token and orphan its child tokens.
-*Auth* | [**PostAuthTokenRevokeSelf**](docs/Auth.md#postauthtokenrevokeself) | **POST** /auth/token/revoke-self | This endpoint will delete the token used to call it and all of its child tokens.
-*Auth* | [**PostAuthTokenRolesRoleName**](docs/Auth.md#postauthtokenrolesrolename) | **POST** /auth/token/roles/{role_name} | 
-*Auth* | [**PostAuthTokenTidy**](docs/Auth.md#postauthtokentidy) | **POST** /auth/token/tidy | This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
-*Auth* | [**PostAuthUserpassLoginUsername**](docs/Auth.md#postauthuserpassloginusername) | **POST** /auth/userpass/login/{username} | Log in with a username and password.
-*Auth* | [**PostAuthUserpassUsersUsername**](docs/Auth.md#postauthuserpassusersusername) | **POST** /auth/userpass/users/{username} | Manage users allowed to authenticate.
-*Auth* | [**PostAuthUserpassUsersUsernamePassword**](docs/Auth.md#postauthuserpassusersusernamepassword) | **POST** /auth/userpass/users/{username}/password | Reset user's password.
-*Auth* | [**PostAuthUserpassUsersUsernamePolicies**](docs/Auth.md#postauthuserpassusersusernamepolicies) | **POST** /auth/userpass/users/{username}/policies | Update the policies associated with the username.
+*Auth* | [**DeleteApproleRoleRoleName**](docs/Auth.md#deleteapprolerolerolename) | **DELETE** /auth/{mount_path}/role/{role_name} | Register an role with the backend.
+*Auth* | [**DeleteApproleRoleRoleNameBindSecretId**](docs/Auth.md#deleteapprolerolerolenamebindsecretid) | **DELETE** /auth/{mount_path}/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
+*Auth* | [**DeleteApproleRoleRoleNameBoundCidrList**](docs/Auth.md#deleteapprolerolerolenameboundcidrlist) | **DELETE** /auth/{mount_path}/role/{role_name}/bound-cidr-list | Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+*Auth* | [**DeleteApproleRoleRoleNamePeriod**](docs/Auth.md#deleteapprolerolerolenameperiod) | **DELETE** /auth/{mount_path}/role/{role_name}/period | Updates the value of 'period' on the role
+*Auth* | [**DeleteApproleRoleRoleNamePolicies**](docs/Auth.md#deleteapprolerolerolenamepolicies) | **DELETE** /auth/{mount_path}/role/{role_name}/policies | Policies of the role.
+*Auth* | [**DeleteApproleRoleRoleNameSecretIdAccessorDestroy**](docs/Auth.md#deleteapprolerolerolenamesecretidaccessordestroy) | **DELETE** /auth/{mount_path}/role/{role_name}/secret-id-accessor/destroy | 
+*Auth* | [**DeleteApproleRoleRoleNameSecretIdBoundCidrs**](docs/Auth.md#deleteapprolerolerolenamesecretidboundcidrs) | **DELETE** /auth/{mount_path}/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+*Auth* | [**DeleteApproleRoleRoleNameSecretIdDestroy**](docs/Auth.md#deleteapprolerolerolenamesecretiddestroy) | **DELETE** /auth/{mount_path}/role/{role_name}/secret-id/destroy | Invalidate an issued secret_id
+*Auth* | [**DeleteApproleRoleRoleNameSecretIdNumUses**](docs/Auth.md#deleteapprolerolerolenamesecretidnumuses) | **DELETE** /auth/{mount_path}/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
+*Auth* | [**DeleteApproleRoleRoleNameSecretIdTtl**](docs/Auth.md#deleteapprolerolerolenamesecretidttl) | **DELETE** /auth/{mount_path}/role/{role_name}/secret-id-ttl | Duration in seconds of the SecretID generated against the role.
+*Auth* | [**DeleteApproleRoleRoleNameTokenBoundCidrs**](docs/Auth.md#deleteapprolerolerolenametokenboundcidrs) | **DELETE** /auth/{mount_path}/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
+*Auth* | [**DeleteApproleRoleRoleNameTokenMaxTtl**](docs/Auth.md#deleteapprolerolerolenametokenmaxttl) | **DELETE** /auth/{mount_path}/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
+*Auth* | [**DeleteApproleRoleRoleNameTokenNumUses**](docs/Auth.md#deleteapprolerolerolenametokennumuses) | **DELETE** /auth/{mount_path}/role/{role_name}/token-num-uses | Number of times issued tokens can be used
+*Auth* | [**DeleteApproleRoleRoleNameTokenTtl**](docs/Auth.md#deleteapprolerolerolenametokenttl) | **DELETE** /auth/{mount_path}/role/{role_name}/token-ttl | Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
+*Auth* | [**DeleteAwsConfigCertificateCertName**](docs/Auth.md#deleteawsconfigcertificatecertname) | **DELETE** /auth/{mount_path}/config/certificate/{cert_name} | 
+*Auth* | [**DeleteAwsConfigClient**](docs/Auth.md#deleteawsconfigclient) | **DELETE** /auth/{mount_path}/config/client | 
+*Auth* | [**DeleteAwsConfigStsAccountId**](docs/Auth.md#deleteawsconfigstsaccountid) | **DELETE** /auth/{mount_path}/config/sts/{account_id} | 
+*Auth* | [**DeleteAwsConfigTidyIdentityAccesslist**](docs/Auth.md#deleteawsconfigtidyidentityaccesslist) | **DELETE** /auth/{mount_path}/config/tidy/identity-accesslist | 
+*Auth* | [**DeleteAwsConfigTidyIdentityWhitelist**](docs/Auth.md#deleteawsconfigtidyidentitywhitelist) | **DELETE** /auth/{mount_path}/config/tidy/identity-whitelist | 
+*Auth* | [**DeleteAwsConfigTidyRoletagBlacklist**](docs/Auth.md#deleteawsconfigtidyroletagblacklist) | **DELETE** /auth/{mount_path}/config/tidy/roletag-blacklist | 
+*Auth* | [**DeleteAwsConfigTidyRoletagDenylist**](docs/Auth.md#deleteawsconfigtidyroletagdenylist) | **DELETE** /auth/{mount_path}/config/tidy/roletag-denylist | 
+*Auth* | [**DeleteAwsIdentityAccesslistInstanceId**](docs/Auth.md#deleteawsidentityaccesslistinstanceid) | **DELETE** /auth/{mount_path}/identity-accesslist/{instance_id} | 
+*Auth* | [**DeleteAwsIdentityWhitelistInstanceId**](docs/Auth.md#deleteawsidentitywhitelistinstanceid) | **DELETE** /auth/{mount_path}/identity-whitelist/{instance_id} | 
+*Auth* | [**DeleteAwsRoleRole**](docs/Auth.md#deleteawsrolerole) | **DELETE** /auth/{mount_path}/role/{role} | 
+*Auth* | [**DeleteAwsRoletagBlacklistRoleTag**](docs/Auth.md#deleteawsroletagblacklistroletag) | **DELETE** /auth/{mount_path}/roletag-blacklist/{role_tag} | 
+*Auth* | [**DeleteAwsRoletagDenylistRoleTag**](docs/Auth.md#deleteawsroletagdenylistroletag) | **DELETE** /auth/{mount_path}/roletag-denylist/{role_tag} | 
+*Auth* | [**DeleteCertCertsName**](docs/Auth.md#deletecertcertsname) | **DELETE** /auth/{mount_path}/certs/{name} | Manage trusted certificates used for authentication.
+*Auth* | [**DeleteCertCrlsName**](docs/Auth.md#deletecertcrlsname) | **DELETE** /auth/{mount_path}/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
+*Auth* | [**DeleteCfRolesRole**](docs/Auth.md#deletecfrolesrole) | **DELETE** /auth/{mount_path}/roles/{role} | 
+*Auth* | [**DeleteGithubMapTeamsKey**](docs/Auth.md#deletegithubmapteamskey) | **DELETE** /auth/{mount_path}/map/teams/{key} | Read/write/delete a single teams mapping
+*Auth* | [**DeleteGithubMapUsersKey**](docs/Auth.md#deletegithubmapuserskey) | **DELETE** /auth/{mount_path}/map/users/{key} | Read/write/delete a single users mapping
+*Auth* | [**DeleteKerberosGroupsName**](docs/Auth.md#deletekerberosgroupsname) | **DELETE** /auth/{mount_path}/groups/{name} | 
+*Auth* | [**DeleteOidcRoleName**](docs/Auth.md#deleteoidcrolename) | **DELETE** /auth/{mount_path}/role/{name} | Delete an existing role.
+*Auth* | [**DeleteRadiusUsersName**](docs/Auth.md#deleteradiususersname) | **DELETE** /auth/{mount_path}/users/{name} | Manage users allowed to authenticate.
+*Auth* | [**DeleteTokenRolesRoleName**](docs/Auth.md#deletetokenrolesrolename) | **DELETE** /auth/{mount_path}/roles/{role_name} | 
+*Auth* | [**DeleteUserpassUsersUsername**](docs/Auth.md#deleteuserpassusersusername) | **DELETE** /auth/{mount_path}/users/{username} | Manage users allowed to authenticate.
+*Auth* | [**ListApproleRoleRoleNameSecretId**](docs/Auth.md#listapprolerolerolenamesecretid) | **GET** /auth/{mount_path}/role/{role_name}/secret-id | Generate a SecretID against this role.
+*Auth* | [**ListAwsConfigCertificates**](docs/Auth.md#listawsconfigcertificates) | **GET** /auth/{mount_path}/config/certificates | 
+*Auth* | [**ListAwsConfigSts**](docs/Auth.md#listawsconfigsts) | **GET** /auth/{mount_path}/config/sts | 
+*Auth* | [**ListAwsIdentityAccesslist**](docs/Auth.md#listawsidentityaccesslist) | **GET** /auth/{mount_path}/identity-accesslist | 
+*Auth* | [**ListAwsIdentityWhitelist**](docs/Auth.md#listawsidentitywhitelist) | **GET** /auth/{mount_path}/identity-whitelist | 
+*Auth* | [**ListAwsRoletagBlacklist**](docs/Auth.md#listawsroletagblacklist) | **GET** /auth/{mount_path}/roletag-blacklist | 
+*Auth* | [**ListAwsRoletagDenylist**](docs/Auth.md#listawsroletagdenylist) | **GET** /auth/{mount_path}/roletag-denylist | 
+*Auth* | [**ListCertCerts**](docs/Auth.md#listcertcerts) | **GET** /auth/{mount_path}/certs | Manage trusted certificates used for authentication.
+*Auth* | [**ListGcpRoles**](docs/Auth.md#listgcproles) | **GET** /auth/{mount_path}/roles | Lists all the roles that are registered with Vault.
+*Auth* | [**ListKerberosGroups**](docs/Auth.md#listkerberosgroups) | **GET** /auth/{mount_path}/groups | 
+*Auth* | [**ListOidcRole**](docs/Auth.md#listoidcrole) | **GET** /auth/{mount_path}/role | Lists all the roles registered with the backend.
+*Auth* | [**ListTokenAccessors**](docs/Auth.md#listtokenaccessors) | **GET** /auth/{mount_path}/accessors/ | List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires 'sudo' capability in addition to 'list'.
+*Auth* | [**ListUserpassUsers**](docs/Auth.md#listuserpassusers) | **GET** /auth/{mount_path}/users | Manage users allowed to authenticate.
+*Auth* | [**ReadApproleRoleRoleName**](docs/Auth.md#readapprolerolerolename) | **GET** /auth/{mount_path}/role/{role_name} | Register an role with the backend.
+*Auth* | [**ReadApproleRoleRoleNameBindSecretId**](docs/Auth.md#readapprolerolerolenamebindsecretid) | **GET** /auth/{mount_path}/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
+*Auth* | [**ReadApproleRoleRoleNameBoundCidrList**](docs/Auth.md#readapprolerolerolenameboundcidrlist) | **GET** /auth/{mount_path}/role/{role_name}/bound-cidr-list | Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+*Auth* | [**ReadApproleRoleRoleNameLocalSecretIds**](docs/Auth.md#readapprolerolerolenamelocalsecretids) | **GET** /auth/{mount_path}/role/{role_name}/local-secret-ids | Enables cluster local secret IDs
+*Auth* | [**ReadApproleRoleRoleNamePeriod**](docs/Auth.md#readapprolerolerolenameperiod) | **GET** /auth/{mount_path}/role/{role_name}/period | Updates the value of 'period' on the role
+*Auth* | [**ReadApproleRoleRoleNamePolicies**](docs/Auth.md#readapprolerolerolenamepolicies) | **GET** /auth/{mount_path}/role/{role_name}/policies | Policies of the role.
+*Auth* | [**ReadApproleRoleRoleNameRoleId**](docs/Auth.md#readapprolerolerolenameroleid) | **GET** /auth/{mount_path}/role/{role_name}/role-id | Returns the 'role_id' of the role.
+*Auth* | [**ReadApproleRoleRoleNameSecretIdBoundCidrs**](docs/Auth.md#readapprolerolerolenamesecretidboundcidrs) | **GET** /auth/{mount_path}/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+*Auth* | [**ReadApproleRoleRoleNameSecretIdNumUses**](docs/Auth.md#readapprolerolerolenamesecretidnumuses) | **GET** /auth/{mount_path}/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
+*Auth* | [**ReadApproleRoleRoleNameSecretIdTtl**](docs/Auth.md#readapprolerolerolenamesecretidttl) | **GET** /auth/{mount_path}/role/{role_name}/secret-id-ttl | Duration in seconds of the SecretID generated against the role.
+*Auth* | [**ReadApproleRoleRoleNameTokenBoundCidrs**](docs/Auth.md#readapprolerolerolenametokenboundcidrs) | **GET** /auth/{mount_path}/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
+*Auth* | [**ReadApproleRoleRoleNameTokenMaxTtl**](docs/Auth.md#readapprolerolerolenametokenmaxttl) | **GET** /auth/{mount_path}/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
+*Auth* | [**ReadApproleRoleRoleNameTokenNumUses**](docs/Auth.md#readapprolerolerolenametokennumuses) | **GET** /auth/{mount_path}/role/{role_name}/token-num-uses | Number of times issued tokens can be used
+*Auth* | [**ReadApproleRoleRoleNameTokenTtl**](docs/Auth.md#readapprolerolerolenametokenttl) | **GET** /auth/{mount_path}/role/{role_name}/token-ttl | Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
+*Auth* | [**ReadAwsConfigCertificateCertName**](docs/Auth.md#readawsconfigcertificatecertname) | **GET** /auth/{mount_path}/config/certificate/{cert_name} | 
+*Auth* | [**ReadAwsConfigClient**](docs/Auth.md#readawsconfigclient) | **GET** /auth/{mount_path}/config/client | 
+*Auth* | [**ReadAwsConfigIdentity**](docs/Auth.md#readawsconfigidentity) | **GET** /auth/{mount_path}/config/identity | 
+*Auth* | [**ReadAwsConfigStsAccountId**](docs/Auth.md#readawsconfigstsaccountid) | **GET** /auth/{mount_path}/config/sts/{account_id} | 
+*Auth* | [**ReadAwsConfigTidyIdentityAccesslist**](docs/Auth.md#readawsconfigtidyidentityaccesslist) | **GET** /auth/{mount_path}/config/tidy/identity-accesslist | 
+*Auth* | [**ReadAwsConfigTidyIdentityWhitelist**](docs/Auth.md#readawsconfigtidyidentitywhitelist) | **GET** /auth/{mount_path}/config/tidy/identity-whitelist | 
+*Auth* | [**ReadAwsConfigTidyRoletagBlacklist**](docs/Auth.md#readawsconfigtidyroletagblacklist) | **GET** /auth/{mount_path}/config/tidy/roletag-blacklist | 
+*Auth* | [**ReadAwsConfigTidyRoletagDenylist**](docs/Auth.md#readawsconfigtidyroletagdenylist) | **GET** /auth/{mount_path}/config/tidy/roletag-denylist | 
+*Auth* | [**ReadAwsIdentityAccesslistInstanceId**](docs/Auth.md#readawsidentityaccesslistinstanceid) | **GET** /auth/{mount_path}/identity-accesslist/{instance_id} | 
+*Auth* | [**ReadAwsIdentityWhitelistInstanceId**](docs/Auth.md#readawsidentitywhitelistinstanceid) | **GET** /auth/{mount_path}/identity-whitelist/{instance_id} | 
+*Auth* | [**ReadAwsRoleRole**](docs/Auth.md#readawsrolerole) | **GET** /auth/{mount_path}/role/{role} | 
+*Auth* | [**ReadAwsRoletagBlacklistRoleTag**](docs/Auth.md#readawsroletagblacklistroletag) | **GET** /auth/{mount_path}/roletag-blacklist/{role_tag} | 
+*Auth* | [**ReadAwsRoletagDenylistRoleTag**](docs/Auth.md#readawsroletagdenylistroletag) | **GET** /auth/{mount_path}/roletag-denylist/{role_tag} | 
+*Auth* | [**ReadCertCertsName**](docs/Auth.md#readcertcertsname) | **GET** /auth/{mount_path}/certs/{name} | Manage trusted certificates used for authentication.
+*Auth* | [**ReadCertCrlsName**](docs/Auth.md#readcertcrlsname) | **GET** /auth/{mount_path}/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
+*Auth* | [**ReadCfRolesRole**](docs/Auth.md#readcfrolesrole) | **GET** /auth/{mount_path}/roles/{role} | 
+*Auth* | [**ReadGithubMapTeams**](docs/Auth.md#readgithubmapteams) | **GET** /auth/{mount_path}/map/teams | Read mappings for teams
+*Auth* | [**ReadGithubMapTeamsKey**](docs/Auth.md#readgithubmapteamskey) | **GET** /auth/{mount_path}/map/teams/{key} | Read/write/delete a single teams mapping
+*Auth* | [**ReadGithubMapUsers**](docs/Auth.md#readgithubmapusers) | **GET** /auth/{mount_path}/map/users | Read mappings for users
+*Auth* | [**ReadGithubMapUsersKey**](docs/Auth.md#readgithubmapuserskey) | **GET** /auth/{mount_path}/map/users/{key} | Read/write/delete a single users mapping
+*Auth* | [**ReadKerberosConfigLdap**](docs/Auth.md#readkerberosconfigldap) | **GET** /auth/{mount_path}/config/ldap | 
+*Auth* | [**ReadKerberosGroupsName**](docs/Auth.md#readkerberosgroupsname) | **GET** /auth/{mount_path}/groups/{name} | 
+*Auth* | [**ReadOidcConfig**](docs/Auth.md#readoidcconfig) | **GET** /auth/{mount_path}/config | Read the current JWT authentication backend configuration.
+*Auth* | [**ReadOidcOidcCallback**](docs/Auth.md#readoidcoidccallback) | **GET** /auth/{mount_path}/oidc/callback | Callback endpoint to complete an OIDC login.
+*Auth* | [**ReadOidcRoleName**](docs/Auth.md#readoidcrolename) | **GET** /auth/{mount_path}/role/{name} | Read an existing role.
+*Auth* | [**ReadOktaVerifyNonce**](docs/Auth.md#readoktaverifynonce) | **GET** /auth/{mount_path}/verify/{nonce} | 
+*Auth* | [**ReadRadiusUsersName**](docs/Auth.md#readradiususersname) | **GET** /auth/{mount_path}/users/{name} | Manage users allowed to authenticate.
+*Auth* | [**ReadTokenLookup**](docs/Auth.md#readtokenlookup) | **GET** /auth/{mount_path}/lookup | This endpoint will lookup a token and its properties.
+*Auth* | [**ReadTokenLookupSelf**](docs/Auth.md#readtokenlookupself) | **GET** /auth/{mount_path}/lookup-self | This endpoint will lookup a token and its properties.
+*Auth* | [**ReadTokenRolesRoleName**](docs/Auth.md#readtokenrolesrolename) | **GET** /auth/{mount_path}/roles/{role_name} | 
+*Auth* | [**ReadUserpassUsersUsername**](docs/Auth.md#readuserpassusersusername) | **GET** /auth/{mount_path}/users/{username} | Manage users allowed to authenticate.
+*Auth* | [**UpdateApproleRoleRoleName**](docs/Auth.md#updateapprolerolerolename) | **POST** /auth/{mount_path}/role/{role_name} | Register an role with the backend.
+*Auth* | [**UpdateApproleRoleRoleNameBindSecretId**](docs/Auth.md#updateapprolerolerolenamebindsecretid) | **POST** /auth/{mount_path}/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
+*Auth* | [**UpdateApproleRoleRoleNameBoundCidrList**](docs/Auth.md#updateapprolerolerolenameboundcidrlist) | **POST** /auth/{mount_path}/role/{role_name}/bound-cidr-list | Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+*Auth* | [**UpdateApproleRoleRoleNameCustomSecretId**](docs/Auth.md#updateapprolerolerolenamecustomsecretid) | **POST** /auth/{mount_path}/role/{role_name}/custom-secret-id | Assign a SecretID of choice against the role.
+*Auth* | [**UpdateApproleRoleRoleNamePeriod**](docs/Auth.md#updateapprolerolerolenameperiod) | **POST** /auth/{mount_path}/role/{role_name}/period | Updates the value of 'period' on the role
+*Auth* | [**UpdateApproleRoleRoleNamePolicies**](docs/Auth.md#updateapprolerolerolenamepolicies) | **POST** /auth/{mount_path}/role/{role_name}/policies | Policies of the role.
+*Auth* | [**UpdateApproleRoleRoleNameRoleId**](docs/Auth.md#updateapprolerolerolenameroleid) | **POST** /auth/{mount_path}/role/{role_name}/role-id | Returns the 'role_id' of the role.
+*Auth* | [**UpdateApproleRoleRoleNameSecretId**](docs/Auth.md#updateapprolerolerolenamesecretid) | **POST** /auth/{mount_path}/role/{role_name}/secret-id | Generate a SecretID against this role.
+*Auth* | [**UpdateApproleRoleRoleNameSecretIdAccessorDestroy**](docs/Auth.md#updateapprolerolerolenamesecretidaccessordestroy) | **POST** /auth/{mount_path}/role/{role_name}/secret-id-accessor/destroy | 
+*Auth* | [**UpdateApproleRoleRoleNameSecretIdAccessorLookup**](docs/Auth.md#updateapprolerolerolenamesecretidaccessorlookup) | **POST** /auth/{mount_path}/role/{role_name}/secret-id-accessor/lookup | 
+*Auth* | [**UpdateApproleRoleRoleNameSecretIdBoundCidrs**](docs/Auth.md#updateapprolerolerolenamesecretidboundcidrs) | **POST** /auth/{mount_path}/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+*Auth* | [**UpdateApproleRoleRoleNameSecretIdDestroy**](docs/Auth.md#updateapprolerolerolenamesecretiddestroy) | **POST** /auth/{mount_path}/role/{role_name}/secret-id/destroy | Invalidate an issued secret_id
+*Auth* | [**UpdateApproleRoleRoleNameSecretIdLookup**](docs/Auth.md#updateapprolerolerolenamesecretidlookup) | **POST** /auth/{mount_path}/role/{role_name}/secret-id/lookup | Read the properties of an issued secret_id
+*Auth* | [**UpdateApproleRoleRoleNameSecretIdNumUses**](docs/Auth.md#updateapprolerolerolenamesecretidnumuses) | **POST** /auth/{mount_path}/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
+*Auth* | [**UpdateApproleRoleRoleNameSecretIdTtl**](docs/Auth.md#updateapprolerolerolenamesecretidttl) | **POST** /auth/{mount_path}/role/{role_name}/secret-id-ttl | Duration in seconds of the SecretID generated against the role.
+*Auth* | [**UpdateApproleRoleRoleNameTokenBoundCidrs**](docs/Auth.md#updateapprolerolerolenametokenboundcidrs) | **POST** /auth/{mount_path}/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
+*Auth* | [**UpdateApproleRoleRoleNameTokenMaxTtl**](docs/Auth.md#updateapprolerolerolenametokenmaxttl) | **POST** /auth/{mount_path}/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
+*Auth* | [**UpdateApproleRoleRoleNameTokenNumUses**](docs/Auth.md#updateapprolerolerolenametokennumuses) | **POST** /auth/{mount_path}/role/{role_name}/token-num-uses | Number of times issued tokens can be used
+*Auth* | [**UpdateApproleRoleRoleNameTokenTtl**](docs/Auth.md#updateapprolerolerolenametokenttl) | **POST** /auth/{mount_path}/role/{role_name}/token-ttl | Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
+*Auth* | [**UpdateApproleTidySecretId**](docs/Auth.md#updateapproletidysecretid) | **POST** /auth/{mount_path}/tidy/secret-id | Trigger the clean-up of expired SecretID entries.
+*Auth* | [**UpdateAwsConfigCertificateCertName**](docs/Auth.md#updateawsconfigcertificatecertname) | **POST** /auth/{mount_path}/config/certificate/{cert_name} | 
+*Auth* | [**UpdateAwsConfigClient**](docs/Auth.md#updateawsconfigclient) | **POST** /auth/{mount_path}/config/client | 
+*Auth* | [**UpdateAwsConfigIdentity**](docs/Auth.md#updateawsconfigidentity) | **POST** /auth/{mount_path}/config/identity | 
+*Auth* | [**UpdateAwsConfigRotateRoot**](docs/Auth.md#updateawsconfigrotateroot) | **POST** /auth/{mount_path}/config/rotate-root | 
+*Auth* | [**UpdateAwsConfigStsAccountId**](docs/Auth.md#updateawsconfigstsaccountid) | **POST** /auth/{mount_path}/config/sts/{account_id} | 
+*Auth* | [**UpdateAwsConfigTidyIdentityAccesslist**](docs/Auth.md#updateawsconfigtidyidentityaccesslist) | **POST** /auth/{mount_path}/config/tidy/identity-accesslist | 
+*Auth* | [**UpdateAwsConfigTidyIdentityWhitelist**](docs/Auth.md#updateawsconfigtidyidentitywhitelist) | **POST** /auth/{mount_path}/config/tidy/identity-whitelist | 
+*Auth* | [**UpdateAwsConfigTidyRoletagBlacklist**](docs/Auth.md#updateawsconfigtidyroletagblacklist) | **POST** /auth/{mount_path}/config/tidy/roletag-blacklist | 
+*Auth* | [**UpdateAwsConfigTidyRoletagDenylist**](docs/Auth.md#updateawsconfigtidyroletagdenylist) | **POST** /auth/{mount_path}/config/tidy/roletag-denylist | 
+*Auth* | [**UpdateAwsRoleRole**](docs/Auth.md#updateawsrolerole) | **POST** /auth/{mount_path}/role/{role} | 
+*Auth* | [**UpdateAwsRoleRoleTag**](docs/Auth.md#updateawsroleroletag) | **POST** /auth/{mount_path}/role/{role}/tag | 
+*Auth* | [**UpdateAwsRoletagBlacklistRoleTag**](docs/Auth.md#updateawsroletagblacklistroletag) | **POST** /auth/{mount_path}/roletag-blacklist/{role_tag} | 
+*Auth* | [**UpdateAwsRoletagDenylistRoleTag**](docs/Auth.md#updateawsroletagdenylistroletag) | **POST** /auth/{mount_path}/roletag-denylist/{role_tag} | 
+*Auth* | [**UpdateAwsTidyIdentityAccesslist**](docs/Auth.md#updateawstidyidentityaccesslist) | **POST** /auth/{mount_path}/tidy/identity-accesslist | 
+*Auth* | [**UpdateAwsTidyIdentityWhitelist**](docs/Auth.md#updateawstidyidentitywhitelist) | **POST** /auth/{mount_path}/tidy/identity-whitelist | 
+*Auth* | [**UpdateAwsTidyRoletagBlacklist**](docs/Auth.md#updateawstidyroletagblacklist) | **POST** /auth/{mount_path}/tidy/roletag-blacklist | 
+*Auth* | [**UpdateAwsTidyRoletagDenylist**](docs/Auth.md#updateawstidyroletagdenylist) | **POST** /auth/{mount_path}/tidy/roletag-denylist | 
+*Auth* | [**UpdateCertCertsName**](docs/Auth.md#updatecertcertsname) | **POST** /auth/{mount_path}/certs/{name} | Manage trusted certificates used for authentication.
+*Auth* | [**UpdateCertCrlsName**](docs/Auth.md#updatecertcrlsname) | **POST** /auth/{mount_path}/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
+*Auth* | [**UpdateCfRolesRole**](docs/Auth.md#updatecfrolesrole) | **POST** /auth/{mount_path}/roles/{role} | 
+*Auth* | [**UpdateGcpRoleNameLabels**](docs/Auth.md#updategcprolenamelabels) | **POST** /auth/{mount_path}/role/{name}/labels | Add or remove labels for an existing 'gce' role
+*Auth* | [**UpdateGcpRoleNameServiceAccounts**](docs/Auth.md#updategcprolenameserviceaccounts) | **POST** /auth/{mount_path}/role/{name}/service-accounts | Add or remove service accounts for an existing `iam` role
+*Auth* | [**UpdateGithubMapTeamsKey**](docs/Auth.md#updategithubmapteamskey) | **POST** /auth/{mount_path}/map/teams/{key} | Read/write/delete a single teams mapping
+*Auth* | [**UpdateGithubMapUsersKey**](docs/Auth.md#updategithubmapuserskey) | **POST** /auth/{mount_path}/map/users/{key} | Read/write/delete a single users mapping
+*Auth* | [**UpdateKerberosConfigLdap**](docs/Auth.md#updatekerberosconfigldap) | **POST** /auth/{mount_path}/config/ldap | 
+*Auth* | [**UpdateKerberosGroupsName**](docs/Auth.md#updatekerberosgroupsname) | **POST** /auth/{mount_path}/groups/{name} | 
+*Auth* | [**UpdateOciLoginRole**](docs/Auth.md#updateociloginrole) | **POST** /auth/{mount_path}/login/{role} | Authenticates to Vault using OCI credentials
+*Auth* | [**UpdateOidcConfig**](docs/Auth.md#updateoidcconfig) | **POST** /auth/{mount_path}/config | Configure the JWT authentication backend.
+*Auth* | [**UpdateOidcLogin**](docs/Auth.md#updateoidclogin) | **POST** /auth/{mount_path}/login | Authenticates to Vault using a JWT (or OIDC) token.
+*Auth* | [**UpdateOidcOidcAuthUrl**](docs/Auth.md#updateoidcoidcauthurl) | **POST** /auth/{mount_path}/oidc/auth_url | Request an authorization URL to start an OIDC login flow.
+*Auth* | [**UpdateOidcOidcCallback**](docs/Auth.md#updateoidcoidccallback) | **POST** /auth/{mount_path}/oidc/callback | Callback endpoint to handle form_posts.
+*Auth* | [**UpdateOidcRoleName**](docs/Auth.md#updateoidcrolename) | **POST** /auth/{mount_path}/role/{name} | Register an role with the backend.
+*Auth* | [**UpdateRadiusLoginUrlusername**](docs/Auth.md#updateradiusloginurlusername) | **POST** /auth/{mount_path}/login/{urlusername} | Log in with a username and password.
+*Auth* | [**UpdateRadiusUsersName**](docs/Auth.md#updateradiususersname) | **POST** /auth/{mount_path}/users/{name} | Manage users allowed to authenticate.
+*Auth* | [**UpdateTokenCreate**](docs/Auth.md#updatetokencreate) | **POST** /auth/{mount_path}/create | The token create path is used to create new tokens.
+*Auth* | [**UpdateTokenCreateOrphan**](docs/Auth.md#updatetokencreateorphan) | **POST** /auth/{mount_path}/create-orphan | The token create path is used to create new orphan tokens.
+*Auth* | [**UpdateTokenCreateRoleName**](docs/Auth.md#updatetokencreaterolename) | **POST** /auth/{mount_path}/create/{role_name} | This token create path is used to create new tokens adhering to the given role.
+*Auth* | [**UpdateTokenLookup**](docs/Auth.md#updatetokenlookup) | **POST** /auth/{mount_path}/lookup | This endpoint will lookup a token and its properties.
+*Auth* | [**UpdateTokenLookupAccessor**](docs/Auth.md#updatetokenlookupaccessor) | **POST** /auth/{mount_path}/lookup-accessor | This endpoint will lookup a token associated with the given accessor and its properties. Response will not contain the token ID.
+*Auth* | [**UpdateTokenLookupSelf**](docs/Auth.md#updatetokenlookupself) | **POST** /auth/{mount_path}/lookup-self | This endpoint will lookup a token and its properties.
+*Auth* | [**UpdateTokenRenew**](docs/Auth.md#updatetokenrenew) | **POST** /auth/{mount_path}/renew | This endpoint will renew the given token and prevent expiration.
+*Auth* | [**UpdateTokenRenewAccessor**](docs/Auth.md#updatetokenrenewaccessor) | **POST** /auth/{mount_path}/renew-accessor | This endpoint will renew a token associated with the given accessor and its properties. Response will not contain the token ID.
+*Auth* | [**UpdateTokenRenewSelf**](docs/Auth.md#updatetokenrenewself) | **POST** /auth/{mount_path}/renew-self | This endpoint will renew the token used to call it and prevent expiration.
+*Auth* | [**UpdateTokenRevoke**](docs/Auth.md#updatetokenrevoke) | **POST** /auth/{mount_path}/revoke | This endpoint will delete the given token and all of its child tokens.
+*Auth* | [**UpdateTokenRevokeAccessor**](docs/Auth.md#updatetokenrevokeaccessor) | **POST** /auth/{mount_path}/revoke-accessor | This endpoint will delete the token associated with the accessor and all of its child tokens.
+*Auth* | [**UpdateTokenRevokeOrphan**](docs/Auth.md#updatetokenrevokeorphan) | **POST** /auth/{mount_path}/revoke-orphan | This endpoint will delete the token and orphan its child tokens.
+*Auth* | [**UpdateTokenRevokeSelf**](docs/Auth.md#updatetokenrevokeself) | **POST** /auth/{mount_path}/revoke-self | This endpoint will delete the token used to call it and all of its child tokens.
+*Auth* | [**UpdateTokenRolesRoleName**](docs/Auth.md#updatetokenrolesrolename) | **POST** /auth/{mount_path}/roles/{role_name} | 
+*Auth* | [**UpdateTokenTidy**](docs/Auth.md#updatetokentidy) | **POST** /auth/{mount_path}/tidy | This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
+*Auth* | [**UpdateUserpassLoginUsername**](docs/Auth.md#updateuserpassloginusername) | **POST** /auth/{mount_path}/login/{username} | Log in with a username and password.
+*Auth* | [**UpdateUserpassUsersUsername**](docs/Auth.md#updateuserpassusersusername) | **POST** /auth/{mount_path}/users/{username} | Manage users allowed to authenticate.
+*Auth* | [**UpdateUserpassUsersUsernamePassword**](docs/Auth.md#updateuserpassusersusernamepassword) | **POST** /auth/{mount_path}/users/{username}/password | Reset user's password.
+*Auth* | [**UpdateUserpassUsersUsernamePolicies**](docs/Auth.md#updateuserpassusersusernamepolicies) | **POST** /auth/{mount_path}/users/{username}/policies | Update the policies associated with the username.
 *Identity* | [**DeleteIdentityAliasIdId**](docs/Identity.md#deleteidentityaliasidid) | **DELETE** /identity/alias/id/{id} | Update, read or delete an alias ID.
 *Identity* | [**DeleteIdentityEntityAliasIdId**](docs/Identity.md#deleteidentityentityaliasidid) | **DELETE** /identity/entity-alias/id/{id} | Update, read or delete an alias ID.
 *Identity* | [**DeleteIdentityEntityIdId**](docs/Identity.md#deleteidentityentityidid) | **DELETE** /identity/entity/id/{id} | Update, read or delete an entity using entity ID
@@ -459,600 +364,465 @@ Class | Method | HTTP request | Description
 *Identity* | [**DeleteIdentityOidcRoleName**](docs/Identity.md#deleteidentityoidcrolename) | **DELETE** /identity/oidc/role/{name} | CRUD operations on OIDC Roles
 *Identity* | [**DeleteIdentityOidcScopeName**](docs/Identity.md#deleteidentityoidcscopename) | **DELETE** /identity/oidc/scope/{name} | 
 *Identity* | [**DeleteIdentityPersonaIdId**](docs/Identity.md#deleteidentitypersonaidid) | **DELETE** /identity/persona/id/{id} | Update, read or delete an alias ID.
-*Identity* | [**GetIdentityAliasId**](docs/Identity.md#getidentityaliasid) | **GET** /identity/alias/id | List all the alias IDs.
-*Identity* | [**GetIdentityAliasIdId**](docs/Identity.md#getidentityaliasidid) | **GET** /identity/alias/id/{id} | Update, read or delete an alias ID.
-*Identity* | [**GetIdentityEntityAliasId**](docs/Identity.md#getidentityentityaliasid) | **GET** /identity/entity-alias/id | List all the alias IDs.
-*Identity* | [**GetIdentityEntityAliasIdId**](docs/Identity.md#getidentityentityaliasidid) | **GET** /identity/entity-alias/id/{id} | Update, read or delete an alias ID.
-*Identity* | [**GetIdentityEntityId**](docs/Identity.md#getidentityentityid) | **GET** /identity/entity/id | List all the entity IDs
-*Identity* | [**GetIdentityEntityIdId**](docs/Identity.md#getidentityentityidid) | **GET** /identity/entity/id/{id} | Update, read or delete an entity using entity ID
-*Identity* | [**GetIdentityEntityName**](docs/Identity.md#getidentityentityname) | **GET** /identity/entity/name | List all the entity names
-*Identity* | [**GetIdentityEntityNameName**](docs/Identity.md#getidentityentitynamename) | **GET** /identity/entity/name/{name} | Update, read or delete an entity using entity name
-*Identity* | [**GetIdentityGroupAliasId**](docs/Identity.md#getidentitygroupaliasid) | **GET** /identity/group-alias/id | List all the group alias IDs.
-*Identity* | [**GetIdentityGroupAliasIdId**](docs/Identity.md#getidentitygroupaliasidid) | **GET** /identity/group-alias/id/{id} | 
-*Identity* | [**GetIdentityGroupId**](docs/Identity.md#getidentitygroupid) | **GET** /identity/group/id | List all the group IDs.
-*Identity* | [**GetIdentityGroupIdId**](docs/Identity.md#getidentitygroupidid) | **GET** /identity/group/id/{id} | Update or delete an existing group using its ID.
-*Identity* | [**GetIdentityGroupName**](docs/Identity.md#getidentitygroupname) | **GET** /identity/group/name | 
-*Identity* | [**GetIdentityGroupNameName**](docs/Identity.md#getidentitygroupnamename) | **GET** /identity/group/name/{name} | 
-*Identity* | [**GetIdentityMfaLoginEnforcement**](docs/Identity.md#getidentitymfaloginenforcement) | **GET** /identity/mfa/login-enforcement | List login enforcements
-*Identity* | [**GetIdentityMfaLoginEnforcementName**](docs/Identity.md#getidentitymfaloginenforcementname) | **GET** /identity/mfa/login-enforcement/{name} | Read the current login enforcement
-*Identity* | [**GetIdentityMfaMethod**](docs/Identity.md#getidentitymfamethod) | **GET** /identity/mfa/method | List MFA method configurations for all MFA methods
-*Identity* | [**GetIdentityMfaMethodDuo**](docs/Identity.md#getidentitymfamethodduo) | **GET** /identity/mfa/method/duo | List MFA method configurations for the given MFA method
-*Identity* | [**GetIdentityMfaMethodDuoMethodId**](docs/Identity.md#getidentitymfamethodduomethodid) | **GET** /identity/mfa/method/duo/{method_id} | Read the current configuration for the given MFA method
-*Identity* | [**GetIdentityMfaMethodMethodId**](docs/Identity.md#getidentitymfamethodmethodid) | **GET** /identity/mfa/method/{method_id} | Read the current configuration for the given ID regardless of the MFA method type
-*Identity* | [**GetIdentityMfaMethodOkta**](docs/Identity.md#getidentitymfamethodokta) | **GET** /identity/mfa/method/okta | List MFA method configurations for the given MFA method
-*Identity* | [**GetIdentityMfaMethodOktaMethodId**](docs/Identity.md#getidentitymfamethodoktamethodid) | **GET** /identity/mfa/method/okta/{method_id} | Read the current configuration for the given MFA method
-*Identity* | [**GetIdentityMfaMethodPingid**](docs/Identity.md#getidentitymfamethodpingid) | **GET** /identity/mfa/method/pingid | List MFA method configurations for the given MFA method
-*Identity* | [**GetIdentityMfaMethodPingidMethodId**](docs/Identity.md#getidentitymfamethodpingidmethodid) | **GET** /identity/mfa/method/pingid/{method_id} | Read the current configuration for the given MFA method
-*Identity* | [**GetIdentityMfaMethodTotp**](docs/Identity.md#getidentitymfamethodtotp) | **GET** /identity/mfa/method/totp | List MFA method configurations for the given MFA method
-*Identity* | [**GetIdentityMfaMethodTotpMethodId**](docs/Identity.md#getidentitymfamethodtotpmethodid) | **GET** /identity/mfa/method/totp/{method_id} | Read the current configuration for the given MFA method
-*Identity* | [**GetIdentityOidcAssignment**](docs/Identity.md#getidentityoidcassignment) | **GET** /identity/oidc/assignment | 
-*Identity* | [**GetIdentityOidcAssignmentName**](docs/Identity.md#getidentityoidcassignmentname) | **GET** /identity/oidc/assignment/{name} | 
-*Identity* | [**GetIdentityOidcClient**](docs/Identity.md#getidentityoidcclient) | **GET** /identity/oidc/client | 
-*Identity* | [**GetIdentityOidcClientName**](docs/Identity.md#getidentityoidcclientname) | **GET** /identity/oidc/client/{name} | 
-*Identity* | [**GetIdentityOidcConfig**](docs/Identity.md#getidentityoidcconfig) | **GET** /identity/oidc/config | OIDC configuration
-*Identity* | [**GetIdentityOidcKey**](docs/Identity.md#getidentityoidckey) | **GET** /identity/oidc/key | List OIDC keys
-*Identity* | [**GetIdentityOidcKeyName**](docs/Identity.md#getidentityoidckeyname) | **GET** /identity/oidc/key/{name} | CRUD operations for OIDC keys.
-*Identity* | [**GetIdentityOidcProvider**](docs/Identity.md#getidentityoidcprovider) | **GET** /identity/oidc/provider | 
-*Identity* | [**GetIdentityOidcProviderName**](docs/Identity.md#getidentityoidcprovidername) | **GET** /identity/oidc/provider/{name} | 
-*Identity* | [**GetIdentityOidcProviderNameAuthorize**](docs/Identity.md#getidentityoidcprovidernameauthorize) | **GET** /identity/oidc/provider/{name}/authorize | 
-*Identity* | [**GetIdentityOidcProviderNameUserinfo**](docs/Identity.md#getidentityoidcprovidernameuserinfo) | **GET** /identity/oidc/provider/{name}/userinfo | 
-*Identity* | [**GetIdentityOidcProviderNameWellKnownKeys**](docs/Identity.md#getidentityoidcprovidernamewellknownkeys) | **GET** /identity/oidc/provider/{name}/.well-known/keys | 
-*Identity* | [**GetIdentityOidcProviderNameWellKnownOpenidConfiguration**](docs/Identity.md#getidentityoidcprovidernamewellknownopenidconfiguration) | **GET** /identity/oidc/provider/{name}/.well-known/openid-configuration | 
-*Identity* | [**GetIdentityOidcRole**](docs/Identity.md#getidentityoidcrole) | **GET** /identity/oidc/role | List configured OIDC roles
-*Identity* | [**GetIdentityOidcRoleName**](docs/Identity.md#getidentityoidcrolename) | **GET** /identity/oidc/role/{name} | CRUD operations on OIDC Roles
-*Identity* | [**GetIdentityOidcScope**](docs/Identity.md#getidentityoidcscope) | **GET** /identity/oidc/scope | 
-*Identity* | [**GetIdentityOidcScopeName**](docs/Identity.md#getidentityoidcscopename) | **GET** /identity/oidc/scope/{name} | 
-*Identity* | [**GetIdentityOidcTokenName**](docs/Identity.md#getidentityoidctokenname) | **GET** /identity/oidc/token/{name} | Generate an OIDC token
-*Identity* | [**GetIdentityOidcWellKnownKeys**](docs/Identity.md#getidentityoidcwellknownkeys) | **GET** /identity/oidc/.well-known/keys | Retrieve public keys
-*Identity* | [**GetIdentityOidcWellKnownOpenidConfiguration**](docs/Identity.md#getidentityoidcwellknownopenidconfiguration) | **GET** /identity/oidc/.well-known/openid-configuration | Query OIDC configurations
-*Identity* | [**GetIdentityPersonaId**](docs/Identity.md#getidentitypersonaid) | **GET** /identity/persona/id | List all the alias IDs.
-*Identity* | [**GetIdentityPersonaIdId**](docs/Identity.md#getidentitypersonaidid) | **GET** /identity/persona/id/{id} | Update, read or delete an alias ID.
-*Identity* | [**PostIdentityAlias**](docs/Identity.md#postidentityalias) | **POST** /identity/alias | Create a new alias.
-*Identity* | [**PostIdentityAliasIdId**](docs/Identity.md#postidentityaliasidid) | **POST** /identity/alias/id/{id} | Update, read or delete an alias ID.
-*Identity* | [**PostIdentityEntity**](docs/Identity.md#postidentityentity) | **POST** /identity/entity | Create a new entity
-*Identity* | [**PostIdentityEntityAlias**](docs/Identity.md#postidentityentityalias) | **POST** /identity/entity-alias | Create a new alias.
-*Identity* | [**PostIdentityEntityAliasIdId**](docs/Identity.md#postidentityentityaliasidid) | **POST** /identity/entity-alias/id/{id} | Update, read or delete an alias ID.
-*Identity* | [**PostIdentityEntityBatchDelete**](docs/Identity.md#postidentityentitybatchdelete) | **POST** /identity/entity/batch-delete | Delete all of the entities provided
-*Identity* | [**PostIdentityEntityIdId**](docs/Identity.md#postidentityentityidid) | **POST** /identity/entity/id/{id} | Update, read or delete an entity using entity ID
-*Identity* | [**PostIdentityEntityMerge**](docs/Identity.md#postidentityentitymerge) | **POST** /identity/entity/merge | Merge two or more entities together
-*Identity* | [**PostIdentityEntityNameName**](docs/Identity.md#postidentityentitynamename) | **POST** /identity/entity/name/{name} | Update, read or delete an entity using entity name
-*Identity* | [**PostIdentityGroup**](docs/Identity.md#postidentitygroup) | **POST** /identity/group | Create a new group.
-*Identity* | [**PostIdentityGroupAlias**](docs/Identity.md#postidentitygroupalias) | **POST** /identity/group-alias | Creates a new group alias, or updates an existing one.
-*Identity* | [**PostIdentityGroupAliasIdId**](docs/Identity.md#postidentitygroupaliasidid) | **POST** /identity/group-alias/id/{id} | 
-*Identity* | [**PostIdentityGroupIdId**](docs/Identity.md#postidentitygroupidid) | **POST** /identity/group/id/{id} | Update or delete an existing group using its ID.
-*Identity* | [**PostIdentityGroupNameName**](docs/Identity.md#postidentitygroupnamename) | **POST** /identity/group/name/{name} | 
-*Identity* | [**PostIdentityLookupEntity**](docs/Identity.md#postidentitylookupentity) | **POST** /identity/lookup/entity | Query entities based on various properties.
-*Identity* | [**PostIdentityLookupGroup**](docs/Identity.md#postidentitylookupgroup) | **POST** /identity/lookup/group | Query groups based on various properties.
-*Identity* | [**PostIdentityMfaLoginEnforcementName**](docs/Identity.md#postidentitymfaloginenforcementname) | **POST** /identity/mfa/login-enforcement/{name} | Create or update a login enforcement
-*Identity* | [**PostIdentityMfaMethodDuoMethodId**](docs/Identity.md#postidentitymfamethodduomethodid) | **POST** /identity/mfa/method/duo/{method_id} | Update or create a configuration for the given MFA method
-*Identity* | [**PostIdentityMfaMethodOktaMethodId**](docs/Identity.md#postidentitymfamethodoktamethodid) | **POST** /identity/mfa/method/okta/{method_id} | Update or create a configuration for the given MFA method
-*Identity* | [**PostIdentityMfaMethodPingidMethodId**](docs/Identity.md#postidentitymfamethodpingidmethodid) | **POST** /identity/mfa/method/pingid/{method_id} | Update or create a configuration for the given MFA method
-*Identity* | [**PostIdentityMfaMethodTotpAdminDestroy**](docs/Identity.md#postidentitymfamethodtotpadmindestroy) | **POST** /identity/mfa/method/totp/admin-destroy | Destroys a TOTP secret for the given MFA method ID on the given entity
-*Identity* | [**PostIdentityMfaMethodTotpAdminGenerate**](docs/Identity.md#postidentitymfamethodtotpadmingenerate) | **POST** /identity/mfa/method/totp/admin-generate | Update or create TOTP secret for the given method ID on the given entity.
-*Identity* | [**PostIdentityMfaMethodTotpGenerate**](docs/Identity.md#postidentitymfamethodtotpgenerate) | **POST** /identity/mfa/method/totp/generate | Update or create TOTP secret for the given method ID on the given entity.
-*Identity* | [**PostIdentityMfaMethodTotpMethodId**](docs/Identity.md#postidentitymfamethodtotpmethodid) | **POST** /identity/mfa/method/totp/{method_id} | Update or create a configuration for the given MFA method
-*Identity* | [**PostIdentityOidcAssignmentName**](docs/Identity.md#postidentityoidcassignmentname) | **POST** /identity/oidc/assignment/{name} | 
-*Identity* | [**PostIdentityOidcClientName**](docs/Identity.md#postidentityoidcclientname) | **POST** /identity/oidc/client/{name} | 
-*Identity* | [**PostIdentityOidcConfig**](docs/Identity.md#postidentityoidcconfig) | **POST** /identity/oidc/config | OIDC configuration
-*Identity* | [**PostIdentityOidcIntrospect**](docs/Identity.md#postidentityoidcintrospect) | **POST** /identity/oidc/introspect | Verify the authenticity of an OIDC token
-*Identity* | [**PostIdentityOidcKeyName**](docs/Identity.md#postidentityoidckeyname) | **POST** /identity/oidc/key/{name} | CRUD operations for OIDC keys.
-*Identity* | [**PostIdentityOidcKeyNameRotate**](docs/Identity.md#postidentityoidckeynamerotate) | **POST** /identity/oidc/key/{name}/rotate | Rotate a named OIDC key.
-*Identity* | [**PostIdentityOidcProviderName**](docs/Identity.md#postidentityoidcprovidername) | **POST** /identity/oidc/provider/{name} | 
-*Identity* | [**PostIdentityOidcProviderNameAuthorize**](docs/Identity.md#postidentityoidcprovidernameauthorize) | **POST** /identity/oidc/provider/{name}/authorize | 
-*Identity* | [**PostIdentityOidcProviderNameToken**](docs/Identity.md#postidentityoidcprovidernametoken) | **POST** /identity/oidc/provider/{name}/token | 
-*Identity* | [**PostIdentityOidcProviderNameUserinfo**](docs/Identity.md#postidentityoidcprovidernameuserinfo) | **POST** /identity/oidc/provider/{name}/userinfo | 
-*Identity* | [**PostIdentityOidcRoleName**](docs/Identity.md#postidentityoidcrolename) | **POST** /identity/oidc/role/{name} | CRUD operations on OIDC Roles
-*Identity* | [**PostIdentityOidcScopeName**](docs/Identity.md#postidentityoidcscopename) | **POST** /identity/oidc/scope/{name} | 
-*Identity* | [**PostIdentityPersona**](docs/Identity.md#postidentitypersona) | **POST** /identity/persona | Create a new alias.
-*Identity* | [**PostIdentityPersonaIdId**](docs/Identity.md#postidentitypersonaidid) | **POST** /identity/persona/id/{id} | Update, read or delete an alias ID.
-*Secrets* | [**DeleteAdConfig**](docs/Secrets.md#deleteadconfig) | **DELETE** /ad/config | Configure the AD server to connect to, along with password options.
-*Secrets* | [**DeleteAdLibraryName**](docs/Secrets.md#deleteadlibraryname) | **DELETE** /ad/library/{name} | Delete a library set.
-*Secrets* | [**DeleteAdRolesName**](docs/Secrets.md#deleteadrolesname) | **DELETE** /ad/roles/{name} | Manage roles to build links between Vault and Active Directory service accounts.
-*Secrets* | [**DeleteAlicloudConfig**](docs/Secrets.md#deletealicloudconfig) | **DELETE** /alicloud/config | Configure the access key and secret to use for RAM and STS calls.
-*Secrets* | [**DeleteAlicloudRoleName**](docs/Secrets.md#deletealicloudrolename) | **DELETE** /alicloud/role/{name} | Read, write and reference policies and roles that API keys or STS credentials can be made for.
-*Secrets* | [**DeleteAwsRolesName**](docs/Secrets.md#deleteawsrolesname) | **DELETE** /aws/roles/{name} | Read, write and reference IAM policies that access keys can be made for.
-*Secrets* | [**DeleteAzureConfig**](docs/Secrets.md#deleteazureconfig) | **DELETE** /azure/config | 
-*Secrets* | [**DeleteAzureRolesName**](docs/Secrets.md#deleteazurerolesname) | **DELETE** /azure/roles/{name} | Manage the Vault roles used to generate Azure credentials.
-*Secrets* | [**DeleteConsulRolesName**](docs/Secrets.md#deleteconsulrolesname) | **DELETE** /consul/roles/{name} | 
-*Secrets* | [**DeleteCubbyholePath**](docs/Secrets.md#deletecubbyholepath) | **DELETE** /cubbyhole/{path} | Deletes the secret at the specified location.
-*Secrets* | [**DeleteGcpRolesetName**](docs/Secrets.md#deletegcprolesetname) | **DELETE** /gcp/roleset/{name} | 
-*Secrets* | [**DeleteGcpStaticAccountName**](docs/Secrets.md#deletegcpstaticaccountname) | **DELETE** /gcp/static-account/{name} | 
-*Secrets* | [**DeleteGcpkmsConfig**](docs/Secrets.md#deletegcpkmsconfig) | **DELETE** /gcpkms/config | Configure the GCP KMS secrets engine
-*Secrets* | [**DeleteGcpkmsKeysDeregisterKey**](docs/Secrets.md#deletegcpkmskeysderegisterkey) | **DELETE** /gcpkms/keys/deregister/{key} | Deregister an existing key in Vault
-*Secrets* | [**DeleteGcpkmsKeysKey**](docs/Secrets.md#deletegcpkmskeyskey) | **DELETE** /gcpkms/keys/{key} | Interact with crypto keys in Vault and Google Cloud KMS
-*Secrets* | [**DeleteGcpkmsKeysTrimKey**](docs/Secrets.md#deletegcpkmskeystrimkey) | **DELETE** /gcpkms/keys/trim/{key} | Delete old crypto key versions from Google Cloud KMS
-*Secrets* | [**DeleteKubernetesConfig**](docs/Secrets.md#deletekubernetesconfig) | **DELETE** /kubernetes/config | 
-*Secrets* | [**DeleteKubernetesRolesName**](docs/Secrets.md#deletekubernetesrolesname) | **DELETE** /kubernetes/roles/{name} | 
-*Secrets* | [**DeleteKvPath**](docs/Secrets.md#deletekvpath) | **DELETE** /kv/{path} | Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
-*Secrets* | [**DeleteLdapConfig**](docs/Secrets.md#deleteldapconfig) | **DELETE** /ldap/config | 
-*Secrets* | [**DeleteLdapLibraryName**](docs/Secrets.md#deleteldaplibraryname) | **DELETE** /ldap/library/{name} | Delete a library set.
-*Secrets* | [**DeleteLdapRoleName**](docs/Secrets.md#deleteldaprolename) | **DELETE** /ldap/role/{name} | 
-*Secrets* | [**DeleteLdapStaticRoleName**](docs/Secrets.md#deleteldapstaticrolename) | **DELETE** /ldap/static-role/{name} | 
-*Secrets* | [**DeleteMongodbatlasRolesName**](docs/Secrets.md#deletemongodbatlasrolesname) | **DELETE** /mongodbatlas/roles/{name} | Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
-*Secrets* | [**DeleteNomadConfigAccess**](docs/Secrets.md#deletenomadconfigaccess) | **DELETE** /nomad/config/access | 
-*Secrets* | [**DeleteNomadConfigLease**](docs/Secrets.md#deletenomadconfiglease) | **DELETE** /nomad/config/lease | Configure the lease parameters for generated tokens
-*Secrets* | [**DeleteNomadRoleName**](docs/Secrets.md#deletenomadrolename) | **DELETE** /nomad/role/{name} | 
-*Secrets* | [**DeleteOpenldapConfig**](docs/Secrets.md#deleteopenldapconfig) | **DELETE** /openldap/config | 
-*Secrets* | [**DeleteOpenldapLibraryName**](docs/Secrets.md#deleteopenldaplibraryname) | **DELETE** /openldap/library/{name} | Delete a library set.
-*Secrets* | [**DeleteOpenldapRoleName**](docs/Secrets.md#deleteopenldaprolename) | **DELETE** /openldap/role/{name} | 
-*Secrets* | [**DeleteOpenldapStaticRoleName**](docs/Secrets.md#deleteopenldapstaticrolename) | **DELETE** /openldap/static-role/{name} | 
-*Secrets* | [**DeletePkiIssuerRefDerPem**](docs/Secrets.md#deletepkiissuerrefderpem) | **DELETE** /pki/{issuer_ref}/der|/pem | 
-*Secrets* | [**DeletePkiJson**](docs/Secrets.md#deletepkijson) | **DELETE** /pki//json | 
-*Secrets* | [**DeletePkiKeyKeyRef**](docs/Secrets.md#deletepkikeykeyref) | **DELETE** /pki/key/{key_ref} | 
-*Secrets* | [**DeletePkiRolesName**](docs/Secrets.md#deletepkirolesname) | **DELETE** /pki/roles/{name} | 
-*Secrets* | [**DeletePkiRoot**](docs/Secrets.md#deletepkiroot) | **DELETE** /pki/root | 
-*Secrets* | [**DeleteRabbitmqRolesName**](docs/Secrets.md#deleterabbitmqrolesname) | **DELETE** /rabbitmq/roles/{name} | Manage the roles that can be created with this backend.
-*Secrets* | [**DeleteSecretDataPath**](docs/Secrets.md#deletesecretdatapath) | **DELETE** /secret/data/{path} | Write, Patch, Read, and Delete data in the Key-Value Store.
-*Secrets* | [**DeleteSecretMetadataPath**](docs/Secrets.md#deletesecretmetadatapath) | **DELETE** /secret/metadata/{path} | Configures settings for the KV store
-*Secrets* | [**DeleteSshConfigCa**](docs/Secrets.md#deletesshconfigca) | **DELETE** /ssh/config/ca | Set the SSH private key used for signing certificates.
-*Secrets* | [**DeleteSshConfigZeroaddress**](docs/Secrets.md#deletesshconfigzeroaddress) | **DELETE** /ssh/config/zeroaddress | Assign zero address as default CIDR block for select roles.
-*Secrets* | [**DeleteSshKeysKeyName**](docs/Secrets.md#deletesshkeyskeyname) | **DELETE** /ssh/keys/{key_name} | Register a shared private key with Vault.
-*Secrets* | [**DeleteSshRolesRole**](docs/Secrets.md#deletesshrolesrole) | **DELETE** /ssh/roles/{role} | Manage the 'roles' that can be created with this backend.
-*Secrets* | [**DeleteTerraformConfig**](docs/Secrets.md#deleteterraformconfig) | **DELETE** /terraform/config | 
-*Secrets* | [**DeleteTerraformRoleName**](docs/Secrets.md#deleteterraformrolename) | **DELETE** /terraform/role/{name} | 
-*Secrets* | [**DeleteTotpKeysName**](docs/Secrets.md#deletetotpkeysname) | **DELETE** /totp/keys/{name} | Manage the keys that can be created with this backend.
-*Secrets* | [**DeleteTransitKeysName**](docs/Secrets.md#deletetransitkeysname) | **DELETE** /transit/keys/{name} | Managed named encryption keys
-*Secrets* | [**GetAdConfig**](docs/Secrets.md#getadconfig) | **GET** /ad/config | Configure the AD server to connect to, along with password options.
-*Secrets* | [**GetAdCredsName**](docs/Secrets.md#getadcredsname) | **GET** /ad/creds/{name} | 
-*Secrets* | [**GetAdLibrary**](docs/Secrets.md#getadlibrary) | **GET** /ad/library | 
-*Secrets* | [**GetAdLibraryName**](docs/Secrets.md#getadlibraryname) | **GET** /ad/library/{name} | Read a library set.
-*Secrets* | [**GetAdLibraryNameStatus**](docs/Secrets.md#getadlibrarynamestatus) | **GET** /ad/library/{name}/status | Check the status of the service accounts in a library set.
-*Secrets* | [**GetAdRoles**](docs/Secrets.md#getadroles) | **GET** /ad/roles | List the name of each role currently stored.
-*Secrets* | [**GetAdRolesName**](docs/Secrets.md#getadrolesname) | **GET** /ad/roles/{name} | Manage roles to build links between Vault and Active Directory service accounts.
-*Secrets* | [**GetAdRotateRoot**](docs/Secrets.md#getadrotateroot) | **GET** /ad/rotate-root | 
-*Secrets* | [**GetAlicloudConfig**](docs/Secrets.md#getalicloudconfig) | **GET** /alicloud/config | Configure the access key and secret to use for RAM and STS calls.
-*Secrets* | [**GetAlicloudCredsName**](docs/Secrets.md#getalicloudcredsname) | **GET** /alicloud/creds/{name} | Generate an API key or STS credential using the given role's configuration.'
-*Secrets* | [**GetAlicloudRole**](docs/Secrets.md#getalicloudrole) | **GET** /alicloud/role | List the existing roles in this backend.
-*Secrets* | [**GetAlicloudRoleName**](docs/Secrets.md#getalicloudrolename) | **GET** /alicloud/role/{name} | Read, write and reference policies and roles that API keys or STS credentials can be made for.
-*Secrets* | [**GetAwsConfigLease**](docs/Secrets.md#getawsconfiglease) | **GET** /aws/config/lease | Configure the default lease information for generated credentials.
-*Secrets* | [**GetAwsConfigRoot**](docs/Secrets.md#getawsconfigroot) | **GET** /aws/config/root | Configure the root credentials that are used to manage IAM.
-*Secrets* | [**GetAwsCreds**](docs/Secrets.md#getawscreds) | **GET** /aws/creds | Generate AWS credentials from a specific Vault role.
-*Secrets* | [**GetAwsRoles**](docs/Secrets.md#getawsroles) | **GET** /aws/roles | List the existing roles in this backend
-*Secrets* | [**GetAwsRolesName**](docs/Secrets.md#getawsrolesname) | **GET** /aws/roles/{name} | Read, write and reference IAM policies that access keys can be made for.
-*Secrets* | [**GetAwsStsName**](docs/Secrets.md#getawsstsname) | **GET** /aws/sts/{name} | Generate AWS credentials from a specific Vault role.
-*Secrets* | [**GetAzureConfig**](docs/Secrets.md#getazureconfig) | **GET** /azure/config | 
-*Secrets* | [**GetAzureCredsRole**](docs/Secrets.md#getazurecredsrole) | **GET** /azure/creds/{role} | 
-*Secrets* | [**GetAzureRoles**](docs/Secrets.md#getazureroles) | **GET** /azure/roles | List existing roles.
-*Secrets* | [**GetAzureRolesName**](docs/Secrets.md#getazurerolesname) | **GET** /azure/roles/{name} | Manage the Vault roles used to generate Azure credentials.
-*Secrets* | [**GetConsulConfigAccess**](docs/Secrets.md#getconsulconfigaccess) | **GET** /consul/config/access | 
-*Secrets* | [**GetConsulCredsRole**](docs/Secrets.md#getconsulcredsrole) | **GET** /consul/creds/{role} | 
-*Secrets* | [**GetConsulRoles**](docs/Secrets.md#getconsulroles) | **GET** /consul/roles | 
-*Secrets* | [**GetConsulRolesName**](docs/Secrets.md#getconsulrolesname) | **GET** /consul/roles/{name} | 
-*Secrets* | [**GetCubbyholePath**](docs/Secrets.md#getcubbyholepath) | **GET** /cubbyhole/{path} | Retrieve the secret at the specified location.
-*Secrets* | [**GetGcpConfig**](docs/Secrets.md#getgcpconfig) | **GET** /gcp/config | 
-*Secrets* | [**GetGcpKeyRoleset**](docs/Secrets.md#getgcpkeyroleset) | **GET** /gcp/key/{roleset} | 
-*Secrets* | [**GetGcpRolesetName**](docs/Secrets.md#getgcprolesetname) | **GET** /gcp/roleset/{name} | 
-*Secrets* | [**GetGcpRolesetRolesetKey**](docs/Secrets.md#getgcprolesetrolesetkey) | **GET** /gcp/roleset/{roleset}/key | 
-*Secrets* | [**GetGcpRolesetRolesetToken**](docs/Secrets.md#getgcprolesetrolesettoken) | **GET** /gcp/roleset/{roleset}/token | 
-*Secrets* | [**GetGcpRolesets**](docs/Secrets.md#getgcprolesets) | **GET** /gcp/rolesets | 
-*Secrets* | [**GetGcpStaticAccountName**](docs/Secrets.md#getgcpstaticaccountname) | **GET** /gcp/static-account/{name} | 
-*Secrets* | [**GetGcpStaticAccountNameKey**](docs/Secrets.md#getgcpstaticaccountnamekey) | **GET** /gcp/static-account/{name}/key | 
-*Secrets* | [**GetGcpStaticAccountNameToken**](docs/Secrets.md#getgcpstaticaccountnametoken) | **GET** /gcp/static-account/{name}/token | 
-*Secrets* | [**GetGcpStaticAccounts**](docs/Secrets.md#getgcpstaticaccounts) | **GET** /gcp/static-accounts | 
-*Secrets* | [**GetGcpTokenRoleset**](docs/Secrets.md#getgcptokenroleset) | **GET** /gcp/token/{roleset} | 
-*Secrets* | [**GetGcpkmsConfig**](docs/Secrets.md#getgcpkmsconfig) | **GET** /gcpkms/config | Configure the GCP KMS secrets engine
-*Secrets* | [**GetGcpkmsKeys**](docs/Secrets.md#getgcpkmskeys) | **GET** /gcpkms/keys | List named keys
-*Secrets* | [**GetGcpkmsKeysConfigKey**](docs/Secrets.md#getgcpkmskeysconfigkey) | **GET** /gcpkms/keys/config/{key} | Configure the key in Vault
-*Secrets* | [**GetGcpkmsKeysKey**](docs/Secrets.md#getgcpkmskeyskey) | **GET** /gcpkms/keys/{key} | Interact with crypto keys in Vault and Google Cloud KMS
-*Secrets* | [**GetGcpkmsPubkeyKey**](docs/Secrets.md#getgcpkmspubkeykey) | **GET** /gcpkms/pubkey/{key} | Retrieve the public key associated with the named key
-*Secrets* | [**GetKubernetesConfig**](docs/Secrets.md#getkubernetesconfig) | **GET** /kubernetes/config | 
-*Secrets* | [**GetKubernetesRoles**](docs/Secrets.md#getkubernetesroles) | **GET** /kubernetes/roles | 
-*Secrets* | [**GetKubernetesRolesName**](docs/Secrets.md#getkubernetesrolesname) | **GET** /kubernetes/roles/{name} | 
-*Secrets* | [**GetKvPath**](docs/Secrets.md#getkvpath) | **GET** /kv/{path} | Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
-*Secrets* | [**GetLdapConfig**](docs/Secrets.md#getldapconfig) | **GET** /ldap/config | 
-*Secrets* | [**GetLdapCredsName**](docs/Secrets.md#getldapcredsname) | **GET** /ldap/creds/{name} | 
-*Secrets* | [**GetLdapLibrary**](docs/Secrets.md#getldaplibrary) | **GET** /ldap/library | 
-*Secrets* | [**GetLdapLibraryName**](docs/Secrets.md#getldaplibraryname) | **GET** /ldap/library/{name} | Read a library set.
-*Secrets* | [**GetLdapLibraryNameStatus**](docs/Secrets.md#getldaplibrarynamestatus) | **GET** /ldap/library/{name}/status | Check the status of the service accounts in a library set.
-*Secrets* | [**GetLdapRole**](docs/Secrets.md#getldaprole) | **GET** /ldap/role | 
-*Secrets* | [**GetLdapRoleName**](docs/Secrets.md#getldaprolename) | **GET** /ldap/role/{name} | 
-*Secrets* | [**GetLdapStaticCredName**](docs/Secrets.md#getldapstaticcredname) | **GET** /ldap/static-cred/{name} | 
-*Secrets* | [**GetLdapStaticRole**](docs/Secrets.md#getldapstaticrole) | **GET** /ldap/static-role | 
-*Secrets* | [**GetLdapStaticRoleName**](docs/Secrets.md#getldapstaticrolename) | **GET** /ldap/static-role/{name} | 
-*Secrets* | [**GetMongodbatlasConfig**](docs/Secrets.md#getmongodbatlasconfig) | **GET** /mongodbatlas/config | Configure the  credentials that are used to manage Database Users.
-*Secrets* | [**GetMongodbatlasCredsName**](docs/Secrets.md#getmongodbatlascredsname) | **GET** /mongodbatlas/creds/{name} | Generate MongoDB Atlas Programmatic API from a specific Vault role.
-*Secrets* | [**GetMongodbatlasRoles**](docs/Secrets.md#getmongodbatlasroles) | **GET** /mongodbatlas/roles | List the existing roles in this backend
-*Secrets* | [**GetMongodbatlasRolesName**](docs/Secrets.md#getmongodbatlasrolesname) | **GET** /mongodbatlas/roles/{name} | Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
-*Secrets* | [**GetNomadConfigAccess**](docs/Secrets.md#getnomadconfigaccess) | **GET** /nomad/config/access | 
-*Secrets* | [**GetNomadConfigLease**](docs/Secrets.md#getnomadconfiglease) | **GET** /nomad/config/lease | Configure the lease parameters for generated tokens
-*Secrets* | [**GetNomadCredsName**](docs/Secrets.md#getnomadcredsname) | **GET** /nomad/creds/{name} | 
-*Secrets* | [**GetNomadRole**](docs/Secrets.md#getnomadrole) | **GET** /nomad/role | 
-*Secrets* | [**GetNomadRoleName**](docs/Secrets.md#getnomadrolename) | **GET** /nomad/role/{name} | 
-*Secrets* | [**GetOpenldapConfig**](docs/Secrets.md#getopenldapconfig) | **GET** /openldap/config | 
-*Secrets* | [**GetOpenldapCredsName**](docs/Secrets.md#getopenldapcredsname) | **GET** /openldap/creds/{name} | 
-*Secrets* | [**GetOpenldapLibrary**](docs/Secrets.md#getopenldaplibrary) | **GET** /openldap/library | 
-*Secrets* | [**GetOpenldapLibraryName**](docs/Secrets.md#getopenldaplibraryname) | **GET** /openldap/library/{name} | Read a library set.
-*Secrets* | [**GetOpenldapLibraryNameStatus**](docs/Secrets.md#getopenldaplibrarynamestatus) | **GET** /openldap/library/{name}/status | Check the status of the service accounts in a library set.
-*Secrets* | [**GetOpenldapRole**](docs/Secrets.md#getopenldaprole) | **GET** /openldap/role | 
-*Secrets* | [**GetOpenldapRoleName**](docs/Secrets.md#getopenldaprolename) | **GET** /openldap/role/{name} | 
-*Secrets* | [**GetOpenldapStaticCredName**](docs/Secrets.md#getopenldapstaticcredname) | **GET** /openldap/static-cred/{name} | 
-*Secrets* | [**GetOpenldapStaticRole**](docs/Secrets.md#getopenldapstaticrole) | **GET** /openldap/static-role | 
-*Secrets* | [**GetOpenldapStaticRoleName**](docs/Secrets.md#getopenldapstaticrolename) | **GET** /openldap/static-role/{name} | 
-*Secrets* | [**GetPkiCa**](docs/Secrets.md#getpkica) | **GET** /pki/ca | 
-*Secrets* | [**GetPkiCaChain**](docs/Secrets.md#getpkicachain) | **GET** /pki/ca_chain | 
-*Secrets* | [**GetPkiCaPem**](docs/Secrets.md#getpkicapem) | **GET** /pki/ca/pem | 
-*Secrets* | [**GetPkiCertCaChain**](docs/Secrets.md#getpkicertcachain) | **GET** /pki/cert/ca_chain | 
-*Secrets* | [**GetPkiCertSerial**](docs/Secrets.md#getpkicertserial) | **GET** /pki/cert/{serial} | 
-*Secrets* | [**GetPkiCertSerialRaw**](docs/Secrets.md#getpkicertserialraw) | **GET** /pki/cert/{serial}/raw | 
-*Secrets* | [**GetPkiCertSerialRawPem**](docs/Secrets.md#getpkicertserialrawpem) | **GET** /pki/cert/{serial}/raw/pem | 
-*Secrets* | [**GetPkiCerts**](docs/Secrets.md#getpkicerts) | **GET** /pki/certs | 
-*Secrets* | [**GetPkiConfigAutoTidy**](docs/Secrets.md#getpkiconfigautotidy) | **GET** /pki/config/auto-tidy | 
-*Secrets* | [**GetPkiConfigCrl**](docs/Secrets.md#getpkiconfigcrl) | **GET** /pki/config/crl | 
-*Secrets* | [**GetPkiConfigIssuers**](docs/Secrets.md#getpkiconfigissuers) | **GET** /pki/config/issuers | 
-*Secrets* | [**GetPkiConfigKeys**](docs/Secrets.md#getpkiconfigkeys) | **GET** /pki/config/keys | 
-*Secrets* | [**GetPkiConfigUrls**](docs/Secrets.md#getpkiconfigurls) | **GET** /pki/config/urls | 
-*Secrets* | [**GetPkiCrl**](docs/Secrets.md#getpkicrl) | **GET** /pki/crl | 
-*Secrets* | [**GetPkiCrlRotate**](docs/Secrets.md#getpkicrlrotate) | **GET** /pki/crl/rotate | 
-*Secrets* | [**GetPkiCrlRotateDelta**](docs/Secrets.md#getpkicrlrotatedelta) | **GET** /pki/crl/rotate-delta | 
-*Secrets* | [**GetPkiDelta**](docs/Secrets.md#getpkidelta) | **GET** /pki//delta | 
-*Secrets* | [**GetPkiDeltaCrl**](docs/Secrets.md#getpkideltacrl) | **GET** /pki/delta-crl | 
-*Secrets* | [**GetPkiDeltaPem**](docs/Secrets.md#getpkideltapem) | **GET** /pki//delta/pem | 
-*Secrets* | [**GetPkiDer**](docs/Secrets.md#getpkider) | **GET** /pki//der | 
-*Secrets* | [**GetPkiIssuerRefCrlPemDerDeltaPem**](docs/Secrets.md#getpkiissuerrefcrlpemderdeltapem) | **GET** /pki/{issuer_ref}/crl/pem|/der|/delta/pem | 
-*Secrets* | [**GetPkiIssuerRefDerPem**](docs/Secrets.md#getpkiissuerrefderpem) | **GET** /pki/{issuer_ref}/der|/pem | 
-*Secrets* | [**GetPkiIssuers**](docs/Secrets.md#getpkiissuers) | **GET** /pki/issuers | 
-*Secrets* | [**GetPkiJson**](docs/Secrets.md#getpkijson) | **GET** /pki//json | 
-*Secrets* | [**GetPkiKeyKeyRef**](docs/Secrets.md#getpkikeykeyref) | **GET** /pki/key/{key_ref} | 
-*Secrets* | [**GetPkiKeys**](docs/Secrets.md#getpkikeys) | **GET** /pki/keys | 
-*Secrets* | [**GetPkiOcspReq**](docs/Secrets.md#getpkiocspreq) | **GET** /pki/ocsp/{req} | 
-*Secrets* | [**GetPkiPem**](docs/Secrets.md#getpkipem) | **GET** /pki//pem | 
-*Secrets* | [**GetPkiRoles**](docs/Secrets.md#getpkiroles) | **GET** /pki/roles | 
-*Secrets* | [**GetPkiRolesName**](docs/Secrets.md#getpkirolesname) | **GET** /pki/roles/{name} | 
-*Secrets* | [**GetPkiTidyStatus**](docs/Secrets.md#getpkitidystatus) | **GET** /pki/tidy-status | 
-*Secrets* | [**GetRabbitmqConfigLease**](docs/Secrets.md#getrabbitmqconfiglease) | **GET** /rabbitmq/config/lease | Configure the lease parameters for generated credentials
-*Secrets* | [**GetRabbitmqCredsName**](docs/Secrets.md#getrabbitmqcredsname) | **GET** /rabbitmq/creds/{name} | Request RabbitMQ credentials for a certain role.
-*Secrets* | [**GetRabbitmqRoles**](docs/Secrets.md#getrabbitmqroles) | **GET** /rabbitmq/roles | Manage the roles that can be created with this backend.
-*Secrets* | [**GetRabbitmqRolesName**](docs/Secrets.md#getrabbitmqrolesname) | **GET** /rabbitmq/roles/{name} | Manage the roles that can be created with this backend.
-*Secrets* | [**GetSecretConfig**](docs/Secrets.md#getsecretconfig) | **GET** /secret/config | Read the backend level settings.
-*Secrets* | [**GetSecretDataPath**](docs/Secrets.md#getsecretdatapath) | **GET** /secret/data/{path} | Write, Patch, Read, and Delete data in the Key-Value Store.
-*Secrets* | [**GetSecretMetadataPath**](docs/Secrets.md#getsecretmetadatapath) | **GET** /secret/metadata/{path} | Configures settings for the KV store
-*Secrets* | [**GetSecretSubkeysPath**](docs/Secrets.md#getsecretsubkeyspath) | **GET** /secret/subkeys/{path} | Read the structure of a secret entry from the Key-Value store with the values removed.
-*Secrets* | [**GetSshConfigCa**](docs/Secrets.md#getsshconfigca) | **GET** /ssh/config/ca | Set the SSH private key used for signing certificates.
-*Secrets* | [**GetSshConfigZeroaddress**](docs/Secrets.md#getsshconfigzeroaddress) | **GET** /ssh/config/zeroaddress | Assign zero address as default CIDR block for select roles.
-*Secrets* | [**GetSshPublicKey**](docs/Secrets.md#getsshpublickey) | **GET** /ssh/public_key | Retrieve the public key.
-*Secrets* | [**GetSshRoles**](docs/Secrets.md#getsshroles) | **GET** /ssh/roles | Manage the 'roles' that can be created with this backend.
-*Secrets* | [**GetSshRolesRole**](docs/Secrets.md#getsshrolesrole) | **GET** /ssh/roles/{role} | Manage the 'roles' that can be created with this backend.
-*Secrets* | [**GetTerraformConfig**](docs/Secrets.md#getterraformconfig) | **GET** /terraform/config | 
-*Secrets* | [**GetTerraformCredsName**](docs/Secrets.md#getterraformcredsname) | **GET** /terraform/creds/{name} | Generate a Terraform Cloud or Enterprise API token from a specific Vault role.
-*Secrets* | [**GetTerraformRole**](docs/Secrets.md#getterraformrole) | **GET** /terraform/role | 
-*Secrets* | [**GetTerraformRoleName**](docs/Secrets.md#getterraformrolename) | **GET** /terraform/role/{name} | 
-*Secrets* | [**GetTotpCodeName**](docs/Secrets.md#gettotpcodename) | **GET** /totp/code/{name} | Request time-based one-time use password or validate a password for a certain key .
-*Secrets* | [**GetTotpKeys**](docs/Secrets.md#gettotpkeys) | **GET** /totp/keys | Manage the keys that can be created with this backend.
-*Secrets* | [**GetTotpKeysName**](docs/Secrets.md#gettotpkeysname) | **GET** /totp/keys/{name} | Manage the keys that can be created with this backend.
-*Secrets* | [**GetTransitBackupName**](docs/Secrets.md#gettransitbackupname) | **GET** /transit/backup/{name} | Backup the named key
-*Secrets* | [**GetTransitCacheConfig**](docs/Secrets.md#gettransitcacheconfig) | **GET** /transit/cache-config | Returns the size of the active cache
-*Secrets* | [**GetTransitExportTypeName**](docs/Secrets.md#gettransitexporttypename) | **GET** /transit/export/{type}/{name} | Export named encryption or signing key
-*Secrets* | [**GetTransitExportTypeNameVersion**](docs/Secrets.md#gettransitexporttypenameversion) | **GET** /transit/export/{type}/{name}/{version} | Export named encryption or signing key
-*Secrets* | [**GetTransitKeys**](docs/Secrets.md#gettransitkeys) | **GET** /transit/keys | Managed named encryption keys
-*Secrets* | [**GetTransitKeysName**](docs/Secrets.md#gettransitkeysname) | **GET** /transit/keys/{name} | Managed named encryption keys
-*Secrets* | [**GetTransitWrappingKey**](docs/Secrets.md#gettransitwrappingkey) | **GET** /transit/wrapping_key | Returns the public key to use for wrapping imported keys
-*Secrets* | [**PostAdConfig**](docs/Secrets.md#postadconfig) | **POST** /ad/config | Configure the AD server to connect to, along with password options.
-*Secrets* | [**PostAdLibraryManageNameCheckIn**](docs/Secrets.md#postadlibrarymanagenamecheckin) | **POST** /ad/library/manage/{name}/check-in | Check service accounts in to the library.
-*Secrets* | [**PostAdLibraryName**](docs/Secrets.md#postadlibraryname) | **POST** /ad/library/{name} | Update a library set.
-*Secrets* | [**PostAdLibraryNameCheckIn**](docs/Secrets.md#postadlibrarynamecheckin) | **POST** /ad/library/{name}/check-in | Check service accounts in to the library.
-*Secrets* | [**PostAdLibraryNameCheckOut**](docs/Secrets.md#postadlibrarynamecheckout) | **POST** /ad/library/{name}/check-out | Check a service account out from the library.
-*Secrets* | [**PostAdRolesName**](docs/Secrets.md#postadrolesname) | **POST** /ad/roles/{name} | Manage roles to build links between Vault and Active Directory service accounts.
-*Secrets* | [**PostAdRotateRoleName**](docs/Secrets.md#postadrotaterolename) | **POST** /ad/rotate-role/{name} | 
-*Secrets* | [**PostAdRotateRoot**](docs/Secrets.md#postadrotateroot) | **POST** /ad/rotate-root | 
-*Secrets* | [**PostAlicloudConfig**](docs/Secrets.md#postalicloudconfig) | **POST** /alicloud/config | Configure the access key and secret to use for RAM and STS calls.
-*Secrets* | [**PostAlicloudRoleName**](docs/Secrets.md#postalicloudrolename) | **POST** /alicloud/role/{name} | Read, write and reference policies and roles that API keys or STS credentials can be made for.
-*Secrets* | [**PostAwsConfigLease**](docs/Secrets.md#postawsconfiglease) | **POST** /aws/config/lease | Configure the default lease information for generated credentials.
-*Secrets* | [**PostAwsConfigRoot**](docs/Secrets.md#postawsconfigroot) | **POST** /aws/config/root | Configure the root credentials that are used to manage IAM.
-*Secrets* | [**PostAwsConfigRotateRoot**](docs/Secrets.md#postawsconfigrotateroot) | **POST** /aws/config/rotate-root | 
-*Secrets* | [**PostAwsCreds**](docs/Secrets.md#postawscreds) | **POST** /aws/creds | Generate AWS credentials from a specific Vault role.
-*Secrets* | [**PostAwsRolesName**](docs/Secrets.md#postawsrolesname) | **POST** /aws/roles/{name} | Read, write and reference IAM policies that access keys can be made for.
-*Secrets* | [**PostAwsStsName**](docs/Secrets.md#postawsstsname) | **POST** /aws/sts/{name} | Generate AWS credentials from a specific Vault role.
-*Secrets* | [**PostAzureConfig**](docs/Secrets.md#postazureconfig) | **POST** /azure/config | 
-*Secrets* | [**PostAzureRolesName**](docs/Secrets.md#postazurerolesname) | **POST** /azure/roles/{name} | Manage the Vault roles used to generate Azure credentials.
-*Secrets* | [**PostAzureRotateRoot**](docs/Secrets.md#postazurerotateroot) | **POST** /azure/rotate-root | 
-*Secrets* | [**PostConsulConfigAccess**](docs/Secrets.md#postconsulconfigaccess) | **POST** /consul/config/access | 
-*Secrets* | [**PostConsulRolesName**](docs/Secrets.md#postconsulrolesname) | **POST** /consul/roles/{name} | 
-*Secrets* | [**PostCubbyholePath**](docs/Secrets.md#postcubbyholepath) | **POST** /cubbyhole/{path} | Store a secret at the specified location.
-*Secrets* | [**PostGcpConfig**](docs/Secrets.md#postgcpconfig) | **POST** /gcp/config | 
-*Secrets* | [**PostGcpConfigRotateRoot**](docs/Secrets.md#postgcpconfigrotateroot) | **POST** /gcp/config/rotate-root | 
-*Secrets* | [**PostGcpKeyRoleset**](docs/Secrets.md#postgcpkeyroleset) | **POST** /gcp/key/{roleset} | 
-*Secrets* | [**PostGcpRolesetName**](docs/Secrets.md#postgcprolesetname) | **POST** /gcp/roleset/{name} | 
-*Secrets* | [**PostGcpRolesetNameRotate**](docs/Secrets.md#postgcprolesetnamerotate) | **POST** /gcp/roleset/{name}/rotate | 
-*Secrets* | [**PostGcpRolesetNameRotateKey**](docs/Secrets.md#postgcprolesetnamerotatekey) | **POST** /gcp/roleset/{name}/rotate-key | 
-*Secrets* | [**PostGcpRolesetRolesetKey**](docs/Secrets.md#postgcprolesetrolesetkey) | **POST** /gcp/roleset/{roleset}/key | 
-*Secrets* | [**PostGcpRolesetRolesetToken**](docs/Secrets.md#postgcprolesetrolesettoken) | **POST** /gcp/roleset/{roleset}/token | 
-*Secrets* | [**PostGcpStaticAccountName**](docs/Secrets.md#postgcpstaticaccountname) | **POST** /gcp/static-account/{name} | 
-*Secrets* | [**PostGcpStaticAccountNameKey**](docs/Secrets.md#postgcpstaticaccountnamekey) | **POST** /gcp/static-account/{name}/key | 
-*Secrets* | [**PostGcpStaticAccountNameRotateKey**](docs/Secrets.md#postgcpstaticaccountnamerotatekey) | **POST** /gcp/static-account/{name}/rotate-key | 
-*Secrets* | [**PostGcpStaticAccountNameToken**](docs/Secrets.md#postgcpstaticaccountnametoken) | **POST** /gcp/static-account/{name}/token | 
-*Secrets* | [**PostGcpTokenRoleset**](docs/Secrets.md#postgcptokenroleset) | **POST** /gcp/token/{roleset} | 
-*Secrets* | [**PostGcpkmsConfig**](docs/Secrets.md#postgcpkmsconfig) | **POST** /gcpkms/config | Configure the GCP KMS secrets engine
-*Secrets* | [**PostGcpkmsDecryptKey**](docs/Secrets.md#postgcpkmsdecryptkey) | **POST** /gcpkms/decrypt/{key} | Decrypt a ciphertext value using a named key
-*Secrets* | [**PostGcpkmsEncryptKey**](docs/Secrets.md#postgcpkmsencryptkey) | **POST** /gcpkms/encrypt/{key} | Encrypt a plaintext value using a named key
-*Secrets* | [**PostGcpkmsKeysConfigKey**](docs/Secrets.md#postgcpkmskeysconfigkey) | **POST** /gcpkms/keys/config/{key} | Configure the key in Vault
-*Secrets* | [**PostGcpkmsKeysDeregisterKey**](docs/Secrets.md#postgcpkmskeysderegisterkey) | **POST** /gcpkms/keys/deregister/{key} | Deregister an existing key in Vault
-*Secrets* | [**PostGcpkmsKeysKey**](docs/Secrets.md#postgcpkmskeyskey) | **POST** /gcpkms/keys/{key} | Interact with crypto keys in Vault and Google Cloud KMS
-*Secrets* | [**PostGcpkmsKeysRegisterKey**](docs/Secrets.md#postgcpkmskeysregisterkey) | **POST** /gcpkms/keys/register/{key} | Register an existing crypto key in Google Cloud KMS
-*Secrets* | [**PostGcpkmsKeysRotateKey**](docs/Secrets.md#postgcpkmskeysrotatekey) | **POST** /gcpkms/keys/rotate/{key} | Rotate a crypto key to a new primary version
-*Secrets* | [**PostGcpkmsKeysTrimKey**](docs/Secrets.md#postgcpkmskeystrimkey) | **POST** /gcpkms/keys/trim/{key} | Delete old crypto key versions from Google Cloud KMS
-*Secrets* | [**PostGcpkmsReencryptKey**](docs/Secrets.md#postgcpkmsreencryptkey) | **POST** /gcpkms/reencrypt/{key} | Re-encrypt existing ciphertext data to a new version
-*Secrets* | [**PostGcpkmsSignKey**](docs/Secrets.md#postgcpkmssignkey) | **POST** /gcpkms/sign/{key} | Signs a message or digest using a named key
-*Secrets* | [**PostGcpkmsVerifyKey**](docs/Secrets.md#postgcpkmsverifykey) | **POST** /gcpkms/verify/{key} | Verify a signature using a named key
-*Secrets* | [**PostKubernetesConfig**](docs/Secrets.md#postkubernetesconfig) | **POST** /kubernetes/config | 
-*Secrets* | [**PostKubernetesCredsName**](docs/Secrets.md#postkubernetescredsname) | **POST** /kubernetes/creds/{name} | 
-*Secrets* | [**PostKubernetesRolesName**](docs/Secrets.md#postkubernetesrolesname) | **POST** /kubernetes/roles/{name} | 
-*Secrets* | [**PostKvPath**](docs/Secrets.md#postkvpath) | **POST** /kv/{path} | Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
-*Secrets* | [**PostLdapConfig**](docs/Secrets.md#postldapconfig) | **POST** /ldap/config | 
-*Secrets* | [**PostLdapLibraryManageNameCheckIn**](docs/Secrets.md#postldaplibrarymanagenamecheckin) | **POST** /ldap/library/manage/{name}/check-in | Check service accounts in to the library.
-*Secrets* | [**PostLdapLibraryName**](docs/Secrets.md#postldaplibraryname) | **POST** /ldap/library/{name} | Update a library set.
-*Secrets* | [**PostLdapLibraryNameCheckIn**](docs/Secrets.md#postldaplibrarynamecheckin) | **POST** /ldap/library/{name}/check-in | Check service accounts in to the library.
-*Secrets* | [**PostLdapLibraryNameCheckOut**](docs/Secrets.md#postldaplibrarynamecheckout) | **POST** /ldap/library/{name}/check-out | Check a service account out from the library.
-*Secrets* | [**PostLdapRoleName**](docs/Secrets.md#postldaprolename) | **POST** /ldap/role/{name} | 
-*Secrets* | [**PostLdapRotateRoleName**](docs/Secrets.md#postldaprotaterolename) | **POST** /ldap/rotate-role/{name} | 
-*Secrets* | [**PostLdapRotateRoot**](docs/Secrets.md#postldaprotateroot) | **POST** /ldap/rotate-root | 
-*Secrets* | [**PostLdapStaticRoleName**](docs/Secrets.md#postldapstaticrolename) | **POST** /ldap/static-role/{name} | 
-*Secrets* | [**PostMongodbatlasConfig**](docs/Secrets.md#postmongodbatlasconfig) | **POST** /mongodbatlas/config | Configure the  credentials that are used to manage Database Users.
-*Secrets* | [**PostMongodbatlasCredsName**](docs/Secrets.md#postmongodbatlascredsname) | **POST** /mongodbatlas/creds/{name} | Generate MongoDB Atlas Programmatic API from a specific Vault role.
-*Secrets* | [**PostMongodbatlasRolesName**](docs/Secrets.md#postmongodbatlasrolesname) | **POST** /mongodbatlas/roles/{name} | Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
-*Secrets* | [**PostNomadConfigAccess**](docs/Secrets.md#postnomadconfigaccess) | **POST** /nomad/config/access | 
-*Secrets* | [**PostNomadConfigLease**](docs/Secrets.md#postnomadconfiglease) | **POST** /nomad/config/lease | Configure the lease parameters for generated tokens
-*Secrets* | [**PostNomadRoleName**](docs/Secrets.md#postnomadrolename) | **POST** /nomad/role/{name} | 
-*Secrets* | [**PostOpenldapConfig**](docs/Secrets.md#postopenldapconfig) | **POST** /openldap/config | 
-*Secrets* | [**PostOpenldapLibraryManageNameCheckIn**](docs/Secrets.md#postopenldaplibrarymanagenamecheckin) | **POST** /openldap/library/manage/{name}/check-in | Check service accounts in to the library.
-*Secrets* | [**PostOpenldapLibraryName**](docs/Secrets.md#postopenldaplibraryname) | **POST** /openldap/library/{name} | Update a library set.
-*Secrets* | [**PostOpenldapLibraryNameCheckIn**](docs/Secrets.md#postopenldaplibrarynamecheckin) | **POST** /openldap/library/{name}/check-in | Check service accounts in to the library.
-*Secrets* | [**PostOpenldapLibraryNameCheckOut**](docs/Secrets.md#postopenldaplibrarynamecheckout) | **POST** /openldap/library/{name}/check-out | Check a service account out from the library.
-*Secrets* | [**PostOpenldapRoleName**](docs/Secrets.md#postopenldaprolename) | **POST** /openldap/role/{name} | 
-*Secrets* | [**PostOpenldapRotateRoleName**](docs/Secrets.md#postopenldaprotaterolename) | **POST** /openldap/rotate-role/{name} | 
-*Secrets* | [**PostOpenldapRotateRoot**](docs/Secrets.md#postopenldaprotateroot) | **POST** /openldap/rotate-root | 
-*Secrets* | [**PostOpenldapStaticRoleName**](docs/Secrets.md#postopenldapstaticrolename) | **POST** /openldap/static-role/{name} | 
-*Secrets* | [**PostPkiBundle**](docs/Secrets.md#postpkibundle) | **POST** /pki/bundle | 
-*Secrets* | [**PostPkiCert**](docs/Secrets.md#postpkicert) | **POST** /pki/cert | 
-*Secrets* | [**PostPkiConfigAutoTidy**](docs/Secrets.md#postpkiconfigautotidy) | **POST** /pki/config/auto-tidy | 
-*Secrets* | [**PostPkiConfigCa**](docs/Secrets.md#postpkiconfigca) | **POST** /pki/config/ca | 
-*Secrets* | [**PostPkiConfigCrl**](docs/Secrets.md#postpkiconfigcrl) | **POST** /pki/config/crl | 
-*Secrets* | [**PostPkiConfigIssuers**](docs/Secrets.md#postpkiconfigissuers) | **POST** /pki/config/issuers | 
-*Secrets* | [**PostPkiConfigKeys**](docs/Secrets.md#postpkiconfigkeys) | **POST** /pki/config/keys | 
-*Secrets* | [**PostPkiConfigUrls**](docs/Secrets.md#postpkiconfigurls) | **POST** /pki/config/urls | 
-*Secrets* | [**PostPkiIntermediateCrossSign**](docs/Secrets.md#postpkiintermediatecrosssign) | **POST** /pki/intermediate/cross-sign | 
-*Secrets* | [**PostPkiIntermediateGenerateExported**](docs/Secrets.md#postpkiintermediategenerateexported) | **POST** /pki/intermediate/generate/{exported} | 
-*Secrets* | [**PostPkiIntermediateSetSigned**](docs/Secrets.md#postpkiintermediatesetsigned) | **POST** /pki/intermediate/set-signed | 
-*Secrets* | [**PostPkiIssueRole**](docs/Secrets.md#postpkiissuerole) | **POST** /pki/issue/{role} | 
-*Secrets* | [**PostPkiIssuerIssuerRefIssueRole**](docs/Secrets.md#postpkiissuerissuerrefissuerole) | **POST** /pki/issuer/{issuer_ref}/issue/{role} | 
-*Secrets* | [**PostPkiIssuerIssuerRefRevoke**](docs/Secrets.md#postpkiissuerissuerrefrevoke) | **POST** /pki/issuer/{issuer_ref}/revoke | 
-*Secrets* | [**PostPkiIssuerIssuerRefSignIntermediate**](docs/Secrets.md#postpkiissuerissuerrefsignintermediate) | **POST** /pki/issuer/{issuer_ref}/sign-intermediate | 
-*Secrets* | [**PostPkiIssuerIssuerRefSignRole**](docs/Secrets.md#postpkiissuerissuerrefsignrole) | **POST** /pki/issuer/{issuer_ref}/sign/{role} | 
-*Secrets* | [**PostPkiIssuerIssuerRefSignSelfIssued**](docs/Secrets.md#postpkiissuerissuerrefsignselfissued) | **POST** /pki/issuer/{issuer_ref}/sign-self-issued | 
-*Secrets* | [**PostPkiIssuerIssuerRefSignVerbatim**](docs/Secrets.md#postpkiissuerissuerrefsignverbatim) | **POST** /pki/issuer/{issuer_ref}/sign-verbatim | 
-*Secrets* | [**PostPkiIssuerIssuerRefSignVerbatimRole**](docs/Secrets.md#postpkiissuerissuerrefsignverbatimrole) | **POST** /pki/issuer/{issuer_ref}/sign-verbatim/{role} | 
-*Secrets* | [**PostPkiIssuersGenerateIntermediateExported**](docs/Secrets.md#postpkiissuersgenerateintermediateexported) | **POST** /pki/issuers/generate/intermediate/{exported} | 
-*Secrets* | [**PostPkiIssuersGenerateRootExported**](docs/Secrets.md#postpkiissuersgeneraterootexported) | **POST** /pki/issuers/generate/root/{exported} | 
-*Secrets* | [**PostPkiJson**](docs/Secrets.md#postpkijson) | **POST** /pki//json | 
-*Secrets* | [**PostPkiKeyKeyRef**](docs/Secrets.md#postpkikeykeyref) | **POST** /pki/key/{key_ref} | 
-*Secrets* | [**PostPkiKeysImport**](docs/Secrets.md#postpkikeysimport) | **POST** /pki/keys/import | 
-*Secrets* | [**PostPkiKms**](docs/Secrets.md#postpkikms) | **POST** /pki/kms | 
-*Secrets* | [**PostPkiOcsp**](docs/Secrets.md#postpkiocsp) | **POST** /pki/ocsp | 
-*Secrets* | [**PostPkiRevoke**](docs/Secrets.md#postpkirevoke) | **POST** /pki/revoke | 
-*Secrets* | [**PostPkiRevokeWithKey**](docs/Secrets.md#postpkirevokewithkey) | **POST** /pki/revoke-with-key | 
-*Secrets* | [**PostPkiRolesName**](docs/Secrets.md#postpkirolesname) | **POST** /pki/roles/{name} | 
-*Secrets* | [**PostPkiRootGenerateExported**](docs/Secrets.md#postpkirootgenerateexported) | **POST** /pki/root/generate/{exported} | 
-*Secrets* | [**PostPkiRootReplace**](docs/Secrets.md#postpkirootreplace) | **POST** /pki/root/replace | 
-*Secrets* | [**PostPkiRootRotateExported**](docs/Secrets.md#postpkirootrotateexported) | **POST** /pki/root/rotate/{exported} | 
-*Secrets* | [**PostPkiRootSignIntermediate**](docs/Secrets.md#postpkirootsignintermediate) | **POST** /pki/root/sign-intermediate | 
-*Secrets* | [**PostPkiRootSignSelfIssued**](docs/Secrets.md#postpkirootsignselfissued) | **POST** /pki/root/sign-self-issued | 
-*Secrets* | [**PostPkiSignRole**](docs/Secrets.md#postpkisignrole) | **POST** /pki/sign/{role} | 
-*Secrets* | [**PostPkiSignVerbatim**](docs/Secrets.md#postpkisignverbatim) | **POST** /pki/sign-verbatim | 
-*Secrets* | [**PostPkiSignVerbatimRole**](docs/Secrets.md#postpkisignverbatimrole) | **POST** /pki/sign-verbatim/{role} | 
-*Secrets* | [**PostPkiTidy**](docs/Secrets.md#postpkitidy) | **POST** /pki/tidy | 
-*Secrets* | [**PostPkiTidyCancel**](docs/Secrets.md#postpkitidycancel) | **POST** /pki/tidy-cancel | 
-*Secrets* | [**PostRabbitmqConfigConnection**](docs/Secrets.md#postrabbitmqconfigconnection) | **POST** /rabbitmq/config/connection | Configure the connection URI, username, and password to talk to RabbitMQ management HTTP API.
-*Secrets* | [**PostRabbitmqConfigLease**](docs/Secrets.md#postrabbitmqconfiglease) | **POST** /rabbitmq/config/lease | Configure the lease parameters for generated credentials
-*Secrets* | [**PostRabbitmqRolesName**](docs/Secrets.md#postrabbitmqrolesname) | **POST** /rabbitmq/roles/{name} | Manage the roles that can be created with this backend.
-*Secrets* | [**PostSecretConfig**](docs/Secrets.md#postsecretconfig) | **POST** /secret/config | Configure backend level settings that are applied to every key in the key-value store.
-*Secrets* | [**PostSecretDataPath**](docs/Secrets.md#postsecretdatapath) | **POST** /secret/data/{path} | Write, Patch, Read, and Delete data in the Key-Value Store.
-*Secrets* | [**PostSecretDeletePath**](docs/Secrets.md#postsecretdeletepath) | **POST** /secret/delete/{path} | Marks one or more versions as deleted in the KV store.
-*Secrets* | [**PostSecretDestroyPath**](docs/Secrets.md#postsecretdestroypath) | **POST** /secret/destroy/{path} | Permanently removes one or more versions in the KV store
-*Secrets* | [**PostSecretMetadataPath**](docs/Secrets.md#postsecretmetadatapath) | **POST** /secret/metadata/{path} | Configures settings for the KV store
-*Secrets* | [**PostSecretUndeletePath**](docs/Secrets.md#postsecretundeletepath) | **POST** /secret/undelete/{path} | Undeletes one or more versions from the KV store.
-*Secrets* | [**PostSshConfigCa**](docs/Secrets.md#postsshconfigca) | **POST** /ssh/config/ca | Set the SSH private key used for signing certificates.
-*Secrets* | [**PostSshConfigZeroaddress**](docs/Secrets.md#postsshconfigzeroaddress) | **POST** /ssh/config/zeroaddress | Assign zero address as default CIDR block for select roles.
-*Secrets* | [**PostSshCredsRole**](docs/Secrets.md#postsshcredsrole) | **POST** /ssh/creds/{role} | Creates a credential for establishing SSH connection with the remote host.
-*Secrets* | [**PostSshIssueRole**](docs/Secrets.md#postsshissuerole) | **POST** /ssh/issue/{role} | 
-*Secrets* | [**PostSshKeysKeyName**](docs/Secrets.md#postsshkeyskeyname) | **POST** /ssh/keys/{key_name} | Register a shared private key with Vault.
-*Secrets* | [**PostSshLookup**](docs/Secrets.md#postsshlookup) | **POST** /ssh/lookup | List all the roles associated with the given IP address.
-*Secrets* | [**PostSshRolesRole**](docs/Secrets.md#postsshrolesrole) | **POST** /ssh/roles/{role} | Manage the 'roles' that can be created with this backend.
-*Secrets* | [**PostSshSignRole**](docs/Secrets.md#postsshsignrole) | **POST** /ssh/sign/{role} | Request signing an SSH key using a certain role with the provided details.
-*Secrets* | [**PostSshVerify**](docs/Secrets.md#postsshverify) | **POST** /ssh/verify | Validate the OTP provided by Vault SSH Agent.
-*Secrets* | [**PostTerraformConfig**](docs/Secrets.md#postterraformconfig) | **POST** /terraform/config | 
-*Secrets* | [**PostTerraformCredsName**](docs/Secrets.md#postterraformcredsname) | **POST** /terraform/creds/{name} | Generate a Terraform Cloud or Enterprise API token from a specific Vault role.
-*Secrets* | [**PostTerraformRoleName**](docs/Secrets.md#postterraformrolename) | **POST** /terraform/role/{name} | 
-*Secrets* | [**PostTerraformRotateRoleName**](docs/Secrets.md#postterraformrotaterolename) | **POST** /terraform/rotate-role/{name} | 
-*Secrets* | [**PostTotpCodeName**](docs/Secrets.md#posttotpcodename) | **POST** /totp/code/{name} | Request time-based one-time use password or validate a password for a certain key .
-*Secrets* | [**PostTotpKeysName**](docs/Secrets.md#posttotpkeysname) | **POST** /totp/keys/{name} | Manage the keys that can be created with this backend.
-*Secrets* | [**PostTransitCacheConfig**](docs/Secrets.md#posttransitcacheconfig) | **POST** /transit/cache-config | Configures a new cache of the specified size
-*Secrets* | [**PostTransitDatakeyPlaintextName**](docs/Secrets.md#posttransitdatakeyplaintextname) | **POST** /transit/datakey/{plaintext}/{name} | Generate a data key
-*Secrets* | [**PostTransitDecryptName**](docs/Secrets.md#posttransitdecryptname) | **POST** /transit/decrypt/{name} | Decrypt a ciphertext value using a named key
-*Secrets* | [**PostTransitEncryptName**](docs/Secrets.md#posttransitencryptname) | **POST** /transit/encrypt/{name} | Encrypt a plaintext value or a batch of plaintext blocks using a named key
-*Secrets* | [**PostTransitHash**](docs/Secrets.md#posttransithash) | **POST** /transit/hash | Generate a hash sum for input data
-*Secrets* | [**PostTransitHashUrlalgorithm**](docs/Secrets.md#posttransithashurlalgorithm) | **POST** /transit/hash/{urlalgorithm} | Generate a hash sum for input data
-*Secrets* | [**PostTransitHmacName**](docs/Secrets.md#posttransithmacname) | **POST** /transit/hmac/{name} | Generate an HMAC for input data using the named key
-*Secrets* | [**PostTransitHmacNameUrlalgorithm**](docs/Secrets.md#posttransithmacnameurlalgorithm) | **POST** /transit/hmac/{name}/{urlalgorithm} | Generate an HMAC for input data using the named key
-*Secrets* | [**PostTransitKeysName**](docs/Secrets.md#posttransitkeysname) | **POST** /transit/keys/{name} | Managed named encryption keys
-*Secrets* | [**PostTransitKeysNameConfig**](docs/Secrets.md#posttransitkeysnameconfig) | **POST** /transit/keys/{name}/config | Configure a named encryption key
-*Secrets* | [**PostTransitKeysNameImport**](docs/Secrets.md#posttransitkeysnameimport) | **POST** /transit/keys/{name}/import | Imports an externally-generated key into a new transit key
-*Secrets* | [**PostTransitKeysNameImportVersion**](docs/Secrets.md#posttransitkeysnameimportversion) | **POST** /transit/keys/{name}/import_version | Imports an externally-generated key into an existing imported key
-*Secrets* | [**PostTransitKeysNameRotate**](docs/Secrets.md#posttransitkeysnamerotate) | **POST** /transit/keys/{name}/rotate | Rotate named encryption key
-*Secrets* | [**PostTransitKeysNameTrim**](docs/Secrets.md#posttransitkeysnametrim) | **POST** /transit/keys/{name}/trim | Trim key versions of a named key
-*Secrets* | [**PostTransitRandom**](docs/Secrets.md#posttransitrandom) | **POST** /transit/random | Generate random bytes
-*Secrets* | [**PostTransitRandomSource**](docs/Secrets.md#posttransitrandomsource) | **POST** /transit/random/{source} | Generate random bytes
-*Secrets* | [**PostTransitRandomSourceUrlbytes**](docs/Secrets.md#posttransitrandomsourceurlbytes) | **POST** /transit/random/{source}/{urlbytes} | Generate random bytes
-*Secrets* | [**PostTransitRandomUrlbytes**](docs/Secrets.md#posttransitrandomurlbytes) | **POST** /transit/random/{urlbytes} | Generate random bytes
-*Secrets* | [**PostTransitRestore**](docs/Secrets.md#posttransitrestore) | **POST** /transit/restore | Restore the named key
-*Secrets* | [**PostTransitRestoreName**](docs/Secrets.md#posttransitrestorename) | **POST** /transit/restore/{name} | Restore the named key
-*Secrets* | [**PostTransitRewrapName**](docs/Secrets.md#posttransitrewrapname) | **POST** /transit/rewrap/{name} | Rewrap ciphertext
-*Secrets* | [**PostTransitSignName**](docs/Secrets.md#posttransitsignname) | **POST** /transit/sign/{name} | Generate a signature for input data using the named key
-*Secrets* | [**PostTransitSignNameUrlalgorithm**](docs/Secrets.md#posttransitsignnameurlalgorithm) | **POST** /transit/sign/{name}/{urlalgorithm} | Generate a signature for input data using the named key
-*Secrets* | [**PostTransitVerifyName**](docs/Secrets.md#posttransitverifyname) | **POST** /transit/verify/{name} | Verify a signature or HMAC for input data created using the named key
-*Secrets* | [**PostTransitVerifyNameUrlalgorithm**](docs/Secrets.md#posttransitverifynameurlalgorithm) | **POST** /transit/verify/{name}/{urlalgorithm} | Verify a signature or HMAC for input data created using the named key
-*System* | [**DeleteSysAuditPath**](docs/System.md#deletesysauditpath) | **DELETE** /sys/audit/{path} | Disable the audit device at the given path.
-*System* | [**DeleteSysAuthPath**](docs/System.md#deletesysauthpath) | **DELETE** /sys/auth/{path} | Disable the auth method at the given auth path
-*System* | [**DeleteSysConfigAuditingRequestHeadersHeader**](docs/System.md#deletesysconfigauditingrequestheadersheader) | **DELETE** /sys/config/auditing/request-headers/{header} | Disable auditing of the given request header.
-*System* | [**DeleteSysConfigCors**](docs/System.md#deletesysconfigcors) | **DELETE** /sys/config/cors | Remove any CORS settings.
-*System* | [**DeleteSysConfigUiHeadersHeader**](docs/System.md#deletesysconfiguiheadersheader) | **DELETE** /sys/config/ui/headers/{header} | Remove a UI header.
-*System* | [**DeleteSysGenerateRoot**](docs/System.md#deletesysgenerateroot) | **DELETE** /sys/generate-root | Cancels any in-progress root generation attempt.
-*System* | [**DeleteSysGenerateRootAttempt**](docs/System.md#deletesysgeneraterootattempt) | **DELETE** /sys/generate-root/attempt | Cancels any in-progress root generation attempt.
-*System* | [**DeleteSysLoggers**](docs/System.md#deletesysloggers) | **DELETE** /sys/loggers | Revert the all loggers to use log level provided in config.
-*System* | [**DeleteSysLoggersName**](docs/System.md#deletesysloggersname) | **DELETE** /sys/loggers/{name} | Revert a single logger to use log level provided in config.
-*System* | [**DeleteSysMountsPath**](docs/System.md#deletesysmountspath) | **DELETE** /sys/mounts/{path} | Disable the mount point specified at the given path.
-*System* | [**DeleteSysPluginsCatalogName**](docs/System.md#deletesyspluginscatalogname) | **DELETE** /sys/plugins/catalog/{name} | Remove the plugin with the given name.
-*System* | [**DeleteSysPluginsCatalogTypeName**](docs/System.md#deletesyspluginscatalogtypename) | **DELETE** /sys/plugins/catalog/{type}/{name} | Remove the plugin with the given name.
-*System* | [**DeleteSysPoliciesAclName**](docs/System.md#deletesyspoliciesaclname) | **DELETE** /sys/policies/acl/{name} | Delete the ACL policy with the given name.
-*System* | [**DeleteSysPoliciesPasswordName**](docs/System.md#deletesyspoliciespasswordname) | **DELETE** /sys/policies/password/{name} | Delete a password policy.
-*System* | [**DeleteSysPolicyName**](docs/System.md#deletesyspolicyname) | **DELETE** /sys/policy/{name} | Delete the policy with the given name.
-*System* | [**DeleteSysQuotasRateLimitName**](docs/System.md#deletesysquotasratelimitname) | **DELETE** /sys/quotas/rate-limit/{name} | 
-*System* | [**DeleteSysRaw**](docs/System.md#deletesysraw) | **DELETE** /sys/raw | Delete the key with given path.
-*System* | [**DeleteSysRawPath**](docs/System.md#deletesysrawpath) | **DELETE** /sys/raw/{path} | Delete the key with given path.
-*System* | [**DeleteSysRekeyBackup**](docs/System.md#deletesysrekeybackup) | **DELETE** /sys/rekey/backup | Delete the backup copy of PGP-encrypted unseal keys.
-*System* | [**DeleteSysRekeyInit**](docs/System.md#deletesysrekeyinit) | **DELETE** /sys/rekey/init | Cancels any in-progress rekey.
-*System* | [**DeleteSysRekeyRecoveryKeyBackup**](docs/System.md#deletesysrekeyrecoverykeybackup) | **DELETE** /sys/rekey/recovery-key-backup | Allows fetching or deleting the backup of the rotated unseal keys.
-*System* | [**DeleteSysRekeyVerify**](docs/System.md#deletesysrekeyverify) | **DELETE** /sys/rekey/verify | Cancel any in-progress rekey verification operation.
-*System* | [**GetSysAudit**](docs/System.md#getsysaudit) | **GET** /sys/audit | List the enabled audit devices.
-*System* | [**GetSysAuth**](docs/System.md#getsysauth) | **GET** /sys/auth | List the currently enabled credential backends.
-*System* | [**GetSysAuthPath**](docs/System.md#getsysauthpath) | **GET** /sys/auth/{path} | Read the configuration of the auth engine at the given path.
-*System* | [**GetSysAuthPathTune**](docs/System.md#getsysauthpathtune) | **GET** /sys/auth/{path}/tune | Reads the given auth path's configuration.
-*System* | [**GetSysConfigAuditingRequestHeaders**](docs/System.md#getsysconfigauditingrequestheaders) | **GET** /sys/config/auditing/request-headers | List the request headers that are configured to be audited.
-*System* | [**GetSysConfigAuditingRequestHeadersHeader**](docs/System.md#getsysconfigauditingrequestheadersheader) | **GET** /sys/config/auditing/request-headers/{header} | List the information for the given request header.
-*System* | [**GetSysConfigCors**](docs/System.md#getsysconfigcors) | **GET** /sys/config/cors | Return the current CORS settings.
-*System* | [**GetSysConfigStateSanitized**](docs/System.md#getsysconfigstatesanitized) | **GET** /sys/config/state/sanitized | Return a sanitized version of the Vault server configuration.
-*System* | [**GetSysConfigUiHeaders**](docs/System.md#getsysconfiguiheaders) | **GET** /sys/config/ui/headers/ | Return a list of configured UI headers.
-*System* | [**GetSysConfigUiHeadersHeader**](docs/System.md#getsysconfiguiheadersheader) | **GET** /sys/config/ui/headers/{header} | Return the given UI header's configuration
-*System* | [**GetSysGenerateRoot**](docs/System.md#getsysgenerateroot) | **GET** /sys/generate-root | Read the configuration and progress of the current root generation attempt.
-*System* | [**GetSysGenerateRootAttempt**](docs/System.md#getsysgeneraterootattempt) | **GET** /sys/generate-root/attempt | Read the configuration and progress of the current root generation attempt.
-*System* | [**GetSysHaStatus**](docs/System.md#getsyshastatus) | **GET** /sys/ha-status | Check the HA status of a Vault cluster
-*System* | [**GetSysHealth**](docs/System.md#getsyshealth) | **GET** /sys/health | Returns the health status of Vault.
-*System* | [**GetSysHostInfo**](docs/System.md#getsyshostinfo) | **GET** /sys/host-info | Information about the host instance that this Vault server is running on.
-*System* | [**GetSysInFlightReq**](docs/System.md#getsysinflightreq) | **GET** /sys/in-flight-req | reports in-flight requests
-*System* | [**GetSysInit**](docs/System.md#getsysinit) | **GET** /sys/init | Returns the initialization status of Vault.
-*System* | [**GetSysInternalCountersActivity**](docs/System.md#getsysinternalcountersactivity) | **GET** /sys/internal/counters/activity | Report the client count metrics, for this namespace and all child namespaces.
-*System* | [**GetSysInternalCountersActivityExport**](docs/System.md#getsysinternalcountersactivityexport) | **GET** /sys/internal/counters/activity/export | Report the client count metrics, for this namespace and all child namespaces.
-*System* | [**GetSysInternalCountersActivityMonthly**](docs/System.md#getsysinternalcountersactivitymonthly) | **GET** /sys/internal/counters/activity/monthly | Report the number of clients for this month, for this namespace and all child namespaces.
-*System* | [**GetSysInternalCountersConfig**](docs/System.md#getsysinternalcountersconfig) | **GET** /sys/internal/counters/config | Read the client count tracking configuration.
-*System* | [**GetSysInternalCountersEntities**](docs/System.md#getsysinternalcountersentities) | **GET** /sys/internal/counters/entities | Backwards compatibility is not guaranteed for this API
-*System* | [**GetSysInternalCountersRequests**](docs/System.md#getsysinternalcountersrequests) | **GET** /sys/internal/counters/requests | Backwards compatibility is not guaranteed for this API
-*System* | [**GetSysInternalCountersTokens**](docs/System.md#getsysinternalcounterstokens) | **GET** /sys/internal/counters/tokens | Backwards compatibility is not guaranteed for this API
-*System* | [**GetSysInternalSpecsOpenapi**](docs/System.md#getsysinternalspecsopenapi) | **GET** /sys/internal/specs/openapi | Generate an OpenAPI 3 document of all mounted paths.
-*System* | [**GetSysInternalUiFeatureFlags**](docs/System.md#getsysinternaluifeatureflags) | **GET** /sys/internal/ui/feature-flags | Lists enabled feature flags.
-*System* | [**GetSysInternalUiMounts**](docs/System.md#getsysinternaluimounts) | **GET** /sys/internal/ui/mounts | Lists all enabled and visible auth and secrets mounts.
-*System* | [**GetSysInternalUiMountsPath**](docs/System.md#getsysinternaluimountspath) | **GET** /sys/internal/ui/mounts/{path} | Return information about the given mount.
-*System* | [**GetSysInternalUiNamespaces**](docs/System.md#getsysinternaluinamespaces) | **GET** /sys/internal/ui/namespaces | Backwards compatibility is not guaranteed for this API
-*System* | [**GetSysInternalUiResultantAcl**](docs/System.md#getsysinternaluiresultantacl) | **GET** /sys/internal/ui/resultant-acl | Backwards compatibility is not guaranteed for this API
-*System* | [**GetSysKeyStatus**](docs/System.md#getsyskeystatus) | **GET** /sys/key-status | Provides information about the backend encryption key.
-*System* | [**GetSysLeader**](docs/System.md#getsysleader) | **GET** /sys/leader | Returns the high availability status and current leader instance of Vault.
-*System* | [**GetSysLeases**](docs/System.md#getsysleases) | **GET** /sys/leases | List leases associated with this Vault cluster
-*System* | [**GetSysLeasesCount**](docs/System.md#getsysleasescount) | **GET** /sys/leases/count | Count of leases associated with this Vault cluster
-*System* | [**GetSysLeasesLookup**](docs/System.md#getsysleaseslookup) | **GET** /sys/leases/lookup/ | Returns a list of lease ids.
-*System* | [**GetSysLeasesLookupPrefix**](docs/System.md#getsysleaseslookupprefix) | **GET** /sys/leases/lookup/{prefix} | Returns a list of lease ids.
-*System* | [**GetSysMetrics**](docs/System.md#getsysmetrics) | **GET** /sys/metrics | Export the metrics aggregated for telemetry purpose.
-*System* | [**GetSysMonitor**](docs/System.md#getsysmonitor) | **GET** /sys/monitor | 
-*System* | [**GetSysMounts**](docs/System.md#getsysmounts) | **GET** /sys/mounts | List the currently mounted backends.
-*System* | [**GetSysMountsPath**](docs/System.md#getsysmountspath) | **GET** /sys/mounts/{path} | Read the configuration of the secret engine at the given path.
-*System* | [**GetSysMountsPathTune**](docs/System.md#getsysmountspathtune) | **GET** /sys/mounts/{path}/tune | Tune backend configuration parameters for this mount.
-*System* | [**GetSysPluginsCatalog**](docs/System.md#getsyspluginscatalog) | **GET** /sys/plugins/catalog | Lists all the plugins known to Vault
-*System* | [**GetSysPluginsCatalogName**](docs/System.md#getsyspluginscatalogname) | **GET** /sys/plugins/catalog/{name} | Return the configuration data for the plugin with the given name.
-*System* | [**GetSysPluginsCatalogType**](docs/System.md#getsyspluginscatalogtype) | **GET** /sys/plugins/catalog/{type} | List the plugins in the catalog.
-*System* | [**GetSysPluginsCatalogTypeName**](docs/System.md#getsyspluginscatalogtypename) | **GET** /sys/plugins/catalog/{type}/{name} | Return the configuration data for the plugin with the given name.
-*System* | [**GetSysPoliciesAcl**](docs/System.md#getsyspoliciesacl) | **GET** /sys/policies/acl | List the configured access control policies.
-*System* | [**GetSysPoliciesAclName**](docs/System.md#getsyspoliciesaclname) | **GET** /sys/policies/acl/{name} | Retrieve information about the named ACL policy.
-*System* | [**GetSysPoliciesPassword**](docs/System.md#getsyspoliciespassword) | **GET** /sys/policies/password | List the existing password policies.
-*System* | [**GetSysPoliciesPasswordName**](docs/System.md#getsyspoliciespasswordname) | **GET** /sys/policies/password/{name} | Retrieve an existing password policy.
-*System* | [**GetSysPoliciesPasswordNameGenerate**](docs/System.md#getsyspoliciespasswordnamegenerate) | **GET** /sys/policies/password/{name}/generate | Generate a password from an existing password policy.
-*System* | [**GetSysPolicy**](docs/System.md#getsyspolicy) | **GET** /sys/policy | List the configured access control policies.
-*System* | [**GetSysPolicyName**](docs/System.md#getsyspolicyname) | **GET** /sys/policy/{name} | Retrieve the policy body for the named policy.
-*System* | [**GetSysPprof**](docs/System.md#getsyspprof) | **GET** /sys/pprof/ | Returns an HTML page listing the available profiles.
-*System* | [**GetSysPprofAllocs**](docs/System.md#getsyspprofallocs) | **GET** /sys/pprof/allocs | Returns a sampling of all past memory allocations.
-*System* | [**GetSysPprofBlock**](docs/System.md#getsyspprofblock) | **GET** /sys/pprof/block | Returns stack traces that led to blocking on synchronization primitives
-*System* | [**GetSysPprofCmdline**](docs/System.md#getsyspprofcmdline) | **GET** /sys/pprof/cmdline | Returns the running program's command line.
-*System* | [**GetSysPprofGoroutine**](docs/System.md#getsyspprofgoroutine) | **GET** /sys/pprof/goroutine | Returns stack traces of all current goroutines.
-*System* | [**GetSysPprofHeap**](docs/System.md#getsyspprofheap) | **GET** /sys/pprof/heap | Returns a sampling of memory allocations of live object.
-*System* | [**GetSysPprofMutex**](docs/System.md#getsyspprofmutex) | **GET** /sys/pprof/mutex | Returns stack traces of holders of contended mutexes
-*System* | [**GetSysPprofProfile**](docs/System.md#getsyspprofprofile) | **GET** /sys/pprof/profile | Returns a pprof-formatted cpu profile payload.
-*System* | [**GetSysPprofSymbol**](docs/System.md#getsyspprofsymbol) | **GET** /sys/pprof/symbol | Returns the program counters listed in the request.
-*System* | [**GetSysPprofThreadcreate**](docs/System.md#getsyspprofthreadcreate) | **GET** /sys/pprof/threadcreate | Returns stack traces that led to the creation of new OS threads
-*System* | [**GetSysPprofTrace**](docs/System.md#getsyspproftrace) | **GET** /sys/pprof/trace | Returns the execution trace in binary form.
-*System* | [**GetSysQuotasConfig**](docs/System.md#getsysquotasconfig) | **GET** /sys/quotas/config | 
-*System* | [**GetSysQuotasRateLimit**](docs/System.md#getsysquotasratelimit) | **GET** /sys/quotas/rate-limit | 
-*System* | [**GetSysQuotasRateLimitName**](docs/System.md#getsysquotasratelimitname) | **GET** /sys/quotas/rate-limit/{name} | 
-*System* | [**GetSysRaw**](docs/System.md#getsysraw) | **GET** /sys/raw | Read the value of the key at the given path.
-*System* | [**GetSysRawPath**](docs/System.md#getsysrawpath) | **GET** /sys/raw/{path} | Read the value of the key at the given path.
-*System* | [**GetSysRekeyBackup**](docs/System.md#getsysrekeybackup) | **GET** /sys/rekey/backup | Return the backup copy of PGP-encrypted unseal keys.
-*System* | [**GetSysRekeyInit**](docs/System.md#getsysrekeyinit) | **GET** /sys/rekey/init | Reads the configuration and progress of the current rekey attempt.
-*System* | [**GetSysRekeyRecoveryKeyBackup**](docs/System.md#getsysrekeyrecoverykeybackup) | **GET** /sys/rekey/recovery-key-backup | Allows fetching or deleting the backup of the rotated unseal keys.
-*System* | [**GetSysRekeyVerify**](docs/System.md#getsysrekeyverify) | **GET** /sys/rekey/verify | Read the configuration and progress of the current rekey verification attempt.
-*System* | [**GetSysRemountStatusMigrationId**](docs/System.md#getsysremountstatusmigrationid) | **GET** /sys/remount/status/{migration_id} | Check status of a mount migration
-*System* | [**GetSysReplicationStatus**](docs/System.md#getsysreplicationstatus) | **GET** /sys/replication/status | 
-*System* | [**GetSysRotateConfig**](docs/System.md#getsysrotateconfig) | **GET** /sys/rotate/config | 
-*System* | [**GetSysSealStatus**](docs/System.md#getsyssealstatus) | **GET** /sys/seal-status | Check the seal status of a Vault.
-*System* | [**GetSysVersionHistory**](docs/System.md#getsysversionhistory) | **GET** /sys/version-history/ | Returns map of historical version change entries
-*System* | [**GetSysWrappingLookup**](docs/System.md#getsyswrappinglookup) | **GET** /sys/wrapping/lookup | Look up wrapping properties for the requester's token.
-*System* | [**PostSysAuditHashPath**](docs/System.md#postsysaudithashpath) | **POST** /sys/audit-hash/{path} | The hash of the given string via the given audit backend
-*System* | [**PostSysAuditPath**](docs/System.md#postsysauditpath) | **POST** /sys/audit/{path} | Enable a new audit device at the supplied path.
-*System* | [**PostSysAuthPath**](docs/System.md#postsysauthpath) | **POST** /sys/auth/{path} | Enables a new auth method.
-*System* | [**PostSysAuthPathTune**](docs/System.md#postsysauthpathtune) | **POST** /sys/auth/{path}/tune | Tune configuration parameters for a given auth path.
-*System* | [**PostSysCapabilities**](docs/System.md#postsyscapabilities) | **POST** /sys/capabilities | Fetches the capabilities of the given token on the given path.
-*System* | [**PostSysCapabilitiesAccessor**](docs/System.md#postsyscapabilitiesaccessor) | **POST** /sys/capabilities-accessor | Fetches the capabilities of the token associated with the given token, on the given path.
-*System* | [**PostSysCapabilitiesSelf**](docs/System.md#postsyscapabilitiesself) | **POST** /sys/capabilities-self | Fetches the capabilities of the given token on the given path.
-*System* | [**PostSysConfigAuditingRequestHeadersHeader**](docs/System.md#postsysconfigauditingrequestheadersheader) | **POST** /sys/config/auditing/request-headers/{header} | Enable auditing of a header.
-*System* | [**PostSysConfigCors**](docs/System.md#postsysconfigcors) | **POST** /sys/config/cors | Configure the CORS settings.
-*System* | [**PostSysConfigReloadSubsystem**](docs/System.md#postsysconfigreloadsubsystem) | **POST** /sys/config/reload/{subsystem} | Reload the given subsystem
-*System* | [**PostSysConfigUiHeadersHeader**](docs/System.md#postsysconfiguiheadersheader) | **POST** /sys/config/ui/headers/{header} | Configure the values to be returned for the UI header.
-*System* | [**PostSysGenerateRoot**](docs/System.md#postsysgenerateroot) | **POST** /sys/generate-root | Initializes a new root generation attempt.
-*System* | [**PostSysGenerateRootAttempt**](docs/System.md#postsysgeneraterootattempt) | **POST** /sys/generate-root/attempt | Initializes a new root generation attempt.
-*System* | [**PostSysGenerateRootUpdate**](docs/System.md#postsysgeneraterootupdate) | **POST** /sys/generate-root/update | Enter a single unseal key share to progress the root generation attempt.
-*System* | [**PostSysInit**](docs/System.md#postsysinit) | **POST** /sys/init | Initialize a new Vault.
-*System* | [**PostSysInternalCountersConfig**](docs/System.md#postsysinternalcountersconfig) | **POST** /sys/internal/counters/config | Enable or disable collection of client count, set retention period, or set default reporting period.
-*System* | [**PostSysLeasesLookup**](docs/System.md#postsysleaseslookup) | **POST** /sys/leases/lookup | Retrieve lease metadata.
-*System* | [**PostSysLeasesRenew**](docs/System.md#postsysleasesrenew) | **POST** /sys/leases/renew | Renews a lease, requesting to extend the lease.
-*System* | [**PostSysLeasesRenewUrlLeaseId**](docs/System.md#postsysleasesrenewurlleaseid) | **POST** /sys/leases/renew/{url_lease_id} | Renews a lease, requesting to extend the lease.
-*System* | [**PostSysLeasesRevoke**](docs/System.md#postsysleasesrevoke) | **POST** /sys/leases/revoke | Revokes a lease immediately.
-*System* | [**PostSysLeasesRevokeForcePrefix**](docs/System.md#postsysleasesrevokeforceprefix) | **POST** /sys/leases/revoke-force/{prefix} | Revokes all secrets or tokens generated under a given prefix immediately
-*System* | [**PostSysLeasesRevokePrefixPrefix**](docs/System.md#postsysleasesrevokeprefixprefix) | **POST** /sys/leases/revoke-prefix/{prefix} | Revokes all secrets (via a lease ID prefix) or tokens (via the tokens' path property) generated under a given prefix immediately.
-*System* | [**PostSysLeasesRevokeUrlLeaseId**](docs/System.md#postsysleasesrevokeurlleaseid) | **POST** /sys/leases/revoke/{url_lease_id} | Revokes a lease immediately.
-*System* | [**PostSysLeasesTidy**](docs/System.md#postsysleasestidy) | **POST** /sys/leases/tidy | This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
-*System* | [**PostSysLoggers**](docs/System.md#postsysloggers) | **POST** /sys/loggers | Modify the log level for all existing loggers.
-*System* | [**PostSysLoggersName**](docs/System.md#postsysloggersname) | **POST** /sys/loggers/{name} | Modify the log level of a single logger.
-*System* | [**PostSysMfaValidate**](docs/System.md#postsysmfavalidate) | **POST** /sys/mfa/validate | Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token
-*System* | [**PostSysMountsPath**](docs/System.md#postsysmountspath) | **POST** /sys/mounts/{path} | Enable a new secrets engine at the given path.
-*System* | [**PostSysMountsPathTune**](docs/System.md#postsysmountspathtune) | **POST** /sys/mounts/{path}/tune | Tune backend configuration parameters for this mount.
-*System* | [**PostSysPluginsCatalogName**](docs/System.md#postsyspluginscatalogname) | **POST** /sys/plugins/catalog/{name} | Register a new plugin, or updates an existing one with the supplied name.
-*System* | [**PostSysPluginsCatalogTypeName**](docs/System.md#postsyspluginscatalogtypename) | **POST** /sys/plugins/catalog/{type}/{name} | Register a new plugin, or updates an existing one with the supplied name.
-*System* | [**PostSysPluginsReloadBackend**](docs/System.md#postsyspluginsreloadbackend) | **POST** /sys/plugins/reload/backend | Reload mounted plugin backends.
-*System* | [**PostSysPoliciesAclName**](docs/System.md#postsyspoliciesaclname) | **POST** /sys/policies/acl/{name} | Add a new or update an existing ACL policy.
-*System* | [**PostSysPoliciesPasswordName**](docs/System.md#postsyspoliciespasswordname) | **POST** /sys/policies/password/{name} | Add a new or update an existing password policy.
-*System* | [**PostSysPolicyName**](docs/System.md#postsyspolicyname) | **POST** /sys/policy/{name} | Add a new or update an existing policy.
-*System* | [**PostSysQuotasConfig**](docs/System.md#postsysquotasconfig) | **POST** /sys/quotas/config | 
-*System* | [**PostSysQuotasRateLimitName**](docs/System.md#postsysquotasratelimitname) | **POST** /sys/quotas/rate-limit/{name} | 
-*System* | [**PostSysRaw**](docs/System.md#postsysraw) | **POST** /sys/raw | Update the value of the key at the given path.
-*System* | [**PostSysRawPath**](docs/System.md#postsysrawpath) | **POST** /sys/raw/{path} | Update the value of the key at the given path.
-*System* | [**PostSysRekeyInit**](docs/System.md#postsysrekeyinit) | **POST** /sys/rekey/init | Initializes a new rekey attempt.
-*System* | [**PostSysRekeyUpdate**](docs/System.md#postsysrekeyupdate) | **POST** /sys/rekey/update | Enter a single unseal key share to progress the rekey of the Vault.
-*System* | [**PostSysRekeyVerify**](docs/System.md#postsysrekeyverify) | **POST** /sys/rekey/verify | Enter a single new key share to progress the rekey verification operation.
-*System* | [**PostSysRemount**](docs/System.md#postsysremount) | **POST** /sys/remount | Initiate a mount migration
-*System* | [**PostSysRenew**](docs/System.md#postsysrenew) | **POST** /sys/renew | Renews a lease, requesting to extend the lease.
-*System* | [**PostSysRenewUrlLeaseId**](docs/System.md#postsysrenewurlleaseid) | **POST** /sys/renew/{url_lease_id} | Renews a lease, requesting to extend the lease.
-*System* | [**PostSysRevoke**](docs/System.md#postsysrevoke) | **POST** /sys/revoke | Revokes a lease immediately.
-*System* | [**PostSysRevokeForcePrefix**](docs/System.md#postsysrevokeforceprefix) | **POST** /sys/revoke-force/{prefix} | Revokes all secrets or tokens generated under a given prefix immediately
-*System* | [**PostSysRevokePrefixPrefix**](docs/System.md#postsysrevokeprefixprefix) | **POST** /sys/revoke-prefix/{prefix} | Revokes all secrets (via a lease ID prefix) or tokens (via the tokens' path property) generated under a given prefix immediately.
-*System* | [**PostSysRevokeUrlLeaseId**](docs/System.md#postsysrevokeurlleaseid) | **POST** /sys/revoke/{url_lease_id} | Revokes a lease immediately.
-*System* | [**PostSysRotate**](docs/System.md#postsysrotate) | **POST** /sys/rotate | Rotates the backend encryption key used to persist data.
-*System* | [**PostSysRotateConfig**](docs/System.md#postsysrotateconfig) | **POST** /sys/rotate/config | 
-*System* | [**PostSysSeal**](docs/System.md#postsysseal) | **POST** /sys/seal | Seal the Vault.
-*System* | [**PostSysStepDown**](docs/System.md#postsysstepdown) | **POST** /sys/step-down | Cause the node to give up active status.
-*System* | [**PostSysToolsHash**](docs/System.md#postsystoolshash) | **POST** /sys/tools/hash | Generate a hash sum for input data
-*System* | [**PostSysToolsHashUrlalgorithm**](docs/System.md#postsystoolshashurlalgorithm) | **POST** /sys/tools/hash/{urlalgorithm} | Generate a hash sum for input data
-*System* | [**PostSysToolsRandom**](docs/System.md#postsystoolsrandom) | **POST** /sys/tools/random | Generate random bytes
-*System* | [**PostSysToolsRandomSource**](docs/System.md#postsystoolsrandomsource) | **POST** /sys/tools/random/{source} | Generate random bytes
-*System* | [**PostSysToolsRandomSourceUrlbytes**](docs/System.md#postsystoolsrandomsourceurlbytes) | **POST** /sys/tools/random/{source}/{urlbytes} | Generate random bytes
-*System* | [**PostSysToolsRandomUrlbytes**](docs/System.md#postsystoolsrandomurlbytes) | **POST** /sys/tools/random/{urlbytes} | Generate random bytes
-*System* | [**PostSysUnseal**](docs/System.md#postsysunseal) | **POST** /sys/unseal | Unseal the Vault.
-*System* | [**PostSysWrappingLookup**](docs/System.md#postsyswrappinglookup) | **POST** /sys/wrapping/lookup | Look up wrapping properties for the given token.
-*System* | [**PostSysWrappingRewrap**](docs/System.md#postsyswrappingrewrap) | **POST** /sys/wrapping/rewrap | Rotates a response-wrapped token.
-*System* | [**PostSysWrappingUnwrap**](docs/System.md#postsyswrappingunwrap) | **POST** /sys/wrapping/unwrap | Unwraps a response-wrapped token.
-*System* | [**PostSysWrappingWrap**](docs/System.md#postsyswrappingwrap) | **POST** /sys/wrapping/wrap | Response-wraps an arbitrary JSON object.
+*Identity* | [**ListIdentityAliasId**](docs/Identity.md#listidentityaliasid) | **GET** /identity/alias/id | List all the alias IDs.
+*Identity* | [**ListIdentityEntityAliasId**](docs/Identity.md#listidentityentityaliasid) | **GET** /identity/entity-alias/id | List all the alias IDs.
+*Identity* | [**ListIdentityEntityId**](docs/Identity.md#listidentityentityid) | **GET** /identity/entity/id | List all the entity IDs
+*Identity* | [**ListIdentityEntityName**](docs/Identity.md#listidentityentityname) | **GET** /identity/entity/name | List all the entity names
+*Identity* | [**ListIdentityGroupAliasId**](docs/Identity.md#listidentitygroupaliasid) | **GET** /identity/group-alias/id | List all the group alias IDs.
+*Identity* | [**ListIdentityGroupId**](docs/Identity.md#listidentitygroupid) | **GET** /identity/group/id | List all the group IDs.
+*Identity* | [**ListIdentityGroupName**](docs/Identity.md#listidentitygroupname) | **GET** /identity/group/name | 
+*Identity* | [**ListIdentityMfaLoginEnforcement**](docs/Identity.md#listidentitymfaloginenforcement) | **GET** /identity/mfa/login-enforcement | List login enforcements
+*Identity* | [**ListIdentityMfaMethod**](docs/Identity.md#listidentitymfamethod) | **GET** /identity/mfa/method | List MFA method configurations for all MFA methods
+*Identity* | [**ListIdentityMfaMethodDuo**](docs/Identity.md#listidentitymfamethodduo) | **GET** /identity/mfa/method/duo | List MFA method configurations for the given MFA method
+*Identity* | [**ListIdentityMfaMethodOkta**](docs/Identity.md#listidentitymfamethodokta) | **GET** /identity/mfa/method/okta | List MFA method configurations for the given MFA method
+*Identity* | [**ListIdentityMfaMethodPingid**](docs/Identity.md#listidentitymfamethodpingid) | **GET** /identity/mfa/method/pingid | List MFA method configurations for the given MFA method
+*Identity* | [**ListIdentityMfaMethodTotp**](docs/Identity.md#listidentitymfamethodtotp) | **GET** /identity/mfa/method/totp | List MFA method configurations for the given MFA method
+*Identity* | [**ListIdentityOidcAssignment**](docs/Identity.md#listidentityoidcassignment) | **GET** /identity/oidc/assignment | 
+*Identity* | [**ListIdentityOidcClient**](docs/Identity.md#listidentityoidcclient) | **GET** /identity/oidc/client | 
+*Identity* | [**ListIdentityOidcKey**](docs/Identity.md#listidentityoidckey) | **GET** /identity/oidc/key | List OIDC keys
+*Identity* | [**ListIdentityOidcProvider**](docs/Identity.md#listidentityoidcprovider) | **GET** /identity/oidc/provider | 
+*Identity* | [**ListIdentityOidcRole**](docs/Identity.md#listidentityoidcrole) | **GET** /identity/oidc/role | List configured OIDC roles
+*Identity* | [**ListIdentityOidcScope**](docs/Identity.md#listidentityoidcscope) | **GET** /identity/oidc/scope | 
+*Identity* | [**ListIdentityPersonaId**](docs/Identity.md#listidentitypersonaid) | **GET** /identity/persona/id | List all the alias IDs.
+*Identity* | [**ReadIdentityAliasIdId**](docs/Identity.md#readidentityaliasidid) | **GET** /identity/alias/id/{id} | Update, read or delete an alias ID.
+*Identity* | [**ReadIdentityEntityAliasIdId**](docs/Identity.md#readidentityentityaliasidid) | **GET** /identity/entity-alias/id/{id} | Update, read or delete an alias ID.
+*Identity* | [**ReadIdentityEntityIdId**](docs/Identity.md#readidentityentityidid) | **GET** /identity/entity/id/{id} | Update, read or delete an entity using entity ID
+*Identity* | [**ReadIdentityEntityNameName**](docs/Identity.md#readidentityentitynamename) | **GET** /identity/entity/name/{name} | Update, read or delete an entity using entity name
+*Identity* | [**ReadIdentityGroupAliasIdId**](docs/Identity.md#readidentitygroupaliasidid) | **GET** /identity/group-alias/id/{id} | 
+*Identity* | [**ReadIdentityGroupIdId**](docs/Identity.md#readidentitygroupidid) | **GET** /identity/group/id/{id} | Update or delete an existing group using its ID.
+*Identity* | [**ReadIdentityGroupNameName**](docs/Identity.md#readidentitygroupnamename) | **GET** /identity/group/name/{name} | 
+*Identity* | [**ReadIdentityMfaLoginEnforcementName**](docs/Identity.md#readidentitymfaloginenforcementname) | **GET** /identity/mfa/login-enforcement/{name} | Read the current login enforcement
+*Identity* | [**ReadIdentityMfaMethodDuoMethodId**](docs/Identity.md#readidentitymfamethodduomethodid) | **GET** /identity/mfa/method/duo/{method_id} | Read the current configuration for the given MFA method
+*Identity* | [**ReadIdentityMfaMethodMethodId**](docs/Identity.md#readidentitymfamethodmethodid) | **GET** /identity/mfa/method/{method_id} | Read the current configuration for the given ID regardless of the MFA method type
+*Identity* | [**ReadIdentityMfaMethodOktaMethodId**](docs/Identity.md#readidentitymfamethodoktamethodid) | **GET** /identity/mfa/method/okta/{method_id} | Read the current configuration for the given MFA method
+*Identity* | [**ReadIdentityMfaMethodPingidMethodId**](docs/Identity.md#readidentitymfamethodpingidmethodid) | **GET** /identity/mfa/method/pingid/{method_id} | Read the current configuration for the given MFA method
+*Identity* | [**ReadIdentityMfaMethodTotpMethodId**](docs/Identity.md#readidentitymfamethodtotpmethodid) | **GET** /identity/mfa/method/totp/{method_id} | Read the current configuration for the given MFA method
+*Identity* | [**ReadIdentityOidcAssignmentName**](docs/Identity.md#readidentityoidcassignmentname) | **GET** /identity/oidc/assignment/{name} | 
+*Identity* | [**ReadIdentityOidcClientName**](docs/Identity.md#readidentityoidcclientname) | **GET** /identity/oidc/client/{name} | 
+*Identity* | [**ReadIdentityOidcConfig**](docs/Identity.md#readidentityoidcconfig) | **GET** /identity/oidc/config | OIDC configuration
+*Identity* | [**ReadIdentityOidcKeyName**](docs/Identity.md#readidentityoidckeyname) | **GET** /identity/oidc/key/{name} | CRUD operations for OIDC keys.
+*Identity* | [**ReadIdentityOidcProviderName**](docs/Identity.md#readidentityoidcprovidername) | **GET** /identity/oidc/provider/{name} | 
+*Identity* | [**ReadIdentityOidcProviderNameAuthorize**](docs/Identity.md#readidentityoidcprovidernameauthorize) | **GET** /identity/oidc/provider/{name}/authorize | 
+*Identity* | [**ReadIdentityOidcProviderNameUserinfo**](docs/Identity.md#readidentityoidcprovidernameuserinfo) | **GET** /identity/oidc/provider/{name}/userinfo | 
+*Identity* | [**ReadIdentityOidcProviderNameWellKnownKeys**](docs/Identity.md#readidentityoidcprovidernamewellknownkeys) | **GET** /identity/oidc/provider/{name}/.well-known/keys | 
+*Identity* | [**ReadIdentityOidcProviderNameWellKnownOpenidConfiguration**](docs/Identity.md#readidentityoidcprovidernamewellknownopenidconfiguration) | **GET** /identity/oidc/provider/{name}/.well-known/openid-configuration | 
+*Identity* | [**ReadIdentityOidcRoleName**](docs/Identity.md#readidentityoidcrolename) | **GET** /identity/oidc/role/{name} | CRUD operations on OIDC Roles
+*Identity* | [**ReadIdentityOidcScopeName**](docs/Identity.md#readidentityoidcscopename) | **GET** /identity/oidc/scope/{name} | 
+*Identity* | [**ReadIdentityOidcTokenName**](docs/Identity.md#readidentityoidctokenname) | **GET** /identity/oidc/token/{name} | Generate an OIDC token
+*Identity* | [**ReadIdentityOidcWellKnownKeys**](docs/Identity.md#readidentityoidcwellknownkeys) | **GET** /identity/oidc/.well-known/keys | Retrieve public keys
+*Identity* | [**ReadIdentityOidcWellKnownOpenidConfiguration**](docs/Identity.md#readidentityoidcwellknownopenidconfiguration) | **GET** /identity/oidc/.well-known/openid-configuration | Query OIDC configurations
+*Identity* | [**ReadIdentityPersonaIdId**](docs/Identity.md#readidentitypersonaidid) | **GET** /identity/persona/id/{id} | Update, read or delete an alias ID.
+*Identity* | [**UpdateIdentityAlias**](docs/Identity.md#updateidentityalias) | **POST** /identity/alias | Create a new alias.
+*Identity* | [**UpdateIdentityAliasIdId**](docs/Identity.md#updateidentityaliasidid) | **POST** /identity/alias/id/{id} | Update, read or delete an alias ID.
+*Identity* | [**UpdateIdentityEntity**](docs/Identity.md#updateidentityentity) | **POST** /identity/entity | Create a new entity
+*Identity* | [**UpdateIdentityEntityAlias**](docs/Identity.md#updateidentityentityalias) | **POST** /identity/entity-alias | Create a new alias.
+*Identity* | [**UpdateIdentityEntityAliasIdId**](docs/Identity.md#updateidentityentityaliasidid) | **POST** /identity/entity-alias/id/{id} | Update, read or delete an alias ID.
+*Identity* | [**UpdateIdentityEntityBatchDelete**](docs/Identity.md#updateidentityentitybatchdelete) | **POST** /identity/entity/batch-delete | Delete all of the entities provided
+*Identity* | [**UpdateIdentityEntityIdId**](docs/Identity.md#updateidentityentityidid) | **POST** /identity/entity/id/{id} | Update, read or delete an entity using entity ID
+*Identity* | [**UpdateIdentityEntityMerge**](docs/Identity.md#updateidentityentitymerge) | **POST** /identity/entity/merge | Merge two or more entities together
+*Identity* | [**UpdateIdentityEntityNameName**](docs/Identity.md#updateidentityentitynamename) | **POST** /identity/entity/name/{name} | Update, read or delete an entity using entity name
+*Identity* | [**UpdateIdentityGroup**](docs/Identity.md#updateidentitygroup) | **POST** /identity/group | Create a new group.
+*Identity* | [**UpdateIdentityGroupAlias**](docs/Identity.md#updateidentitygroupalias) | **POST** /identity/group-alias | Creates a new group alias, or updates an existing one.
+*Identity* | [**UpdateIdentityGroupAliasIdId**](docs/Identity.md#updateidentitygroupaliasidid) | **POST** /identity/group-alias/id/{id} | 
+*Identity* | [**UpdateIdentityGroupIdId**](docs/Identity.md#updateidentitygroupidid) | **POST** /identity/group/id/{id} | Update or delete an existing group using its ID.
+*Identity* | [**UpdateIdentityGroupNameName**](docs/Identity.md#updateidentitygroupnamename) | **POST** /identity/group/name/{name} | 
+*Identity* | [**UpdateIdentityLookupEntity**](docs/Identity.md#updateidentitylookupentity) | **POST** /identity/lookup/entity | Query entities based on various properties.
+*Identity* | [**UpdateIdentityLookupGroup**](docs/Identity.md#updateidentitylookupgroup) | **POST** /identity/lookup/group | Query groups based on various properties.
+*Identity* | [**UpdateIdentityMfaLoginEnforcementName**](docs/Identity.md#updateidentitymfaloginenforcementname) | **POST** /identity/mfa/login-enforcement/{name} | Create or update a login enforcement
+*Identity* | [**UpdateIdentityMfaMethodDuoMethodId**](docs/Identity.md#updateidentitymfamethodduomethodid) | **POST** /identity/mfa/method/duo/{method_id} | Update or create a configuration for the given MFA method
+*Identity* | [**UpdateIdentityMfaMethodOktaMethodId**](docs/Identity.md#updateidentitymfamethodoktamethodid) | **POST** /identity/mfa/method/okta/{method_id} | Update or create a configuration for the given MFA method
+*Identity* | [**UpdateIdentityMfaMethodPingidMethodId**](docs/Identity.md#updateidentitymfamethodpingidmethodid) | **POST** /identity/mfa/method/pingid/{method_id} | Update or create a configuration for the given MFA method
+*Identity* | [**UpdateIdentityMfaMethodTotpAdminDestroy**](docs/Identity.md#updateidentitymfamethodtotpadmindestroy) | **POST** /identity/mfa/method/totp/admin-destroy | Destroys a TOTP secret for the given MFA method ID on the given entity
+*Identity* | [**UpdateIdentityMfaMethodTotpAdminGenerate**](docs/Identity.md#updateidentitymfamethodtotpadmingenerate) | **POST** /identity/mfa/method/totp/admin-generate | Update or create TOTP secret for the given method ID on the given entity.
+*Identity* | [**UpdateIdentityMfaMethodTotpGenerate**](docs/Identity.md#updateidentitymfamethodtotpgenerate) | **POST** /identity/mfa/method/totp/generate | Update or create TOTP secret for the given method ID on the given entity.
+*Identity* | [**UpdateIdentityMfaMethodTotpMethodId**](docs/Identity.md#updateidentitymfamethodtotpmethodid) | **POST** /identity/mfa/method/totp/{method_id} | Update or create a configuration for the given MFA method
+*Identity* | [**UpdateIdentityOidcAssignmentName**](docs/Identity.md#updateidentityoidcassignmentname) | **POST** /identity/oidc/assignment/{name} | 
+*Identity* | [**UpdateIdentityOidcClientName**](docs/Identity.md#updateidentityoidcclientname) | **POST** /identity/oidc/client/{name} | 
+*Identity* | [**UpdateIdentityOidcConfig**](docs/Identity.md#updateidentityoidcconfig) | **POST** /identity/oidc/config | OIDC configuration
+*Identity* | [**UpdateIdentityOidcIntrospect**](docs/Identity.md#updateidentityoidcintrospect) | **POST** /identity/oidc/introspect | Verify the authenticity of an OIDC token
+*Identity* | [**UpdateIdentityOidcKeyName**](docs/Identity.md#updateidentityoidckeyname) | **POST** /identity/oidc/key/{name} | CRUD operations for OIDC keys.
+*Identity* | [**UpdateIdentityOidcKeyNameRotate**](docs/Identity.md#updateidentityoidckeynamerotate) | **POST** /identity/oidc/key/{name}/rotate | Rotate a named OIDC key.
+*Identity* | [**UpdateIdentityOidcProviderName**](docs/Identity.md#updateidentityoidcprovidername) | **POST** /identity/oidc/provider/{name} | 
+*Identity* | [**UpdateIdentityOidcProviderNameAuthorize**](docs/Identity.md#updateidentityoidcprovidernameauthorize) | **POST** /identity/oidc/provider/{name}/authorize | 
+*Identity* | [**UpdateIdentityOidcProviderNameToken**](docs/Identity.md#updateidentityoidcprovidernametoken) | **POST** /identity/oidc/provider/{name}/token | 
+*Identity* | [**UpdateIdentityOidcProviderNameUserinfo**](docs/Identity.md#updateidentityoidcprovidernameuserinfo) | **POST** /identity/oidc/provider/{name}/userinfo | 
+*Identity* | [**UpdateIdentityOidcRoleName**](docs/Identity.md#updateidentityoidcrolename) | **POST** /identity/oidc/role/{name} | CRUD operations on OIDC Roles
+*Identity* | [**UpdateIdentityOidcScopeName**](docs/Identity.md#updateidentityoidcscopename) | **POST** /identity/oidc/scope/{name} | 
+*Identity* | [**UpdateIdentityPersona**](docs/Identity.md#updateidentitypersona) | **POST** /identity/persona | Create a new alias.
+*Identity* | [**UpdateIdentityPersonaIdId**](docs/Identity.md#updateidentitypersonaidid) | **POST** /identity/persona/id/{id} | Update, read or delete an alias ID.
+*Secrets* | [**DeleteAwsRolesName**](docs/Secrets.md#deleteawsrolesname) | **DELETE** /{mount_path}/roles/{name} | Read, write and reference IAM policies that access keys can be made for.
+*Secrets* | [**DeleteCubbyholePath**](docs/Secrets.md#deletecubbyholepath) | **DELETE** /{mount_path}/{path} | Deletes the secret at the specified location.
+*Secrets* | [**DeleteGcpRolesetName**](docs/Secrets.md#deletegcprolesetname) | **DELETE** /{mount_path}/roleset/{name} | 
+*Secrets* | [**DeleteGcpStaticAccountName**](docs/Secrets.md#deletegcpstaticaccountname) | **DELETE** /{mount_path}/static-account/{name} | 
+*Secrets* | [**DeleteGcpkmsKeysDeregisterKey**](docs/Secrets.md#deletegcpkmskeysderegisterkey) | **DELETE** /{mount_path}/keys/deregister/{key} | Deregister an existing key in Vault
+*Secrets* | [**DeleteGcpkmsKeysKey**](docs/Secrets.md#deletegcpkmskeyskey) | **DELETE** /{mount_path}/keys/{key} | Interact with crypto keys in Vault and Google Cloud KMS
+*Secrets* | [**DeleteGcpkmsKeysTrimKey**](docs/Secrets.md#deletegcpkmskeystrimkey) | **DELETE** /{mount_path}/keys/trim/{key} | Delete old crypto key versions from Google Cloud KMS
+*Secrets* | [**DeleteLdapLibraryName**](docs/Secrets.md#deleteldaplibraryname) | **DELETE** /{mount_path}/library/{name} | Delete a library set.
+*Secrets* | [**DeleteLdapRoleName**](docs/Secrets.md#deleteldaprolename) | **DELETE** /{mount_path}/role/{name} | 
+*Secrets* | [**DeleteLdapStaticRoleName**](docs/Secrets.md#deleteldapstaticrolename) | **DELETE** /{mount_path}/static-role/{name} | 
+*Secrets* | [**DeleteNomadConfigAccess**](docs/Secrets.md#deletenomadconfigaccess) | **DELETE** /{mount_path}/config/access | 
+*Secrets* | [**DeletePkiIssuerRefDerPem**](docs/Secrets.md#deletepkiissuerrefderpem) | **DELETE** /{mount_path}/{issuer_ref}/der|/pem | 
+*Secrets* | [**DeletePkiJson**](docs/Secrets.md#deletepkijson) | **DELETE** /{mount_path}//json | 
+*Secrets* | [**DeletePkiKeyKeyRef**](docs/Secrets.md#deletepkikeykeyref) | **DELETE** /{mount_path}/key/{key_ref} | 
+*Secrets* | [**DeletePkiRoot**](docs/Secrets.md#deletepkiroot) | **DELETE** /{mount_path}/root | 
+*Secrets* | [**DeleteSecretDataPath**](docs/Secrets.md#deletesecretdatapath) | **DELETE** /{mount_path}/data/{path} | Write, Patch, Read, and Delete data in the Key-Value Store.
+*Secrets* | [**DeleteSecretMetadataPath**](docs/Secrets.md#deletesecretmetadatapath) | **DELETE** /{mount_path}/metadata/{path} | Configures settings for the KV store
+*Secrets* | [**DeleteSshConfigZeroaddress**](docs/Secrets.md#deletesshconfigzeroaddress) | **DELETE** /{mount_path}/config/zeroaddress | Assign zero address as default CIDR block for select roles.
+*Secrets* | [**DeleteSshKeysKeyName**](docs/Secrets.md#deletesshkeyskeyname) | **DELETE** /{mount_path}/keys/{key_name} | Register a shared private key with Vault.
+*Secrets* | [**DeleteSshRolesRole**](docs/Secrets.md#deletesshrolesrole) | **DELETE** /{mount_path}/roles/{role} | Manage the 'roles' that can be created with this backend.
+*Secrets* | [**DeleteTotpKeysName**](docs/Secrets.md#deletetotpkeysname) | **DELETE** /{mount_path}/keys/{name} | Manage the keys that can be created with this backend.
+*Secrets* | [**ListAwsRoles**](docs/Secrets.md#listawsroles) | **GET** /{mount_path}/roles | List the existing roles in this backend
+*Secrets* | [**ListGcpRolesets**](docs/Secrets.md#listgcprolesets) | **GET** /{mount_path}/rolesets | 
+*Secrets* | [**ListGcpStaticAccounts**](docs/Secrets.md#listgcpstaticaccounts) | **GET** /{mount_path}/static-accounts | 
+*Secrets* | [**ListLdapLibrary**](docs/Secrets.md#listldaplibrary) | **GET** /{mount_path}/library | 
+*Secrets* | [**ListLdapRole**](docs/Secrets.md#listldaprole) | **GET** /{mount_path}/role | 
+*Secrets* | [**ListLdapStaticRole**](docs/Secrets.md#listldapstaticrole) | **GET** /{mount_path}/static-role | 
+*Secrets* | [**ListPkiCerts**](docs/Secrets.md#listpkicerts) | **GET** /{mount_path}/certs | 
+*Secrets* | [**ListPkiIssuers**](docs/Secrets.md#listpkiissuers) | **GET** /{mount_path}/issuers | 
+*Secrets* | [**ListTotpKeys**](docs/Secrets.md#listtotpkeys) | **GET** /{mount_path}/keys | Manage the keys that can be created with this backend.
+*Secrets* | [**ReadAwsConfigLease**](docs/Secrets.md#readawsconfiglease) | **GET** /{mount_path}/config/lease | Configure the default lease information for generated credentials.
+*Secrets* | [**ReadAwsConfigRoot**](docs/Secrets.md#readawsconfigroot) | **GET** /{mount_path}/config/root | Configure the root credentials that are used to manage IAM.
+*Secrets* | [**ReadAwsCreds**](docs/Secrets.md#readawscreds) | **GET** /{mount_path}/creds | Generate AWS credentials from a specific Vault role.
+*Secrets* | [**ReadAwsRolesName**](docs/Secrets.md#readawsrolesname) | **GET** /{mount_path}/roles/{name} | Read, write and reference IAM policies that access keys can be made for.
+*Secrets* | [**ReadAwsStsName**](docs/Secrets.md#readawsstsname) | **GET** /{mount_path}/sts/{name} | Generate AWS credentials from a specific Vault role.
+*Secrets* | [**ReadAzureCredsRole**](docs/Secrets.md#readazurecredsrole) | **GET** /{mount_path}/creds/{role} | 
+*Secrets* | [**ReadCubbyholePath**](docs/Secrets.md#readcubbyholepath) | **GET** /{mount_path}/{path} | Retrieve the secret at the specified location.
+*Secrets* | [**ReadGcpConfig**](docs/Secrets.md#readgcpconfig) | **GET** /{mount_path}/config | 
+*Secrets* | [**ReadGcpKeyRoleset**](docs/Secrets.md#readgcpkeyroleset) | **GET** /{mount_path}/key/{roleset} | 
+*Secrets* | [**ReadGcpRolesetName**](docs/Secrets.md#readgcprolesetname) | **GET** /{mount_path}/roleset/{name} | 
+*Secrets* | [**ReadGcpRolesetRolesetKey**](docs/Secrets.md#readgcprolesetrolesetkey) | **GET** /{mount_path}/roleset/{roleset}/key | 
+*Secrets* | [**ReadGcpRolesetRolesetToken**](docs/Secrets.md#readgcprolesetrolesettoken) | **GET** /{mount_path}/roleset/{roleset}/token | 
+*Secrets* | [**ReadGcpStaticAccountName**](docs/Secrets.md#readgcpstaticaccountname) | **GET** /{mount_path}/static-account/{name} | 
+*Secrets* | [**ReadGcpStaticAccountNameKey**](docs/Secrets.md#readgcpstaticaccountnamekey) | **GET** /{mount_path}/static-account/{name}/key | 
+*Secrets* | [**ReadGcpStaticAccountNameToken**](docs/Secrets.md#readgcpstaticaccountnametoken) | **GET** /{mount_path}/static-account/{name}/token | 
+*Secrets* | [**ReadGcpTokenRoleset**](docs/Secrets.md#readgcptokenroleset) | **GET** /{mount_path}/token/{roleset} | 
+*Secrets* | [**ReadGcpkmsKeysConfigKey**](docs/Secrets.md#readgcpkmskeysconfigkey) | **GET** /{mount_path}/keys/config/{key} | Configure the key in Vault
+*Secrets* | [**ReadGcpkmsKeysKey**](docs/Secrets.md#readgcpkmskeyskey) | **GET** /{mount_path}/keys/{key} | Interact with crypto keys in Vault and Google Cloud KMS
+*Secrets* | [**ReadGcpkmsPubkeyKey**](docs/Secrets.md#readgcpkmspubkeykey) | **GET** /{mount_path}/pubkey/{key} | Retrieve the public key associated with the named key
+*Secrets* | [**ReadLdapCredsName**](docs/Secrets.md#readldapcredsname) | **GET** /{mount_path}/creds/{name} | 
+*Secrets* | [**ReadLdapLibraryName**](docs/Secrets.md#readldaplibraryname) | **GET** /{mount_path}/library/{name} | Read a library set.
+*Secrets* | [**ReadLdapLibraryNameStatus**](docs/Secrets.md#readldaplibrarynamestatus) | **GET** /{mount_path}/library/{name}/status | Check the status of the service accounts in a library set.
+*Secrets* | [**ReadLdapRoleName**](docs/Secrets.md#readldaprolename) | **GET** /{mount_path}/role/{name} | 
+*Secrets* | [**ReadLdapStaticCredName**](docs/Secrets.md#readldapstaticcredname) | **GET** /{mount_path}/static-cred/{name} | 
+*Secrets* | [**ReadLdapStaticRoleName**](docs/Secrets.md#readldapstaticrolename) | **GET** /{mount_path}/static-role/{name} | 
+*Secrets* | [**ReadNomadConfigAccess**](docs/Secrets.md#readnomadconfigaccess) | **GET** /{mount_path}/config/access | 
+*Secrets* | [**ReadPkiCa**](docs/Secrets.md#readpkica) | **GET** /{mount_path}/ca | 
+*Secrets* | [**ReadPkiCaChain**](docs/Secrets.md#readpkicachain) | **GET** /{mount_path}/ca_chain | 
+*Secrets* | [**ReadPkiCaPem**](docs/Secrets.md#readpkicapem) | **GET** /{mount_path}/ca/pem | 
+*Secrets* | [**ReadPkiCertCaChain**](docs/Secrets.md#readpkicertcachain) | **GET** /{mount_path}/cert/ca_chain | 
+*Secrets* | [**ReadPkiCertSerial**](docs/Secrets.md#readpkicertserial) | **GET** /{mount_path}/cert/{serial} | 
+*Secrets* | [**ReadPkiCertSerialRaw**](docs/Secrets.md#readpkicertserialraw) | **GET** /{mount_path}/cert/{serial}/raw | 
+*Secrets* | [**ReadPkiCertSerialRawPem**](docs/Secrets.md#readpkicertserialrawpem) | **GET** /{mount_path}/cert/{serial}/raw/pem | 
+*Secrets* | [**ReadPkiConfigAutoTidy**](docs/Secrets.md#readpkiconfigautotidy) | **GET** /{mount_path}/config/auto-tidy | 
+*Secrets* | [**ReadPkiConfigCrl**](docs/Secrets.md#readpkiconfigcrl) | **GET** /{mount_path}/config/crl | 
+*Secrets* | [**ReadPkiConfigIssuers**](docs/Secrets.md#readpkiconfigissuers) | **GET** /{mount_path}/config/issuers | 
+*Secrets* | [**ReadPkiConfigKeys**](docs/Secrets.md#readpkiconfigkeys) | **GET** /{mount_path}/config/keys | 
+*Secrets* | [**ReadPkiConfigUrls**](docs/Secrets.md#readpkiconfigurls) | **GET** /{mount_path}/config/urls | 
+*Secrets* | [**ReadPkiCrl**](docs/Secrets.md#readpkicrl) | **GET** /{mount_path}/crl | 
+*Secrets* | [**ReadPkiCrlRotate**](docs/Secrets.md#readpkicrlrotate) | **GET** /{mount_path}/crl/rotate | 
+*Secrets* | [**ReadPkiCrlRotateDelta**](docs/Secrets.md#readpkicrlrotatedelta) | **GET** /{mount_path}/crl/rotate-delta | 
+*Secrets* | [**ReadPkiDelta**](docs/Secrets.md#readpkidelta) | **GET** /{mount_path}//delta | 
+*Secrets* | [**ReadPkiDeltaCrl**](docs/Secrets.md#readpkideltacrl) | **GET** /{mount_path}/delta-crl | 
+*Secrets* | [**ReadPkiDeltaPem**](docs/Secrets.md#readpkideltapem) | **GET** /{mount_path}//delta/pem | 
+*Secrets* | [**ReadPkiDer**](docs/Secrets.md#readpkider) | **GET** /{mount_path}//der | 
+*Secrets* | [**ReadPkiIssuerRefCrlPemDerDeltaPem**](docs/Secrets.md#readpkiissuerrefcrlpemderdeltapem) | **GET** /{mount_path}/{issuer_ref}/crl/pem|/der|/delta/pem | 
+*Secrets* | [**ReadPkiIssuerRefDerPem**](docs/Secrets.md#readpkiissuerrefderpem) | **GET** /{mount_path}/{issuer_ref}/der|/pem | 
+*Secrets* | [**ReadPkiJson**](docs/Secrets.md#readpkijson) | **GET** /{mount_path}//json | 
+*Secrets* | [**ReadPkiKeyKeyRef**](docs/Secrets.md#readpkikeykeyref) | **GET** /{mount_path}/key/{key_ref} | 
+*Secrets* | [**ReadPkiOcspReq**](docs/Secrets.md#readpkiocspreq) | **GET** /{mount_path}/ocsp/{req} | 
+*Secrets* | [**ReadPkiPem**](docs/Secrets.md#readpkipem) | **GET** /{mount_path}//pem | 
+*Secrets* | [**ReadPkiTidyStatus**](docs/Secrets.md#readpkitidystatus) | **GET** /{mount_path}/tidy-status | 
+*Secrets* | [**ReadSecretDataPath**](docs/Secrets.md#readsecretdatapath) | **GET** /{mount_path}/data/{path} | Write, Patch, Read, and Delete data in the Key-Value Store.
+*Secrets* | [**ReadSecretMetadataPath**](docs/Secrets.md#readsecretmetadatapath) | **GET** /{mount_path}/metadata/{path} | Configures settings for the KV store
+*Secrets* | [**ReadSecretSubkeysPath**](docs/Secrets.md#readsecretsubkeyspath) | **GET** /{mount_path}/subkeys/{path} | Read the structure of a secret entry from the Key-Value store with the values removed.
+*Secrets* | [**ReadSshConfigZeroaddress**](docs/Secrets.md#readsshconfigzeroaddress) | **GET** /{mount_path}/config/zeroaddress | Assign zero address as default CIDR block for select roles.
+*Secrets* | [**ReadSshPublicKey**](docs/Secrets.md#readsshpublickey) | **GET** /{mount_path}/public_key | Retrieve the public key.
+*Secrets* | [**ReadSshRolesRole**](docs/Secrets.md#readsshrolesrole) | **GET** /{mount_path}/roles/{role} | Manage the 'roles' that can be created with this backend.
+*Secrets* | [**ReadTotpCodeName**](docs/Secrets.md#readtotpcodename) | **GET** /{mount_path}/code/{name} | Request time-based one-time use password or validate a password for a certain key .
+*Secrets* | [**ReadTotpKeysName**](docs/Secrets.md#readtotpkeysname) | **GET** /{mount_path}/keys/{name} | Manage the keys that can be created with this backend.
+*Secrets* | [**ReadTransitBackupName**](docs/Secrets.md#readtransitbackupname) | **GET** /{mount_path}/backup/{name} | Backup the named key
+*Secrets* | [**ReadTransitCacheConfig**](docs/Secrets.md#readtransitcacheconfig) | **GET** /{mount_path}/cache-config | Returns the size of the active cache
+*Secrets* | [**ReadTransitExportTypeName**](docs/Secrets.md#readtransitexporttypename) | **GET** /{mount_path}/export/{type}/{name} | Export named encryption or signing key
+*Secrets* | [**ReadTransitExportTypeNameVersion**](docs/Secrets.md#readtransitexporttypenameversion) | **GET** /{mount_path}/export/{type}/{name}/{version} | Export named encryption or signing key
+*Secrets* | [**ReadTransitWrappingKey**](docs/Secrets.md#readtransitwrappingkey) | **GET** /{mount_path}/wrapping_key | Returns the public key to use for wrapping imported keys
+*Secrets* | [**UpdateAwsConfigLease**](docs/Secrets.md#updateawsconfiglease) | **POST** /{mount_path}/config/lease | Configure the default lease information for generated credentials.
+*Secrets* | [**UpdateAwsConfigRoot**](docs/Secrets.md#updateawsconfigroot) | **POST** /{mount_path}/config/root | Configure the root credentials that are used to manage IAM.
+*Secrets* | [**UpdateAwsCreds**](docs/Secrets.md#updateawscreds) | **POST** /{mount_path}/creds | Generate AWS credentials from a specific Vault role.
+*Secrets* | [**UpdateAwsRolesName**](docs/Secrets.md#updateawsrolesname) | **POST** /{mount_path}/roles/{name} | Read, write and reference IAM policies that access keys can be made for.
+*Secrets* | [**UpdateAwsStsName**](docs/Secrets.md#updateawsstsname) | **POST** /{mount_path}/sts/{name} | Generate AWS credentials from a specific Vault role.
+*Secrets* | [**UpdateCubbyholePath**](docs/Secrets.md#updatecubbyholepath) | **POST** /{mount_path}/{path} | Store a secret at the specified location.
+*Secrets* | [**UpdateGcpConfig**](docs/Secrets.md#updategcpconfig) | **POST** /{mount_path}/config | 
+*Secrets* | [**UpdateGcpConfigRotateRoot**](docs/Secrets.md#updategcpconfigrotateroot) | **POST** /{mount_path}/config/rotate-root | 
+*Secrets* | [**UpdateGcpKeyRoleset**](docs/Secrets.md#updategcpkeyroleset) | **POST** /{mount_path}/key/{roleset} | 
+*Secrets* | [**UpdateGcpRolesetName**](docs/Secrets.md#updategcprolesetname) | **POST** /{mount_path}/roleset/{name} | 
+*Secrets* | [**UpdateGcpRolesetNameRotate**](docs/Secrets.md#updategcprolesetnamerotate) | **POST** /{mount_path}/roleset/{name}/rotate | 
+*Secrets* | [**UpdateGcpRolesetNameRotateKey**](docs/Secrets.md#updategcprolesetnamerotatekey) | **POST** /{mount_path}/roleset/{name}/rotate-key | 
+*Secrets* | [**UpdateGcpRolesetRolesetKey**](docs/Secrets.md#updategcprolesetrolesetkey) | **POST** /{mount_path}/roleset/{roleset}/key | 
+*Secrets* | [**UpdateGcpRolesetRolesetToken**](docs/Secrets.md#updategcprolesetrolesettoken) | **POST** /{mount_path}/roleset/{roleset}/token | 
+*Secrets* | [**UpdateGcpStaticAccountName**](docs/Secrets.md#updategcpstaticaccountname) | **POST** /{mount_path}/static-account/{name} | 
+*Secrets* | [**UpdateGcpStaticAccountNameKey**](docs/Secrets.md#updategcpstaticaccountnamekey) | **POST** /{mount_path}/static-account/{name}/key | 
+*Secrets* | [**UpdateGcpStaticAccountNameRotateKey**](docs/Secrets.md#updategcpstaticaccountnamerotatekey) | **POST** /{mount_path}/static-account/{name}/rotate-key | 
+*Secrets* | [**UpdateGcpStaticAccountNameToken**](docs/Secrets.md#updategcpstaticaccountnametoken) | **POST** /{mount_path}/static-account/{name}/token | 
+*Secrets* | [**UpdateGcpTokenRoleset**](docs/Secrets.md#updategcptokenroleset) | **POST** /{mount_path}/token/{roleset} | 
+*Secrets* | [**UpdateGcpkmsDecryptKey**](docs/Secrets.md#updategcpkmsdecryptkey) | **POST** /{mount_path}/decrypt/{key} | Decrypt a ciphertext value using a named key
+*Secrets* | [**UpdateGcpkmsEncryptKey**](docs/Secrets.md#updategcpkmsencryptkey) | **POST** /{mount_path}/encrypt/{key} | Encrypt a plaintext value using a named key
+*Secrets* | [**UpdateGcpkmsKeysConfigKey**](docs/Secrets.md#updategcpkmskeysconfigkey) | **POST** /{mount_path}/keys/config/{key} | Configure the key in Vault
+*Secrets* | [**UpdateGcpkmsKeysDeregisterKey**](docs/Secrets.md#updategcpkmskeysderegisterkey) | **POST** /{mount_path}/keys/deregister/{key} | Deregister an existing key in Vault
+*Secrets* | [**UpdateGcpkmsKeysKey**](docs/Secrets.md#updategcpkmskeyskey) | **POST** /{mount_path}/keys/{key} | Interact with crypto keys in Vault and Google Cloud KMS
+*Secrets* | [**UpdateGcpkmsKeysRegisterKey**](docs/Secrets.md#updategcpkmskeysregisterkey) | **POST** /{mount_path}/keys/register/{key} | Register an existing crypto key in Google Cloud KMS
+*Secrets* | [**UpdateGcpkmsKeysRotateKey**](docs/Secrets.md#updategcpkmskeysrotatekey) | **POST** /{mount_path}/keys/rotate/{key} | Rotate a crypto key to a new primary version
+*Secrets* | [**UpdateGcpkmsKeysTrimKey**](docs/Secrets.md#updategcpkmskeystrimkey) | **POST** /{mount_path}/keys/trim/{key} | Delete old crypto key versions from Google Cloud KMS
+*Secrets* | [**UpdateGcpkmsReencryptKey**](docs/Secrets.md#updategcpkmsreencryptkey) | **POST** /{mount_path}/reencrypt/{key} | Re-encrypt existing ciphertext data to a new version
+*Secrets* | [**UpdateGcpkmsSignKey**](docs/Secrets.md#updategcpkmssignkey) | **POST** /{mount_path}/sign/{key} | Signs a message or digest using a named key
+*Secrets* | [**UpdateGcpkmsVerifyKey**](docs/Secrets.md#updategcpkmsverifykey) | **POST** /{mount_path}/verify/{key} | Verify a signature using a named key
+*Secrets* | [**UpdateLdapLibraryManageNameCheckIn**](docs/Secrets.md#updateldaplibrarymanagenamecheckin) | **POST** /{mount_path}/library/manage/{name}/check-in | Check service accounts in to the library.
+*Secrets* | [**UpdateLdapLibraryName**](docs/Secrets.md#updateldaplibraryname) | **POST** /{mount_path}/library/{name} | Update a library set.
+*Secrets* | [**UpdateLdapLibraryNameCheckIn**](docs/Secrets.md#updateldaplibrarynamecheckin) | **POST** /{mount_path}/library/{name}/check-in | Check service accounts in to the library.
+*Secrets* | [**UpdateLdapLibraryNameCheckOut**](docs/Secrets.md#updateldaplibrarynamecheckout) | **POST** /{mount_path}/library/{name}/check-out | Check a service account out from the library.
+*Secrets* | [**UpdateLdapRoleName**](docs/Secrets.md#updateldaprolename) | **POST** /{mount_path}/role/{name} | 
+*Secrets* | [**UpdateLdapRotateRoleName**](docs/Secrets.md#updateldaprotaterolename) | **POST** /{mount_path}/rotate-role/{name} | 
+*Secrets* | [**UpdateLdapRotateRoot**](docs/Secrets.md#updateldaprotateroot) | **POST** /{mount_path}/rotate-root | 
+*Secrets* | [**UpdateLdapStaticRoleName**](docs/Secrets.md#updateldapstaticrolename) | **POST** /{mount_path}/static-role/{name} | 
+*Secrets* | [**UpdateNomadConfigAccess**](docs/Secrets.md#updatenomadconfigaccess) | **POST** /{mount_path}/config/access | 
+*Secrets* | [**UpdatePkiBundle**](docs/Secrets.md#updatepkibundle) | **POST** /{mount_path}/bundle | 
+*Secrets* | [**UpdatePkiCert**](docs/Secrets.md#updatepkicert) | **POST** /{mount_path}/cert | 
+*Secrets* | [**UpdatePkiConfigAutoTidy**](docs/Secrets.md#updatepkiconfigautotidy) | **POST** /{mount_path}/config/auto-tidy | 
+*Secrets* | [**UpdatePkiConfigCa**](docs/Secrets.md#updatepkiconfigca) | **POST** /{mount_path}/config/ca | 
+*Secrets* | [**UpdatePkiConfigCrl**](docs/Secrets.md#updatepkiconfigcrl) | **POST** /{mount_path}/config/crl | 
+*Secrets* | [**UpdatePkiConfigIssuers**](docs/Secrets.md#updatepkiconfigissuers) | **POST** /{mount_path}/config/issuers | 
+*Secrets* | [**UpdatePkiConfigKeys**](docs/Secrets.md#updatepkiconfigkeys) | **POST** /{mount_path}/config/keys | 
+*Secrets* | [**UpdatePkiConfigUrls**](docs/Secrets.md#updatepkiconfigurls) | **POST** /{mount_path}/config/urls | 
+*Secrets* | [**UpdatePkiIntermediateCrossSign**](docs/Secrets.md#updatepkiintermediatecrosssign) | **POST** /{mount_path}/intermediate/cross-sign | 
+*Secrets* | [**UpdatePkiIntermediateGenerateExported**](docs/Secrets.md#updatepkiintermediategenerateexported) | **POST** /{mount_path}/intermediate/generate/{exported} | 
+*Secrets* | [**UpdatePkiIntermediateSetSigned**](docs/Secrets.md#updatepkiintermediatesetsigned) | **POST** /{mount_path}/intermediate/set-signed | 
+*Secrets* | [**UpdatePkiIssueRole**](docs/Secrets.md#updatepkiissuerole) | **POST** /{mount_path}/issue/{role} | 
+*Secrets* | [**UpdatePkiIssuerIssuerRefIssueRole**](docs/Secrets.md#updatepkiissuerissuerrefissuerole) | **POST** /{mount_path}/issuer/{issuer_ref}/issue/{role} | 
+*Secrets* | [**UpdatePkiIssuerIssuerRefRevoke**](docs/Secrets.md#updatepkiissuerissuerrefrevoke) | **POST** /{mount_path}/issuer/{issuer_ref}/revoke | 
+*Secrets* | [**UpdatePkiIssuerIssuerRefSignIntermediate**](docs/Secrets.md#updatepkiissuerissuerrefsignintermediate) | **POST** /{mount_path}/issuer/{issuer_ref}/sign-intermediate | 
+*Secrets* | [**UpdatePkiIssuerIssuerRefSignRole**](docs/Secrets.md#updatepkiissuerissuerrefsignrole) | **POST** /{mount_path}/issuer/{issuer_ref}/sign/{role} | 
+*Secrets* | [**UpdatePkiIssuerIssuerRefSignSelfIssued**](docs/Secrets.md#updatepkiissuerissuerrefsignselfissued) | **POST** /{mount_path}/issuer/{issuer_ref}/sign-self-issued | 
+*Secrets* | [**UpdatePkiIssuerIssuerRefSignVerbatim**](docs/Secrets.md#updatepkiissuerissuerrefsignverbatim) | **POST** /{mount_path}/issuer/{issuer_ref}/sign-verbatim | 
+*Secrets* | [**UpdatePkiIssuerIssuerRefSignVerbatimRole**](docs/Secrets.md#updatepkiissuerissuerrefsignverbatimrole) | **POST** /{mount_path}/issuer/{issuer_ref}/sign-verbatim/{role} | 
+*Secrets* | [**UpdatePkiIssuersGenerateIntermediateExported**](docs/Secrets.md#updatepkiissuersgenerateintermediateexported) | **POST** /{mount_path}/issuers/generate/intermediate/{exported} | 
+*Secrets* | [**UpdatePkiIssuersGenerateRootExported**](docs/Secrets.md#updatepkiissuersgeneraterootexported) | **POST** /{mount_path}/issuers/generate/root/{exported} | 
+*Secrets* | [**UpdatePkiJson**](docs/Secrets.md#updatepkijson) | **POST** /{mount_path}//json | 
+*Secrets* | [**UpdatePkiKeyKeyRef**](docs/Secrets.md#updatepkikeykeyref) | **POST** /{mount_path}/key/{key_ref} | 
+*Secrets* | [**UpdatePkiKeysImport**](docs/Secrets.md#updatepkikeysimport) | **POST** /{mount_path}/keys/import | 
+*Secrets* | [**UpdatePkiKms**](docs/Secrets.md#updatepkikms) | **POST** /{mount_path}/kms | 
+*Secrets* | [**UpdatePkiOcsp**](docs/Secrets.md#updatepkiocsp) | **POST** /{mount_path}/ocsp | 
+*Secrets* | [**UpdatePkiRevoke**](docs/Secrets.md#updatepkirevoke) | **POST** /{mount_path}/revoke | 
+*Secrets* | [**UpdatePkiRevokeWithKey**](docs/Secrets.md#updatepkirevokewithkey) | **POST** /{mount_path}/revoke-with-key | 
+*Secrets* | [**UpdatePkiRootGenerateExported**](docs/Secrets.md#updatepkirootgenerateexported) | **POST** /{mount_path}/root/generate/{exported} | 
+*Secrets* | [**UpdatePkiRootReplace**](docs/Secrets.md#updatepkirootreplace) | **POST** /{mount_path}/root/replace | 
+*Secrets* | [**UpdatePkiRootRotateExported**](docs/Secrets.md#updatepkirootrotateexported) | **POST** /{mount_path}/root/rotate/{exported} | 
+*Secrets* | [**UpdatePkiRootSignIntermediate**](docs/Secrets.md#updatepkirootsignintermediate) | **POST** /{mount_path}/root/sign-intermediate | 
+*Secrets* | [**UpdatePkiRootSignSelfIssued**](docs/Secrets.md#updatepkirootsignselfissued) | **POST** /{mount_path}/root/sign-self-issued | 
+*Secrets* | [**UpdatePkiSignRole**](docs/Secrets.md#updatepkisignrole) | **POST** /{mount_path}/sign/{role} | 
+*Secrets* | [**UpdatePkiSignVerbatim**](docs/Secrets.md#updatepkisignverbatim) | **POST** /{mount_path}/sign-verbatim | 
+*Secrets* | [**UpdatePkiSignVerbatimRole**](docs/Secrets.md#updatepkisignverbatimrole) | **POST** /{mount_path}/sign-verbatim/{role} | 
+*Secrets* | [**UpdatePkiTidy**](docs/Secrets.md#updatepkitidy) | **POST** /{mount_path}/tidy | 
+*Secrets* | [**UpdatePkiTidyCancel**](docs/Secrets.md#updatepkitidycancel) | **POST** /{mount_path}/tidy-cancel | 
+*Secrets* | [**UpdateRabbitmqConfigConnection**](docs/Secrets.md#updaterabbitmqconfigconnection) | **POST** /{mount_path}/config/connection | Configure the connection URI, username, and password to talk to RabbitMQ management HTTP API.
+*Secrets* | [**UpdateSecretDataPath**](docs/Secrets.md#updatesecretdatapath) | **POST** /{mount_path}/data/{path} | Write, Patch, Read, and Delete data in the Key-Value Store.
+*Secrets* | [**UpdateSecretDeletePath**](docs/Secrets.md#updatesecretdeletepath) | **POST** /{mount_path}/delete/{path} | Marks one or more versions as deleted in the KV store.
+*Secrets* | [**UpdateSecretDestroyPath**](docs/Secrets.md#updatesecretdestroypath) | **POST** /{mount_path}/destroy/{path} | Permanently removes one or more versions in the KV store
+*Secrets* | [**UpdateSecretMetadataPath**](docs/Secrets.md#updatesecretmetadatapath) | **POST** /{mount_path}/metadata/{path} | Configures settings for the KV store
+*Secrets* | [**UpdateSecretUndeletePath**](docs/Secrets.md#updatesecretundeletepath) | **POST** /{mount_path}/undelete/{path} | Undeletes one or more versions from the KV store.
+*Secrets* | [**UpdateSshConfigZeroaddress**](docs/Secrets.md#updatesshconfigzeroaddress) | **POST** /{mount_path}/config/zeroaddress | Assign zero address as default CIDR block for select roles.
+*Secrets* | [**UpdateSshKeysKeyName**](docs/Secrets.md#updatesshkeyskeyname) | **POST** /{mount_path}/keys/{key_name} | Register a shared private key with Vault.
+*Secrets* | [**UpdateSshLookup**](docs/Secrets.md#updatesshlookup) | **POST** /{mount_path}/lookup | List all the roles associated with the given IP address.
+*Secrets* | [**UpdateSshRolesRole**](docs/Secrets.md#updatesshrolesrole) | **POST** /{mount_path}/roles/{role} | Manage the 'roles' that can be created with this backend.
+*Secrets* | [**UpdateSshVerify**](docs/Secrets.md#updatesshverify) | **POST** /{mount_path}/verify | Validate the OTP provided by Vault SSH Agent.
+*Secrets* | [**UpdateTotpCodeName**](docs/Secrets.md#updatetotpcodename) | **POST** /{mount_path}/code/{name} | Request time-based one-time use password or validate a password for a certain key .
+*Secrets* | [**UpdateTotpKeysName**](docs/Secrets.md#updatetotpkeysname) | **POST** /{mount_path}/keys/{name} | Manage the keys that can be created with this backend.
+*Secrets* | [**UpdateTransitCacheConfig**](docs/Secrets.md#updatetransitcacheconfig) | **POST** /{mount_path}/cache-config | Configures a new cache of the specified size
+*Secrets* | [**UpdateTransitDatakeyPlaintextName**](docs/Secrets.md#updatetransitdatakeyplaintextname) | **POST** /{mount_path}/datakey/{plaintext}/{name} | Generate a data key
+*Secrets* | [**UpdateTransitDecryptName**](docs/Secrets.md#updatetransitdecryptname) | **POST** /{mount_path}/decrypt/{name} | Decrypt a ciphertext value using a named key
+*Secrets* | [**UpdateTransitEncryptName**](docs/Secrets.md#updatetransitencryptname) | **POST** /{mount_path}/encrypt/{name} | Encrypt a plaintext value or a batch of plaintext blocks using a named key
+*Secrets* | [**UpdateTransitHash**](docs/Secrets.md#updatetransithash) | **POST** /{mount_path}/hash | Generate a hash sum for input data
+*Secrets* | [**UpdateTransitHashUrlalgorithm**](docs/Secrets.md#updatetransithashurlalgorithm) | **POST** /{mount_path}/hash/{urlalgorithm} | Generate a hash sum for input data
+*Secrets* | [**UpdateTransitHmacName**](docs/Secrets.md#updatetransithmacname) | **POST** /{mount_path}/hmac/{name} | Generate an HMAC for input data using the named key
+*Secrets* | [**UpdateTransitHmacNameUrlalgorithm**](docs/Secrets.md#updatetransithmacnameurlalgorithm) | **POST** /{mount_path}/hmac/{name}/{urlalgorithm} | Generate an HMAC for input data using the named key
+*Secrets* | [**UpdateTransitKeysNameConfig**](docs/Secrets.md#updatetransitkeysnameconfig) | **POST** /{mount_path}/keys/{name}/config | Configure a named encryption key
+*Secrets* | [**UpdateTransitKeysNameImport**](docs/Secrets.md#updatetransitkeysnameimport) | **POST** /{mount_path}/keys/{name}/import | Imports an externally-generated key into a new transit key
+*Secrets* | [**UpdateTransitKeysNameImportVersion**](docs/Secrets.md#updatetransitkeysnameimportversion) | **POST** /{mount_path}/keys/{name}/import_version | Imports an externally-generated key into an existing imported key
+*Secrets* | [**UpdateTransitKeysNameRotate**](docs/Secrets.md#updatetransitkeysnamerotate) | **POST** /{mount_path}/keys/{name}/rotate | Rotate named encryption key
+*Secrets* | [**UpdateTransitKeysNameTrim**](docs/Secrets.md#updatetransitkeysnametrim) | **POST** /{mount_path}/keys/{name}/trim | Trim key versions of a named key
+*Secrets* | [**UpdateTransitRandom**](docs/Secrets.md#updatetransitrandom) | **POST** /{mount_path}/random | Generate random bytes
+*Secrets* | [**UpdateTransitRandomSource**](docs/Secrets.md#updatetransitrandomsource) | **POST** /{mount_path}/random/{source} | Generate random bytes
+*Secrets* | [**UpdateTransitRandomSourceUrlbytes**](docs/Secrets.md#updatetransitrandomsourceurlbytes) | **POST** /{mount_path}/random/{source}/{urlbytes} | Generate random bytes
+*Secrets* | [**UpdateTransitRandomUrlbytes**](docs/Secrets.md#updatetransitrandomurlbytes) | **POST** /{mount_path}/random/{urlbytes} | Generate random bytes
+*Secrets* | [**UpdateTransitRestore**](docs/Secrets.md#updatetransitrestore) | **POST** /{mount_path}/restore | Restore the named key
+*Secrets* | [**UpdateTransitRestoreName**](docs/Secrets.md#updatetransitrestorename) | **POST** /{mount_path}/restore/{name} | Restore the named key
+*Secrets* | [**UpdateTransitRewrapName**](docs/Secrets.md#updatetransitrewrapname) | **POST** /{mount_path}/rewrap/{name} | Rewrap ciphertext
+*Secrets* | [**UpdateTransitSignName**](docs/Secrets.md#updatetransitsignname) | **POST** /{mount_path}/sign/{name} | Generate a signature for input data using the named key
+*Secrets* | [**UpdateTransitSignNameUrlalgorithm**](docs/Secrets.md#updatetransitsignnameurlalgorithm) | **POST** /{mount_path}/sign/{name}/{urlalgorithm} | Generate a signature for input data using the named key
+*Secrets* | [**UpdateTransitVerifyName**](docs/Secrets.md#updatetransitverifyname) | **POST** /{mount_path}/verify/{name} | Verify a signature or HMAC for input data created using the named key
+*Secrets* | [**UpdateTransitVerifyNameUrlalgorithm**](docs/Secrets.md#updatetransitverifynameurlalgorithm) | **POST** /{mount_path}/verify/{name}/{urlalgorithm} | Verify a signature or HMAC for input data created using the named key
+*System* | [**DeleteSystemAuditPath**](docs/System.md#deletesystemauditpath) | **DELETE** /sys/audit/{path} | Disable the audit device at the given path.
+*System* | [**DeleteSystemAuthPath**](docs/System.md#deletesystemauthpath) | **DELETE** /sys/auth/{path} | Disable the auth method at the given auth path
+*System* | [**DeleteSystemConfigAuditingRequestHeadersHeader**](docs/System.md#deletesystemconfigauditingrequestheadersheader) | **DELETE** /sys/config/auditing/request-headers/{header} | Disable auditing of the given request header.
+*System* | [**DeleteSystemConfigCors**](docs/System.md#deletesystemconfigcors) | **DELETE** /sys/config/cors | Remove any CORS settings.
+*System* | [**DeleteSystemConfigUiHeadersHeader**](docs/System.md#deletesystemconfiguiheadersheader) | **DELETE** /sys/config/ui/headers/{header} | Remove a UI header.
+*System* | [**DeleteSystemGenerateRoot**](docs/System.md#deletesystemgenerateroot) | **DELETE** /sys/generate-root | Cancels any in-progress root generation attempt.
+*System* | [**DeleteSystemGenerateRootAttempt**](docs/System.md#deletesystemgeneraterootattempt) | **DELETE** /sys/generate-root/attempt | Cancels any in-progress root generation attempt.
+*System* | [**DeleteSystemLoggers**](docs/System.md#deletesystemloggers) | **DELETE** /sys/loggers | Revert the all loggers to use log level provided in config.
+*System* | [**DeleteSystemLoggersName**](docs/System.md#deletesystemloggersname) | **DELETE** /sys/loggers/{name} | Revert a single logger to use log level provided in config.
+*System* | [**DeleteSystemMountsPath**](docs/System.md#deletesystemmountspath) | **DELETE** /sys/mounts/{path} | Disable the mount point specified at the given path.
+*System* | [**DeleteSystemPluginsCatalogName**](docs/System.md#deletesystempluginscatalogname) | **DELETE** /sys/plugins/catalog/{name} | Remove the plugin with the given name.
+*System* | [**DeleteSystemPluginsCatalogTypeName**](docs/System.md#deletesystempluginscatalogtypename) | **DELETE** /sys/plugins/catalog/{type}/{name} | Remove the plugin with the given name.
+*System* | [**DeleteSystemPoliciesAclName**](docs/System.md#deletesystempoliciesaclname) | **DELETE** /sys/policies/acl/{name} | Delete the ACL policy with the given name.
+*System* | [**DeleteSystemPoliciesPasswordName**](docs/System.md#deletesystempoliciespasswordname) | **DELETE** /sys/policies/password/{name} | Delete a password policy.
+*System* | [**DeleteSystemPolicyName**](docs/System.md#deletesystempolicyname) | **DELETE** /sys/policy/{name} | Delete the policy with the given name.
+*System* | [**DeleteSystemQuotasRateLimitName**](docs/System.md#deletesystemquotasratelimitname) | **DELETE** /sys/quotas/rate-limit/{name} | 
+*System* | [**DeleteSystemRaw**](docs/System.md#deletesystemraw) | **DELETE** /sys/raw | Delete the key with given path.
+*System* | [**DeleteSystemRawPath**](docs/System.md#deletesystemrawpath) | **DELETE** /sys/raw/{path} | Delete the key with given path.
+*System* | [**DeleteSystemRekeyBackup**](docs/System.md#deletesystemrekeybackup) | **DELETE** /sys/rekey/backup | Delete the backup copy of PGP-encrypted unseal keys.
+*System* | [**DeleteSystemRekeyInit**](docs/System.md#deletesystemrekeyinit) | **DELETE** /sys/rekey/init | Cancels any in-progress rekey.
+*System* | [**DeleteSystemRekeyRecoveryKeyBackup**](docs/System.md#deletesystemrekeyrecoverykeybackup) | **DELETE** /sys/rekey/recovery-key-backup | Allows fetching or deleting the backup of the rotated unseal keys.
+*System* | [**DeleteSystemRekeyVerify**](docs/System.md#deletesystemrekeyverify) | **DELETE** /sys/rekey/verify | Cancel any in-progress rekey verification operation.
+*System* | [**ListSystemConfigUiHeaders**](docs/System.md#listsystemconfiguiheaders) | **GET** /sys/config/ui/headers/ | Return a list of configured UI headers.
+*System* | [**ListSystemLeasesLookup**](docs/System.md#listsystemleaseslookup) | **GET** /sys/leases/lookup/ | Returns a list of lease ids.
+*System* | [**ListSystemLeasesLookupPrefix**](docs/System.md#listsystemleaseslookupprefix) | **GET** /sys/leases/lookup/{prefix} | Returns a list of lease ids.
+*System* | [**ListSystemPluginsCatalogType**](docs/System.md#listsystempluginscatalogtype) | **GET** /sys/plugins/catalog/{type} | List the plugins in the catalog.
+*System* | [**ListSystemPoliciesAcl**](docs/System.md#listsystempoliciesacl) | **GET** /sys/policies/acl | List the configured access control policies.
+*System* | [**ListSystemPoliciesPassword**](docs/System.md#listsystempoliciespassword) | **GET** /sys/policies/password | List the existing password policies.
+*System* | [**ListSystemQuotasRateLimit**](docs/System.md#listsystemquotasratelimit) | **GET** /sys/quotas/rate-limit | 
+*System* | [**ListSystemVersionHistory**](docs/System.md#listsystemversionhistory) | **GET** /sys/version-history/ | Returns map of historical version change entries
+*System* | [**ReadSystemAudit**](docs/System.md#readsystemaudit) | **GET** /sys/audit | List the enabled audit devices.
+*System* | [**ReadSystemAuth**](docs/System.md#readsystemauth) | **GET** /sys/auth | List the currently enabled credential backends.
+*System* | [**ReadSystemAuthPath**](docs/System.md#readsystemauthpath) | **GET** /sys/auth/{path} | Read the configuration of the auth engine at the given path.
+*System* | [**ReadSystemAuthPathTune**](docs/System.md#readsystemauthpathtune) | **GET** /sys/auth/{path}/tune | Reads the given auth path's configuration.
+*System* | [**ReadSystemConfigAuditingRequestHeaders**](docs/System.md#readsystemconfigauditingrequestheaders) | **GET** /sys/config/auditing/request-headers | List the request headers that are configured to be audited.
+*System* | [**ReadSystemConfigAuditingRequestHeadersHeader**](docs/System.md#readsystemconfigauditingrequestheadersheader) | **GET** /sys/config/auditing/request-headers/{header} | List the information for the given request header.
+*System* | [**ReadSystemConfigCors**](docs/System.md#readsystemconfigcors) | **GET** /sys/config/cors | Return the current CORS settings.
+*System* | [**ReadSystemConfigStateSanitized**](docs/System.md#readsystemconfigstatesanitized) | **GET** /sys/config/state/sanitized | Return a sanitized version of the Vault server configuration.
+*System* | [**ReadSystemConfigUiHeadersHeader**](docs/System.md#readsystemconfiguiheadersheader) | **GET** /sys/config/ui/headers/{header} | Return the given UI header's configuration
+*System* | [**ReadSystemGenerateRoot**](docs/System.md#readsystemgenerateroot) | **GET** /sys/generate-root | Read the configuration and progress of the current root generation attempt.
+*System* | [**ReadSystemGenerateRootAttempt**](docs/System.md#readsystemgeneraterootattempt) | **GET** /sys/generate-root/attempt | Read the configuration and progress of the current root generation attempt.
+*System* | [**ReadSystemHaStatus**](docs/System.md#readsystemhastatus) | **GET** /sys/ha-status | Check the HA status of a Vault cluster
+*System* | [**ReadSystemHealth**](docs/System.md#readsystemhealth) | **GET** /sys/health | Returns the health status of Vault.
+*System* | [**ReadSystemHostInfo**](docs/System.md#readsystemhostinfo) | **GET** /sys/host-info | Information about the host instance that this Vault server is running on.
+*System* | [**ReadSystemInFlightReq**](docs/System.md#readsysteminflightreq) | **GET** /sys/in-flight-req | reports in-flight requests
+*System* | [**ReadSystemInit**](docs/System.md#readsysteminit) | **GET** /sys/init | Returns the initialization status of Vault.
+*System* | [**ReadSystemInternalCountersActivity**](docs/System.md#readsysteminternalcountersactivity) | **GET** /sys/internal/counters/activity | Report the client count metrics, for this namespace and all child namespaces.
+*System* | [**ReadSystemInternalCountersActivityExport**](docs/System.md#readsysteminternalcountersactivityexport) | **GET** /sys/internal/counters/activity/export | Report the client count metrics, for this namespace and all child namespaces.
+*System* | [**ReadSystemInternalCountersActivityMonthly**](docs/System.md#readsysteminternalcountersactivitymonthly) | **GET** /sys/internal/counters/activity/monthly | Report the number of clients for this month, for this namespace and all child namespaces.
+*System* | [**ReadSystemInternalCountersConfig**](docs/System.md#readsysteminternalcountersconfig) | **GET** /sys/internal/counters/config | Read the client count tracking configuration.
+*System* | [**ReadSystemInternalCountersEntities**](docs/System.md#readsysteminternalcountersentities) | **GET** /sys/internal/counters/entities | Backwards compatibility is not guaranteed for this API
+*System* | [**ReadSystemInternalCountersRequests**](docs/System.md#readsysteminternalcountersrequests) | **GET** /sys/internal/counters/requests | Backwards compatibility is not guaranteed for this API
+*System* | [**ReadSystemInternalCountersTokens**](docs/System.md#readsysteminternalcounterstokens) | **GET** /sys/internal/counters/tokens | Backwards compatibility is not guaranteed for this API
+*System* | [**ReadSystemInternalSpecsOpenapi**](docs/System.md#readsysteminternalspecsopenapi) | **GET** /sys/internal/specs/openapi | Generate an OpenAPI 3 document of all mounted paths.
+*System* | [**ReadSystemInternalUiFeatureFlags**](docs/System.md#readsysteminternaluifeatureflags) | **GET** /sys/internal/ui/feature-flags | Lists enabled feature flags.
+*System* | [**ReadSystemInternalUiMounts**](docs/System.md#readsysteminternaluimounts) | **GET** /sys/internal/ui/mounts | Lists all enabled and visible auth and secrets mounts.
+*System* | [**ReadSystemInternalUiMountsPath**](docs/System.md#readsysteminternaluimountspath) | **GET** /sys/internal/ui/mounts/{path} | Return information about the given mount.
+*System* | [**ReadSystemInternalUiNamespaces**](docs/System.md#readsysteminternaluinamespaces) | **GET** /sys/internal/ui/namespaces | Backwards compatibility is not guaranteed for this API
+*System* | [**ReadSystemInternalUiResultantAcl**](docs/System.md#readsysteminternaluiresultantacl) | **GET** /sys/internal/ui/resultant-acl | Backwards compatibility is not guaranteed for this API
+*System* | [**ReadSystemKeyStatus**](docs/System.md#readsystemkeystatus) | **GET** /sys/key-status | Provides information about the backend encryption key.
+*System* | [**ReadSystemLeader**](docs/System.md#readsystemleader) | **GET** /sys/leader | Returns the high availability status and current leader instance of Vault.
+*System* | [**ReadSystemLeases**](docs/System.md#readsystemleases) | **GET** /sys/leases | List leases associated with this Vault cluster
+*System* | [**ReadSystemLeasesCount**](docs/System.md#readsystemleasescount) | **GET** /sys/leases/count | Count of leases associated with this Vault cluster
+*System* | [**ReadSystemMetrics**](docs/System.md#readsystemmetrics) | **GET** /sys/metrics | Export the metrics aggregated for telemetry purpose.
+*System* | [**ReadSystemMonitor**](docs/System.md#readsystemmonitor) | **GET** /sys/monitor | 
+*System* | [**ReadSystemMounts**](docs/System.md#readsystemmounts) | **GET** /sys/mounts | List the currently mounted backends.
+*System* | [**ReadSystemMountsPath**](docs/System.md#readsystemmountspath) | **GET** /sys/mounts/{path} | Read the configuration of the secret engine at the given path.
+*System* | [**ReadSystemMountsPathTune**](docs/System.md#readsystemmountspathtune) | **GET** /sys/mounts/{path}/tune | Tune backend configuration parameters for this mount.
+*System* | [**ReadSystemPluginsCatalog**](docs/System.md#readsystempluginscatalog) | **GET** /sys/plugins/catalog | Lists all the plugins known to Vault
+*System* | [**ReadSystemPluginsCatalogName**](docs/System.md#readsystempluginscatalogname) | **GET** /sys/plugins/catalog/{name} | Return the configuration data for the plugin with the given name.
+*System* | [**ReadSystemPluginsCatalogTypeName**](docs/System.md#readsystempluginscatalogtypename) | **GET** /sys/plugins/catalog/{type}/{name} | Return the configuration data for the plugin with the given name.
+*System* | [**ReadSystemPoliciesAclName**](docs/System.md#readsystempoliciesaclname) | **GET** /sys/policies/acl/{name} | Retrieve information about the named ACL policy.
+*System* | [**ReadSystemPoliciesPasswordName**](docs/System.md#readsystempoliciespasswordname) | **GET** /sys/policies/password/{name} | Retrieve an existing password policy.
+*System* | [**ReadSystemPoliciesPasswordNameGenerate**](docs/System.md#readsystempoliciespasswordnamegenerate) | **GET** /sys/policies/password/{name}/generate | Generate a password from an existing password policy.
+*System* | [**ReadSystemPolicy**](docs/System.md#readsystempolicy) | **GET** /sys/policy | List the configured access control policies.
+*System* | [**ReadSystemPolicyName**](docs/System.md#readsystempolicyname) | **GET** /sys/policy/{name} | Retrieve the policy body for the named policy.
+*System* | [**ReadSystemPprof**](docs/System.md#readsystempprof) | **GET** /sys/pprof/ | Returns an HTML page listing the available profiles.
+*System* | [**ReadSystemPprofAllocs**](docs/System.md#readsystempprofallocs) | **GET** /sys/pprof/allocs | Returns a sampling of all past memory allocations.
+*System* | [**ReadSystemPprofBlock**](docs/System.md#readsystempprofblock) | **GET** /sys/pprof/block | Returns stack traces that led to blocking on synchronization primitives
+*System* | [**ReadSystemPprofCmdline**](docs/System.md#readsystempprofcmdline) | **GET** /sys/pprof/cmdline | Returns the running program's command line.
+*System* | [**ReadSystemPprofGoroutine**](docs/System.md#readsystempprofgoroutine) | **GET** /sys/pprof/goroutine | Returns stack traces of all current goroutines.
+*System* | [**ReadSystemPprofHeap**](docs/System.md#readsystempprofheap) | **GET** /sys/pprof/heap | Returns a sampling of memory allocations of live object.
+*System* | [**ReadSystemPprofMutex**](docs/System.md#readsystempprofmutex) | **GET** /sys/pprof/mutex | Returns stack traces of holders of contended mutexes
+*System* | [**ReadSystemPprofProfile**](docs/System.md#readsystempprofprofile) | **GET** /sys/pprof/profile | Returns a pprof-formatted cpu profile payload.
+*System* | [**ReadSystemPprofSymbol**](docs/System.md#readsystempprofsymbol) | **GET** /sys/pprof/symbol | Returns the program counters listed in the request.
+*System* | [**ReadSystemPprofThreadcreate**](docs/System.md#readsystempprofthreadcreate) | **GET** /sys/pprof/threadcreate | Returns stack traces that led to the creation of new OS threads
+*System* | [**ReadSystemPprofTrace**](docs/System.md#readsystempproftrace) | **GET** /sys/pprof/trace | Returns the execution trace in binary form.
+*System* | [**ReadSystemQuotasConfig**](docs/System.md#readsystemquotasconfig) | **GET** /sys/quotas/config | 
+*System* | [**ReadSystemQuotasRateLimitName**](docs/System.md#readsystemquotasratelimitname) | **GET** /sys/quotas/rate-limit/{name} | 
+*System* | [**ReadSystemRaw**](docs/System.md#readsystemraw) | **GET** /sys/raw | Read the value of the key at the given path.
+*System* | [**ReadSystemRawPath**](docs/System.md#readsystemrawpath) | **GET** /sys/raw/{path} | Read the value of the key at the given path.
+*System* | [**ReadSystemRekeyBackup**](docs/System.md#readsystemrekeybackup) | **GET** /sys/rekey/backup | Return the backup copy of PGP-encrypted unseal keys.
+*System* | [**ReadSystemRekeyInit**](docs/System.md#readsystemrekeyinit) | **GET** /sys/rekey/init | Reads the configuration and progress of the current rekey attempt.
+*System* | [**ReadSystemRekeyRecoveryKeyBackup**](docs/System.md#readsystemrekeyrecoverykeybackup) | **GET** /sys/rekey/recovery-key-backup | Allows fetching or deleting the backup of the rotated unseal keys.
+*System* | [**ReadSystemRekeyVerify**](docs/System.md#readsystemrekeyverify) | **GET** /sys/rekey/verify | Read the configuration and progress of the current rekey verification attempt.
+*System* | [**ReadSystemRemountStatusMigrationId**](docs/System.md#readsystemremountstatusmigrationid) | **GET** /sys/remount/status/{migration_id} | Check status of a mount migration
+*System* | [**ReadSystemReplicationStatus**](docs/System.md#readsystemreplicationstatus) | **GET** /sys/replication/status | 
+*System* | [**ReadSystemRotateConfig**](docs/System.md#readsystemrotateconfig) | **GET** /sys/rotate/config | 
+*System* | [**ReadSystemSealStatus**](docs/System.md#readsystemsealstatus) | **GET** /sys/seal-status | Check the seal status of a Vault.
+*System* | [**ReadSystemWrappingLookup**](docs/System.md#readsystemwrappinglookup) | **GET** /sys/wrapping/lookup | Look up wrapping properties for the requester's token.
+*System* | [**UpdateSystemAuditHashPath**](docs/System.md#updatesystemaudithashpath) | **POST** /sys/audit-hash/{path} | The hash of the given string via the given audit backend
+*System* | [**UpdateSystemAuditPath**](docs/System.md#updatesystemauditpath) | **POST** /sys/audit/{path} | Enable a new audit device at the supplied path.
+*System* | [**UpdateSystemAuthPath**](docs/System.md#updatesystemauthpath) | **POST** /sys/auth/{path} | Enables a new auth method.
+*System* | [**UpdateSystemAuthPathTune**](docs/System.md#updatesystemauthpathtune) | **POST** /sys/auth/{path}/tune | Tune configuration parameters for a given auth path.
+*System* | [**UpdateSystemCapabilities**](docs/System.md#updatesystemcapabilities) | **POST** /sys/capabilities | Fetches the capabilities of the given token on the given path.
+*System* | [**UpdateSystemCapabilitiesAccessor**](docs/System.md#updatesystemcapabilitiesaccessor) | **POST** /sys/capabilities-accessor | Fetches the capabilities of the token associated with the given token, on the given path.
+*System* | [**UpdateSystemCapabilitiesSelf**](docs/System.md#updatesystemcapabilitiesself) | **POST** /sys/capabilities-self | Fetches the capabilities of the given token on the given path.
+*System* | [**UpdateSystemConfigAuditingRequestHeadersHeader**](docs/System.md#updatesystemconfigauditingrequestheadersheader) | **POST** /sys/config/auditing/request-headers/{header} | Enable auditing of a header.
+*System* | [**UpdateSystemConfigCors**](docs/System.md#updatesystemconfigcors) | **POST** /sys/config/cors | Configure the CORS settings.
+*System* | [**UpdateSystemConfigReloadSubsystem**](docs/System.md#updatesystemconfigreloadsubsystem) | **POST** /sys/config/reload/{subsystem} | Reload the given subsystem
+*System* | [**UpdateSystemConfigUiHeadersHeader**](docs/System.md#updatesystemconfiguiheadersheader) | **POST** /sys/config/ui/headers/{header} | Configure the values to be returned for the UI header.
+*System* | [**UpdateSystemGenerateRoot**](docs/System.md#updatesystemgenerateroot) | **POST** /sys/generate-root | Initializes a new root generation attempt.
+*System* | [**UpdateSystemGenerateRootAttempt**](docs/System.md#updatesystemgeneraterootattempt) | **POST** /sys/generate-root/attempt | Initializes a new root generation attempt.
+*System* | [**UpdateSystemGenerateRootUpdate**](docs/System.md#updatesystemgeneraterootupdate) | **POST** /sys/generate-root/update | Enter a single unseal key share to progress the root generation attempt.
+*System* | [**UpdateSystemInit**](docs/System.md#updatesysteminit) | **POST** /sys/init | Initialize a new Vault.
+*System* | [**UpdateSystemInternalCountersConfig**](docs/System.md#updatesysteminternalcountersconfig) | **POST** /sys/internal/counters/config | Enable or disable collection of client count, set retention period, or set default reporting period.
+*System* | [**UpdateSystemLeasesLookup**](docs/System.md#updatesystemleaseslookup) | **POST** /sys/leases/lookup | Retrieve lease metadata.
+*System* | [**UpdateSystemLeasesRenew**](docs/System.md#updatesystemleasesrenew) | **POST** /sys/leases/renew | Renews a lease, requesting to extend the lease.
+*System* | [**UpdateSystemLeasesRenewUrlLeaseId**](docs/System.md#updatesystemleasesrenewurlleaseid) | **POST** /sys/leases/renew/{url_lease_id} | Renews a lease, requesting to extend the lease.
+*System* | [**UpdateSystemLeasesRevoke**](docs/System.md#updatesystemleasesrevoke) | **POST** /sys/leases/revoke | Revokes a lease immediately.
+*System* | [**UpdateSystemLeasesRevokeForcePrefix**](docs/System.md#updatesystemleasesrevokeforceprefix) | **POST** /sys/leases/revoke-force/{prefix} | Revokes all secrets or tokens generated under a given prefix immediately
+*System* | [**UpdateSystemLeasesRevokePrefixPrefix**](docs/System.md#updatesystemleasesrevokeprefixprefix) | **POST** /sys/leases/revoke-prefix/{prefix} | Revokes all secrets (via a lease ID prefix) or tokens (via the tokens' path property) generated under a given prefix immediately.
+*System* | [**UpdateSystemLeasesRevokeUrlLeaseId**](docs/System.md#updatesystemleasesrevokeurlleaseid) | **POST** /sys/leases/revoke/{url_lease_id} | Revokes a lease immediately.
+*System* | [**UpdateSystemLeasesTidy**](docs/System.md#updatesystemleasestidy) | **POST** /sys/leases/tidy | This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
+*System* | [**UpdateSystemLoggers**](docs/System.md#updatesystemloggers) | **POST** /sys/loggers | Modify the log level for all existing loggers.
+*System* | [**UpdateSystemLoggersName**](docs/System.md#updatesystemloggersname) | **POST** /sys/loggers/{name} | Modify the log level of a single logger.
+*System* | [**UpdateSystemMfaValidate**](docs/System.md#updatesystemmfavalidate) | **POST** /sys/mfa/validate | Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token
+*System* | [**UpdateSystemMountsPath**](docs/System.md#updatesystemmountspath) | **POST** /sys/mounts/{path} | Enable a new secrets engine at the given path.
+*System* | [**UpdateSystemMountsPathTune**](docs/System.md#updatesystemmountspathtune) | **POST** /sys/mounts/{path}/tune | Tune backend configuration parameters for this mount.
+*System* | [**UpdateSystemPluginsCatalogName**](docs/System.md#updatesystempluginscatalogname) | **POST** /sys/plugins/catalog/{name} | Register a new plugin, or updates an existing one with the supplied name.
+*System* | [**UpdateSystemPluginsCatalogTypeName**](docs/System.md#updatesystempluginscatalogtypename) | **POST** /sys/plugins/catalog/{type}/{name} | Register a new plugin, or updates an existing one with the supplied name.
+*System* | [**UpdateSystemPluginsReloadBackend**](docs/System.md#updatesystempluginsreloadbackend) | **POST** /sys/plugins/reload/backend | Reload mounted plugin backends.
+*System* | [**UpdateSystemPoliciesAclName**](docs/System.md#updatesystempoliciesaclname) | **POST** /sys/policies/acl/{name} | Add a new or update an existing ACL policy.
+*System* | [**UpdateSystemPoliciesPasswordName**](docs/System.md#updatesystempoliciespasswordname) | **POST** /sys/policies/password/{name} | Add a new or update an existing password policy.
+*System* | [**UpdateSystemPolicyName**](docs/System.md#updatesystempolicyname) | **POST** /sys/policy/{name} | Add a new or update an existing policy.
+*System* | [**UpdateSystemQuotasConfig**](docs/System.md#updatesystemquotasconfig) | **POST** /sys/quotas/config | 
+*System* | [**UpdateSystemQuotasRateLimitName**](docs/System.md#updatesystemquotasratelimitname) | **POST** /sys/quotas/rate-limit/{name} | 
+*System* | [**UpdateSystemRaw**](docs/System.md#updatesystemraw) | **POST** /sys/raw | Update the value of the key at the given path.
+*System* | [**UpdateSystemRawPath**](docs/System.md#updatesystemrawpath) | **POST** /sys/raw/{path} | Update the value of the key at the given path.
+*System* | [**UpdateSystemRekeyInit**](docs/System.md#updatesystemrekeyinit) | **POST** /sys/rekey/init | Initializes a new rekey attempt.
+*System* | [**UpdateSystemRekeyUpdate**](docs/System.md#updatesystemrekeyupdate) | **POST** /sys/rekey/update | Enter a single unseal key share to progress the rekey of the Vault.
+*System* | [**UpdateSystemRekeyVerify**](docs/System.md#updatesystemrekeyverify) | **POST** /sys/rekey/verify | Enter a single new key share to progress the rekey verification operation.
+*System* | [**UpdateSystemRemount**](docs/System.md#updatesystemremount) | **POST** /sys/remount | Initiate a mount migration
+*System* | [**UpdateSystemRenew**](docs/System.md#updatesystemrenew) | **POST** /sys/renew | Renews a lease, requesting to extend the lease.
+*System* | [**UpdateSystemRenewUrlLeaseId**](docs/System.md#updatesystemrenewurlleaseid) | **POST** /sys/renew/{url_lease_id} | Renews a lease, requesting to extend the lease.
+*System* | [**UpdateSystemRevoke**](docs/System.md#updatesystemrevoke) | **POST** /sys/revoke | Revokes a lease immediately.
+*System* | [**UpdateSystemRevokeForcePrefix**](docs/System.md#updatesystemrevokeforceprefix) | **POST** /sys/revoke-force/{prefix} | Revokes all secrets or tokens generated under a given prefix immediately
+*System* | [**UpdateSystemRevokePrefixPrefix**](docs/System.md#updatesystemrevokeprefixprefix) | **POST** /sys/revoke-prefix/{prefix} | Revokes all secrets (via a lease ID prefix) or tokens (via the tokens' path property) generated under a given prefix immediately.
+*System* | [**UpdateSystemRevokeUrlLeaseId**](docs/System.md#updatesystemrevokeurlleaseid) | **POST** /sys/revoke/{url_lease_id} | Revokes a lease immediately.
+*System* | [**UpdateSystemRotate**](docs/System.md#updatesystemrotate) | **POST** /sys/rotate | Rotates the backend encryption key used to persist data.
+*System* | [**UpdateSystemRotateConfig**](docs/System.md#updatesystemrotateconfig) | **POST** /sys/rotate/config | 
+*System* | [**UpdateSystemSeal**](docs/System.md#updatesystemseal) | **POST** /sys/seal | Seal the Vault.
+*System* | [**UpdateSystemStepDown**](docs/System.md#updatesystemstepdown) | **POST** /sys/step-down | Cause the node to give up active status.
+*System* | [**UpdateSystemToolsHash**](docs/System.md#updatesystemtoolshash) | **POST** /sys/tools/hash | Generate a hash sum for input data
+*System* | [**UpdateSystemToolsHashUrlalgorithm**](docs/System.md#updatesystemtoolshashurlalgorithm) | **POST** /sys/tools/hash/{urlalgorithm} | Generate a hash sum for input data
+*System* | [**UpdateSystemToolsRandom**](docs/System.md#updatesystemtoolsrandom) | **POST** /sys/tools/random | Generate random bytes
+*System* | [**UpdateSystemToolsRandomSource**](docs/System.md#updatesystemtoolsrandomsource) | **POST** /sys/tools/random/{source} | Generate random bytes
+*System* | [**UpdateSystemToolsRandomSourceUrlbytes**](docs/System.md#updatesystemtoolsrandomsourceurlbytes) | **POST** /sys/tools/random/{source}/{urlbytes} | Generate random bytes
+*System* | [**UpdateSystemToolsRandomUrlbytes**](docs/System.md#updatesystemtoolsrandomurlbytes) | **POST** /sys/tools/random/{urlbytes} | Generate random bytes
+*System* | [**UpdateSystemUnseal**](docs/System.md#updatesystemunseal) | **POST** /sys/unseal | Unseal the Vault.
+*System* | [**UpdateSystemWrappingLookup**](docs/System.md#updatesystemwrappinglookup) | **POST** /sys/wrapping/lookup | Look up wrapping properties for the given token.
+*System* | [**UpdateSystemWrappingRewrap**](docs/System.md#updatesystemwrappingrewrap) | **POST** /sys/wrapping/rewrap | Rotates a response-wrapped token.
+*System* | [**UpdateSystemWrappingUnwrap**](docs/System.md#updatesystemwrappingunwrap) | **POST** /sys/wrapping/unwrap | Unwraps a response-wrapped token.
+*System* | [**UpdateSystemWrappingWrap**](docs/System.md#updatesystemwrappingwrap) | **POST** /sys/wrapping/wrap | Response-wraps an arbitrary JSON object.
 
 
 <a name="documentation-for-models"></a>

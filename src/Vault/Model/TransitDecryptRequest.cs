@@ -34,17 +34,26 @@ namespace Vault.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TransitDecryptRequest" /> class.
         /// </summary>
+        /// <param name="associatedData">When using an AEAD cipher mode, such as AES-GCM, this parameter allows passing associated data (AD/AAD) into the encryption function; this data must be passed on subsequent decryption requests but can be transited in plaintext. On successful decryption, both the ciphertext and the associated data are attested not to have been tampered with..</param>
         /// <param name="ciphertext">The ciphertext to decrypt, provided as returned by encrypt..</param>
         /// <param name="context">Base64 encoded context for key derivation. Required if key derivation is enabled..</param>
         /// <param name="nonce">Base64 encoded nonce value used during encryption. Must be provided if convergent encryption is enabled for this key and the key was generated with Vault 0.6.1. Not required for keys created in 0.6.2+..</param>
         /// <param name="partialFailureResponseCode">Ordinarily, if a batch item fails to decrypt due to a bad input, but other batch items succeed, the HTTP response code is 400 (Bad Request). Some applications may want to treat partial failures differently. Providing the parameter returns the given response code integer instead of a 400 in this case. If all values fail HTTP 400 is still returned..</param>
-        public TransitDecryptRequest(string ciphertext = default(string), string context = default(string), string nonce = default(string), int partialFailureResponseCode = default(int))
+        public TransitDecryptRequest(string associatedData = default(string), string ciphertext = default(string), string context = default(string), string nonce = default(string), int partialFailureResponseCode = default(int))
         {
+            this.AssociatedData = associatedData;
             this.Ciphertext = ciphertext;
             this.Context = context;
             this.Nonce = nonce;
             this.PartialFailureResponseCode = partialFailureResponseCode;
         }
+
+        /// <summary>
+        /// When using an AEAD cipher mode, such as AES-GCM, this parameter allows passing associated data (AD/AAD) into the encryption function; this data must be passed on subsequent decryption requests but can be transited in plaintext. On successful decryption, both the ciphertext and the associated data are attested not to have been tampered with.
+        /// </summary>
+        /// <value>When using an AEAD cipher mode, such as AES-GCM, this parameter allows passing associated data (AD/AAD) into the encryption function; this data must be passed on subsequent decryption requests but can be transited in plaintext. On successful decryption, both the ciphertext and the associated data are attested not to have been tampered with.</value>
+        [DataMember(Name = "associated_data", EmitDefaultValue = false)]
+        public string AssociatedData { get; set; }
 
         /// <summary>
         /// The ciphertext to decrypt, provided as returned by encrypt.
@@ -82,6 +91,7 @@ namespace Vault.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class TransitDecryptRequest {\n");
+            sb.Append("  AssociatedData: ").Append(AssociatedData).Append("\n");
             sb.Append("  Ciphertext: ").Append(Ciphertext).Append("\n");
             sb.Append("  Context: ").Append(Context).Append("\n");
             sb.Append("  Nonce: ").Append(Nonce).Append("\n");
@@ -122,6 +132,11 @@ namespace Vault.Model
             }
             return 
                 (
+                    this.AssociatedData == input.AssociatedData ||
+                    (this.AssociatedData != null &&
+                    this.AssociatedData.Equals(input.AssociatedData))
+                ) && 
+                (
                     this.Ciphertext == input.Ciphertext ||
                     (this.Ciphertext != null &&
                     this.Ciphertext.Equals(input.Ciphertext))
@@ -151,6 +166,10 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.AssociatedData != null)
+                {
+                    hashCode = (hashCode * 59) + this.AssociatedData.GetHashCode();
+                }
                 if (this.Ciphertext != null)
                 {
                     hashCode = (hashCode * 59) + this.Ciphertext.GetHashCode();

@@ -32,7 +32,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysAuditPath(string path);
+        ApiResponse<Object> DeleteSystemAuditPath(string path);
         /// <summary>
         /// Disable the auth method at the given auth path
         /// </summary>
@@ -42,7 +42,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysAuthPath(string path);
+        ApiResponse<Object> DeleteSystemAuthPath(string path);
         /// <summary>
         /// Disable auditing of the given request header.
         /// </summary>
@@ -52,7 +52,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="header"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysConfigAuditingRequestHeadersHeader(string header);
+        ApiResponse<Object> DeleteSystemConfigAuditingRequestHeadersHeader(string header);
         /// <summary>
         /// Remove any CORS settings.
         /// </summary>
@@ -61,7 +61,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysConfigCors();
+        ApiResponse<Object> DeleteSystemConfigCors();
         /// <summary>
         /// Remove a UI header.
         /// </summary>
@@ -71,7 +71,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="header">The name of the header.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysConfigUiHeadersHeader(string header);
+        ApiResponse<Object> DeleteSystemConfigUiHeadersHeader(string header);
         /// <summary>
         /// Cancels any in-progress root generation attempt.
         /// </summary>
@@ -80,7 +80,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysGenerateRoot();
+        ApiResponse<Object> DeleteSystemGenerateRoot();
         /// <summary>
         /// Cancels any in-progress root generation attempt.
         /// </summary>
@@ -89,7 +89,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysGenerateRootAttempt();
+        ApiResponse<Object> DeleteSystemGenerateRootAttempt();
         /// <summary>
         /// Revert the all loggers to use log level provided in config.
         /// </summary>
@@ -98,7 +98,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysLoggers();
+        ApiResponse<Object> DeleteSystemLoggers();
         /// <summary>
         /// Revert a single logger to use log level provided in config.
         /// </summary>
@@ -108,7 +108,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the logger to be modified.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysLoggersName(string name);
+        ApiResponse<Object> DeleteSystemLoggersName(string name);
         /// <summary>
         /// Disable the mount point specified at the given path.
         /// </summary>
@@ -118,7 +118,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysMountsPath(string path);
+        ApiResponse<Object> DeleteSystemMountsPath(string path);
         /// <summary>
         /// Remove the plugin with the given name.
         /// </summary>
@@ -128,7 +128,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the plugin</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysPluginsCatalogName(string name);
+        ApiResponse<Object> DeleteSystemPluginsCatalogName(string name);
         /// <summary>
         /// Remove the plugin with the given name.
         /// </summary>
@@ -139,7 +139,7 @@ namespace Vault.Api
         /// <param name="name">The name of the plugin</param>
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysPluginsCatalogTypeName(string name, string type);
+        ApiResponse<Object> DeleteSystemPluginsCatalogTypeName(string name, string type);
         /// <summary>
         /// Delete the ACL policy with the given name.
         /// </summary>
@@ -149,7 +149,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysPoliciesAclName(string name);
+        ApiResponse<Object> DeleteSystemPoliciesAclName(string name);
         /// <summary>
         /// Delete a password policy.
         /// </summary>
@@ -159,7 +159,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the password policy.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysPoliciesPasswordName(string name);
+        ApiResponse<Object> DeleteSystemPoliciesPasswordName(string name);
         /// <summary>
         /// Delete the policy with the given name.
         /// </summary>
@@ -169,7 +169,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysPolicyName(string name);
+        ApiResponse<Object> DeleteSystemPolicyName(string name);
         /// <summary>
         /// 
         /// </summary>
@@ -179,7 +179,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the quota rule.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysQuotasRateLimitName(string name);
+        ApiResponse<Object> DeleteSystemQuotasRateLimitName(string name);
         /// <summary>
         /// Delete the key with given path.
         /// </summary>
@@ -188,7 +188,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysRaw();
+        ApiResponse<Object> DeleteSystemRaw();
         /// <summary>
         /// Delete the key with given path.
         /// </summary>
@@ -198,7 +198,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysRawPath(string path);
+        ApiResponse<Object> DeleteSystemRawPath(string path);
         /// <summary>
         /// Delete the backup copy of PGP-encrypted unseal keys.
         /// </summary>
@@ -207,7 +207,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysRekeyBackup();
+        ApiResponse<Object> DeleteSystemRekeyBackup();
         /// <summary>
         /// Cancels any in-progress rekey.
         /// </summary>
@@ -216,7 +216,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysRekeyInit();
+        ApiResponse<Object> DeleteSystemRekeyInit();
         /// <summary>
         /// Allows fetching or deleting the backup of the rotated unseal keys.
         /// </summary>
@@ -225,7 +225,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysRekeyRecoveryKeyBackup();
+        ApiResponse<Object> DeleteSystemRekeyRecoveryKeyBackup();
         /// <summary>
         /// Cancel any in-progress rekey verification operation.
         /// </summary>
@@ -234,82 +234,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteSysRekeyVerify();
-        /// <summary>
-        /// List the enabled audit devices.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysAudit();
-        /// <summary>
-        /// List the currently enabled credential backends.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysAuth();
-        /// <summary>
-        /// Read the configuration of the auth engine at the given path.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysAuthPath(string path);
-        /// <summary>
-        /// Reads the given auth path&#39;s configuration.
-        /// </summary>
-        /// <remarks>
-        /// This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">Tune the configuration parameters for an auth path.</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysAuthPathTune(string path);
-        /// <summary>
-        /// List the request headers that are configured to be audited.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysConfigAuditingRequestHeaders();
-        /// <summary>
-        /// List the information for the given request header.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="header"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysConfigAuditingRequestHeadersHeader(string header);
-        /// <summary>
-        /// Return the current CORS settings.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysConfigCors();
-        /// <summary>
-        /// Return a sanitized version of the Vault server configuration.
-        /// </summary>
-        /// <remarks>
-        /// The sanitized output strips configuration values in the storage, HA storage, and seals stanzas, which may contain sensitive values such as API tokens. It also removes any token or secret fields in other stanzas, such as the circonus_api_token from telemetry.
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysConfigStateSanitized();
+        ApiResponse<Object> DeleteSystemRekeyVerify();
         /// <summary>
         /// Return a list of configured UI headers.
         /// </summary>
@@ -319,234 +244,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysConfigUiHeaders(string list);
-        /// <summary>
-        /// Return the given UI header&#39;s configuration
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="header">The name of the header.</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysConfigUiHeadersHeader(string header);
-        /// <summary>
-        /// Read the configuration and progress of the current root generation attempt.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysGenerateRoot();
-        /// <summary>
-        /// Read the configuration and progress of the current root generation attempt.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysGenerateRootAttempt();
-        /// <summary>
-        /// Check the HA status of a Vault cluster
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysHaStatus();
-        /// <summary>
-        /// Returns the health status of Vault.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysHealth();
-        /// <summary>
-        /// Information about the host instance that this Vault server is running on.
-        /// </summary>
-        /// <remarks>
-        /// Information about the host instance that this Vault server is running on.   The information that gets collected includes host hardware information, and CPU,   disk, and memory utilization
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysHostInfo();
-        /// <summary>
-        /// reports in-flight requests
-        /// </summary>
-        /// <remarks>
-        /// This path responds to the following HTTP methods.   GET /    Returns a map of in-flight requests.
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInFlightReq();
-        /// <summary>
-        /// Returns the initialization status of Vault.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInit();
-        /// <summary>
-        /// Report the client count metrics, for this namespace and all child namespaces.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalCountersActivity();
-        /// <summary>
-        /// Report the client count metrics, for this namespace and all child namespaces.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalCountersActivityExport();
-        /// <summary>
-        /// Report the number of clients for this month, for this namespace and all child namespaces.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalCountersActivityMonthly();
-        /// <summary>
-        /// Read the client count tracking configuration.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalCountersConfig();
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalCountersEntities();
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalCountersRequests();
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalCountersTokens();
-        /// <summary>
-        /// Generate an OpenAPI 3 document of all mounted paths.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalSpecsOpenapi();
-        /// <summary>
-        /// Lists enabled feature flags.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalUiFeatureFlags();
-        /// <summary>
-        /// Lists all enabled and visible auth and secrets mounts.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalUiMounts();
-        /// <summary>
-        /// Return information about the given mount.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path of the mount.</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalUiMountsPath(string path);
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalUiNamespaces();
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysInternalUiResultantAcl();
-        /// <summary>
-        /// Provides information about the backend encryption key.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysKeyStatus();
-        /// <summary>
-        /// Returns the high availability status and current leader instance of Vault.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysLeader();
-        /// <summary>
-        /// List leases associated with this Vault cluster
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysLeases();
-        /// <summary>
-        /// Count of leases associated with this Vault cluster
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysLeasesCount();
+        ApiResponse<Object> ListSystemConfigUiHeaders(string list);
         /// <summary>
         /// Returns a list of lease ids.
         /// </summary>
@@ -556,7 +254,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysLeasesLookup(string list);
+        ApiResponse<Object> ListSystemLeasesLookup(string list);
         /// <summary>
         /// Returns a list of lease ids.
         /// </summary>
@@ -567,76 +265,7 @@ namespace Vault.Api
         /// <param name="prefix">The path to list leases under. Example: \&quot;aws/creds/deploy\&quot;</param>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysLeasesLookupPrefix(string prefix, string list);
-        /// <summary>
-        /// Export the metrics aggregated for telemetry purpose.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysMetrics(string format = default(string));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
-        /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysMonitor(string logFormat = default(string), string logLevel = default(string));
-        /// <summary>
-        /// List the currently mounted backends.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysMounts();
-        /// <summary>
-        /// Read the configuration of the secret engine at the given path.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysMountsPath(string path);
-        /// <summary>
-        /// Tune backend configuration parameters for this mount.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysMountsPathTune(string path);
-        /// <summary>
-        /// Lists all the plugins known to Vault
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPluginsCatalog();
-        /// <summary>
-        /// Return the configuration data for the plugin with the given name.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPluginsCatalogName(string name);
+        ApiResponse<Object> ListSystemLeasesLookupPrefix(string prefix, string list);
         /// <summary>
         /// List the plugins in the catalog.
         /// </summary>
@@ -647,7 +276,418 @@ namespace Vault.Api
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPluginsCatalogType(string type, string list);
+        ApiResponse<Object> ListSystemPluginsCatalogType(string type, string list);
+        /// <summary>
+        /// List the configured access control policies.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ListSystemPoliciesAcl(string list);
+        /// <summary>
+        /// List the existing password policies.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ListSystemPoliciesPassword(string list);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ListSystemQuotasRateLimit(string list);
+        /// <summary>
+        /// Returns map of historical version change entries
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ListSystemVersionHistory(string list);
+        /// <summary>
+        /// List the enabled audit devices.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemAudit();
+        /// <summary>
+        /// List the currently enabled credential backends.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemAuth();
+        /// <summary>
+        /// Read the configuration of the auth engine at the given path.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemAuthPath(string path);
+        /// <summary>
+        /// Reads the given auth path&#39;s configuration.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Tune the configuration parameters for an auth path.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemAuthPathTune(string path);
+        /// <summary>
+        /// List the request headers that are configured to be audited.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemConfigAuditingRequestHeaders();
+        /// <summary>
+        /// List the information for the given request header.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="header"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemConfigAuditingRequestHeadersHeader(string header);
+        /// <summary>
+        /// Return the current CORS settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemConfigCors();
+        /// <summary>
+        /// Return a sanitized version of the Vault server configuration.
+        /// </summary>
+        /// <remarks>
+        /// The sanitized output strips configuration values in the storage, HA storage, and seals stanzas, which may contain sensitive values such as API tokens. It also removes any token or secret fields in other stanzas, such as the circonus_api_token from telemetry.
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemConfigStateSanitized();
+        /// <summary>
+        /// Return the given UI header&#39;s configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="header">The name of the header.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemConfigUiHeadersHeader(string header);
+        /// <summary>
+        /// Read the configuration and progress of the current root generation attempt.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemGenerateRoot();
+        /// <summary>
+        /// Read the configuration and progress of the current root generation attempt.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemGenerateRootAttempt();
+        /// <summary>
+        /// Check the HA status of a Vault cluster
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemHaStatus();
+        /// <summary>
+        /// Returns the health status of Vault.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemHealth();
+        /// <summary>
+        /// Information about the host instance that this Vault server is running on.
+        /// </summary>
+        /// <remarks>
+        /// Information about the host instance that this Vault server is running on.   The information that gets collected includes host hardware information, and CPU,   disk, and memory utilization
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemHostInfo();
+        /// <summary>
+        /// reports in-flight requests
+        /// </summary>
+        /// <remarks>
+        /// This path responds to the following HTTP methods.   GET /    Returns a map of in-flight requests.
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemInFlightReq();
+        /// <summary>
+        /// Returns the initialization status of Vault.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemInit();
+        /// <summary>
+        /// Report the client count metrics, for this namespace and all child namespaces.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemInternalCountersActivity();
+        /// <summary>
+        /// Report the client count metrics, for this namespace and all child namespaces.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemInternalCountersActivityExport();
+        /// <summary>
+        /// Report the number of clients for this month, for this namespace and all child namespaces.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemInternalCountersActivityMonthly();
+        /// <summary>
+        /// Read the client count tracking configuration.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemInternalCountersConfig();
+        /// <summary>
+        /// Backwards compatibility is not guaranteed for this API
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemInternalCountersEntities();
+        /// <summary>
+        /// Backwards compatibility is not guaranteed for this API
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemInternalCountersRequests();
+        /// <summary>
+        /// Backwards compatibility is not guaranteed for this API
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemInternalCountersTokens();
+        /// <summary>
+        /// Generate an OpenAPI 3 document of all mounted paths.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemInternalSpecsOpenapi();
+        /// <summary>
+        /// Lists enabled feature flags.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemInternalUiFeatureFlags();
+        /// <summary>
+        /// Lists all enabled and visible auth and secrets mounts.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemInternalUiMounts();
+        /// <summary>
+        /// Return information about the given mount.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">The path of the mount.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemInternalUiMountsPath(string path);
+        /// <summary>
+        /// Backwards compatibility is not guaranteed for this API
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemInternalUiNamespaces();
+        /// <summary>
+        /// Backwards compatibility is not guaranteed for this API
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemInternalUiResultantAcl();
+        /// <summary>
+        /// Provides information about the backend encryption key.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemKeyStatus();
+        /// <summary>
+        /// Returns the high availability status and current leader instance of Vault.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemLeader();
+        /// <summary>
+        /// List leases associated with this Vault cluster
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemLeases();
+        /// <summary>
+        /// Count of leases associated with this Vault cluster
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemLeasesCount();
+        /// <summary>
+        /// Export the metrics aggregated for telemetry purpose.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemMetrics(string format = default(string));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
+        /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemMonitor(string logFormat = default(string), string logLevel = default(string));
+        /// <summary>
+        /// List the currently mounted backends.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemMounts();
+        /// <summary>
+        /// Read the configuration of the secret engine at the given path.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemMountsPath(string path);
+        /// <summary>
+        /// Tune backend configuration parameters for this mount.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemMountsPathTune(string path);
+        /// <summary>
+        /// Lists all the plugins known to Vault
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemPluginsCatalog();
+        /// <summary>
+        /// Return the configuration data for the plugin with the given name.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of the plugin</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ReadSystemPluginsCatalogName(string name);
         /// <summary>
         /// Return the configuration data for the plugin with the given name.
         /// </summary>
@@ -658,17 +698,7 @@ namespace Vault.Api
         /// <param name="name">The name of the plugin</param>
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPluginsCatalogTypeName(string name, string type);
-        /// <summary>
-        /// List the configured access control policies.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPoliciesAcl(string list);
+        ApiResponse<Object> ReadSystemPluginsCatalogTypeName(string name, string type);
         /// <summary>
         /// Retrieve information about the named ACL policy.
         /// </summary>
@@ -678,17 +708,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPoliciesAclName(string name);
-        /// <summary>
-        /// List the existing password policies.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPoliciesPassword(string list);
+        ApiResponse<Object> ReadSystemPoliciesAclName(string name);
         /// <summary>
         /// Retrieve an existing password policy.
         /// </summary>
@@ -698,7 +718,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the password policy.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPoliciesPasswordName(string name);
+        ApiResponse<Object> ReadSystemPoliciesPasswordName(string name);
         /// <summary>
         /// Generate a password from an existing password policy.
         /// </summary>
@@ -708,7 +728,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the password policy.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPoliciesPasswordNameGenerate(string name);
+        ApiResponse<Object> ReadSystemPoliciesPasswordNameGenerate(string name);
         /// <summary>
         /// List the configured access control policies.
         /// </summary>
@@ -718,7 +738,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPolicy(string list = default(string));
+        ApiResponse<Object> ReadSystemPolicy(string list = default(string));
         /// <summary>
         /// Retrieve the policy body for the named policy.
         /// </summary>
@@ -728,7 +748,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPolicyName(string name);
+        ApiResponse<Object> ReadSystemPolicyName(string name);
         /// <summary>
         /// Returns an HTML page listing the available profiles.
         /// </summary>
@@ -737,7 +757,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPprof();
+        ApiResponse<Object> ReadSystemPprof();
         /// <summary>
         /// Returns a sampling of all past memory allocations.
         /// </summary>
@@ -746,7 +766,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPprofAllocs();
+        ApiResponse<Object> ReadSystemPprofAllocs();
         /// <summary>
         /// Returns stack traces that led to blocking on synchronization primitives
         /// </summary>
@@ -755,7 +775,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPprofBlock();
+        ApiResponse<Object> ReadSystemPprofBlock();
         /// <summary>
         /// Returns the running program&#39;s command line.
         /// </summary>
@@ -764,7 +784,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPprofCmdline();
+        ApiResponse<Object> ReadSystemPprofCmdline();
         /// <summary>
         /// Returns stack traces of all current goroutines.
         /// </summary>
@@ -773,7 +793,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPprofGoroutine();
+        ApiResponse<Object> ReadSystemPprofGoroutine();
         /// <summary>
         /// Returns a sampling of memory allocations of live object.
         /// </summary>
@@ -782,7 +802,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPprofHeap();
+        ApiResponse<Object> ReadSystemPprofHeap();
         /// <summary>
         /// Returns stack traces of holders of contended mutexes
         /// </summary>
@@ -791,7 +811,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPprofMutex();
+        ApiResponse<Object> ReadSystemPprofMutex();
         /// <summary>
         /// Returns a pprof-formatted cpu profile payload.
         /// </summary>
@@ -800,7 +820,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPprofProfile();
+        ApiResponse<Object> ReadSystemPprofProfile();
         /// <summary>
         /// Returns the program counters listed in the request.
         /// </summary>
@@ -809,7 +829,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPprofSymbol();
+        ApiResponse<Object> ReadSystemPprofSymbol();
         /// <summary>
         /// Returns stack traces that led to the creation of new OS threads
         /// </summary>
@@ -818,7 +838,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPprofThreadcreate();
+        ApiResponse<Object> ReadSystemPprofThreadcreate();
         /// <summary>
         /// Returns the execution trace in binary form.
         /// </summary>
@@ -827,7 +847,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysPprofTrace();
+        ApiResponse<Object> ReadSystemPprofTrace();
         /// <summary>
         /// 
         /// </summary>
@@ -836,17 +856,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysQuotasConfig();
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysQuotasRateLimit(string list);
+        ApiResponse<Object> ReadSystemQuotasConfig();
         /// <summary>
         /// 
         /// </summary>
@@ -856,7 +866,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the quota rule.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysQuotasRateLimitName(string name);
+        ApiResponse<Object> ReadSystemQuotasRateLimitName(string name);
         /// <summary>
         /// Read the value of the key at the given path.
         /// </summary>
@@ -866,7 +876,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysRaw(string list = default(string));
+        ApiResponse<Object> ReadSystemRaw(string list = default(string));
         /// <summary>
         /// Read the value of the key at the given path.
         /// </summary>
@@ -877,7 +887,7 @@ namespace Vault.Api
         /// <param name="path"></param>
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysRawPath(string path, string list = default(string));
+        ApiResponse<Object> ReadSystemRawPath(string path, string list = default(string));
         /// <summary>
         /// Return the backup copy of PGP-encrypted unseal keys.
         /// </summary>
@@ -886,7 +896,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysRekeyBackup();
+        ApiResponse<Object> ReadSystemRekeyBackup();
         /// <summary>
         /// Reads the configuration and progress of the current rekey attempt.
         /// </summary>
@@ -895,7 +905,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysRekeyInit();
+        ApiResponse<Object> ReadSystemRekeyInit();
         /// <summary>
         /// Allows fetching or deleting the backup of the rotated unseal keys.
         /// </summary>
@@ -904,7 +914,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysRekeyRecoveryKeyBackup();
+        ApiResponse<Object> ReadSystemRekeyRecoveryKeyBackup();
         /// <summary>
         /// Read the configuration and progress of the current rekey verification attempt.
         /// </summary>
@@ -913,7 +923,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysRekeyVerify();
+        ApiResponse<Object> ReadSystemRekeyVerify();
         /// <summary>
         /// Check status of a mount migration
         /// </summary>
@@ -923,7 +933,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="migrationId">The ID of the migration operation</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysRemountStatusMigrationId(string migrationId);
+        ApiResponse<Object> ReadSystemRemountStatusMigrationId(string migrationId);
         /// <summary>
         /// 
         /// </summary>
@@ -932,7 +942,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysReplicationStatus();
+        ApiResponse<Object> ReadSystemReplicationStatus();
         /// <summary>
         /// 
         /// </summary>
@@ -941,7 +951,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysRotateConfig();
+        ApiResponse<Object> ReadSystemRotateConfig();
         /// <summary>
         /// Check the seal status of a Vault.
         /// </summary>
@@ -950,17 +960,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysSealStatus();
-        /// <summary>
-        /// Returns map of historical version change entries
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysVersionHistory(string list);
+        ApiResponse<Object> ReadSystemSealStatus();
         /// <summary>
         /// Look up wrapping properties for the requester&#39;s token.
         /// </summary>
@@ -969,7 +969,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSysWrappingLookup();
+        ApiResponse<Object> ReadSystemWrappingLookup();
         /// <summary>
         /// The hash of the given string via the given audit backend
         /// </summary>
@@ -980,7 +980,7 @@ namespace Vault.Api
         /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="systemAuditHashRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysAuditHashPath(string path, SystemAuditHashRequest systemAuditHashRequest = default(SystemAuditHashRequest));
+        ApiResponse<Object> UpdateSystemAuditHashPath(string path, SystemAuditHashRequest systemAuditHashRequest = default(SystemAuditHashRequest));
         /// <summary>
         /// Enable a new audit device at the supplied path.
         /// </summary>
@@ -991,7 +991,7 @@ namespace Vault.Api
         /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="systemAuditRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysAuditPath(string path, SystemAuditRequest systemAuditRequest = default(SystemAuditRequest));
+        ApiResponse<Object> UpdateSystemAuditPath(string path, SystemAuditRequest systemAuditRequest = default(SystemAuditRequest));
         /// <summary>
         /// Enables a new auth method.
         /// </summary>
@@ -1002,7 +1002,7 @@ namespace Vault.Api
         /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <param name="systemAuthRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysAuthPath(string path, SystemAuthRequest systemAuthRequest = default(SystemAuthRequest));
+        ApiResponse<Object> UpdateSystemAuthPath(string path, SystemAuthRequest systemAuthRequest = default(SystemAuthRequest));
         /// <summary>
         /// Tune configuration parameters for a given auth path.
         /// </summary>
@@ -1013,7 +1013,7 @@ namespace Vault.Api
         /// <param name="path">Tune the configuration parameters for an auth path.</param>
         /// <param name="systemAuthTuneRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysAuthPathTune(string path, SystemAuthTuneRequest systemAuthTuneRequest = default(SystemAuthTuneRequest));
+        ApiResponse<Object> UpdateSystemAuthPathTune(string path, SystemAuthTuneRequest systemAuthTuneRequest = default(SystemAuthTuneRequest));
         /// <summary>
         /// Fetches the capabilities of the given token on the given path.
         /// </summary>
@@ -1023,7 +1023,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemCapabilitiesRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysCapabilities(SystemCapabilitiesRequest systemCapabilitiesRequest = default(SystemCapabilitiesRequest));
+        ApiResponse<Object> UpdateSystemCapabilities(SystemCapabilitiesRequest systemCapabilitiesRequest = default(SystemCapabilitiesRequest));
         /// <summary>
         /// Fetches the capabilities of the token associated with the given token, on the given path.
         /// </summary>
@@ -1033,7 +1033,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemCapabilitiesAccessorRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysCapabilitiesAccessor(SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = default(SystemCapabilitiesAccessorRequest));
+        ApiResponse<Object> UpdateSystemCapabilitiesAccessor(SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = default(SystemCapabilitiesAccessorRequest));
         /// <summary>
         /// Fetches the capabilities of the given token on the given path.
         /// </summary>
@@ -1043,7 +1043,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemCapabilitiesSelfRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysCapabilitiesSelf(SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = default(SystemCapabilitiesSelfRequest));
+        ApiResponse<Object> UpdateSystemCapabilitiesSelf(SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = default(SystemCapabilitiesSelfRequest));
         /// <summary>
         /// Enable auditing of a header.
         /// </summary>
@@ -1054,7 +1054,7 @@ namespace Vault.Api
         /// <param name="header"></param>
         /// <param name="systemConfigAuditingRequestHeadersRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysConfigAuditingRequestHeadersHeader(string header, SystemConfigAuditingRequestHeadersRequest systemConfigAuditingRequestHeadersRequest = default(SystemConfigAuditingRequestHeadersRequest));
+        ApiResponse<Object> UpdateSystemConfigAuditingRequestHeadersHeader(string header, SystemConfigAuditingRequestHeadersRequest systemConfigAuditingRequestHeadersRequest = default(SystemConfigAuditingRequestHeadersRequest));
         /// <summary>
         /// Configure the CORS settings.
         /// </summary>
@@ -1064,7 +1064,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemConfigCorsRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysConfigCors(SystemConfigCorsRequest systemConfigCorsRequest = default(SystemConfigCorsRequest));
+        ApiResponse<Object> UpdateSystemConfigCors(SystemConfigCorsRequest systemConfigCorsRequest = default(SystemConfigCorsRequest));
         /// <summary>
         /// Reload the given subsystem
         /// </summary>
@@ -1074,7 +1074,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="subsystem"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysConfigReloadSubsystem(string subsystem);
+        ApiResponse<Object> UpdateSystemConfigReloadSubsystem(string subsystem);
         /// <summary>
         /// Configure the values to be returned for the UI header.
         /// </summary>
@@ -1085,7 +1085,7 @@ namespace Vault.Api
         /// <param name="header">The name of the header.</param>
         /// <param name="systemConfigUiHeadersRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysConfigUiHeadersHeader(string header, SystemConfigUiHeadersRequest systemConfigUiHeadersRequest = default(SystemConfigUiHeadersRequest));
+        ApiResponse<Object> UpdateSystemConfigUiHeadersHeader(string header, SystemConfigUiHeadersRequest systemConfigUiHeadersRequest = default(SystemConfigUiHeadersRequest));
         /// <summary>
         /// Initializes a new root generation attempt.
         /// </summary>
@@ -1095,7 +1095,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemGenerateRootRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysGenerateRoot(SystemGenerateRootRequest systemGenerateRootRequest = default(SystemGenerateRootRequest));
+        ApiResponse<Object> UpdateSystemGenerateRoot(SystemGenerateRootRequest systemGenerateRootRequest = default(SystemGenerateRootRequest));
         /// <summary>
         /// Initializes a new root generation attempt.
         /// </summary>
@@ -1105,7 +1105,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemGenerateRootAttemptRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysGenerateRootAttempt(SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = default(SystemGenerateRootAttemptRequest));
+        ApiResponse<Object> UpdateSystemGenerateRootAttempt(SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = default(SystemGenerateRootAttemptRequest));
         /// <summary>
         /// Enter a single unseal key share to progress the root generation attempt.
         /// </summary>
@@ -1115,7 +1115,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemGenerateRootUpdateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysGenerateRootUpdate(SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = default(SystemGenerateRootUpdateRequest));
+        ApiResponse<Object> UpdateSystemGenerateRootUpdate(SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = default(SystemGenerateRootUpdateRequest));
         /// <summary>
         /// Initialize a new Vault.
         /// </summary>
@@ -1125,7 +1125,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemInitRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysInit(SystemInitRequest systemInitRequest = default(SystemInitRequest));
+        ApiResponse<Object> UpdateSystemInit(SystemInitRequest systemInitRequest = default(SystemInitRequest));
         /// <summary>
         /// Enable or disable collection of client count, set retention period, or set default reporting period.
         /// </summary>
@@ -1135,7 +1135,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemInternalCountersConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysInternalCountersConfig(SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = default(SystemInternalCountersConfigRequest));
+        ApiResponse<Object> UpdateSystemInternalCountersConfig(SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = default(SystemInternalCountersConfigRequest));
         /// <summary>
         /// Retrieve lease metadata.
         /// </summary>
@@ -1145,7 +1145,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemLeasesLookupRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysLeasesLookup(SystemLeasesLookupRequest systemLeasesLookupRequest = default(SystemLeasesLookupRequest));
+        ApiResponse<Object> UpdateSystemLeasesLookup(SystemLeasesLookupRequest systemLeasesLookupRequest = default(SystemLeasesLookupRequest));
         /// <summary>
         /// Renews a lease, requesting to extend the lease.
         /// </summary>
@@ -1155,7 +1155,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemLeasesRenewRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysLeasesRenew(SystemLeasesRenewRequest systemLeasesRenewRequest = default(SystemLeasesRenewRequest));
+        ApiResponse<Object> UpdateSystemLeasesRenew(SystemLeasesRenewRequest systemLeasesRenewRequest = default(SystemLeasesRenewRequest));
         /// <summary>
         /// Renews a lease, requesting to extend the lease.
         /// </summary>
@@ -1166,7 +1166,7 @@ namespace Vault.Api
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="systemLeasesRenewLeaseRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysLeasesRenewUrlLeaseId(string urlLeaseId, SystemLeasesRenewLeaseRequest systemLeasesRenewLeaseRequest = default(SystemLeasesRenewLeaseRequest));
+        ApiResponse<Object> UpdateSystemLeasesRenewUrlLeaseId(string urlLeaseId, SystemLeasesRenewLeaseRequest systemLeasesRenewLeaseRequest = default(SystemLeasesRenewLeaseRequest));
         /// <summary>
         /// Revokes a lease immediately.
         /// </summary>
@@ -1176,7 +1176,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemLeasesRevokeRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysLeasesRevoke(SystemLeasesRevokeRequest systemLeasesRevokeRequest = default(SystemLeasesRevokeRequest));
+        ApiResponse<Object> UpdateSystemLeasesRevoke(SystemLeasesRevokeRequest systemLeasesRevokeRequest = default(SystemLeasesRevokeRequest));
         /// <summary>
         /// Revokes all secrets or tokens generated under a given prefix immediately
         /// </summary>
@@ -1186,7 +1186,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysLeasesRevokeForcePrefix(string prefix);
+        ApiResponse<Object> UpdateSystemLeasesRevokeForcePrefix(string prefix);
         /// <summary>
         /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
         /// </summary>
@@ -1197,7 +1197,7 @@ namespace Vault.Api
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="systemLeasesRevokePrefixRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysLeasesRevokePrefixPrefix(string prefix, SystemLeasesRevokePrefixRequest systemLeasesRevokePrefixRequest = default(SystemLeasesRevokePrefixRequest));
+        ApiResponse<Object> UpdateSystemLeasesRevokePrefixPrefix(string prefix, SystemLeasesRevokePrefixRequest systemLeasesRevokePrefixRequest = default(SystemLeasesRevokePrefixRequest));
         /// <summary>
         /// Revokes a lease immediately.
         /// </summary>
@@ -1208,7 +1208,7 @@ namespace Vault.Api
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="systemLeasesRevokeLeaseRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysLeasesRevokeUrlLeaseId(string urlLeaseId, SystemLeasesRevokeLeaseRequest systemLeasesRevokeLeaseRequest = default(SystemLeasesRevokeLeaseRequest));
+        ApiResponse<Object> UpdateSystemLeasesRevokeUrlLeaseId(string urlLeaseId, SystemLeasesRevokeLeaseRequest systemLeasesRevokeLeaseRequest = default(SystemLeasesRevokeLeaseRequest));
         /// <summary>
         /// This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
         /// </summary>
@@ -1217,7 +1217,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysLeasesTidy();
+        ApiResponse<Object> UpdateSystemLeasesTidy();
         /// <summary>
         /// Modify the log level for all existing loggers.
         /// </summary>
@@ -1227,7 +1227,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemLoggersRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysLoggers(SystemLoggersRequest systemLoggersRequest = default(SystemLoggersRequest));
+        ApiResponse<Object> UpdateSystemLoggers(SystemLoggersRequest systemLoggersRequest = default(SystemLoggersRequest));
         /// <summary>
         /// Modify the log level of a single logger.
         /// </summary>
@@ -1238,7 +1238,7 @@ namespace Vault.Api
         /// <param name="name">The name of the logger to be modified.</param>
         /// <param name="systemLoggersRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysLoggersName(string name, SystemLoggersRequest systemLoggersRequest = default(SystemLoggersRequest));
+        ApiResponse<Object> UpdateSystemLoggersName(string name, SystemLoggersRequest systemLoggersRequest = default(SystemLoggersRequest));
         /// <summary>
         /// Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token
         /// </summary>
@@ -1248,7 +1248,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemMfaValidateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysMfaValidate(SystemMfaValidateRequest systemMfaValidateRequest = default(SystemMfaValidateRequest));
+        ApiResponse<Object> UpdateSystemMfaValidate(SystemMfaValidateRequest systemMfaValidateRequest = default(SystemMfaValidateRequest));
         /// <summary>
         /// Enable a new secrets engine at the given path.
         /// </summary>
@@ -1259,7 +1259,7 @@ namespace Vault.Api
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="systemMountsRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysMountsPath(string path, SystemMountsRequest systemMountsRequest = default(SystemMountsRequest));
+        ApiResponse<Object> UpdateSystemMountsPath(string path, SystemMountsRequest systemMountsRequest = default(SystemMountsRequest));
         /// <summary>
         /// Tune backend configuration parameters for this mount.
         /// </summary>
@@ -1270,7 +1270,7 @@ namespace Vault.Api
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="systemMountsTuneRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysMountsPathTune(string path, SystemMountsTuneRequest systemMountsTuneRequest = default(SystemMountsTuneRequest));
+        ApiResponse<Object> UpdateSystemMountsPathTune(string path, SystemMountsTuneRequest systemMountsTuneRequest = default(SystemMountsTuneRequest));
         /// <summary>
         /// Register a new plugin, or updates an existing one with the supplied name.
         /// </summary>
@@ -1281,7 +1281,7 @@ namespace Vault.Api
         /// <param name="name">The name of the plugin</param>
         /// <param name="systemPluginsCatalogRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysPluginsCatalogName(string name, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest));
+        ApiResponse<Object> UpdateSystemPluginsCatalogName(string name, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest));
         /// <summary>
         /// Register a new plugin, or updates an existing one with the supplied name.
         /// </summary>
@@ -1293,7 +1293,7 @@ namespace Vault.Api
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <param name="systemPluginsCatalogRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysPluginsCatalogTypeName(string name, string type, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest));
+        ApiResponse<Object> UpdateSystemPluginsCatalogTypeName(string name, string type, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest));
         /// <summary>
         /// Reload mounted plugin backends.
         /// </summary>
@@ -1303,7 +1303,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemPluginsReloadBackendRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysPluginsReloadBackend(SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = default(SystemPluginsReloadBackendRequest));
+        ApiResponse<Object> UpdateSystemPluginsReloadBackend(SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = default(SystemPluginsReloadBackendRequest));
         /// <summary>
         /// Add a new or update an existing ACL policy.
         /// </summary>
@@ -1314,7 +1314,7 @@ namespace Vault.Api
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="systemPoliciesAclRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysPoliciesAclName(string name, SystemPoliciesAclRequest systemPoliciesAclRequest = default(SystemPoliciesAclRequest));
+        ApiResponse<Object> UpdateSystemPoliciesAclName(string name, SystemPoliciesAclRequest systemPoliciesAclRequest = default(SystemPoliciesAclRequest));
         /// <summary>
         /// Add a new or update an existing password policy.
         /// </summary>
@@ -1325,7 +1325,7 @@ namespace Vault.Api
         /// <param name="name">The name of the password policy.</param>
         /// <param name="systemPoliciesPasswordRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysPoliciesPasswordName(string name, SystemPoliciesPasswordRequest systemPoliciesPasswordRequest = default(SystemPoliciesPasswordRequest));
+        ApiResponse<Object> UpdateSystemPoliciesPasswordName(string name, SystemPoliciesPasswordRequest systemPoliciesPasswordRequest = default(SystemPoliciesPasswordRequest));
         /// <summary>
         /// Add a new or update an existing policy.
         /// </summary>
@@ -1336,7 +1336,7 @@ namespace Vault.Api
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="systemPolicyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysPolicyName(string name, SystemPolicyRequest systemPolicyRequest = default(SystemPolicyRequest));
+        ApiResponse<Object> UpdateSystemPolicyName(string name, SystemPolicyRequest systemPolicyRequest = default(SystemPolicyRequest));
         /// <summary>
         /// 
         /// </summary>
@@ -1346,7 +1346,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemQuotasConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysQuotasConfig(SystemQuotasConfigRequest systemQuotasConfigRequest = default(SystemQuotasConfigRequest));
+        ApiResponse<Object> UpdateSystemQuotasConfig(SystemQuotasConfigRequest systemQuotasConfigRequest = default(SystemQuotasConfigRequest));
         /// <summary>
         /// 
         /// </summary>
@@ -1357,7 +1357,7 @@ namespace Vault.Api
         /// <param name="name">Name of the quota rule.</param>
         /// <param name="systemQuotasRateLimitRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysQuotasRateLimitName(string name, SystemQuotasRateLimitRequest systemQuotasRateLimitRequest = default(SystemQuotasRateLimitRequest));
+        ApiResponse<Object> UpdateSystemQuotasRateLimitName(string name, SystemQuotasRateLimitRequest systemQuotasRateLimitRequest = default(SystemQuotasRateLimitRequest));
         /// <summary>
         /// Update the value of the key at the given path.
         /// </summary>
@@ -1367,7 +1367,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRawRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRaw(SystemRawRequest systemRawRequest = default(SystemRawRequest));
+        ApiResponse<Object> UpdateSystemRaw(SystemRawRequest systemRawRequest = default(SystemRawRequest));
         /// <summary>
         /// Update the value of the key at the given path.
         /// </summary>
@@ -1378,7 +1378,7 @@ namespace Vault.Api
         /// <param name="path"></param>
         /// <param name="systemRawRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRawPath(string path, SystemRawRequest systemRawRequest = default(SystemRawRequest));
+        ApiResponse<Object> UpdateSystemRawPath(string path, SystemRawRequest systemRawRequest = default(SystemRawRequest));
         /// <summary>
         /// Initializes a new rekey attempt.
         /// </summary>
@@ -1388,7 +1388,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRekeyInitRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRekeyInit(SystemRekeyInitRequest systemRekeyInitRequest = default(SystemRekeyInitRequest));
+        ApiResponse<Object> UpdateSystemRekeyInit(SystemRekeyInitRequest systemRekeyInitRequest = default(SystemRekeyInitRequest));
         /// <summary>
         /// Enter a single unseal key share to progress the rekey of the Vault.
         /// </summary>
@@ -1398,7 +1398,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRekeyUpdateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRekeyUpdate(SystemRekeyUpdateRequest systemRekeyUpdateRequest = default(SystemRekeyUpdateRequest));
+        ApiResponse<Object> UpdateSystemRekeyUpdate(SystemRekeyUpdateRequest systemRekeyUpdateRequest = default(SystemRekeyUpdateRequest));
         /// <summary>
         /// Enter a single new key share to progress the rekey verification operation.
         /// </summary>
@@ -1408,7 +1408,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRekeyVerifyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRekeyVerify(SystemRekeyVerifyRequest systemRekeyVerifyRequest = default(SystemRekeyVerifyRequest));
+        ApiResponse<Object> UpdateSystemRekeyVerify(SystemRekeyVerifyRequest systemRekeyVerifyRequest = default(SystemRekeyVerifyRequest));
         /// <summary>
         /// Initiate a mount migration
         /// </summary>
@@ -1418,7 +1418,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRemountRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRemount(SystemRemountRequest systemRemountRequest = default(SystemRemountRequest));
+        ApiResponse<Object> UpdateSystemRemount(SystemRemountRequest systemRemountRequest = default(SystemRemountRequest));
         /// <summary>
         /// Renews a lease, requesting to extend the lease.
         /// </summary>
@@ -1428,7 +1428,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRenewRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRenew(SystemRenewRequest systemRenewRequest = default(SystemRenewRequest));
+        ApiResponse<Object> UpdateSystemRenew(SystemRenewRequest systemRenewRequest = default(SystemRenewRequest));
         /// <summary>
         /// Renews a lease, requesting to extend the lease.
         /// </summary>
@@ -1439,7 +1439,7 @@ namespace Vault.Api
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="systemRenewLeaseRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRenewUrlLeaseId(string urlLeaseId, SystemRenewLeaseRequest systemRenewLeaseRequest = default(SystemRenewLeaseRequest));
+        ApiResponse<Object> UpdateSystemRenewUrlLeaseId(string urlLeaseId, SystemRenewLeaseRequest systemRenewLeaseRequest = default(SystemRenewLeaseRequest));
         /// <summary>
         /// Revokes a lease immediately.
         /// </summary>
@@ -1449,7 +1449,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRevokeRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRevoke(SystemRevokeRequest systemRevokeRequest = default(SystemRevokeRequest));
+        ApiResponse<Object> UpdateSystemRevoke(SystemRevokeRequest systemRevokeRequest = default(SystemRevokeRequest));
         /// <summary>
         /// Revokes all secrets or tokens generated under a given prefix immediately
         /// </summary>
@@ -1459,7 +1459,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRevokeForcePrefix(string prefix);
+        ApiResponse<Object> UpdateSystemRevokeForcePrefix(string prefix);
         /// <summary>
         /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
         /// </summary>
@@ -1470,7 +1470,7 @@ namespace Vault.Api
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="systemRevokePrefixRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRevokePrefixPrefix(string prefix, SystemRevokePrefixRequest systemRevokePrefixRequest = default(SystemRevokePrefixRequest));
+        ApiResponse<Object> UpdateSystemRevokePrefixPrefix(string prefix, SystemRevokePrefixRequest systemRevokePrefixRequest = default(SystemRevokePrefixRequest));
         /// <summary>
         /// Revokes a lease immediately.
         /// </summary>
@@ -1481,7 +1481,7 @@ namespace Vault.Api
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="systemRevokeLeaseRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRevokeUrlLeaseId(string urlLeaseId, SystemRevokeLeaseRequest systemRevokeLeaseRequest = default(SystemRevokeLeaseRequest));
+        ApiResponse<Object> UpdateSystemRevokeUrlLeaseId(string urlLeaseId, SystemRevokeLeaseRequest systemRevokeLeaseRequest = default(SystemRevokeLeaseRequest));
         /// <summary>
         /// Rotates the backend encryption key used to persist data.
         /// </summary>
@@ -1490,7 +1490,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRotate();
+        ApiResponse<Object> UpdateSystemRotate();
         /// <summary>
         /// 
         /// </summary>
@@ -1500,7 +1500,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRotateConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysRotateConfig(SystemRotateConfigRequest systemRotateConfigRequest = default(SystemRotateConfigRequest));
+        ApiResponse<Object> UpdateSystemRotateConfig(SystemRotateConfigRequest systemRotateConfigRequest = default(SystemRotateConfigRequest));
         /// <summary>
         /// Seal the Vault.
         /// </summary>
@@ -1509,7 +1509,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysSeal();
+        ApiResponse<Object> UpdateSystemSeal();
         /// <summary>
         /// Cause the node to give up active status.
         /// </summary>
@@ -1518,7 +1518,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysStepDown();
+        ApiResponse<Object> UpdateSystemStepDown();
         /// <summary>
         /// Generate a hash sum for input data
         /// </summary>
@@ -1528,7 +1528,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemToolsHashRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysToolsHash(SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest));
+        ApiResponse<Object> UpdateSystemToolsHash(SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest));
         /// <summary>
         /// Generate a hash sum for input data
         /// </summary>
@@ -1539,7 +1539,7 @@ namespace Vault.Api
         /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
         /// <param name="systemToolsHashRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysToolsHashUrlalgorithm(string urlalgorithm, SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest));
+        ApiResponse<Object> UpdateSystemToolsHashUrlalgorithm(string urlalgorithm, SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest));
         /// <summary>
         /// Generate random bytes
         /// </summary>
@@ -1549,7 +1549,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysToolsRandom(SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest));
+        ApiResponse<Object> UpdateSystemToolsRandom(SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest));
         /// <summary>
         /// Generate random bytes
         /// </summary>
@@ -1560,7 +1560,7 @@ namespace Vault.Api
         /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysToolsRandomSource(string source, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest));
+        ApiResponse<Object> UpdateSystemToolsRandomSource(string source, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest));
         /// <summary>
         /// Generate random bytes
         /// </summary>
@@ -1572,7 +1572,7 @@ namespace Vault.Api
         /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysToolsRandomSourceUrlbytes(string source, string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest));
+        ApiResponse<Object> UpdateSystemToolsRandomSourceUrlbytes(string source, string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest));
         /// <summary>
         /// Generate random bytes
         /// </summary>
@@ -1583,7 +1583,7 @@ namespace Vault.Api
         /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysToolsRandomUrlbytes(string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest));
+        ApiResponse<Object> UpdateSystemToolsRandomUrlbytes(string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest));
         /// <summary>
         /// Unseal the Vault.
         /// </summary>
@@ -1593,7 +1593,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemUnsealRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysUnseal(SystemUnsealRequest systemUnsealRequest = default(SystemUnsealRequest));
+        ApiResponse<Object> UpdateSystemUnseal(SystemUnsealRequest systemUnsealRequest = default(SystemUnsealRequest));
         /// <summary>
         /// Look up wrapping properties for the given token.
         /// </summary>
@@ -1603,7 +1603,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemWrappingLookupRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysWrappingLookup(SystemWrappingLookupRequest systemWrappingLookupRequest = default(SystemWrappingLookupRequest));
+        ApiResponse<Object> UpdateSystemWrappingLookup(SystemWrappingLookupRequest systemWrappingLookupRequest = default(SystemWrappingLookupRequest));
         /// <summary>
         /// Rotates a response-wrapped token.
         /// </summary>
@@ -1613,7 +1613,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemWrappingRewrapRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysWrappingRewrap(SystemWrappingRewrapRequest systemWrappingRewrapRequest = default(SystemWrappingRewrapRequest));
+        ApiResponse<Object> UpdateSystemWrappingRewrap(SystemWrappingRewrapRequest systemWrappingRewrapRequest = default(SystemWrappingRewrapRequest));
         /// <summary>
         /// Unwraps a response-wrapped token.
         /// </summary>
@@ -1623,7 +1623,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemWrappingUnwrapRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysWrappingUnwrap(SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = default(SystemWrappingUnwrapRequest));
+        ApiResponse<Object> UpdateSystemWrappingUnwrap(SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = default(SystemWrappingUnwrapRequest));
         /// <summary>
         /// Response-wraps an arbitrary JSON object.
         /// </summary>
@@ -1632,7 +1632,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSysWrappingWrap();
+        ApiResponse<Object> UpdateSystemWrappingWrap();
         #endregion Synchronous Operations
     }
 
@@ -1653,7 +1653,7 @@ namespace Vault.Api
         /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysAuditPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> DeleteSystemAuditPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Disable the auth method at the given auth path
@@ -1665,7 +1665,7 @@ namespace Vault.Api
         /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysAuthPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> DeleteSystemAuthPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Disable auditing of the given request header.
@@ -1677,7 +1677,7 @@ namespace Vault.Api
         /// <param name="header"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysConfigAuditingRequestHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> DeleteSystemConfigAuditingRequestHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Remove any CORS settings.
@@ -1688,7 +1688,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysConfigCorsAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> DeleteSystemConfigCorsAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Remove a UI header.
@@ -1700,7 +1700,7 @@ namespace Vault.Api
         /// <param name="header">The name of the header.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysConfigUiHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> DeleteSystemConfigUiHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Cancels any in-progress root generation attempt.
@@ -1711,7 +1711,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysGenerateRootAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> DeleteSystemGenerateRootAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Cancels any in-progress root generation attempt.
@@ -1722,7 +1722,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysGenerateRootAttemptAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> DeleteSystemGenerateRootAttemptAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Revert the all loggers to use log level provided in config.
@@ -1733,7 +1733,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysLoggersAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> DeleteSystemLoggersAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Revert a single logger to use log level provided in config.
@@ -1745,7 +1745,7 @@ namespace Vault.Api
         /// <param name="name">The name of the logger to be modified.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysLoggersNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> DeleteSystemLoggersNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Disable the mount point specified at the given path.
@@ -1757,7 +1757,7 @@ namespace Vault.Api
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysMountsPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> DeleteSystemMountsPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Remove the plugin with the given name.
@@ -1769,7 +1769,7 @@ namespace Vault.Api
         /// <param name="name">The name of the plugin</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysPluginsCatalogNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> DeleteSystemPluginsCatalogNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Remove the plugin with the given name.
@@ -1782,7 +1782,7 @@ namespace Vault.Api
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysPluginsCatalogTypeNameAsync(string name, string type, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> DeleteSystemPluginsCatalogTypeNameAsync(string name, string type, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Delete the ACL policy with the given name.
@@ -1794,7 +1794,7 @@ namespace Vault.Api
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysPoliciesAclNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> DeleteSystemPoliciesAclNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Delete a password policy.
@@ -1806,7 +1806,7 @@ namespace Vault.Api
         /// <param name="name">The name of the password policy.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysPoliciesPasswordNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> DeleteSystemPoliciesPasswordNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Delete the policy with the given name.
@@ -1818,7 +1818,7 @@ namespace Vault.Api
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysPolicyNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> DeleteSystemPolicyNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -1830,7 +1830,7 @@ namespace Vault.Api
         /// <param name="name">Name of the quota rule.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysQuotasRateLimitNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> DeleteSystemQuotasRateLimitNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Delete the key with given path.
@@ -1841,7 +1841,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysRawAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> DeleteSystemRawAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Delete the key with given path.
@@ -1853,7 +1853,7 @@ namespace Vault.Api
         /// <param name="path"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysRawPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> DeleteSystemRawPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Delete the backup copy of PGP-encrypted unseal keys.
@@ -1864,7 +1864,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysRekeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> DeleteSystemRekeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Cancels any in-progress rekey.
@@ -1875,7 +1875,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysRekeyInitAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> DeleteSystemRekeyInitAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Allows fetching or deleting the backup of the rotated unseal keys.
@@ -1886,7 +1886,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysRekeyRecoveryKeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> DeleteSystemRekeyRecoveryKeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Cancel any in-progress rekey verification operation.
@@ -1897,98 +1897,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> DeleteSysRekeyVerifyAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// List the enabled audit devices.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysAuditAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// List the currently enabled credential backends.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysAuthAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Read the configuration of the auth engine at the given path.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysAuthPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Reads the given auth path&#39;s configuration.
-        /// </summary>
-        /// <remarks>
-        /// This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">Tune the configuration parameters for an auth path.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysAuthPathTuneAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// List the request headers that are configured to be audited.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysConfigAuditingRequestHeadersAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// List the information for the given request header.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="header"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysConfigAuditingRequestHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Return the current CORS settings.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysConfigCorsAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Return a sanitized version of the Vault server configuration.
-        /// </summary>
-        /// <remarks>
-        /// The sanitized output strips configuration values in the storage, HA storage, and seals stanzas, which may contain sensitive values such as API tokens. It also removes any token or secret fields in other stanzas, such as the circonus_api_token from telemetry.
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysConfigStateSanitizedAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> DeleteSystemRekeyVerifyAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Return a list of configured UI headers.
@@ -2000,284 +1909,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysConfigUiHeadersAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Return the given UI header&#39;s configuration
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="header">The name of the header.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysConfigUiHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Read the configuration and progress of the current root generation attempt.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysGenerateRootAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Read the configuration and progress of the current root generation attempt.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysGenerateRootAttemptAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Check the HA status of a Vault cluster
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysHaStatusAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Returns the health status of Vault.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysHealthAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Information about the host instance that this Vault server is running on.
-        /// </summary>
-        /// <remarks>
-        /// Information about the host instance that this Vault server is running on.   The information that gets collected includes host hardware information, and CPU,   disk, and memory utilization
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysHostInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// reports in-flight requests
-        /// </summary>
-        /// <remarks>
-        /// This path responds to the following HTTP methods.   GET /    Returns a map of in-flight requests.
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInFlightReqAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Returns the initialization status of Vault.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInitAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Report the client count metrics, for this namespace and all child namespaces.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalCountersActivityAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Report the client count metrics, for this namespace and all child namespaces.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalCountersActivityExportAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Report the number of clients for this month, for this namespace and all child namespaces.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalCountersActivityMonthlyAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Read the client count tracking configuration.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalCountersConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalCountersEntitiesAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalCountersRequestsAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalCountersTokensAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Generate an OpenAPI 3 document of all mounted paths.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalSpecsOpenapiAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Lists enabled feature flags.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalUiFeatureFlagsAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Lists all enabled and visible auth and secrets mounts.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalUiMountsAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Return information about the given mount.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path of the mount.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalUiMountsPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalUiNamespacesAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysInternalUiResultantAclAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Provides information about the backend encryption key.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysKeyStatusAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Returns the high availability status and current leader instance of Vault.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysLeaderAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// List leases associated with this Vault cluster
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysLeasesAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Count of leases associated with this Vault cluster
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysLeasesCountAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ListSystemConfigUiHeadersAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Returns a list of lease ids.
@@ -2289,7 +1921,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysLeasesLookupAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ListSystemLeasesLookupAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Returns a list of lease ids.
@@ -2302,90 +1934,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysLeasesLookupPrefixAsync(string prefix, string list, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Export the metrics aggregated for telemetry purpose.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysMetricsAsync(string format = default(string), CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
-        /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysMonitorAsync(string logFormat = default(string), string logLevel = default(string), CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// List the currently mounted backends.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysMountsAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Read the configuration of the secret engine at the given path.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysMountsPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Tune backend configuration parameters for this mount.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysMountsPathTuneAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Lists all the plugins known to Vault
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPluginsCatalogAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Return the configuration data for the plugin with the given name.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPluginsCatalogNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ListSystemLeasesLookupPrefixAsync(string prefix, string list, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// List the plugins in the catalog.
@@ -2398,7 +1947,506 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPluginsCatalogTypeAsync(string type, string list, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ListSystemPluginsCatalogTypeAsync(string type, string list, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// List the configured access control policies.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ListSystemPoliciesAclAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// List the existing password policies.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ListSystemPoliciesPasswordAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ListSystemQuotasRateLimitAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Returns map of historical version change entries
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ListSystemVersionHistoryAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// List the enabled audit devices.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemAuditAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// List the currently enabled credential backends.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemAuthAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Read the configuration of the auth engine at the given path.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemAuthPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Reads the given auth path&#39;s configuration.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Tune the configuration parameters for an auth path.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemAuthPathTuneAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// List the request headers that are configured to be audited.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemConfigAuditingRequestHeadersAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// List the information for the given request header.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="header"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemConfigAuditingRequestHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Return the current CORS settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemConfigCorsAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Return a sanitized version of the Vault server configuration.
+        /// </summary>
+        /// <remarks>
+        /// The sanitized output strips configuration values in the storage, HA storage, and seals stanzas, which may contain sensitive values such as API tokens. It also removes any token or secret fields in other stanzas, such as the circonus_api_token from telemetry.
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemConfigStateSanitizedAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Return the given UI header&#39;s configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="header">The name of the header.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemConfigUiHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Read the configuration and progress of the current root generation attempt.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemGenerateRootAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Read the configuration and progress of the current root generation attempt.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemGenerateRootAttemptAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Check the HA status of a Vault cluster
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemHaStatusAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Returns the health status of Vault.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemHealthAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Information about the host instance that this Vault server is running on.
+        /// </summary>
+        /// <remarks>
+        /// Information about the host instance that this Vault server is running on.   The information that gets collected includes host hardware information, and CPU,   disk, and memory utilization
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemHostInfoAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// reports in-flight requests
+        /// </summary>
+        /// <remarks>
+        /// This path responds to the following HTTP methods.   GET /    Returns a map of in-flight requests.
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemInFlightReqAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Returns the initialization status of Vault.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemInitAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Report the client count metrics, for this namespace and all child namespaces.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemInternalCountersActivityAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Report the client count metrics, for this namespace and all child namespaces.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemInternalCountersActivityExportAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Report the number of clients for this month, for this namespace and all child namespaces.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemInternalCountersActivityMonthlyAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Read the client count tracking configuration.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemInternalCountersConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Backwards compatibility is not guaranteed for this API
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemInternalCountersEntitiesAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Backwards compatibility is not guaranteed for this API
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemInternalCountersRequestsAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Backwards compatibility is not guaranteed for this API
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemInternalCountersTokensAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Generate an OpenAPI 3 document of all mounted paths.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemInternalSpecsOpenapiAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Lists enabled feature flags.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemInternalUiFeatureFlagsAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Lists all enabled and visible auth and secrets mounts.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemInternalUiMountsAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Return information about the given mount.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">The path of the mount.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemInternalUiMountsPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Backwards compatibility is not guaranteed for this API
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemInternalUiNamespacesAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Backwards compatibility is not guaranteed for this API
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemInternalUiResultantAclAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Provides information about the backend encryption key.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemKeyStatusAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Returns the high availability status and current leader instance of Vault.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemLeaderAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// List leases associated with this Vault cluster
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemLeasesAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Count of leases associated with this Vault cluster
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemLeasesCountAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Export the metrics aggregated for telemetry purpose.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemMetricsAsync(string format = default(string), CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
+        /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemMonitorAsync(string logFormat = default(string), string logLevel = default(string), CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// List the currently mounted backends.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemMountsAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Read the configuration of the secret engine at the given path.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemMountsPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Tune backend configuration parameters for this mount.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemMountsPathTuneAsync(string path, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Lists all the plugins known to Vault
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemPluginsCatalogAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Return the configuration data for the plugin with the given name.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of the plugin</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        Task<ApiResponse<Object>> ReadSystemPluginsCatalogNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Return the configuration data for the plugin with the given name.
@@ -2411,19 +2459,7 @@ namespace Vault.Api
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPluginsCatalogTypeNameAsync(string name, string type, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// List the configured access control policies.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPoliciesAclAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemPluginsCatalogTypeNameAsync(string name, string type, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Retrieve information about the named ACL policy.
@@ -2435,19 +2471,7 @@ namespace Vault.Api
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPoliciesAclNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// List the existing password policies.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPoliciesPasswordAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemPoliciesAclNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Retrieve an existing password policy.
@@ -2459,7 +2483,7 @@ namespace Vault.Api
         /// <param name="name">The name of the password policy.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPoliciesPasswordNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemPoliciesPasswordNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Generate a password from an existing password policy.
@@ -2471,7 +2495,7 @@ namespace Vault.Api
         /// <param name="name">The name of the password policy.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPoliciesPasswordNameGenerateAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemPoliciesPasswordNameGenerateAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// List the configured access control policies.
@@ -2483,7 +2507,7 @@ namespace Vault.Api
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPolicyAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemPolicyAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Retrieve the policy body for the named policy.
@@ -2495,7 +2519,7 @@ namespace Vault.Api
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPolicyNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemPolicyNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Returns an HTML page listing the available profiles.
@@ -2506,7 +2530,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPprofAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemPprofAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Returns a sampling of all past memory allocations.
@@ -2517,7 +2541,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPprofAllocsAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemPprofAllocsAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Returns stack traces that led to blocking on synchronization primitives
@@ -2528,7 +2552,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPprofBlockAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemPprofBlockAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Returns the running program&#39;s command line.
@@ -2539,7 +2563,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPprofCmdlineAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemPprofCmdlineAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Returns stack traces of all current goroutines.
@@ -2550,7 +2574,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPprofGoroutineAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemPprofGoroutineAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Returns a sampling of memory allocations of live object.
@@ -2561,7 +2585,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPprofHeapAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemPprofHeapAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Returns stack traces of holders of contended mutexes
@@ -2572,7 +2596,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPprofMutexAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemPprofMutexAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Returns a pprof-formatted cpu profile payload.
@@ -2583,7 +2607,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPprofProfileAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemPprofProfileAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Returns the program counters listed in the request.
@@ -2594,7 +2618,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPprofSymbolAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemPprofSymbolAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Returns stack traces that led to the creation of new OS threads
@@ -2605,7 +2629,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPprofThreadcreateAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemPprofThreadcreateAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Returns the execution trace in binary form.
@@ -2616,7 +2640,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysPprofTraceAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemPprofTraceAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -2627,19 +2651,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysQuotasConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysQuotasRateLimitAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemQuotasConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -2651,7 +2663,7 @@ namespace Vault.Api
         /// <param name="name">Name of the quota rule.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysQuotasRateLimitNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemQuotasRateLimitNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Read the value of the key at the given path.
@@ -2663,7 +2675,7 @@ namespace Vault.Api
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysRawAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemRawAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Read the value of the key at the given path.
@@ -2676,7 +2688,7 @@ namespace Vault.Api
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysRawPathAsync(string path, string list = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemRawPathAsync(string path, string list = default(string), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Return the backup copy of PGP-encrypted unseal keys.
@@ -2687,7 +2699,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysRekeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemRekeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Reads the configuration and progress of the current rekey attempt.
@@ -2698,7 +2710,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysRekeyInitAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemRekeyInitAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Allows fetching or deleting the backup of the rotated unseal keys.
@@ -2709,7 +2721,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysRekeyRecoveryKeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemRekeyRecoveryKeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Read the configuration and progress of the current rekey verification attempt.
@@ -2720,7 +2732,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysRekeyVerifyAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemRekeyVerifyAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Check status of a mount migration
@@ -2732,7 +2744,7 @@ namespace Vault.Api
         /// <param name="migrationId">The ID of the migration operation</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysRemountStatusMigrationIdAsync(string migrationId, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemRemountStatusMigrationIdAsync(string migrationId, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -2743,7 +2755,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysReplicationStatusAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemReplicationStatusAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -2754,7 +2766,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysRotateConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemRotateConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Check the seal status of a Vault.
@@ -2765,19 +2777,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysSealStatusAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Returns map of historical version change entries
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysVersionHistoryAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemSealStatusAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Look up wrapping properties for the requester&#39;s token.
@@ -2788,7 +2788,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> GetSysWrappingLookupAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> ReadSystemWrappingLookupAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// The hash of the given string via the given audit backend
@@ -2801,7 +2801,7 @@ namespace Vault.Api
         /// <param name="systemAuditHashRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysAuditHashPathAsync(string path, SystemAuditHashRequest systemAuditHashRequest = default(SystemAuditHashRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemAuditHashPathAsync(string path, SystemAuditHashRequest systemAuditHashRequest = default(SystemAuditHashRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Enable a new audit device at the supplied path.
@@ -2814,7 +2814,7 @@ namespace Vault.Api
         /// <param name="systemAuditRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysAuditPathAsync(string path, SystemAuditRequest systemAuditRequest = default(SystemAuditRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemAuditPathAsync(string path, SystemAuditRequest systemAuditRequest = default(SystemAuditRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Enables a new auth method.
@@ -2827,7 +2827,7 @@ namespace Vault.Api
         /// <param name="systemAuthRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysAuthPathAsync(string path, SystemAuthRequest systemAuthRequest = default(SystemAuthRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemAuthPathAsync(string path, SystemAuthRequest systemAuthRequest = default(SystemAuthRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Tune configuration parameters for a given auth path.
@@ -2840,7 +2840,7 @@ namespace Vault.Api
         /// <param name="systemAuthTuneRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysAuthPathTuneAsync(string path, SystemAuthTuneRequest systemAuthTuneRequest = default(SystemAuthTuneRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemAuthPathTuneAsync(string path, SystemAuthTuneRequest systemAuthTuneRequest = default(SystemAuthTuneRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Fetches the capabilities of the given token on the given path.
@@ -2852,7 +2852,7 @@ namespace Vault.Api
         /// <param name="systemCapabilitiesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysCapabilitiesAsync(SystemCapabilitiesRequest systemCapabilitiesRequest = default(SystemCapabilitiesRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemCapabilitiesAsync(SystemCapabilitiesRequest systemCapabilitiesRequest = default(SystemCapabilitiesRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Fetches the capabilities of the token associated with the given token, on the given path.
@@ -2864,7 +2864,7 @@ namespace Vault.Api
         /// <param name="systemCapabilitiesAccessorRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysCapabilitiesAccessorAsync(SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = default(SystemCapabilitiesAccessorRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemCapabilitiesAccessorAsync(SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = default(SystemCapabilitiesAccessorRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Fetches the capabilities of the given token on the given path.
@@ -2876,7 +2876,7 @@ namespace Vault.Api
         /// <param name="systemCapabilitiesSelfRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysCapabilitiesSelfAsync(SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = default(SystemCapabilitiesSelfRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemCapabilitiesSelfAsync(SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = default(SystemCapabilitiesSelfRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Enable auditing of a header.
@@ -2889,7 +2889,7 @@ namespace Vault.Api
         /// <param name="systemConfigAuditingRequestHeadersRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysConfigAuditingRequestHeadersHeaderAsync(string header, SystemConfigAuditingRequestHeadersRequest systemConfigAuditingRequestHeadersRequest = default(SystemConfigAuditingRequestHeadersRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemConfigAuditingRequestHeadersHeaderAsync(string header, SystemConfigAuditingRequestHeadersRequest systemConfigAuditingRequestHeadersRequest = default(SystemConfigAuditingRequestHeadersRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Configure the CORS settings.
@@ -2901,7 +2901,7 @@ namespace Vault.Api
         /// <param name="systemConfigCorsRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysConfigCorsAsync(SystemConfigCorsRequest systemConfigCorsRequest = default(SystemConfigCorsRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemConfigCorsAsync(SystemConfigCorsRequest systemConfigCorsRequest = default(SystemConfigCorsRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Reload the given subsystem
@@ -2913,7 +2913,7 @@ namespace Vault.Api
         /// <param name="subsystem"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysConfigReloadSubsystemAsync(string subsystem, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemConfigReloadSubsystemAsync(string subsystem, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Configure the values to be returned for the UI header.
@@ -2926,7 +2926,7 @@ namespace Vault.Api
         /// <param name="systemConfigUiHeadersRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysConfigUiHeadersHeaderAsync(string header, SystemConfigUiHeadersRequest systemConfigUiHeadersRequest = default(SystemConfigUiHeadersRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemConfigUiHeadersHeaderAsync(string header, SystemConfigUiHeadersRequest systemConfigUiHeadersRequest = default(SystemConfigUiHeadersRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Initializes a new root generation attempt.
@@ -2938,7 +2938,7 @@ namespace Vault.Api
         /// <param name="systemGenerateRootRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysGenerateRootAsync(SystemGenerateRootRequest systemGenerateRootRequest = default(SystemGenerateRootRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemGenerateRootAsync(SystemGenerateRootRequest systemGenerateRootRequest = default(SystemGenerateRootRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Initializes a new root generation attempt.
@@ -2950,7 +2950,7 @@ namespace Vault.Api
         /// <param name="systemGenerateRootAttemptRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysGenerateRootAttemptAsync(SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = default(SystemGenerateRootAttemptRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemGenerateRootAttemptAsync(SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = default(SystemGenerateRootAttemptRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Enter a single unseal key share to progress the root generation attempt.
@@ -2962,7 +2962,7 @@ namespace Vault.Api
         /// <param name="systemGenerateRootUpdateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysGenerateRootUpdateAsync(SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = default(SystemGenerateRootUpdateRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemGenerateRootUpdateAsync(SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = default(SystemGenerateRootUpdateRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Initialize a new Vault.
@@ -2974,7 +2974,7 @@ namespace Vault.Api
         /// <param name="systemInitRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysInitAsync(SystemInitRequest systemInitRequest = default(SystemInitRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemInitAsync(SystemInitRequest systemInitRequest = default(SystemInitRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Enable or disable collection of client count, set retention period, or set default reporting period.
@@ -2986,7 +2986,7 @@ namespace Vault.Api
         /// <param name="systemInternalCountersConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysInternalCountersConfigAsync(SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = default(SystemInternalCountersConfigRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemInternalCountersConfigAsync(SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = default(SystemInternalCountersConfigRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Retrieve lease metadata.
@@ -2998,7 +2998,7 @@ namespace Vault.Api
         /// <param name="systemLeasesLookupRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysLeasesLookupAsync(SystemLeasesLookupRequest systemLeasesLookupRequest = default(SystemLeasesLookupRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemLeasesLookupAsync(SystemLeasesLookupRequest systemLeasesLookupRequest = default(SystemLeasesLookupRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Renews a lease, requesting to extend the lease.
@@ -3010,7 +3010,7 @@ namespace Vault.Api
         /// <param name="systemLeasesRenewRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysLeasesRenewAsync(SystemLeasesRenewRequest systemLeasesRenewRequest = default(SystemLeasesRenewRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemLeasesRenewAsync(SystemLeasesRenewRequest systemLeasesRenewRequest = default(SystemLeasesRenewRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Renews a lease, requesting to extend the lease.
@@ -3023,7 +3023,7 @@ namespace Vault.Api
         /// <param name="systemLeasesRenewLeaseRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysLeasesRenewUrlLeaseIdAsync(string urlLeaseId, SystemLeasesRenewLeaseRequest systemLeasesRenewLeaseRequest = default(SystemLeasesRenewLeaseRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemLeasesRenewUrlLeaseIdAsync(string urlLeaseId, SystemLeasesRenewLeaseRequest systemLeasesRenewLeaseRequest = default(SystemLeasesRenewLeaseRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Revokes a lease immediately.
@@ -3035,7 +3035,7 @@ namespace Vault.Api
         /// <param name="systemLeasesRevokeRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysLeasesRevokeAsync(SystemLeasesRevokeRequest systemLeasesRevokeRequest = default(SystemLeasesRevokeRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemLeasesRevokeAsync(SystemLeasesRevokeRequest systemLeasesRevokeRequest = default(SystemLeasesRevokeRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Revokes all secrets or tokens generated under a given prefix immediately
@@ -3047,7 +3047,7 @@ namespace Vault.Api
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysLeasesRevokeForcePrefixAsync(string prefix, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemLeasesRevokeForcePrefixAsync(string prefix, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
@@ -3060,7 +3060,7 @@ namespace Vault.Api
         /// <param name="systemLeasesRevokePrefixRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysLeasesRevokePrefixPrefixAsync(string prefix, SystemLeasesRevokePrefixRequest systemLeasesRevokePrefixRequest = default(SystemLeasesRevokePrefixRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemLeasesRevokePrefixPrefixAsync(string prefix, SystemLeasesRevokePrefixRequest systemLeasesRevokePrefixRequest = default(SystemLeasesRevokePrefixRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Revokes a lease immediately.
@@ -3073,7 +3073,7 @@ namespace Vault.Api
         /// <param name="systemLeasesRevokeLeaseRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysLeasesRevokeUrlLeaseIdAsync(string urlLeaseId, SystemLeasesRevokeLeaseRequest systemLeasesRevokeLeaseRequest = default(SystemLeasesRevokeLeaseRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemLeasesRevokeUrlLeaseIdAsync(string urlLeaseId, SystemLeasesRevokeLeaseRequest systemLeasesRevokeLeaseRequest = default(SystemLeasesRevokeLeaseRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
@@ -3084,7 +3084,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysLeasesTidyAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemLeasesTidyAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Modify the log level for all existing loggers.
@@ -3096,7 +3096,7 @@ namespace Vault.Api
         /// <param name="systemLoggersRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysLoggersAsync(SystemLoggersRequest systemLoggersRequest = default(SystemLoggersRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemLoggersAsync(SystemLoggersRequest systemLoggersRequest = default(SystemLoggersRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Modify the log level of a single logger.
@@ -3109,7 +3109,7 @@ namespace Vault.Api
         /// <param name="systemLoggersRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysLoggersNameAsync(string name, SystemLoggersRequest systemLoggersRequest = default(SystemLoggersRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemLoggersNameAsync(string name, SystemLoggersRequest systemLoggersRequest = default(SystemLoggersRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token
@@ -3121,7 +3121,7 @@ namespace Vault.Api
         /// <param name="systemMfaValidateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysMfaValidateAsync(SystemMfaValidateRequest systemMfaValidateRequest = default(SystemMfaValidateRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemMfaValidateAsync(SystemMfaValidateRequest systemMfaValidateRequest = default(SystemMfaValidateRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Enable a new secrets engine at the given path.
@@ -3134,7 +3134,7 @@ namespace Vault.Api
         /// <param name="systemMountsRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysMountsPathAsync(string path, SystemMountsRequest systemMountsRequest = default(SystemMountsRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemMountsPathAsync(string path, SystemMountsRequest systemMountsRequest = default(SystemMountsRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Tune backend configuration parameters for this mount.
@@ -3147,7 +3147,7 @@ namespace Vault.Api
         /// <param name="systemMountsTuneRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysMountsPathTuneAsync(string path, SystemMountsTuneRequest systemMountsTuneRequest = default(SystemMountsTuneRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemMountsPathTuneAsync(string path, SystemMountsTuneRequest systemMountsTuneRequest = default(SystemMountsTuneRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Register a new plugin, or updates an existing one with the supplied name.
@@ -3160,7 +3160,7 @@ namespace Vault.Api
         /// <param name="systemPluginsCatalogRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysPluginsCatalogNameAsync(string name, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemPluginsCatalogNameAsync(string name, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Register a new plugin, or updates an existing one with the supplied name.
@@ -3174,7 +3174,7 @@ namespace Vault.Api
         /// <param name="systemPluginsCatalogRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysPluginsCatalogTypeNameAsync(string name, string type, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemPluginsCatalogTypeNameAsync(string name, string type, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Reload mounted plugin backends.
@@ -3186,7 +3186,7 @@ namespace Vault.Api
         /// <param name="systemPluginsReloadBackendRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysPluginsReloadBackendAsync(SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = default(SystemPluginsReloadBackendRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemPluginsReloadBackendAsync(SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = default(SystemPluginsReloadBackendRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Add a new or update an existing ACL policy.
@@ -3199,7 +3199,7 @@ namespace Vault.Api
         /// <param name="systemPoliciesAclRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysPoliciesAclNameAsync(string name, SystemPoliciesAclRequest systemPoliciesAclRequest = default(SystemPoliciesAclRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemPoliciesAclNameAsync(string name, SystemPoliciesAclRequest systemPoliciesAclRequest = default(SystemPoliciesAclRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Add a new or update an existing password policy.
@@ -3212,7 +3212,7 @@ namespace Vault.Api
         /// <param name="systemPoliciesPasswordRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysPoliciesPasswordNameAsync(string name, SystemPoliciesPasswordRequest systemPoliciesPasswordRequest = default(SystemPoliciesPasswordRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemPoliciesPasswordNameAsync(string name, SystemPoliciesPasswordRequest systemPoliciesPasswordRequest = default(SystemPoliciesPasswordRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Add a new or update an existing policy.
@@ -3225,7 +3225,7 @@ namespace Vault.Api
         /// <param name="systemPolicyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysPolicyNameAsync(string name, SystemPolicyRequest systemPolicyRequest = default(SystemPolicyRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemPolicyNameAsync(string name, SystemPolicyRequest systemPolicyRequest = default(SystemPolicyRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3237,7 +3237,7 @@ namespace Vault.Api
         /// <param name="systemQuotasConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysQuotasConfigAsync(SystemQuotasConfigRequest systemQuotasConfigRequest = default(SystemQuotasConfigRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemQuotasConfigAsync(SystemQuotasConfigRequest systemQuotasConfigRequest = default(SystemQuotasConfigRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3250,7 +3250,7 @@ namespace Vault.Api
         /// <param name="systemQuotasRateLimitRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysQuotasRateLimitNameAsync(string name, SystemQuotasRateLimitRequest systemQuotasRateLimitRequest = default(SystemQuotasRateLimitRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemQuotasRateLimitNameAsync(string name, SystemQuotasRateLimitRequest systemQuotasRateLimitRequest = default(SystemQuotasRateLimitRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Update the value of the key at the given path.
@@ -3262,7 +3262,7 @@ namespace Vault.Api
         /// <param name="systemRawRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRawAsync(SystemRawRequest systemRawRequest = default(SystemRawRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemRawAsync(SystemRawRequest systemRawRequest = default(SystemRawRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Update the value of the key at the given path.
@@ -3275,7 +3275,7 @@ namespace Vault.Api
         /// <param name="systemRawRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRawPathAsync(string path, SystemRawRequest systemRawRequest = default(SystemRawRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemRawPathAsync(string path, SystemRawRequest systemRawRequest = default(SystemRawRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Initializes a new rekey attempt.
@@ -3287,7 +3287,7 @@ namespace Vault.Api
         /// <param name="systemRekeyInitRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRekeyInitAsync(SystemRekeyInitRequest systemRekeyInitRequest = default(SystemRekeyInitRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemRekeyInitAsync(SystemRekeyInitRequest systemRekeyInitRequest = default(SystemRekeyInitRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Enter a single unseal key share to progress the rekey of the Vault.
@@ -3299,7 +3299,7 @@ namespace Vault.Api
         /// <param name="systemRekeyUpdateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRekeyUpdateAsync(SystemRekeyUpdateRequest systemRekeyUpdateRequest = default(SystemRekeyUpdateRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemRekeyUpdateAsync(SystemRekeyUpdateRequest systemRekeyUpdateRequest = default(SystemRekeyUpdateRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Enter a single new key share to progress the rekey verification operation.
@@ -3311,7 +3311,7 @@ namespace Vault.Api
         /// <param name="systemRekeyVerifyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRekeyVerifyAsync(SystemRekeyVerifyRequest systemRekeyVerifyRequest = default(SystemRekeyVerifyRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemRekeyVerifyAsync(SystemRekeyVerifyRequest systemRekeyVerifyRequest = default(SystemRekeyVerifyRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Initiate a mount migration
@@ -3323,7 +3323,7 @@ namespace Vault.Api
         /// <param name="systemRemountRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRemountAsync(SystemRemountRequest systemRemountRequest = default(SystemRemountRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemRemountAsync(SystemRemountRequest systemRemountRequest = default(SystemRemountRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Renews a lease, requesting to extend the lease.
@@ -3335,7 +3335,7 @@ namespace Vault.Api
         /// <param name="systemRenewRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRenewAsync(SystemRenewRequest systemRenewRequest = default(SystemRenewRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemRenewAsync(SystemRenewRequest systemRenewRequest = default(SystemRenewRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Renews a lease, requesting to extend the lease.
@@ -3348,7 +3348,7 @@ namespace Vault.Api
         /// <param name="systemRenewLeaseRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRenewUrlLeaseIdAsync(string urlLeaseId, SystemRenewLeaseRequest systemRenewLeaseRequest = default(SystemRenewLeaseRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemRenewUrlLeaseIdAsync(string urlLeaseId, SystemRenewLeaseRequest systemRenewLeaseRequest = default(SystemRenewLeaseRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Revokes a lease immediately.
@@ -3360,7 +3360,7 @@ namespace Vault.Api
         /// <param name="systemRevokeRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRevokeAsync(SystemRevokeRequest systemRevokeRequest = default(SystemRevokeRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemRevokeAsync(SystemRevokeRequest systemRevokeRequest = default(SystemRevokeRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Revokes all secrets or tokens generated under a given prefix immediately
@@ -3372,7 +3372,7 @@ namespace Vault.Api
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRevokeForcePrefixAsync(string prefix, CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemRevokeForcePrefixAsync(string prefix, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
@@ -3385,7 +3385,7 @@ namespace Vault.Api
         /// <param name="systemRevokePrefixRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRevokePrefixPrefixAsync(string prefix, SystemRevokePrefixRequest systemRevokePrefixRequest = default(SystemRevokePrefixRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemRevokePrefixPrefixAsync(string prefix, SystemRevokePrefixRequest systemRevokePrefixRequest = default(SystemRevokePrefixRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Revokes a lease immediately.
@@ -3398,7 +3398,7 @@ namespace Vault.Api
         /// <param name="systemRevokeLeaseRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRevokeUrlLeaseIdAsync(string urlLeaseId, SystemRevokeLeaseRequest systemRevokeLeaseRequest = default(SystemRevokeLeaseRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemRevokeUrlLeaseIdAsync(string urlLeaseId, SystemRevokeLeaseRequest systemRevokeLeaseRequest = default(SystemRevokeLeaseRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Rotates the backend encryption key used to persist data.
@@ -3409,7 +3409,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRotateAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemRotateAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3421,7 +3421,7 @@ namespace Vault.Api
         /// <param name="systemRotateConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysRotateConfigAsync(SystemRotateConfigRequest systemRotateConfigRequest = default(SystemRotateConfigRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemRotateConfigAsync(SystemRotateConfigRequest systemRotateConfigRequest = default(SystemRotateConfigRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Seal the Vault.
@@ -3432,7 +3432,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysSealAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemSealAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Cause the node to give up active status.
@@ -3443,7 +3443,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysStepDownAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemStepDownAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Generate a hash sum for input data
@@ -3455,7 +3455,7 @@ namespace Vault.Api
         /// <param name="systemToolsHashRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysToolsHashAsync(SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemToolsHashAsync(SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Generate a hash sum for input data
@@ -3468,7 +3468,7 @@ namespace Vault.Api
         /// <param name="systemToolsHashRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysToolsHashUrlalgorithmAsync(string urlalgorithm, SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemToolsHashUrlalgorithmAsync(string urlalgorithm, SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Generate random bytes
@@ -3480,7 +3480,7 @@ namespace Vault.Api
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysToolsRandomAsync(SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemToolsRandomAsync(SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Generate random bytes
@@ -3493,7 +3493,7 @@ namespace Vault.Api
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysToolsRandomSourceAsync(string source, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemToolsRandomSourceAsync(string source, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Generate random bytes
@@ -3507,7 +3507,7 @@ namespace Vault.Api
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysToolsRandomSourceUrlbytesAsync(string source, string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemToolsRandomSourceUrlbytesAsync(string source, string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Generate random bytes
@@ -3520,7 +3520,7 @@ namespace Vault.Api
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysToolsRandomUrlbytesAsync(string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemToolsRandomUrlbytesAsync(string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Unseal the Vault.
@@ -3532,7 +3532,7 @@ namespace Vault.Api
         /// <param name="systemUnsealRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysUnsealAsync(SystemUnsealRequest systemUnsealRequest = default(SystemUnsealRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemUnsealAsync(SystemUnsealRequest systemUnsealRequest = default(SystemUnsealRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Look up wrapping properties for the given token.
@@ -3544,7 +3544,7 @@ namespace Vault.Api
         /// <param name="systemWrappingLookupRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysWrappingLookupAsync(SystemWrappingLookupRequest systemWrappingLookupRequest = default(SystemWrappingLookupRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemWrappingLookupAsync(SystemWrappingLookupRequest systemWrappingLookupRequest = default(SystemWrappingLookupRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Rotates a response-wrapped token.
@@ -3556,7 +3556,7 @@ namespace Vault.Api
         /// <param name="systemWrappingRewrapRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysWrappingRewrapAsync(SystemWrappingRewrapRequest systemWrappingRewrapRequest = default(SystemWrappingRewrapRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemWrappingRewrapAsync(SystemWrappingRewrapRequest systemWrappingRewrapRequest = default(SystemWrappingRewrapRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Unwraps a response-wrapped token.
@@ -3568,7 +3568,7 @@ namespace Vault.Api
         /// <param name="systemWrappingUnwrapRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysWrappingUnwrapAsync(SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = default(SystemWrappingUnwrapRequest), CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemWrappingUnwrapAsync(SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = default(SystemWrappingUnwrapRequest), CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Response-wraps an arbitrary JSON object.
@@ -3579,7 +3579,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        Task<ApiResponse<Object>> PostSysWrappingWrapAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<ApiResponse<Object>> UpdateSystemWrappingWrapAsync(CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -3659,11 +3659,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteSysAuditPath(string path)
+        public ApiResponse<Object> DeleteSystemAuditPath(string path)
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->DeleteSysAuditPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->DeleteSystemAuditPath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -3687,7 +3687,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysAuditPath", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemAuditPath", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -3702,11 +3702,11 @@ namespace Vault.Api
         /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> DeleteSysAuditPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteSystemAuditPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->DeleteSysAuditPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->DeleteSystemAuditPath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -3731,7 +3731,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysAuditPath", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemAuditPath", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -3745,11 +3745,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteSysAuthPath(string path)
+        public ApiResponse<Object> DeleteSystemAuthPath(string path)
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->DeleteSysAuthPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->DeleteSystemAuthPath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -3773,7 +3773,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysAuthPath", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemAuthPath", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -3788,11 +3788,11 @@ namespace Vault.Api
         /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> DeleteSysAuthPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteSystemAuthPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->DeleteSysAuthPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->DeleteSystemAuthPath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -3817,7 +3817,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysAuthPath", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemAuthPath", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -3831,11 +3831,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="header"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteSysConfigAuditingRequestHeadersHeader(string header)
+        public ApiResponse<Object> DeleteSystemConfigAuditingRequestHeadersHeader(string header)
         {
             // verify the required parameter 'header' is set
             if (header == null)
-                throw new VaultApiException(400, "Missing required parameter 'header' when calling System->DeleteSysConfigAuditingRequestHeadersHeader");
+                throw new VaultApiException(400, "Missing required parameter 'header' when calling System->DeleteSystemConfigAuditingRequestHeadersHeader");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -3859,7 +3859,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysConfigAuditingRequestHeadersHeader", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemConfigAuditingRequestHeadersHeader", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -3874,11 +3874,11 @@ namespace Vault.Api
         /// <param name="header"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> DeleteSysConfigAuditingRequestHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteSystemConfigAuditingRequestHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'header' is set
             if (header == null)
-                throw new VaultApiException(400, "Missing required parameter 'header' when calling System->DeleteSysConfigAuditingRequestHeadersHeader");
+                throw new VaultApiException(400, "Missing required parameter 'header' when calling System->DeleteSystemConfigAuditingRequestHeadersHeader");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -3903,7 +3903,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysConfigAuditingRequestHeadersHeader", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemConfigAuditingRequestHeadersHeader", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -3916,7 +3916,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteSysConfigCors()
+        public ApiResponse<Object> DeleteSystemConfigCors()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -3939,7 +3939,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysConfigCors", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemConfigCors", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -3953,7 +3953,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> DeleteSysConfigCorsAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteSystemConfigCorsAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -3977,7 +3977,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysConfigCors", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemConfigCors", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -3991,11 +3991,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="header">The name of the header.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteSysConfigUiHeadersHeader(string header)
+        public ApiResponse<Object> DeleteSystemConfigUiHeadersHeader(string header)
         {
             // verify the required parameter 'header' is set
             if (header == null)
-                throw new VaultApiException(400, "Missing required parameter 'header' when calling System->DeleteSysConfigUiHeadersHeader");
+                throw new VaultApiException(400, "Missing required parameter 'header' when calling System->DeleteSystemConfigUiHeadersHeader");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4019,7 +4019,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysConfigUiHeadersHeader", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemConfigUiHeadersHeader", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -4034,11 +4034,11 @@ namespace Vault.Api
         /// <param name="header">The name of the header.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> DeleteSysConfigUiHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteSystemConfigUiHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'header' is set
             if (header == null)
-                throw new VaultApiException(400, "Missing required parameter 'header' when calling System->DeleteSysConfigUiHeadersHeader");
+                throw new VaultApiException(400, "Missing required parameter 'header' when calling System->DeleteSystemConfigUiHeadersHeader");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4063,7 +4063,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysConfigUiHeadersHeader", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemConfigUiHeadersHeader", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -4076,7 +4076,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteSysGenerateRoot()
+        public ApiResponse<Object> DeleteSystemGenerateRoot()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4099,7 +4099,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysGenerateRoot", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemGenerateRoot", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -4113,7 +4113,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> DeleteSysGenerateRootAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteSystemGenerateRootAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4137,7 +4137,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysGenerateRoot", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemGenerateRoot", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -4150,7 +4150,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteSysGenerateRootAttempt()
+        public ApiResponse<Object> DeleteSystemGenerateRootAttempt()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4173,7 +4173,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysGenerateRootAttempt", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemGenerateRootAttempt", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -4187,7 +4187,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> DeleteSysGenerateRootAttemptAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteSystemGenerateRootAttemptAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4211,7 +4211,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysGenerateRootAttempt", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemGenerateRootAttempt", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -4224,7 +4224,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteSysLoggers()
+        public ApiResponse<Object> DeleteSystemLoggers()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4247,7 +4247,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysLoggers", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemLoggers", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -4261,7 +4261,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> DeleteSysLoggersAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteSystemLoggersAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4285,7 +4285,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysLoggers", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemLoggers", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -4299,11 +4299,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the logger to be modified.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteSysLoggersName(string name)
+        public ApiResponse<Object> DeleteSystemLoggersName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSysLoggersName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSystemLoggersName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4327,7 +4327,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysLoggersName", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemLoggersName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -4342,11 +4342,11 @@ namespace Vault.Api
         /// <param name="name">The name of the logger to be modified.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> DeleteSysLoggersNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteSystemLoggersNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSysLoggersName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSystemLoggersName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4371,7 +4371,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysLoggersName", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemLoggersName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -4385,11 +4385,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteSysMountsPath(string path)
+        public ApiResponse<Object> DeleteSystemMountsPath(string path)
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->DeleteSysMountsPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->DeleteSystemMountsPath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4413,7 +4413,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysMountsPath", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemMountsPath", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -4428,11 +4428,11 @@ namespace Vault.Api
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> DeleteSysMountsPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteSystemMountsPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->DeleteSysMountsPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->DeleteSystemMountsPath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4457,7 +4457,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysMountsPath", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemMountsPath", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -4471,11 +4471,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the plugin</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteSysPluginsCatalogName(string name)
+        public ApiResponse<Object> DeleteSystemPluginsCatalogName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPluginsCatalogName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSystemPluginsCatalogName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4499,7 +4499,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysPluginsCatalogName", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemPluginsCatalogName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -4514,11 +4514,11 @@ namespace Vault.Api
         /// <param name="name">The name of the plugin</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> DeleteSysPluginsCatalogNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteSystemPluginsCatalogNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPluginsCatalogName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSystemPluginsCatalogName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4543,7 +4543,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysPluginsCatalogName", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemPluginsCatalogName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -4558,15 +4558,15 @@ namespace Vault.Api
         /// <param name="name">The name of the plugin</param>
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteSysPluginsCatalogTypeName(string name, string type)
+        public ApiResponse<Object> DeleteSystemPluginsCatalogTypeName(string name, string type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPluginsCatalogTypeName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSystemPluginsCatalogTypeName");
 
             // verify the required parameter 'type' is set
             if (type == null)
-                throw new VaultApiException(400, "Missing required parameter 'type' when calling System->DeleteSysPluginsCatalogTypeName");
+                throw new VaultApiException(400, "Missing required parameter 'type' when calling System->DeleteSystemPluginsCatalogTypeName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4591,7 +4591,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysPluginsCatalogTypeName", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemPluginsCatalogTypeName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -4607,15 +4607,15 @@ namespace Vault.Api
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> DeleteSysPluginsCatalogTypeNameAsync(string name, string type, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteSystemPluginsCatalogTypeNameAsync(string name, string type, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPluginsCatalogTypeName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSystemPluginsCatalogTypeName");
 
             // verify the required parameter 'type' is set
             if (type == null)
-                throw new VaultApiException(400, "Missing required parameter 'type' when calling System->DeleteSysPluginsCatalogTypeName");
+                throw new VaultApiException(400, "Missing required parameter 'type' when calling System->DeleteSystemPluginsCatalogTypeName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4641,7 +4641,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysPluginsCatalogTypeName", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemPluginsCatalogTypeName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -4655,11 +4655,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteSysPoliciesAclName(string name)
+        public ApiResponse<Object> DeleteSystemPoliciesAclName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPoliciesAclName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSystemPoliciesAclName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4683,7 +4683,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysPoliciesAclName", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemPoliciesAclName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -4698,11 +4698,11 @@ namespace Vault.Api
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> DeleteSysPoliciesAclNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteSystemPoliciesAclNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPoliciesAclName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSystemPoliciesAclName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4727,7 +4727,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysPoliciesAclName", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemPoliciesAclName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -4741,11 +4741,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the password policy.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteSysPoliciesPasswordName(string name)
+        public ApiResponse<Object> DeleteSystemPoliciesPasswordName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPoliciesPasswordName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSystemPoliciesPasswordName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4769,7 +4769,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysPoliciesPasswordName", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemPoliciesPasswordName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -4784,11 +4784,11 @@ namespace Vault.Api
         /// <param name="name">The name of the password policy.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> DeleteSysPoliciesPasswordNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteSystemPoliciesPasswordNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPoliciesPasswordName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSystemPoliciesPasswordName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4813,7 +4813,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysPoliciesPasswordName", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemPoliciesPasswordName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -4827,11 +4827,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteSysPolicyName(string name)
+        public ApiResponse<Object> DeleteSystemPolicyName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPolicyName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSystemPolicyName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4855,7 +4855,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysPolicyName", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemPolicyName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -4870,11 +4870,11 @@ namespace Vault.Api
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> DeleteSysPolicyNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteSystemPolicyNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSysPolicyName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSystemPolicyName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4899,7 +4899,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysPolicyName", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemPolicyName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -4913,11 +4913,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the quota rule.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteSysQuotasRateLimitName(string name)
+        public ApiResponse<Object> DeleteSystemQuotasRateLimitName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSysQuotasRateLimitName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSystemQuotasRateLimitName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4941,7 +4941,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysQuotasRateLimitName", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemQuotasRateLimitName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -4956,11 +4956,11 @@ namespace Vault.Api
         /// <param name="name">Name of the quota rule.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> DeleteSysQuotasRateLimitNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteSystemQuotasRateLimitNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSysQuotasRateLimitName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->DeleteSystemQuotasRateLimitName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4985,7 +4985,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysQuotasRateLimitName", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemQuotasRateLimitName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -4998,7 +4998,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteSysRaw()
+        public ApiResponse<Object> DeleteSystemRaw()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -5021,7 +5021,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysRaw", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemRaw", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -5035,7 +5035,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> DeleteSysRawAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteSystemRawAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -5059,7 +5059,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysRaw", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemRaw", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -5073,11 +5073,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteSysRawPath(string path)
+        public ApiResponse<Object> DeleteSystemRawPath(string path)
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->DeleteSysRawPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->DeleteSystemRawPath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -5101,7 +5101,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysRawPath", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemRawPath", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -5116,11 +5116,11 @@ namespace Vault.Api
         /// <param name="path"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> DeleteSysRawPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteSystemRawPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->DeleteSysRawPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->DeleteSystemRawPath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -5145,7 +5145,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysRawPath", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemRawPath", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -5158,7 +5158,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteSysRekeyBackup()
+        public ApiResponse<Object> DeleteSystemRekeyBackup()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -5181,7 +5181,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysRekeyBackup", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemRekeyBackup", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -5195,7 +5195,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> DeleteSysRekeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteSystemRekeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -5219,7 +5219,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysRekeyBackup", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemRekeyBackup", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -5232,7 +5232,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteSysRekeyInit()
+        public ApiResponse<Object> DeleteSystemRekeyInit()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -5255,7 +5255,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysRekeyInit", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemRekeyInit", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -5269,7 +5269,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> DeleteSysRekeyInitAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteSystemRekeyInitAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -5293,7 +5293,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysRekeyInit", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemRekeyInit", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -5306,7 +5306,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteSysRekeyRecoveryKeyBackup()
+        public ApiResponse<Object> DeleteSystemRekeyRecoveryKeyBackup()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -5329,7 +5329,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysRekeyRecoveryKeyBackup", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemRekeyRecoveryKeyBackup", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -5343,7 +5343,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> DeleteSysRekeyRecoveryKeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteSystemRekeyRecoveryKeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -5367,7 +5367,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysRekeyRecoveryKeyBackup", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemRekeyRecoveryKeyBackup", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -5380,7 +5380,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteSysRekeyVerify()
+        public ApiResponse<Object> DeleteSystemRekeyVerify()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -5403,7 +5403,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysRekeyVerify", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemRekeyVerify", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -5417,7 +5417,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> DeleteSysRekeyVerifyAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> DeleteSystemRekeyVerifyAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -5441,635 +5441,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSysRekeyVerify", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// List the enabled audit devices. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysAudit()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/audit", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysAudit", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// List the enabled audit devices. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysAuditAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/audit", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysAudit", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// List the currently enabled credential backends. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysAuth()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/auth", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysAuth", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// List the currently enabled credential backends. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysAuthAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/auth", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysAuth", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Read the configuration of the auth engine at the given path. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysAuthPath(string path)
-        {
-            // verify the required parameter 'path' is set
-            if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->GetSysAuthPath");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/auth/{path}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysAuthPath", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Read the configuration of the auth engine at the given path. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysAuthPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'path' is set
-            if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->GetSysAuthPath");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/auth/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysAuthPath", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Reads the given auth path&#39;s configuration. This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">Tune the configuration parameters for an auth path.</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysAuthPathTune(string path)
-        {
-            // verify the required parameter 'path' is set
-            if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->GetSysAuthPathTune");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/auth/{path}/tune", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysAuthPathTune", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Reads the given auth path&#39;s configuration. This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">Tune the configuration parameters for an auth path.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysAuthPathTuneAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'path' is set
-            if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->GetSysAuthPathTune");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/auth/{path}/tune", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysAuthPathTune", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// List the request headers that are configured to be audited. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysConfigAuditingRequestHeaders()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/config/auditing/request-headers", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysConfigAuditingRequestHeaders", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// List the request headers that are configured to be audited. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysConfigAuditingRequestHeadersAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/config/auditing/request-headers", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysConfigAuditingRequestHeaders", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// List the information for the given request header. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="header"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysConfigAuditingRequestHeadersHeader(string header)
-        {
-            // verify the required parameter 'header' is set
-            if (header == null)
-                throw new VaultApiException(400, "Missing required parameter 'header' when calling System->GetSysConfigAuditingRequestHeadersHeader");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/config/auditing/request-headers/{header}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysConfigAuditingRequestHeadersHeader", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// List the information for the given request header. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="header"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysConfigAuditingRequestHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'header' is set
-            if (header == null)
-                throw new VaultApiException(400, "Missing required parameter 'header' when calling System->GetSysConfigAuditingRequestHeadersHeader");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/config/auditing/request-headers/{header}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysConfigAuditingRequestHeadersHeader", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Return the current CORS settings. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysConfigCors()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/config/cors", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysConfigCors", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Return the current CORS settings. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysConfigCorsAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/config/cors", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysConfigCors", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Return a sanitized version of the Vault server configuration. The sanitized output strips configuration values in the storage, HA storage, and seals stanzas, which may contain sensitive values such as API tokens. It also removes any token or secret fields in other stanzas, such as the circonus_api_token from telemetry.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysConfigStateSanitized()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/config/state/sanitized", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysConfigStateSanitized", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Return a sanitized version of the Vault server configuration. The sanitized output strips configuration values in the storage, HA storage, and seals stanzas, which may contain sensitive values such as API tokens. It also removes any token or secret fields in other stanzas, such as the circonus_api_token from telemetry.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysConfigStateSanitizedAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/config/state/sanitized", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysConfigStateSanitized", response);
+                Exception _exception = this.ExceptionFactory("DeleteSystemRekeyVerify", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -6083,11 +5455,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysConfigUiHeaders(string list)
+        public ApiResponse<Object> ListSystemConfigUiHeaders(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->GetSysConfigUiHeaders");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListSystemConfigUiHeaders");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -6111,7 +5483,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysConfigUiHeaders", response);
+                Exception _exception = this.ExceptionFactory("ListSystemConfigUiHeaders", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -6126,11 +5498,11 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysConfigUiHeadersAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ListSystemConfigUiHeadersAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->GetSysConfigUiHeaders");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListSystemConfigUiHeaders");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -6155,1881 +5527,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysConfigUiHeaders", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Return the given UI header&#39;s configuration 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="header">The name of the header.</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysConfigUiHeadersHeader(string header)
-        {
-            // verify the required parameter 'header' is set
-            if (header == null)
-                throw new VaultApiException(400, "Missing required parameter 'header' when calling System->GetSysConfigUiHeadersHeader");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/config/ui/headers/{header}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysConfigUiHeadersHeader", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Return the given UI header&#39;s configuration 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="header">The name of the header.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysConfigUiHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'header' is set
-            if (header == null)
-                throw new VaultApiException(400, "Missing required parameter 'header' when calling System->GetSysConfigUiHeadersHeader");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/config/ui/headers/{header}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysConfigUiHeadersHeader", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Read the configuration and progress of the current root generation attempt. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysGenerateRoot()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/generate-root", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysGenerateRoot", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Read the configuration and progress of the current root generation attempt. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysGenerateRootAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/generate-root", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysGenerateRoot", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Read the configuration and progress of the current root generation attempt. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysGenerateRootAttempt()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/generate-root/attempt", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysGenerateRootAttempt", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Read the configuration and progress of the current root generation attempt. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysGenerateRootAttemptAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/generate-root/attempt", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysGenerateRootAttempt", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Check the HA status of a Vault cluster 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysHaStatus()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/ha-status", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysHaStatus", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Check the HA status of a Vault cluster 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysHaStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/ha-status", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysHaStatus", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Returns the health status of Vault. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysHealth()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/health", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysHealth", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Returns the health status of Vault. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysHealthAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/health", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysHealth", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Information about the host instance that this Vault server is running on. Information about the host instance that this Vault server is running on.   The information that gets collected includes host hardware information, and CPU,   disk, and memory utilization
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysHostInfo()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/host-info", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysHostInfo", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Information about the host instance that this Vault server is running on. Information about the host instance that this Vault server is running on.   The information that gets collected includes host hardware information, and CPU,   disk, and memory utilization
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysHostInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/host-info", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysHostInfo", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// reports in-flight requests This path responds to the following HTTP methods.   GET /    Returns a map of in-flight requests.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysInFlightReq()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/in-flight-req", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInFlightReq", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// reports in-flight requests This path responds to the following HTTP methods.   GET /    Returns a map of in-flight requests.
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysInFlightReqAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/in-flight-req", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInFlightReq", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Returns the initialization status of Vault. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysInit()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/init", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInit", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Returns the initialization status of Vault. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysInitAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/init", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInit", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Report the client count metrics, for this namespace and all child namespaces. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysInternalCountersActivity()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/internal/counters/activity", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalCountersActivity", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Report the client count metrics, for this namespace and all child namespaces. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysInternalCountersActivityAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/activity", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalCountersActivity", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Report the client count metrics, for this namespace and all child namespaces. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysInternalCountersActivityExport()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/internal/counters/activity/export", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalCountersActivityExport", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Report the client count metrics, for this namespace and all child namespaces. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysInternalCountersActivityExportAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/activity/export", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalCountersActivityExport", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Report the number of clients for this month, for this namespace and all child namespaces. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysInternalCountersActivityMonthly()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/internal/counters/activity/monthly", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalCountersActivityMonthly", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Report the number of clients for this month, for this namespace and all child namespaces. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysInternalCountersActivityMonthlyAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/activity/monthly", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalCountersActivityMonthly", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Read the client count tracking configuration. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysInternalCountersConfig()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/internal/counters/config", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalCountersConfig", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Read the client count tracking configuration. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysInternalCountersConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/config", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalCountersConfig", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysInternalCountersEntities()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/internal/counters/entities", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalCountersEntities", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysInternalCountersEntitiesAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/entities", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalCountersEntities", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysInternalCountersRequests()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/internal/counters/requests", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalCountersRequests", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysInternalCountersRequestsAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/requests", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalCountersRequests", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysInternalCountersTokens()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/internal/counters/tokens", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalCountersTokens", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysInternalCountersTokensAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/tokens", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalCountersTokens", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Generate an OpenAPI 3 document of all mounted paths. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysInternalSpecsOpenapi()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/internal/specs/openapi", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalSpecsOpenapi", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Generate an OpenAPI 3 document of all mounted paths. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysInternalSpecsOpenapiAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/specs/openapi", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalSpecsOpenapi", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Lists enabled feature flags. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysInternalUiFeatureFlags()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/internal/ui/feature-flags", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalUiFeatureFlags", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Lists enabled feature flags. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysInternalUiFeatureFlagsAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/feature-flags", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalUiFeatureFlags", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Lists all enabled and visible auth and secrets mounts. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysInternalUiMounts()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/internal/ui/mounts", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalUiMounts", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Lists all enabled and visible auth and secrets mounts. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysInternalUiMountsAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/mounts", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalUiMounts", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Return information about the given mount. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path of the mount.</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysInternalUiMountsPath(string path)
-        {
-            // verify the required parameter 'path' is set
-            if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->GetSysInternalUiMountsPath");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/internal/ui/mounts/{path}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalUiMountsPath", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Return information about the given mount. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path of the mount.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysInternalUiMountsPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'path' is set
-            if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->GetSysInternalUiMountsPath");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/mounts/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalUiMountsPath", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysInternalUiNamespaces()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/internal/ui/namespaces", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalUiNamespaces", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysInternalUiNamespacesAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/namespaces", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalUiNamespaces", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysInternalUiResultantAcl()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/internal/ui/resultant-acl", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalUiResultantAcl", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Backwards compatibility is not guaranteed for this API 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysInternalUiResultantAclAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/resultant-acl", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysInternalUiResultantAcl", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Provides information about the backend encryption key. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysKeyStatus()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/key-status", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysKeyStatus", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Provides information about the backend encryption key. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysKeyStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/key-status", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysKeyStatus", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Returns the high availability status and current leader instance of Vault. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysLeader()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/leader", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysLeader", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Returns the high availability status and current leader instance of Vault. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysLeaderAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/leader", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysLeader", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// List leases associated with this Vault cluster 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysLeases()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/leases", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysLeases", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// List leases associated with this Vault cluster 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysLeasesAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/leases", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysLeases", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Count of leases associated with this Vault cluster 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysLeasesCount()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/leases/count", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysLeasesCount", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Count of leases associated with this Vault cluster 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysLeasesCountAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/leases/count", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysLeasesCount", response);
+                Exception _exception = this.ExceptionFactory("ListSystemConfigUiHeaders", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -8043,11 +5541,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysLeasesLookup(string list)
+        public ApiResponse<Object> ListSystemLeasesLookup(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->GetSysLeasesLookup");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListSystemLeasesLookup");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8071,7 +5569,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysLeasesLookup", response);
+                Exception _exception = this.ExceptionFactory("ListSystemLeasesLookup", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -8086,11 +5584,11 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysLeasesLookupAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ListSystemLeasesLookupAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->GetSysLeasesLookup");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListSystemLeasesLookup");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8115,7 +5613,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysLeasesLookup", response);
+                Exception _exception = this.ExceptionFactory("ListSystemLeasesLookup", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -8130,15 +5628,15 @@ namespace Vault.Api
         /// <param name="prefix">The path to list leases under. Example: \&quot;aws/creds/deploy\&quot;</param>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysLeasesLookupPrefix(string prefix, string list)
+        public ApiResponse<Object> ListSystemLeasesLookupPrefix(string prefix, string list)
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
-                throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->GetSysLeasesLookupPrefix");
+                throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->ListSystemLeasesLookupPrefix");
 
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->GetSysLeasesLookupPrefix");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListSystemLeasesLookupPrefix");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8163,7 +5661,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysLeasesLookupPrefix", response);
+                Exception _exception = this.ExceptionFactory("ListSystemLeasesLookupPrefix", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -8179,15 +5677,15 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysLeasesLookupPrefixAsync(string prefix, string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ListSystemLeasesLookupPrefixAsync(string prefix, string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
-                throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->GetSysLeasesLookupPrefix");
+                throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->ListSystemLeasesLookupPrefix");
 
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->GetSysLeasesLookupPrefix");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListSystemLeasesLookupPrefix");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8213,7 +5711,2951 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysLeasesLookupPrefix", response);
+                Exception _exception = this.ExceptionFactory("ListSystemLeasesLookupPrefix", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// List the plugins in the catalog. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
+        /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ListSystemPluginsCatalogType(string type, string list)
+        {
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new VaultApiException(400, "Missing required parameter 'type' when calling System->ListSystemPluginsCatalogType");
+
+            // verify the required parameter 'list' is set
+            if (list == null)
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListSystemPluginsCatalogType");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/plugins/catalog/{type}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListSystemPluginsCatalogType", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// List the plugins in the catalog. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
+        /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ListSystemPluginsCatalogTypeAsync(string type, string list, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new VaultApiException(400, "Missing required parameter 'type' when calling System->ListSystemPluginsCatalogType");
+
+            // verify the required parameter 'list' is set
+            if (list == null)
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListSystemPluginsCatalogType");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog/{type}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListSystemPluginsCatalogType", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// List the configured access control policies. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ListSystemPoliciesAcl(string list)
+        {
+            // verify the required parameter 'list' is set
+            if (list == null)
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListSystemPoliciesAcl");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/policies/acl", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListSystemPoliciesAcl", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// List the configured access control policies. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ListSystemPoliciesAclAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'list' is set
+            if (list == null)
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListSystemPoliciesAcl");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/acl", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListSystemPoliciesAcl", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// List the existing password policies. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ListSystemPoliciesPassword(string list)
+        {
+            // verify the required parameter 'list' is set
+            if (list == null)
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListSystemPoliciesPassword");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/policies/password", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListSystemPoliciesPassword", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// List the existing password policies. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ListSystemPoliciesPasswordAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'list' is set
+            if (list == null)
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListSystemPoliciesPassword");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/password", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListSystemPoliciesPassword", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ListSystemQuotasRateLimit(string list)
+        {
+            // verify the required parameter 'list' is set
+            if (list == null)
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListSystemQuotasRateLimit");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/quotas/rate-limit", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListSystemQuotasRateLimit", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ListSystemQuotasRateLimitAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'list' is set
+            if (list == null)
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListSystemQuotasRateLimit");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/quotas/rate-limit", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListSystemQuotasRateLimit", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Returns map of historical version change entries 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ListSystemVersionHistory(string list)
+        {
+            // verify the required parameter 'list' is set
+            if (list == null)
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListSystemVersionHistory");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/version-history/", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListSystemVersionHistory", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Returns map of historical version change entries 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ListSystemVersionHistoryAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'list' is set
+            if (list == null)
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListSystemVersionHistory");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/version-history/", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListSystemVersionHistory", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// List the enabled audit devices. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemAudit()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/audit", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemAudit", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// List the enabled audit devices. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemAuditAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/audit", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemAudit", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// List the currently enabled credential backends. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemAuth()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/auth", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemAuth", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// List the currently enabled credential backends. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemAuthAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/auth", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemAuth", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Read the configuration of the auth engine at the given path. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemAuthPath(string path)
+        {
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->ReadSystemAuthPath");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/auth/{path}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemAuthPath", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Read the configuration of the auth engine at the given path. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemAuthPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->ReadSystemAuthPath");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/auth/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemAuthPath", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Reads the given auth path&#39;s configuration. This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Tune the configuration parameters for an auth path.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemAuthPathTune(string path)
+        {
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->ReadSystemAuthPathTune");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/auth/{path}/tune", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemAuthPathTune", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Reads the given auth path&#39;s configuration. This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">Tune the configuration parameters for an auth path.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemAuthPathTuneAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->ReadSystemAuthPathTune");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/auth/{path}/tune", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemAuthPathTune", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// List the request headers that are configured to be audited. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemConfigAuditingRequestHeaders()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/config/auditing/request-headers", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemConfigAuditingRequestHeaders", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// List the request headers that are configured to be audited. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemConfigAuditingRequestHeadersAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/config/auditing/request-headers", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemConfigAuditingRequestHeaders", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// List the information for the given request header. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="header"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemConfigAuditingRequestHeadersHeader(string header)
+        {
+            // verify the required parameter 'header' is set
+            if (header == null)
+                throw new VaultApiException(400, "Missing required parameter 'header' when calling System->ReadSystemConfigAuditingRequestHeadersHeader");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/config/auditing/request-headers/{header}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemConfigAuditingRequestHeadersHeader", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// List the information for the given request header. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="header"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemConfigAuditingRequestHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'header' is set
+            if (header == null)
+                throw new VaultApiException(400, "Missing required parameter 'header' when calling System->ReadSystemConfigAuditingRequestHeadersHeader");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/config/auditing/request-headers/{header}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemConfigAuditingRequestHeadersHeader", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Return the current CORS settings. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemConfigCors()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/config/cors", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemConfigCors", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Return the current CORS settings. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemConfigCorsAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/config/cors", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemConfigCors", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Return a sanitized version of the Vault server configuration. The sanitized output strips configuration values in the storage, HA storage, and seals stanzas, which may contain sensitive values such as API tokens. It also removes any token or secret fields in other stanzas, such as the circonus_api_token from telemetry.
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemConfigStateSanitized()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/config/state/sanitized", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemConfigStateSanitized", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Return a sanitized version of the Vault server configuration. The sanitized output strips configuration values in the storage, HA storage, and seals stanzas, which may contain sensitive values such as API tokens. It also removes any token or secret fields in other stanzas, such as the circonus_api_token from telemetry.
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemConfigStateSanitizedAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/config/state/sanitized", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemConfigStateSanitized", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Return the given UI header&#39;s configuration 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="header">The name of the header.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemConfigUiHeadersHeader(string header)
+        {
+            // verify the required parameter 'header' is set
+            if (header == null)
+                throw new VaultApiException(400, "Missing required parameter 'header' when calling System->ReadSystemConfigUiHeadersHeader");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/config/ui/headers/{header}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemConfigUiHeadersHeader", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Return the given UI header&#39;s configuration 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="header">The name of the header.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemConfigUiHeadersHeaderAsync(string header, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'header' is set
+            if (header == null)
+                throw new VaultApiException(400, "Missing required parameter 'header' when calling System->ReadSystemConfigUiHeadersHeader");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("header", ClientUtils.ParameterToString(header)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/config/ui/headers/{header}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemConfigUiHeadersHeader", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Read the configuration and progress of the current root generation attempt. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemGenerateRoot()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/generate-root", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemGenerateRoot", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Read the configuration and progress of the current root generation attempt. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemGenerateRootAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/generate-root", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemGenerateRoot", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Read the configuration and progress of the current root generation attempt. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemGenerateRootAttempt()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/generate-root/attempt", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemGenerateRootAttempt", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Read the configuration and progress of the current root generation attempt. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemGenerateRootAttemptAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/generate-root/attempt", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemGenerateRootAttempt", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Check the HA status of a Vault cluster 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemHaStatus()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/ha-status", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemHaStatus", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Check the HA status of a Vault cluster 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemHaStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/ha-status", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemHaStatus", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Returns the health status of Vault. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemHealth()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/health", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemHealth", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Returns the health status of Vault. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemHealthAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/health", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemHealth", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Information about the host instance that this Vault server is running on. Information about the host instance that this Vault server is running on.   The information that gets collected includes host hardware information, and CPU,   disk, and memory utilization
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemHostInfo()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/host-info", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemHostInfo", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Information about the host instance that this Vault server is running on. Information about the host instance that this Vault server is running on.   The information that gets collected includes host hardware information, and CPU,   disk, and memory utilization
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemHostInfoAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/host-info", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemHostInfo", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// reports in-flight requests This path responds to the following HTTP methods.   GET /    Returns a map of in-flight requests.
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemInFlightReq()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/in-flight-req", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInFlightReq", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// reports in-flight requests This path responds to the following HTTP methods.   GET /    Returns a map of in-flight requests.
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemInFlightReqAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/in-flight-req", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInFlightReq", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Returns the initialization status of Vault. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemInit()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/init", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInit", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Returns the initialization status of Vault. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemInitAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/init", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInit", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Report the client count metrics, for this namespace and all child namespaces. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemInternalCountersActivity()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/internal/counters/activity", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersActivity", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Report the client count metrics, for this namespace and all child namespaces. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemInternalCountersActivityAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/activity", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersActivity", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Report the client count metrics, for this namespace and all child namespaces. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemInternalCountersActivityExport()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/internal/counters/activity/export", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersActivityExport", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Report the client count metrics, for this namespace and all child namespaces. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemInternalCountersActivityExportAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/activity/export", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersActivityExport", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Report the number of clients for this month, for this namespace and all child namespaces. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemInternalCountersActivityMonthly()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/internal/counters/activity/monthly", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersActivityMonthly", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Report the number of clients for this month, for this namespace and all child namespaces. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemInternalCountersActivityMonthlyAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/activity/monthly", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersActivityMonthly", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Read the client count tracking configuration. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemInternalCountersConfig()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/internal/counters/config", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersConfig", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Read the client count tracking configuration. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemInternalCountersConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/config", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersConfig", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Backwards compatibility is not guaranteed for this API 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemInternalCountersEntities()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/internal/counters/entities", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersEntities", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Backwards compatibility is not guaranteed for this API 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemInternalCountersEntitiesAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/entities", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersEntities", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Backwards compatibility is not guaranteed for this API 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemInternalCountersRequests()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/internal/counters/requests", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersRequests", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Backwards compatibility is not guaranteed for this API 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemInternalCountersRequestsAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/requests", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersRequests", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Backwards compatibility is not guaranteed for this API 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemInternalCountersTokens()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/internal/counters/tokens", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersTokens", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Backwards compatibility is not guaranteed for this API 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemInternalCountersTokensAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/counters/tokens", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersTokens", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Generate an OpenAPI 3 document of all mounted paths. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemInternalSpecsOpenapi()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/internal/specs/openapi", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalSpecsOpenapi", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Generate an OpenAPI 3 document of all mounted paths. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemInternalSpecsOpenapiAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/specs/openapi", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalSpecsOpenapi", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Lists enabled feature flags. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemInternalUiFeatureFlags()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/internal/ui/feature-flags", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalUiFeatureFlags", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Lists enabled feature flags. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemInternalUiFeatureFlagsAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/feature-flags", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalUiFeatureFlags", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Lists all enabled and visible auth and secrets mounts. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemInternalUiMounts()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/internal/ui/mounts", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalUiMounts", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Lists all enabled and visible auth and secrets mounts. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemInternalUiMountsAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/mounts", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalUiMounts", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Return information about the given mount. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">The path of the mount.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemInternalUiMountsPath(string path)
+        {
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->ReadSystemInternalUiMountsPath");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/internal/ui/mounts/{path}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalUiMountsPath", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Return information about the given mount. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="path">The path of the mount.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemInternalUiMountsPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'path' is set
+            if (path == null)
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->ReadSystemInternalUiMountsPath");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("path", ClientUtils.ParameterToString(path)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/mounts/{path}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalUiMountsPath", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Backwards compatibility is not guaranteed for this API 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemInternalUiNamespaces()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/internal/ui/namespaces", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalUiNamespaces", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Backwards compatibility is not guaranteed for this API 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemInternalUiNamespacesAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/namespaces", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalUiNamespaces", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Backwards compatibility is not guaranteed for this API 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemInternalUiResultantAcl()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/internal/ui/resultant-acl", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalUiResultantAcl", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Backwards compatibility is not guaranteed for this API 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemInternalUiResultantAclAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/internal/ui/resultant-acl", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemInternalUiResultantAcl", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Provides information about the backend encryption key. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemKeyStatus()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/key-status", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemKeyStatus", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Provides information about the backend encryption key. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemKeyStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/key-status", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemKeyStatus", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Returns the high availability status and current leader instance of Vault. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemLeader()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/leader", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemLeader", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Returns the high availability status and current leader instance of Vault. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemLeaderAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/leader", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemLeader", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// List leases associated with this Vault cluster 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemLeases()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/leases", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemLeases", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// List leases associated with this Vault cluster 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemLeasesAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/leases", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemLeases", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Count of leases associated with this Vault cluster 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ReadSystemLeasesCount()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/leases/count", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemLeasesCount", response);
+                if (_exception != null) throw _exception;
+            }
+
+            return response;
+        }
+
+
+        /// <summary>
+        /// Count of leases associated with this Vault cluster 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<ApiResponse<Object>> ReadSystemLeasesCountAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/leases/count", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadSystemLeasesCount", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -8227,7 +8669,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysMetrics(string format = default(string))
+        public ApiResponse<Object> ReadSystemMetrics(string format = default(string))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8254,7 +8696,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysMetrics", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemMetrics", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -8269,7 +8711,7 @@ namespace Vault.Api
         /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysMetricsAsync(string format = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemMetricsAsync(string format = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8297,7 +8739,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysMetrics", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemMetrics", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -8312,7 +8754,7 @@ namespace Vault.Api
         /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
         /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysMonitor(string logFormat = default(string), string logLevel = default(string))
+        public ApiResponse<Object> ReadSystemMonitor(string logFormat = default(string), string logLevel = default(string))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8343,7 +8785,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysMonitor", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemMonitor", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -8359,7 +8801,7 @@ namespace Vault.Api
         /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysMonitorAsync(string logFormat = default(string), string logLevel = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemMonitorAsync(string logFormat = default(string), string logLevel = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8391,7 +8833,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysMonitor", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemMonitor", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -8404,7 +8846,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysMounts()
+        public ApiResponse<Object> ReadSystemMounts()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8427,7 +8869,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysMounts", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemMounts", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -8441,7 +8883,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysMountsAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemMountsAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8465,7 +8907,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysMounts", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemMounts", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -8479,11 +8921,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysMountsPath(string path)
+        public ApiResponse<Object> ReadSystemMountsPath(string path)
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->GetSysMountsPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->ReadSystemMountsPath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8507,7 +8949,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysMountsPath", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemMountsPath", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -8522,11 +8964,11 @@ namespace Vault.Api
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysMountsPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemMountsPathAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->GetSysMountsPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->ReadSystemMountsPath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8551,7 +8993,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysMountsPath", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemMountsPath", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -8565,11 +9007,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysMountsPathTune(string path)
+        public ApiResponse<Object> ReadSystemMountsPathTune(string path)
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->GetSysMountsPathTune");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->ReadSystemMountsPathTune");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8593,7 +9035,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysMountsPathTune", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemMountsPathTune", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -8608,11 +9050,11 @@ namespace Vault.Api
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysMountsPathTuneAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemMountsPathTuneAsync(string path, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->GetSysMountsPathTune");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->ReadSystemMountsPathTune");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8637,7 +9079,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysMountsPathTune", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemMountsPathTune", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -8650,7 +9092,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysPluginsCatalog()
+        public ApiResponse<Object> ReadSystemPluginsCatalog()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8673,7 +9115,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPluginsCatalog", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPluginsCatalog", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -8687,7 +9129,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysPluginsCatalogAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemPluginsCatalogAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8711,7 +9153,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPluginsCatalog", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPluginsCatalog", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -8725,11 +9167,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the plugin</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysPluginsCatalogName(string name)
+        public ApiResponse<Object> ReadSystemPluginsCatalogName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->GetSysPluginsCatalogName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadSystemPluginsCatalogName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8753,7 +9195,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPluginsCatalogName", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPluginsCatalogName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -8768,11 +9210,11 @@ namespace Vault.Api
         /// <param name="name">The name of the plugin</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysPluginsCatalogNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemPluginsCatalogNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->GetSysPluginsCatalogName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadSystemPluginsCatalogName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8797,105 +9239,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPluginsCatalogName", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// List the plugins in the catalog. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysPluginsCatalogType(string type, string list)
-        {
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new VaultApiException(400, "Missing required parameter 'type' when calling System->GetSysPluginsCatalogType");
-
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->GetSysPluginsCatalogType");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/plugins/catalog/{type}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysPluginsCatalogType", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// List the plugins in the catalog. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysPluginsCatalogTypeAsync(string type, string list, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new VaultApiException(400, "Missing required parameter 'type' when calling System->GetSysPluginsCatalogType");
-
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->GetSysPluginsCatalogType");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog/{type}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysPluginsCatalogType", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPluginsCatalogName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -8910,15 +9254,15 @@ namespace Vault.Api
         /// <param name="name">The name of the plugin</param>
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysPluginsCatalogTypeName(string name, string type)
+        public ApiResponse<Object> ReadSystemPluginsCatalogTypeName(string name, string type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->GetSysPluginsCatalogTypeName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadSystemPluginsCatalogTypeName");
 
             // verify the required parameter 'type' is set
             if (type == null)
-                throw new VaultApiException(400, "Missing required parameter 'type' when calling System->GetSysPluginsCatalogTypeName");
+                throw new VaultApiException(400, "Missing required parameter 'type' when calling System->ReadSystemPluginsCatalogTypeName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8943,7 +9287,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPluginsCatalogTypeName", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPluginsCatalogTypeName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -8959,15 +9303,15 @@ namespace Vault.Api
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysPluginsCatalogTypeNameAsync(string name, string type, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemPluginsCatalogTypeNameAsync(string name, string type, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->GetSysPluginsCatalogTypeName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadSystemPluginsCatalogTypeName");
 
             // verify the required parameter 'type' is set
             if (type == null)
-                throw new VaultApiException(400, "Missing required parameter 'type' when calling System->GetSysPluginsCatalogTypeName");
+                throw new VaultApiException(400, "Missing required parameter 'type' when calling System->ReadSystemPluginsCatalogTypeName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8993,93 +9337,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPluginsCatalogTypeName", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// List the configured access control policies. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysPoliciesAcl(string list)
-        {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->GetSysPoliciesAcl");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/policies/acl", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysPoliciesAcl", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// List the configured access control policies. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysPoliciesAclAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->GetSysPoliciesAcl");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/acl", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysPoliciesAcl", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPluginsCatalogTypeName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -9093,11 +9351,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysPoliciesAclName(string name)
+        public ApiResponse<Object> ReadSystemPoliciesAclName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->GetSysPoliciesAclName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadSystemPoliciesAclName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9121,7 +9379,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPoliciesAclName", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPoliciesAclName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -9136,11 +9394,11 @@ namespace Vault.Api
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysPoliciesAclNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemPoliciesAclNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->GetSysPoliciesAclName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadSystemPoliciesAclName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9165,93 +9423,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPoliciesAclName", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// List the existing password policies. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysPoliciesPassword(string list)
-        {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->GetSysPoliciesPassword");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/policies/password", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysPoliciesPassword", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// List the existing password policies. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysPoliciesPasswordAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->GetSysPoliciesPassword");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/password", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysPoliciesPassword", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPoliciesAclName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -9265,11 +9437,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the password policy.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysPoliciesPasswordName(string name)
+        public ApiResponse<Object> ReadSystemPoliciesPasswordName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->GetSysPoliciesPasswordName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadSystemPoliciesPasswordName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9293,7 +9465,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPoliciesPasswordName", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPoliciesPasswordName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -9308,11 +9480,11 @@ namespace Vault.Api
         /// <param name="name">The name of the password policy.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysPoliciesPasswordNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemPoliciesPasswordNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->GetSysPoliciesPasswordName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadSystemPoliciesPasswordName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9337,7 +9509,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPoliciesPasswordName", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPoliciesPasswordName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -9351,11 +9523,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the password policy.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysPoliciesPasswordNameGenerate(string name)
+        public ApiResponse<Object> ReadSystemPoliciesPasswordNameGenerate(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->GetSysPoliciesPasswordNameGenerate");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadSystemPoliciesPasswordNameGenerate");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9379,7 +9551,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPoliciesPasswordNameGenerate", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPoliciesPasswordNameGenerate", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -9394,11 +9566,11 @@ namespace Vault.Api
         /// <param name="name">The name of the password policy.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysPoliciesPasswordNameGenerateAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemPoliciesPasswordNameGenerateAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->GetSysPoliciesPasswordNameGenerate");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadSystemPoliciesPasswordNameGenerate");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9423,7 +9595,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPoliciesPasswordNameGenerate", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPoliciesPasswordNameGenerate", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -9437,7 +9609,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysPolicy(string list = default(string))
+        public ApiResponse<Object> ReadSystemPolicy(string list = default(string))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9464,7 +9636,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPolicy", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPolicy", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -9479,7 +9651,7 @@ namespace Vault.Api
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysPolicyAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemPolicyAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9507,7 +9679,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPolicy", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPolicy", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -9521,11 +9693,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysPolicyName(string name)
+        public ApiResponse<Object> ReadSystemPolicyName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->GetSysPolicyName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadSystemPolicyName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9549,7 +9721,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPolicyName", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPolicyName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -9564,11 +9736,11 @@ namespace Vault.Api
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysPolicyNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemPolicyNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->GetSysPolicyName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadSystemPolicyName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9593,7 +9765,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPolicyName", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPolicyName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -9606,7 +9778,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysPprof()
+        public ApiResponse<Object> ReadSystemPprof()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9629,7 +9801,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPprof", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPprof", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -9643,7 +9815,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysPprofAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemPprofAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9667,7 +9839,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPprof", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPprof", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -9680,7 +9852,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysPprofAllocs()
+        public ApiResponse<Object> ReadSystemPprofAllocs()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9703,7 +9875,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPprofAllocs", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPprofAllocs", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -9717,7 +9889,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysPprofAllocsAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemPprofAllocsAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9741,7 +9913,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPprofAllocs", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPprofAllocs", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -9754,7 +9926,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysPprofBlock()
+        public ApiResponse<Object> ReadSystemPprofBlock()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9777,7 +9949,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPprofBlock", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPprofBlock", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -9791,7 +9963,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysPprofBlockAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemPprofBlockAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9815,7 +9987,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPprofBlock", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPprofBlock", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -9828,7 +10000,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysPprofCmdline()
+        public ApiResponse<Object> ReadSystemPprofCmdline()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9851,7 +10023,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPprofCmdline", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPprofCmdline", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -9865,7 +10037,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysPprofCmdlineAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemPprofCmdlineAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9889,7 +10061,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPprofCmdline", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPprofCmdline", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -9902,7 +10074,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysPprofGoroutine()
+        public ApiResponse<Object> ReadSystemPprofGoroutine()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9925,7 +10097,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPprofGoroutine", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPprofGoroutine", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -9939,7 +10111,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysPprofGoroutineAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemPprofGoroutineAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9963,7 +10135,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPprofGoroutine", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPprofGoroutine", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -9976,7 +10148,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysPprofHeap()
+        public ApiResponse<Object> ReadSystemPprofHeap()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9999,7 +10171,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPprofHeap", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPprofHeap", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -10013,7 +10185,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysPprofHeapAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemPprofHeapAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10037,7 +10209,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPprofHeap", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPprofHeap", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -10050,7 +10222,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysPprofMutex()
+        public ApiResponse<Object> ReadSystemPprofMutex()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10073,7 +10245,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPprofMutex", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPprofMutex", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -10087,7 +10259,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysPprofMutexAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemPprofMutexAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10111,7 +10283,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPprofMutex", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPprofMutex", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -10124,7 +10296,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysPprofProfile()
+        public ApiResponse<Object> ReadSystemPprofProfile()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10147,7 +10319,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPprofProfile", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPprofProfile", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -10161,7 +10333,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysPprofProfileAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemPprofProfileAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10185,7 +10357,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPprofProfile", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPprofProfile", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -10198,7 +10370,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysPprofSymbol()
+        public ApiResponse<Object> ReadSystemPprofSymbol()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10221,7 +10393,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPprofSymbol", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPprofSymbol", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -10235,7 +10407,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysPprofSymbolAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemPprofSymbolAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10259,7 +10431,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPprofSymbol", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPprofSymbol", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -10272,7 +10444,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysPprofThreadcreate()
+        public ApiResponse<Object> ReadSystemPprofThreadcreate()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10295,7 +10467,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPprofThreadcreate", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPprofThreadcreate", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -10309,7 +10481,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysPprofThreadcreateAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemPprofThreadcreateAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10333,7 +10505,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPprofThreadcreate", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPprofThreadcreate", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -10346,7 +10518,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysPprofTrace()
+        public ApiResponse<Object> ReadSystemPprofTrace()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10369,7 +10541,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPprofTrace", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPprofTrace", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -10383,7 +10555,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysPprofTraceAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemPprofTraceAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10407,7 +10579,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysPprofTrace", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemPprofTrace", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -10420,7 +10592,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysQuotasConfig()
+        public ApiResponse<Object> ReadSystemQuotasConfig()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10443,7 +10615,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysQuotasConfig", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemQuotasConfig", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -10457,7 +10629,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysQuotasConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemQuotasConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10481,93 +10653,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysQuotasConfig", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysQuotasRateLimit(string list)
-        {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->GetSysQuotasRateLimit");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/quotas/rate-limit", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysQuotasRateLimit", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysQuotasRateLimitAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->GetSysQuotasRateLimit");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/quotas/rate-limit", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysQuotasRateLimit", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemQuotasConfig", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -10581,11 +10667,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the quota rule.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysQuotasRateLimitName(string name)
+        public ApiResponse<Object> ReadSystemQuotasRateLimitName(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->GetSysQuotasRateLimitName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadSystemQuotasRateLimitName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10609,7 +10695,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysQuotasRateLimitName", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemQuotasRateLimitName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -10624,11 +10710,11 @@ namespace Vault.Api
         /// <param name="name">Name of the quota rule.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysQuotasRateLimitNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemQuotasRateLimitNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->GetSysQuotasRateLimitName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->ReadSystemQuotasRateLimitName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10653,7 +10739,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysQuotasRateLimitName", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemQuotasRateLimitName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -10667,7 +10753,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysRaw(string list = default(string))
+        public ApiResponse<Object> ReadSystemRaw(string list = default(string))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10694,7 +10780,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysRaw", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemRaw", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -10709,7 +10795,7 @@ namespace Vault.Api
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysRawAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemRawAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10737,7 +10823,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysRaw", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemRaw", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -10752,11 +10838,11 @@ namespace Vault.Api
         /// <param name="path"></param>
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysRawPath(string path, string list = default(string))
+        public ApiResponse<Object> ReadSystemRawPath(string path, string list = default(string))
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->GetSysRawPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->ReadSystemRawPath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10784,7 +10870,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysRawPath", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemRawPath", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -10800,11 +10886,11 @@ namespace Vault.Api
         /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysRawPathAsync(string path, string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemRawPathAsync(string path, string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->GetSysRawPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->ReadSystemRawPath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10833,7 +10919,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysRawPath", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemRawPath", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -10846,7 +10932,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysRekeyBackup()
+        public ApiResponse<Object> ReadSystemRekeyBackup()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10869,7 +10955,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysRekeyBackup", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemRekeyBackup", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -10883,7 +10969,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysRekeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemRekeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10907,7 +10993,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysRekeyBackup", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemRekeyBackup", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -10920,7 +11006,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysRekeyInit()
+        public ApiResponse<Object> ReadSystemRekeyInit()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10943,7 +11029,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysRekeyInit", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemRekeyInit", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -10957,7 +11043,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysRekeyInitAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemRekeyInitAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10981,7 +11067,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysRekeyInit", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemRekeyInit", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -10994,7 +11080,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysRekeyRecoveryKeyBackup()
+        public ApiResponse<Object> ReadSystemRekeyRecoveryKeyBackup()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11017,7 +11103,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysRekeyRecoveryKeyBackup", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemRekeyRecoveryKeyBackup", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -11031,7 +11117,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysRekeyRecoveryKeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemRekeyRecoveryKeyBackupAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11055,7 +11141,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysRekeyRecoveryKeyBackup", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemRekeyRecoveryKeyBackup", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -11068,7 +11154,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysRekeyVerify()
+        public ApiResponse<Object> ReadSystemRekeyVerify()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11091,7 +11177,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysRekeyVerify", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemRekeyVerify", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -11105,7 +11191,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysRekeyVerifyAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemRekeyVerifyAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11129,7 +11215,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysRekeyVerify", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemRekeyVerify", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -11143,11 +11229,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="migrationId">The ID of the migration operation</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysRemountStatusMigrationId(string migrationId)
+        public ApiResponse<Object> ReadSystemRemountStatusMigrationId(string migrationId)
         {
             // verify the required parameter 'migrationId' is set
             if (migrationId == null)
-                throw new VaultApiException(400, "Missing required parameter 'migrationId' when calling System->GetSysRemountStatusMigrationId");
+                throw new VaultApiException(400, "Missing required parameter 'migrationId' when calling System->ReadSystemRemountStatusMigrationId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11171,7 +11257,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysRemountStatusMigrationId", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemRemountStatusMigrationId", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -11186,11 +11272,11 @@ namespace Vault.Api
         /// <param name="migrationId">The ID of the migration operation</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysRemountStatusMigrationIdAsync(string migrationId, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemRemountStatusMigrationIdAsync(string migrationId, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'migrationId' is set
             if (migrationId == null)
-                throw new VaultApiException(400, "Missing required parameter 'migrationId' when calling System->GetSysRemountStatusMigrationId");
+                throw new VaultApiException(400, "Missing required parameter 'migrationId' when calling System->ReadSystemRemountStatusMigrationId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11215,7 +11301,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysRemountStatusMigrationId", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemRemountStatusMigrationId", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -11228,7 +11314,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysReplicationStatus()
+        public ApiResponse<Object> ReadSystemReplicationStatus()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11251,7 +11337,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysReplicationStatus", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemReplicationStatus", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -11265,7 +11351,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysReplicationStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemReplicationStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11289,7 +11375,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysReplicationStatus", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemReplicationStatus", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -11302,7 +11388,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysRotateConfig()
+        public ApiResponse<Object> ReadSystemRotateConfig()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11325,7 +11411,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysRotateConfig", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemRotateConfig", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -11339,7 +11425,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysRotateConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemRotateConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11363,7 +11449,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysRotateConfig", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemRotateConfig", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -11376,7 +11462,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysSealStatus()
+        public ApiResponse<Object> ReadSystemSealStatus()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11399,7 +11485,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysSealStatus", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemSealStatus", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -11413,7 +11499,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysSealStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemSealStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11437,93 +11523,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysSealStatus", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Returns map of historical version change entries 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysVersionHistory(string list)
-        {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->GetSysVersionHistory");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/sys/version-history/", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysVersionHistory", response);
-                if (_exception != null) throw _exception;
-            }
-
-            return response;
-        }
-
-
-        /// <summary>
-        /// Returns map of historical version change entries 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysVersionHistoryAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->GetSysVersionHistory");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/version-history/", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("GetSysVersionHistory", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemSealStatus", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -11536,7 +11536,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSysWrappingLookup()
+        public ApiResponse<Object> ReadSystemWrappingLookup()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11559,7 +11559,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysWrappingLookup", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemWrappingLookup", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -11573,7 +11573,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> GetSysWrappingLookupAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> ReadSystemWrappingLookupAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11597,7 +11597,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetSysWrappingLookup", response);
+                Exception _exception = this.ExceptionFactory("ReadSystemWrappingLookup", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -11612,11 +11612,11 @@ namespace Vault.Api
         /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="systemAuditHashRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysAuditHashPath(string path, SystemAuditHashRequest systemAuditHashRequest = default(SystemAuditHashRequest))
+        public ApiResponse<Object> UpdateSystemAuditHashPath(string path, SystemAuditHashRequest systemAuditHashRequest = default(SystemAuditHashRequest))
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->PostSysAuditHashPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->UpdateSystemAuditHashPath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11642,7 +11642,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysAuditHashPath", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemAuditHashPath", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -11658,11 +11658,11 @@ namespace Vault.Api
         /// <param name="systemAuditHashRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysAuditHashPathAsync(string path, SystemAuditHashRequest systemAuditHashRequest = default(SystemAuditHashRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemAuditHashPathAsync(string path, SystemAuditHashRequest systemAuditHashRequest = default(SystemAuditHashRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->PostSysAuditHashPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->UpdateSystemAuditHashPath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11689,7 +11689,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysAuditHashPath", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemAuditHashPath", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -11704,11 +11704,11 @@ namespace Vault.Api
         /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="systemAuditRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysAuditPath(string path, SystemAuditRequest systemAuditRequest = default(SystemAuditRequest))
+        public ApiResponse<Object> UpdateSystemAuditPath(string path, SystemAuditRequest systemAuditRequest = default(SystemAuditRequest))
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->PostSysAuditPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->UpdateSystemAuditPath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11734,7 +11734,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysAuditPath", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemAuditPath", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -11750,11 +11750,11 @@ namespace Vault.Api
         /// <param name="systemAuditRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysAuditPathAsync(string path, SystemAuditRequest systemAuditRequest = default(SystemAuditRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemAuditPathAsync(string path, SystemAuditRequest systemAuditRequest = default(SystemAuditRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->PostSysAuditPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->UpdateSystemAuditPath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11781,7 +11781,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysAuditPath", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemAuditPath", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -11796,11 +11796,11 @@ namespace Vault.Api
         /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <param name="systemAuthRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysAuthPath(string path, SystemAuthRequest systemAuthRequest = default(SystemAuthRequest))
+        public ApiResponse<Object> UpdateSystemAuthPath(string path, SystemAuthRequest systemAuthRequest = default(SystemAuthRequest))
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->PostSysAuthPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->UpdateSystemAuthPath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11826,7 +11826,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysAuthPath", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemAuthPath", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -11842,11 +11842,11 @@ namespace Vault.Api
         /// <param name="systemAuthRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysAuthPathAsync(string path, SystemAuthRequest systemAuthRequest = default(SystemAuthRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemAuthPathAsync(string path, SystemAuthRequest systemAuthRequest = default(SystemAuthRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->PostSysAuthPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->UpdateSystemAuthPath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11873,7 +11873,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysAuthPath", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemAuthPath", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -11888,11 +11888,11 @@ namespace Vault.Api
         /// <param name="path">Tune the configuration parameters for an auth path.</param>
         /// <param name="systemAuthTuneRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysAuthPathTune(string path, SystemAuthTuneRequest systemAuthTuneRequest = default(SystemAuthTuneRequest))
+        public ApiResponse<Object> UpdateSystemAuthPathTune(string path, SystemAuthTuneRequest systemAuthTuneRequest = default(SystemAuthTuneRequest))
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->PostSysAuthPathTune");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->UpdateSystemAuthPathTune");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11918,7 +11918,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysAuthPathTune", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemAuthPathTune", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -11934,11 +11934,11 @@ namespace Vault.Api
         /// <param name="systemAuthTuneRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysAuthPathTuneAsync(string path, SystemAuthTuneRequest systemAuthTuneRequest = default(SystemAuthTuneRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemAuthPathTuneAsync(string path, SystemAuthTuneRequest systemAuthTuneRequest = default(SystemAuthTuneRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->PostSysAuthPathTune");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->UpdateSystemAuthPathTune");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11965,7 +11965,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysAuthPathTune", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemAuthPathTune", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -11979,7 +11979,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemCapabilitiesRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysCapabilities(SystemCapabilitiesRequest systemCapabilitiesRequest = default(SystemCapabilitiesRequest))
+        public ApiResponse<Object> UpdateSystemCapabilities(SystemCapabilitiesRequest systemCapabilitiesRequest = default(SystemCapabilitiesRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12004,7 +12004,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysCapabilities", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemCapabilities", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -12019,7 +12019,7 @@ namespace Vault.Api
         /// <param name="systemCapabilitiesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysCapabilitiesAsync(SystemCapabilitiesRequest systemCapabilitiesRequest = default(SystemCapabilitiesRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemCapabilitiesAsync(SystemCapabilitiesRequest systemCapabilitiesRequest = default(SystemCapabilitiesRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -12045,7 +12045,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysCapabilities", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemCapabilities", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -12059,7 +12059,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemCapabilitiesAccessorRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysCapabilitiesAccessor(SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = default(SystemCapabilitiesAccessorRequest))
+        public ApiResponse<Object> UpdateSystemCapabilitiesAccessor(SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = default(SystemCapabilitiesAccessorRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12084,7 +12084,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysCapabilitiesAccessor", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemCapabilitiesAccessor", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -12099,7 +12099,7 @@ namespace Vault.Api
         /// <param name="systemCapabilitiesAccessorRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysCapabilitiesAccessorAsync(SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = default(SystemCapabilitiesAccessorRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemCapabilitiesAccessorAsync(SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = default(SystemCapabilitiesAccessorRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -12125,7 +12125,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysCapabilitiesAccessor", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemCapabilitiesAccessor", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -12139,7 +12139,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemCapabilitiesSelfRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysCapabilitiesSelf(SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = default(SystemCapabilitiesSelfRequest))
+        public ApiResponse<Object> UpdateSystemCapabilitiesSelf(SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = default(SystemCapabilitiesSelfRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12164,7 +12164,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysCapabilitiesSelf", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemCapabilitiesSelf", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -12179,7 +12179,7 @@ namespace Vault.Api
         /// <param name="systemCapabilitiesSelfRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysCapabilitiesSelfAsync(SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = default(SystemCapabilitiesSelfRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemCapabilitiesSelfAsync(SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = default(SystemCapabilitiesSelfRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -12205,7 +12205,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysCapabilitiesSelf", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemCapabilitiesSelf", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -12220,11 +12220,11 @@ namespace Vault.Api
         /// <param name="header"></param>
         /// <param name="systemConfigAuditingRequestHeadersRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysConfigAuditingRequestHeadersHeader(string header, SystemConfigAuditingRequestHeadersRequest systemConfigAuditingRequestHeadersRequest = default(SystemConfigAuditingRequestHeadersRequest))
+        public ApiResponse<Object> UpdateSystemConfigAuditingRequestHeadersHeader(string header, SystemConfigAuditingRequestHeadersRequest systemConfigAuditingRequestHeadersRequest = default(SystemConfigAuditingRequestHeadersRequest))
         {
             // verify the required parameter 'header' is set
             if (header == null)
-                throw new VaultApiException(400, "Missing required parameter 'header' when calling System->PostSysConfigAuditingRequestHeadersHeader");
+                throw new VaultApiException(400, "Missing required parameter 'header' when calling System->UpdateSystemConfigAuditingRequestHeadersHeader");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12250,7 +12250,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysConfigAuditingRequestHeadersHeader", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemConfigAuditingRequestHeadersHeader", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -12266,11 +12266,11 @@ namespace Vault.Api
         /// <param name="systemConfigAuditingRequestHeadersRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysConfigAuditingRequestHeadersHeaderAsync(string header, SystemConfigAuditingRequestHeadersRequest systemConfigAuditingRequestHeadersRequest = default(SystemConfigAuditingRequestHeadersRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemConfigAuditingRequestHeadersHeaderAsync(string header, SystemConfigAuditingRequestHeadersRequest systemConfigAuditingRequestHeadersRequest = default(SystemConfigAuditingRequestHeadersRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'header' is set
             if (header == null)
-                throw new VaultApiException(400, "Missing required parameter 'header' when calling System->PostSysConfigAuditingRequestHeadersHeader");
+                throw new VaultApiException(400, "Missing required parameter 'header' when calling System->UpdateSystemConfigAuditingRequestHeadersHeader");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -12297,7 +12297,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysConfigAuditingRequestHeadersHeader", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemConfigAuditingRequestHeadersHeader", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -12311,7 +12311,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemConfigCorsRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysConfigCors(SystemConfigCorsRequest systemConfigCorsRequest = default(SystemConfigCorsRequest))
+        public ApiResponse<Object> UpdateSystemConfigCors(SystemConfigCorsRequest systemConfigCorsRequest = default(SystemConfigCorsRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12336,7 +12336,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysConfigCors", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemConfigCors", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -12351,7 +12351,7 @@ namespace Vault.Api
         /// <param name="systemConfigCorsRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysConfigCorsAsync(SystemConfigCorsRequest systemConfigCorsRequest = default(SystemConfigCorsRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemConfigCorsAsync(SystemConfigCorsRequest systemConfigCorsRequest = default(SystemConfigCorsRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -12377,7 +12377,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysConfigCors", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemConfigCors", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -12391,11 +12391,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="subsystem"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysConfigReloadSubsystem(string subsystem)
+        public ApiResponse<Object> UpdateSystemConfigReloadSubsystem(string subsystem)
         {
             // verify the required parameter 'subsystem' is set
             if (subsystem == null)
-                throw new VaultApiException(400, "Missing required parameter 'subsystem' when calling System->PostSysConfigReloadSubsystem");
+                throw new VaultApiException(400, "Missing required parameter 'subsystem' when calling System->UpdateSystemConfigReloadSubsystem");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12419,7 +12419,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysConfigReloadSubsystem", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemConfigReloadSubsystem", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -12434,11 +12434,11 @@ namespace Vault.Api
         /// <param name="subsystem"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysConfigReloadSubsystemAsync(string subsystem, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemConfigReloadSubsystemAsync(string subsystem, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'subsystem' is set
             if (subsystem == null)
-                throw new VaultApiException(400, "Missing required parameter 'subsystem' when calling System->PostSysConfigReloadSubsystem");
+                throw new VaultApiException(400, "Missing required parameter 'subsystem' when calling System->UpdateSystemConfigReloadSubsystem");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -12463,7 +12463,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysConfigReloadSubsystem", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemConfigReloadSubsystem", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -12478,11 +12478,11 @@ namespace Vault.Api
         /// <param name="header">The name of the header.</param>
         /// <param name="systemConfigUiHeadersRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysConfigUiHeadersHeader(string header, SystemConfigUiHeadersRequest systemConfigUiHeadersRequest = default(SystemConfigUiHeadersRequest))
+        public ApiResponse<Object> UpdateSystemConfigUiHeadersHeader(string header, SystemConfigUiHeadersRequest systemConfigUiHeadersRequest = default(SystemConfigUiHeadersRequest))
         {
             // verify the required parameter 'header' is set
             if (header == null)
-                throw new VaultApiException(400, "Missing required parameter 'header' when calling System->PostSysConfigUiHeadersHeader");
+                throw new VaultApiException(400, "Missing required parameter 'header' when calling System->UpdateSystemConfigUiHeadersHeader");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12508,7 +12508,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysConfigUiHeadersHeader", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemConfigUiHeadersHeader", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -12524,11 +12524,11 @@ namespace Vault.Api
         /// <param name="systemConfigUiHeadersRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysConfigUiHeadersHeaderAsync(string header, SystemConfigUiHeadersRequest systemConfigUiHeadersRequest = default(SystemConfigUiHeadersRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemConfigUiHeadersHeaderAsync(string header, SystemConfigUiHeadersRequest systemConfigUiHeadersRequest = default(SystemConfigUiHeadersRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'header' is set
             if (header == null)
-                throw new VaultApiException(400, "Missing required parameter 'header' when calling System->PostSysConfigUiHeadersHeader");
+                throw new VaultApiException(400, "Missing required parameter 'header' when calling System->UpdateSystemConfigUiHeadersHeader");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -12555,7 +12555,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysConfigUiHeadersHeader", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemConfigUiHeadersHeader", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -12569,7 +12569,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemGenerateRootRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysGenerateRoot(SystemGenerateRootRequest systemGenerateRootRequest = default(SystemGenerateRootRequest))
+        public ApiResponse<Object> UpdateSystemGenerateRoot(SystemGenerateRootRequest systemGenerateRootRequest = default(SystemGenerateRootRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12594,7 +12594,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysGenerateRoot", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemGenerateRoot", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -12609,7 +12609,7 @@ namespace Vault.Api
         /// <param name="systemGenerateRootRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysGenerateRootAsync(SystemGenerateRootRequest systemGenerateRootRequest = default(SystemGenerateRootRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemGenerateRootAsync(SystemGenerateRootRequest systemGenerateRootRequest = default(SystemGenerateRootRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -12635,7 +12635,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysGenerateRoot", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemGenerateRoot", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -12649,7 +12649,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemGenerateRootAttemptRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysGenerateRootAttempt(SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = default(SystemGenerateRootAttemptRequest))
+        public ApiResponse<Object> UpdateSystemGenerateRootAttempt(SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = default(SystemGenerateRootAttemptRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12674,7 +12674,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysGenerateRootAttempt", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemGenerateRootAttempt", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -12689,7 +12689,7 @@ namespace Vault.Api
         /// <param name="systemGenerateRootAttemptRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysGenerateRootAttemptAsync(SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = default(SystemGenerateRootAttemptRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemGenerateRootAttemptAsync(SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = default(SystemGenerateRootAttemptRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -12715,7 +12715,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysGenerateRootAttempt", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemGenerateRootAttempt", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -12729,7 +12729,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemGenerateRootUpdateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysGenerateRootUpdate(SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = default(SystemGenerateRootUpdateRequest))
+        public ApiResponse<Object> UpdateSystemGenerateRootUpdate(SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = default(SystemGenerateRootUpdateRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12754,7 +12754,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysGenerateRootUpdate", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemGenerateRootUpdate", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -12769,7 +12769,7 @@ namespace Vault.Api
         /// <param name="systemGenerateRootUpdateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysGenerateRootUpdateAsync(SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = default(SystemGenerateRootUpdateRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemGenerateRootUpdateAsync(SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = default(SystemGenerateRootUpdateRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -12795,7 +12795,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysGenerateRootUpdate", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemGenerateRootUpdate", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -12809,7 +12809,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemInitRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysInit(SystemInitRequest systemInitRequest = default(SystemInitRequest))
+        public ApiResponse<Object> UpdateSystemInit(SystemInitRequest systemInitRequest = default(SystemInitRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12834,7 +12834,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysInit", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemInit", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -12849,7 +12849,7 @@ namespace Vault.Api
         /// <param name="systemInitRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysInitAsync(SystemInitRequest systemInitRequest = default(SystemInitRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemInitAsync(SystemInitRequest systemInitRequest = default(SystemInitRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -12875,7 +12875,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysInit", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemInit", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -12889,7 +12889,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemInternalCountersConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysInternalCountersConfig(SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = default(SystemInternalCountersConfigRequest))
+        public ApiResponse<Object> UpdateSystemInternalCountersConfig(SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = default(SystemInternalCountersConfigRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12914,7 +12914,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysInternalCountersConfig", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemInternalCountersConfig", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -12929,7 +12929,7 @@ namespace Vault.Api
         /// <param name="systemInternalCountersConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysInternalCountersConfigAsync(SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = default(SystemInternalCountersConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemInternalCountersConfigAsync(SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = default(SystemInternalCountersConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -12955,7 +12955,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysInternalCountersConfig", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemInternalCountersConfig", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -12969,7 +12969,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemLeasesLookupRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysLeasesLookup(SystemLeasesLookupRequest systemLeasesLookupRequest = default(SystemLeasesLookupRequest))
+        public ApiResponse<Object> UpdateSystemLeasesLookup(SystemLeasesLookupRequest systemLeasesLookupRequest = default(SystemLeasesLookupRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12994,7 +12994,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysLeasesLookup", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesLookup", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -13009,7 +13009,7 @@ namespace Vault.Api
         /// <param name="systemLeasesLookupRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysLeasesLookupAsync(SystemLeasesLookupRequest systemLeasesLookupRequest = default(SystemLeasesLookupRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemLeasesLookupAsync(SystemLeasesLookupRequest systemLeasesLookupRequest = default(SystemLeasesLookupRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13035,7 +13035,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysLeasesLookup", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesLookup", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -13049,7 +13049,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemLeasesRenewRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysLeasesRenew(SystemLeasesRenewRequest systemLeasesRenewRequest = default(SystemLeasesRenewRequest))
+        public ApiResponse<Object> UpdateSystemLeasesRenew(SystemLeasesRenewRequest systemLeasesRenewRequest = default(SystemLeasesRenewRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13074,7 +13074,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysLeasesRenew", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesRenew", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -13089,7 +13089,7 @@ namespace Vault.Api
         /// <param name="systemLeasesRenewRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysLeasesRenewAsync(SystemLeasesRenewRequest systemLeasesRenewRequest = default(SystemLeasesRenewRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemLeasesRenewAsync(SystemLeasesRenewRequest systemLeasesRenewRequest = default(SystemLeasesRenewRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13115,7 +13115,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysLeasesRenew", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesRenew", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -13130,11 +13130,11 @@ namespace Vault.Api
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="systemLeasesRenewLeaseRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysLeasesRenewUrlLeaseId(string urlLeaseId, SystemLeasesRenewLeaseRequest systemLeasesRenewLeaseRequest = default(SystemLeasesRenewLeaseRequest))
+        public ApiResponse<Object> UpdateSystemLeasesRenewUrlLeaseId(string urlLeaseId, SystemLeasesRenewLeaseRequest systemLeasesRenewLeaseRequest = default(SystemLeasesRenewLeaseRequest))
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
-                throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->PostSysLeasesRenewUrlLeaseId");
+                throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->UpdateSystemLeasesRenewUrlLeaseId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13160,7 +13160,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysLeasesRenewUrlLeaseId", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesRenewUrlLeaseId", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -13176,11 +13176,11 @@ namespace Vault.Api
         /// <param name="systemLeasesRenewLeaseRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysLeasesRenewUrlLeaseIdAsync(string urlLeaseId, SystemLeasesRenewLeaseRequest systemLeasesRenewLeaseRequest = default(SystemLeasesRenewLeaseRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemLeasesRenewUrlLeaseIdAsync(string urlLeaseId, SystemLeasesRenewLeaseRequest systemLeasesRenewLeaseRequest = default(SystemLeasesRenewLeaseRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
-                throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->PostSysLeasesRenewUrlLeaseId");
+                throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->UpdateSystemLeasesRenewUrlLeaseId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13207,7 +13207,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysLeasesRenewUrlLeaseId", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesRenewUrlLeaseId", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -13221,7 +13221,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemLeasesRevokeRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysLeasesRevoke(SystemLeasesRevokeRequest systemLeasesRevokeRequest = default(SystemLeasesRevokeRequest))
+        public ApiResponse<Object> UpdateSystemLeasesRevoke(SystemLeasesRevokeRequest systemLeasesRevokeRequest = default(SystemLeasesRevokeRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13246,7 +13246,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysLeasesRevoke", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesRevoke", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -13261,7 +13261,7 @@ namespace Vault.Api
         /// <param name="systemLeasesRevokeRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysLeasesRevokeAsync(SystemLeasesRevokeRequest systemLeasesRevokeRequest = default(SystemLeasesRevokeRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemLeasesRevokeAsync(SystemLeasesRevokeRequest systemLeasesRevokeRequest = default(SystemLeasesRevokeRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13287,7 +13287,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysLeasesRevoke", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesRevoke", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -13301,11 +13301,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysLeasesRevokeForcePrefix(string prefix)
+        public ApiResponse<Object> UpdateSystemLeasesRevokeForcePrefix(string prefix)
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
-                throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->PostSysLeasesRevokeForcePrefix");
+                throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->UpdateSystemLeasesRevokeForcePrefix");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13329,7 +13329,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysLeasesRevokeForcePrefix", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesRevokeForcePrefix", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -13344,11 +13344,11 @@ namespace Vault.Api
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysLeasesRevokeForcePrefixAsync(string prefix, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemLeasesRevokeForcePrefixAsync(string prefix, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
-                throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->PostSysLeasesRevokeForcePrefix");
+                throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->UpdateSystemLeasesRevokeForcePrefix");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13373,7 +13373,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysLeasesRevokeForcePrefix", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesRevokeForcePrefix", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -13388,11 +13388,11 @@ namespace Vault.Api
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="systemLeasesRevokePrefixRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysLeasesRevokePrefixPrefix(string prefix, SystemLeasesRevokePrefixRequest systemLeasesRevokePrefixRequest = default(SystemLeasesRevokePrefixRequest))
+        public ApiResponse<Object> UpdateSystemLeasesRevokePrefixPrefix(string prefix, SystemLeasesRevokePrefixRequest systemLeasesRevokePrefixRequest = default(SystemLeasesRevokePrefixRequest))
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
-                throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->PostSysLeasesRevokePrefixPrefix");
+                throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->UpdateSystemLeasesRevokePrefixPrefix");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13418,7 +13418,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysLeasesRevokePrefixPrefix", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesRevokePrefixPrefix", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -13434,11 +13434,11 @@ namespace Vault.Api
         /// <param name="systemLeasesRevokePrefixRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysLeasesRevokePrefixPrefixAsync(string prefix, SystemLeasesRevokePrefixRequest systemLeasesRevokePrefixRequest = default(SystemLeasesRevokePrefixRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemLeasesRevokePrefixPrefixAsync(string prefix, SystemLeasesRevokePrefixRequest systemLeasesRevokePrefixRequest = default(SystemLeasesRevokePrefixRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
-                throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->PostSysLeasesRevokePrefixPrefix");
+                throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->UpdateSystemLeasesRevokePrefixPrefix");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13465,7 +13465,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysLeasesRevokePrefixPrefix", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesRevokePrefixPrefix", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -13480,11 +13480,11 @@ namespace Vault.Api
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="systemLeasesRevokeLeaseRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysLeasesRevokeUrlLeaseId(string urlLeaseId, SystemLeasesRevokeLeaseRequest systemLeasesRevokeLeaseRequest = default(SystemLeasesRevokeLeaseRequest))
+        public ApiResponse<Object> UpdateSystemLeasesRevokeUrlLeaseId(string urlLeaseId, SystemLeasesRevokeLeaseRequest systemLeasesRevokeLeaseRequest = default(SystemLeasesRevokeLeaseRequest))
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
-                throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->PostSysLeasesRevokeUrlLeaseId");
+                throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->UpdateSystemLeasesRevokeUrlLeaseId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13510,7 +13510,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysLeasesRevokeUrlLeaseId", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesRevokeUrlLeaseId", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -13526,11 +13526,11 @@ namespace Vault.Api
         /// <param name="systemLeasesRevokeLeaseRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysLeasesRevokeUrlLeaseIdAsync(string urlLeaseId, SystemLeasesRevokeLeaseRequest systemLeasesRevokeLeaseRequest = default(SystemLeasesRevokeLeaseRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemLeasesRevokeUrlLeaseIdAsync(string urlLeaseId, SystemLeasesRevokeLeaseRequest systemLeasesRevokeLeaseRequest = default(SystemLeasesRevokeLeaseRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
-                throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->PostSysLeasesRevokeUrlLeaseId");
+                throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->UpdateSystemLeasesRevokeUrlLeaseId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13557,7 +13557,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysLeasesRevokeUrlLeaseId", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesRevokeUrlLeaseId", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -13570,7 +13570,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysLeasesTidy()
+        public ApiResponse<Object> UpdateSystemLeasesTidy()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13593,7 +13593,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysLeasesTidy", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesTidy", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -13607,7 +13607,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysLeasesTidyAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemLeasesTidyAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13631,7 +13631,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysLeasesTidy", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesTidy", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -13645,7 +13645,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemLoggersRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysLoggers(SystemLoggersRequest systemLoggersRequest = default(SystemLoggersRequest))
+        public ApiResponse<Object> UpdateSystemLoggers(SystemLoggersRequest systemLoggersRequest = default(SystemLoggersRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13670,7 +13670,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysLoggers", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemLoggers", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -13685,7 +13685,7 @@ namespace Vault.Api
         /// <param name="systemLoggersRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysLoggersAsync(SystemLoggersRequest systemLoggersRequest = default(SystemLoggersRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemLoggersAsync(SystemLoggersRequest systemLoggersRequest = default(SystemLoggersRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13711,7 +13711,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysLoggers", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemLoggers", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -13726,11 +13726,11 @@ namespace Vault.Api
         /// <param name="name">The name of the logger to be modified.</param>
         /// <param name="systemLoggersRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysLoggersName(string name, SystemLoggersRequest systemLoggersRequest = default(SystemLoggersRequest))
+        public ApiResponse<Object> UpdateSystemLoggersName(string name, SystemLoggersRequest systemLoggersRequest = default(SystemLoggersRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PostSysLoggersName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->UpdateSystemLoggersName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13756,7 +13756,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysLoggersName", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemLoggersName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -13772,11 +13772,11 @@ namespace Vault.Api
         /// <param name="systemLoggersRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysLoggersNameAsync(string name, SystemLoggersRequest systemLoggersRequest = default(SystemLoggersRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemLoggersNameAsync(string name, SystemLoggersRequest systemLoggersRequest = default(SystemLoggersRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PostSysLoggersName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->UpdateSystemLoggersName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13803,7 +13803,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysLoggersName", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemLoggersName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -13817,7 +13817,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemMfaValidateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysMfaValidate(SystemMfaValidateRequest systemMfaValidateRequest = default(SystemMfaValidateRequest))
+        public ApiResponse<Object> UpdateSystemMfaValidate(SystemMfaValidateRequest systemMfaValidateRequest = default(SystemMfaValidateRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13842,7 +13842,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysMfaValidate", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemMfaValidate", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -13857,7 +13857,7 @@ namespace Vault.Api
         /// <param name="systemMfaValidateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysMfaValidateAsync(SystemMfaValidateRequest systemMfaValidateRequest = default(SystemMfaValidateRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemMfaValidateAsync(SystemMfaValidateRequest systemMfaValidateRequest = default(SystemMfaValidateRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13883,7 +13883,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysMfaValidate", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemMfaValidate", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -13898,11 +13898,11 @@ namespace Vault.Api
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="systemMountsRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysMountsPath(string path, SystemMountsRequest systemMountsRequest = default(SystemMountsRequest))
+        public ApiResponse<Object> UpdateSystemMountsPath(string path, SystemMountsRequest systemMountsRequest = default(SystemMountsRequest))
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->PostSysMountsPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->UpdateSystemMountsPath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13928,7 +13928,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysMountsPath", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemMountsPath", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -13944,11 +13944,11 @@ namespace Vault.Api
         /// <param name="systemMountsRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysMountsPathAsync(string path, SystemMountsRequest systemMountsRequest = default(SystemMountsRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemMountsPathAsync(string path, SystemMountsRequest systemMountsRequest = default(SystemMountsRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->PostSysMountsPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->UpdateSystemMountsPath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13975,7 +13975,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysMountsPath", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemMountsPath", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -13990,11 +13990,11 @@ namespace Vault.Api
         /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="systemMountsTuneRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysMountsPathTune(string path, SystemMountsTuneRequest systemMountsTuneRequest = default(SystemMountsTuneRequest))
+        public ApiResponse<Object> UpdateSystemMountsPathTune(string path, SystemMountsTuneRequest systemMountsTuneRequest = default(SystemMountsTuneRequest))
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->PostSysMountsPathTune");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->UpdateSystemMountsPathTune");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14020,7 +14020,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysMountsPathTune", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemMountsPathTune", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -14036,11 +14036,11 @@ namespace Vault.Api
         /// <param name="systemMountsTuneRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysMountsPathTuneAsync(string path, SystemMountsTuneRequest systemMountsTuneRequest = default(SystemMountsTuneRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemMountsPathTuneAsync(string path, SystemMountsTuneRequest systemMountsTuneRequest = default(SystemMountsTuneRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->PostSysMountsPathTune");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->UpdateSystemMountsPathTune");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14067,7 +14067,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysMountsPathTune", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemMountsPathTune", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -14082,11 +14082,11 @@ namespace Vault.Api
         /// <param name="name">The name of the plugin</param>
         /// <param name="systemPluginsCatalogRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysPluginsCatalogName(string name, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest))
+        public ApiResponse<Object> UpdateSystemPluginsCatalogName(string name, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PostSysPluginsCatalogName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->UpdateSystemPluginsCatalogName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14112,7 +14112,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysPluginsCatalogName", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemPluginsCatalogName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -14128,11 +14128,11 @@ namespace Vault.Api
         /// <param name="systemPluginsCatalogRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysPluginsCatalogNameAsync(string name, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemPluginsCatalogNameAsync(string name, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PostSysPluginsCatalogName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->UpdateSystemPluginsCatalogName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14159,7 +14159,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysPluginsCatalogName", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemPluginsCatalogName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -14175,15 +14175,15 @@ namespace Vault.Api
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
         /// <param name="systemPluginsCatalogRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysPluginsCatalogTypeName(string name, string type, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest))
+        public ApiResponse<Object> UpdateSystemPluginsCatalogTypeName(string name, string type, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PostSysPluginsCatalogTypeName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->UpdateSystemPluginsCatalogTypeName");
 
             // verify the required parameter 'type' is set
             if (type == null)
-                throw new VaultApiException(400, "Missing required parameter 'type' when calling System->PostSysPluginsCatalogTypeName");
+                throw new VaultApiException(400, "Missing required parameter 'type' when calling System->UpdateSystemPluginsCatalogTypeName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14210,7 +14210,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysPluginsCatalogTypeName", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemPluginsCatalogTypeName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -14227,15 +14227,15 @@ namespace Vault.Api
         /// <param name="systemPluginsCatalogRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysPluginsCatalogTypeNameAsync(string name, string type, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemPluginsCatalogTypeNameAsync(string name, string type, SystemPluginsCatalogRequest systemPluginsCatalogRequest = default(SystemPluginsCatalogRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PostSysPluginsCatalogTypeName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->UpdateSystemPluginsCatalogTypeName");
 
             // verify the required parameter 'type' is set
             if (type == null)
-                throw new VaultApiException(400, "Missing required parameter 'type' when calling System->PostSysPluginsCatalogTypeName");
+                throw new VaultApiException(400, "Missing required parameter 'type' when calling System->UpdateSystemPluginsCatalogTypeName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14263,7 +14263,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysPluginsCatalogTypeName", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemPluginsCatalogTypeName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -14277,7 +14277,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemPluginsReloadBackendRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysPluginsReloadBackend(SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = default(SystemPluginsReloadBackendRequest))
+        public ApiResponse<Object> UpdateSystemPluginsReloadBackend(SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = default(SystemPluginsReloadBackendRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14302,7 +14302,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysPluginsReloadBackend", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemPluginsReloadBackend", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -14317,7 +14317,7 @@ namespace Vault.Api
         /// <param name="systemPluginsReloadBackendRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysPluginsReloadBackendAsync(SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = default(SystemPluginsReloadBackendRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemPluginsReloadBackendAsync(SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = default(SystemPluginsReloadBackendRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14343,7 +14343,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysPluginsReloadBackend", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemPluginsReloadBackend", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -14358,11 +14358,11 @@ namespace Vault.Api
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="systemPoliciesAclRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysPoliciesAclName(string name, SystemPoliciesAclRequest systemPoliciesAclRequest = default(SystemPoliciesAclRequest))
+        public ApiResponse<Object> UpdateSystemPoliciesAclName(string name, SystemPoliciesAclRequest systemPoliciesAclRequest = default(SystemPoliciesAclRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PostSysPoliciesAclName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->UpdateSystemPoliciesAclName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14388,7 +14388,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysPoliciesAclName", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemPoliciesAclName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -14404,11 +14404,11 @@ namespace Vault.Api
         /// <param name="systemPoliciesAclRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysPoliciesAclNameAsync(string name, SystemPoliciesAclRequest systemPoliciesAclRequest = default(SystemPoliciesAclRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemPoliciesAclNameAsync(string name, SystemPoliciesAclRequest systemPoliciesAclRequest = default(SystemPoliciesAclRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PostSysPoliciesAclName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->UpdateSystemPoliciesAclName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14435,7 +14435,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysPoliciesAclName", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemPoliciesAclName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -14450,11 +14450,11 @@ namespace Vault.Api
         /// <param name="name">The name of the password policy.</param>
         /// <param name="systemPoliciesPasswordRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysPoliciesPasswordName(string name, SystemPoliciesPasswordRequest systemPoliciesPasswordRequest = default(SystemPoliciesPasswordRequest))
+        public ApiResponse<Object> UpdateSystemPoliciesPasswordName(string name, SystemPoliciesPasswordRequest systemPoliciesPasswordRequest = default(SystemPoliciesPasswordRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PostSysPoliciesPasswordName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->UpdateSystemPoliciesPasswordName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14480,7 +14480,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysPoliciesPasswordName", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemPoliciesPasswordName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -14496,11 +14496,11 @@ namespace Vault.Api
         /// <param name="systemPoliciesPasswordRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysPoliciesPasswordNameAsync(string name, SystemPoliciesPasswordRequest systemPoliciesPasswordRequest = default(SystemPoliciesPasswordRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemPoliciesPasswordNameAsync(string name, SystemPoliciesPasswordRequest systemPoliciesPasswordRequest = default(SystemPoliciesPasswordRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PostSysPoliciesPasswordName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->UpdateSystemPoliciesPasswordName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14527,7 +14527,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysPoliciesPasswordName", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemPoliciesPasswordName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -14542,11 +14542,11 @@ namespace Vault.Api
         /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="systemPolicyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysPolicyName(string name, SystemPolicyRequest systemPolicyRequest = default(SystemPolicyRequest))
+        public ApiResponse<Object> UpdateSystemPolicyName(string name, SystemPolicyRequest systemPolicyRequest = default(SystemPolicyRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PostSysPolicyName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->UpdateSystemPolicyName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14572,7 +14572,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysPolicyName", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemPolicyName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -14588,11 +14588,11 @@ namespace Vault.Api
         /// <param name="systemPolicyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysPolicyNameAsync(string name, SystemPolicyRequest systemPolicyRequest = default(SystemPolicyRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemPolicyNameAsync(string name, SystemPolicyRequest systemPolicyRequest = default(SystemPolicyRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PostSysPolicyName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->UpdateSystemPolicyName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14619,7 +14619,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysPolicyName", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemPolicyName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -14633,7 +14633,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemQuotasConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysQuotasConfig(SystemQuotasConfigRequest systemQuotasConfigRequest = default(SystemQuotasConfigRequest))
+        public ApiResponse<Object> UpdateSystemQuotasConfig(SystemQuotasConfigRequest systemQuotasConfigRequest = default(SystemQuotasConfigRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14658,7 +14658,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysQuotasConfig", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemQuotasConfig", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -14673,7 +14673,7 @@ namespace Vault.Api
         /// <param name="systemQuotasConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysQuotasConfigAsync(SystemQuotasConfigRequest systemQuotasConfigRequest = default(SystemQuotasConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemQuotasConfigAsync(SystemQuotasConfigRequest systemQuotasConfigRequest = default(SystemQuotasConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14699,7 +14699,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysQuotasConfig", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemQuotasConfig", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -14714,11 +14714,11 @@ namespace Vault.Api
         /// <param name="name">Name of the quota rule.</param>
         /// <param name="systemQuotasRateLimitRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysQuotasRateLimitName(string name, SystemQuotasRateLimitRequest systemQuotasRateLimitRequest = default(SystemQuotasRateLimitRequest))
+        public ApiResponse<Object> UpdateSystemQuotasRateLimitName(string name, SystemQuotasRateLimitRequest systemQuotasRateLimitRequest = default(SystemQuotasRateLimitRequest))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PostSysQuotasRateLimitName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->UpdateSystemQuotasRateLimitName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14744,7 +14744,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysQuotasRateLimitName", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemQuotasRateLimitName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -14760,11 +14760,11 @@ namespace Vault.Api
         /// <param name="systemQuotasRateLimitRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysQuotasRateLimitNameAsync(string name, SystemQuotasRateLimitRequest systemQuotasRateLimitRequest = default(SystemQuotasRateLimitRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemQuotasRateLimitNameAsync(string name, SystemQuotasRateLimitRequest systemQuotasRateLimitRequest = default(SystemQuotasRateLimitRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->PostSysQuotasRateLimitName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->UpdateSystemQuotasRateLimitName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14791,7 +14791,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysQuotasRateLimitName", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemQuotasRateLimitName", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -14805,7 +14805,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRawRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysRaw(SystemRawRequest systemRawRequest = default(SystemRawRequest))
+        public ApiResponse<Object> UpdateSystemRaw(SystemRawRequest systemRawRequest = default(SystemRawRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14830,7 +14830,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRaw", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRaw", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -14845,7 +14845,7 @@ namespace Vault.Api
         /// <param name="systemRawRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysRawAsync(SystemRawRequest systemRawRequest = default(SystemRawRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemRawAsync(SystemRawRequest systemRawRequest = default(SystemRawRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14871,7 +14871,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRaw", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRaw", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -14886,11 +14886,11 @@ namespace Vault.Api
         /// <param name="path"></param>
         /// <param name="systemRawRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysRawPath(string path, SystemRawRequest systemRawRequest = default(SystemRawRequest))
+        public ApiResponse<Object> UpdateSystemRawPath(string path, SystemRawRequest systemRawRequest = default(SystemRawRequest))
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->PostSysRawPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->UpdateSystemRawPath");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14916,7 +14916,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRawPath", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRawPath", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -14932,11 +14932,11 @@ namespace Vault.Api
         /// <param name="systemRawRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysRawPathAsync(string path, SystemRawRequest systemRawRequest = default(SystemRawRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemRawPathAsync(string path, SystemRawRequest systemRawRequest = default(SystemRawRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
-                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->PostSysRawPath");
+                throw new VaultApiException(400, "Missing required parameter 'path' when calling System->UpdateSystemRawPath");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14963,7 +14963,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRawPath", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRawPath", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -14977,7 +14977,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRekeyInitRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysRekeyInit(SystemRekeyInitRequest systemRekeyInitRequest = default(SystemRekeyInitRequest))
+        public ApiResponse<Object> UpdateSystemRekeyInit(SystemRekeyInitRequest systemRekeyInitRequest = default(SystemRekeyInitRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15002,7 +15002,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRekeyInit", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRekeyInit", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -15017,7 +15017,7 @@ namespace Vault.Api
         /// <param name="systemRekeyInitRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysRekeyInitAsync(SystemRekeyInitRequest systemRekeyInitRequest = default(SystemRekeyInitRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemRekeyInitAsync(SystemRekeyInitRequest systemRekeyInitRequest = default(SystemRekeyInitRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15043,7 +15043,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRekeyInit", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRekeyInit", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -15057,7 +15057,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRekeyUpdateRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysRekeyUpdate(SystemRekeyUpdateRequest systemRekeyUpdateRequest = default(SystemRekeyUpdateRequest))
+        public ApiResponse<Object> UpdateSystemRekeyUpdate(SystemRekeyUpdateRequest systemRekeyUpdateRequest = default(SystemRekeyUpdateRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15082,7 +15082,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRekeyUpdate", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRekeyUpdate", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -15097,7 +15097,7 @@ namespace Vault.Api
         /// <param name="systemRekeyUpdateRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysRekeyUpdateAsync(SystemRekeyUpdateRequest systemRekeyUpdateRequest = default(SystemRekeyUpdateRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemRekeyUpdateAsync(SystemRekeyUpdateRequest systemRekeyUpdateRequest = default(SystemRekeyUpdateRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15123,7 +15123,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRekeyUpdate", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRekeyUpdate", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -15137,7 +15137,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRekeyVerifyRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysRekeyVerify(SystemRekeyVerifyRequest systemRekeyVerifyRequest = default(SystemRekeyVerifyRequest))
+        public ApiResponse<Object> UpdateSystemRekeyVerify(SystemRekeyVerifyRequest systemRekeyVerifyRequest = default(SystemRekeyVerifyRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15162,7 +15162,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRekeyVerify", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRekeyVerify", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -15177,7 +15177,7 @@ namespace Vault.Api
         /// <param name="systemRekeyVerifyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysRekeyVerifyAsync(SystemRekeyVerifyRequest systemRekeyVerifyRequest = default(SystemRekeyVerifyRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemRekeyVerifyAsync(SystemRekeyVerifyRequest systemRekeyVerifyRequest = default(SystemRekeyVerifyRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15203,7 +15203,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRekeyVerify", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRekeyVerify", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -15217,7 +15217,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRemountRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysRemount(SystemRemountRequest systemRemountRequest = default(SystemRemountRequest))
+        public ApiResponse<Object> UpdateSystemRemount(SystemRemountRequest systemRemountRequest = default(SystemRemountRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15242,7 +15242,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRemount", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRemount", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -15257,7 +15257,7 @@ namespace Vault.Api
         /// <param name="systemRemountRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysRemountAsync(SystemRemountRequest systemRemountRequest = default(SystemRemountRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemRemountAsync(SystemRemountRequest systemRemountRequest = default(SystemRemountRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15283,7 +15283,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRemount", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRemount", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -15297,7 +15297,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRenewRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysRenew(SystemRenewRequest systemRenewRequest = default(SystemRenewRequest))
+        public ApiResponse<Object> UpdateSystemRenew(SystemRenewRequest systemRenewRequest = default(SystemRenewRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15322,7 +15322,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRenew", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRenew", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -15337,7 +15337,7 @@ namespace Vault.Api
         /// <param name="systemRenewRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysRenewAsync(SystemRenewRequest systemRenewRequest = default(SystemRenewRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemRenewAsync(SystemRenewRequest systemRenewRequest = default(SystemRenewRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15363,7 +15363,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRenew", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRenew", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -15378,11 +15378,11 @@ namespace Vault.Api
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="systemRenewLeaseRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysRenewUrlLeaseId(string urlLeaseId, SystemRenewLeaseRequest systemRenewLeaseRequest = default(SystemRenewLeaseRequest))
+        public ApiResponse<Object> UpdateSystemRenewUrlLeaseId(string urlLeaseId, SystemRenewLeaseRequest systemRenewLeaseRequest = default(SystemRenewLeaseRequest))
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
-                throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->PostSysRenewUrlLeaseId");
+                throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->UpdateSystemRenewUrlLeaseId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15408,7 +15408,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRenewUrlLeaseId", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRenewUrlLeaseId", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -15424,11 +15424,11 @@ namespace Vault.Api
         /// <param name="systemRenewLeaseRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysRenewUrlLeaseIdAsync(string urlLeaseId, SystemRenewLeaseRequest systemRenewLeaseRequest = default(SystemRenewLeaseRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemRenewUrlLeaseIdAsync(string urlLeaseId, SystemRenewLeaseRequest systemRenewLeaseRequest = default(SystemRenewLeaseRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
-                throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->PostSysRenewUrlLeaseId");
+                throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->UpdateSystemRenewUrlLeaseId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15455,7 +15455,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRenewUrlLeaseId", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRenewUrlLeaseId", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -15469,7 +15469,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRevokeRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysRevoke(SystemRevokeRequest systemRevokeRequest = default(SystemRevokeRequest))
+        public ApiResponse<Object> UpdateSystemRevoke(SystemRevokeRequest systemRevokeRequest = default(SystemRevokeRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15494,7 +15494,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRevoke", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRevoke", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -15509,7 +15509,7 @@ namespace Vault.Api
         /// <param name="systemRevokeRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysRevokeAsync(SystemRevokeRequest systemRevokeRequest = default(SystemRevokeRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemRevokeAsync(SystemRevokeRequest systemRevokeRequest = default(SystemRevokeRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15535,7 +15535,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRevoke", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRevoke", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -15549,11 +15549,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysRevokeForcePrefix(string prefix)
+        public ApiResponse<Object> UpdateSystemRevokeForcePrefix(string prefix)
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
-                throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->PostSysRevokeForcePrefix");
+                throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->UpdateSystemRevokeForcePrefix");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15577,7 +15577,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRevokeForcePrefix", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRevokeForcePrefix", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -15592,11 +15592,11 @@ namespace Vault.Api
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysRevokeForcePrefixAsync(string prefix, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemRevokeForcePrefixAsync(string prefix, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
-                throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->PostSysRevokeForcePrefix");
+                throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->UpdateSystemRevokeForcePrefix");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15621,7 +15621,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRevokeForcePrefix", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRevokeForcePrefix", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -15636,11 +15636,11 @@ namespace Vault.Api
         /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="systemRevokePrefixRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysRevokePrefixPrefix(string prefix, SystemRevokePrefixRequest systemRevokePrefixRequest = default(SystemRevokePrefixRequest))
+        public ApiResponse<Object> UpdateSystemRevokePrefixPrefix(string prefix, SystemRevokePrefixRequest systemRevokePrefixRequest = default(SystemRevokePrefixRequest))
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
-                throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->PostSysRevokePrefixPrefix");
+                throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->UpdateSystemRevokePrefixPrefix");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15666,7 +15666,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRevokePrefixPrefix", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRevokePrefixPrefix", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -15682,11 +15682,11 @@ namespace Vault.Api
         /// <param name="systemRevokePrefixRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysRevokePrefixPrefixAsync(string prefix, SystemRevokePrefixRequest systemRevokePrefixRequest = default(SystemRevokePrefixRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemRevokePrefixPrefixAsync(string prefix, SystemRevokePrefixRequest systemRevokePrefixRequest = default(SystemRevokePrefixRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
-                throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->PostSysRevokePrefixPrefix");
+                throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->UpdateSystemRevokePrefixPrefix");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15713,7 +15713,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRevokePrefixPrefix", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRevokePrefixPrefix", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -15728,11 +15728,11 @@ namespace Vault.Api
         /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="systemRevokeLeaseRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysRevokeUrlLeaseId(string urlLeaseId, SystemRevokeLeaseRequest systemRevokeLeaseRequest = default(SystemRevokeLeaseRequest))
+        public ApiResponse<Object> UpdateSystemRevokeUrlLeaseId(string urlLeaseId, SystemRevokeLeaseRequest systemRevokeLeaseRequest = default(SystemRevokeLeaseRequest))
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
-                throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->PostSysRevokeUrlLeaseId");
+                throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->UpdateSystemRevokeUrlLeaseId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15758,7 +15758,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRevokeUrlLeaseId", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRevokeUrlLeaseId", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -15774,11 +15774,11 @@ namespace Vault.Api
         /// <param name="systemRevokeLeaseRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysRevokeUrlLeaseIdAsync(string urlLeaseId, SystemRevokeLeaseRequest systemRevokeLeaseRequest = default(SystemRevokeLeaseRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemRevokeUrlLeaseIdAsync(string urlLeaseId, SystemRevokeLeaseRequest systemRevokeLeaseRequest = default(SystemRevokeLeaseRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
-                throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->PostSysRevokeUrlLeaseId");
+                throw new VaultApiException(400, "Missing required parameter 'urlLeaseId' when calling System->UpdateSystemRevokeUrlLeaseId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15805,7 +15805,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRevokeUrlLeaseId", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRevokeUrlLeaseId", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -15818,7 +15818,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysRotate()
+        public ApiResponse<Object> UpdateSystemRotate()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15841,7 +15841,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRotate", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRotate", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -15855,7 +15855,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysRotateAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemRotateAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15879,7 +15879,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRotate", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRotate", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -15893,7 +15893,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemRotateConfigRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysRotateConfig(SystemRotateConfigRequest systemRotateConfigRequest = default(SystemRotateConfigRequest))
+        public ApiResponse<Object> UpdateSystemRotateConfig(SystemRotateConfigRequest systemRotateConfigRequest = default(SystemRotateConfigRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15918,7 +15918,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRotateConfig", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRotateConfig", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -15933,7 +15933,7 @@ namespace Vault.Api
         /// <param name="systemRotateConfigRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysRotateConfigAsync(SystemRotateConfigRequest systemRotateConfigRequest = default(SystemRotateConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemRotateConfigAsync(SystemRotateConfigRequest systemRotateConfigRequest = default(SystemRotateConfigRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15959,7 +15959,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysRotateConfig", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemRotateConfig", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -15972,7 +15972,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysSeal()
+        public ApiResponse<Object> UpdateSystemSeal()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15995,7 +15995,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysSeal", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemSeal", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -16009,7 +16009,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysSealAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemSealAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -16033,7 +16033,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysSeal", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemSeal", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -16046,7 +16046,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysStepDown()
+        public ApiResponse<Object> UpdateSystemStepDown()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -16069,7 +16069,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysStepDown", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemStepDown", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -16083,7 +16083,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysStepDownAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemStepDownAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -16107,7 +16107,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysStepDown", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemStepDown", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -16121,7 +16121,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemToolsHashRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysToolsHash(SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest))
+        public ApiResponse<Object> UpdateSystemToolsHash(SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -16146,7 +16146,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysToolsHash", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemToolsHash", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -16161,7 +16161,7 @@ namespace Vault.Api
         /// <param name="systemToolsHashRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysToolsHashAsync(SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemToolsHashAsync(SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -16187,7 +16187,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysToolsHash", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemToolsHash", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -16202,11 +16202,11 @@ namespace Vault.Api
         /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
         /// <param name="systemToolsHashRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysToolsHashUrlalgorithm(string urlalgorithm, SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest))
+        public ApiResponse<Object> UpdateSystemToolsHashUrlalgorithm(string urlalgorithm, SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest))
         {
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
-                throw new VaultApiException(400, "Missing required parameter 'urlalgorithm' when calling System->PostSysToolsHashUrlalgorithm");
+                throw new VaultApiException(400, "Missing required parameter 'urlalgorithm' when calling System->UpdateSystemToolsHashUrlalgorithm");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -16232,7 +16232,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysToolsHashUrlalgorithm", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemToolsHashUrlalgorithm", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -16248,11 +16248,11 @@ namespace Vault.Api
         /// <param name="systemToolsHashRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysToolsHashUrlalgorithmAsync(string urlalgorithm, SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemToolsHashUrlalgorithmAsync(string urlalgorithm, SystemToolsHashRequest systemToolsHashRequest = default(SystemToolsHashRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
-                throw new VaultApiException(400, "Missing required parameter 'urlalgorithm' when calling System->PostSysToolsHashUrlalgorithm");
+                throw new VaultApiException(400, "Missing required parameter 'urlalgorithm' when calling System->UpdateSystemToolsHashUrlalgorithm");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -16279,7 +16279,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysToolsHashUrlalgorithm", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemToolsHashUrlalgorithm", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -16293,7 +16293,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysToolsRandom(SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest))
+        public ApiResponse<Object> UpdateSystemToolsRandom(SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -16318,7 +16318,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysToolsRandom", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemToolsRandom", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -16333,7 +16333,7 @@ namespace Vault.Api
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysToolsRandomAsync(SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemToolsRandomAsync(SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -16359,7 +16359,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysToolsRandom", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemToolsRandom", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -16374,11 +16374,11 @@ namespace Vault.Api
         /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysToolsRandomSource(string source, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest))
+        public ApiResponse<Object> UpdateSystemToolsRandomSource(string source, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest))
         {
             // verify the required parameter 'source' is set
             if (source == null)
-                throw new VaultApiException(400, "Missing required parameter 'source' when calling System->PostSysToolsRandomSource");
+                throw new VaultApiException(400, "Missing required parameter 'source' when calling System->UpdateSystemToolsRandomSource");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -16404,7 +16404,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysToolsRandomSource", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemToolsRandomSource", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -16420,11 +16420,11 @@ namespace Vault.Api
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysToolsRandomSourceAsync(string source, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemToolsRandomSourceAsync(string source, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'source' is set
             if (source == null)
-                throw new VaultApiException(400, "Missing required parameter 'source' when calling System->PostSysToolsRandomSource");
+                throw new VaultApiException(400, "Missing required parameter 'source' when calling System->UpdateSystemToolsRandomSource");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -16451,7 +16451,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysToolsRandomSource", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemToolsRandomSource", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -16467,15 +16467,15 @@ namespace Vault.Api
         /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysToolsRandomSourceUrlbytes(string source, string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest))
+        public ApiResponse<Object> UpdateSystemToolsRandomSourceUrlbytes(string source, string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest))
         {
             // verify the required parameter 'source' is set
             if (source == null)
-                throw new VaultApiException(400, "Missing required parameter 'source' when calling System->PostSysToolsRandomSourceUrlbytes");
+                throw new VaultApiException(400, "Missing required parameter 'source' when calling System->UpdateSystemToolsRandomSourceUrlbytes");
 
             // verify the required parameter 'urlbytes' is set
             if (urlbytes == null)
-                throw new VaultApiException(400, "Missing required parameter 'urlbytes' when calling System->PostSysToolsRandomSourceUrlbytes");
+                throw new VaultApiException(400, "Missing required parameter 'urlbytes' when calling System->UpdateSystemToolsRandomSourceUrlbytes");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -16502,7 +16502,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysToolsRandomSourceUrlbytes", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemToolsRandomSourceUrlbytes", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -16519,15 +16519,15 @@ namespace Vault.Api
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysToolsRandomSourceUrlbytesAsync(string source, string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemToolsRandomSourceUrlbytesAsync(string source, string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'source' is set
             if (source == null)
-                throw new VaultApiException(400, "Missing required parameter 'source' when calling System->PostSysToolsRandomSourceUrlbytes");
+                throw new VaultApiException(400, "Missing required parameter 'source' when calling System->UpdateSystemToolsRandomSourceUrlbytes");
 
             // verify the required parameter 'urlbytes' is set
             if (urlbytes == null)
-                throw new VaultApiException(400, "Missing required parameter 'urlbytes' when calling System->PostSysToolsRandomSourceUrlbytes");
+                throw new VaultApiException(400, "Missing required parameter 'urlbytes' when calling System->UpdateSystemToolsRandomSourceUrlbytes");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -16555,7 +16555,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysToolsRandomSourceUrlbytes", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemToolsRandomSourceUrlbytes", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -16570,11 +16570,11 @@ namespace Vault.Api
         /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysToolsRandomUrlbytes(string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest))
+        public ApiResponse<Object> UpdateSystemToolsRandomUrlbytes(string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest))
         {
             // verify the required parameter 'urlbytes' is set
             if (urlbytes == null)
-                throw new VaultApiException(400, "Missing required parameter 'urlbytes' when calling System->PostSysToolsRandomUrlbytes");
+                throw new VaultApiException(400, "Missing required parameter 'urlbytes' when calling System->UpdateSystemToolsRandomUrlbytes");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -16600,7 +16600,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysToolsRandomUrlbytes", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemToolsRandomUrlbytes", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -16616,11 +16616,11 @@ namespace Vault.Api
         /// <param name="systemToolsRandomRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysToolsRandomUrlbytesAsync(string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemToolsRandomUrlbytesAsync(string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = default(SystemToolsRandomRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'urlbytes' is set
             if (urlbytes == null)
-                throw new VaultApiException(400, "Missing required parameter 'urlbytes' when calling System->PostSysToolsRandomUrlbytes");
+                throw new VaultApiException(400, "Missing required parameter 'urlbytes' when calling System->UpdateSystemToolsRandomUrlbytes");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -16647,7 +16647,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysToolsRandomUrlbytes", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemToolsRandomUrlbytes", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -16661,7 +16661,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemUnsealRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysUnseal(SystemUnsealRequest systemUnsealRequest = default(SystemUnsealRequest))
+        public ApiResponse<Object> UpdateSystemUnseal(SystemUnsealRequest systemUnsealRequest = default(SystemUnsealRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -16686,7 +16686,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysUnseal", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemUnseal", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -16701,7 +16701,7 @@ namespace Vault.Api
         /// <param name="systemUnsealRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysUnsealAsync(SystemUnsealRequest systemUnsealRequest = default(SystemUnsealRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemUnsealAsync(SystemUnsealRequest systemUnsealRequest = default(SystemUnsealRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -16727,7 +16727,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysUnseal", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemUnseal", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -16741,7 +16741,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemWrappingLookupRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysWrappingLookup(SystemWrappingLookupRequest systemWrappingLookupRequest = default(SystemWrappingLookupRequest))
+        public ApiResponse<Object> UpdateSystemWrappingLookup(SystemWrappingLookupRequest systemWrappingLookupRequest = default(SystemWrappingLookupRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -16766,7 +16766,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysWrappingLookup", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemWrappingLookup", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -16781,7 +16781,7 @@ namespace Vault.Api
         /// <param name="systemWrappingLookupRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysWrappingLookupAsync(SystemWrappingLookupRequest systemWrappingLookupRequest = default(SystemWrappingLookupRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemWrappingLookupAsync(SystemWrappingLookupRequest systemWrappingLookupRequest = default(SystemWrappingLookupRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -16807,7 +16807,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysWrappingLookup", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemWrappingLookup", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -16821,7 +16821,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemWrappingRewrapRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysWrappingRewrap(SystemWrappingRewrapRequest systemWrappingRewrapRequest = default(SystemWrappingRewrapRequest))
+        public ApiResponse<Object> UpdateSystemWrappingRewrap(SystemWrappingRewrapRequest systemWrappingRewrapRequest = default(SystemWrappingRewrapRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -16846,7 +16846,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysWrappingRewrap", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemWrappingRewrap", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -16861,7 +16861,7 @@ namespace Vault.Api
         /// <param name="systemWrappingRewrapRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysWrappingRewrapAsync(SystemWrappingRewrapRequest systemWrappingRewrapRequest = default(SystemWrappingRewrapRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemWrappingRewrapAsync(SystemWrappingRewrapRequest systemWrappingRewrapRequest = default(SystemWrappingRewrapRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -16887,7 +16887,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysWrappingRewrap", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemWrappingRewrap", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -16901,7 +16901,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="systemWrappingUnwrapRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysWrappingUnwrap(SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = default(SystemWrappingUnwrapRequest))
+        public ApiResponse<Object> UpdateSystemWrappingUnwrap(SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = default(SystemWrappingUnwrapRequest))
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -16926,7 +16926,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysWrappingUnwrap", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemWrappingUnwrap", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -16941,7 +16941,7 @@ namespace Vault.Api
         /// <param name="systemWrappingUnwrapRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysWrappingUnwrapAsync(SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = default(SystemWrappingUnwrapRequest), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemWrappingUnwrapAsync(SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = default(SystemWrappingUnwrapRequest), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -16967,7 +16967,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysWrappingUnwrap", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemWrappingUnwrap", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -16980,7 +16980,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSysWrappingWrap()
+        public ApiResponse<Object> UpdateSystemWrappingWrap()
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -17003,7 +17003,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysWrappingWrap", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemWrappingWrap", response);
                 if (_exception != null) throw _exception;
             }
 
@@ -17017,7 +17017,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<ApiResponse<Object>> PostSysWrappingWrapAsync(CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<ApiResponse<Object>> UpdateSystemWrappingWrapAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -17041,7 +17041,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("PostSysWrappingWrap", response);
+                Exception _exception = this.ExceptionFactory("UpdateSystemWrappingWrap", response);
                 if (_exception != null) throw _exception;
             }
 

@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **PassthroughRequestHeaders** | **List&lt;string&gt;** | A list of headers to whitelist and pass from the request to the plugin. | [optional] 
 **PluginVersion** | **string** | The semantic version of the plugin to use. | [optional] 
 **TokenType** | **string** | The type of token to issue (service or batch). | [optional] 
+**UserLockoutConfig** | **Object** | The user lockout configuration to pass into the backend. Should be a json object with string keys and values. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

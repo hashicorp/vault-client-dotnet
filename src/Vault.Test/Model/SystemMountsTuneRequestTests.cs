@@ -152,6 +152,14 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'TokenType'
         }
+        /// <summary>
+        /// Test the property 'UserLockoutConfig'
+        /// </summary>
+        [Fact]
+        public void UserLockoutConfigTest()
+        {
+            // TODO unit test for the property 'UserLockoutConfig'
+        }
 
     }
 
