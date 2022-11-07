@@ -34,6 +34,7 @@ namespace Vault.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TransitEncryptRequest" /> class.
         /// </summary>
+        /// <param name="associatedData">When using an AEAD cipher mode, such as AES-GCM, this parameter allows passing associated data (AD/AAD) into the encryption function; this data must be passed on subsequent decryption requests but can be transited in plaintext. On successful decryption, both the ciphertext and the associated data are attested not to have been tampered with..</param>
         /// <param name="context">Base64 encoded context for key derivation. Required if key derivation is enabled.</param>
         /// <param name="convergentEncryption">This parameter will only be used when a key is expected to be created. Whether to support convergent encryption. This is only supported when using a key with key derivation enabled and will require all requests to carry both a context and 96-bit (12-byte) nonce. The given nonce will be used in place of a randomly generated nonce. As a result, when the same context and nonce are supplied, the same ciphertext is generated. It is *very important* when using this mode that you ensure that all nonces are unique for a given context. Failing to do so will severely impact the ciphertext&#39;s security..</param>
         /// <param name="keyVersion">The version of the key to use for encryption. Must be 0 (for latest) or a value greater than or equal to the min_encryption_version configured on the key..</param>
@@ -41,8 +42,9 @@ namespace Vault.Model
         /// <param name="partialFailureResponseCode">Ordinarily, if a batch item fails to encrypt due to a bad input, but other batch items succeed, the HTTP response code is 400 (Bad Request). Some applications may want to treat partial failures differently. Providing the parameter returns the given response code integer instead of a 400 in this case. If all values fail HTTP 400 is still returned..</param>
         /// <param name="plaintext">Base64 encoded plaintext value to be encrypted.</param>
         /// <param name="type">This parameter is required when encryption key is expected to be created. When performing an upsert operation, the type of key to create. Currently, \&quot;aes128-gcm96\&quot; (symmetric) and \&quot;aes256-gcm96\&quot; (symmetric) are the only types supported. Defaults to \&quot;aes256-gcm96\&quot;. (default to &quot;aes256-gcm96&quot;).</param>
-        public TransitEncryptRequest(string context = default(string), bool convergentEncryption = default(bool), int keyVersion = default(int), string nonce = default(string), int partialFailureResponseCode = default(int), string plaintext = default(string), string type = "aes256-gcm96")
+        public TransitEncryptRequest(string associatedData = default(string), string context = default(string), bool convergentEncryption = default(bool), int keyVersion = default(int), string nonce = default(string), int partialFailureResponseCode = default(int), string plaintext = default(string), string type = "aes256-gcm96")
         {
+            this.AssociatedData = associatedData;
             this.Context = context;
             this.ConvergentEncryption = convergentEncryption;
             this.KeyVersion = keyVersion;
@@ -52,6 +54,13 @@ namespace Vault.Model
             // use default value if no "type" provided
             this.Type = type ?? "aes256-gcm96";
         }
+
+        /// <summary>
+        /// When using an AEAD cipher mode, such as AES-GCM, this parameter allows passing associated data (AD/AAD) into the encryption function; this data must be passed on subsequent decryption requests but can be transited in plaintext. On successful decryption, both the ciphertext and the associated data are attested not to have been tampered with.
+        /// </summary>
+        /// <value>When using an AEAD cipher mode, such as AES-GCM, this parameter allows passing associated data (AD/AAD) into the encryption function; this data must be passed on subsequent decryption requests but can be transited in plaintext. On successful decryption, both the ciphertext and the associated data are attested not to have been tampered with.</value>
+        [DataMember(Name = "associated_data", EmitDefaultValue = false)]
+        public string AssociatedData { get; set; }
 
         /// <summary>
         /// Base64 encoded context for key derivation. Required if key derivation is enabled
@@ -110,6 +119,7 @@ namespace Vault.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class TransitEncryptRequest {\n");
+            sb.Append("  AssociatedData: ").Append(AssociatedData).Append("\n");
             sb.Append("  Context: ").Append(Context).Append("\n");
             sb.Append("  ConvergentEncryption: ").Append(ConvergentEncryption).Append("\n");
             sb.Append("  KeyVersion: ").Append(KeyVersion).Append("\n");
@@ -153,6 +163,11 @@ namespace Vault.Model
             }
             return 
                 (
+                    this.AssociatedData == input.AssociatedData ||
+                    (this.AssociatedData != null &&
+                    this.AssociatedData.Equals(input.AssociatedData))
+                ) && 
+                (
                     this.Context == input.Context ||
                     (this.Context != null &&
                     this.Context.Equals(input.Context))
@@ -195,6 +210,10 @@ namespace Vault.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.AssociatedData != null)
+                {
+                    hashCode = (hashCode * 59) + this.AssociatedData.GetHashCode();
+                }
                 if (this.Context != null)
                 {
                     hashCode = (hashCode * 59) + this.Context.GetHashCode();

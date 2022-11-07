@@ -36,7 +36,7 @@ namespace Vault.Model
         /// </summary>
         /// <param name="algorithm">Deprecated: use \&quot;hash_algorithm\&quot; instead. (default to &quot;sha2-256&quot;).</param>
         /// <param name="context">Base64 encoded context for key derivation. Required if key derivation is enabled; currently only available with ed25519 keys..</param>
-        /// <param name="hashAlgorithm">Hash algorithm to use (POST body parameter). Valid values are: * sha1 * sha2-224 * sha2-256 * sha2-384 * sha2-512 * sha3-224 * sha3-256 * sha3-384 * sha3-512 Defaults to \&quot;sha2-256\&quot;. Not valid for all key types. (default to &quot;sha2-256&quot;).</param>
+        /// <param name="hashAlgorithm">Hash algorithm to use (POST body parameter). Valid values are: * sha1 * sha2-224 * sha2-256 * sha2-384 * sha2-512 * sha3-224 * sha3-256 * sha3-384 * sha3-512 * none Defaults to \&quot;sha2-256\&quot;. Not valid for all key types. See note about none on signing path. (default to &quot;sha2-256&quot;).</param>
         /// <param name="hmac">The HMAC, including vault header/key version.</param>
         /// <param name="input">The base64-encoded input data to verify.</param>
         /// <param name="marshalingAlgorithm">The method by which to unmarshal the signature when verifying. The default is &#39;asn1&#39; which is used by openssl and X.509; can also be set to &#39;jws&#39; which is used for JWT signatures in which case the signature is also expected to be url-safe base64 encoding instead of standard base64 encoding. Currently only valid for ECDSA P-256 key types\&quot;. (default to &quot;asn1&quot;).</param>
@@ -79,9 +79,9 @@ namespace Vault.Model
         public string Context { get; set; }
 
         /// <summary>
-        /// Hash algorithm to use (POST body parameter). Valid values are: * sha1 * sha2-224 * sha2-256 * sha2-384 * sha2-512 * sha3-224 * sha3-256 * sha3-384 * sha3-512 Defaults to \&quot;sha2-256\&quot;. Not valid for all key types.
+        /// Hash algorithm to use (POST body parameter). Valid values are: * sha1 * sha2-224 * sha2-256 * sha2-384 * sha2-512 * sha3-224 * sha3-256 * sha3-384 * sha3-512 * none Defaults to \&quot;sha2-256\&quot;. Not valid for all key types. See note about none on signing path.
         /// </summary>
-        /// <value>Hash algorithm to use (POST body parameter). Valid values are: * sha1 * sha2-224 * sha2-256 * sha2-384 * sha2-512 * sha3-224 * sha3-256 * sha3-384 * sha3-512 Defaults to \&quot;sha2-256\&quot;. Not valid for all key types.</value>
+        /// <value>Hash algorithm to use (POST body parameter). Valid values are: * sha1 * sha2-224 * sha2-256 * sha2-384 * sha2-512 * sha3-224 * sha3-256 * sha3-384 * sha3-512 * none Defaults to \&quot;sha2-256\&quot;. Not valid for all key types. See note about none on signing path.</value>
         [DataMember(Name = "hash_algorithm", EmitDefaultValue = false)]
         public string HashAlgorithm { get; set; }
 

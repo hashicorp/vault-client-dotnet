@@ -57,6 +57,14 @@ namespace Vault.Test.Model
 
 
         /// <summary>
+        /// Test the property 'AssociatedData'
+        /// </summary>
+        [Fact]
+        public void AssociatedDataTest()
+        {
+            // TODO unit test for the property 'AssociatedData'
+        }
+        /// <summary>
         /// Test the property 'Ciphertext'
         /// </summary>
         [Fact]

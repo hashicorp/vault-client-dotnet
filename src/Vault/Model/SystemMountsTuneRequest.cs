@@ -46,7 +46,8 @@ namespace Vault.Model
         /// <param name="passthroughRequestHeaders">A list of headers to whitelist and pass from the request to the plugin..</param>
         /// <param name="pluginVersion">The semantic version of the plugin to use..</param>
         /// <param name="tokenType">The type of token to issue (service or batch)..</param>
-        public SystemMountsTuneRequest(List<string> allowedManagedKeys = default(List<string>), List<string> allowedResponseHeaders = default(List<string>), List<string> auditNonHmacRequestKeys = default(List<string>), List<string> auditNonHmacResponseKeys = default(List<string>), string defaultLeaseTtl = default(string), string description = default(string), string listingVisibility = default(string), string maxLeaseTtl = default(string), Object options = default(Object), List<string> passthroughRequestHeaders = default(List<string>), string pluginVersion = default(string), string tokenType = default(string))
+        /// <param name="userLockoutConfig">The user lockout configuration to pass into the backend. Should be a json object with string keys and values..</param>
+        public SystemMountsTuneRequest(List<string> allowedManagedKeys = default(List<string>), List<string> allowedResponseHeaders = default(List<string>), List<string> auditNonHmacRequestKeys = default(List<string>), List<string> auditNonHmacResponseKeys = default(List<string>), string defaultLeaseTtl = default(string), string description = default(string), string listingVisibility = default(string), string maxLeaseTtl = default(string), Object options = default(Object), List<string> passthroughRequestHeaders = default(List<string>), string pluginVersion = default(string), string tokenType = default(string), Object userLockoutConfig = default(Object))
         {
             this.AllowedManagedKeys = allowedManagedKeys;
             this.AllowedResponseHeaders = allowedResponseHeaders;
@@ -60,6 +61,7 @@ namespace Vault.Model
             this.PassthroughRequestHeaders = passthroughRequestHeaders;
             this.PluginVersion = pluginVersion;
             this.TokenType = tokenType;
+            this.UserLockoutConfig = userLockoutConfig;
         }
 
         /// <summary>
@@ -146,6 +148,13 @@ namespace Vault.Model
         public string TokenType { get; set; }
 
         /// <summary>
+        /// The user lockout configuration to pass into the backend. Should be a json object with string keys and values.
+        /// </summary>
+        /// <value>The user lockout configuration to pass into the backend. Should be a json object with string keys and values.</value>
+        [DataMember(Name = "user_lockout_config", EmitDefaultValue = false)]
+        public Object UserLockoutConfig { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -165,6 +174,7 @@ namespace Vault.Model
             sb.Append("  PassthroughRequestHeaders: ").Append(PassthroughRequestHeaders).Append("\n");
             sb.Append("  PluginVersion: ").Append(PluginVersion).Append("\n");
             sb.Append("  TokenType: ").Append(TokenType).Append("\n");
+            sb.Append("  UserLockoutConfig: ").Append(UserLockoutConfig).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -264,6 +274,11 @@ namespace Vault.Model
                     this.TokenType == input.TokenType ||
                     (this.TokenType != null &&
                     this.TokenType.Equals(input.TokenType))
+                ) && 
+                (
+                    this.UserLockoutConfig == input.UserLockoutConfig ||
+                    (this.UserLockoutConfig != null &&
+                    this.UserLockoutConfig.Equals(input.UserLockoutConfig))
                 );
         }
 
@@ -323,6 +338,10 @@ namespace Vault.Model
                 if (this.TokenType != null)
                 {
                     hashCode = (hashCode * 59) + this.TokenType.GetHashCode();
+                }
+                if (this.UserLockoutConfig != null)
+                {
+                    hashCode = (hashCode * 59) + this.UserLockoutConfig.GetHashCode();
                 }
                 return hashCode;
             }
