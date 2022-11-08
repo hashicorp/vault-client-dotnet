@@ -1,9 +1,8 @@
 name: Release to Nuget
 
 on:
-  push:
-    tags:
-      - "v*" # Push events to matching v*, i.e. v1.0, v2.0.2
+  release:
+    types: [published]
 
 jobs:
   build:
