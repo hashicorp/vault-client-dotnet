@@ -75,7 +75,7 @@ namespace Vault.Client
         {
             if (serverCertificate == null && serverCertificateCollection == null)
             {
-                throw new ArgumentNullException("Client certificate or client certificate collection must be specified");
+                throw new ArgumentNullException("Server certificate or server certificate collection must be specified");
             }
 
             ClientCertificate = clientCertificate;

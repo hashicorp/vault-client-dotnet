@@ -64,12 +64,12 @@ namespace {{packageName}}.Client
         /// </summary>
         public TLSConfiguration(X509Certificate2 serverCertificate = null,
                                 X509CertificateCollection serverCertificateCollection = null,
-                                    X509Certificate2 clientCertificate = null,
-                                    X509CertificateCollection clientCertificateCollection = null)
+                                X509Certificate2 clientCertificate = null,
+                                X509CertificateCollection clientCertificateCollection = null)
         {
             if (serverCertificate == null && serverCertificateCollection == null)
             {
-                throw new ArgumentNullException("Client certificate or client certificate collection must be specified");
+                throw new ArgumentNullException("Server certificate or server certificate collection must be specified");
             }
 
             ClientCertificate = clientCertificate;
