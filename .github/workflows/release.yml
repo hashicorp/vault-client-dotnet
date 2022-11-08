@@ -21,12 +21,13 @@ jobs:
         run: dotnet pack -c Release -p:PackageVersion=${{ github.event.release.tag_name }}
       - name: Add Artifactory Source
         with: # Pull Artifactory Secrets
-          artifactory_user: ${{ secrets.ARTIFACTORY_USER_NAME }}
-          artifactory_pass: ${{ secrets.ARTIFACTORY_PASSWORD }}
+          ARTIFACTORY_USER: ${{ secrets.ARTIFACTORY_USER_NAME }}
+          ARTIFACTORY_PASSWORD: ${{ secrets.ARTIFACTORY_PASSWORD }}
+          ARTIFACTORY_REPO: ${{ secrets.ARTIFACTORY_REPO_URL }}
         run: |
           nuget sources add -Name Artifactory 
-          -Source https://artifactory.hashicorp.engineering/artifactory/api/nuget/v3/vault-devex-nuget-local
-          -username artifactory_user
-          -password artifactory_pass
+          -Source "$ARTIFACTORY_REPO"
+          -username "$ARTIFACTORY_USER"
+          -password "$ARTIFACTORY_PASSWORD"
       - name: Push Nuget Package
         run: nuget push **/*.nupkg -src Artifactory
