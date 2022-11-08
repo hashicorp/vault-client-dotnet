@@ -7,7 +7,26 @@ on:
 
 jobs:
   build:
-    name: Create Release
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dotnet-version: ["3.1.x"]
+    name: Create Release
+
     steps:
-      uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+      - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v2
+      - name: Create Nuget Package
+        run: dotnet pack -c Release
+      - name: Add Artifactory Source
+        with: # Pull Artifactory Secrets
+          artifactory_user: ${{ secrets.ARTIFACTORY_USER_NAME }}
+          artifactory_pass: ${{ secrets.ARTIFACTORY_PASSWORD }}
+        run: |
+          nuget sources add -Name Artifactory 
+          -Source https://artifactory.hashicorp.engineering/artifactory/api/nuget/v3/vault-devex-nuget-local
+          -username artifactory_user
+          -password artifactory_pass
+      - name: Push Nuget Package
+        run: nuget push VaultClient.0.0.1.nupkg -src Artifactory
