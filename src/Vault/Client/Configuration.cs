@@ -68,11 +68,12 @@ namespace Vault.Client
         /// <summary>
         /// TLS Configuration object constructor
         /// </summary>
-        public TLSConfiguration(X509Certificate2 serverCertificate,
+        public TLSConfiguration(X509Certificate2 serverCertificate = null,
+                                X509CertificateCollection serverCertificateCollection = null,
                                     X509Certificate2 clientCertificate = null,
                                     X509CertificateCollection clientCertificateCollection = null)
         {
-            if (clientCertificate == null && clientCertificateCollection == null)
+            if (serverCertificate == null && serverCertificateCollection == null)
             {
                 throw new ArgumentNullException("Client certificate or client certificate collection must be specified");
             }
@@ -80,6 +81,7 @@ namespace Vault.Client
             ClientCertificate = clientCertificate;
             ClientCertificateCollection = clientCertificateCollection;
             ServerCertificate = serverCertificate;
+            ServerCertificateCollection = serverCertificateCollection;
         }
     }
 
