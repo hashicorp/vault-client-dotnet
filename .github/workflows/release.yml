@@ -29,4 +29,4 @@ jobs:
           -username artifactory_user
           -password artifactory_pass
       - name: Push Nuget Package
-        run: nuget push VaultClient.0.0.1.nupkg -src Artifactory
+        run: nuget push **/*.nupkg -src Artifactory
