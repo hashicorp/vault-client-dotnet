@@ -18,7 +18,7 @@ jobs:
       - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
         uses: actions/setup-dotnet@v2
       - name: Create Nuget Package
-        run: dotnet pack -c Release
+        run: dotnet pack -c Release -p:PackageVersion=${{ github.event.release.tag_name }}
       - name: Add Artifactory Source
         with: # Pull Artifactory Secrets
           artifactory_user: ${{ secrets.ARTIFACTORY_USER_NAME }}
