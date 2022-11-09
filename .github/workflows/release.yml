@@ -21,8 +21,8 @@ jobs:
       - name: Add Artifactory Source
         run: |
           nuget sources add 
-          -Name Artifactory 
-          -Source ${{ secrets.ARTIFACTORY_REPO_URL }}
+          -name Artifactory 
+          -source ${{ secrets.ARTIFACTORY_REPO_URL }}
           -username ${{ secrets.ARTIFACTORY_USER_NAME }}
           -password ${{ secrets.ARTIFACTORY_PASSWORD }}
       - name: Push Nuget Package
