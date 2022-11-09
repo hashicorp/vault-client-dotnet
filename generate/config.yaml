@@ -1,5 +1,7 @@
 additionalProperties:
   supportsRetry: true
+  packageAuthors: Vault DevEx
+  packageCompany: Hashicorp
   packageName: Vault
   packageVersion: 0.0.1
 library: httpclient

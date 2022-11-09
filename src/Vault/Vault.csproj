@@ -6,8 +6,8 @@
     <AssemblyName>Vault</AssemblyName>
     <PackageId>Vault</PackageId>
     <OutputType>Library</OutputType>
-    <Authors>OpenAPI</Authors>
-    <Company>OpenAPI</Company>
+    <Authors>Vault DevEx</Authors>
+    <Company>Hashicorp</Company>
     <AssemblyTitle>OpenAPI Library</AssemblyTitle>
     <Description>A library generated from a OpenAPI doc</Description>
     <Copyright>No Copyright</Copyright>
