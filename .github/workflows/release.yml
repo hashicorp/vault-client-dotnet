@@ -20,7 +20,8 @@ jobs:
         run: dotnet pack -c Release -p:PackageVersion=${{ github.event.release.tag_name }} --include-symbols
       - name: Add Artifactory Source
         run: |
-          dotnet nuget sources add -Name Artifactory 
+          dotnet nuget add source 
+          -Name Artifactory 
           -Source ${{ secrets.ARTIFACTORY_USER_NAME }}
           -username ${{ secrets.ARTIFACTORY_PASSWORD }}
           -password ${{ secrets.ARTIFACTORY_REPO_URL }}
