@@ -207,7 +207,22 @@ namespace {{packageName}}.Client
                 Func<object, X509Certificate, X509Chain, SslPolicyErrors, bool> ValidateServiceCertficate =
                 delegate (object sender, X509Certificate serviceCertificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
                 {
-                    return serviceCertificate.Equals(TLSConfiguration.ServerCertificate);
+                    if (TLSConfiguration.ServerCertificate != null)
+                    {
+                        return serviceCertificate.Equals(TLSConfiguration.ServerCertificate);
+                    }
+                    else if (TLSConfiguration.ServerCertificateCollection != null)
+                    {
+                        foreach (X509Certificate2 cert in TLSConfiguration.ServerCertificateCollection)
+                        {
+                            if (serviceCertificate.Equals(cert))
+                            {
+                                return true;
+                            }
+                        }
+                    }
+
+                    return true;
                 };
 
                 httpClientHandler.ClientCertificateOptions = ClientCertificateOption.Manual;

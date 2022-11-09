@@ -70,8 +70,8 @@ namespace Vault.Client
         /// </summary>
         public TLSConfiguration(X509Certificate2 serverCertificate = null,
                                 X509CertificateCollection serverCertificateCollection = null,
-                                    X509Certificate2 clientCertificate = null,
-                                    X509CertificateCollection clientCertificateCollection = null)
+                                X509Certificate2 clientCertificate = null,
+                                X509CertificateCollection clientCertificateCollection = null)
         {
             if (serverCertificate == null && serverCertificateCollection == null)
             {
@@ -197,7 +197,22 @@ namespace Vault.Client
                 Func<object, X509Certificate, X509Chain, SslPolicyErrors, bool> ValidateServiceCertficate =
                 delegate (object sender, X509Certificate serviceCertificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
                 {
-                    return serviceCertificate.Equals(TLSConfiguration.ServerCertificate);
+                    if (TLSConfiguration.ServerCertificate != null)
+                    {
+                        return serviceCertificate.Equals(TLSConfiguration.ServerCertificate);
+                    }
+                    else if (TLSConfiguration.ServerCertificateCollection != null)
+                    {
+                        foreach (X509Certificate2 cert in TLSConfiguration.ServerCertificateCollection)
+                        {
+                            if (serviceCertificate.Equals(cert))
+                            {
+                                return true;
+                            }
+                        }
+                    }
+
+                    return true;
                 };
 
                 httpClientHandler.ClientCertificateOptions = ClientCertificateOption.Manual;
