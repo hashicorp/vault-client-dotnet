@@ -15,12 +15,76 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Security;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace Vault.Client
-{
+{    
+    /// <summary>
+    /// Represents the TLS Configuration
+    /// </summary>
+    public class TLSConfiguration
+    {
+        /// <summary>
+        /// X509 Certificate for the client 
+        /// <remarks>
+        /// This is a certificate used to authenticate
+        /// with Vault via the cert auth method
+        /// </remarks>
+        /// <see>see https://www.vaultproject.io/docs/auth/cert</see>
+        /// </summary>
+        public X509Certificate2 ClientCertificate = null;
+
+        /// <summary>
+        /// X509 Certificate collection for the client
+        /// <remarks>
+        /// This is a certificate used to authenticate
+        /// with Vault via the cert auth method
+        /// </remarks>
+        /// <see>see https://www.vaultproject.io/docs/auth/cert</see>
+        /// </summary>
+        public X509CertificateCollection ClientCertificateCollection = null;
+
+        /// <summary>
+        /// X509 Certificate for the server
+        /// <remarks>
+        /// This is a certificate used which the client
+        /// will use to verify the Vault server TLS Certificate
+        /// </remarks>
+        /// </summary>
+        public X509Certificate2 ServerCertificate = null;
+
+        /// <summary>
+        /// X509 Certificate collection for the server
+        /// <remarks>
+        /// This is a certificate collection used which the client
+        /// will use to verify the Vault server TLS Certificate
+        /// </remarks>
+        /// </summary>
+        public X509CertificateCollection ServerCertificateCollection = null;
+
+        /// <summary>
+        /// TLS Configuration object constructor
+        /// </summary>
+        public TLSConfiguration(X509Certificate2 serverCertificate = null,
+                                X509CertificateCollection serverCertificateCollection = null,
+                                X509Certificate2 clientCertificate = null,
+                                X509CertificateCollection clientCertificateCollection = null)
+        {
+            if (serverCertificate == null && serverCertificateCollection == null)
+            {
+                throw new ArgumentNullException("Server certificate or server certificate collection must be specified");
+            }
+
+            ClientCertificate = clientCertificate;
+            ClientCertificateCollection = clientCertificateCollection;
+            ServerCertificate = serverCertificate;
+            ServerCertificateCollection = serverCertificateCollection;
+        }
+    }
+
     /// <summary>
     /// Represents a set of configuration settings
     /// </summary>
@@ -96,14 +160,66 @@ namespace Vault.Client
         /// <summary>
         /// Initializes a new instance of the <see cref="Configuration" /> class
         /// </summary>
-        public Configuration(string basePath, 
+        public Configuration(string basePath,
                             HttpClientHandler httpClientHandler = null,
                             TimeSpan? timeout = null,
                             RetryConfiguration retryConfiguration = null,
-                            RateLimitConfiguration rateLimitConfiguration = null)
+                            RateLimitConfiguration rateLimitConfiguration = null,
+                            TLSConfiguration tlsConfiguration = null)
         {
             if (string.IsNullOrEmpty(basePath)) throw new ArgumentException("Cannot be empty", "BasePath");
             HttpClientHandler = httpClientHandler ?? new HttpClientHandler();
+
+            if (tlsConfiguration != null)
+            {
+                TLSConfiguration = tlsConfiguration;
+                if (TLSConfiguration.ClientCertificate != null)
+                {
+                    if (!TLSConfiguration.ClientCertificate.HasPrivateKey)
+                    {
+                        throw new ArgumentException("Certificate does not contain a private key");
+                    }
+                    httpClientHandler.ClientCertificates.Add(TLSConfiguration.ClientCertificate);
+                }
+                else if (TLSConfiguration.ClientCertificateCollection != null)
+                {
+                    foreach (X509Certificate2 cert in TLSConfiguration.ClientCertificateCollection)
+                    {
+                        if (!TLSConfiguration.ClientCertificate.HasPrivateKey)
+                        {
+                            throw new ArgumentException("Certificate does not contain a private key");
+                        }
+                    }
+
+                    httpClientHandler.ClientCertificates.AddRange(TLSConfiguration.ClientCertificateCollection);
+                }
+
+                Func<object, X509Certificate, X509Chain, SslPolicyErrors, bool> ValidateServiceCertficate =
+                delegate (object sender, X509Certificate serviceCertificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
+                {
+                    if (TLSConfiguration.ServerCertificate != null)
+                    {
+                        return serviceCertificate.Equals(TLSConfiguration.ServerCertificate);
+                    }
+                    else if (TLSConfiguration.ServerCertificateCollection != null)
+                    {
+                        foreach (X509Certificate2 cert in TLSConfiguration.ServerCertificateCollection)
+                        {
+                            if (serviceCertificate.Equals(cert))
+                            {
+                                return true;
+                            }
+                        }
+                    }
+
+                    return true;
+                };
+
+                httpClientHandler.ClientCertificateOptions = ClientCertificateOption.Manual;
+                httpClientHandler.ServerCertificateCustomValidationCallback = ValidateServiceCertficate;
+            }
+
+
             timeout = timeout ?? TimeSpan.FromSeconds(100);
             RetryConfiguration = retryConfiguration ?? new RetryConfiguration(5, TimeSpan.FromMilliseconds(500));
             RateLimitConfiguration = rateLimitConfiguration ?? new RateLimitConfiguration(50, TimeSpan.FromSeconds(5));
@@ -120,7 +236,8 @@ namespace Vault.Client
         /// <summary>
         /// Gets or sets the base path for API access.
         /// </summary>
-        public virtual string BasePath {
+        public virtual string BasePath 
+        {
             get { return _basePath; }
             set { _basePath = value; }
         }
@@ -144,7 +261,12 @@ namespace Vault.Client
         /// The Retry Configuration that creates a polly policy
         /// </summary>
         public readonly RetryConfiguration RetryConfiguration;
-        
+
+        /// <summary>
+        /// The TLS Configuration that holds client and server Certificates
+        /// </summary>
+        public readonly TLSConfiguration TLSConfiguration;
+
         /// <summary>
         /// Gets or sets the default header.
         /// </summary>
@@ -212,13 +334,7 @@ namespace Vault.Client
 
             return apiKeyValue;
         }
-
-        /// <summary>
-        /// Gets or sets certificate collection to be sent with requests.
-        /// </summary>
-        /// <value>X509 Certificate collection.</value>
-        public X509CertificateCollection ClientCertificates { get; set; }
-
+ 
         /// <summary>
         /// Gets or sets the access token for OAuth2 authentication.
         ///
