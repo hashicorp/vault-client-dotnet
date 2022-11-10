@@ -31,7 +31,7 @@ You can add this Nuget feed as a source with your Nuget with the following comma
 
 ```shell-session
 nuget sources add \
-    -name Artifactory \ 
+    -name HashicorpArtifactory \ 
     -source https://artifactory.hashicorp.engineering/ui/repos/tree/General/vault-devex-nuget-local \
     -username "myusername" \
     -password "mypassword"
@@ -40,7 +40,7 @@ nuget sources add \
 You can then install the package via the following command.
 
 ```shell-session
- nuget install Vault -source Artifactory -Version "PackageVersion"
+ nuget install Vault -source HashicorpArtifactory -Version "PackageVersion"
 ```
 
 ### Frameworks supported
