@@ -26,6 +26,23 @@ A C# client library [generated][openapi-generator] from `OpenAPI`
 
 ## Installation
 
+The Nuget packages are hosted in an internal Nuget feed that can be found in [Artifactory][artifactory].
+You can add this Nuget feed as a source with your Nuget with the following command
+
+```
+nuget sources add 
+    -name Artifactory 
+    -source https://artifactory.hashicorp.engineering/ui/repos/tree/General/vault-devex-nuget-local
+    -username "myusername"
+    -password "mypassword"
+```
+
+You can then install the package via the following command.
+
+```
+ nuget install Vault -source Artifactory -Version "PackageVersion"
+```
+
 ### Frameworks supported
 - .NET Core >=1.0
 - .NET Framework >=4.6
@@ -43,6 +60,8 @@ Install-Package Newtonsoft.Json
 Install-Package JsonSubTypes
 Install-Package System.ComponentModel.Annotations
 ```
+
+### Local Development
 
 Generate the DLL using your preferred tool (e.g. `dotnet build`)
 
@@ -1148,6 +1167,7 @@ Class | Method | HTTP request | Description
 
 All endpoints do not require authorization.
 
+[artifactory]:                  https://artifactory.hashicorp.engineering/ui/repos/tree/General/vault-devex-nuget-local
 [hashicorp]:                    https://www.hashicorp.com/
 [vault]:                        https://www.vaultproject.io/
 [openapi-spec]:                 openapi.json

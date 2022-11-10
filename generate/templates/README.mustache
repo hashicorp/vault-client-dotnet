@@ -26,6 +26,23 @@ A C# client library [generated][openapi-generator] from `OpenAPI`
 
 ## Installation
 
+The Nuget packages are hosted in an internal Nuget feed that can be found in [Artifactory][artifactory].
+You can add this Nuget feed as a source with your Nuget with the following command
+
+```
+nuget sources add 
+    -name Artifactory 
+    -source https://artifactory.hashicorp.engineering/ui/repos/tree/General/vault-devex-nuget-local
+    -username "myusername"
+    -password "mypassword"
+```
+
+You can then install the package via the following command.
+
+```
+ nuget install Vault -source Artifactory -Version "PackageVersion"
+```
+
 ### Frameworks supported
 {{#netStandard}}
 - .NET Core >=1.0
@@ -58,6 +75,8 @@ Install-Package System.ComponentModel.Annotations
 Install-Package CompareNETObjects
 {{/useCompareNetObjects}}
 ```
+
+### Local Development
 
 {{#netStandard}}
 Generate the DLL using your preferred tool (e.g. `dotnet build`)
@@ -247,6 +266,7 @@ Authentication schemes defined for the API:
 
 {{/authMethods}}
 
+[artifactory]:                  https://artifactory.hashicorp.engineering/ui/repos/tree/General/vault-devex-nuget-local
 [hashicorp]:                    https://www.hashicorp.com/
 [vault]:                        https://www.vaultproject.io/
 [openapi-spec]:                 openapi.json
