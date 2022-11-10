@@ -29,17 +29,17 @@ A C# client library [generated][openapi-generator] from `OpenAPI`
 The Nuget packages are hosted in an internal Nuget feed that can be found in [Artifactory][artifactory].
 You can add this Nuget feed as a source with your Nuget with the following command
 
-```
-nuget sources add 
-    -name Artifactory 
-    -source https://artifactory.hashicorp.engineering/ui/repos/tree/General/vault-devex-nuget-local
-    -username "myusername"
+```shell-session
+nuget sources add \
+    -name Artifactory \ 
+    -source https://artifactory.hashicorp.engineering/ui/repos/tree/General/vault-devex-nuget-local \
+    -username "myusername" \
     -password "mypassword"
 ```
 
 You can then install the package via the following command.
 
-```
+```shell-session
  nuget install Vault -source Artifactory -Version "PackageVersion"
 ```
 
