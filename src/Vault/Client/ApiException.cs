@@ -9,6 +9,8 @@
 
 
 using System;
+using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace Vault.Client
 {
@@ -36,6 +38,16 @@ namespace Vault.Client
         public Multimap<string, string> Headers { get; private set; }
 
         /// <summary>
+        /// Gets or sets the list of Api Errors
+        /// </summary>
+        public IEnumerable<string> ApiErrors { get; private set; }
+
+        /// <summary>
+        /// Gets or sets the list of Api Errors
+        /// </summary>
+        public IEnumerable<string> ApiWarnings { get; private set; }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="VaultApiException"/> class.
         /// </summary>
         public VaultApiException() { }
@@ -48,6 +60,25 @@ namespace Vault.Client
         public VaultApiException(int errorCode, string message) : base(message)
         {
             this.ErrorCode = errorCode;
+
+            try
+            {
+                var structured = JsonConvert.DeserializeObject<Dictionary<string, IEnumerable<string>>>(message);
+
+                if (structured.ContainsKey("errors"))
+                {
+                    this.ApiErrors = structured["errors"];
+                }
+
+                if (structured.ContainsKey("warnings"))
+                {
+                    this.ApiWarnings = structured["warnings"];
+                }
+            }
+            catch
+            {
+                // Ignore
+            }
         }
 
         /// <summary>
@@ -62,6 +93,25 @@ namespace Vault.Client
             this.ErrorCode = errorCode;
             this.ErrorContent = errorContent;
             this.Headers = headers;
+
+            try
+            {
+                var structured = JsonConvert.DeserializeObject<Dictionary<string, IEnumerable<string>>>(message);
+
+                if (structured.ContainsKey("errors"))
+                {
+                    this.ApiErrors = structured["errors"];
+                }
+
+                if (structured.ContainsKey("warnings"))
+                {
+                    this.ApiWarnings = structured["warnings"];
+                }
+            }
+            catch
+            {
+                // Ignore
+            }
         }
     }
 
