@@ -29,7 +29,8 @@ A C# client library [generated][openapi-generator] from `OpenAPI`
 The Nuget packages are hosted in an internal Nuget feed that can be found in [Artifactory][artifactory].
 You can use the Dotnet CLI or Nuget CLI to retrieve the package.
 
-You first need to add the private Nuget feed as a source in either CLI:
+You first need to add the private Nuget feed as a source in either CLI. You can also generate an 
+[access token][access-token] that can be used in lieu of a password. 
 
 ```shell-session
 nuget sources add \
@@ -1183,6 +1184,7 @@ Class | Method | HTTP request | Description
 
 All endpoints do not require authorization.
 
+[access-token]                  https://www.jfrog.com/confluence/display/JFROG/User+Profile#UserProfile-IdentityTokenidentitytoken
 [artifactory]:                  https://artifactory.hashicorp.engineering/ui/repos/tree/General/vault-devex-nuget-local
 [hashicorp]:                    https://www.hashicorp.com/
 [vault]:                        https://www.vaultproject.io/
