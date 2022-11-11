@@ -1184,7 +1184,7 @@ Class | Method | HTTP request | Description
 
 All endpoints do not require authorization.
 
-[access-token]                  https://www.jfrog.com/confluence/display/JFROG/User+Profile#UserProfile-IdentityTokenidentitytoken
+[access-token]:                 https://www.jfrog.com/confluence/display/JFROG/User+Profile#UserProfile-IdentityTokenidentitytoken
 [artifactory]:                  https://artifactory.hashicorp.engineering/ui/repos/tree/General/vault-devex-nuget-local
 [hashicorp]:                    https://www.hashicorp.com/
 [vault]:                        https://www.vaultproject.io/
