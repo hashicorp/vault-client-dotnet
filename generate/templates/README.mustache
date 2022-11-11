@@ -48,7 +48,8 @@ dotnet nuget add source https://artifactory.hashicorp.engineering/artifactory/ap
 
 You can then install the package via either of the following commands:
 
-_**Note**_: Make sure to specify the package version. 
+_**Note**_: Make sure to specify the package version. You can find the latest in the Release
+tab in github
 
 ```shell-session
  nuget install Vault -source HashicorpArtifactory -Version "PackageVersion"
