@@ -27,7 +27,9 @@ A C# client library [generated][openapi-generator] from `OpenAPI`
 ## Installation
 
 The Nuget packages are hosted in an internal Nuget feed that can be found in [Artifactory][artifactory].
-You can add this Nuget feed as a source with your Nuget with the following command
+You can use the Dotnet CLI or Nuget CLI to retrieve the package.
+
+You first need to add the private Nuget feed as a source in either CLI:
 
 ```shell-session
 nuget sources add \
@@ -37,10 +39,21 @@ nuget sources add \
     -password "mypassword"
 ```
 
-You can then install the package via the following command.
+```shell-session
+dotnet nuget add source https://artifactory.hashicorp.engineering/artifactory/api/nuget/v3/vault-devex-nuget-local \
+    -n HashicorpArtifactory \
+    -u "myusername" \
+    -p "mypassword"
+```
+
+You can then install the package via either of the following commands:
 
 ```shell-session
  nuget install Vault -source HashicorpArtifactory -Version "PackageVersion"
+```
+
+```shell-session
+dotnet add package Vault -v "PackageVersion" --source HashicorpArtifactory
 ```
 
 ### Frameworks supported
