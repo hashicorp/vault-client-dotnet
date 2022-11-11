@@ -41,19 +41,21 @@ nuget sources add \
 
 ```shell-session
 dotnet nuget add source https://artifactory.hashicorp.engineering/artifactory/api/nuget/v3/vault-devex-nuget-local \
-    -n HashicorpArtifactory \
-    -u "myusername" \
-    -p "mypassword"
+    --name HashicorpArtifactory \
+    --username "myusername" \
+    --password "mypassword"
 ```
 
 You can then install the package via either of the following commands:
+
+_**Note**_: Make sure to specify the package version. 
 
 ```shell-session
  nuget install Vault -source HashicorpArtifactory -Version "PackageVersion"
 ```
 
 ```shell-session
-dotnet add package Vault -v "PackageVersion" --source HashicorpArtifactory
+dotnet add package Vault --source HashicorpArtifactory -version "PackageVersion" 
 ```
 
 ### Frameworks supported
