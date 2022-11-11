@@ -26,6 +26,40 @@ A C# client library [generated][openapi-generator] from `OpenAPI`
 
 ## Installation
 
+The Nuget packages are hosted in an internal Nuget feed that can be found in [Artifactory][artifactory].
+You can use the Dotnet CLI or Nuget CLI to retrieve the package.
+
+You first need to add the private Nuget feed as a source in either CLI. You can also generate an 
+[access token][access-token] that can be used in lieu of a password. 
+
+```shell-session
+nuget sources add \
+    -name HashicorpArtifactory \ 
+    -source https://artifactory.hashicorp.engineering/ui/repos/tree/General/vault-devex-nuget-local \
+    -username "myusername" \
+    -password "mypassword"
+```
+
+```shell-session
+dotnet nuget add source https://artifactory.hashicorp.engineering/artifactory/api/nuget/v3/vault-devex-nuget-local \
+    --name HashicorpArtifactory \
+    --username "myusername" \
+    --password "mypassword"
+```
+
+You can then install the package via either of the following commands:
+
+_**Note**_: Make sure to specify the package version. You can find the latest in the Release
+tab in github
+
+```shell-session
+ nuget install Vault -source HashicorpArtifactory -Version "PackageVersion"
+```
+
+```shell-session
+dotnet add package Vault --source HashicorpArtifactory -version "PackageVersion" 
+```
+
 ### Frameworks supported
 - .NET Core >=1.0
 - .NET Framework >=4.6
@@ -43,6 +77,8 @@ Install-Package Newtonsoft.Json
 Install-Package JsonSubTypes
 Install-Package System.ComponentModel.Annotations
 ```
+
+### Local Development
 
 Generate the DLL using your preferred tool (e.g. `dotnet build`)
 
@@ -1148,6 +1184,8 @@ Class | Method | HTTP request | Description
 
 All endpoints do not require authorization.
 
+[access-token]:                 https://www.jfrog.com/confluence/display/JFROG/User+Profile#UserProfile-IdentityTokenidentitytoken
+[artifactory]:                  https://artifactory.hashicorp.engineering/ui/repos/tree/General/vault-devex-nuget-local
 [hashicorp]:                    https://www.hashicorp.com/
 [vault]:                        https://www.vaultproject.io/
 [openapi-spec]:                 openapi.json
