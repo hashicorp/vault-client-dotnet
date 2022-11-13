@@ -2489,8 +2489,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityAliasIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityAliasIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -2533,8 +2533,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityAliasIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityAliasIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -2575,8 +2575,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityEntityAliasIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityEntityAliasIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -2619,8 +2619,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityEntityAliasIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityEntityAliasIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -2661,8 +2661,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityEntityIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityEntityIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -2705,8 +2705,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityEntityIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityEntityIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -2747,8 +2747,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityEntityNameName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityEntityNameName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -2791,8 +2791,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityEntityNameName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityEntityNameName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -2833,8 +2833,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityGroupAliasIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityGroupAliasIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -2877,8 +2877,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityGroupAliasIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityGroupAliasIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -2919,8 +2919,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityGroupIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityGroupIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -2963,8 +2963,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityGroupIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityGroupIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3005,8 +3005,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityGroupNameName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityGroupNameName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3049,8 +3049,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityGroupNameName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityGroupNameName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3091,8 +3091,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaLoginEnforcementName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityMfaLoginEnforcementName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3135,8 +3135,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaLoginEnforcementName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityMfaLoginEnforcementName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3177,8 +3177,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaMethodDuoMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityMfaMethodDuoMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3221,8 +3221,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaMethodDuoMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityMfaMethodDuoMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3263,8 +3263,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaMethodOktaMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityMfaMethodOktaMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3307,8 +3307,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaMethodOktaMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityMfaMethodOktaMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3349,8 +3349,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaMethodPingidMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityMfaMethodPingidMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3393,8 +3393,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaMethodPingidMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityMfaMethodPingidMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3435,8 +3435,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaMethodTotpMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityMfaMethodTotpMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3479,8 +3479,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityMfaMethodTotpMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityMfaMethodTotpMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3521,8 +3521,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcAssignmentName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityOidcAssignmentName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3565,8 +3565,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcAssignmentName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityOidcAssignmentName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3607,8 +3607,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcClientName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityOidcClientName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3651,8 +3651,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcClientName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityOidcClientName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3693,8 +3693,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcKeyName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityOidcKeyName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3737,8 +3737,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcKeyName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityOidcKeyName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3779,8 +3779,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcProviderName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityOidcProviderName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3823,8 +3823,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcProviderName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityOidcProviderName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3865,8 +3865,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityOidcRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3909,8 +3909,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityOidcRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3951,8 +3951,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcScopeName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityOidcScopeName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3995,8 +3995,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityOidcScopeName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityOidcScopeName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4037,8 +4037,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityPersonaIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityPersonaIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4081,8 +4081,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteIdentityPersonaIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteIdentityPersonaIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4123,8 +4123,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityAliasId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityAliasId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4167,8 +4167,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityAliasId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityAliasId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4209,8 +4209,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityEntityAliasId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityEntityAliasId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4253,8 +4253,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityEntityAliasId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityEntityAliasId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4295,8 +4295,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityEntityId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityEntityId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4339,8 +4339,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityEntityId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityEntityId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4381,8 +4381,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityEntityName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityEntityName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4425,8 +4425,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityEntityName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityEntityName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4467,8 +4467,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityGroupAliasId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityGroupAliasId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4511,8 +4511,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityGroupAliasId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityGroupAliasId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4553,8 +4553,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityGroupId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityGroupId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4597,8 +4597,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityGroupId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityGroupId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4639,8 +4639,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityGroupName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityGroupName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4683,8 +4683,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityGroupName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityGroupName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4725,8 +4725,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityMfaLoginEnforcement", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityMfaLoginEnforcement", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4769,8 +4769,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityMfaLoginEnforcement", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityMfaLoginEnforcement", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4811,8 +4811,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityMfaMethod", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityMfaMethod", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4855,8 +4855,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityMfaMethod", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityMfaMethod", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4897,8 +4897,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityMfaMethodDuo", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityMfaMethodDuo", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4941,8 +4941,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityMfaMethodDuo", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityMfaMethodDuo", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4983,8 +4983,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityMfaMethodOkta", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityMfaMethodOkta", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5027,8 +5027,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityMfaMethodOkta", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityMfaMethodOkta", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5069,8 +5069,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityMfaMethodPingid", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityMfaMethodPingid", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5113,8 +5113,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityMfaMethodPingid", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityMfaMethodPingid", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5155,8 +5155,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityMfaMethodTotp", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityMfaMethodTotp", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5199,8 +5199,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityMfaMethodTotp", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityMfaMethodTotp", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5241,8 +5241,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityOidcAssignment", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityOidcAssignment", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5285,8 +5285,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityOidcAssignment", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityOidcAssignment", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5327,8 +5327,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityOidcClient", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityOidcClient", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5371,8 +5371,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityOidcClient", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityOidcClient", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5413,8 +5413,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityOidcKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityOidcKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5457,8 +5457,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityOidcKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityOidcKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5504,8 +5504,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityOidcProvider", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityOidcProvider", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5553,8 +5553,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityOidcProvider", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityOidcProvider", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5595,8 +5595,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityOidcRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityOidcRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5639,8 +5639,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityOidcRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityOidcRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5681,8 +5681,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityOidcScope", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityOidcScope", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5725,8 +5725,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityOidcScope", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityOidcScope", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5767,8 +5767,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityPersonaId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityPersonaId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5811,8 +5811,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListIdentityPersonaId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListIdentityPersonaId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5853,8 +5853,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityAliasIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityAliasIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5897,8 +5897,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityAliasIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityAliasIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5939,8 +5939,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityEntityAliasIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityEntityAliasIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5983,8 +5983,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityEntityAliasIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityEntityAliasIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6025,8 +6025,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityEntityIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityEntityIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6069,8 +6069,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityEntityIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityEntityIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6111,8 +6111,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityEntityNameName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityEntityNameName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6155,8 +6155,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityEntityNameName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityEntityNameName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6197,8 +6197,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityGroupAliasIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityGroupAliasIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6241,8 +6241,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityGroupAliasIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityGroupAliasIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6283,8 +6283,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityGroupIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityGroupIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6327,8 +6327,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityGroupIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityGroupIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6369,8 +6369,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityGroupNameName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityGroupNameName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6413,8 +6413,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityGroupNameName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityGroupNameName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6455,8 +6455,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityMfaLoginEnforcementName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityMfaLoginEnforcementName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6499,8 +6499,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityMfaLoginEnforcementName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityMfaLoginEnforcementName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6541,8 +6541,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityMfaMethodDuoMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityMfaMethodDuoMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6585,8 +6585,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityMfaMethodDuoMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityMfaMethodDuoMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6627,8 +6627,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityMfaMethodMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityMfaMethodMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6671,8 +6671,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityMfaMethodMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityMfaMethodMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6713,8 +6713,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityMfaMethodOktaMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityMfaMethodOktaMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6757,8 +6757,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityMfaMethodOktaMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityMfaMethodOktaMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6799,8 +6799,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityMfaMethodPingidMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityMfaMethodPingidMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6843,8 +6843,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityMfaMethodPingidMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityMfaMethodPingidMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6885,8 +6885,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityMfaMethodTotpMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityMfaMethodTotpMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6929,8 +6929,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityMfaMethodTotpMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityMfaMethodTotpMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6971,8 +6971,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcAssignmentName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcAssignmentName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7015,8 +7015,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcAssignmentName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcAssignmentName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7057,8 +7057,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcClientName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcClientName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7101,8 +7101,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcClientName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcClientName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7137,8 +7137,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7175,8 +7175,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7217,8 +7217,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcKeyName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcKeyName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7261,8 +7261,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcKeyName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcKeyName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7303,8 +7303,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcProviderName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcProviderName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7347,8 +7347,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcProviderName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcProviderName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7389,8 +7389,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcProviderNameAuthorize", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcProviderNameAuthorize", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7433,8 +7433,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcProviderNameAuthorize", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcProviderNameAuthorize", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7475,8 +7475,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcProviderNameUserinfo", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcProviderNameUserinfo", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7519,8 +7519,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcProviderNameUserinfo", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcProviderNameUserinfo", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7561,8 +7561,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcProviderNameWellKnownKeys", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcProviderNameWellKnownKeys", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7605,8 +7605,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcProviderNameWellKnownKeys", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcProviderNameWellKnownKeys", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7647,8 +7647,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcProviderNameWellKnownOpenidConfiguration", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcProviderNameWellKnownOpenidConfiguration", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7691,8 +7691,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcProviderNameWellKnownOpenidConfiguration", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcProviderNameWellKnownOpenidConfiguration", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7733,8 +7733,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7777,8 +7777,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7819,8 +7819,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcScopeName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcScopeName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7863,8 +7863,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcScopeName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcScopeName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7905,8 +7905,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcTokenName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcTokenName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7949,8 +7949,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcTokenName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcTokenName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7985,8 +7985,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcWellKnownKeys", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcWellKnownKeys", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8023,8 +8023,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcWellKnownKeys", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcWellKnownKeys", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8059,8 +8059,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcWellKnownOpenidConfiguration", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcWellKnownOpenidConfiguration", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8097,8 +8097,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityOidcWellKnownOpenidConfiguration", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcWellKnownOpenidConfiguration", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8139,8 +8139,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityPersonaIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityPersonaIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8183,8 +8183,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadIdentityPersonaIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadIdentityPersonaIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8222,8 +8222,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityAlias", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityAlias", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8263,8 +8263,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityAlias", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityAlias", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8308,8 +8308,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityAliasIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityAliasIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8355,8 +8355,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityAliasIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityAliasIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8394,8 +8394,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityEntity", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntity", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8435,8 +8435,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityEntity", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntity", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8474,8 +8474,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityEntityAlias", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntityAlias", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8515,8 +8515,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityEntityAlias", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntityAlias", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8560,8 +8560,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityEntityAliasIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntityAliasIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8607,8 +8607,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityEntityAliasIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntityAliasIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8646,8 +8646,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityEntityBatchDelete", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntityBatchDelete", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8687,8 +8687,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityEntityBatchDelete", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntityBatchDelete", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8732,8 +8732,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityEntityIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntityIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8779,8 +8779,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityEntityIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntityIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8818,8 +8818,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityEntityMerge", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntityMerge", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8859,8 +8859,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityEntityMerge", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntityMerge", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8904,8 +8904,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityEntityNameName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntityNameName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8951,8 +8951,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityEntityNameName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntityNameName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8990,8 +8990,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityGroup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityGroup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9031,8 +9031,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityGroup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityGroup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9070,8 +9070,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityGroupAlias", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityGroupAlias", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9111,8 +9111,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityGroupAlias", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityGroupAlias", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9156,8 +9156,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityGroupAliasIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityGroupAliasIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9203,8 +9203,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityGroupAliasIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityGroupAliasIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9248,8 +9248,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityGroupIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityGroupIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9295,8 +9295,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityGroupIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityGroupIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9340,8 +9340,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityGroupNameName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityGroupNameName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9387,8 +9387,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityGroupNameName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityGroupNameName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9426,8 +9426,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityLookupEntity", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityLookupEntity", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9467,8 +9467,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityLookupEntity", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityLookupEntity", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9506,8 +9506,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityLookupGroup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityLookupGroup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9547,8 +9547,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityLookupGroup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityLookupGroup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9592,8 +9592,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityMfaLoginEnforcementName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaLoginEnforcementName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9639,8 +9639,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityMfaLoginEnforcementName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaLoginEnforcementName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9684,8 +9684,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityMfaMethodDuoMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodDuoMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9731,8 +9731,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityMfaMethodDuoMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodDuoMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9776,8 +9776,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityMfaMethodOktaMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodOktaMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9823,8 +9823,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityMfaMethodOktaMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodOktaMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9868,8 +9868,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityMfaMethodPingidMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodPingidMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9915,8 +9915,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityMfaMethodPingidMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodPingidMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9954,8 +9954,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityMfaMethodTotpAdminDestroy", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodTotpAdminDestroy", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9995,8 +9995,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityMfaMethodTotpAdminDestroy", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodTotpAdminDestroy", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10034,8 +10034,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityMfaMethodTotpAdminGenerate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodTotpAdminGenerate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10075,8 +10075,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityMfaMethodTotpAdminGenerate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodTotpAdminGenerate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10114,8 +10114,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityMfaMethodTotpGenerate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodTotpGenerate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10155,8 +10155,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityMfaMethodTotpGenerate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodTotpGenerate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10200,8 +10200,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityMfaMethodTotpMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodTotpMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10247,8 +10247,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityMfaMethodTotpMethodId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodTotpMethodId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10292,8 +10292,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityOidcAssignmentName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcAssignmentName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10339,8 +10339,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityOidcAssignmentName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcAssignmentName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10384,8 +10384,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityOidcClientName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcClientName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10431,8 +10431,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityOidcClientName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcClientName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10470,8 +10470,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityOidcConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10511,8 +10511,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityOidcConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10550,8 +10550,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityOidcIntrospect", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcIntrospect", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10591,8 +10591,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityOidcIntrospect", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcIntrospect", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10636,8 +10636,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityOidcKeyName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcKeyName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10683,8 +10683,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityOidcKeyName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcKeyName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10728,8 +10728,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityOidcKeyNameRotate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcKeyNameRotate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10775,8 +10775,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityOidcKeyNameRotate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcKeyNameRotate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10820,8 +10820,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityOidcProviderName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcProviderName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10867,8 +10867,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityOidcProviderName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcProviderName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10912,8 +10912,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityOidcProviderNameAuthorize", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcProviderNameAuthorize", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10959,8 +10959,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityOidcProviderNameAuthorize", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcProviderNameAuthorize", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11004,8 +11004,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityOidcProviderNameToken", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcProviderNameToken", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11051,8 +11051,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityOidcProviderNameToken", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcProviderNameToken", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11093,8 +11093,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityOidcProviderNameUserinfo", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcProviderNameUserinfo", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11137,8 +11137,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityOidcProviderNameUserinfo", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcProviderNameUserinfo", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11182,8 +11182,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityOidcRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11229,8 +11229,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityOidcRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11274,8 +11274,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityOidcScopeName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcScopeName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11321,8 +11321,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityOidcScopeName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcScopeName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11360,8 +11360,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityPersona", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityPersona", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11401,8 +11401,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityPersona", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityPersona", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11446,8 +11446,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityPersonaIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityPersonaIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11493,8 +11493,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateIdentityPersonaIdId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateIdentityPersonaIdId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
