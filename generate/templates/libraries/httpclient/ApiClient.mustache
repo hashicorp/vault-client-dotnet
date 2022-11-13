@@ -562,12 +562,7 @@ namespace {{packageName}}.Client
                 }
                 else
                 {
-                    if (policyResult.FinalException != null)
-                    {
-                        throw policyResult.FinalException;
-                    }
-
-                    throw new VaultApiException((int)policyResult.FinalHandledResult.StatusCode, policyResult.FinalHandledResult.ReasonPhrase);
+                    throw policyResult.FinalException;
                 }
             }
             else

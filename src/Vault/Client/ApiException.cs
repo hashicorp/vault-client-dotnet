@@ -23,19 +23,13 @@ namespace Vault.Client
         /// Gets or sets the error code (HTTP status code)
         /// </summary>
         /// <value>The error code (HTTP status code).</value>
-        public int ErrorCode { get; set; }
+        public int StatusCode { get; set; }
 
         /// <summary>
         /// Gets or sets the error content (body json object)
         /// </summary>
         /// <value>The error content (Http response body).</value>
         public object ErrorContent { get; private set; }
-
-        /// <summary>
-        /// Gets or sets the HTTP headers
-        /// </summary>
-        /// <value>HTTP headers</value>
-        public Multimap<string, string> Headers { get; private set; }
 
         /// <summary>
         /// Gets or sets the list of Api Errors
@@ -48,6 +42,12 @@ namespace Vault.Client
         public IEnumerable<string> ApiWarnings { get; private set; }
 
         /// <summary>
+        /// Gets or sets the HTTP headers
+        /// </summary>
+        /// <value>HTTP headers</value>
+        public Multimap<string, string> Headers { get; private set; }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="VaultApiException"/> class.
         /// </summary>
         public VaultApiException() { }
@@ -55,48 +55,29 @@ namespace Vault.Client
         /// <summary>
         /// Initializes a new instance of the <see cref="VaultApiException"/> class.
         /// </summary>
-        /// <param name="errorCode">HTTP status code.</param>
+        /// <param name="statusCode">HTTP status code.</param>
         /// <param name="message">Error message.</param>
-        public VaultApiException(int errorCode, string message) : base(message)
+        public VaultApiException(int statusCode, string message) : base(message)
         {
-            this.ErrorCode = errorCode;
-
-            try
-            {
-                var structured = JsonConvert.DeserializeObject<Dictionary<string, IEnumerable<string>>>(message);
-
-                if (structured.ContainsKey("errors"))
-                {
-                    this.ApiErrors = structured["errors"];
-                }
-
-                if (structured.ContainsKey("warnings"))
-                {
-                    this.ApiWarnings = structured["warnings"];
-                }
-            }
-            catch
-            {
-                // Ignore
-            }
+            this.StatusCode = statusCode;
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="VaultApiException"/> class.
         /// </summary>
-        /// <param name="errorCode">HTTP status code.</param>
+        /// <param name="statusCode">HTTP status code.</param>
         /// <param name="message">Error message.</param>
         /// <param name="errorContent">Error content.</param>
         /// <param name="headers">HTTP Headers.</param>
-        public VaultApiException(int errorCode, string message, object errorContent = null, Multimap<string, string> headers = null) : base(message)
+        public VaultApiException(int statusCode, string message, string errorContent, Multimap<string, string> headers = null) : base(message)
         {
-            this.ErrorCode = errorCode;
+            this.StatusCode = statusCode;
             this.ErrorContent = errorContent;
             this.Headers = headers;
 
             try
             {
-                var structured = JsonConvert.DeserializeObject<Dictionary<string, IEnumerable<string>>>(message);
+                var structured = JsonConvert.DeserializeObject<Dictionary<string, IEnumerable<string>>>(errorContent);
 
                 if (structured.ContainsKey("errors"))
                 {
