@@ -555,12 +555,18 @@ namespace {{packageName}}.Client
                     })
                     .ConfigureAwait(false);
 
+
                 if (policyResult.Outcome == OutcomeType.Successful)
                 {
                     response = policyResult.Result;
                 }
                 else
                 {
+                    if (policyResult.FinalException != null)
+                    {
+                        throw policyResult.FinalException;
+                    }
+
                     throw new VaultApiException((int)policyResult.FinalHandledResult.StatusCode, policyResult.FinalHandledResult.ReasonPhrase);
                 }
             }
