@@ -402,12 +402,17 @@ namespace Vault.Client
 
                 foreach (var header in _requestHeaders.CustomHeaders)
                 {
-                    request.Headers.TryAddWithoutValidation(header.Key, header.Value);
+                    request.Headers.TryAddWithoutValidation("X-Vault-Wrap-TTL", wrapttl.ToString());
                 }
 
                 foreach (string mfaCredential in _requestHeaders.MFACredentials)
                 {
                     request.Headers.TryAddWithoutValidation("X-Vault-MFA", mfaCredential);
+                }
+
+                foreach (var header in _requestHeaders.CustomHeaders)
+                {
+                    request.Headers.TryAddWithoutValidation(header.Key, header.Value);
                 }
             }
 
