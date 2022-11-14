@@ -555,13 +555,14 @@ namespace Vault.Client
                     })
                     .ConfigureAwait(false);
 
+
                 if (policyResult.Outcome == OutcomeType.Successful)
                 {
                     response = policyResult.Result;
                 }
                 else
                 {
-                    throw new VaultApiException((int)policyResult.FinalHandledResult.StatusCode, policyResult.FinalHandledResult.ReasonPhrase);
+                    throw policyResult.FinalException;
                 }
             }
             else

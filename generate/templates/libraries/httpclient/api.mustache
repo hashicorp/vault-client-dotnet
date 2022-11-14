@@ -328,8 +328,8 @@ namespace {{packageName}}.{{apiPackage}}
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("{{operationId}}", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("{{operationId}}", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -510,8 +510,8 @@ namespace {{packageName}}.{{apiPackage}}
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("{{operationId}}", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("{{operationId}}", response);
+                if (exception != null) throw exception;
             }
 
             return response;

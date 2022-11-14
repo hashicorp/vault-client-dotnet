@@ -4202,8 +4202,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4251,8 +4251,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4298,8 +4298,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNameBindSecretId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNameBindSecretId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4347,8 +4347,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNameBindSecretId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNameBindSecretId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4394,8 +4394,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNameBoundCidrList", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNameBoundCidrList", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4443,8 +4443,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNameBoundCidrList", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNameBoundCidrList", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4490,8 +4490,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNamePeriod", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNamePeriod", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4539,8 +4539,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNamePeriod", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNamePeriod", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4586,8 +4586,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNamePolicies", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNamePolicies", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4635,8 +4635,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNamePolicies", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNamePolicies", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4682,8 +4682,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNameSecretIdAccessorDestroy", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNameSecretIdAccessorDestroy", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4731,8 +4731,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNameSecretIdAccessorDestroy", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNameSecretIdAccessorDestroy", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4778,8 +4778,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNameSecretIdBoundCidrs", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNameSecretIdBoundCidrs", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4827,8 +4827,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNameSecretIdBoundCidrs", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNameSecretIdBoundCidrs", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4874,8 +4874,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNameSecretIdDestroy", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNameSecretIdDestroy", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4923,8 +4923,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNameSecretIdDestroy", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNameSecretIdDestroy", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4970,8 +4970,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNameSecretIdNumUses", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNameSecretIdNumUses", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5019,8 +5019,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNameSecretIdNumUses", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNameSecretIdNumUses", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5066,8 +5066,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNameSecretIdTtl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNameSecretIdTtl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5115,8 +5115,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNameSecretIdTtl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNameSecretIdTtl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5162,8 +5162,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNameTokenBoundCidrs", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNameTokenBoundCidrs", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5211,8 +5211,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNameTokenBoundCidrs", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNameTokenBoundCidrs", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5258,8 +5258,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNameTokenMaxTtl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNameTokenMaxTtl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5307,8 +5307,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNameTokenMaxTtl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNameTokenMaxTtl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5354,8 +5354,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNameTokenNumUses", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNameTokenNumUses", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5403,8 +5403,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNameTokenNumUses", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNameTokenNumUses", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5450,8 +5450,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNameTokenTtl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNameTokenTtl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5499,8 +5499,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteApproleRoleRoleNameTokenTtl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteApproleRoleRoleNameTokenTtl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5546,8 +5546,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsConfigCertificateCertName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsConfigCertificateCertName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5595,8 +5595,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsConfigCertificateCertName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsConfigCertificateCertName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5636,8 +5636,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsConfigClient", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsConfigClient", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5679,8 +5679,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsConfigClient", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsConfigClient", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5726,8 +5726,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsConfigStsAccountId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsConfigStsAccountId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5775,8 +5775,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsConfigStsAccountId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsConfigStsAccountId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5816,8 +5816,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsConfigTidyIdentityAccesslist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsConfigTidyIdentityAccesslist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5859,8 +5859,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsConfigTidyIdentityAccesslist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsConfigTidyIdentityAccesslist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5900,8 +5900,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsConfigTidyIdentityWhitelist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsConfigTidyIdentityWhitelist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5943,8 +5943,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsConfigTidyIdentityWhitelist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsConfigTidyIdentityWhitelist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5984,8 +5984,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsConfigTidyRoletagBlacklist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsConfigTidyRoletagBlacklist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6027,8 +6027,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsConfigTidyRoletagBlacklist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsConfigTidyRoletagBlacklist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6068,8 +6068,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsConfigTidyRoletagDenylist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsConfigTidyRoletagDenylist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6111,8 +6111,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsConfigTidyRoletagDenylist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsConfigTidyRoletagDenylist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6158,8 +6158,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsIdentityAccesslistInstanceId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsIdentityAccesslistInstanceId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6207,8 +6207,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsIdentityAccesslistInstanceId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsIdentityAccesslistInstanceId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6254,8 +6254,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsIdentityWhitelistInstanceId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsIdentityWhitelistInstanceId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6303,8 +6303,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsIdentityWhitelistInstanceId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsIdentityWhitelistInstanceId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6350,8 +6350,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsRoleRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsRoleRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6399,8 +6399,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsRoleRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsRoleRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6446,8 +6446,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsRoletagBlacklistRoleTag", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsRoletagBlacklistRoleTag", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6495,8 +6495,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsRoletagBlacklistRoleTag", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsRoletagBlacklistRoleTag", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6542,8 +6542,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsRoletagDenylistRoleTag", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsRoletagDenylistRoleTag", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6591,8 +6591,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsRoletagDenylistRoleTag", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsRoletagDenylistRoleTag", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6638,8 +6638,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteCertCertsName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteCertCertsName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6687,8 +6687,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteCertCertsName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteCertCertsName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6734,8 +6734,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteCertCrlsName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteCertCrlsName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6783,8 +6783,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteCertCrlsName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteCertCrlsName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6830,8 +6830,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteCfRolesRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteCfRolesRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6879,8 +6879,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteCfRolesRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteCfRolesRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6926,8 +6926,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGithubMapTeamsKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteGithubMapTeamsKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6975,8 +6975,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGithubMapTeamsKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteGithubMapTeamsKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7022,8 +7022,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGithubMapUsersKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteGithubMapUsersKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7071,8 +7071,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGithubMapUsersKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteGithubMapUsersKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7118,8 +7118,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteKerberosGroupsName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteKerberosGroupsName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7167,8 +7167,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteKerberosGroupsName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteKerberosGroupsName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7214,8 +7214,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteOidcRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteOidcRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7263,8 +7263,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteOidcRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteOidcRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7310,8 +7310,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteRadiusUsersName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteRadiusUsersName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7359,8 +7359,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteRadiusUsersName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteRadiusUsersName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7406,8 +7406,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteTokenRolesRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteTokenRolesRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7455,8 +7455,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteTokenRolesRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteTokenRolesRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7502,8 +7502,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteUserpassUsersUsername", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteUserpassUsersUsername", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7551,8 +7551,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteUserpassUsersUsername", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteUserpassUsersUsername", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7604,8 +7604,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListApproleRoleRoleNameSecretId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListApproleRoleRoleNameSecretId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7659,8 +7659,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListApproleRoleRoleNameSecretId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListApproleRoleRoleNameSecretId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7706,8 +7706,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListAwsConfigCertificates", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListAwsConfigCertificates", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7755,8 +7755,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListAwsConfigCertificates", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListAwsConfigCertificates", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7802,8 +7802,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListAwsConfigSts", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListAwsConfigSts", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7851,8 +7851,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListAwsConfigSts", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListAwsConfigSts", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7898,8 +7898,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListAwsIdentityAccesslist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListAwsIdentityAccesslist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7947,8 +7947,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListAwsIdentityAccesslist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListAwsIdentityAccesslist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7994,8 +7994,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListAwsIdentityWhitelist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListAwsIdentityWhitelist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8043,8 +8043,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListAwsIdentityWhitelist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListAwsIdentityWhitelist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8090,8 +8090,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListAwsRoletagBlacklist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListAwsRoletagBlacklist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8139,8 +8139,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListAwsRoletagBlacklist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListAwsRoletagBlacklist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8186,8 +8186,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListAwsRoletagDenylist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListAwsRoletagDenylist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8235,8 +8235,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListAwsRoletagDenylist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListAwsRoletagDenylist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8282,8 +8282,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListCertCerts", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListCertCerts", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8331,8 +8331,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListCertCerts", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListCertCerts", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8378,8 +8378,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListGcpRoles", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListGcpRoles", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8427,8 +8427,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListGcpRoles", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListGcpRoles", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8474,8 +8474,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListKerberosGroups", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListKerberosGroups", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8523,8 +8523,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListKerberosGroups", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListKerberosGroups", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8570,8 +8570,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListOidcRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListOidcRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8619,8 +8619,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListOidcRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListOidcRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8666,8 +8666,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListTokenAccessors", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListTokenAccessors", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8715,8 +8715,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListTokenAccessors", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListTokenAccessors", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8762,8 +8762,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListUserpassUsers", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListUserpassUsers", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8811,8 +8811,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListUserpassUsers", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListUserpassUsers", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8858,8 +8858,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8907,8 +8907,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8954,8 +8954,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNameBindSecretId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNameBindSecretId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9003,8 +9003,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNameBindSecretId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNameBindSecretId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9050,8 +9050,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNameBoundCidrList", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNameBoundCidrList", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9099,8 +9099,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNameBoundCidrList", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNameBoundCidrList", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9146,8 +9146,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNameLocalSecretIds", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNameLocalSecretIds", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9195,8 +9195,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNameLocalSecretIds", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNameLocalSecretIds", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9242,8 +9242,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNamePeriod", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNamePeriod", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9291,8 +9291,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNamePeriod", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNamePeriod", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9338,8 +9338,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNamePolicies", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNamePolicies", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9387,8 +9387,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNamePolicies", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNamePolicies", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9434,8 +9434,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNameRoleId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNameRoleId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9483,8 +9483,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNameRoleId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNameRoleId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9530,8 +9530,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNameSecretIdBoundCidrs", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNameSecretIdBoundCidrs", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9579,8 +9579,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNameSecretIdBoundCidrs", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNameSecretIdBoundCidrs", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9626,8 +9626,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNameSecretIdNumUses", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNameSecretIdNumUses", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9675,8 +9675,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNameSecretIdNumUses", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNameSecretIdNumUses", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9722,8 +9722,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNameSecretIdTtl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNameSecretIdTtl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9771,8 +9771,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNameSecretIdTtl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNameSecretIdTtl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9818,8 +9818,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNameTokenBoundCidrs", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNameTokenBoundCidrs", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9867,8 +9867,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNameTokenBoundCidrs", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNameTokenBoundCidrs", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9914,8 +9914,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNameTokenMaxTtl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNameTokenMaxTtl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9963,8 +9963,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNameTokenMaxTtl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNameTokenMaxTtl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10010,8 +10010,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNameTokenNumUses", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNameTokenNumUses", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10059,8 +10059,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNameTokenNumUses", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNameTokenNumUses", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10106,8 +10106,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNameTokenTtl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNameTokenTtl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10155,8 +10155,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadApproleRoleRoleNameTokenTtl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadApproleRoleRoleNameTokenTtl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10202,8 +10202,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsConfigCertificateCertName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsConfigCertificateCertName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10251,8 +10251,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsConfigCertificateCertName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsConfigCertificateCertName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10292,8 +10292,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsConfigClient", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsConfigClient", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10335,8 +10335,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsConfigClient", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsConfigClient", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10376,8 +10376,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsConfigIdentity", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsConfigIdentity", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10419,8 +10419,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsConfigIdentity", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsConfigIdentity", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10466,8 +10466,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsConfigStsAccountId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsConfigStsAccountId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10515,8 +10515,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsConfigStsAccountId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsConfigStsAccountId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10556,8 +10556,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsConfigTidyIdentityAccesslist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsConfigTidyIdentityAccesslist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10599,8 +10599,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsConfigTidyIdentityAccesslist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsConfigTidyIdentityAccesslist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10640,8 +10640,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsConfigTidyIdentityWhitelist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsConfigTidyIdentityWhitelist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10683,8 +10683,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsConfigTidyIdentityWhitelist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsConfigTidyIdentityWhitelist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10724,8 +10724,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsConfigTidyRoletagBlacklist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsConfigTidyRoletagBlacklist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10767,8 +10767,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsConfigTidyRoletagBlacklist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsConfigTidyRoletagBlacklist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10808,8 +10808,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsConfigTidyRoletagDenylist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsConfigTidyRoletagDenylist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10851,8 +10851,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsConfigTidyRoletagDenylist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsConfigTidyRoletagDenylist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10898,8 +10898,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsIdentityAccesslistInstanceId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsIdentityAccesslistInstanceId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10947,8 +10947,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsIdentityAccesslistInstanceId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsIdentityAccesslistInstanceId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10994,8 +10994,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsIdentityWhitelistInstanceId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsIdentityWhitelistInstanceId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11043,8 +11043,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsIdentityWhitelistInstanceId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsIdentityWhitelistInstanceId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11090,8 +11090,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsRoleRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsRoleRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11139,8 +11139,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsRoleRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsRoleRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11186,8 +11186,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsRoletagBlacklistRoleTag", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsRoletagBlacklistRoleTag", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11235,8 +11235,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsRoletagBlacklistRoleTag", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsRoletagBlacklistRoleTag", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11282,8 +11282,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsRoletagDenylistRoleTag", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsRoletagDenylistRoleTag", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11331,8 +11331,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsRoletagDenylistRoleTag", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsRoletagDenylistRoleTag", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11378,8 +11378,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadCertCertsName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadCertCertsName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11427,8 +11427,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadCertCertsName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadCertCertsName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11474,8 +11474,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadCertCrlsName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadCertCrlsName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11523,8 +11523,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadCertCrlsName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadCertCrlsName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11570,8 +11570,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadCfRolesRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadCfRolesRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11619,8 +11619,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadCfRolesRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadCfRolesRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11665,8 +11665,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGithubMapTeams", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGithubMapTeams", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11713,8 +11713,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGithubMapTeams", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGithubMapTeams", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11760,8 +11760,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGithubMapTeamsKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGithubMapTeamsKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11809,8 +11809,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGithubMapTeamsKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGithubMapTeamsKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11855,8 +11855,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGithubMapUsers", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGithubMapUsers", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11903,8 +11903,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGithubMapUsers", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGithubMapUsers", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11950,8 +11950,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGithubMapUsersKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGithubMapUsersKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11999,8 +11999,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGithubMapUsersKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGithubMapUsersKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12040,8 +12040,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadKerberosConfigLdap", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadKerberosConfigLdap", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12083,8 +12083,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadKerberosConfigLdap", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadKerberosConfigLdap", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12130,8 +12130,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadKerberosGroupsName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadKerberosGroupsName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12179,8 +12179,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadKerberosGroupsName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadKerberosGroupsName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12220,8 +12220,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadOidcConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadOidcConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12263,8 +12263,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadOidcConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadOidcConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12304,8 +12304,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadOidcOidcCallback", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadOidcOidcCallback", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12347,8 +12347,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadOidcOidcCallback", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadOidcOidcCallback", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12394,8 +12394,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadOidcRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadOidcRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12443,8 +12443,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadOidcRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadOidcRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12490,8 +12490,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadOktaVerifyNonce", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadOktaVerifyNonce", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12539,8 +12539,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadOktaVerifyNonce", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadOktaVerifyNonce", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12586,8 +12586,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadRadiusUsersName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadRadiusUsersName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12635,8 +12635,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadRadiusUsersName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadRadiusUsersName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12676,8 +12676,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadTokenLookup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadTokenLookup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12719,8 +12719,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadTokenLookup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadTokenLookup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12760,8 +12760,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadTokenLookupSelf", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadTokenLookupSelf", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12803,8 +12803,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadTokenLookupSelf", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadTokenLookupSelf", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12850,8 +12850,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadTokenRolesRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadTokenRolesRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12899,8 +12899,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadTokenRolesRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadTokenRolesRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12946,8 +12946,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadUserpassUsersUsername", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadUserpassUsersUsername", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12995,8 +12995,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadUserpassUsersUsername", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadUserpassUsersUsername", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13045,8 +13045,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13097,8 +13097,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13147,8 +13147,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameBindSecretId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameBindSecretId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13199,8 +13199,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameBindSecretId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameBindSecretId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13249,8 +13249,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameBoundCidrList", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameBoundCidrList", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13301,8 +13301,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameBoundCidrList", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameBoundCidrList", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13351,8 +13351,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameCustomSecretId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameCustomSecretId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13403,8 +13403,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameCustomSecretId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameCustomSecretId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13453,8 +13453,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNamePeriod", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNamePeriod", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13505,8 +13505,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNamePeriod", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNamePeriod", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13555,8 +13555,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNamePolicies", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNamePolicies", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13607,8 +13607,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNamePolicies", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNamePolicies", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13657,8 +13657,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameRoleId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameRoleId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13709,8 +13709,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameRoleId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameRoleId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13759,8 +13759,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13811,8 +13811,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13861,8 +13861,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdAccessorDestroy", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdAccessorDestroy", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13913,8 +13913,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdAccessorDestroy", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdAccessorDestroy", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13963,8 +13963,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdAccessorLookup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdAccessorLookup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14015,8 +14015,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdAccessorLookup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdAccessorLookup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14065,8 +14065,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdBoundCidrs", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdBoundCidrs", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14117,8 +14117,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdBoundCidrs", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdBoundCidrs", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14167,8 +14167,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdDestroy", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdDestroy", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14219,8 +14219,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdDestroy", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdDestroy", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14269,8 +14269,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdLookup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdLookup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14321,8 +14321,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdLookup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdLookup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14371,8 +14371,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdNumUses", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdNumUses", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14423,8 +14423,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdNumUses", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdNumUses", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14473,8 +14473,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdTtl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdTtl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14525,8 +14525,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdTtl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameSecretIdTtl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14575,8 +14575,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameTokenBoundCidrs", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameTokenBoundCidrs", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14627,8 +14627,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameTokenBoundCidrs", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameTokenBoundCidrs", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14677,8 +14677,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameTokenMaxTtl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameTokenMaxTtl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14729,8 +14729,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameTokenMaxTtl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameTokenMaxTtl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14779,8 +14779,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameTokenNumUses", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameTokenNumUses", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14831,8 +14831,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameTokenNumUses", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameTokenNumUses", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14881,8 +14881,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameTokenTtl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameTokenTtl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14933,8 +14933,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleRoleRoleNameTokenTtl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleRoleRoleNameTokenTtl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14974,8 +14974,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleTidySecretId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleTidySecretId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15017,8 +15017,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateApproleTidySecretId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateApproleTidySecretId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15067,8 +15067,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsConfigCertificateCertName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsConfigCertificateCertName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15119,8 +15119,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsConfigCertificateCertName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsConfigCertificateCertName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15163,8 +15163,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsConfigClient", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsConfigClient", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15209,8 +15209,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsConfigClient", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsConfigClient", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15253,8 +15253,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsConfigIdentity", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsConfigIdentity", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15299,8 +15299,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsConfigIdentity", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsConfigIdentity", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15340,8 +15340,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsConfigRotateRoot", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsConfigRotateRoot", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15383,8 +15383,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsConfigRotateRoot", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsConfigRotateRoot", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15433,8 +15433,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsConfigStsAccountId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsConfigStsAccountId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15485,8 +15485,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsConfigStsAccountId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsConfigStsAccountId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15529,8 +15529,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsConfigTidyIdentityAccesslist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsConfigTidyIdentityAccesslist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15575,8 +15575,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsConfigTidyIdentityAccesslist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsConfigTidyIdentityAccesslist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15619,8 +15619,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsConfigTidyIdentityWhitelist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsConfigTidyIdentityWhitelist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15665,8 +15665,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsConfigTidyIdentityWhitelist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsConfigTidyIdentityWhitelist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15709,8 +15709,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsConfigTidyRoletagBlacklist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsConfigTidyRoletagBlacklist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15755,8 +15755,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsConfigTidyRoletagBlacklist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsConfigTidyRoletagBlacklist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15799,8 +15799,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsConfigTidyRoletagDenylist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsConfigTidyRoletagDenylist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15845,8 +15845,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsConfigTidyRoletagDenylist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsConfigTidyRoletagDenylist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15895,8 +15895,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsRoleRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsRoleRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15947,8 +15947,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsRoleRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsRoleRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15997,8 +15997,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsRoleRoleTag", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsRoleRoleTag", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16049,8 +16049,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsRoleRoleTag", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsRoleRoleTag", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16096,8 +16096,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsRoletagBlacklistRoleTag", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsRoletagBlacklistRoleTag", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16145,8 +16145,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsRoletagBlacklistRoleTag", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsRoletagBlacklistRoleTag", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16192,8 +16192,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsRoletagDenylistRoleTag", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsRoletagDenylistRoleTag", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16241,8 +16241,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsRoletagDenylistRoleTag", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsRoletagDenylistRoleTag", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16285,8 +16285,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsTidyIdentityAccesslist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsTidyIdentityAccesslist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16331,8 +16331,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsTidyIdentityAccesslist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsTidyIdentityAccesslist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16375,8 +16375,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsTidyIdentityWhitelist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsTidyIdentityWhitelist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16421,8 +16421,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsTidyIdentityWhitelist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsTidyIdentityWhitelist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16465,8 +16465,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsTidyRoletagBlacklist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsTidyRoletagBlacklist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16511,8 +16511,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsTidyRoletagBlacklist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsTidyRoletagBlacklist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16555,8 +16555,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsTidyRoletagDenylist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsTidyRoletagDenylist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16601,8 +16601,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsTidyRoletagDenylist", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsTidyRoletagDenylist", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16651,8 +16651,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateCertCertsName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateCertCertsName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16703,8 +16703,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateCertCertsName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateCertCertsName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16753,8 +16753,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateCertCrlsName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateCertCrlsName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16805,8 +16805,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateCertCrlsName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateCertCrlsName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16855,8 +16855,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateCfRolesRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateCfRolesRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16907,8 +16907,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateCfRolesRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateCfRolesRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16957,8 +16957,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpRoleNameLabels", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpRoleNameLabels", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17009,8 +17009,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpRoleNameLabels", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpRoleNameLabels", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17059,8 +17059,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpRoleNameServiceAccounts", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpRoleNameServiceAccounts", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17111,8 +17111,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpRoleNameServiceAccounts", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpRoleNameServiceAccounts", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17161,8 +17161,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGithubMapTeamsKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGithubMapTeamsKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17213,8 +17213,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGithubMapTeamsKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGithubMapTeamsKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17263,8 +17263,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGithubMapUsersKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGithubMapUsersKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17315,8 +17315,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGithubMapUsersKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGithubMapUsersKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17359,8 +17359,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateKerberosConfigLdap", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateKerberosConfigLdap", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17405,8 +17405,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateKerberosConfigLdap", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateKerberosConfigLdap", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17455,8 +17455,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateKerberosGroupsName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateKerberosGroupsName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17507,8 +17507,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateKerberosGroupsName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateKerberosGroupsName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17557,8 +17557,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateOciLoginRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateOciLoginRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17609,8 +17609,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateOciLoginRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateOciLoginRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17653,8 +17653,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateOidcConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateOidcConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17699,8 +17699,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateOidcConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateOidcConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17743,8 +17743,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateOidcLogin", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateOidcLogin", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17789,8 +17789,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateOidcLogin", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateOidcLogin", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17833,8 +17833,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateOidcOidcAuthUrl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateOidcOidcAuthUrl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17879,8 +17879,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateOidcOidcAuthUrl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateOidcOidcAuthUrl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17923,8 +17923,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateOidcOidcCallback", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateOidcOidcCallback", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17969,8 +17969,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateOidcOidcCallback", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateOidcOidcCallback", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18019,8 +18019,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateOidcRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateOidcRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18071,8 +18071,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateOidcRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateOidcRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18121,8 +18121,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateRadiusLoginUrlusername", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateRadiusLoginUrlusername", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18173,8 +18173,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateRadiusLoginUrlusername", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateRadiusLoginUrlusername", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18223,8 +18223,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateRadiusUsersName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateRadiusUsersName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18275,8 +18275,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateRadiusUsersName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateRadiusUsersName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18324,8 +18324,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenCreate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenCreate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18375,8 +18375,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenCreate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenCreate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18424,8 +18424,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenCreateOrphan", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenCreateOrphan", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18475,8 +18475,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenCreateOrphan", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenCreateOrphan", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18530,8 +18530,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenCreateRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenCreateRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18587,8 +18587,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenCreateRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenCreateRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18631,8 +18631,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenLookup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenLookup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18677,8 +18677,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenLookup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenLookup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18721,8 +18721,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenLookupAccessor", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenLookupAccessor", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18767,8 +18767,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenLookupAccessor", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenLookupAccessor", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18811,8 +18811,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenLookupSelf", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenLookupSelf", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18857,8 +18857,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenLookupSelf", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenLookupSelf", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18901,8 +18901,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenRenew", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenRenew", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18947,8 +18947,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenRenew", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenRenew", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18991,8 +18991,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenRenewAccessor", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenRenewAccessor", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19037,8 +19037,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenRenewAccessor", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenRenewAccessor", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19081,8 +19081,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenRenewSelf", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenRenewSelf", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19127,8 +19127,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenRenewSelf", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenRenewSelf", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19171,8 +19171,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenRevoke", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenRevoke", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19217,8 +19217,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenRevoke", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenRevoke", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19261,8 +19261,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenRevokeAccessor", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenRevokeAccessor", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19307,8 +19307,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenRevokeAccessor", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenRevokeAccessor", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19351,8 +19351,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenRevokeOrphan", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenRevokeOrphan", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19397,8 +19397,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenRevokeOrphan", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenRevokeOrphan", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19438,8 +19438,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenRevokeSelf", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenRevokeSelf", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19481,8 +19481,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenRevokeSelf", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenRevokeSelf", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19531,8 +19531,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenRolesRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenRolesRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19583,8 +19583,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenRolesRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenRolesRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19624,8 +19624,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenTidy", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenTidy", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19667,8 +19667,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTokenTidy", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTokenTidy", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19717,8 +19717,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateUserpassLoginUsername", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateUserpassLoginUsername", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19769,8 +19769,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateUserpassLoginUsername", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateUserpassLoginUsername", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19819,8 +19819,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateUserpassUsersUsername", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateUserpassUsersUsername", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19871,8 +19871,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateUserpassUsersUsername", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateUserpassUsersUsername", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19921,8 +19921,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateUserpassUsersUsernamePassword", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateUserpassUsersUsernamePassword", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19973,8 +19973,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateUserpassUsersUsernamePassword", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateUserpassUsersUsernamePassword", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -20023,8 +20023,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateUserpassUsersUsernamePolicies", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateUserpassUsersUsernamePolicies", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -20075,8 +20075,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateUserpassUsersUsernamePolicies", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateUserpassUsersUsernamePolicies", response);
+                if (exception != null) throw exception;
             }
 
             return response;
