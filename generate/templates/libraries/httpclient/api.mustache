@@ -26,11 +26,11 @@ namespace {{packageName}}.{{apiPackage}}
         /// </remarks>
         /// <exception cref="{{packageName}}ApiException">Thrown when fails to make API call</exception>
         {{#allParams}}/// <param name="{{paramName}}">{{description}}{{^required}} (optional{{#defaultValue}}, default to {{.}}{{/defaultValue}}){{/required}}{{#isDeprecated}} (deprecated){{/isDeprecated}}</param>
-        {{/allParams}}/// <returns>ApiResponse of {{returnType}}{{^returnType}}Object(void){{/returnType}}</returns>
+        {{/allParams}}/// <returns>Response of {{returnType}}{{^returnType}}Object(void){{/returnType}}</returns>
         {{#isDeprecated}}
         [Obsolete]
         {{/isDeprecated}}
-        ApiResponse<{{{returnType}}}{{^returnType}}Object{{/returnType}}> {{operationId}}({{#allParams}}{{{dataType}}} {{paramName}}{{^required}}{{#optionalMethodArgument}} = default({{{dataType}}}){{/optionalMethodArgument}}{{/required}}{{^-last}}, {{/-last}}{{/allParams}});
+        Response<{{{returnType}}}{{^returnType}}Object{{/returnType}}> {{operationId}}({{#allParams}}{{{dataType}}} {{paramName}}{{^required}}{{#optionalMethodArgument}} = default({{{dataType}}}){{/optionalMethodArgument}}{{/required}}{{^-last}}, {{/-last}}{{/allParams}});
         {{/operation}}
         #endregion Synchronous Operations
     }
@@ -55,11 +55,11 @@ namespace {{packageName}}.{{apiPackage}}
         /// <param name="{{paramName}}">{{description}}{{^required}} (optional{{#defaultValue}}, default to {{.}}{{/defaultValue}}){{/required}}{{#isDeprecated}} (deprecated){{/isDeprecated}}</param>
         {{/allParams}}
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse{{#returnType}} ({{.}}){{/returnType}}</returns>
+        /// <returns>Task of Response{{#returnType}} ({{.}}){{/returnType}}</returns>
         {{#isDeprecated}}
         [Obsolete]
         {{/isDeprecated}}
-        Task<ApiResponse<{{{returnType}}}{{^returnType}}Object{{/returnType}}>> {{operationId}}Async({{#allParams}}{{{dataType}}} {{paramName}}{{^required}}{{#optionalMethodArgument}} = default({{{dataType}}}){{/optionalMethodArgument}}{{/required}}{{^-last}}, {{/-last}}{{/allParams}}{{#allParams.0}}, {{/allParams.0}}CancellationToken cancellationToken = default(CancellationToken));
+        Task<Response<{{{returnType}}}{{^returnType}}Object{{/returnType}}>> {{operationId}}Async({{#allParams}}{{{dataType}}} {{paramName}}{{^required}}{{#optionalMethodArgument}} = default({{{dataType}}}){{/optionalMethodArgument}}{{/required}}{{^-last}}, {{/-last}}{{/allParams}}{{#allParams.0}}, {{/allParams.0}}CancellationToken cancellationToken = default(CancellationToken));
         {{/operation}}
         #endregion Asynchronous Operations
     }
@@ -143,11 +143,11 @@ namespace {{packageName}}.{{apiPackage}}
         /// </summary>
         /// <exception cref="{{packageName}}ApiException">Thrown when fails to make API call</exception>
         {{#allParams}}/// <param name="{{paramName}}">{{description}}{{^required}} (optional{{#defaultValue}}, default to {{.}}{{/defaultValue}}){{/required}}{{#isDeprecated}} (deprecated){{/isDeprecated}}</param>
-        {{/allParams}}/// <returns>ApiResponse of {{returnType}}{{^returnType}}Object(void){{/returnType}}</returns>
+        {{/allParams}}/// <returns>Response of {{returnType}}{{^returnType}}Object(void){{/returnType}}</returns>
         {{#isDeprecated}}
         [Obsolete]
         {{/isDeprecated}}
-        public ApiResponse<{{{returnType}}}{{^returnType}}Object{{/returnType}}> {{operationId}}({{#allParams}}{{{dataType}}} {{paramName}}{{^required}}{{#optionalMethodArgument}} = default({{{dataType}}}){{/optionalMethodArgument}}{{/required}}{{^-last}}, {{/-last}}{{/allParams}})
+        public Response<{{{returnType}}}{{^returnType}}Object{{/returnType}}> {{operationId}}({{#allParams}}{{{dataType}}} {{paramName}}{{^required}}{{#optionalMethodArgument}} = default({{{dataType}}}){{/optionalMethodArgument}}{{/required}}{{^-last}}, {{/-last}}{{/allParams}})
         {
             {{#allParams}}
             {{#required}}
