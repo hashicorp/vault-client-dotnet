@@ -23,7 +23,7 @@ namespace Vault.Client
         /// Gets or sets the error code (HTTP status code)
         /// </summary>
         /// <value>The error code (HTTP status code).</value>
-        public int StatusCode { get; set; }
+        public int StatusCode { get; private set; }
 
         /// <summary>
         /// Gets or sets the error content (body json object)
