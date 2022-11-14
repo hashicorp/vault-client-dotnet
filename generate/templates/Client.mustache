@@ -43,7 +43,7 @@ namespace {{packageName}}
         }
 
         /// <summary>
-        /// Sets the client token to inject as a header into Api calls
+        /// Sets the X-Vault-Token header
         /// </summary>
         public void SetToken(string token)
         {
@@ -56,7 +56,7 @@ namespace {{packageName}}
         }
 
         /// <summary>
-        /// Sets the Namespace value to be used as a header with api calls
+        /// Sets X-Vault-Namespace header
         /// </summary>
         public void SetNamespace(string Namespace)
         {
@@ -74,6 +74,27 @@ namespace {{packageName}}
         public void ClearNamespace()
         {
             _apiClient.SetNamespace(string.Empty);
+        }
+
+        /// <summary>
+        /// Sets the X-Vault-Wrap-TTL header
+        /// </summary>
+        public void SetWrapTTL(int ttlSeconds)
+        {
+            if (ttlSeconds < 1)
+            {
+                throw new ArgumentException("TTL should be greater than 0");
+            }
+
+            _apiClient.SetWrapTTL(ttlSeconds);
+        }
+
+        /// <summary>
+        /// Clear current time to live 
+        /// </summary>
+        public void ClearWrapTTL()
+        {
+            _apiClient.SetWrapTTL(0);
         }
 
         /// <summary>
@@ -99,7 +120,7 @@ namespace {{packageName}}
         {
             _apiClient.ClearCustomHeaders();
         }
-        
+
         /// <summary>
         /// Setting MFA Headers ("X-Vault-MFA") on subsequent requests
         /// See: https://learn.hashicorp.com/tutorials/vault/multi-factor-authentication

@@ -57,7 +57,7 @@ namespace Vault
         }
 
         /// <summary>
-        /// Sets the client token to inject as a header into Api calls
+        /// Sets the X-Vault-Token header
         /// </summary>
         public void SetToken(string token)
         {
@@ -70,7 +70,7 @@ namespace Vault
         }
 
         /// <summary>
-        /// Sets the Namespace value to be used as a header with api calls
+        /// Sets X-Vault-Namespace header
         /// </summary>
         public void SetNamespace(string Namespace)
         {
@@ -93,14 +93,22 @@ namespace Vault
         /// <summary>
         /// Sets the X-Vault-Wrap-TTL header
         /// </summary>
-        public void SetWrapTTL(TimeSpan ttlSeconds)
+        public void SetWrapTTL(int ttlSeconds)
         {
-            _apiClient.SetWrapTTL(ttl);
+            if (ttlSeconds < 1)
+            {
+                throw new ArgumentException("TTL should be greater than 0");
+            }
+
+            _apiClient.SetWrapTTL(ttlSeconds);
         }
 
+        /// <summary>
+        /// Clear current time to live 
+        /// </summary>
         public void ClearWrapTTL()
         {
-            _apiClient.ClearWrapTTL();
+            _apiClient.SetWrapTTL(0);
         }
 
         /// <summary>

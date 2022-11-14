@@ -163,6 +163,8 @@ namespace {{packageName}}.Client
 
         public List<string> MFACredentials = new List<string>();
 
+        public int ResponseWrapTTL = 0;
+
         public Dictionary<string, string> CustomHeaders = new Dictionary<string, string> { };
     }
 
@@ -217,6 +219,17 @@ namespace {{packageName}}.Client
             Configuration = configuration;
         }
 
+        internal void SetWrapTTL(int ttl)
+        {
+            lock (_requestHeaderLock)
+            {
+                _requestHeaders.ResponseWrapTTL = ttl;
+            }
+        }
+
+        /// <summary>
+        /// Set Token Header Value
+        /// </summary>
         internal void SetToken(string token)
         {
             lock (_requestHeaderLock)
@@ -225,6 +238,9 @@ namespace {{packageName}}.Client
             }
         }
 
+        /// <summary>
+        /// Set Namespace Header Value
+        /// </summary>
         internal void SetNamespace(string Namespace)
         {
             lock (_requestHeaderLock)
@@ -307,7 +323,7 @@ namespace {{packageName}}.Client
                 _requestHeaders.MFACredentials.Clear();
             }
         }
-        
+
         /// Prepares multipart/form-data content
         {{! TODO: Add handling of improper usage }}
         HttpContent PrepareMultipartFormDataContent(RequestOptions options)
@@ -374,6 +390,12 @@ namespace {{packageName}}.Client
                 if (!string.IsNullOrEmpty(ns))
                 {
                     request.Headers.TryAddWithoutValidation("X-Vault-Namespace", ns);
+                }
+
+                int wrapttl = _requestHeaders.ResponseWrapTTL;
+                if (wrapttl > 0)
+                {
+                    request.Headers.TryAddWithoutValidation("X-Vault-Wrap-TTL", wrapttl.ToString());
                 }
 
                 foreach (var header in _requestHeaders.CustomHeaders)

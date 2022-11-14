@@ -166,7 +166,8 @@ namespace Vault.Client
 
         public List<string> MFACredentials = new List<string>();
 
-        public TimeSpan ResponseWrapTTL = TimeSpan.Zero;
+        public int ResponseWrapTTL = 0;
+
         public Dictionary<string, string> CustomHeaders = new Dictionary<string, string> { };
     }
 
@@ -221,22 +222,11 @@ namespace Vault.Client
             Configuration = configuration;
         }
 
-        internal void SetWrapTTL(TimeSpan ttl)
+        internal void SetWrapTTL(int ttl)
         {
             lock (_requestHeaderLock)
             {
                 _requestHeaders.ResponseWrapTTL = ttl;
-            }
-        }
-
-        /// <summary>
-        /// Clear Response Wrap TTL
-        /// </summary>
-        internal void ClearWrapTTL()
-        {
-            lock (_requestHeaderLock)
-            {
-                _requestHeaders.ResponseWrapTTL = TimeSpan.Zero;
             }
         }
 
@@ -404,20 +394,20 @@ namespace Vault.Client
                     request.Headers.TryAddWithoutValidation("X-Vault-Namespace", ns);
                 }
 
-                TimeSpan wrapttl = _requestHeaders.ResponseWrapTTL;
-                if (wrapttl > TimeSpan.Zero)
+                int wrapttl = _requestHeaders.ResponseWrapTTL;
+                if (wrapttl > 0)
                 {
                     request.Headers.TryAddWithoutValidation("X-Vault-Wrap-TTL", wrapttl.ToString());
-                }
-
-                foreach (string mfaCredential in _requestHeaders.MFACredentials)
-                {
-                    request.Headers.TryAddWithoutValidation("X-Vault-MFA", mfaCredential);
                 }
 
                 foreach (var header in _requestHeaders.CustomHeaders)
                 {
                     request.Headers.TryAddWithoutValidation(header.Key, header.Value);
+                }
+
+                foreach (string mfaCredential in _requestHeaders.MFACredentials)
+                {
+                    request.Headers.TryAddWithoutValidation("X-Vault-MFA", mfaCredential);
                 }
             }
 
