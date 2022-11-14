@@ -166,6 +166,7 @@ namespace Vault.Client
 
         public List<string> MFACredentials = new List<string>();
 
+        public TimeSpan ResponseWrapTTL = TimeSpan.Zero;
         public Dictionary<string, string> CustomHeaders = new Dictionary<string, string> { };
     }
 
@@ -220,6 +221,28 @@ namespace Vault.Client
             Configuration = configuration;
         }
 
+        internal void SetWrapTTL(TimeSpan ttl)
+        {
+            lock (_requestHeaderLock)
+            {
+                _requestHeaders.ResponseWrapTTL = ttl;
+            }
+        }
+
+        /// <summary>
+        /// Clear Response Wrap TTL
+        /// </summary>
+        internal void ClearWrapTTL()
+        {
+            lock (_requestHeaderLock)
+            {
+                _requestHeaders.ResponseWrapTTL = TimeSpan.Zero;
+            }
+        }
+
+        /// <summary>
+        /// Set Token Header Value
+        /// </summary>
         internal void SetToken(string token)
         {
             lock (_requestHeaderLock)
@@ -228,6 +251,9 @@ namespace Vault.Client
             }
         }
 
+        /// <summary>
+        /// Set Namespace Header Value
+        /// </summary>
         internal void SetNamespace(string Namespace)
         {
             lock (_requestHeaderLock)
@@ -310,7 +336,7 @@ namespace Vault.Client
                 _requestHeaders.MFACredentials.Clear();
             }
         }
-        
+
         /// Prepares multipart/form-data content
         HttpContent PrepareMultipartFormDataContent(RequestOptions options)
         {
@@ -378,14 +404,20 @@ namespace Vault.Client
                     request.Headers.TryAddWithoutValidation("X-Vault-Namespace", ns);
                 }
 
-                foreach (var header in _requestHeaders.CustomHeaders)
+                TimeSpan wrapttl = _requestHeaders.ResponseWrapTTL;
+                if (wrapttl > TimeSpan.Zero)
                 {
-                    request.Headers.TryAddWithoutValidation(header.Key, header.Value);
+                    request.Headers.TryAddWithoutValidation("X-Vault-Wrap-TTL", wrapttl.ToString());
                 }
 
                 foreach (string mfaCredential in _requestHeaders.MFACredentials)
                 {
                     request.Headers.TryAddWithoutValidation("X-Vault-MFA", mfaCredential);
+                }
+
+                foreach (var header in _requestHeaders.CustomHeaders)
+                {
+                    request.Headers.TryAddWithoutValidation(header.Key, header.Value);
                 }
             }
 

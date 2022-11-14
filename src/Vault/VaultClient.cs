@@ -91,6 +91,19 @@ namespace Vault
         }
 
         /// <summary>
+        /// Sets the X-Vault-Wrap-TTL header
+        /// </summary>
+        public void SetWrapTTL(TimeSpan ttlSeconds)
+        {
+            _apiClient.SetWrapTTL(ttl);
+        }
+
+        public void ClearWrapTTL()
+        {
+            _apiClient.ClearWrapTTL();
+        }
+
+        /// <summary>
         /// Adds a dictionary of custom headers to current list of custom headers
         /// </summary>
         public void AddCustomHeaders(Dictionary<string, string> headersToAdd)
@@ -113,7 +126,7 @@ namespace Vault
         {
             _apiClient.ClearCustomHeaders();
         }
-        
+
         /// <summary>
         /// Setting MFA Headers ("X-Vault-MFA") on subsequent requests
         /// See: https://learn.hashicorp.com/tutorials/vault/multi-factor-authentication
