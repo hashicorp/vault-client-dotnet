@@ -3687,8 +3687,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemAuditPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemAuditPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3731,8 +3731,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemAuditPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemAuditPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3773,8 +3773,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemAuthPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemAuthPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3817,8 +3817,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemAuthPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemAuthPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3859,8 +3859,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemConfigAuditingRequestHeadersHeader", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemConfigAuditingRequestHeadersHeader", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3903,8 +3903,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemConfigAuditingRequestHeadersHeader", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemConfigAuditingRequestHeadersHeader", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3939,8 +3939,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemConfigCors", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemConfigCors", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -3977,8 +3977,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemConfigCors", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemConfigCors", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4019,8 +4019,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemConfigUiHeadersHeader", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemConfigUiHeadersHeader", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4063,8 +4063,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemConfigUiHeadersHeader", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemConfigUiHeadersHeader", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4099,8 +4099,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemGenerateRoot", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemGenerateRoot", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4137,8 +4137,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemGenerateRoot", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemGenerateRoot", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4173,8 +4173,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemGenerateRootAttempt", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemGenerateRootAttempt", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4211,8 +4211,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemGenerateRootAttempt", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemGenerateRootAttempt", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4247,8 +4247,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemLoggers", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemLoggers", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4285,8 +4285,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemLoggers", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemLoggers", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4327,8 +4327,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemLoggersName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemLoggersName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4371,8 +4371,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemLoggersName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemLoggersName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4413,8 +4413,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemMountsPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemMountsPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4457,8 +4457,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemMountsPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemMountsPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4499,8 +4499,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemPluginsCatalogName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemPluginsCatalogName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4543,8 +4543,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemPluginsCatalogName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemPluginsCatalogName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4591,8 +4591,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemPluginsCatalogTypeName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemPluginsCatalogTypeName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4641,8 +4641,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemPluginsCatalogTypeName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemPluginsCatalogTypeName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4683,8 +4683,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemPoliciesAclName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemPoliciesAclName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4727,8 +4727,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemPoliciesAclName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemPoliciesAclName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4769,8 +4769,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemPoliciesPasswordName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemPoliciesPasswordName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4813,8 +4813,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemPoliciesPasswordName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemPoliciesPasswordName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4855,8 +4855,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemPolicyName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemPolicyName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4899,8 +4899,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemPolicyName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemPolicyName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4941,8 +4941,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemQuotasRateLimitName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemQuotasRateLimitName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -4985,8 +4985,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemQuotasRateLimitName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemQuotasRateLimitName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5021,8 +5021,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemRaw", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemRaw", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5059,8 +5059,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemRaw", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemRaw", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5101,8 +5101,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemRawPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemRawPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5145,8 +5145,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemRawPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemRawPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5181,8 +5181,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemRekeyBackup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemRekeyBackup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5219,8 +5219,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemRekeyBackup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemRekeyBackup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5255,8 +5255,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemRekeyInit", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemRekeyInit", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5293,8 +5293,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemRekeyInit", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemRekeyInit", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5329,8 +5329,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemRekeyRecoveryKeyBackup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemRekeyRecoveryKeyBackup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5367,8 +5367,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemRekeyRecoveryKeyBackup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemRekeyRecoveryKeyBackup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5403,8 +5403,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemRekeyVerify", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemRekeyVerify", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5441,8 +5441,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSystemRekeyVerify", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSystemRekeyVerify", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5483,8 +5483,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListSystemConfigUiHeaders", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListSystemConfigUiHeaders", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5527,8 +5527,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListSystemConfigUiHeaders", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListSystemConfigUiHeaders", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5569,8 +5569,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListSystemLeasesLookup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListSystemLeasesLookup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5613,8 +5613,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListSystemLeasesLookup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListSystemLeasesLookup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5661,8 +5661,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListSystemLeasesLookupPrefix", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListSystemLeasesLookupPrefix", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5711,8 +5711,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListSystemLeasesLookupPrefix", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListSystemLeasesLookupPrefix", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5759,8 +5759,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListSystemPluginsCatalogType", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListSystemPluginsCatalogType", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5809,8 +5809,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListSystemPluginsCatalogType", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListSystemPluginsCatalogType", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5851,8 +5851,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListSystemPoliciesAcl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListSystemPoliciesAcl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5895,8 +5895,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListSystemPoliciesAcl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListSystemPoliciesAcl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5937,8 +5937,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListSystemPoliciesPassword", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListSystemPoliciesPassword", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5981,8 +5981,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListSystemPoliciesPassword", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListSystemPoliciesPassword", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6023,8 +6023,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListSystemQuotasRateLimit", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListSystemQuotasRateLimit", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6067,8 +6067,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListSystemQuotasRateLimit", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListSystemQuotasRateLimit", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6109,8 +6109,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListSystemVersionHistory", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListSystemVersionHistory", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6153,8 +6153,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListSystemVersionHistory", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListSystemVersionHistory", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6189,8 +6189,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemAudit", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemAudit", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6227,8 +6227,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemAudit", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemAudit", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6263,8 +6263,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemAuth", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemAuth", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6301,8 +6301,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemAuth", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemAuth", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6343,8 +6343,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemAuthPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemAuthPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6387,8 +6387,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemAuthPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemAuthPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6429,8 +6429,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemAuthPathTune", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemAuthPathTune", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6473,8 +6473,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemAuthPathTune", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemAuthPathTune", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6509,8 +6509,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemConfigAuditingRequestHeaders", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemConfigAuditingRequestHeaders", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6547,8 +6547,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemConfigAuditingRequestHeaders", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemConfigAuditingRequestHeaders", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6589,8 +6589,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemConfigAuditingRequestHeadersHeader", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemConfigAuditingRequestHeadersHeader", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6633,8 +6633,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemConfigAuditingRequestHeadersHeader", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemConfigAuditingRequestHeadersHeader", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6669,8 +6669,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemConfigCors", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemConfigCors", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6707,8 +6707,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemConfigCors", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemConfigCors", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6743,8 +6743,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemConfigStateSanitized", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemConfigStateSanitized", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6781,8 +6781,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemConfigStateSanitized", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemConfigStateSanitized", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6823,8 +6823,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemConfigUiHeadersHeader", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemConfigUiHeadersHeader", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6867,8 +6867,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemConfigUiHeadersHeader", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemConfigUiHeadersHeader", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6903,8 +6903,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemGenerateRoot", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemGenerateRoot", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6941,8 +6941,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemGenerateRoot", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemGenerateRoot", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6977,8 +6977,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemGenerateRootAttempt", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemGenerateRootAttempt", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7015,8 +7015,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemGenerateRootAttempt", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemGenerateRootAttempt", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7051,8 +7051,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemHaStatus", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemHaStatus", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7089,8 +7089,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemHaStatus", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemHaStatus", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7125,8 +7125,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemHealth", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemHealth", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7163,8 +7163,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemHealth", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemHealth", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7199,8 +7199,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemHostInfo", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemHostInfo", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7237,8 +7237,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemHostInfo", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemHostInfo", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7273,8 +7273,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInFlightReq", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInFlightReq", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7311,8 +7311,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInFlightReq", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInFlightReq", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7347,8 +7347,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInit", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInit", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7385,8 +7385,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInit", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInit", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7421,8 +7421,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersActivity", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalCountersActivity", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7459,8 +7459,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersActivity", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalCountersActivity", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7495,8 +7495,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersActivityExport", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalCountersActivityExport", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7533,8 +7533,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersActivityExport", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalCountersActivityExport", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7569,8 +7569,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersActivityMonthly", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalCountersActivityMonthly", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7607,8 +7607,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersActivityMonthly", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalCountersActivityMonthly", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7643,8 +7643,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalCountersConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7681,8 +7681,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalCountersConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7717,8 +7717,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersEntities", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalCountersEntities", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7755,8 +7755,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersEntities", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalCountersEntities", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7791,8 +7791,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersRequests", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalCountersRequests", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7829,8 +7829,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersRequests", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalCountersRequests", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7865,8 +7865,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersTokens", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalCountersTokens", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7903,8 +7903,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalCountersTokens", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalCountersTokens", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7939,8 +7939,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalSpecsOpenapi", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalSpecsOpenapi", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7977,8 +7977,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalSpecsOpenapi", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalSpecsOpenapi", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8013,8 +8013,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalUiFeatureFlags", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalUiFeatureFlags", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8051,8 +8051,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalUiFeatureFlags", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalUiFeatureFlags", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8087,8 +8087,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalUiMounts", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalUiMounts", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8125,8 +8125,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalUiMounts", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalUiMounts", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8167,8 +8167,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalUiMountsPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalUiMountsPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8211,8 +8211,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalUiMountsPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalUiMountsPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8247,8 +8247,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalUiNamespaces", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalUiNamespaces", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8285,8 +8285,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalUiNamespaces", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalUiNamespaces", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8321,8 +8321,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalUiResultantAcl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalUiResultantAcl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8359,8 +8359,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemInternalUiResultantAcl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemInternalUiResultantAcl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8395,8 +8395,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemKeyStatus", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemKeyStatus", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8433,8 +8433,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemKeyStatus", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemKeyStatus", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8469,8 +8469,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemLeader", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemLeader", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8507,8 +8507,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemLeader", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemLeader", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8543,8 +8543,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemLeases", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemLeases", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8581,8 +8581,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemLeases", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemLeases", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8617,8 +8617,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemLeasesCount", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemLeasesCount", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8655,8 +8655,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemLeasesCount", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemLeasesCount", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8696,8 +8696,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemMetrics", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemMetrics", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8739,8 +8739,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemMetrics", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemMetrics", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8785,8 +8785,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemMonitor", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemMonitor", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8833,8 +8833,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemMonitor", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemMonitor", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8869,8 +8869,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemMounts", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemMounts", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8907,8 +8907,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemMounts", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemMounts", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8949,8 +8949,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemMountsPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemMountsPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8993,8 +8993,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemMountsPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemMountsPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9035,8 +9035,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemMountsPathTune", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemMountsPathTune", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9079,8 +9079,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemMountsPathTune", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemMountsPathTune", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9115,8 +9115,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPluginsCatalog", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPluginsCatalog", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9153,8 +9153,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPluginsCatalog", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPluginsCatalog", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9195,8 +9195,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPluginsCatalogName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPluginsCatalogName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9239,8 +9239,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPluginsCatalogName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPluginsCatalogName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9287,8 +9287,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPluginsCatalogTypeName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPluginsCatalogTypeName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9337,8 +9337,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPluginsCatalogTypeName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPluginsCatalogTypeName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9379,8 +9379,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPoliciesAclName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPoliciesAclName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9423,8 +9423,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPoliciesAclName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPoliciesAclName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9465,8 +9465,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPoliciesPasswordName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPoliciesPasswordName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9509,8 +9509,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPoliciesPasswordName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPoliciesPasswordName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9551,8 +9551,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPoliciesPasswordNameGenerate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPoliciesPasswordNameGenerate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9595,8 +9595,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPoliciesPasswordNameGenerate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPoliciesPasswordNameGenerate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9636,8 +9636,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPolicy", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPolicy", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9679,8 +9679,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPolicy", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPolicy", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9721,8 +9721,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPolicyName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPolicyName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9765,8 +9765,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPolicyName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPolicyName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9801,8 +9801,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPprof", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPprof", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9839,8 +9839,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPprof", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPprof", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9875,8 +9875,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPprofAllocs", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPprofAllocs", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9913,8 +9913,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPprofAllocs", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPprofAllocs", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9949,8 +9949,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPprofBlock", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPprofBlock", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9987,8 +9987,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPprofBlock", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPprofBlock", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10023,8 +10023,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPprofCmdline", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPprofCmdline", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10061,8 +10061,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPprofCmdline", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPprofCmdline", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10097,8 +10097,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPprofGoroutine", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPprofGoroutine", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10135,8 +10135,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPprofGoroutine", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPprofGoroutine", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10171,8 +10171,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPprofHeap", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPprofHeap", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10209,8 +10209,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPprofHeap", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPprofHeap", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10245,8 +10245,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPprofMutex", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPprofMutex", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10283,8 +10283,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPprofMutex", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPprofMutex", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10319,8 +10319,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPprofProfile", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPprofProfile", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10357,8 +10357,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPprofProfile", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPprofProfile", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10393,8 +10393,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPprofSymbol", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPprofSymbol", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10431,8 +10431,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPprofSymbol", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPprofSymbol", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10467,8 +10467,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPprofThreadcreate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPprofThreadcreate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10505,8 +10505,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPprofThreadcreate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPprofThreadcreate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10541,8 +10541,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPprofTrace", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPprofTrace", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10579,8 +10579,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemPprofTrace", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemPprofTrace", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10615,8 +10615,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemQuotasConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemQuotasConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10653,8 +10653,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemQuotasConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemQuotasConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10695,8 +10695,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemQuotasRateLimitName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemQuotasRateLimitName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10739,8 +10739,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemQuotasRateLimitName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemQuotasRateLimitName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10780,8 +10780,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemRaw", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemRaw", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10823,8 +10823,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemRaw", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemRaw", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10870,8 +10870,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemRawPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemRawPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10919,8 +10919,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemRawPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemRawPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10955,8 +10955,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemRekeyBackup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemRekeyBackup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10993,8 +10993,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemRekeyBackup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemRekeyBackup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11029,8 +11029,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemRekeyInit", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemRekeyInit", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11067,8 +11067,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemRekeyInit", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemRekeyInit", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11103,8 +11103,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemRekeyRecoveryKeyBackup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemRekeyRecoveryKeyBackup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11141,8 +11141,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemRekeyRecoveryKeyBackup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemRekeyRecoveryKeyBackup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11177,8 +11177,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemRekeyVerify", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemRekeyVerify", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11215,8 +11215,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemRekeyVerify", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemRekeyVerify", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11257,8 +11257,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemRemountStatusMigrationId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemRemountStatusMigrationId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11301,8 +11301,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemRemountStatusMigrationId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemRemountStatusMigrationId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11337,8 +11337,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemReplicationStatus", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemReplicationStatus", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11375,8 +11375,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemReplicationStatus", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemReplicationStatus", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11411,8 +11411,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemRotateConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemRotateConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11449,8 +11449,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemRotateConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemRotateConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11485,8 +11485,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemSealStatus", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemSealStatus", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11523,8 +11523,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemSealStatus", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemSealStatus", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11559,8 +11559,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemWrappingLookup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemWrappingLookup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11597,8 +11597,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSystemWrappingLookup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSystemWrappingLookup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11642,8 +11642,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemAuditHashPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemAuditHashPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11689,8 +11689,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemAuditHashPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemAuditHashPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11734,8 +11734,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemAuditPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemAuditPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11781,8 +11781,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemAuditPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemAuditPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11826,8 +11826,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemAuthPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemAuthPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11873,8 +11873,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemAuthPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemAuthPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11918,8 +11918,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemAuthPathTune", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemAuthPathTune", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11965,8 +11965,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemAuthPathTune", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemAuthPathTune", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12004,8 +12004,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemCapabilities", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemCapabilities", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12045,8 +12045,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemCapabilities", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemCapabilities", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12084,8 +12084,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemCapabilitiesAccessor", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemCapabilitiesAccessor", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12125,8 +12125,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemCapabilitiesAccessor", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemCapabilitiesAccessor", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12164,8 +12164,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemCapabilitiesSelf", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemCapabilitiesSelf", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12205,8 +12205,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemCapabilitiesSelf", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemCapabilitiesSelf", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12250,8 +12250,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemConfigAuditingRequestHeadersHeader", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemConfigAuditingRequestHeadersHeader", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12297,8 +12297,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemConfigAuditingRequestHeadersHeader", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemConfigAuditingRequestHeadersHeader", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12336,8 +12336,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemConfigCors", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemConfigCors", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12377,8 +12377,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemConfigCors", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemConfigCors", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12419,8 +12419,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemConfigReloadSubsystem", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemConfigReloadSubsystem", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12463,8 +12463,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemConfigReloadSubsystem", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemConfigReloadSubsystem", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12508,8 +12508,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemConfigUiHeadersHeader", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemConfigUiHeadersHeader", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12555,8 +12555,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemConfigUiHeadersHeader", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemConfigUiHeadersHeader", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12594,8 +12594,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemGenerateRoot", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemGenerateRoot", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12635,8 +12635,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemGenerateRoot", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemGenerateRoot", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12674,8 +12674,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemGenerateRootAttempt", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemGenerateRootAttempt", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12715,8 +12715,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemGenerateRootAttempt", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemGenerateRootAttempt", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12754,8 +12754,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemGenerateRootUpdate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemGenerateRootUpdate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12795,8 +12795,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemGenerateRootUpdate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemGenerateRootUpdate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12834,8 +12834,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemInit", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemInit", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12875,8 +12875,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemInit", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemInit", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12914,8 +12914,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemInternalCountersConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemInternalCountersConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12955,8 +12955,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemInternalCountersConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemInternalCountersConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12994,8 +12994,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesLookup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemLeasesLookup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13035,8 +13035,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesLookup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemLeasesLookup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13074,8 +13074,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesRenew", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemLeasesRenew", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13115,8 +13115,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesRenew", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemLeasesRenew", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13160,8 +13160,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesRenewUrlLeaseId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemLeasesRenewUrlLeaseId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13207,8 +13207,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesRenewUrlLeaseId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemLeasesRenewUrlLeaseId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13246,8 +13246,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesRevoke", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemLeasesRevoke", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13287,8 +13287,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesRevoke", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemLeasesRevoke", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13329,8 +13329,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesRevokeForcePrefix", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemLeasesRevokeForcePrefix", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13373,8 +13373,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesRevokeForcePrefix", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemLeasesRevokeForcePrefix", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13418,8 +13418,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesRevokePrefixPrefix", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemLeasesRevokePrefixPrefix", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13465,8 +13465,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesRevokePrefixPrefix", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemLeasesRevokePrefixPrefix", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13510,8 +13510,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesRevokeUrlLeaseId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemLeasesRevokeUrlLeaseId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13557,8 +13557,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesRevokeUrlLeaseId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemLeasesRevokeUrlLeaseId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13593,8 +13593,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesTidy", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemLeasesTidy", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13631,8 +13631,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemLeasesTidy", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemLeasesTidy", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13670,8 +13670,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemLoggers", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemLoggers", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13711,8 +13711,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemLoggers", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemLoggers", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13756,8 +13756,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemLoggersName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemLoggersName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13803,8 +13803,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemLoggersName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemLoggersName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13842,8 +13842,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemMfaValidate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemMfaValidate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13883,8 +13883,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemMfaValidate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemMfaValidate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13928,8 +13928,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemMountsPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemMountsPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13975,8 +13975,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemMountsPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemMountsPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14020,8 +14020,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemMountsPathTune", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemMountsPathTune", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14067,8 +14067,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemMountsPathTune", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemMountsPathTune", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14112,8 +14112,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemPluginsCatalogName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemPluginsCatalogName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14159,8 +14159,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemPluginsCatalogName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemPluginsCatalogName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14210,8 +14210,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemPluginsCatalogTypeName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemPluginsCatalogTypeName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14263,8 +14263,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemPluginsCatalogTypeName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemPluginsCatalogTypeName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14302,8 +14302,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemPluginsReloadBackend", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemPluginsReloadBackend", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14343,8 +14343,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemPluginsReloadBackend", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemPluginsReloadBackend", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14388,8 +14388,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemPoliciesAclName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemPoliciesAclName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14435,8 +14435,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemPoliciesAclName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemPoliciesAclName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14480,8 +14480,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemPoliciesPasswordName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemPoliciesPasswordName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14527,8 +14527,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemPoliciesPasswordName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemPoliciesPasswordName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14572,8 +14572,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemPolicyName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemPolicyName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14619,8 +14619,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemPolicyName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemPolicyName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14658,8 +14658,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemQuotasConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemQuotasConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14699,8 +14699,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemQuotasConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemQuotasConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14744,8 +14744,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemQuotasRateLimitName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemQuotasRateLimitName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14791,8 +14791,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemQuotasRateLimitName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemQuotasRateLimitName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14830,8 +14830,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRaw", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRaw", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14871,8 +14871,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRaw", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRaw", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14916,8 +14916,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRawPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRawPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14963,8 +14963,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRawPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRawPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15002,8 +15002,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRekeyInit", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRekeyInit", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15043,8 +15043,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRekeyInit", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRekeyInit", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15082,8 +15082,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRekeyUpdate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRekeyUpdate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15123,8 +15123,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRekeyUpdate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRekeyUpdate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15162,8 +15162,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRekeyVerify", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRekeyVerify", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15203,8 +15203,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRekeyVerify", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRekeyVerify", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15242,8 +15242,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRemount", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRemount", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15283,8 +15283,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRemount", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRemount", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15322,8 +15322,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRenew", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRenew", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15363,8 +15363,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRenew", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRenew", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15408,8 +15408,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRenewUrlLeaseId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRenewUrlLeaseId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15455,8 +15455,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRenewUrlLeaseId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRenewUrlLeaseId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15494,8 +15494,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRevoke", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRevoke", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15535,8 +15535,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRevoke", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRevoke", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15577,8 +15577,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRevokeForcePrefix", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRevokeForcePrefix", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15621,8 +15621,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRevokeForcePrefix", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRevokeForcePrefix", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15666,8 +15666,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRevokePrefixPrefix", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRevokePrefixPrefix", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15713,8 +15713,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRevokePrefixPrefix", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRevokePrefixPrefix", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15758,8 +15758,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRevokeUrlLeaseId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRevokeUrlLeaseId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15805,8 +15805,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRevokeUrlLeaseId", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRevokeUrlLeaseId", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15841,8 +15841,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRotate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRotate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15879,8 +15879,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRotate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRotate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15918,8 +15918,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRotateConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRotateConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15959,8 +15959,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemRotateConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemRotateConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15995,8 +15995,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemSeal", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemSeal", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16033,8 +16033,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemSeal", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemSeal", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16069,8 +16069,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemStepDown", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemStepDown", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16107,8 +16107,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemStepDown", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemStepDown", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16146,8 +16146,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemToolsHash", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemToolsHash", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16187,8 +16187,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemToolsHash", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemToolsHash", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16232,8 +16232,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemToolsHashUrlalgorithm", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemToolsHashUrlalgorithm", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16279,8 +16279,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemToolsHashUrlalgorithm", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemToolsHashUrlalgorithm", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16318,8 +16318,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemToolsRandom", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemToolsRandom", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16359,8 +16359,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemToolsRandom", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemToolsRandom", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16404,8 +16404,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemToolsRandomSource", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemToolsRandomSource", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16451,8 +16451,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemToolsRandomSource", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemToolsRandomSource", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16502,8 +16502,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemToolsRandomSourceUrlbytes", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemToolsRandomSourceUrlbytes", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16555,8 +16555,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemToolsRandomSourceUrlbytes", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemToolsRandomSourceUrlbytes", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16600,8 +16600,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemToolsRandomUrlbytes", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemToolsRandomUrlbytes", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16647,8 +16647,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemToolsRandomUrlbytes", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemToolsRandomUrlbytes", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16686,8 +16686,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemUnseal", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemUnseal", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16727,8 +16727,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemUnseal", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemUnseal", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16766,8 +16766,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemWrappingLookup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemWrappingLookup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16807,8 +16807,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemWrappingLookup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemWrappingLookup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16846,8 +16846,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemWrappingRewrap", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemWrappingRewrap", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16887,8 +16887,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemWrappingRewrap", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemWrappingRewrap", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16926,8 +16926,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemWrappingUnwrap", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemWrappingUnwrap", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16967,8 +16967,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemWrappingUnwrap", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemWrappingUnwrap", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17003,8 +17003,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemWrappingWrap", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemWrappingWrap", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17041,8 +17041,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSystemWrappingWrap", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSystemWrappingWrap", response);
+                if (exception != null) throw exception;
             }
 
             return response;

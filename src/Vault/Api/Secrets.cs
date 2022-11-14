@@ -5242,8 +5242,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsRolesName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsRolesName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5291,8 +5291,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteAwsRolesName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteAwsRolesName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5338,8 +5338,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteCubbyholePath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteCubbyholePath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5387,8 +5387,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteCubbyholePath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteCubbyholePath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5434,8 +5434,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGcpRolesetName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteGcpRolesetName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5483,8 +5483,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGcpRolesetName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteGcpRolesetName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5530,8 +5530,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGcpStaticAccountName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteGcpStaticAccountName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5579,8 +5579,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGcpStaticAccountName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteGcpStaticAccountName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5626,8 +5626,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGcpkmsKeysDeregisterKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteGcpkmsKeysDeregisterKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5675,8 +5675,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGcpkmsKeysDeregisterKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteGcpkmsKeysDeregisterKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5722,8 +5722,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGcpkmsKeysKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteGcpkmsKeysKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5771,8 +5771,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGcpkmsKeysKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteGcpkmsKeysKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5818,8 +5818,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGcpkmsKeysTrimKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteGcpkmsKeysTrimKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5867,8 +5867,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteGcpkmsKeysTrimKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteGcpkmsKeysTrimKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5914,8 +5914,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteLdapLibraryName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteLdapLibraryName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -5963,8 +5963,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteLdapLibraryName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteLdapLibraryName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6010,8 +6010,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteLdapRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteLdapRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6059,8 +6059,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteLdapRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteLdapRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6106,8 +6106,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteLdapStaticRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteLdapStaticRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6155,8 +6155,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteLdapStaticRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteLdapStaticRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6196,8 +6196,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteNomadConfigAccess", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteNomadConfigAccess", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6239,8 +6239,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteNomadConfigAccess", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteNomadConfigAccess", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6286,8 +6286,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeletePkiIssuerRefDerPem", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeletePkiIssuerRefDerPem", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6335,8 +6335,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeletePkiIssuerRefDerPem", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeletePkiIssuerRefDerPem", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6376,8 +6376,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeletePkiJson", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeletePkiJson", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6419,8 +6419,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeletePkiJson", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeletePkiJson", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6466,8 +6466,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeletePkiKeyKeyRef", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeletePkiKeyKeyRef", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6515,8 +6515,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeletePkiKeyKeyRef", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeletePkiKeyKeyRef", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6556,8 +6556,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeletePkiRoot", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeletePkiRoot", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6599,8 +6599,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeletePkiRoot", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeletePkiRoot", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6646,8 +6646,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSecretDataPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSecretDataPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6695,8 +6695,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSecretDataPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSecretDataPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6742,8 +6742,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSecretMetadataPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSecretMetadataPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6791,8 +6791,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSecretMetadataPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSecretMetadataPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6832,8 +6832,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSshConfigZeroaddress", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSshConfigZeroaddress", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6875,8 +6875,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSshConfigZeroaddress", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSshConfigZeroaddress", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6922,8 +6922,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSshKeysKeyName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSshKeysKeyName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -6971,8 +6971,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSshKeysKeyName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSshKeysKeyName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7018,8 +7018,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSshRolesRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSshRolesRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7067,8 +7067,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteSshRolesRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteSshRolesRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7114,8 +7114,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteTotpKeysName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteTotpKeysName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7163,8 +7163,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("DeleteTotpKeysName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("DeleteTotpKeysName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7210,8 +7210,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListAwsRoles", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListAwsRoles", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7259,8 +7259,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListAwsRoles", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListAwsRoles", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7306,8 +7306,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListGcpRolesets", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListGcpRolesets", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7355,8 +7355,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListGcpRolesets", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListGcpRolesets", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7402,8 +7402,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListGcpStaticAccounts", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListGcpStaticAccounts", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7451,8 +7451,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListGcpStaticAccounts", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListGcpStaticAccounts", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7498,8 +7498,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListLdapLibrary", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListLdapLibrary", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7547,8 +7547,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListLdapLibrary", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListLdapLibrary", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7594,8 +7594,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListLdapRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListLdapRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7643,8 +7643,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListLdapRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListLdapRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7690,8 +7690,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListLdapStaticRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListLdapStaticRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7739,8 +7739,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListLdapStaticRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListLdapStaticRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7786,8 +7786,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListPkiCerts", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListPkiCerts", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7835,8 +7835,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListPkiCerts", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListPkiCerts", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7882,8 +7882,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListPkiIssuers", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListPkiIssuers", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7931,8 +7931,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListPkiIssuers", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListPkiIssuers", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -7978,8 +7978,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListTotpKeys", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListTotpKeys", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8027,8 +8027,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ListTotpKeys", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ListTotpKeys", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8068,8 +8068,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsConfigLease", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsConfigLease", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8111,8 +8111,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsConfigLease", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsConfigLease", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8152,8 +8152,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsConfigRoot", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsConfigRoot", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8195,8 +8195,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsConfigRoot", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsConfigRoot", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8236,8 +8236,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsCreds", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsCreds", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8279,8 +8279,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsCreds", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsCreds", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8326,8 +8326,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsRolesName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsRolesName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8375,8 +8375,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsRolesName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsRolesName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8422,8 +8422,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsStsName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsStsName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8471,8 +8471,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAwsStsName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAwsStsName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8518,8 +8518,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAzureCredsRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAzureCredsRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8567,8 +8567,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadAzureCredsRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadAzureCredsRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8619,8 +8619,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadCubbyholePath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadCubbyholePath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8673,8 +8673,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadCubbyholePath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadCubbyholePath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8714,8 +8714,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGcpConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGcpConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8757,8 +8757,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGcpConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGcpConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8804,8 +8804,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGcpKeyRoleset", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGcpKeyRoleset", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8853,8 +8853,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGcpKeyRoleset", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGcpKeyRoleset", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8900,8 +8900,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGcpRolesetName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGcpRolesetName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8949,8 +8949,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGcpRolesetName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGcpRolesetName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -8996,8 +8996,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGcpRolesetRolesetKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGcpRolesetRolesetKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9045,8 +9045,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGcpRolesetRolesetKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGcpRolesetRolesetKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9092,8 +9092,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGcpRolesetRolesetToken", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGcpRolesetRolesetToken", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9141,8 +9141,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGcpRolesetRolesetToken", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGcpRolesetRolesetToken", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9188,8 +9188,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGcpStaticAccountName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGcpStaticAccountName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9237,8 +9237,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGcpStaticAccountName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGcpStaticAccountName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9284,8 +9284,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGcpStaticAccountNameKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGcpStaticAccountNameKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9333,8 +9333,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGcpStaticAccountNameKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGcpStaticAccountNameKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9380,8 +9380,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGcpStaticAccountNameToken", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGcpStaticAccountNameToken", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9429,8 +9429,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGcpStaticAccountNameToken", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGcpStaticAccountNameToken", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9476,8 +9476,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGcpTokenRoleset", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGcpTokenRoleset", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9525,8 +9525,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGcpTokenRoleset", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGcpTokenRoleset", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9572,8 +9572,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGcpkmsKeysConfigKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGcpkmsKeysConfigKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9621,8 +9621,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGcpkmsKeysConfigKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGcpkmsKeysConfigKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9668,8 +9668,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGcpkmsKeysKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGcpkmsKeysKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9717,8 +9717,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGcpkmsKeysKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGcpkmsKeysKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9764,8 +9764,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGcpkmsPubkeyKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGcpkmsPubkeyKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9813,8 +9813,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadGcpkmsPubkeyKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadGcpkmsPubkeyKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9860,8 +9860,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadLdapCredsName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadLdapCredsName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9909,8 +9909,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadLdapCredsName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadLdapCredsName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -9956,8 +9956,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadLdapLibraryName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadLdapLibraryName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10005,8 +10005,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadLdapLibraryName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadLdapLibraryName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10052,8 +10052,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadLdapLibraryNameStatus", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadLdapLibraryNameStatus", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10101,8 +10101,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadLdapLibraryNameStatus", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadLdapLibraryNameStatus", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10148,8 +10148,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadLdapRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadLdapRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10197,8 +10197,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadLdapRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadLdapRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10244,8 +10244,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadLdapStaticCredName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadLdapStaticCredName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10293,8 +10293,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadLdapStaticCredName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadLdapStaticCredName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10340,8 +10340,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadLdapStaticRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadLdapStaticRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10389,8 +10389,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadLdapStaticRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadLdapStaticRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10430,8 +10430,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadNomadConfigAccess", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadNomadConfigAccess", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10473,8 +10473,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadNomadConfigAccess", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadNomadConfigAccess", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10514,8 +10514,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiCa", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiCa", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10557,8 +10557,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiCa", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiCa", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10598,8 +10598,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiCaChain", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiCaChain", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10641,8 +10641,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiCaChain", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiCaChain", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10682,8 +10682,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiCaPem", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiCaPem", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10725,8 +10725,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiCaPem", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiCaPem", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10766,8 +10766,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiCertCaChain", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiCertCaChain", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10809,8 +10809,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiCertCaChain", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiCertCaChain", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10856,8 +10856,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiCertSerial", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiCertSerial", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10905,8 +10905,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiCertSerial", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiCertSerial", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -10952,8 +10952,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiCertSerialRaw", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiCertSerialRaw", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11001,8 +11001,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiCertSerialRaw", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiCertSerialRaw", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11048,8 +11048,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiCertSerialRawPem", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiCertSerialRawPem", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11097,8 +11097,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiCertSerialRawPem", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiCertSerialRawPem", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11138,8 +11138,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiConfigAutoTidy", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiConfigAutoTidy", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11181,8 +11181,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiConfigAutoTidy", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiConfigAutoTidy", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11222,8 +11222,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiConfigCrl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiConfigCrl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11265,8 +11265,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiConfigCrl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiConfigCrl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11306,8 +11306,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiConfigIssuers", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiConfigIssuers", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11349,8 +11349,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiConfigIssuers", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiConfigIssuers", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11390,8 +11390,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiConfigKeys", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiConfigKeys", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11433,8 +11433,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiConfigKeys", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiConfigKeys", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11474,8 +11474,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiConfigUrls", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiConfigUrls", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11517,8 +11517,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiConfigUrls", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiConfigUrls", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11558,8 +11558,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiCrl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiCrl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11601,8 +11601,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiCrl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiCrl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11642,8 +11642,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiCrlRotate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiCrlRotate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11685,8 +11685,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiCrlRotate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiCrlRotate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11726,8 +11726,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiCrlRotateDelta", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiCrlRotateDelta", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11769,8 +11769,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiCrlRotateDelta", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiCrlRotateDelta", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11810,8 +11810,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiDelta", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiDelta", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11853,8 +11853,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiDelta", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiDelta", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11894,8 +11894,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiDeltaCrl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiDeltaCrl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11937,8 +11937,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiDeltaCrl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiDeltaCrl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -11978,8 +11978,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiDeltaPem", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiDeltaPem", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12021,8 +12021,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiDeltaPem", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiDeltaPem", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12062,8 +12062,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiDer", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiDer", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12105,8 +12105,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiDer", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiDer", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12152,8 +12152,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiIssuerRefCrlPemDerDeltaPem", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiIssuerRefCrlPemDerDeltaPem", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12201,8 +12201,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiIssuerRefCrlPemDerDeltaPem", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiIssuerRefCrlPemDerDeltaPem", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12248,8 +12248,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiIssuerRefDerPem", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiIssuerRefDerPem", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12297,8 +12297,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiIssuerRefDerPem", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiIssuerRefDerPem", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12338,8 +12338,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiJson", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiJson", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12381,8 +12381,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiJson", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiJson", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12428,8 +12428,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiKeyKeyRef", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiKeyKeyRef", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12477,8 +12477,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiKeyKeyRef", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiKeyKeyRef", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12524,8 +12524,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiOcspReq", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiOcspReq", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12573,8 +12573,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiOcspReq", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiOcspReq", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12614,8 +12614,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiPem", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiPem", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12657,8 +12657,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiPem", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiPem", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12698,8 +12698,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiTidyStatus", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiTidyStatus", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12741,8 +12741,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadPkiTidyStatus", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadPkiTidyStatus", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12788,8 +12788,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSecretDataPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSecretDataPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12837,8 +12837,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSecretDataPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSecretDataPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12889,8 +12889,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSecretMetadataPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSecretMetadataPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12943,8 +12943,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSecretMetadataPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSecretMetadataPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -12990,8 +12990,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSecretSubkeysPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSecretSubkeysPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13039,8 +13039,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSecretSubkeysPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSecretSubkeysPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13080,8 +13080,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSshConfigZeroaddress", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSshConfigZeroaddress", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13123,8 +13123,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSshConfigZeroaddress", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSshConfigZeroaddress", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13164,8 +13164,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSshPublicKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSshPublicKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13207,8 +13207,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSshPublicKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSshPublicKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13254,8 +13254,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSshRolesRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSshRolesRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13303,8 +13303,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadSshRolesRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadSshRolesRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13350,8 +13350,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadTotpCodeName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadTotpCodeName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13399,8 +13399,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadTotpCodeName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadTotpCodeName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13446,8 +13446,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadTotpKeysName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadTotpKeysName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13495,8 +13495,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadTotpKeysName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadTotpKeysName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13542,8 +13542,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadTransitBackupName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadTransitBackupName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13591,8 +13591,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadTransitBackupName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadTransitBackupName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13632,8 +13632,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadTransitCacheConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadTransitCacheConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13675,8 +13675,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadTransitCacheConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadTransitCacheConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13728,8 +13728,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadTransitExportTypeName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadTransitExportTypeName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13783,8 +13783,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadTransitExportTypeName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadTransitExportTypeName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13842,8 +13842,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadTransitExportTypeNameVersion", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadTransitExportTypeNameVersion", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13903,8 +13903,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadTransitExportTypeNameVersion", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadTransitExportTypeNameVersion", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13944,8 +13944,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadTransitWrappingKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadTransitWrappingKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -13987,8 +13987,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("ReadTransitWrappingKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("ReadTransitWrappingKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14031,8 +14031,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsConfigLease", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsConfigLease", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14077,8 +14077,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsConfigLease", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsConfigLease", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14121,8 +14121,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsConfigRoot", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsConfigRoot", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14167,8 +14167,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsConfigRoot", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsConfigRoot", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14211,8 +14211,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsCreds", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsCreds", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14257,8 +14257,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsCreds", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsCreds", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14307,8 +14307,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsRolesName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsRolesName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14359,8 +14359,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsRolesName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsRolesName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14409,8 +14409,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsStsName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsStsName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14461,8 +14461,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateAwsStsName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateAwsStsName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14508,8 +14508,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateCubbyholePath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateCubbyholePath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14557,8 +14557,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateCubbyholePath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateCubbyholePath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14601,8 +14601,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14647,8 +14647,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14688,8 +14688,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpConfigRotateRoot", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpConfigRotateRoot", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14731,8 +14731,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpConfigRotateRoot", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpConfigRotateRoot", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14781,8 +14781,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpKeyRoleset", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpKeyRoleset", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14833,8 +14833,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpKeyRoleset", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpKeyRoleset", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14883,8 +14883,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpRolesetName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpRolesetName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14935,8 +14935,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpRolesetName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpRolesetName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -14982,8 +14982,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpRolesetNameRotate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpRolesetNameRotate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15031,8 +15031,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpRolesetNameRotate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpRolesetNameRotate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15078,8 +15078,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpRolesetNameRotateKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpRolesetNameRotateKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15127,8 +15127,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpRolesetNameRotateKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpRolesetNameRotateKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15177,8 +15177,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpRolesetRolesetKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpRolesetRolesetKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15229,8 +15229,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpRolesetRolesetKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpRolesetRolesetKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15276,8 +15276,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpRolesetRolesetToken", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpRolesetRolesetToken", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15325,8 +15325,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpRolesetRolesetToken", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpRolesetRolesetToken", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15375,8 +15375,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpStaticAccountName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpStaticAccountName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15427,8 +15427,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpStaticAccountName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpStaticAccountName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15477,8 +15477,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpStaticAccountNameKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpStaticAccountNameKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15529,8 +15529,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpStaticAccountNameKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpStaticAccountNameKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15576,8 +15576,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpStaticAccountNameRotateKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpStaticAccountNameRotateKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15625,8 +15625,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpStaticAccountNameRotateKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpStaticAccountNameRotateKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15672,8 +15672,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpStaticAccountNameToken", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpStaticAccountNameToken", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15721,8 +15721,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpStaticAccountNameToken", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpStaticAccountNameToken", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15768,8 +15768,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpTokenRoleset", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpTokenRoleset", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15817,8 +15817,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpTokenRoleset", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpTokenRoleset", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15867,8 +15867,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpkmsDecryptKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpkmsDecryptKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15919,8 +15919,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpkmsDecryptKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpkmsDecryptKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -15969,8 +15969,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpkmsEncryptKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpkmsEncryptKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16021,8 +16021,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpkmsEncryptKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpkmsEncryptKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16071,8 +16071,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpkmsKeysConfigKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpkmsKeysConfigKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16123,8 +16123,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpkmsKeysConfigKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpkmsKeysConfigKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16170,8 +16170,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpkmsKeysDeregisterKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpkmsKeysDeregisterKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16219,8 +16219,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpkmsKeysDeregisterKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpkmsKeysDeregisterKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16269,8 +16269,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpkmsKeysKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpkmsKeysKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16321,8 +16321,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpkmsKeysKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpkmsKeysKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16371,8 +16371,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpkmsKeysRegisterKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpkmsKeysRegisterKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16423,8 +16423,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpkmsKeysRegisterKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpkmsKeysRegisterKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16470,8 +16470,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpkmsKeysRotateKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpkmsKeysRotateKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16519,8 +16519,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpkmsKeysRotateKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpkmsKeysRotateKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16566,8 +16566,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpkmsKeysTrimKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpkmsKeysTrimKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16615,8 +16615,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpkmsKeysTrimKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpkmsKeysTrimKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16665,8 +16665,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpkmsReencryptKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpkmsReencryptKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16717,8 +16717,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpkmsReencryptKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpkmsReencryptKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16767,8 +16767,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpkmsSignKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpkmsSignKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16819,8 +16819,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpkmsSignKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpkmsSignKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16869,8 +16869,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpkmsVerifyKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpkmsVerifyKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16921,8 +16921,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateGcpkmsVerifyKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateGcpkmsVerifyKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -16971,8 +16971,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateLdapLibraryManageNameCheckIn", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateLdapLibraryManageNameCheckIn", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17023,8 +17023,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateLdapLibraryManageNameCheckIn", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateLdapLibraryManageNameCheckIn", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17073,8 +17073,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateLdapLibraryName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateLdapLibraryName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17125,8 +17125,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateLdapLibraryName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateLdapLibraryName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17175,8 +17175,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateLdapLibraryNameCheckIn", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateLdapLibraryNameCheckIn", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17227,8 +17227,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateLdapLibraryNameCheckIn", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateLdapLibraryNameCheckIn", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17277,8 +17277,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateLdapLibraryNameCheckOut", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateLdapLibraryNameCheckOut", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17329,8 +17329,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateLdapLibraryNameCheckOut", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateLdapLibraryNameCheckOut", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17379,8 +17379,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateLdapRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateLdapRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17431,8 +17431,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateLdapRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateLdapRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17478,8 +17478,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateLdapRotateRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateLdapRotateRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17527,8 +17527,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateLdapRotateRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateLdapRotateRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17568,8 +17568,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateLdapRotateRoot", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateLdapRotateRoot", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17611,8 +17611,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateLdapRotateRoot", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateLdapRotateRoot", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17661,8 +17661,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateLdapStaticRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateLdapStaticRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17713,8 +17713,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateLdapStaticRoleName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateLdapStaticRoleName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17757,8 +17757,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateNomadConfigAccess", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateNomadConfigAccess", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17803,8 +17803,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateNomadConfigAccess", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateNomadConfigAccess", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17847,8 +17847,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiBundle", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiBundle", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17893,8 +17893,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiBundle", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiBundle", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17937,8 +17937,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiCert", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiCert", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -17983,8 +17983,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiCert", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiCert", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18027,8 +18027,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiConfigAutoTidy", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiConfigAutoTidy", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18073,8 +18073,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiConfigAutoTidy", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiConfigAutoTidy", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18117,8 +18117,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiConfigCa", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiConfigCa", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18163,8 +18163,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiConfigCa", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiConfigCa", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18207,8 +18207,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiConfigCrl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiConfigCrl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18253,8 +18253,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiConfigCrl", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiConfigCrl", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18297,8 +18297,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiConfigIssuers", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiConfigIssuers", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18343,8 +18343,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiConfigIssuers", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiConfigIssuers", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18387,8 +18387,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiConfigKeys", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiConfigKeys", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18433,8 +18433,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiConfigKeys", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiConfigKeys", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18477,8 +18477,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiConfigUrls", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiConfigUrls", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18523,8 +18523,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiConfigUrls", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiConfigUrls", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18567,8 +18567,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIntermediateCrossSign", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIntermediateCrossSign", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18613,8 +18613,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIntermediateCrossSign", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIntermediateCrossSign", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18663,8 +18663,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIntermediateGenerateExported", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIntermediateGenerateExported", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18715,8 +18715,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIntermediateGenerateExported", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIntermediateGenerateExported", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18759,8 +18759,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIntermediateSetSigned", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIntermediateSetSigned", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18805,8 +18805,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIntermediateSetSigned", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIntermediateSetSigned", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18855,8 +18855,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIssueRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIssueRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18907,8 +18907,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIssueRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIssueRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -18963,8 +18963,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefIssueRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefIssueRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19021,8 +19021,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefIssueRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefIssueRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19068,8 +19068,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefRevoke", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefRevoke", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19117,8 +19117,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefRevoke", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefRevoke", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19167,8 +19167,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefSignIntermediate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefSignIntermediate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19219,8 +19219,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefSignIntermediate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefSignIntermediate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19275,8 +19275,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefSignRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefSignRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19333,8 +19333,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefSignRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefSignRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19383,8 +19383,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefSignSelfIssued", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefSignSelfIssued", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19435,8 +19435,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefSignSelfIssued", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefSignSelfIssued", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19485,8 +19485,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefSignVerbatim", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefSignVerbatim", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19537,8 +19537,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefSignVerbatim", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefSignVerbatim", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19593,8 +19593,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefSignVerbatimRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefSignVerbatimRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19651,8 +19651,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefSignVerbatimRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIssuerIssuerRefSignVerbatimRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19701,8 +19701,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIssuersGenerateIntermediateExported", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIssuersGenerateIntermediateExported", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19753,8 +19753,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIssuersGenerateIntermediateExported", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIssuersGenerateIntermediateExported", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19803,8 +19803,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIssuersGenerateRootExported", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIssuersGenerateRootExported", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19855,8 +19855,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiIssuersGenerateRootExported", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiIssuersGenerateRootExported", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19899,8 +19899,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiJson", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiJson", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19945,8 +19945,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiJson", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiJson", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -19995,8 +19995,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiKeyKeyRef", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiKeyKeyRef", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -20047,8 +20047,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiKeyKeyRef", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiKeyKeyRef", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -20091,8 +20091,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiKeysImport", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiKeysImport", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -20137,8 +20137,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiKeysImport", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiKeysImport", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -20181,8 +20181,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiKms", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiKms", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -20227,8 +20227,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiKms", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiKms", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -20268,8 +20268,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiOcsp", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiOcsp", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -20311,8 +20311,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiOcsp", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiOcsp", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -20355,8 +20355,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiRevoke", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiRevoke", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -20401,8 +20401,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiRevoke", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiRevoke", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -20445,8 +20445,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiRevokeWithKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiRevokeWithKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -20491,8 +20491,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiRevokeWithKey", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiRevokeWithKey", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -20541,8 +20541,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiRootGenerateExported", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiRootGenerateExported", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -20593,8 +20593,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiRootGenerateExported", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiRootGenerateExported", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -20637,8 +20637,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiRootReplace", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiRootReplace", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -20683,8 +20683,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiRootReplace", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiRootReplace", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -20733,8 +20733,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiRootRotateExported", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiRootRotateExported", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -20785,8 +20785,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiRootRotateExported", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiRootRotateExported", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -20829,8 +20829,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiRootSignIntermediate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiRootSignIntermediate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -20875,8 +20875,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiRootSignIntermediate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiRootSignIntermediate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -20919,8 +20919,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiRootSignSelfIssued", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiRootSignSelfIssued", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -20965,8 +20965,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiRootSignSelfIssued", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiRootSignSelfIssued", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -21015,8 +21015,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiSignRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiSignRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -21067,8 +21067,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiSignRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiSignRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -21111,8 +21111,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiSignVerbatim", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiSignVerbatim", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -21157,8 +21157,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiSignVerbatim", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiSignVerbatim", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -21207,8 +21207,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiSignVerbatimRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiSignVerbatimRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -21259,8 +21259,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiSignVerbatimRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiSignVerbatimRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -21303,8 +21303,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiTidy", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiTidy", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -21349,8 +21349,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiTidy", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiTidy", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -21390,8 +21390,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiTidyCancel", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiTidyCancel", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -21433,8 +21433,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdatePkiTidyCancel", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdatePkiTidyCancel", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -21477,8 +21477,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateRabbitmqConfigConnection", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateRabbitmqConfigConnection", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -21523,8 +21523,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateRabbitmqConfigConnection", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateRabbitmqConfigConnection", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -21573,8 +21573,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSecretDataPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSecretDataPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -21625,8 +21625,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSecretDataPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSecretDataPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -21675,8 +21675,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSecretDeletePath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSecretDeletePath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -21727,8 +21727,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSecretDeletePath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSecretDeletePath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -21777,8 +21777,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSecretDestroyPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSecretDestroyPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -21829,8 +21829,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSecretDestroyPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSecretDestroyPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -21879,8 +21879,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSecretMetadataPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSecretMetadataPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -21931,8 +21931,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSecretMetadataPath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSecretMetadataPath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -21981,8 +21981,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSecretUndeletePath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSecretUndeletePath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -22033,8 +22033,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSecretUndeletePath", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSecretUndeletePath", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -22077,8 +22077,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSshConfigZeroaddress", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSshConfigZeroaddress", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -22123,8 +22123,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSshConfigZeroaddress", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSshConfigZeroaddress", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -22173,8 +22173,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSshKeysKeyName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSshKeysKeyName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -22225,8 +22225,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSshKeysKeyName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSshKeysKeyName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -22269,8 +22269,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSshLookup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSshLookup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -22315,8 +22315,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSshLookup", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSshLookup", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -22365,8 +22365,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSshRolesRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSshRolesRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -22417,8 +22417,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSshRolesRole", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSshRolesRole", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -22461,8 +22461,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSshVerify", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSshVerify", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -22507,8 +22507,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateSshVerify", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateSshVerify", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -22557,8 +22557,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTotpCodeName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTotpCodeName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -22609,8 +22609,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTotpCodeName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTotpCodeName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -22659,8 +22659,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTotpKeysName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTotpKeysName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -22711,8 +22711,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTotpKeysName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTotpKeysName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -22755,8 +22755,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitCacheConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitCacheConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -22801,8 +22801,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitCacheConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitCacheConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -22857,8 +22857,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitDatakeyPlaintextName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitDatakeyPlaintextName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -22915,8 +22915,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitDatakeyPlaintextName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitDatakeyPlaintextName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -22965,8 +22965,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitDecryptName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitDecryptName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -23017,8 +23017,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitDecryptName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitDecryptName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -23067,8 +23067,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitEncryptName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitEncryptName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -23119,8 +23119,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitEncryptName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitEncryptName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -23163,8 +23163,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitHash", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitHash", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -23209,8 +23209,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitHash", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitHash", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -23259,8 +23259,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitHashUrlalgorithm", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitHashUrlalgorithm", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -23311,8 +23311,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitHashUrlalgorithm", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitHashUrlalgorithm", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -23361,8 +23361,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitHmacName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitHmacName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -23413,8 +23413,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitHmacName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitHmacName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -23469,8 +23469,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitHmacNameUrlalgorithm", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitHmacNameUrlalgorithm", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -23527,8 +23527,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitHmacNameUrlalgorithm", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitHmacNameUrlalgorithm", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -23577,8 +23577,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitKeysNameConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitKeysNameConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -23629,8 +23629,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitKeysNameConfig", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitKeysNameConfig", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -23679,8 +23679,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitKeysNameImport", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitKeysNameImport", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -23731,8 +23731,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitKeysNameImport", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitKeysNameImport", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -23781,8 +23781,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitKeysNameImportVersion", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitKeysNameImportVersion", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -23833,8 +23833,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitKeysNameImportVersion", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitKeysNameImportVersion", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -23880,8 +23880,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitKeysNameRotate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitKeysNameRotate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -23929,8 +23929,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitKeysNameRotate", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitKeysNameRotate", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -23979,8 +23979,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitKeysNameTrim", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitKeysNameTrim", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -24031,8 +24031,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitKeysNameTrim", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitKeysNameTrim", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -24075,8 +24075,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitRandom", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitRandom", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -24121,8 +24121,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitRandom", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitRandom", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -24171,8 +24171,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitRandomSource", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitRandomSource", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -24223,8 +24223,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitRandomSource", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitRandomSource", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -24279,8 +24279,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitRandomSourceUrlbytes", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitRandomSourceUrlbytes", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -24337,8 +24337,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitRandomSourceUrlbytes", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitRandomSourceUrlbytes", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -24387,8 +24387,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitRandomUrlbytes", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitRandomUrlbytes", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -24439,8 +24439,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitRandomUrlbytes", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitRandomUrlbytes", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -24483,8 +24483,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitRestore", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitRestore", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -24529,8 +24529,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitRestore", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitRestore", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -24579,8 +24579,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitRestoreName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitRestoreName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -24631,8 +24631,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitRestoreName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitRestoreName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -24681,8 +24681,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitRewrapName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitRewrapName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -24733,8 +24733,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitRewrapName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitRewrapName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -24783,8 +24783,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitSignName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitSignName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -24835,8 +24835,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitSignName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitSignName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -24891,8 +24891,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitSignNameUrlalgorithm", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitSignNameUrlalgorithm", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -24949,8 +24949,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitSignNameUrlalgorithm", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitSignNameUrlalgorithm", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -24999,8 +24999,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitVerifyName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitVerifyName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -25051,8 +25051,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitVerifyName", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitVerifyName", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -25107,8 +25107,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitVerifyNameUrlalgorithm", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitVerifyNameUrlalgorithm", response);
+                if (exception != null) throw exception;
             }
 
             return response;
@@ -25165,8 +25165,8 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("UpdateTransitVerifyNameUrlalgorithm", response);
-                if (_exception != null) throw _exception;
+                Exception exception = this.ExceptionFactory("UpdateTransitVerifyNameUrlalgorithm", response);
+                if (exception != null) throw exception;
             }
 
             return response;
