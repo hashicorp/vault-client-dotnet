@@ -37,11 +37,6 @@ namespace Vault.Client
         public IEnumerable<string> ApiErrors { get; private set; }
 
         /// <summary>
-        /// Gets or sets the list of Api Errors
-        /// </summary>
-        public IEnumerable<string> ApiWarnings { get; private set; }
-
-        /// <summary>
         /// Gets or sets the HTTP headers
         /// </summary>
         /// <value>HTTP headers</value>
@@ -82,11 +77,6 @@ namespace Vault.Client
                 if (structured.ContainsKey("errors"))
                 {
                     this.ApiErrors = structured["errors"];
-                }
-
-                if (structured.ContainsKey("warnings"))
-                {
-                    this.ApiWarnings = structured["warnings"];
                 }
             }
             catch
