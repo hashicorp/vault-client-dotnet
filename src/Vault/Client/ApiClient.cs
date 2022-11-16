@@ -471,7 +471,7 @@ namespace Vault.Client
             T result = (T)responseData;
             string rawContent = await response.Content.ReadAsStringAsync();
 
-            var transformed = new VaultResponse<T>(response.StatusCode, new Multimap<string, string>(), result, rawContent)
+            var transformed = new ApiResponse<T>(response.StatusCode, new Multimap<string, string>(), result, rawContent)
             {
                 ErrorText = response.ReasonPhrase,
                 Cookies = new List<Cookie>()
