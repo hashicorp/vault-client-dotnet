@@ -11,54 +11,74 @@ using Newtonsoft.Json;
 namespace Vault.Client
 {
     /// <summary>
-    /// 
+    /// Response is the structure returned by the majority of the requests to Vault
     /// </summary>    
     /// <typeparam name="TData">The type of the data contained in the secret.</typeparam>
     public class VaultResponse<TData>
     {
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// Request ID that generated this response
+        /// </summary>
         [JsonProperty("request_id")]
         public string RequestID;
 
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// </summary>
         [JsonProperty("lease_id")]
         public string LeaseID;
 
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// </summary>
         [JsonProperty("lease_duration")]
         public int LeaseDuration;
 
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// </summary>
         [JsonProperty("renewable")]
         public bool Renewable;
 
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// Any warnings related to the operation.
+        /// <remarks>
+        /// These are not issues that caused
+        /// the command to fail, but thigns the client
+        /// should be aware of. 
+        /// </remarks>
+        /// </summary>
         [JsonProperty("warnings")]
         public List<string> Warnings;
 
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// Data is the actual contents of the response
+        /// <remarks>
+        /// The format of the data is up to the secret 
+        /// backend that handles the request
+        /// </remarks>
+        /// </summary>
         [JsonProperty("data")]
         public TData Data;
 
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// Auth specifies authentication information 
+        /// attached to this response
+        /// </summary>
         [JsonProperty("auth")]
         public ResponseAuth ResponseAuth;
 
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// Relevant wrap information
+        /// <remarks> 
+        /// if not null means the initial response was
+        /// wrapped in the cubbyhole of the given token,
+        /// which has a TTL of the given  number of seconds
+        /// </remarks>
+        /// </summary>
         [JsonProperty("wrap_info")]
         public ResponseWrapInfo ResponseWrapInfo;
     }
 
     /// <summary>
-    ///
+    /// ResponseAuth contains authentication information if available
     /// </summary>
     public class ResponseAuth
     {
@@ -119,7 +139,11 @@ namespace Vault.Client
     }
 
     /// <summary>
-    /// 
+    /// ResponseWrapInfo contains wrapping information if available
+    /// <remarks>
+    /// If what is contained is an authentication token, the accessor
+    /// for the token will be available in WrappedAccessor
+    /// </remarks>
     /// </summary>    
     public class ResponseWrapInfo
     {
@@ -150,7 +174,7 @@ namespace Vault.Client
 
         ///<summary>
         ///</summary>
-        [JsonProperty("wrappedAccessor")]
+        [JsonProperty("wrapped_accessor")]
         public string WrappedAccessor;
     }
 
