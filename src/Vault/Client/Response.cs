@@ -23,16 +23,19 @@ namespace Vault.Client
         public string RequestID;
 
         /// <summary>
+        /// Lease ID associated with response
         /// </summary>
         [JsonProperty("lease_id")]
         public string LeaseID;
 
         /// <summary>
+        /// Lease Duration is the TTL for the lease in seconds
         /// </summary>
         [JsonProperty("lease_duration")]
         public int LeaseDuration;
 
         /// <summary>
+        /// Renewable indicates whether a lease is renewable
         /// </summary>
         [JsonProperty("renewable")]
         public bool Renewable;
@@ -82,58 +85,69 @@ namespace Vault.Client
     /// </summary>
     public class ResponseAuth
     {
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// Client Token
+        /// </summary>
         [JsonProperty("client_token")]
         public string ClientToken;
 
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// 
+        /// </summary>
         [JsonProperty("accessor")]
         public string Accessor;
 
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// List of associated policies 
+        /// </summary>
         [JsonProperty("policies")]
         public List<string> Policies;
 
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// List of token policies
+        /// </summary>
         [JsonProperty("token_policies")]
         public List<string> TokenPolicies;
 
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// List of identity policies
+        /// </summary>
         [JsonProperty("identity_policies")]
         public List<string> IdentityPolicies;
 
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// Associated Metadata
+        /// </summary>
         [JsonProperty("metadata")]
         public Dictionary<string, string> Metadata;
 
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// Indicates whether the token is orphaned
+        /// </summary>
         [JsonProperty("orphan")]
         public bool Orphan;
 
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// Entity ID
+        /// </summary>
         [JsonProperty("entity_id")]
         public string EntityID;
 
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// Lease TTL in seconds
+        /// </summary>
         [JsonProperty("lease_duration")]
         public int LeaseDuration;
 
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// Renewable indicates whether the lease is renewable
+        /// </summary>
         [JsonProperty("renewable")]
         public bool Renewable;
 
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// MFA Requirement if it is specified
+        /// </summary>
         [JsonProperty("mfa_requirement")]
         public MFARequirement MFARequirement;
     }
@@ -147,13 +161,15 @@ namespace Vault.Client
     /// </summary>    
     public class ResponseWrapInfo
     {
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// Associated Token
+        /// </summary>
         [JsonProperty("token")]
         public string Token;
 
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// Accessor
+        /// </summary>
         [JsonProperty("accessor")]
         public string Accessor;
 
@@ -162,64 +178,81 @@ namespace Vault.Client
         [JsonProperty("ttl")]
         public int TTL;
 
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// Time the response was created
+        /// </summary>
         [JsonProperty("creation_time")]
         public DateTime CreationTime;
 
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// Creation Path
+        /// </summary>
         [JsonProperty("creation_path")]
         public string CreationPath;
 
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// Wrapped Accessor
+        /// </summary>
         [JsonProperty("wrapped_accessor")]
         public string WrappedAccessor;
     }
 
     /// <summary>
-    /// 
+    /// MFARequirement contains MFAConstraints that
+    /// determine which MFA types should be used to 
+    /// validate the request
     /// </summary>    
     public class MFARequirement
     {
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// MFA Request ID
+        /// </summary>
         [JsonProperty("mfa_request_id")]
         public string MFARequestId;
 
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// MFAConstraints maps method ID to MFA constraints
+        /// </summary>
         [JsonProperty("mfa_constraints")]
         public Dictionary<string, MFAConstraint> MFAConstraints;
     }
 
-    ///<summary>
-    ///</summary>
+    /// <summary>
+    /// MFA Constraint is a list of MFAMethodIDs
+    /// </summary>
     public class MFAConstraint
     {
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// Any is a list of MFAMethodIDs
+        /// </summary>
         [JsonProperty("any")]
         public List<MFAMethodID> Any;
     }
 
-    ///<summary>
-    ///</summary>
+    /// <summary>
+    /// MFAMethodID defines information of an MFA Type
+    /// </summary>
     public class MFAMethodID
     {
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// MFA Type
+        /// <remarks>
+        /// Totp, Okta, Duo or PingID
+        /// </remarks>
+        /// </summary>
         [JsonProperty("type")]
         public string Type;
 
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// ID
+        /// </summary>
         [JsonProperty("id")]
         public string ID;
 
-        ///<summary>
-        ///</summary>
+        /// <summary>
+        /// UsesPasscode indicates whether the MFA
+        /// type uses a passcode or not
+        /// </summary>
         [JsonProperty("uses_passcode")]
         public bool UsesPasscode;
     }
