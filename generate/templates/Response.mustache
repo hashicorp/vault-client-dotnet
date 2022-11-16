@@ -95,7 +95,7 @@ namespace Vault.Client
         ///<summary>
         ///</summary>
         [JsonProperty("orphan")]
-        public bool orphan;
+        public bool Orphan;
 
         ///<summary>
         ///</summary>
