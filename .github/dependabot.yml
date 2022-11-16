@@ -1,0 +1,10 @@
+version: 2
+updates:
+  - directory: "/"
+    open-pull-requests-limit: 5
+    package-ecosystem: "nuget"
+    rebase-strategy: auto
+    schedule:
+      interval: "weekly"
+      timezone: "America/New_York"
+      time: "09:00"
