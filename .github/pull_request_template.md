@@ -9,6 +9,3 @@ Resolves # (issue)
 
 > Please describe the tests you ran.
 
-## Don't forget to
-
-- [ ] run `make regen`
