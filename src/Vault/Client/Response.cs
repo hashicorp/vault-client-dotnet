@@ -112,7 +112,10 @@ namespace Vault.Client
         [JsonProperty("renewable")]
         public bool Renewable;
 
-        // MFARequirement
+        ///<summary>
+        ///</summary>
+        [JsonProperty("mfa_requirement")]
+        public MFARequirement MFARequirement;
     }
 
     /// <summary>
@@ -160,5 +163,40 @@ namespace Vault.Client
         ///</summary>
         [JsonProperty("mfa_request_id")]
         public string MFARequestId;
+
+        ///<summary>
+        ///</summary>
+        [JsonProperty("mfa_constraints")]
+        public Dictionary<string, MFAConstraint> MFAConstraints;
+    }
+
+    ///<summary>
+    ///</summary>
+    public class MFAConstraint
+    {
+        ///<summary>
+        ///</summary>
+        [JsonProperty("any")]
+        public List<MFAMethodID> Any;
+    }
+
+    ///<summary>
+    ///</summary>
+    public class MFAMethodID
+    {
+        ///<summary>
+        ///</summary>
+        [JsonProperty("type")]
+        public string Type;
+
+        ///<summary>
+        ///</summary>
+        [JsonProperty("id")]
+        public string ID;
+
+        ///<summary>
+        ///</summary>
+        [JsonProperty("uses_passcode")]
+        public bool UsesPasscode;
     }
 }
