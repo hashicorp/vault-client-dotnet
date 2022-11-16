@@ -6,5 +6,6 @@ updates:
     rebase-strategy: auto
     schedule:
       interval: "weekly"
+      day: "monday"
       timezone: "America/New_York"
       time: "09:00"
