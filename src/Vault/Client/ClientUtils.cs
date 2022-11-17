@@ -204,8 +204,7 @@ namespace Vault.Client
         {
             if (!string.IsNullOrWhiteSpace(rawContent))
             {
-                var response = JsonConvert.DeserializeObject<VaultResponse<T>>(rawContent);
-                return response;
+                return JsonConvert.DeserializeObject<VaultResponse<T>>(rawContent);
             }
 
             return default(VaultResponse<T>);
