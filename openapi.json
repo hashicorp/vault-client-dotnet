@@ -12830,7 +12830,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PkiInternal|ExportedRequest"
+                "$ref": "#/components/schemas/PkiInternalExportedRequest"
               }
             }
           }
@@ -17227,7 +17227,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PkiDer|PemRequest"
+                "$ref": "#/components/schemas/PkiDerPemRequest"
               }
             }
           }
@@ -24413,7 +24413,7 @@
           }
         }
       },
-      "PkiDer|PemRequest": {
+      "PkiDerPemRequest": {
         "type": "object",
         "properties": {
           "crl_distribution_points": {
@@ -24931,7 +24931,7 @@
           }
         }
       },
-      "PkiInternal|ExportedRequest": {
+      "PkiInternalExportedRequest": {
         "type": "object",
         "properties": {
           "key_bits": {
