@@ -78,7 +78,7 @@ namespace Example
 
             try 
             {
-                ApiResponse<Object> resp = vaultClient.System.GetSysMounts();
+                VaultResponse<Object> resp = vaultClient.System.GetSysMounts();
 
                 // Write out response content
                 Console.Writeline(resp.Content);
@@ -156,7 +156,7 @@ To call secrets endpoints, simply use the `VaultClient.Secrets` object, as shown
 
 ```csharp
 // Read a secret
-ApiResponse<Object> resp = await vaultClient.Secrets.GetKvPathAsync("path");
+VaultResponse<Object> resp = await vaultClient.Secrets.GetKvPathAsync("path");
 
 Console.Writeline(resp.Content);
 ```
@@ -167,8 +167,8 @@ introduce overriding the default mountpath in each call.
 
 All calls have both an async and synchronous implementation. E.g.
 ```chsarp
-ApiResponse<Object> respAsync = await vaultClient.Secrets.GetKvPathAsync("path");
-ApiResponse<Object> respSync = vaultClient.Secrets.GetKvPath("path");
+VaultResponse<Object> respAsync = await vaultClient.Secrets.GetKvPathAsync("path");
+VaultResponse<Object> respSync = vaultClient.Secrets.GetKvPath("path");
 ```
 
 <a name="documentation-for-api-endpoints"></a>
