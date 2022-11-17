@@ -222,17 +222,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityAliasId(string list);
-        /// <summary>
-        /// Update, read or delete an alias ID.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID of the alias</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityAliasIdId(string id);
+        VaultResponse<Object> ListIdentityAliasId(string list);
         /// <summary>
         /// List all the alias IDs.
         /// </summary>
@@ -242,17 +232,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityEntityAliasId(string list);
-        /// <summary>
-        /// Update, read or delete an alias ID.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID of the alias</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityEntityAliasIdId(string id);
+        VaultResponse<Object> ListIdentityEntityAliasId(string list);
         /// <summary>
         /// List all the entity IDs
         /// </summary>
@@ -262,17 +242,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityEntityId(string list);
-        /// <summary>
-        /// Update, read or delete an entity using entity ID
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityEntityIdId(string id);
+        VaultResponse<Object> ListIdentityEntityId(string list);
         /// <summary>
         /// List all the entity names
         /// </summary>
@@ -282,17 +252,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityEntityName(string list);
-        /// <summary>
-        /// Update, read or delete an entity using entity name
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the entity</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityEntityNameName(string name);
+        VaultResponse<Object> ListIdentityEntityName(string list);
         /// <summary>
         /// List all the group alias IDs.
         /// </summary>
@@ -302,17 +262,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityGroupAliasId(string list);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID of the group alias.</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityGroupAliasIdId(string id);
+        VaultResponse<Object> ListIdentityGroupAliasId(string list);
         /// <summary>
         /// List all the group IDs.
         /// </summary>
@@ -322,17 +272,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityGroupId(string list);
-        /// <summary>
-        /// Update or delete an existing group using its ID.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityGroupIdId(string id);
+        VaultResponse<Object> ListIdentityGroupId(string list);
         /// <summary>
         /// 
         /// </summary>
@@ -342,17 +282,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityGroupName(string list);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the group.</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityGroupNameName(string name);
+        VaultResponse<Object> ListIdentityGroupName(string list);
         /// <summary>
         /// List login enforcements
         /// </summary>
@@ -362,17 +292,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityMfaLoginEnforcement(string list);
-        /// <summary>
-        /// Read the current login enforcement
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name for this login enforcement configuration</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityMfaLoginEnforcementName(string name);
+        VaultResponse<Object> ListIdentityMfaLoginEnforcement(string list);
         /// <summary>
         /// List MFA method configurations for all MFA methods
         /// </summary>
@@ -382,7 +302,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityMfaMethod(string list);
+        VaultResponse<Object> ListIdentityMfaMethod(string list);
         /// <summary>
         /// List MFA method configurations for the given MFA method
         /// </summary>
@@ -392,27 +312,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityMfaMethodDuo(string list);
-        /// <summary>
-        /// Read the current configuration for the given MFA method
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityMfaMethodDuoMethodId(string methodId);
-        /// <summary>
-        /// Read the current configuration for the given ID regardless of the MFA method type
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityMfaMethodMethodId(string methodId);
+        VaultResponse<Object> ListIdentityMfaMethodDuo(string list);
         /// <summary>
         /// List MFA method configurations for the given MFA method
         /// </summary>
@@ -422,17 +322,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityMfaMethodOkta(string list);
-        /// <summary>
-        /// Read the current configuration for the given MFA method
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityMfaMethodOktaMethodId(string methodId);
+        VaultResponse<Object> ListIdentityMfaMethodOkta(string list);
         /// <summary>
         /// List MFA method configurations for the given MFA method
         /// </summary>
@@ -442,17 +332,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityMfaMethodPingid(string list);
-        /// <summary>
-        /// Read the current configuration for the given MFA method
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityMfaMethodPingidMethodId(string methodId);
+        VaultResponse<Object> ListIdentityMfaMethodPingid(string list);
         /// <summary>
         /// List MFA method configurations for the given MFA method
         /// </summary>
@@ -462,17 +342,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityMfaMethodTotp(string list);
-        /// <summary>
-        /// Read the current configuration for the given MFA method
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityMfaMethodTotpMethodId(string methodId);
+        VaultResponse<Object> ListIdentityMfaMethodTotp(string list);
         /// <summary>
         /// 
         /// </summary>
@@ -482,17 +352,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityOidcAssignment(string list);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the assignment</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityOidcAssignmentName(string name);
+        VaultResponse<Object> ListIdentityOidcAssignment(string list);
         /// <summary>
         /// 
         /// </summary>
@@ -502,26 +362,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityOidcClient(string list);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the client.</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityOidcClientName(string name);
-        /// <summary>
-        /// OIDC configuration
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityOidcConfig();
+        VaultResponse<Object> ListIdentityOidcClient(string list);
         /// <summary>
         /// List OIDC keys
         /// </summary>
@@ -531,17 +372,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityOidcKey(string list);
-        /// <summary>
-        /// CRUD operations for OIDC keys.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the key</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityOidcKeyName(string name);
+        VaultResponse<Object> ListIdentityOidcKey(string list);
         /// <summary>
         /// 
         /// </summary>
@@ -552,57 +383,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="allowedClientId">Filters the list of OIDC providers to those that allow the given client ID in their set of allowed_client_ids. (optional, default to &quot;&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityOidcProvider(string list, string allowedClientId = default(string));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the provider</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityOidcProviderName(string name);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the provider</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityOidcProviderNameAuthorize(string name);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the provider</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityOidcProviderNameUserinfo(string name);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the provider</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityOidcProviderNameWellKnownKeys(string name);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the provider</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityOidcProviderNameWellKnownOpenidConfiguration(string name);
+        VaultResponse<Object> ListIdentityOidcProvider(string list, string allowedClientId = "");
         /// <summary>
         /// List configured OIDC roles
         /// </summary>
@@ -612,17 +393,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityOidcRole(string list);
-        /// <summary>
-        /// CRUD operations on OIDC Roles
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityOidcRoleName(string name);
+        VaultResponse<Object> ListIdentityOidcRole(string list);
         /// <summary>
         /// 
         /// </summary>
@@ -632,45 +403,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityOidcScope(string list);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the scope</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityOidcScopeName(string name);
-        /// <summary>
-        /// Generate an OIDC token
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityOidcTokenName(string name);
-        /// <summary>
-        /// Retrieve public keys
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityOidcWellKnownKeys();
-        /// <summary>
-        /// Query OIDC configurations
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityOidcWellKnownOpenidConfiguration();
+        VaultResponse<Object> ListIdentityOidcScope(string list);
         /// <summary>
         /// List all the alias IDs.
         /// </summary>
@@ -680,7 +413,274 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityPersonaId(string list);
+        VaultResponse<Object> ListIdentityPersonaId(string list);
+        /// <summary>
+        /// Update, read or delete an alias ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID of the alias</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityAliasIdId(string id);
+        /// <summary>
+        /// Update, read or delete an alias ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID of the alias</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityEntityAliasIdId(string id);
+        /// <summary>
+        /// Update, read or delete an entity using entity ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityEntityIdId(string id);
+        /// <summary>
+        /// Update, read or delete an entity using entity name
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the entity</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityEntityNameName(string name);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID of the group alias.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityGroupAliasIdId(string id);
+        /// <summary>
+        /// Update or delete an existing group using its ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityGroupIdId(string id);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the group.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityGroupNameName(string name);
+        /// <summary>
+        /// Read the current login enforcement
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name for this login enforcement configuration</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityMfaLoginEnforcementName(string name);
+        /// <summary>
+        /// Read the current configuration for the given MFA method
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityMfaMethodDuoMethodId(string methodId);
+        /// <summary>
+        /// Read the current configuration for the given ID regardless of the MFA method type
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityMfaMethodMethodId(string methodId);
+        /// <summary>
+        /// Read the current configuration for the given MFA method
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityMfaMethodOktaMethodId(string methodId);
+        /// <summary>
+        /// Read the current configuration for the given MFA method
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityMfaMethodPingidMethodId(string methodId);
+        /// <summary>
+        /// Read the current configuration for the given MFA method
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityMfaMethodTotpMethodId(string methodId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the assignment</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityOidcAssignmentName(string name);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the client.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityOidcClientName(string name);
+        /// <summary>
+        /// OIDC configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityOidcConfig();
+        /// <summary>
+        /// CRUD operations for OIDC keys.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the key</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityOidcKeyName(string name);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the provider</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityOidcProviderName(string name);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the provider</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityOidcProviderNameAuthorize(string name);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the provider</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityOidcProviderNameUserinfo(string name);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the provider</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityOidcProviderNameWellKnownKeys(string name);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the provider</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityOidcProviderNameWellKnownOpenidConfiguration(string name);
+        /// <summary>
+        /// CRUD operations on OIDC Roles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the role</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityOidcRoleName(string name);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the scope</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityOidcScopeName(string name);
+        /// <summary>
+        /// Generate an OIDC token
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the role</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityOidcTokenName(string name);
+        /// <summary>
+        /// Retrieve public keys
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityOidcWellKnownKeys();
+        /// <summary>
+        /// Query OIDC configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> ReadIdentityOidcWellKnownOpenidConfiguration();
         /// <summary>
         /// Update, read or delete an alias ID.
         /// </summary>
@@ -690,7 +690,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityPersonaIdId(string id);
+        VaultResponse<Object> ReadIdentityPersonaIdId(string id);
         /// <summary>
         /// Create a new alias.
         /// </summary>
@@ -700,7 +700,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityAliasRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityAlias(IdentityAliasRequest identityAliasRequest);
+        VaultResponse<Object> UpdateIdentityAlias(IdentityAliasRequest identityAliasRequest);
         /// <summary>
         /// Update, read or delete an alias ID.
         /// </summary>
@@ -711,7 +711,7 @@ namespace Vault.Api
         /// <param name="id">ID of the alias</param>
         /// <param name="identityAliasIdRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityAliasIdId(string id, IdentityAliasIdRequest identityAliasIdRequest);
+        VaultResponse<Object> UpdateIdentityAliasIdId(string id, IdentityAliasIdRequest identityAliasIdRequest);
         /// <summary>
         /// Create a new entity
         /// </summary>
@@ -721,7 +721,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityEntity(IdentityEntityRequest identityEntityRequest);
+        VaultResponse<Object> UpdateIdentityEntity(IdentityEntityRequest identityEntityRequest);
         /// <summary>
         /// Create a new alias.
         /// </summary>
@@ -731,7 +731,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityAliasRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityEntityAlias(IdentityEntityAliasRequest identityEntityAliasRequest);
+        VaultResponse<Object> UpdateIdentityEntityAlias(IdentityEntityAliasRequest identityEntityAliasRequest);
         /// <summary>
         /// Update, read or delete an alias ID.
         /// </summary>
@@ -742,7 +742,7 @@ namespace Vault.Api
         /// <param name="id">ID of the alias</param>
         /// <param name="identityEntityAliasIdRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityEntityAliasIdId(string id, IdentityEntityAliasIdRequest identityEntityAliasIdRequest);
+        VaultResponse<Object> UpdateIdentityEntityAliasIdId(string id, IdentityEntityAliasIdRequest identityEntityAliasIdRequest);
         /// <summary>
         /// Delete all of the entities provided
         /// </summary>
@@ -752,7 +752,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityBatchDeleteRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityEntityBatchDelete(IdentityEntityBatchDeleteRequest identityEntityBatchDeleteRequest);
+        VaultResponse<Object> UpdateIdentityEntityBatchDelete(IdentityEntityBatchDeleteRequest identityEntityBatchDeleteRequest);
         /// <summary>
         /// Update, read or delete an entity using entity ID
         /// </summary>
@@ -763,7 +763,7 @@ namespace Vault.Api
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <param name="identityEntityIdRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityEntityIdId(string id, IdentityEntityIdRequest identityEntityIdRequest);
+        VaultResponse<Object> UpdateIdentityEntityIdId(string id, IdentityEntityIdRequest identityEntityIdRequest);
         /// <summary>
         /// Merge two or more entities together
         /// </summary>
@@ -773,7 +773,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityMergeRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityEntityMerge(IdentityEntityMergeRequest identityEntityMergeRequest);
+        VaultResponse<Object> UpdateIdentityEntityMerge(IdentityEntityMergeRequest identityEntityMergeRequest);
         /// <summary>
         /// Update, read or delete an entity using entity name
         /// </summary>
@@ -784,7 +784,7 @@ namespace Vault.Api
         /// <param name="name">Name of the entity</param>
         /// <param name="identityEntityNameRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityEntityNameName(string name, IdentityEntityNameRequest identityEntityNameRequest);
+        VaultResponse<Object> UpdateIdentityEntityNameName(string name, IdentityEntityNameRequest identityEntityNameRequest);
         /// <summary>
         /// Create a new group.
         /// </summary>
@@ -794,7 +794,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityGroup(IdentityGroupRequest identityGroupRequest);
+        VaultResponse<Object> UpdateIdentityGroup(IdentityGroupRequest identityGroupRequest);
         /// <summary>
         /// Creates a new group alias, or updates an existing one.
         /// </summary>
@@ -804,7 +804,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupAliasRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityGroupAlias(IdentityGroupAliasRequest identityGroupAliasRequest);
+        VaultResponse<Object> UpdateIdentityGroupAlias(IdentityGroupAliasRequest identityGroupAliasRequest);
         /// <summary>
         /// 
         /// </summary>
@@ -815,7 +815,7 @@ namespace Vault.Api
         /// <param name="id">ID of the group alias.</param>
         /// <param name="identityGroupAliasIdRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityGroupAliasIdId(string id, IdentityGroupAliasIdRequest identityGroupAliasIdRequest);
+        VaultResponse<Object> UpdateIdentityGroupAliasIdId(string id, IdentityGroupAliasIdRequest identityGroupAliasIdRequest);
         /// <summary>
         /// Update or delete an existing group using its ID.
         /// </summary>
@@ -826,7 +826,7 @@ namespace Vault.Api
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <param name="identityGroupIdRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityGroupIdId(string id, IdentityGroupIdRequest identityGroupIdRequest);
+        VaultResponse<Object> UpdateIdentityGroupIdId(string id, IdentityGroupIdRequest identityGroupIdRequest);
         /// <summary>
         /// 
         /// </summary>
@@ -837,7 +837,7 @@ namespace Vault.Api
         /// <param name="name">Name of the group.</param>
         /// <param name="identityGroupNameRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityGroupNameName(string name, IdentityGroupNameRequest identityGroupNameRequest);
+        VaultResponse<Object> UpdateIdentityGroupNameName(string name, IdentityGroupNameRequest identityGroupNameRequest);
         /// <summary>
         /// Query entities based on various properties.
         /// </summary>
@@ -847,7 +847,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupEntityRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityLookupEntity(IdentityLookupEntityRequest identityLookupEntityRequest);
+        VaultResponse<Object> UpdateIdentityLookupEntity(IdentityLookupEntityRequest identityLookupEntityRequest);
         /// <summary>
         /// Query groups based on various properties.
         /// </summary>
@@ -857,7 +857,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupGroupRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityLookupGroup(IdentityLookupGroupRequest identityLookupGroupRequest);
+        VaultResponse<Object> UpdateIdentityLookupGroup(IdentityLookupGroupRequest identityLookupGroupRequest);
         /// <summary>
         /// Create or update a login enforcement
         /// </summary>
@@ -868,7 +868,7 @@ namespace Vault.Api
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <param name="identityMfaLoginEnforcementRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityMfaLoginEnforcementName(string name, IdentityMfaLoginEnforcementRequest identityMfaLoginEnforcementRequest);
+        VaultResponse<Object> UpdateIdentityMfaLoginEnforcementName(string name, IdentityMfaLoginEnforcementRequest identityMfaLoginEnforcementRequest);
         /// <summary>
         /// Update or create a configuration for the given MFA method
         /// </summary>
@@ -879,7 +879,7 @@ namespace Vault.Api
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodDuoRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityMfaMethodDuoMethodId(string methodId, IdentityMfaMethodDuoRequest identityMfaMethodDuoRequest);
+        VaultResponse<Object> UpdateIdentityMfaMethodDuoMethodId(string methodId, IdentityMfaMethodDuoRequest identityMfaMethodDuoRequest);
         /// <summary>
         /// Update or create a configuration for the given MFA method
         /// </summary>
@@ -890,7 +890,7 @@ namespace Vault.Api
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodOktaRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityMfaMethodOktaMethodId(string methodId, IdentityMfaMethodOktaRequest identityMfaMethodOktaRequest);
+        VaultResponse<Object> UpdateIdentityMfaMethodOktaMethodId(string methodId, IdentityMfaMethodOktaRequest identityMfaMethodOktaRequest);
         /// <summary>
         /// Update or create a configuration for the given MFA method
         /// </summary>
@@ -901,7 +901,7 @@ namespace Vault.Api
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodPingidRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityMfaMethodPingidMethodId(string methodId, IdentityMfaMethodPingidRequest identityMfaMethodPingidRequest);
+        VaultResponse<Object> UpdateIdentityMfaMethodPingidMethodId(string methodId, IdentityMfaMethodPingidRequest identityMfaMethodPingidRequest);
         /// <summary>
         /// Destroys a TOTP secret for the given MFA method ID on the given entity
         /// </summary>
@@ -911,7 +911,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminDestroyRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityMfaMethodTotpAdminDestroy(IdentityMfaMethodTotpAdminDestroyRequest identityMfaMethodTotpAdminDestroyRequest);
+        VaultResponse<Object> UpdateIdentityMfaMethodTotpAdminDestroy(IdentityMfaMethodTotpAdminDestroyRequest identityMfaMethodTotpAdminDestroyRequest);
         /// <summary>
         /// Update or create TOTP secret for the given method ID on the given entity.
         /// </summary>
@@ -921,7 +921,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminGenerateRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityMfaMethodTotpAdminGenerate(IdentityMfaMethodTotpAdminGenerateRequest identityMfaMethodTotpAdminGenerateRequest);
+        VaultResponse<Object> UpdateIdentityMfaMethodTotpAdminGenerate(IdentityMfaMethodTotpAdminGenerateRequest identityMfaMethodTotpAdminGenerateRequest);
         /// <summary>
         /// Update or create TOTP secret for the given method ID on the given entity.
         /// </summary>
@@ -931,7 +931,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpGenerateRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityMfaMethodTotpGenerate(IdentityMfaMethodTotpGenerateRequest identityMfaMethodTotpGenerateRequest);
+        VaultResponse<Object> UpdateIdentityMfaMethodTotpGenerate(IdentityMfaMethodTotpGenerateRequest identityMfaMethodTotpGenerateRequest);
         /// <summary>
         /// Update or create a configuration for the given MFA method
         /// </summary>
@@ -942,7 +942,7 @@ namespace Vault.Api
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodTotpRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityMfaMethodTotpMethodId(string methodId, IdentityMfaMethodTotpRequest identityMfaMethodTotpRequest);
+        VaultResponse<Object> UpdateIdentityMfaMethodTotpMethodId(string methodId, IdentityMfaMethodTotpRequest identityMfaMethodTotpRequest);
         /// <summary>
         /// 
         /// </summary>
@@ -953,7 +953,7 @@ namespace Vault.Api
         /// <param name="name">Name of the assignment</param>
         /// <param name="identityOidcAssignmentRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityOidcAssignmentName(string name, IdentityOidcAssignmentRequest identityOidcAssignmentRequest);
+        VaultResponse<Object> UpdateIdentityOidcAssignmentName(string name, IdentityOidcAssignmentRequest identityOidcAssignmentRequest);
         /// <summary>
         /// 
         /// </summary>
@@ -964,7 +964,7 @@ namespace Vault.Api
         /// <param name="name">Name of the client.</param>
         /// <param name="identityOidcClientRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityOidcClientName(string name, IdentityOidcClientRequest identityOidcClientRequest);
+        VaultResponse<Object> UpdateIdentityOidcClientName(string name, IdentityOidcClientRequest identityOidcClientRequest);
         /// <summary>
         /// OIDC configuration
         /// </summary>
@@ -974,7 +974,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcConfigRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityOidcConfig(IdentityOidcConfigRequest identityOidcConfigRequest);
+        VaultResponse<Object> UpdateIdentityOidcConfig(IdentityOidcConfigRequest identityOidcConfigRequest);
         /// <summary>
         /// Verify the authenticity of an OIDC token
         /// </summary>
@@ -984,7 +984,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcIntrospectRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityOidcIntrospect(IdentityOidcIntrospectRequest identityOidcIntrospectRequest);
+        VaultResponse<Object> UpdateIdentityOidcIntrospect(IdentityOidcIntrospectRequest identityOidcIntrospectRequest);
         /// <summary>
         /// CRUD operations for OIDC keys.
         /// </summary>
@@ -995,7 +995,7 @@ namespace Vault.Api
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityOidcKeyName(string name, IdentityOidcKeyRequest identityOidcKeyRequest);
+        VaultResponse<Object> UpdateIdentityOidcKeyName(string name, IdentityOidcKeyRequest identityOidcKeyRequest);
         /// <summary>
         /// Rotate a named OIDC key.
         /// </summary>
@@ -1006,7 +1006,7 @@ namespace Vault.Api
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRotateRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityOidcKeyNameRotate(string name, IdentityOidcKeyRotateRequest identityOidcKeyRotateRequest);
+        VaultResponse<Object> UpdateIdentityOidcKeyNameRotate(string name, IdentityOidcKeyRotateRequest identityOidcKeyRotateRequest);
         /// <summary>
         /// 
         /// </summary>
@@ -1017,7 +1017,7 @@ namespace Vault.Api
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityOidcProviderName(string name, IdentityOidcProviderRequest identityOidcProviderRequest);
+        VaultResponse<Object> UpdateIdentityOidcProviderName(string name, IdentityOidcProviderRequest identityOidcProviderRequest);
         /// <summary>
         /// 
         /// </summary>
@@ -1028,7 +1028,7 @@ namespace Vault.Api
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderAuthorizeRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityOidcProviderNameAuthorize(string name, IdentityOidcProviderAuthorizeRequest identityOidcProviderAuthorizeRequest);
+        VaultResponse<Object> UpdateIdentityOidcProviderNameAuthorize(string name, IdentityOidcProviderAuthorizeRequest identityOidcProviderAuthorizeRequest);
         /// <summary>
         /// 
         /// </summary>
@@ -1039,7 +1039,7 @@ namespace Vault.Api
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderTokenRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityOidcProviderNameToken(string name, IdentityOidcProviderTokenRequest identityOidcProviderTokenRequest);
+        VaultResponse<Object> UpdateIdentityOidcProviderNameToken(string name, IdentityOidcProviderTokenRequest identityOidcProviderTokenRequest);
         /// <summary>
         /// 
         /// </summary>
@@ -1049,7 +1049,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityOidcProviderNameUserinfo(string name);
+        VaultResponse<Object> UpdateIdentityOidcProviderNameUserinfo(string name);
         /// <summary>
         /// CRUD operations on OIDC Roles
         /// </summary>
@@ -1060,7 +1060,7 @@ namespace Vault.Api
         /// <param name="name">Name of the role</param>
         /// <param name="identityOidcRoleRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityOidcRoleName(string name, IdentityOidcRoleRequest identityOidcRoleRequest);
+        VaultResponse<Object> UpdateIdentityOidcRoleName(string name, IdentityOidcRoleRequest identityOidcRoleRequest);
         /// <summary>
         /// 
         /// </summary>
@@ -1071,7 +1071,7 @@ namespace Vault.Api
         /// <param name="name">Name of the scope</param>
         /// <param name="identityOidcScopeRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityOidcScopeName(string name, IdentityOidcScopeRequest identityOidcScopeRequest);
+        VaultResponse<Object> UpdateIdentityOidcScopeName(string name, IdentityOidcScopeRequest identityOidcScopeRequest);
         /// <summary>
         /// Create a new alias.
         /// </summary>
@@ -1081,7 +1081,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityPersonaRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityPersona(IdentityPersonaRequest identityPersonaRequest);
+        VaultResponse<Object> UpdateIdentityPersona(IdentityPersonaRequest identityPersonaRequest);
         /// <summary>
         /// Update, read or delete an alias ID.
         /// </summary>
@@ -1092,7 +1092,7 @@ namespace Vault.Api
         /// <param name="id">ID of the persona</param>
         /// <param name="identityPersonaIdRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostIdentityPersonaIdId(string id, IdentityPersonaIdRequest identityPersonaIdRequest);
+        VaultResponse<Object> UpdateIdentityPersonaIdId(string id, IdentityPersonaIdRequest identityPersonaIdRequest);
         #endregion Synchronous Operations
     }
 
@@ -1341,19 +1341,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityAliasIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Update, read or delete an alias ID.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID of the alias</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityAliasIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListIdentityAliasIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// List all the alias IDs.
@@ -1365,19 +1353,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityEntityAliasIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Update, read or delete an alias ID.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID of the alias</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityEntityAliasIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListIdentityEntityAliasIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// List all the entity IDs
@@ -1389,19 +1365,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityEntityIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Update, read or delete an entity using entity ID
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityEntityIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListIdentityEntityIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// List all the entity names
@@ -1413,19 +1377,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityEntityNameAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Update, read or delete an entity using entity name
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the entity</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityEntityNameNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListIdentityEntityNameAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// List all the group alias IDs.
@@ -1437,19 +1389,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityGroupAliasIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID of the group alias.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityGroupAliasIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListIdentityGroupAliasIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// List all the group IDs.
@@ -1461,19 +1401,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityGroupIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Update or delete an existing group using its ID.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityGroupIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListIdentityGroupIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -1485,19 +1413,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityGroupNameAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the group.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityGroupNameNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListIdentityGroupNameAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// List login enforcements
@@ -1509,19 +1425,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityMfaLoginEnforcementAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Read the current login enforcement
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name for this login enforcement configuration</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityMfaLoginEnforcementNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListIdentityMfaLoginEnforcementAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// List MFA method configurations for all MFA methods
@@ -1533,7 +1437,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityMfaMethodAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListIdentityMfaMethodAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// List MFA method configurations for the given MFA method
@@ -1545,31 +1449,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityMfaMethodDuoAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Read the current configuration for the given MFA method
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityMfaMethodDuoMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Read the current configuration for the given ID regardless of the MFA method type
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityMfaMethodMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListIdentityMfaMethodDuoAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// List MFA method configurations for the given MFA method
@@ -1581,19 +1461,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityMfaMethodOktaAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Read the current configuration for the given MFA method
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityMfaMethodOktaMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListIdentityMfaMethodOktaAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// List MFA method configurations for the given MFA method
@@ -1605,19 +1473,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityMfaMethodPingidAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Read the current configuration for the given MFA method
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityMfaMethodPingidMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListIdentityMfaMethodPingidAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// List MFA method configurations for the given MFA method
@@ -1629,19 +1485,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityMfaMethodTotpAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Read the current configuration for the given MFA method
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityMfaMethodTotpMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListIdentityMfaMethodTotpAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -1653,19 +1497,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityOidcAssignmentAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the assignment</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityOidcAssignmentNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListIdentityOidcAssignmentAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -1677,30 +1509,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityOidcClientAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the client.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityOidcClientNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// OIDC configuration
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityOidcConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListIdentityOidcClientAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// List OIDC keys
@@ -1712,19 +1521,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityOidcKeyAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// CRUD operations for OIDC keys.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityOidcKeyNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListIdentityOidcKeyAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -1737,67 +1534,7 @@ namespace Vault.Api
         /// <param name="allowedClientId">Filters the list of OIDC providers to those that allow the given client ID in their set of allowed_client_ids. (optional, default to &quot;&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityOidcProviderAsync(string list, string allowedClientId = default(string), CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the provider</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityOidcProviderNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the provider</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityOidcProviderNameAuthorizeAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the provider</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityOidcProviderNameUserinfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the provider</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityOidcProviderNameWellKnownKeysAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the provider</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityOidcProviderNameWellKnownOpenidConfigurationAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListIdentityOidcProviderAsync(string list, string allowedClientId = "", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// List configured OIDC roles
@@ -1809,19 +1546,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityOidcRoleAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// CRUD operations on OIDC Roles
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityOidcRoleNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListIdentityOidcRoleAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -1833,53 +1558,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityOidcScopeAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the scope</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityOidcScopeNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Generate an OIDC token
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityOidcTokenNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Retrieve public keys
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityOidcWellKnownKeysAsync(CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// Query OIDC configurations
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityOidcWellKnownOpenidConfigurationAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListIdentityOidcScopeAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// List all the alias IDs.
@@ -1891,7 +1570,328 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityPersonaIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListIdentityPersonaIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Update, read or delete an alias ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID of the alias</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityAliasIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Update, read or delete an alias ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID of the alias</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityEntityAliasIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Update, read or delete an entity using entity ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityEntityIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Update, read or delete an entity using entity name
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the entity</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityEntityNameNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID of the group alias.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityGroupAliasIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Update or delete an existing group using its ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityGroupIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the group.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityGroupNameNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Read the current login enforcement
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name for this login enforcement configuration</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityMfaLoginEnforcementNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Read the current configuration for the given MFA method
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityMfaMethodDuoMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Read the current configuration for the given ID regardless of the MFA method type
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityMfaMethodMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Read the current configuration for the given MFA method
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityMfaMethodOktaMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Read the current configuration for the given MFA method
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityMfaMethodPingidMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Read the current configuration for the given MFA method
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityMfaMethodTotpMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the assignment</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityOidcAssignmentNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the client.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityOidcClientNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// OIDC configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityOidcConfigAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// CRUD operations for OIDC keys.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityOidcKeyNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the provider</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityOidcProviderNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the provider</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityOidcProviderNameAuthorizeAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the provider</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityOidcProviderNameUserinfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the provider</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityOidcProviderNameWellKnownKeysAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the provider</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityOidcProviderNameWellKnownOpenidConfigurationAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// CRUD operations on OIDC Roles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the role</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityOidcRoleNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the scope</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityOidcScopeNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Generate an OIDC token
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the role</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityOidcTokenNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Retrieve public keys
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityOidcWellKnownKeysAsync(CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Query OIDC configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> ReadIdentityOidcWellKnownOpenidConfigurationAsync(CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Update, read or delete an alias ID.
@@ -1903,7 +1903,7 @@ namespace Vault.Api
         /// <param name="id">ID of the persona</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityPersonaIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ReadIdentityPersonaIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Create a new alias.
@@ -1915,7 +1915,7 @@ namespace Vault.Api
         /// <param name="identityAliasRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityAliasAsync(IdentityAliasRequest identityAliasRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityAliasAsync(IdentityAliasRequest identityAliasRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Update, read or delete an alias ID.
@@ -1928,7 +1928,7 @@ namespace Vault.Api
         /// <param name="identityAliasIdRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityAliasIdIdAsync(string id, IdentityAliasIdRequest identityAliasIdRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityAliasIdIdAsync(string id, IdentityAliasIdRequest identityAliasIdRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Create a new entity
@@ -1940,7 +1940,7 @@ namespace Vault.Api
         /// <param name="identityEntityRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityEntityAsync(IdentityEntityRequest identityEntityRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityEntityAsync(IdentityEntityRequest identityEntityRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Create a new alias.
@@ -1952,7 +1952,7 @@ namespace Vault.Api
         /// <param name="identityEntityAliasRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityEntityAliasAsync(IdentityEntityAliasRequest identityEntityAliasRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityEntityAliasAsync(IdentityEntityAliasRequest identityEntityAliasRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Update, read or delete an alias ID.
@@ -1965,7 +1965,7 @@ namespace Vault.Api
         /// <param name="identityEntityAliasIdRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityEntityAliasIdIdAsync(string id, IdentityEntityAliasIdRequest identityEntityAliasIdRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityEntityAliasIdIdAsync(string id, IdentityEntityAliasIdRequest identityEntityAliasIdRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Delete all of the entities provided
@@ -1977,7 +1977,7 @@ namespace Vault.Api
         /// <param name="identityEntityBatchDeleteRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityEntityBatchDeleteAsync(IdentityEntityBatchDeleteRequest identityEntityBatchDeleteRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityEntityBatchDeleteAsync(IdentityEntityBatchDeleteRequest identityEntityBatchDeleteRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Update, read or delete an entity using entity ID
@@ -1990,7 +1990,7 @@ namespace Vault.Api
         /// <param name="identityEntityIdRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityEntityIdIdAsync(string id, IdentityEntityIdRequest identityEntityIdRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityEntityIdIdAsync(string id, IdentityEntityIdRequest identityEntityIdRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Merge two or more entities together
@@ -2002,7 +2002,7 @@ namespace Vault.Api
         /// <param name="identityEntityMergeRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityEntityMergeAsync(IdentityEntityMergeRequest identityEntityMergeRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityEntityMergeAsync(IdentityEntityMergeRequest identityEntityMergeRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Update, read or delete an entity using entity name
@@ -2015,7 +2015,7 @@ namespace Vault.Api
         /// <param name="identityEntityNameRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityEntityNameNameAsync(string name, IdentityEntityNameRequest identityEntityNameRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityEntityNameNameAsync(string name, IdentityEntityNameRequest identityEntityNameRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Create a new group.
@@ -2027,7 +2027,7 @@ namespace Vault.Api
         /// <param name="identityGroupRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityGroupAsync(IdentityGroupRequest identityGroupRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityGroupAsync(IdentityGroupRequest identityGroupRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Creates a new group alias, or updates an existing one.
@@ -2039,7 +2039,7 @@ namespace Vault.Api
         /// <param name="identityGroupAliasRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityGroupAliasAsync(IdentityGroupAliasRequest identityGroupAliasRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityGroupAliasAsync(IdentityGroupAliasRequest identityGroupAliasRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -2052,7 +2052,7 @@ namespace Vault.Api
         /// <param name="identityGroupAliasIdRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityGroupAliasIdIdAsync(string id, IdentityGroupAliasIdRequest identityGroupAliasIdRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityGroupAliasIdIdAsync(string id, IdentityGroupAliasIdRequest identityGroupAliasIdRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Update or delete an existing group using its ID.
@@ -2065,7 +2065,7 @@ namespace Vault.Api
         /// <param name="identityGroupIdRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityGroupIdIdAsync(string id, IdentityGroupIdRequest identityGroupIdRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityGroupIdIdAsync(string id, IdentityGroupIdRequest identityGroupIdRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -2078,7 +2078,7 @@ namespace Vault.Api
         /// <param name="identityGroupNameRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityGroupNameNameAsync(string name, IdentityGroupNameRequest identityGroupNameRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityGroupNameNameAsync(string name, IdentityGroupNameRequest identityGroupNameRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Query entities based on various properties.
@@ -2090,7 +2090,7 @@ namespace Vault.Api
         /// <param name="identityLookupEntityRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityLookupEntityAsync(IdentityLookupEntityRequest identityLookupEntityRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityLookupEntityAsync(IdentityLookupEntityRequest identityLookupEntityRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Query groups based on various properties.
@@ -2102,7 +2102,7 @@ namespace Vault.Api
         /// <param name="identityLookupGroupRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityLookupGroupAsync(IdentityLookupGroupRequest identityLookupGroupRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityLookupGroupAsync(IdentityLookupGroupRequest identityLookupGroupRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Create or update a login enforcement
@@ -2115,7 +2115,7 @@ namespace Vault.Api
         /// <param name="identityMfaLoginEnforcementRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityMfaLoginEnforcementNameAsync(string name, IdentityMfaLoginEnforcementRequest identityMfaLoginEnforcementRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityMfaLoginEnforcementNameAsync(string name, IdentityMfaLoginEnforcementRequest identityMfaLoginEnforcementRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Update or create a configuration for the given MFA method
@@ -2128,7 +2128,7 @@ namespace Vault.Api
         /// <param name="identityMfaMethodDuoRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityMfaMethodDuoMethodIdAsync(string methodId, IdentityMfaMethodDuoRequest identityMfaMethodDuoRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityMfaMethodDuoMethodIdAsync(string methodId, IdentityMfaMethodDuoRequest identityMfaMethodDuoRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Update or create a configuration for the given MFA method
@@ -2141,7 +2141,7 @@ namespace Vault.Api
         /// <param name="identityMfaMethodOktaRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityMfaMethodOktaMethodIdAsync(string methodId, IdentityMfaMethodOktaRequest identityMfaMethodOktaRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityMfaMethodOktaMethodIdAsync(string methodId, IdentityMfaMethodOktaRequest identityMfaMethodOktaRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Update or create a configuration for the given MFA method
@@ -2154,7 +2154,7 @@ namespace Vault.Api
         /// <param name="identityMfaMethodPingidRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityMfaMethodPingidMethodIdAsync(string methodId, IdentityMfaMethodPingidRequest identityMfaMethodPingidRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityMfaMethodPingidMethodIdAsync(string methodId, IdentityMfaMethodPingidRequest identityMfaMethodPingidRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Destroys a TOTP secret for the given MFA method ID on the given entity
@@ -2166,7 +2166,7 @@ namespace Vault.Api
         /// <param name="identityMfaMethodTotpAdminDestroyRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityMfaMethodTotpAdminDestroyAsync(IdentityMfaMethodTotpAdminDestroyRequest identityMfaMethodTotpAdminDestroyRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityMfaMethodTotpAdminDestroyAsync(IdentityMfaMethodTotpAdminDestroyRequest identityMfaMethodTotpAdminDestroyRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Update or create TOTP secret for the given method ID on the given entity.
@@ -2178,7 +2178,7 @@ namespace Vault.Api
         /// <param name="identityMfaMethodTotpAdminGenerateRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityMfaMethodTotpAdminGenerateAsync(IdentityMfaMethodTotpAdminGenerateRequest identityMfaMethodTotpAdminGenerateRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityMfaMethodTotpAdminGenerateAsync(IdentityMfaMethodTotpAdminGenerateRequest identityMfaMethodTotpAdminGenerateRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Update or create TOTP secret for the given method ID on the given entity.
@@ -2190,7 +2190,7 @@ namespace Vault.Api
         /// <param name="identityMfaMethodTotpGenerateRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityMfaMethodTotpGenerateAsync(IdentityMfaMethodTotpGenerateRequest identityMfaMethodTotpGenerateRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityMfaMethodTotpGenerateAsync(IdentityMfaMethodTotpGenerateRequest identityMfaMethodTotpGenerateRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Update or create a configuration for the given MFA method
@@ -2203,7 +2203,7 @@ namespace Vault.Api
         /// <param name="identityMfaMethodTotpRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityMfaMethodTotpMethodIdAsync(string methodId, IdentityMfaMethodTotpRequest identityMfaMethodTotpRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityMfaMethodTotpMethodIdAsync(string methodId, IdentityMfaMethodTotpRequest identityMfaMethodTotpRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -2216,7 +2216,7 @@ namespace Vault.Api
         /// <param name="identityOidcAssignmentRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityOidcAssignmentNameAsync(string name, IdentityOidcAssignmentRequest identityOidcAssignmentRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityOidcAssignmentNameAsync(string name, IdentityOidcAssignmentRequest identityOidcAssignmentRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -2229,7 +2229,7 @@ namespace Vault.Api
         /// <param name="identityOidcClientRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityOidcClientNameAsync(string name, IdentityOidcClientRequest identityOidcClientRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityOidcClientNameAsync(string name, IdentityOidcClientRequest identityOidcClientRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// OIDC configuration
@@ -2241,7 +2241,7 @@ namespace Vault.Api
         /// <param name="identityOidcConfigRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityOidcConfigAsync(IdentityOidcConfigRequest identityOidcConfigRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityOidcConfigAsync(IdentityOidcConfigRequest identityOidcConfigRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Verify the authenticity of an OIDC token
@@ -2253,7 +2253,7 @@ namespace Vault.Api
         /// <param name="identityOidcIntrospectRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityOidcIntrospectAsync(IdentityOidcIntrospectRequest identityOidcIntrospectRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityOidcIntrospectAsync(IdentityOidcIntrospectRequest identityOidcIntrospectRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// CRUD operations for OIDC keys.
@@ -2266,7 +2266,7 @@ namespace Vault.Api
         /// <param name="identityOidcKeyRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityOidcKeyNameAsync(string name, IdentityOidcKeyRequest identityOidcKeyRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityOidcKeyNameAsync(string name, IdentityOidcKeyRequest identityOidcKeyRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Rotate a named OIDC key.
@@ -2279,7 +2279,7 @@ namespace Vault.Api
         /// <param name="identityOidcKeyRotateRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityOidcKeyNameRotateAsync(string name, IdentityOidcKeyRotateRequest identityOidcKeyRotateRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityOidcKeyNameRotateAsync(string name, IdentityOidcKeyRotateRequest identityOidcKeyRotateRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -2292,7 +2292,7 @@ namespace Vault.Api
         /// <param name="identityOidcProviderRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityOidcProviderNameAsync(string name, IdentityOidcProviderRequest identityOidcProviderRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityOidcProviderNameAsync(string name, IdentityOidcProviderRequest identityOidcProviderRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -2305,7 +2305,7 @@ namespace Vault.Api
         /// <param name="identityOidcProviderAuthorizeRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityOidcProviderNameAuthorizeAsync(string name, IdentityOidcProviderAuthorizeRequest identityOidcProviderAuthorizeRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityOidcProviderNameAuthorizeAsync(string name, IdentityOidcProviderAuthorizeRequest identityOidcProviderAuthorizeRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -2318,7 +2318,7 @@ namespace Vault.Api
         /// <param name="identityOidcProviderTokenRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityOidcProviderNameTokenAsync(string name, IdentityOidcProviderTokenRequest identityOidcProviderTokenRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityOidcProviderNameTokenAsync(string name, IdentityOidcProviderTokenRequest identityOidcProviderTokenRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -2330,7 +2330,7 @@ namespace Vault.Api
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityOidcProviderNameUserinfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityOidcProviderNameUserinfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// CRUD operations on OIDC Roles
@@ -2343,7 +2343,7 @@ namespace Vault.Api
         /// <param name="identityOidcRoleRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityOidcRoleNameAsync(string name, IdentityOidcRoleRequest identityOidcRoleRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityOidcRoleNameAsync(string name, IdentityOidcRoleRequest identityOidcRoleRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -2356,7 +2356,7 @@ namespace Vault.Api
         /// <param name="identityOidcScopeRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityOidcScopeNameAsync(string name, IdentityOidcScopeRequest identityOidcScopeRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityOidcScopeNameAsync(string name, IdentityOidcScopeRequest identityOidcScopeRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Create a new alias.
@@ -2368,7 +2368,7 @@ namespace Vault.Api
         /// <param name="identityPersonaRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityPersonaAsync(IdentityPersonaRequest identityPersonaRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityPersonaAsync(IdentityPersonaRequest identityPersonaRequest, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Update, read or delete an alias ID.
@@ -2381,7 +2381,7 @@ namespace Vault.Api
         /// <param name="identityPersonaIdRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostIdentityPersonaIdIdAsync(string id, IdentityPersonaIdRequest identityPersonaIdRequest, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UpdateIdentityPersonaIdIdAsync(string id, IdentityPersonaIdRequest identityPersonaIdRequest, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -4095,11 +4095,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityAliasId(string list)
+        public VaultResponse<Object> ListIdentityAliasId(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityAliasId");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityAliasId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4123,7 +4123,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityAliasId", response);
+                Exception exception = this.ExceptionFactory("ListIdentityAliasId", response);
                 if (exception != null) throw exception;
             }
 
@@ -4138,11 +4138,11 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityAliasIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListIdentityAliasIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityAliasId");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityAliasId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4167,93 +4167,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityAliasId", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Update, read or delete an alias ID. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID of the alias</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityAliasIdId(string id)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityAliasIdId");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/alias/id/{id}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityAliasIdId", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Update, read or delete an alias ID. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID of the alias</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityAliasIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityAliasIdId");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/alias/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityAliasIdId", response);
+                Exception exception = this.ExceptionFactory("ListIdentityAliasId", response);
                 if (exception != null) throw exception;
             }
 
@@ -4267,11 +4181,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityEntityAliasId(string list)
+        public VaultResponse<Object> ListIdentityEntityAliasId(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityAliasId");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityEntityAliasId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4295,7 +4209,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityEntityAliasId", response);
+                Exception exception = this.ExceptionFactory("ListIdentityEntityAliasId", response);
                 if (exception != null) throw exception;
             }
 
@@ -4310,11 +4224,11 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityEntityAliasIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListIdentityEntityAliasIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityAliasId");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityEntityAliasId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4339,93 +4253,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityEntityAliasId", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Update, read or delete an alias ID. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID of the alias</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityEntityAliasIdId(string id)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityEntityAliasIdId");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/entity-alias/id/{id}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityEntityAliasIdId", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Update, read or delete an alias ID. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID of the alias</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityEntityAliasIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityEntityAliasIdId");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/entity-alias/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityEntityAliasIdId", response);
+                Exception exception = this.ExceptionFactory("ListIdentityEntityAliasId", response);
                 if (exception != null) throw exception;
             }
 
@@ -4439,11 +4267,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityEntityId(string list)
+        public VaultResponse<Object> ListIdentityEntityId(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityId");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityEntityId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4467,7 +4295,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityEntityId", response);
+                Exception exception = this.ExceptionFactory("ListIdentityEntityId", response);
                 if (exception != null) throw exception;
             }
 
@@ -4482,11 +4310,11 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityEntityIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListIdentityEntityIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityId");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityEntityId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4511,93 +4339,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityEntityId", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Update, read or delete an entity using entity ID 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityEntityIdId(string id)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityEntityIdId");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/entity/id/{id}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityEntityIdId", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Update, read or delete an entity using entity ID 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityEntityIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityEntityIdId");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/entity/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityEntityIdId", response);
+                Exception exception = this.ExceptionFactory("ListIdentityEntityId", response);
                 if (exception != null) throw exception;
             }
 
@@ -4611,11 +4353,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityEntityName(string list)
+        public VaultResponse<Object> ListIdentityEntityName(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityName");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityEntityName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4639,7 +4381,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityEntityName", response);
+                Exception exception = this.ExceptionFactory("ListIdentityEntityName", response);
                 if (exception != null) throw exception;
             }
 
@@ -4654,11 +4396,11 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityEntityNameAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListIdentityEntityNameAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityEntityName");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityEntityName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4683,93 +4425,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityEntityName", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Update, read or delete an entity using entity name 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the entity</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityEntityNameName(string name)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityEntityNameName");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/entity/name/{name}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityEntityNameName", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Update, read or delete an entity using entity name 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the entity</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityEntityNameNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityEntityNameName");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/entity/name/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityEntityNameName", response);
+                Exception exception = this.ExceptionFactory("ListIdentityEntityName", response);
                 if (exception != null) throw exception;
             }
 
@@ -4783,11 +4439,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityGroupAliasId(string list)
+        public VaultResponse<Object> ListIdentityGroupAliasId(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupAliasId");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityGroupAliasId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4811,7 +4467,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityGroupAliasId", response);
+                Exception exception = this.ExceptionFactory("ListIdentityGroupAliasId", response);
                 if (exception != null) throw exception;
             }
 
@@ -4826,11 +4482,11 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityGroupAliasIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListIdentityGroupAliasIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupAliasId");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityGroupAliasId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -4855,93 +4511,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityGroupAliasId", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID of the group alias.</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityGroupAliasIdId(string id)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityGroupAliasIdId");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/group-alias/id/{id}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityGroupAliasIdId", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID of the group alias.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityGroupAliasIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityGroupAliasIdId");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/group-alias/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityGroupAliasIdId", response);
+                Exception exception = this.ExceptionFactory("ListIdentityGroupAliasId", response);
                 if (exception != null) throw exception;
             }
 
@@ -4955,11 +4525,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityGroupId(string list)
+        public VaultResponse<Object> ListIdentityGroupId(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupId");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityGroupId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -4983,7 +4553,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityGroupId", response);
+                Exception exception = this.ExceptionFactory("ListIdentityGroupId", response);
                 if (exception != null) throw exception;
             }
 
@@ -4998,11 +4568,11 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityGroupIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListIdentityGroupIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupId");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityGroupId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -5027,93 +4597,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityGroupId", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Update or delete an existing group using its ID. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityGroupIdId(string id)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityGroupIdId");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/group/id/{id}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityGroupIdId", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Update or delete an existing group using its ID. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityGroupIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityGroupIdId");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/group/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityGroupIdId", response);
+                Exception exception = this.ExceptionFactory("ListIdentityGroupId", response);
                 if (exception != null) throw exception;
             }
 
@@ -5127,11 +4611,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityGroupName(string list)
+        public VaultResponse<Object> ListIdentityGroupName(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupName");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityGroupName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -5155,7 +4639,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityGroupName", response);
+                Exception exception = this.ExceptionFactory("ListIdentityGroupName", response);
                 if (exception != null) throw exception;
             }
 
@@ -5170,11 +4654,11 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityGroupNameAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListIdentityGroupNameAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityGroupName");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityGroupName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -5199,93 +4683,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityGroupName", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the group.</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityGroupNameName(string name)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityGroupNameName");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/group/name/{name}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityGroupNameName", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the group.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityGroupNameNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityGroupNameName");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/group/name/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityGroupNameName", response);
+                Exception exception = this.ExceptionFactory("ListIdentityGroupName", response);
                 if (exception != null) throw exception;
             }
 
@@ -5299,11 +4697,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityMfaLoginEnforcement(string list)
+        public VaultResponse<Object> ListIdentityMfaLoginEnforcement(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaLoginEnforcement");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityMfaLoginEnforcement");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -5327,7 +4725,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityMfaLoginEnforcement", response);
+                Exception exception = this.ExceptionFactory("ListIdentityMfaLoginEnforcement", response);
                 if (exception != null) throw exception;
             }
 
@@ -5342,11 +4740,11 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityMfaLoginEnforcementAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListIdentityMfaLoginEnforcementAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaLoginEnforcement");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityMfaLoginEnforcement");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -5371,93 +4769,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityMfaLoginEnforcement", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Read the current login enforcement 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name for this login enforcement configuration</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityMfaLoginEnforcementName(string name)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityMfaLoginEnforcementName");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/mfa/login-enforcement/{name}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityMfaLoginEnforcementName", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Read the current login enforcement 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name for this login enforcement configuration</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityMfaLoginEnforcementNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityMfaLoginEnforcementName");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/login-enforcement/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityMfaLoginEnforcementName", response);
+                Exception exception = this.ExceptionFactory("ListIdentityMfaLoginEnforcement", response);
                 if (exception != null) throw exception;
             }
 
@@ -5471,11 +4783,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityMfaMethod(string list)
+        public VaultResponse<Object> ListIdentityMfaMethod(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethod");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityMfaMethod");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -5499,7 +4811,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityMfaMethod", response);
+                Exception exception = this.ExceptionFactory("ListIdentityMfaMethod", response);
                 if (exception != null) throw exception;
             }
 
@@ -5514,11 +4826,11 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityMfaMethodAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListIdentityMfaMethodAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethod");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityMfaMethod");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -5543,7 +4855,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityMfaMethod", response);
+                Exception exception = this.ExceptionFactory("ListIdentityMfaMethod", response);
                 if (exception != null) throw exception;
             }
 
@@ -5557,11 +4869,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityMfaMethodDuo(string list)
+        public VaultResponse<Object> ListIdentityMfaMethodDuo(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodDuo");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityMfaMethodDuo");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -5585,7 +4897,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityMfaMethodDuo", response);
+                Exception exception = this.ExceptionFactory("ListIdentityMfaMethodDuo", response);
                 if (exception != null) throw exception;
             }
 
@@ -5600,11 +4912,11 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityMfaMethodDuoAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListIdentityMfaMethodDuoAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodDuo");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityMfaMethodDuo");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -5629,179 +4941,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityMfaMethodDuo", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Read the current configuration for the given MFA method 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityMfaMethodDuoMethodId(string methodId)
-        {
-            // verify the required parameter 'methodId' is set
-            if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodDuoMethodId");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/mfa/method/duo/{method_id}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityMfaMethodDuoMethodId", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Read the current configuration for the given MFA method 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityMfaMethodDuoMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'methodId' is set
-            if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodDuoMethodId");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/duo/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityMfaMethodDuoMethodId", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Read the current configuration for the given ID regardless of the MFA method type 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityMfaMethodMethodId(string methodId)
-        {
-            // verify the required parameter 'methodId' is set
-            if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodMethodId");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/mfa/method/{method_id}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityMfaMethodMethodId", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Read the current configuration for the given ID regardless of the MFA method type 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityMfaMethodMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'methodId' is set
-            if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodMethodId");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityMfaMethodMethodId", response);
+                Exception exception = this.ExceptionFactory("ListIdentityMfaMethodDuo", response);
                 if (exception != null) throw exception;
             }
 
@@ -5815,11 +4955,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityMfaMethodOkta(string list)
+        public VaultResponse<Object> ListIdentityMfaMethodOkta(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodOkta");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityMfaMethodOkta");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -5843,7 +4983,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityMfaMethodOkta", response);
+                Exception exception = this.ExceptionFactory("ListIdentityMfaMethodOkta", response);
                 if (exception != null) throw exception;
             }
 
@@ -5858,11 +4998,11 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityMfaMethodOktaAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListIdentityMfaMethodOktaAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodOkta");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityMfaMethodOkta");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -5887,93 +5027,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityMfaMethodOkta", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Read the current configuration for the given MFA method 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityMfaMethodOktaMethodId(string methodId)
-        {
-            // verify the required parameter 'methodId' is set
-            if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodOktaMethodId");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/mfa/method/okta/{method_id}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityMfaMethodOktaMethodId", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Read the current configuration for the given MFA method 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityMfaMethodOktaMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'methodId' is set
-            if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodOktaMethodId");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/okta/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityMfaMethodOktaMethodId", response);
+                Exception exception = this.ExceptionFactory("ListIdentityMfaMethodOkta", response);
                 if (exception != null) throw exception;
             }
 
@@ -5987,11 +5041,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityMfaMethodPingid(string list)
+        public VaultResponse<Object> ListIdentityMfaMethodPingid(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodPingid");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityMfaMethodPingid");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -6015,7 +5069,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityMfaMethodPingid", response);
+                Exception exception = this.ExceptionFactory("ListIdentityMfaMethodPingid", response);
                 if (exception != null) throw exception;
             }
 
@@ -6030,11 +5084,11 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityMfaMethodPingidAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListIdentityMfaMethodPingidAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodPingid");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityMfaMethodPingid");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -6059,93 +5113,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityMfaMethodPingid", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Read the current configuration for the given MFA method 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityMfaMethodPingidMethodId(string methodId)
-        {
-            // verify the required parameter 'methodId' is set
-            if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodPingidMethodId");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/mfa/method/pingid/{method_id}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityMfaMethodPingidMethodId", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Read the current configuration for the given MFA method 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityMfaMethodPingidMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'methodId' is set
-            if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodPingidMethodId");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/pingid/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityMfaMethodPingidMethodId", response);
+                Exception exception = this.ExceptionFactory("ListIdentityMfaMethodPingid", response);
                 if (exception != null) throw exception;
             }
 
@@ -6159,11 +5127,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityMfaMethodTotp(string list)
+        public VaultResponse<Object> ListIdentityMfaMethodTotp(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodTotp");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityMfaMethodTotp");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -6187,7 +5155,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityMfaMethodTotp", response);
+                Exception exception = this.ExceptionFactory("ListIdentityMfaMethodTotp", response);
                 if (exception != null) throw exception;
             }
 
@@ -6202,11 +5170,11 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityMfaMethodTotpAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListIdentityMfaMethodTotpAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityMfaMethodTotp");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityMfaMethodTotp");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -6231,93 +5199,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityMfaMethodTotp", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Read the current configuration for the given MFA method 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityMfaMethodTotpMethodId(string methodId)
-        {
-            // verify the required parameter 'methodId' is set
-            if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodTotpMethodId");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/mfa/method/totp/{method_id}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityMfaMethodTotpMethodId", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Read the current configuration for the given MFA method 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="methodId">The unique identifier for this MFA method.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityMfaMethodTotpMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'methodId' is set
-            if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->GetIdentityMfaMethodTotpMethodId");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/totp/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityMfaMethodTotpMethodId", response);
+                Exception exception = this.ExceptionFactory("ListIdentityMfaMethodTotp", response);
                 if (exception != null) throw exception;
             }
 
@@ -6331,11 +5213,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityOidcAssignment(string list)
+        public VaultResponse<Object> ListIdentityOidcAssignment(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcAssignment");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityOidcAssignment");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -6359,7 +5241,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcAssignment", response);
+                Exception exception = this.ExceptionFactory("ListIdentityOidcAssignment", response);
                 if (exception != null) throw exception;
             }
 
@@ -6374,11 +5256,11 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityOidcAssignmentAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListIdentityOidcAssignmentAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcAssignment");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityOidcAssignment");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -6403,93 +5285,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcAssignment", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the assignment</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityOidcAssignmentName(string name)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcAssignmentName");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/oidc/assignment/{name}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcAssignmentName", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the assignment</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityOidcAssignmentNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcAssignmentName");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/assignment/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcAssignmentName", response);
+                Exception exception = this.ExceptionFactory("ListIdentityOidcAssignment", response);
                 if (exception != null) throw exception;
             }
 
@@ -6503,11 +5299,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityOidcClient(string list)
+        public VaultResponse<Object> ListIdentityOidcClient(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcClient");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityOidcClient");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -6531,7 +5327,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcClient", response);
+                Exception exception = this.ExceptionFactory("ListIdentityOidcClient", response);
                 if (exception != null) throw exception;
             }
 
@@ -6546,11 +5342,11 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityOidcClientAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListIdentityOidcClientAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcClient");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityOidcClient");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -6575,167 +5371,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcClient", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the client.</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityOidcClientName(string name)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcClientName");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/oidc/client/{name}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcClientName", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the client.</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityOidcClientNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcClientName");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/client/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcClientName", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// OIDC configuration 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityOidcConfig()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/oidc/config", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcConfig", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// OIDC configuration 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityOidcConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/config", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcConfig", response);
+                Exception exception = this.ExceptionFactory("ListIdentityOidcClient", response);
                 if (exception != null) throw exception;
             }
 
@@ -6749,11 +5385,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityOidcKey(string list)
+        public VaultResponse<Object> ListIdentityOidcKey(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcKey");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityOidcKey");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -6777,7 +5413,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcKey", response);
+                Exception exception = this.ExceptionFactory("ListIdentityOidcKey", response);
                 if (exception != null) throw exception;
             }
 
@@ -6792,11 +5428,11 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityOidcKeyAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListIdentityOidcKeyAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcKey");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityOidcKey");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -6821,93 +5457,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcKey", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// CRUD operations for OIDC keys. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the key</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityOidcKeyName(string name)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcKeyName");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/oidc/key/{name}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcKeyName", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// CRUD operations for OIDC keys. 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityOidcKeyNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcKeyName");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/key/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcKeyName", response);
+                Exception exception = this.ExceptionFactory("ListIdentityOidcKey", response);
                 if (exception != null) throw exception;
             }
 
@@ -6922,11 +5472,11 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="allowedClientId">Filters the list of OIDC providers to those that allow the given client ID in their set of allowed_client_ids. (optional, default to &quot;&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityOidcProvider(string list, string allowedClientId = default(string))
+        public VaultResponse<Object> ListIdentityOidcProvider(string list, string allowedClientId = "")
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcProvider");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityOidcProvider");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -6954,7 +5504,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcProvider", response);
+                Exception exception = this.ExceptionFactory("ListIdentityOidcProvider", response);
                 if (exception != null) throw exception;
             }
 
@@ -6970,11 +5520,11 @@ namespace Vault.Api
         /// <param name="allowedClientId">Filters the list of OIDC providers to those that allow the given client ID in their set of allowed_client_ids. (optional, default to &quot;&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityOidcProviderAsync(string list, string allowedClientId = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListIdentityOidcProviderAsync(string list, string allowedClientId = "", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcProvider");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityOidcProvider");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7003,437 +5553,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcProvider", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the provider</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityOidcProviderName(string name)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderName");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/oidc/provider/{name}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcProviderName", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the provider</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityOidcProviderNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderName");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcProviderName", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the provider</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityOidcProviderNameAuthorize(string name)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameAuthorize");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/oidc/provider/{name}/authorize", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcProviderNameAuthorize", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the provider</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityOidcProviderNameAuthorizeAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameAuthorize");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/authorize", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcProviderNameAuthorize", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the provider</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityOidcProviderNameUserinfo(string name)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameUserinfo");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/oidc/provider/{name}/userinfo", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcProviderNameUserinfo", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the provider</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityOidcProviderNameUserinfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameUserinfo");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/userinfo", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcProviderNameUserinfo", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the provider</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityOidcProviderNameWellKnownKeys(string name)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameWellKnownKeys");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/oidc/provider/{name}/.well-known/keys", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcProviderNameWellKnownKeys", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the provider</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityOidcProviderNameWellKnownKeysAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameWellKnownKeys");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/.well-known/keys", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcProviderNameWellKnownKeys", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the provider</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityOidcProviderNameWellKnownOpenidConfiguration(string name)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameWellKnownOpenidConfiguration");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/oidc/provider/{name}/.well-known/openid-configuration", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcProviderNameWellKnownOpenidConfiguration", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the provider</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityOidcProviderNameWellKnownOpenidConfigurationAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcProviderNameWellKnownOpenidConfiguration");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/.well-known/openid-configuration", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcProviderNameWellKnownOpenidConfiguration", response);
+                Exception exception = this.ExceptionFactory("ListIdentityOidcProvider", response);
                 if (exception != null) throw exception;
             }
 
@@ -7447,11 +5567,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityOidcRole(string list)
+        public VaultResponse<Object> ListIdentityOidcRole(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcRole");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityOidcRole");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7475,7 +5595,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcRole", response);
+                Exception exception = this.ExceptionFactory("ListIdentityOidcRole", response);
                 if (exception != null) throw exception;
             }
 
@@ -7490,11 +5610,11 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityOidcRoleAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListIdentityOidcRoleAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcRole");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityOidcRole");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7519,93 +5639,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcRole", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// CRUD operations on OIDC Roles 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityOidcRoleName(string name)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcRoleName");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/oidc/role/{name}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcRoleName", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// CRUD operations on OIDC Roles 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityOidcRoleNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcRoleName");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcRoleName", response);
+                Exception exception = this.ExceptionFactory("ListIdentityOidcRole", response);
                 if (exception != null) throw exception;
             }
 
@@ -7619,11 +5653,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityOidcScope(string list)
+        public VaultResponse<Object> ListIdentityOidcScope(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcScope");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityOidcScope");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -7647,7 +5681,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcScope", response);
+                Exception exception = this.ExceptionFactory("ListIdentityOidcScope", response);
                 if (exception != null) throw exception;
             }
 
@@ -7662,11 +5696,11 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityOidcScopeAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListIdentityOidcScopeAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityOidcScope");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityOidcScope");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -7691,327 +5725,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcScope", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the scope</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityOidcScopeName(string name)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcScopeName");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/oidc/scope/{name}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcScopeName", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the scope</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityOidcScopeNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcScopeName");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/scope/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcScopeName", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Generate an OIDC token 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityOidcTokenName(string name)
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcTokenName");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/oidc/token/{name}", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcTokenName", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Generate an OIDC token 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityOidcTokenNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'name' is set
-            if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->GetIdentityOidcTokenName");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/token/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcTokenName", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Retrieve public keys 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityOidcWellKnownKeys()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/oidc/.well-known/keys", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcWellKnownKeys", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Retrieve public keys 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityOidcWellKnownKeysAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/.well-known/keys", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcWellKnownKeys", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Query OIDC configurations 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityOidcWellKnownOpenidConfiguration()
-        {
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = this.Client.Get<Object>("/identity/oidc/.well-known/openid-configuration", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcWellKnownOpenidConfiguration", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        /// Query OIDC configurations 
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityOidcWellKnownOpenidConfigurationAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            string[] _contentTypes = new string[] {
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/.well-known/openid-configuration", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("GetIdentityOidcWellKnownOpenidConfiguration", response);
+                Exception exception = this.ExceptionFactory("ListIdentityOidcScope", response);
                 if (exception != null) throw exception;
             }
 
@@ -8025,11 +5739,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityPersonaId(string list)
+        public VaultResponse<Object> ListIdentityPersonaId(string list)
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityPersonaId");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityPersonaId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8053,7 +5767,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityPersonaId", response);
+                Exception exception = this.ExceptionFactory("ListIdentityPersonaId", response);
                 if (exception != null) throw exception;
             }
 
@@ -8068,11 +5782,11 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityPersonaIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListIdentityPersonaIdAsync(string list, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->GetIdentityPersonaId");
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Identity->ListIdentityPersonaId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8097,7 +5811,2293 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityPersonaId", response);
+                Exception exception = this.ExceptionFactory("ListIdentityPersonaId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Update, read or delete an alias ID. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID of the alias</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityAliasIdId(string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->ReadIdentityAliasIdId");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/alias/id/{id}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityAliasIdId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Update, read or delete an alias ID. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID of the alias</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityAliasIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->ReadIdentityAliasIdId");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/alias/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityAliasIdId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Update, read or delete an alias ID. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID of the alias</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityEntityAliasIdId(string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->ReadIdentityEntityAliasIdId");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/entity-alias/id/{id}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityEntityAliasIdId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Update, read or delete an alias ID. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID of the alias</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityEntityAliasIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->ReadIdentityEntityAliasIdId");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/entity-alias/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityEntityAliasIdId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Update, read or delete an entity using entity ID 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityEntityIdId(string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->ReadIdentityEntityIdId");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/entity/id/{id}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityEntityIdId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Update, read or delete an entity using entity ID 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityEntityIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->ReadIdentityEntityIdId");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/entity/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityEntityIdId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Update, read or delete an entity using entity name 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the entity</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityEntityNameName(string name)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityEntityNameName");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/entity/name/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityEntityNameName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Update, read or delete an entity using entity name 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the entity</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityEntityNameNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityEntityNameName");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/entity/name/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityEntityNameName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID of the group alias.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityGroupAliasIdId(string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->ReadIdentityGroupAliasIdId");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/group-alias/id/{id}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityGroupAliasIdId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID of the group alias.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityGroupAliasIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->ReadIdentityGroupAliasIdId");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/group-alias/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityGroupAliasIdId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Update or delete an existing group using its ID. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityGroupIdId(string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->ReadIdentityGroupIdId");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/group/id/{id}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityGroupIdId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Update or delete an existing group using its ID. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityGroupIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->ReadIdentityGroupIdId");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("id", ClientUtils.ParameterToString(id)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/group/id/{id}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityGroupIdId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the group.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityGroupNameName(string name)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityGroupNameName");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/group/name/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityGroupNameName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the group.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityGroupNameNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityGroupNameName");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/group/name/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityGroupNameName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Read the current login enforcement 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name for this login enforcement configuration</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityMfaLoginEnforcementName(string name)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityMfaLoginEnforcementName");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/mfa/login-enforcement/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityMfaLoginEnforcementName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Read the current login enforcement 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name for this login enforcement configuration</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityMfaLoginEnforcementNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityMfaLoginEnforcementName");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/login-enforcement/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityMfaLoginEnforcementName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Read the current configuration for the given MFA method 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityMfaMethodDuoMethodId(string methodId)
+        {
+            // verify the required parameter 'methodId' is set
+            if (methodId == null)
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->ReadIdentityMfaMethodDuoMethodId");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/mfa/method/duo/{method_id}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityMfaMethodDuoMethodId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Read the current configuration for the given MFA method 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityMfaMethodDuoMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'methodId' is set
+            if (methodId == null)
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->ReadIdentityMfaMethodDuoMethodId");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/duo/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityMfaMethodDuoMethodId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Read the current configuration for the given ID regardless of the MFA method type 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityMfaMethodMethodId(string methodId)
+        {
+            // verify the required parameter 'methodId' is set
+            if (methodId == null)
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->ReadIdentityMfaMethodMethodId");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/mfa/method/{method_id}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityMfaMethodMethodId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Read the current configuration for the given ID regardless of the MFA method type 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityMfaMethodMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'methodId' is set
+            if (methodId == null)
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->ReadIdentityMfaMethodMethodId");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityMfaMethodMethodId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Read the current configuration for the given MFA method 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityMfaMethodOktaMethodId(string methodId)
+        {
+            // verify the required parameter 'methodId' is set
+            if (methodId == null)
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->ReadIdentityMfaMethodOktaMethodId");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/mfa/method/okta/{method_id}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityMfaMethodOktaMethodId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Read the current configuration for the given MFA method 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityMfaMethodOktaMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'methodId' is set
+            if (methodId == null)
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->ReadIdentityMfaMethodOktaMethodId");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/okta/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityMfaMethodOktaMethodId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Read the current configuration for the given MFA method 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityMfaMethodPingidMethodId(string methodId)
+        {
+            // verify the required parameter 'methodId' is set
+            if (methodId == null)
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->ReadIdentityMfaMethodPingidMethodId");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/mfa/method/pingid/{method_id}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityMfaMethodPingidMethodId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Read the current configuration for the given MFA method 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityMfaMethodPingidMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'methodId' is set
+            if (methodId == null)
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->ReadIdentityMfaMethodPingidMethodId");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/pingid/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityMfaMethodPingidMethodId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Read the current configuration for the given MFA method 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityMfaMethodTotpMethodId(string methodId)
+        {
+            // verify the required parameter 'methodId' is set
+            if (methodId == null)
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->ReadIdentityMfaMethodTotpMethodId");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/mfa/method/totp/{method_id}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityMfaMethodTotpMethodId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Read the current configuration for the given MFA method 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityMfaMethodTotpMethodIdAsync(string methodId, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'methodId' is set
+            if (methodId == null)
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->ReadIdentityMfaMethodTotpMethodId");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("method_id", ClientUtils.ParameterToString(methodId)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/mfa/method/totp/{method_id}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityMfaMethodTotpMethodId", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the assignment</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityOidcAssignmentName(string name)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityOidcAssignmentName");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/oidc/assignment/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcAssignmentName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the assignment</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityOidcAssignmentNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityOidcAssignmentName");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/assignment/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcAssignmentName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the client.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityOidcClientName(string name)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityOidcClientName");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/oidc/client/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcClientName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the client.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityOidcClientNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityOidcClientName");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/client/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcClientName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// OIDC configuration 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityOidcConfig()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/oidc/config", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcConfig", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// OIDC configuration 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityOidcConfigAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/config", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcConfig", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// CRUD operations for OIDC keys. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the key</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityOidcKeyName(string name)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityOidcKeyName");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/oidc/key/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcKeyName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// CRUD operations for OIDC keys. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityOidcKeyNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityOidcKeyName");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/key/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcKeyName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the provider</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityOidcProviderName(string name)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityOidcProviderName");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/oidc/provider/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcProviderName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the provider</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityOidcProviderNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityOidcProviderName");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcProviderName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the provider</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityOidcProviderNameAuthorize(string name)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityOidcProviderNameAuthorize");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/oidc/provider/{name}/authorize", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcProviderNameAuthorize", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the provider</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityOidcProviderNameAuthorizeAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityOidcProviderNameAuthorize");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/authorize", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcProviderNameAuthorize", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the provider</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityOidcProviderNameUserinfo(string name)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityOidcProviderNameUserinfo");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/oidc/provider/{name}/userinfo", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcProviderNameUserinfo", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the provider</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityOidcProviderNameUserinfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityOidcProviderNameUserinfo");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/userinfo", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcProviderNameUserinfo", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the provider</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityOidcProviderNameWellKnownKeys(string name)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityOidcProviderNameWellKnownKeys");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/oidc/provider/{name}/.well-known/keys", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcProviderNameWellKnownKeys", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the provider</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityOidcProviderNameWellKnownKeysAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityOidcProviderNameWellKnownKeys");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/.well-known/keys", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcProviderNameWellKnownKeys", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the provider</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityOidcProviderNameWellKnownOpenidConfiguration(string name)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityOidcProviderNameWellKnownOpenidConfiguration");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/oidc/provider/{name}/.well-known/openid-configuration", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcProviderNameWellKnownOpenidConfiguration", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the provider</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityOidcProviderNameWellKnownOpenidConfigurationAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityOidcProviderNameWellKnownOpenidConfiguration");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/provider/{name}/.well-known/openid-configuration", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcProviderNameWellKnownOpenidConfiguration", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// CRUD operations on OIDC Roles 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the role</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityOidcRoleName(string name)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityOidcRoleName");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/oidc/role/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcRoleName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// CRUD operations on OIDC Roles 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the role</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityOidcRoleNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityOidcRoleName");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/role/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcRoleName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the scope</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityOidcScopeName(string name)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityOidcScopeName");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/oidc/scope/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcScopeName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the scope</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityOidcScopeNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityOidcScopeName");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/scope/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcScopeName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Generate an OIDC token 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the role</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityOidcTokenName(string name)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityOidcTokenName");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/oidc/token/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcTokenName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Generate an OIDC token 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the role</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityOidcTokenNameAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->ReadIdentityOidcTokenName");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/token/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcTokenName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Retrieve public keys 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityOidcWellKnownKeys()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/oidc/.well-known/keys", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcWellKnownKeys", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Retrieve public keys 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityOidcWellKnownKeysAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/.well-known/keys", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcWellKnownKeys", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Query OIDC configurations 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <returns>VaultResponse of Object(void)</returns>
+        public VaultResponse<Object> ReadIdentityOidcWellKnownOpenidConfiguration()
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/identity/oidc/.well-known/openid-configuration", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcWellKnownOpenidConfiguration", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Query OIDC configurations 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> ReadIdentityOidcWellKnownOpenidConfigurationAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/identity/oidc/.well-known/openid-configuration", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("ReadIdentityOidcWellKnownOpenidConfiguration", response);
                 if (exception != null) throw exception;
             }
 
@@ -8111,11 +8111,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityPersonaIdId(string id)
+        public VaultResponse<Object> ReadIdentityPersonaIdId(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityPersonaIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->ReadIdentityPersonaIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8139,7 +8139,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityPersonaIdId", response);
+                Exception exception = this.ExceptionFactory("ReadIdentityPersonaIdId", response);
                 if (exception != null) throw exception;
             }
 
@@ -8154,11 +8154,11 @@ namespace Vault.Api
         /// <param name="id">ID of the persona</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityPersonaIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ReadIdentityPersonaIdIdAsync(string id, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->GetIdentityPersonaIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->ReadIdentityPersonaIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8183,7 +8183,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("GetIdentityPersonaIdId", response);
+                Exception exception = this.ExceptionFactory("ReadIdentityPersonaIdId", response);
                 if (exception != null) throw exception;
             }
 
@@ -8197,11 +8197,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityAliasRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityAlias(IdentityAliasRequest identityAliasRequest)
+        public VaultResponse<Object> UpdateIdentityAlias(IdentityAliasRequest identityAliasRequest)
         {
             // verify the required parameter 'identityAliasRequest' is set
             if (identityAliasRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityAliasRequest' when calling Identity->PostIdentityAlias");
+                throw new VaultApiException(400, "Missing required parameter 'identityAliasRequest' when calling Identity->UpdateIdentityAlias");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8226,7 +8226,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityAlias", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityAlias", response);
                 if (exception != null) throw exception;
             }
 
@@ -8241,11 +8241,11 @@ namespace Vault.Api
         /// <param name="identityAliasRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityAliasAsync(IdentityAliasRequest identityAliasRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityAliasAsync(IdentityAliasRequest identityAliasRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'identityAliasRequest' is set
             if (identityAliasRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityAliasRequest' when calling Identity->PostIdentityAlias");
+                throw new VaultApiException(400, "Missing required parameter 'identityAliasRequest' when calling Identity->UpdateIdentityAlias");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8271,7 +8271,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityAlias", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityAlias", response);
                 if (exception != null) throw exception;
             }
 
@@ -8286,15 +8286,15 @@ namespace Vault.Api
         /// <param name="id">ID of the alias</param>
         /// <param name="identityAliasIdRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityAliasIdId(string id, IdentityAliasIdRequest identityAliasIdRequest)
+        public VaultResponse<Object> UpdateIdentityAliasIdId(string id, IdentityAliasIdRequest identityAliasIdRequest)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->UpdateIdentityAliasIdId");
 
             // verify the required parameter 'identityAliasIdRequest' is set
             if (identityAliasIdRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityAliasIdRequest' when calling Identity->PostIdentityAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'identityAliasIdRequest' when calling Identity->UpdateIdentityAliasIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8320,7 +8320,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityAliasIdId", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityAliasIdId", response);
                 if (exception != null) throw exception;
             }
 
@@ -8336,15 +8336,15 @@ namespace Vault.Api
         /// <param name="identityAliasIdRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityAliasIdIdAsync(string id, IdentityAliasIdRequest identityAliasIdRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityAliasIdIdAsync(string id, IdentityAliasIdRequest identityAliasIdRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->UpdateIdentityAliasIdId");
 
             // verify the required parameter 'identityAliasIdRequest' is set
             if (identityAliasIdRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityAliasIdRequest' when calling Identity->PostIdentityAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'identityAliasIdRequest' when calling Identity->UpdateIdentityAliasIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8371,7 +8371,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityAliasIdId", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityAliasIdId", response);
                 if (exception != null) throw exception;
             }
 
@@ -8385,11 +8385,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityEntity(IdentityEntityRequest identityEntityRequest)
+        public VaultResponse<Object> UpdateIdentityEntity(IdentityEntityRequest identityEntityRequest)
         {
             // verify the required parameter 'identityEntityRequest' is set
             if (identityEntityRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityEntityRequest' when calling Identity->PostIdentityEntity");
+                throw new VaultApiException(400, "Missing required parameter 'identityEntityRequest' when calling Identity->UpdateIdentityEntity");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8414,7 +8414,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityEntity", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntity", response);
                 if (exception != null) throw exception;
             }
 
@@ -8429,11 +8429,11 @@ namespace Vault.Api
         /// <param name="identityEntityRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityEntityAsync(IdentityEntityRequest identityEntityRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityEntityAsync(IdentityEntityRequest identityEntityRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'identityEntityRequest' is set
             if (identityEntityRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityEntityRequest' when calling Identity->PostIdentityEntity");
+                throw new VaultApiException(400, "Missing required parameter 'identityEntityRequest' when calling Identity->UpdateIdentityEntity");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8459,7 +8459,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityEntity", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntity", response);
                 if (exception != null) throw exception;
             }
 
@@ -8473,11 +8473,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityAliasRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityEntityAlias(IdentityEntityAliasRequest identityEntityAliasRequest)
+        public VaultResponse<Object> UpdateIdentityEntityAlias(IdentityEntityAliasRequest identityEntityAliasRequest)
         {
             // verify the required parameter 'identityEntityAliasRequest' is set
             if (identityEntityAliasRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityEntityAliasRequest' when calling Identity->PostIdentityEntityAlias");
+                throw new VaultApiException(400, "Missing required parameter 'identityEntityAliasRequest' when calling Identity->UpdateIdentityEntityAlias");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8502,7 +8502,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityEntityAlias", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntityAlias", response);
                 if (exception != null) throw exception;
             }
 
@@ -8517,11 +8517,11 @@ namespace Vault.Api
         /// <param name="identityEntityAliasRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityEntityAliasAsync(IdentityEntityAliasRequest identityEntityAliasRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityEntityAliasAsync(IdentityEntityAliasRequest identityEntityAliasRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'identityEntityAliasRequest' is set
             if (identityEntityAliasRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityEntityAliasRequest' when calling Identity->PostIdentityEntityAlias");
+                throw new VaultApiException(400, "Missing required parameter 'identityEntityAliasRequest' when calling Identity->UpdateIdentityEntityAlias");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8547,7 +8547,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityEntityAlias", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntityAlias", response);
                 if (exception != null) throw exception;
             }
 
@@ -8562,15 +8562,15 @@ namespace Vault.Api
         /// <param name="id">ID of the alias</param>
         /// <param name="identityEntityAliasIdRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityEntityAliasIdId(string id, IdentityEntityAliasIdRequest identityEntityAliasIdRequest)
+        public VaultResponse<Object> UpdateIdentityEntityAliasIdId(string id, IdentityEntityAliasIdRequest identityEntityAliasIdRequest)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityEntityAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->UpdateIdentityEntityAliasIdId");
 
             // verify the required parameter 'identityEntityAliasIdRequest' is set
             if (identityEntityAliasIdRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityEntityAliasIdRequest' when calling Identity->PostIdentityEntityAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'identityEntityAliasIdRequest' when calling Identity->UpdateIdentityEntityAliasIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8596,7 +8596,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityEntityAliasIdId", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntityAliasIdId", response);
                 if (exception != null) throw exception;
             }
 
@@ -8612,15 +8612,15 @@ namespace Vault.Api
         /// <param name="identityEntityAliasIdRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityEntityAliasIdIdAsync(string id, IdentityEntityAliasIdRequest identityEntityAliasIdRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityEntityAliasIdIdAsync(string id, IdentityEntityAliasIdRequest identityEntityAliasIdRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityEntityAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->UpdateIdentityEntityAliasIdId");
 
             // verify the required parameter 'identityEntityAliasIdRequest' is set
             if (identityEntityAliasIdRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityEntityAliasIdRequest' when calling Identity->PostIdentityEntityAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'identityEntityAliasIdRequest' when calling Identity->UpdateIdentityEntityAliasIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8647,7 +8647,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityEntityAliasIdId", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntityAliasIdId", response);
                 if (exception != null) throw exception;
             }
 
@@ -8661,11 +8661,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityBatchDeleteRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityEntityBatchDelete(IdentityEntityBatchDeleteRequest identityEntityBatchDeleteRequest)
+        public VaultResponse<Object> UpdateIdentityEntityBatchDelete(IdentityEntityBatchDeleteRequest identityEntityBatchDeleteRequest)
         {
             // verify the required parameter 'identityEntityBatchDeleteRequest' is set
             if (identityEntityBatchDeleteRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityEntityBatchDeleteRequest' when calling Identity->PostIdentityEntityBatchDelete");
+                throw new VaultApiException(400, "Missing required parameter 'identityEntityBatchDeleteRequest' when calling Identity->UpdateIdentityEntityBatchDelete");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8690,7 +8690,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityEntityBatchDelete", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntityBatchDelete", response);
                 if (exception != null) throw exception;
             }
 
@@ -8705,11 +8705,11 @@ namespace Vault.Api
         /// <param name="identityEntityBatchDeleteRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityEntityBatchDeleteAsync(IdentityEntityBatchDeleteRequest identityEntityBatchDeleteRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityEntityBatchDeleteAsync(IdentityEntityBatchDeleteRequest identityEntityBatchDeleteRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'identityEntityBatchDeleteRequest' is set
             if (identityEntityBatchDeleteRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityEntityBatchDeleteRequest' when calling Identity->PostIdentityEntityBatchDelete");
+                throw new VaultApiException(400, "Missing required parameter 'identityEntityBatchDeleteRequest' when calling Identity->UpdateIdentityEntityBatchDelete");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8735,7 +8735,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityEntityBatchDelete", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntityBatchDelete", response);
                 if (exception != null) throw exception;
             }
 
@@ -8750,15 +8750,15 @@ namespace Vault.Api
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <param name="identityEntityIdRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityEntityIdId(string id, IdentityEntityIdRequest identityEntityIdRequest)
+        public VaultResponse<Object> UpdateIdentityEntityIdId(string id, IdentityEntityIdRequest identityEntityIdRequest)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityEntityIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->UpdateIdentityEntityIdId");
 
             // verify the required parameter 'identityEntityIdRequest' is set
             if (identityEntityIdRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityEntityIdRequest' when calling Identity->PostIdentityEntityIdId");
+                throw new VaultApiException(400, "Missing required parameter 'identityEntityIdRequest' when calling Identity->UpdateIdentityEntityIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8784,7 +8784,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityEntityIdId", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntityIdId", response);
                 if (exception != null) throw exception;
             }
 
@@ -8800,15 +8800,15 @@ namespace Vault.Api
         /// <param name="identityEntityIdRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityEntityIdIdAsync(string id, IdentityEntityIdRequest identityEntityIdRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityEntityIdIdAsync(string id, IdentityEntityIdRequest identityEntityIdRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityEntityIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->UpdateIdentityEntityIdId");
 
             // verify the required parameter 'identityEntityIdRequest' is set
             if (identityEntityIdRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityEntityIdRequest' when calling Identity->PostIdentityEntityIdId");
+                throw new VaultApiException(400, "Missing required parameter 'identityEntityIdRequest' when calling Identity->UpdateIdentityEntityIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8835,7 +8835,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityEntityIdId", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntityIdId", response);
                 if (exception != null) throw exception;
             }
 
@@ -8849,11 +8849,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityMergeRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityEntityMerge(IdentityEntityMergeRequest identityEntityMergeRequest)
+        public VaultResponse<Object> UpdateIdentityEntityMerge(IdentityEntityMergeRequest identityEntityMergeRequest)
         {
             // verify the required parameter 'identityEntityMergeRequest' is set
             if (identityEntityMergeRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityEntityMergeRequest' when calling Identity->PostIdentityEntityMerge");
+                throw new VaultApiException(400, "Missing required parameter 'identityEntityMergeRequest' when calling Identity->UpdateIdentityEntityMerge");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8878,7 +8878,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityEntityMerge", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntityMerge", response);
                 if (exception != null) throw exception;
             }
 
@@ -8893,11 +8893,11 @@ namespace Vault.Api
         /// <param name="identityEntityMergeRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityEntityMergeAsync(IdentityEntityMergeRequest identityEntityMergeRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityEntityMergeAsync(IdentityEntityMergeRequest identityEntityMergeRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'identityEntityMergeRequest' is set
             if (identityEntityMergeRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityEntityMergeRequest' when calling Identity->PostIdentityEntityMerge");
+                throw new VaultApiException(400, "Missing required parameter 'identityEntityMergeRequest' when calling Identity->UpdateIdentityEntityMerge");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8923,7 +8923,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityEntityMerge", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntityMerge", response);
                 if (exception != null) throw exception;
             }
 
@@ -8938,15 +8938,15 @@ namespace Vault.Api
         /// <param name="name">Name of the entity</param>
         /// <param name="identityEntityNameRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityEntityNameName(string name, IdentityEntityNameRequest identityEntityNameRequest)
+        public VaultResponse<Object> UpdateIdentityEntityNameName(string name, IdentityEntityNameRequest identityEntityNameRequest)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityEntityNameName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityEntityNameName");
 
             // verify the required parameter 'identityEntityNameRequest' is set
             if (identityEntityNameRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityEntityNameRequest' when calling Identity->PostIdentityEntityNameName");
+                throw new VaultApiException(400, "Missing required parameter 'identityEntityNameRequest' when calling Identity->UpdateIdentityEntityNameName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8972,7 +8972,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityEntityNameName", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntityNameName", response);
                 if (exception != null) throw exception;
             }
 
@@ -8988,15 +8988,15 @@ namespace Vault.Api
         /// <param name="identityEntityNameRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityEntityNameNameAsync(string name, IdentityEntityNameRequest identityEntityNameRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityEntityNameNameAsync(string name, IdentityEntityNameRequest identityEntityNameRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityEntityNameName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityEntityNameName");
 
             // verify the required parameter 'identityEntityNameRequest' is set
             if (identityEntityNameRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityEntityNameRequest' when calling Identity->PostIdentityEntityNameName");
+                throw new VaultApiException(400, "Missing required parameter 'identityEntityNameRequest' when calling Identity->UpdateIdentityEntityNameName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9023,7 +9023,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityEntityNameName", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityEntityNameName", response);
                 if (exception != null) throw exception;
             }
 
@@ -9037,11 +9037,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityGroup(IdentityGroupRequest identityGroupRequest)
+        public VaultResponse<Object> UpdateIdentityGroup(IdentityGroupRequest identityGroupRequest)
         {
             // verify the required parameter 'identityGroupRequest' is set
             if (identityGroupRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityGroupRequest' when calling Identity->PostIdentityGroup");
+                throw new VaultApiException(400, "Missing required parameter 'identityGroupRequest' when calling Identity->UpdateIdentityGroup");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9066,7 +9066,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityGroup", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityGroup", response);
                 if (exception != null) throw exception;
             }
 
@@ -9081,11 +9081,11 @@ namespace Vault.Api
         /// <param name="identityGroupRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityGroupAsync(IdentityGroupRequest identityGroupRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityGroupAsync(IdentityGroupRequest identityGroupRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'identityGroupRequest' is set
             if (identityGroupRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityGroupRequest' when calling Identity->PostIdentityGroup");
+                throw new VaultApiException(400, "Missing required parameter 'identityGroupRequest' when calling Identity->UpdateIdentityGroup");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9111,7 +9111,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityGroup", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityGroup", response);
                 if (exception != null) throw exception;
             }
 
@@ -9125,11 +9125,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupAliasRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityGroupAlias(IdentityGroupAliasRequest identityGroupAliasRequest)
+        public VaultResponse<Object> UpdateIdentityGroupAlias(IdentityGroupAliasRequest identityGroupAliasRequest)
         {
             // verify the required parameter 'identityGroupAliasRequest' is set
             if (identityGroupAliasRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityGroupAliasRequest' when calling Identity->PostIdentityGroupAlias");
+                throw new VaultApiException(400, "Missing required parameter 'identityGroupAliasRequest' when calling Identity->UpdateIdentityGroupAlias");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9154,7 +9154,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityGroupAlias", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityGroupAlias", response);
                 if (exception != null) throw exception;
             }
 
@@ -9169,11 +9169,11 @@ namespace Vault.Api
         /// <param name="identityGroupAliasRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityGroupAliasAsync(IdentityGroupAliasRequest identityGroupAliasRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityGroupAliasAsync(IdentityGroupAliasRequest identityGroupAliasRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'identityGroupAliasRequest' is set
             if (identityGroupAliasRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityGroupAliasRequest' when calling Identity->PostIdentityGroupAlias");
+                throw new VaultApiException(400, "Missing required parameter 'identityGroupAliasRequest' when calling Identity->UpdateIdentityGroupAlias");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9199,7 +9199,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityGroupAlias", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityGroupAlias", response);
                 if (exception != null) throw exception;
             }
 
@@ -9214,15 +9214,15 @@ namespace Vault.Api
         /// <param name="id">ID of the group alias.</param>
         /// <param name="identityGroupAliasIdRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityGroupAliasIdId(string id, IdentityGroupAliasIdRequest identityGroupAliasIdRequest)
+        public VaultResponse<Object> UpdateIdentityGroupAliasIdId(string id, IdentityGroupAliasIdRequest identityGroupAliasIdRequest)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityGroupAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->UpdateIdentityGroupAliasIdId");
 
             // verify the required parameter 'identityGroupAliasIdRequest' is set
             if (identityGroupAliasIdRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityGroupAliasIdRequest' when calling Identity->PostIdentityGroupAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'identityGroupAliasIdRequest' when calling Identity->UpdateIdentityGroupAliasIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9248,7 +9248,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityGroupAliasIdId", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityGroupAliasIdId", response);
                 if (exception != null) throw exception;
             }
 
@@ -9264,15 +9264,15 @@ namespace Vault.Api
         /// <param name="identityGroupAliasIdRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityGroupAliasIdIdAsync(string id, IdentityGroupAliasIdRequest identityGroupAliasIdRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityGroupAliasIdIdAsync(string id, IdentityGroupAliasIdRequest identityGroupAliasIdRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityGroupAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->UpdateIdentityGroupAliasIdId");
 
             // verify the required parameter 'identityGroupAliasIdRequest' is set
             if (identityGroupAliasIdRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityGroupAliasIdRequest' when calling Identity->PostIdentityGroupAliasIdId");
+                throw new VaultApiException(400, "Missing required parameter 'identityGroupAliasIdRequest' when calling Identity->UpdateIdentityGroupAliasIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9299,7 +9299,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityGroupAliasIdId", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityGroupAliasIdId", response);
                 if (exception != null) throw exception;
             }
 
@@ -9314,15 +9314,15 @@ namespace Vault.Api
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <param name="identityGroupIdRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityGroupIdId(string id, IdentityGroupIdRequest identityGroupIdRequest)
+        public VaultResponse<Object> UpdateIdentityGroupIdId(string id, IdentityGroupIdRequest identityGroupIdRequest)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityGroupIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->UpdateIdentityGroupIdId");
 
             // verify the required parameter 'identityGroupIdRequest' is set
             if (identityGroupIdRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityGroupIdRequest' when calling Identity->PostIdentityGroupIdId");
+                throw new VaultApiException(400, "Missing required parameter 'identityGroupIdRequest' when calling Identity->UpdateIdentityGroupIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9348,7 +9348,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityGroupIdId", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityGroupIdId", response);
                 if (exception != null) throw exception;
             }
 
@@ -9364,15 +9364,15 @@ namespace Vault.Api
         /// <param name="identityGroupIdRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityGroupIdIdAsync(string id, IdentityGroupIdRequest identityGroupIdRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityGroupIdIdAsync(string id, IdentityGroupIdRequest identityGroupIdRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityGroupIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->UpdateIdentityGroupIdId");
 
             // verify the required parameter 'identityGroupIdRequest' is set
             if (identityGroupIdRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityGroupIdRequest' when calling Identity->PostIdentityGroupIdId");
+                throw new VaultApiException(400, "Missing required parameter 'identityGroupIdRequest' when calling Identity->UpdateIdentityGroupIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9399,7 +9399,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityGroupIdId", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityGroupIdId", response);
                 if (exception != null) throw exception;
             }
 
@@ -9414,15 +9414,15 @@ namespace Vault.Api
         /// <param name="name">Name of the group.</param>
         /// <param name="identityGroupNameRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityGroupNameName(string name, IdentityGroupNameRequest identityGroupNameRequest)
+        public VaultResponse<Object> UpdateIdentityGroupNameName(string name, IdentityGroupNameRequest identityGroupNameRequest)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityGroupNameName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityGroupNameName");
 
             // verify the required parameter 'identityGroupNameRequest' is set
             if (identityGroupNameRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityGroupNameRequest' when calling Identity->PostIdentityGroupNameName");
+                throw new VaultApiException(400, "Missing required parameter 'identityGroupNameRequest' when calling Identity->UpdateIdentityGroupNameName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9448,7 +9448,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityGroupNameName", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityGroupNameName", response);
                 if (exception != null) throw exception;
             }
 
@@ -9464,15 +9464,15 @@ namespace Vault.Api
         /// <param name="identityGroupNameRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityGroupNameNameAsync(string name, IdentityGroupNameRequest identityGroupNameRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityGroupNameNameAsync(string name, IdentityGroupNameRequest identityGroupNameRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityGroupNameName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityGroupNameName");
 
             // verify the required parameter 'identityGroupNameRequest' is set
             if (identityGroupNameRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityGroupNameRequest' when calling Identity->PostIdentityGroupNameName");
+                throw new VaultApiException(400, "Missing required parameter 'identityGroupNameRequest' when calling Identity->UpdateIdentityGroupNameName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9499,7 +9499,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityGroupNameName", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityGroupNameName", response);
                 if (exception != null) throw exception;
             }
 
@@ -9513,11 +9513,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupEntityRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityLookupEntity(IdentityLookupEntityRequest identityLookupEntityRequest)
+        public VaultResponse<Object> UpdateIdentityLookupEntity(IdentityLookupEntityRequest identityLookupEntityRequest)
         {
             // verify the required parameter 'identityLookupEntityRequest' is set
             if (identityLookupEntityRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityLookupEntityRequest' when calling Identity->PostIdentityLookupEntity");
+                throw new VaultApiException(400, "Missing required parameter 'identityLookupEntityRequest' when calling Identity->UpdateIdentityLookupEntity");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9542,7 +9542,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityLookupEntity", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityLookupEntity", response);
                 if (exception != null) throw exception;
             }
 
@@ -9557,11 +9557,11 @@ namespace Vault.Api
         /// <param name="identityLookupEntityRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityLookupEntityAsync(IdentityLookupEntityRequest identityLookupEntityRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityLookupEntityAsync(IdentityLookupEntityRequest identityLookupEntityRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'identityLookupEntityRequest' is set
             if (identityLookupEntityRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityLookupEntityRequest' when calling Identity->PostIdentityLookupEntity");
+                throw new VaultApiException(400, "Missing required parameter 'identityLookupEntityRequest' when calling Identity->UpdateIdentityLookupEntity");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9587,7 +9587,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityLookupEntity", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityLookupEntity", response);
                 if (exception != null) throw exception;
             }
 
@@ -9601,11 +9601,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupGroupRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityLookupGroup(IdentityLookupGroupRequest identityLookupGroupRequest)
+        public VaultResponse<Object> UpdateIdentityLookupGroup(IdentityLookupGroupRequest identityLookupGroupRequest)
         {
             // verify the required parameter 'identityLookupGroupRequest' is set
             if (identityLookupGroupRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityLookupGroupRequest' when calling Identity->PostIdentityLookupGroup");
+                throw new VaultApiException(400, "Missing required parameter 'identityLookupGroupRequest' when calling Identity->UpdateIdentityLookupGroup");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9630,7 +9630,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityLookupGroup", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityLookupGroup", response);
                 if (exception != null) throw exception;
             }
 
@@ -9645,11 +9645,11 @@ namespace Vault.Api
         /// <param name="identityLookupGroupRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityLookupGroupAsync(IdentityLookupGroupRequest identityLookupGroupRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityLookupGroupAsync(IdentityLookupGroupRequest identityLookupGroupRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'identityLookupGroupRequest' is set
             if (identityLookupGroupRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityLookupGroupRequest' when calling Identity->PostIdentityLookupGroup");
+                throw new VaultApiException(400, "Missing required parameter 'identityLookupGroupRequest' when calling Identity->UpdateIdentityLookupGroup");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9675,7 +9675,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityLookupGroup", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityLookupGroup", response);
                 if (exception != null) throw exception;
             }
 
@@ -9690,15 +9690,15 @@ namespace Vault.Api
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <param name="identityMfaLoginEnforcementRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityMfaLoginEnforcementName(string name, IdentityMfaLoginEnforcementRequest identityMfaLoginEnforcementRequest)
+        public VaultResponse<Object> UpdateIdentityMfaLoginEnforcementName(string name, IdentityMfaLoginEnforcementRequest identityMfaLoginEnforcementRequest)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityMfaLoginEnforcementName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityMfaLoginEnforcementName");
 
             // verify the required parameter 'identityMfaLoginEnforcementRequest' is set
             if (identityMfaLoginEnforcementRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityMfaLoginEnforcementRequest' when calling Identity->PostIdentityMfaLoginEnforcementName");
+                throw new VaultApiException(400, "Missing required parameter 'identityMfaLoginEnforcementRequest' when calling Identity->UpdateIdentityMfaLoginEnforcementName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9724,7 +9724,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityMfaLoginEnforcementName", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaLoginEnforcementName", response);
                 if (exception != null) throw exception;
             }
 
@@ -9740,15 +9740,15 @@ namespace Vault.Api
         /// <param name="identityMfaLoginEnforcementRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityMfaLoginEnforcementNameAsync(string name, IdentityMfaLoginEnforcementRequest identityMfaLoginEnforcementRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityMfaLoginEnforcementNameAsync(string name, IdentityMfaLoginEnforcementRequest identityMfaLoginEnforcementRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityMfaLoginEnforcementName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityMfaLoginEnforcementName");
 
             // verify the required parameter 'identityMfaLoginEnforcementRequest' is set
             if (identityMfaLoginEnforcementRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityMfaLoginEnforcementRequest' when calling Identity->PostIdentityMfaLoginEnforcementName");
+                throw new VaultApiException(400, "Missing required parameter 'identityMfaLoginEnforcementRequest' when calling Identity->UpdateIdentityMfaLoginEnforcementName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9775,7 +9775,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityMfaLoginEnforcementName", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaLoginEnforcementName", response);
                 if (exception != null) throw exception;
             }
 
@@ -9790,15 +9790,15 @@ namespace Vault.Api
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodDuoRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityMfaMethodDuoMethodId(string methodId, IdentityMfaMethodDuoRequest identityMfaMethodDuoRequest)
+        public VaultResponse<Object> UpdateIdentityMfaMethodDuoMethodId(string methodId, IdentityMfaMethodDuoRequest identityMfaMethodDuoRequest)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodDuoMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->UpdateIdentityMfaMethodDuoMethodId");
 
             // verify the required parameter 'identityMfaMethodDuoRequest' is set
             if (identityMfaMethodDuoRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodDuoRequest' when calling Identity->PostIdentityMfaMethodDuoMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodDuoRequest' when calling Identity->UpdateIdentityMfaMethodDuoMethodId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9824,7 +9824,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityMfaMethodDuoMethodId", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodDuoMethodId", response);
                 if (exception != null) throw exception;
             }
 
@@ -9840,15 +9840,15 @@ namespace Vault.Api
         /// <param name="identityMfaMethodDuoRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityMfaMethodDuoMethodIdAsync(string methodId, IdentityMfaMethodDuoRequest identityMfaMethodDuoRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityMfaMethodDuoMethodIdAsync(string methodId, IdentityMfaMethodDuoRequest identityMfaMethodDuoRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodDuoMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->UpdateIdentityMfaMethodDuoMethodId");
 
             // verify the required parameter 'identityMfaMethodDuoRequest' is set
             if (identityMfaMethodDuoRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodDuoRequest' when calling Identity->PostIdentityMfaMethodDuoMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodDuoRequest' when calling Identity->UpdateIdentityMfaMethodDuoMethodId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9875,7 +9875,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityMfaMethodDuoMethodId", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodDuoMethodId", response);
                 if (exception != null) throw exception;
             }
 
@@ -9890,15 +9890,15 @@ namespace Vault.Api
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodOktaRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityMfaMethodOktaMethodId(string methodId, IdentityMfaMethodOktaRequest identityMfaMethodOktaRequest)
+        public VaultResponse<Object> UpdateIdentityMfaMethodOktaMethodId(string methodId, IdentityMfaMethodOktaRequest identityMfaMethodOktaRequest)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodOktaMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->UpdateIdentityMfaMethodOktaMethodId");
 
             // verify the required parameter 'identityMfaMethodOktaRequest' is set
             if (identityMfaMethodOktaRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodOktaRequest' when calling Identity->PostIdentityMfaMethodOktaMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodOktaRequest' when calling Identity->UpdateIdentityMfaMethodOktaMethodId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9924,7 +9924,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityMfaMethodOktaMethodId", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodOktaMethodId", response);
                 if (exception != null) throw exception;
             }
 
@@ -9940,15 +9940,15 @@ namespace Vault.Api
         /// <param name="identityMfaMethodOktaRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityMfaMethodOktaMethodIdAsync(string methodId, IdentityMfaMethodOktaRequest identityMfaMethodOktaRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityMfaMethodOktaMethodIdAsync(string methodId, IdentityMfaMethodOktaRequest identityMfaMethodOktaRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodOktaMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->UpdateIdentityMfaMethodOktaMethodId");
 
             // verify the required parameter 'identityMfaMethodOktaRequest' is set
             if (identityMfaMethodOktaRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodOktaRequest' when calling Identity->PostIdentityMfaMethodOktaMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodOktaRequest' when calling Identity->UpdateIdentityMfaMethodOktaMethodId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9975,7 +9975,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityMfaMethodOktaMethodId", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodOktaMethodId", response);
                 if (exception != null) throw exception;
             }
 
@@ -9990,15 +9990,15 @@ namespace Vault.Api
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodPingidRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityMfaMethodPingidMethodId(string methodId, IdentityMfaMethodPingidRequest identityMfaMethodPingidRequest)
+        public VaultResponse<Object> UpdateIdentityMfaMethodPingidMethodId(string methodId, IdentityMfaMethodPingidRequest identityMfaMethodPingidRequest)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodPingidMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->UpdateIdentityMfaMethodPingidMethodId");
 
             // verify the required parameter 'identityMfaMethodPingidRequest' is set
             if (identityMfaMethodPingidRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodPingidRequest' when calling Identity->PostIdentityMfaMethodPingidMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodPingidRequest' when calling Identity->UpdateIdentityMfaMethodPingidMethodId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10024,7 +10024,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityMfaMethodPingidMethodId", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodPingidMethodId", response);
                 if (exception != null) throw exception;
             }
 
@@ -10040,15 +10040,15 @@ namespace Vault.Api
         /// <param name="identityMfaMethodPingidRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityMfaMethodPingidMethodIdAsync(string methodId, IdentityMfaMethodPingidRequest identityMfaMethodPingidRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityMfaMethodPingidMethodIdAsync(string methodId, IdentityMfaMethodPingidRequest identityMfaMethodPingidRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodPingidMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->UpdateIdentityMfaMethodPingidMethodId");
 
             // verify the required parameter 'identityMfaMethodPingidRequest' is set
             if (identityMfaMethodPingidRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodPingidRequest' when calling Identity->PostIdentityMfaMethodPingidMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodPingidRequest' when calling Identity->UpdateIdentityMfaMethodPingidMethodId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10075,7 +10075,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityMfaMethodPingidMethodId", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodPingidMethodId", response);
                 if (exception != null) throw exception;
             }
 
@@ -10089,11 +10089,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminDestroyRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityMfaMethodTotpAdminDestroy(IdentityMfaMethodTotpAdminDestroyRequest identityMfaMethodTotpAdminDestroyRequest)
+        public VaultResponse<Object> UpdateIdentityMfaMethodTotpAdminDestroy(IdentityMfaMethodTotpAdminDestroyRequest identityMfaMethodTotpAdminDestroyRequest)
         {
             // verify the required parameter 'identityMfaMethodTotpAdminDestroyRequest' is set
             if (identityMfaMethodTotpAdminDestroyRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodTotpAdminDestroyRequest' when calling Identity->PostIdentityMfaMethodTotpAdminDestroy");
+                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodTotpAdminDestroyRequest' when calling Identity->UpdateIdentityMfaMethodTotpAdminDestroy");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10118,7 +10118,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityMfaMethodTotpAdminDestroy", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodTotpAdminDestroy", response);
                 if (exception != null) throw exception;
             }
 
@@ -10133,11 +10133,11 @@ namespace Vault.Api
         /// <param name="identityMfaMethodTotpAdminDestroyRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityMfaMethodTotpAdminDestroyAsync(IdentityMfaMethodTotpAdminDestroyRequest identityMfaMethodTotpAdminDestroyRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityMfaMethodTotpAdminDestroyAsync(IdentityMfaMethodTotpAdminDestroyRequest identityMfaMethodTotpAdminDestroyRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'identityMfaMethodTotpAdminDestroyRequest' is set
             if (identityMfaMethodTotpAdminDestroyRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodTotpAdminDestroyRequest' when calling Identity->PostIdentityMfaMethodTotpAdminDestroy");
+                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodTotpAdminDestroyRequest' when calling Identity->UpdateIdentityMfaMethodTotpAdminDestroy");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10163,7 +10163,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityMfaMethodTotpAdminDestroy", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodTotpAdminDestroy", response);
                 if (exception != null) throw exception;
             }
 
@@ -10177,11 +10177,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminGenerateRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityMfaMethodTotpAdminGenerate(IdentityMfaMethodTotpAdminGenerateRequest identityMfaMethodTotpAdminGenerateRequest)
+        public VaultResponse<Object> UpdateIdentityMfaMethodTotpAdminGenerate(IdentityMfaMethodTotpAdminGenerateRequest identityMfaMethodTotpAdminGenerateRequest)
         {
             // verify the required parameter 'identityMfaMethodTotpAdminGenerateRequest' is set
             if (identityMfaMethodTotpAdminGenerateRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodTotpAdminGenerateRequest' when calling Identity->PostIdentityMfaMethodTotpAdminGenerate");
+                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodTotpAdminGenerateRequest' when calling Identity->UpdateIdentityMfaMethodTotpAdminGenerate");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10206,7 +10206,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityMfaMethodTotpAdminGenerate", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodTotpAdminGenerate", response);
                 if (exception != null) throw exception;
             }
 
@@ -10221,11 +10221,11 @@ namespace Vault.Api
         /// <param name="identityMfaMethodTotpAdminGenerateRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityMfaMethodTotpAdminGenerateAsync(IdentityMfaMethodTotpAdminGenerateRequest identityMfaMethodTotpAdminGenerateRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityMfaMethodTotpAdminGenerateAsync(IdentityMfaMethodTotpAdminGenerateRequest identityMfaMethodTotpAdminGenerateRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'identityMfaMethodTotpAdminGenerateRequest' is set
             if (identityMfaMethodTotpAdminGenerateRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodTotpAdminGenerateRequest' when calling Identity->PostIdentityMfaMethodTotpAdminGenerate");
+                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodTotpAdminGenerateRequest' when calling Identity->UpdateIdentityMfaMethodTotpAdminGenerate");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10251,7 +10251,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityMfaMethodTotpAdminGenerate", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodTotpAdminGenerate", response);
                 if (exception != null) throw exception;
             }
 
@@ -10265,11 +10265,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpGenerateRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityMfaMethodTotpGenerate(IdentityMfaMethodTotpGenerateRequest identityMfaMethodTotpGenerateRequest)
+        public VaultResponse<Object> UpdateIdentityMfaMethodTotpGenerate(IdentityMfaMethodTotpGenerateRequest identityMfaMethodTotpGenerateRequest)
         {
             // verify the required parameter 'identityMfaMethodTotpGenerateRequest' is set
             if (identityMfaMethodTotpGenerateRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodTotpGenerateRequest' when calling Identity->PostIdentityMfaMethodTotpGenerate");
+                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodTotpGenerateRequest' when calling Identity->UpdateIdentityMfaMethodTotpGenerate");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10294,7 +10294,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityMfaMethodTotpGenerate", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodTotpGenerate", response);
                 if (exception != null) throw exception;
             }
 
@@ -10309,11 +10309,11 @@ namespace Vault.Api
         /// <param name="identityMfaMethodTotpGenerateRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityMfaMethodTotpGenerateAsync(IdentityMfaMethodTotpGenerateRequest identityMfaMethodTotpGenerateRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityMfaMethodTotpGenerateAsync(IdentityMfaMethodTotpGenerateRequest identityMfaMethodTotpGenerateRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'identityMfaMethodTotpGenerateRequest' is set
             if (identityMfaMethodTotpGenerateRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodTotpGenerateRequest' when calling Identity->PostIdentityMfaMethodTotpGenerate");
+                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodTotpGenerateRequest' when calling Identity->UpdateIdentityMfaMethodTotpGenerate");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10339,7 +10339,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityMfaMethodTotpGenerate", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodTotpGenerate", response);
                 if (exception != null) throw exception;
             }
 
@@ -10354,15 +10354,15 @@ namespace Vault.Api
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodTotpRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityMfaMethodTotpMethodId(string methodId, IdentityMfaMethodTotpRequest identityMfaMethodTotpRequest)
+        public VaultResponse<Object> UpdateIdentityMfaMethodTotpMethodId(string methodId, IdentityMfaMethodTotpRequest identityMfaMethodTotpRequest)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodTotpMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->UpdateIdentityMfaMethodTotpMethodId");
 
             // verify the required parameter 'identityMfaMethodTotpRequest' is set
             if (identityMfaMethodTotpRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodTotpRequest' when calling Identity->PostIdentityMfaMethodTotpMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodTotpRequest' when calling Identity->UpdateIdentityMfaMethodTotpMethodId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10388,7 +10388,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityMfaMethodTotpMethodId", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodTotpMethodId", response);
                 if (exception != null) throw exception;
             }
 
@@ -10404,15 +10404,15 @@ namespace Vault.Api
         /// <param name="identityMfaMethodTotpRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityMfaMethodTotpMethodIdAsync(string methodId, IdentityMfaMethodTotpRequest identityMfaMethodTotpRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityMfaMethodTotpMethodIdAsync(string methodId, IdentityMfaMethodTotpRequest identityMfaMethodTotpRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
-                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->PostIdentityMfaMethodTotpMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'methodId' when calling Identity->UpdateIdentityMfaMethodTotpMethodId");
 
             // verify the required parameter 'identityMfaMethodTotpRequest' is set
             if (identityMfaMethodTotpRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodTotpRequest' when calling Identity->PostIdentityMfaMethodTotpMethodId");
+                throw new VaultApiException(400, "Missing required parameter 'identityMfaMethodTotpRequest' when calling Identity->UpdateIdentityMfaMethodTotpMethodId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10439,7 +10439,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityMfaMethodTotpMethodId", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityMfaMethodTotpMethodId", response);
                 if (exception != null) throw exception;
             }
 
@@ -10454,15 +10454,15 @@ namespace Vault.Api
         /// <param name="name">Name of the assignment</param>
         /// <param name="identityOidcAssignmentRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityOidcAssignmentName(string name, IdentityOidcAssignmentRequest identityOidcAssignmentRequest)
+        public VaultResponse<Object> UpdateIdentityOidcAssignmentName(string name, IdentityOidcAssignmentRequest identityOidcAssignmentRequest)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcAssignmentName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityOidcAssignmentName");
 
             // verify the required parameter 'identityOidcAssignmentRequest' is set
             if (identityOidcAssignmentRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityOidcAssignmentRequest' when calling Identity->PostIdentityOidcAssignmentName");
+                throw new VaultApiException(400, "Missing required parameter 'identityOidcAssignmentRequest' when calling Identity->UpdateIdentityOidcAssignmentName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10488,7 +10488,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityOidcAssignmentName", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcAssignmentName", response);
                 if (exception != null) throw exception;
             }
 
@@ -10504,15 +10504,15 @@ namespace Vault.Api
         /// <param name="identityOidcAssignmentRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityOidcAssignmentNameAsync(string name, IdentityOidcAssignmentRequest identityOidcAssignmentRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityOidcAssignmentNameAsync(string name, IdentityOidcAssignmentRequest identityOidcAssignmentRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcAssignmentName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityOidcAssignmentName");
 
             // verify the required parameter 'identityOidcAssignmentRequest' is set
             if (identityOidcAssignmentRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityOidcAssignmentRequest' when calling Identity->PostIdentityOidcAssignmentName");
+                throw new VaultApiException(400, "Missing required parameter 'identityOidcAssignmentRequest' when calling Identity->UpdateIdentityOidcAssignmentName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10539,7 +10539,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityOidcAssignmentName", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcAssignmentName", response);
                 if (exception != null) throw exception;
             }
 
@@ -10554,15 +10554,15 @@ namespace Vault.Api
         /// <param name="name">Name of the client.</param>
         /// <param name="identityOidcClientRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityOidcClientName(string name, IdentityOidcClientRequest identityOidcClientRequest)
+        public VaultResponse<Object> UpdateIdentityOidcClientName(string name, IdentityOidcClientRequest identityOidcClientRequest)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcClientName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityOidcClientName");
 
             // verify the required parameter 'identityOidcClientRequest' is set
             if (identityOidcClientRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityOidcClientRequest' when calling Identity->PostIdentityOidcClientName");
+                throw new VaultApiException(400, "Missing required parameter 'identityOidcClientRequest' when calling Identity->UpdateIdentityOidcClientName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10588,7 +10588,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityOidcClientName", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcClientName", response);
                 if (exception != null) throw exception;
             }
 
@@ -10604,15 +10604,15 @@ namespace Vault.Api
         /// <param name="identityOidcClientRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityOidcClientNameAsync(string name, IdentityOidcClientRequest identityOidcClientRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityOidcClientNameAsync(string name, IdentityOidcClientRequest identityOidcClientRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcClientName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityOidcClientName");
 
             // verify the required parameter 'identityOidcClientRequest' is set
             if (identityOidcClientRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityOidcClientRequest' when calling Identity->PostIdentityOidcClientName");
+                throw new VaultApiException(400, "Missing required parameter 'identityOidcClientRequest' when calling Identity->UpdateIdentityOidcClientName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10639,7 +10639,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityOidcClientName", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcClientName", response);
                 if (exception != null) throw exception;
             }
 
@@ -10653,11 +10653,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcConfigRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityOidcConfig(IdentityOidcConfigRequest identityOidcConfigRequest)
+        public VaultResponse<Object> UpdateIdentityOidcConfig(IdentityOidcConfigRequest identityOidcConfigRequest)
         {
             // verify the required parameter 'identityOidcConfigRequest' is set
             if (identityOidcConfigRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityOidcConfigRequest' when calling Identity->PostIdentityOidcConfig");
+                throw new VaultApiException(400, "Missing required parameter 'identityOidcConfigRequest' when calling Identity->UpdateIdentityOidcConfig");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10682,7 +10682,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityOidcConfig", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcConfig", response);
                 if (exception != null) throw exception;
             }
 
@@ -10697,11 +10697,11 @@ namespace Vault.Api
         /// <param name="identityOidcConfigRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityOidcConfigAsync(IdentityOidcConfigRequest identityOidcConfigRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityOidcConfigAsync(IdentityOidcConfigRequest identityOidcConfigRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'identityOidcConfigRequest' is set
             if (identityOidcConfigRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityOidcConfigRequest' when calling Identity->PostIdentityOidcConfig");
+                throw new VaultApiException(400, "Missing required parameter 'identityOidcConfigRequest' when calling Identity->UpdateIdentityOidcConfig");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10727,7 +10727,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityOidcConfig", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcConfig", response);
                 if (exception != null) throw exception;
             }
 
@@ -10741,11 +10741,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcIntrospectRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityOidcIntrospect(IdentityOidcIntrospectRequest identityOidcIntrospectRequest)
+        public VaultResponse<Object> UpdateIdentityOidcIntrospect(IdentityOidcIntrospectRequest identityOidcIntrospectRequest)
         {
             // verify the required parameter 'identityOidcIntrospectRequest' is set
             if (identityOidcIntrospectRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityOidcIntrospectRequest' when calling Identity->PostIdentityOidcIntrospect");
+                throw new VaultApiException(400, "Missing required parameter 'identityOidcIntrospectRequest' when calling Identity->UpdateIdentityOidcIntrospect");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10770,7 +10770,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityOidcIntrospect", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcIntrospect", response);
                 if (exception != null) throw exception;
             }
 
@@ -10785,11 +10785,11 @@ namespace Vault.Api
         /// <param name="identityOidcIntrospectRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityOidcIntrospectAsync(IdentityOidcIntrospectRequest identityOidcIntrospectRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityOidcIntrospectAsync(IdentityOidcIntrospectRequest identityOidcIntrospectRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'identityOidcIntrospectRequest' is set
             if (identityOidcIntrospectRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityOidcIntrospectRequest' when calling Identity->PostIdentityOidcIntrospect");
+                throw new VaultApiException(400, "Missing required parameter 'identityOidcIntrospectRequest' when calling Identity->UpdateIdentityOidcIntrospect");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10815,7 +10815,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityOidcIntrospect", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcIntrospect", response);
                 if (exception != null) throw exception;
             }
 
@@ -10830,15 +10830,15 @@ namespace Vault.Api
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityOidcKeyName(string name, IdentityOidcKeyRequest identityOidcKeyRequest)
+        public VaultResponse<Object> UpdateIdentityOidcKeyName(string name, IdentityOidcKeyRequest identityOidcKeyRequest)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcKeyName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityOidcKeyName");
 
             // verify the required parameter 'identityOidcKeyRequest' is set
             if (identityOidcKeyRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityOidcKeyRequest' when calling Identity->PostIdentityOidcKeyName");
+                throw new VaultApiException(400, "Missing required parameter 'identityOidcKeyRequest' when calling Identity->UpdateIdentityOidcKeyName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10864,7 +10864,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityOidcKeyName", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcKeyName", response);
                 if (exception != null) throw exception;
             }
 
@@ -10880,15 +10880,15 @@ namespace Vault.Api
         /// <param name="identityOidcKeyRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityOidcKeyNameAsync(string name, IdentityOidcKeyRequest identityOidcKeyRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityOidcKeyNameAsync(string name, IdentityOidcKeyRequest identityOidcKeyRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcKeyName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityOidcKeyName");
 
             // verify the required parameter 'identityOidcKeyRequest' is set
             if (identityOidcKeyRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityOidcKeyRequest' when calling Identity->PostIdentityOidcKeyName");
+                throw new VaultApiException(400, "Missing required parameter 'identityOidcKeyRequest' when calling Identity->UpdateIdentityOidcKeyName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10915,7 +10915,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityOidcKeyName", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcKeyName", response);
                 if (exception != null) throw exception;
             }
 
@@ -10930,15 +10930,15 @@ namespace Vault.Api
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRotateRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityOidcKeyNameRotate(string name, IdentityOidcKeyRotateRequest identityOidcKeyRotateRequest)
+        public VaultResponse<Object> UpdateIdentityOidcKeyNameRotate(string name, IdentityOidcKeyRotateRequest identityOidcKeyRotateRequest)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcKeyNameRotate");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityOidcKeyNameRotate");
 
             // verify the required parameter 'identityOidcKeyRotateRequest' is set
             if (identityOidcKeyRotateRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityOidcKeyRotateRequest' when calling Identity->PostIdentityOidcKeyNameRotate");
+                throw new VaultApiException(400, "Missing required parameter 'identityOidcKeyRotateRequest' when calling Identity->UpdateIdentityOidcKeyNameRotate");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10964,7 +10964,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityOidcKeyNameRotate", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcKeyNameRotate", response);
                 if (exception != null) throw exception;
             }
 
@@ -10980,15 +10980,15 @@ namespace Vault.Api
         /// <param name="identityOidcKeyRotateRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityOidcKeyNameRotateAsync(string name, IdentityOidcKeyRotateRequest identityOidcKeyRotateRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityOidcKeyNameRotateAsync(string name, IdentityOidcKeyRotateRequest identityOidcKeyRotateRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcKeyNameRotate");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityOidcKeyNameRotate");
 
             // verify the required parameter 'identityOidcKeyRotateRequest' is set
             if (identityOidcKeyRotateRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityOidcKeyRotateRequest' when calling Identity->PostIdentityOidcKeyNameRotate");
+                throw new VaultApiException(400, "Missing required parameter 'identityOidcKeyRotateRequest' when calling Identity->UpdateIdentityOidcKeyNameRotate");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11015,7 +11015,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityOidcKeyNameRotate", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcKeyNameRotate", response);
                 if (exception != null) throw exception;
             }
 
@@ -11030,15 +11030,15 @@ namespace Vault.Api
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityOidcProviderName(string name, IdentityOidcProviderRequest identityOidcProviderRequest)
+        public VaultResponse<Object> UpdateIdentityOidcProviderName(string name, IdentityOidcProviderRequest identityOidcProviderRequest)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityOidcProviderName");
 
             // verify the required parameter 'identityOidcProviderRequest' is set
             if (identityOidcProviderRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityOidcProviderRequest' when calling Identity->PostIdentityOidcProviderName");
+                throw new VaultApiException(400, "Missing required parameter 'identityOidcProviderRequest' when calling Identity->UpdateIdentityOidcProviderName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11064,7 +11064,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityOidcProviderName", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcProviderName", response);
                 if (exception != null) throw exception;
             }
 
@@ -11080,15 +11080,15 @@ namespace Vault.Api
         /// <param name="identityOidcProviderRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityOidcProviderNameAsync(string name, IdentityOidcProviderRequest identityOidcProviderRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityOidcProviderNameAsync(string name, IdentityOidcProviderRequest identityOidcProviderRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityOidcProviderName");
 
             // verify the required parameter 'identityOidcProviderRequest' is set
             if (identityOidcProviderRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityOidcProviderRequest' when calling Identity->PostIdentityOidcProviderName");
+                throw new VaultApiException(400, "Missing required parameter 'identityOidcProviderRequest' when calling Identity->UpdateIdentityOidcProviderName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11115,7 +11115,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityOidcProviderName", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcProviderName", response);
                 if (exception != null) throw exception;
             }
 
@@ -11130,15 +11130,15 @@ namespace Vault.Api
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderAuthorizeRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityOidcProviderNameAuthorize(string name, IdentityOidcProviderAuthorizeRequest identityOidcProviderAuthorizeRequest)
+        public VaultResponse<Object> UpdateIdentityOidcProviderNameAuthorize(string name, IdentityOidcProviderAuthorizeRequest identityOidcProviderAuthorizeRequest)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameAuthorize");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityOidcProviderNameAuthorize");
 
             // verify the required parameter 'identityOidcProviderAuthorizeRequest' is set
             if (identityOidcProviderAuthorizeRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityOidcProviderAuthorizeRequest' when calling Identity->PostIdentityOidcProviderNameAuthorize");
+                throw new VaultApiException(400, "Missing required parameter 'identityOidcProviderAuthorizeRequest' when calling Identity->UpdateIdentityOidcProviderNameAuthorize");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11164,7 +11164,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityOidcProviderNameAuthorize", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcProviderNameAuthorize", response);
                 if (exception != null) throw exception;
             }
 
@@ -11180,15 +11180,15 @@ namespace Vault.Api
         /// <param name="identityOidcProviderAuthorizeRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityOidcProviderNameAuthorizeAsync(string name, IdentityOidcProviderAuthorizeRequest identityOidcProviderAuthorizeRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityOidcProviderNameAuthorizeAsync(string name, IdentityOidcProviderAuthorizeRequest identityOidcProviderAuthorizeRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameAuthorize");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityOidcProviderNameAuthorize");
 
             // verify the required parameter 'identityOidcProviderAuthorizeRequest' is set
             if (identityOidcProviderAuthorizeRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityOidcProviderAuthorizeRequest' when calling Identity->PostIdentityOidcProviderNameAuthorize");
+                throw new VaultApiException(400, "Missing required parameter 'identityOidcProviderAuthorizeRequest' when calling Identity->UpdateIdentityOidcProviderNameAuthorize");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11215,7 +11215,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityOidcProviderNameAuthorize", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcProviderNameAuthorize", response);
                 if (exception != null) throw exception;
             }
 
@@ -11230,15 +11230,15 @@ namespace Vault.Api
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderTokenRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityOidcProviderNameToken(string name, IdentityOidcProviderTokenRequest identityOidcProviderTokenRequest)
+        public VaultResponse<Object> UpdateIdentityOidcProviderNameToken(string name, IdentityOidcProviderTokenRequest identityOidcProviderTokenRequest)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameToken");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityOidcProviderNameToken");
 
             // verify the required parameter 'identityOidcProviderTokenRequest' is set
             if (identityOidcProviderTokenRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityOidcProviderTokenRequest' when calling Identity->PostIdentityOidcProviderNameToken");
+                throw new VaultApiException(400, "Missing required parameter 'identityOidcProviderTokenRequest' when calling Identity->UpdateIdentityOidcProviderNameToken");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11264,7 +11264,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityOidcProviderNameToken", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcProviderNameToken", response);
                 if (exception != null) throw exception;
             }
 
@@ -11280,15 +11280,15 @@ namespace Vault.Api
         /// <param name="identityOidcProviderTokenRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityOidcProviderNameTokenAsync(string name, IdentityOidcProviderTokenRequest identityOidcProviderTokenRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityOidcProviderNameTokenAsync(string name, IdentityOidcProviderTokenRequest identityOidcProviderTokenRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameToken");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityOidcProviderNameToken");
 
             // verify the required parameter 'identityOidcProviderTokenRequest' is set
             if (identityOidcProviderTokenRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityOidcProviderTokenRequest' when calling Identity->PostIdentityOidcProviderNameToken");
+                throw new VaultApiException(400, "Missing required parameter 'identityOidcProviderTokenRequest' when calling Identity->UpdateIdentityOidcProviderNameToken");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11315,7 +11315,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityOidcProviderNameToken", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcProviderNameToken", response);
                 if (exception != null) throw exception;
             }
 
@@ -11329,11 +11329,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityOidcProviderNameUserinfo(string name)
+        public VaultResponse<Object> UpdateIdentityOidcProviderNameUserinfo(string name)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameUserinfo");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityOidcProviderNameUserinfo");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11357,7 +11357,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityOidcProviderNameUserinfo", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcProviderNameUserinfo", response);
                 if (exception != null) throw exception;
             }
 
@@ -11372,11 +11372,11 @@ namespace Vault.Api
         /// <param name="name">Name of the provider</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityOidcProviderNameUserinfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityOidcProviderNameUserinfoAsync(string name, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcProviderNameUserinfo");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityOidcProviderNameUserinfo");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11401,7 +11401,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityOidcProviderNameUserinfo", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcProviderNameUserinfo", response);
                 if (exception != null) throw exception;
             }
 
@@ -11416,15 +11416,15 @@ namespace Vault.Api
         /// <param name="name">Name of the role</param>
         /// <param name="identityOidcRoleRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityOidcRoleName(string name, IdentityOidcRoleRequest identityOidcRoleRequest)
+        public VaultResponse<Object> UpdateIdentityOidcRoleName(string name, IdentityOidcRoleRequest identityOidcRoleRequest)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityOidcRoleName");
 
             // verify the required parameter 'identityOidcRoleRequest' is set
             if (identityOidcRoleRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityOidcRoleRequest' when calling Identity->PostIdentityOidcRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'identityOidcRoleRequest' when calling Identity->UpdateIdentityOidcRoleName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11450,7 +11450,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityOidcRoleName", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcRoleName", response);
                 if (exception != null) throw exception;
             }
 
@@ -11466,15 +11466,15 @@ namespace Vault.Api
         /// <param name="identityOidcRoleRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityOidcRoleNameAsync(string name, IdentityOidcRoleRequest identityOidcRoleRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityOidcRoleNameAsync(string name, IdentityOidcRoleRequest identityOidcRoleRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityOidcRoleName");
 
             // verify the required parameter 'identityOidcRoleRequest' is set
             if (identityOidcRoleRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityOidcRoleRequest' when calling Identity->PostIdentityOidcRoleName");
+                throw new VaultApiException(400, "Missing required parameter 'identityOidcRoleRequest' when calling Identity->UpdateIdentityOidcRoleName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11501,7 +11501,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityOidcRoleName", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcRoleName", response);
                 if (exception != null) throw exception;
             }
 
@@ -11516,15 +11516,15 @@ namespace Vault.Api
         /// <param name="name">Name of the scope</param>
         /// <param name="identityOidcScopeRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityOidcScopeName(string name, IdentityOidcScopeRequest identityOidcScopeRequest)
+        public VaultResponse<Object> UpdateIdentityOidcScopeName(string name, IdentityOidcScopeRequest identityOidcScopeRequest)
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcScopeName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityOidcScopeName");
 
             // verify the required parameter 'identityOidcScopeRequest' is set
             if (identityOidcScopeRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityOidcScopeRequest' when calling Identity->PostIdentityOidcScopeName");
+                throw new VaultApiException(400, "Missing required parameter 'identityOidcScopeRequest' when calling Identity->UpdateIdentityOidcScopeName");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11550,7 +11550,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityOidcScopeName", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcScopeName", response);
                 if (exception != null) throw exception;
             }
 
@@ -11566,15 +11566,15 @@ namespace Vault.Api
         /// <param name="identityOidcScopeRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityOidcScopeNameAsync(string name, IdentityOidcScopeRequest identityOidcScopeRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityOidcScopeNameAsync(string name, IdentityOidcScopeRequest identityOidcScopeRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
-                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->PostIdentityOidcScopeName");
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling Identity->UpdateIdentityOidcScopeName");
 
             // verify the required parameter 'identityOidcScopeRequest' is set
             if (identityOidcScopeRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityOidcScopeRequest' when calling Identity->PostIdentityOidcScopeName");
+                throw new VaultApiException(400, "Missing required parameter 'identityOidcScopeRequest' when calling Identity->UpdateIdentityOidcScopeName");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11601,7 +11601,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityOidcScopeName", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityOidcScopeName", response);
                 if (exception != null) throw exception;
             }
 
@@ -11615,11 +11615,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityPersonaRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityPersona(IdentityPersonaRequest identityPersonaRequest)
+        public VaultResponse<Object> UpdateIdentityPersona(IdentityPersonaRequest identityPersonaRequest)
         {
             // verify the required parameter 'identityPersonaRequest' is set
             if (identityPersonaRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityPersonaRequest' when calling Identity->PostIdentityPersona");
+                throw new VaultApiException(400, "Missing required parameter 'identityPersonaRequest' when calling Identity->UpdateIdentityPersona");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11644,7 +11644,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityPersona", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityPersona", response);
                 if (exception != null) throw exception;
             }
 
@@ -11659,11 +11659,11 @@ namespace Vault.Api
         /// <param name="identityPersonaRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityPersonaAsync(IdentityPersonaRequest identityPersonaRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityPersonaAsync(IdentityPersonaRequest identityPersonaRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'identityPersonaRequest' is set
             if (identityPersonaRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityPersonaRequest' when calling Identity->PostIdentityPersona");
+                throw new VaultApiException(400, "Missing required parameter 'identityPersonaRequest' when calling Identity->UpdateIdentityPersona");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11689,7 +11689,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityPersona", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityPersona", response);
                 if (exception != null) throw exception;
             }
 
@@ -11704,15 +11704,15 @@ namespace Vault.Api
         /// <param name="id">ID of the persona</param>
         /// <param name="identityPersonaIdRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostIdentityPersonaIdId(string id, IdentityPersonaIdRequest identityPersonaIdRequest)
+        public VaultResponse<Object> UpdateIdentityPersonaIdId(string id, IdentityPersonaIdRequest identityPersonaIdRequest)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityPersonaIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->UpdateIdentityPersonaIdId");
 
             // verify the required parameter 'identityPersonaIdRequest' is set
             if (identityPersonaIdRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityPersonaIdRequest' when calling Identity->PostIdentityPersonaIdId");
+                throw new VaultApiException(400, "Missing required parameter 'identityPersonaIdRequest' when calling Identity->UpdateIdentityPersonaIdId");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11738,7 +11738,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityPersonaIdId", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityPersonaIdId", response);
                 if (exception != null) throw exception;
             }
 
@@ -11754,15 +11754,15 @@ namespace Vault.Api
         /// <param name="identityPersonaIdRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostIdentityPersonaIdIdAsync(string id, IdentityPersonaIdRequest identityPersonaIdRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UpdateIdentityPersonaIdIdAsync(string id, IdentityPersonaIdRequest identityPersonaIdRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->PostIdentityPersonaIdId");
+                throw new VaultApiException(400, "Missing required parameter 'id' when calling Identity->UpdateIdentityPersonaIdId");
 
             // verify the required parameter 'identityPersonaIdRequest' is set
             if (identityPersonaIdRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'identityPersonaIdRequest' when calling Identity->PostIdentityPersonaIdId");
+                throw new VaultApiException(400, "Missing required parameter 'identityPersonaIdRequest' when calling Identity->UpdateIdentityPersonaIdId");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -11789,7 +11789,7 @@ namespace Vault.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception exception = this.ExceptionFactory("PostIdentityPersonaIdId", response);
+                Exception exception = this.ExceptionFactory("UpdateIdentityPersonaIdId", response);
                 if (exception != null) throw exception;
             }
 
