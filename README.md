@@ -80,8 +80,8 @@ namespace Example
             {
                 VaultResponse<Object> resp = vaultClient.System.GetSysMounts();
 
-                // Write out response content
-                Console.Writeline(resp.Content);
+                // Write out response data
+                Console.Writeline(resp.Data);
             }
             catch (VaultApiException e)
             {
@@ -158,7 +158,7 @@ To call secrets endpoints, simply use the `VaultClient.Secrets` object, as shown
 // Read a secret
 VaultResponse<Object> resp = await vaultClient.Secrets.GetKvPathAsync("path");
 
-Console.Writeline(resp.Content);
+Console.Writeline(resp.Data);
 ```
 
 _**Note**_: we are using the generated endpoints for reading and writing `kv v2` secrets.
