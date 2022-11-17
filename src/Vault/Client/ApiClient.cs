@@ -310,7 +310,7 @@ namespace Vault.Client
                 _requestHeaders.MFACredentials.Clear();
             }
         }
-        
+
         /// Prepares multipart/form-data content
         HttpContent PrepareMultipartFormDataContent(RequestOptions options)
         {
