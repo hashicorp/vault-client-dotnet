@@ -17,6 +17,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Text.RegularExpressions;
+using Newtonsoft.Json;
 
 namespace Vault.Client
 {
@@ -194,6 +195,19 @@ namespace Vault.Client
         public static string Base64Encode(string text)
         {
             return Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(text));
+        }
+
+        /// <summary>
+        /// Convert raw content to Vault Response
+        /// </summary>
+        public static VaultResponse<T> ToVaultResponse<T>(string rawContent)
+        {
+            if (!string.IsNullOrWhiteSpace(rawContent))
+            {
+                return JsonConvert.DeserializeObject<VaultResponse<T>>(rawContent);
+            }
+
+            return default(VaultResponse<T>);
         }
 
         /// <summary>
