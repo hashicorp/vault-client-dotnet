@@ -263,969 +263,969 @@ namespace Vault.Test.Api
         }
 
         /// <summary>
-        /// Test ListIdentityAliasId
+        /// Test GetIdentityAliasId
         /// </summary>
         [Fact]
-        public void ListIdentityAliasIdTest()
+        public void GetIdentityAliasIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
-            //instance.ListIdentityAliasId(list);
+            //instance.GetIdentityAliasId(list);
         }
 
         /// <summary>
-        /// Test ListIdentityEntityAliasId
+        /// Test GetIdentityAliasIdId
         /// </summary>
         [Fact]
-        public void ListIdentityEntityAliasIdTest()
+        public void GetIdentityAliasIdIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string id = null;
+            //instance.GetIdentityAliasIdId(id);
+        }
+
+        /// <summary>
+        /// Test GetIdentityEntityAliasId
+        /// </summary>
+        [Fact]
+        public void GetIdentityEntityAliasIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
-            //instance.ListIdentityEntityAliasId(list);
+            //instance.GetIdentityEntityAliasId(list);
         }
 
         /// <summary>
-        /// Test ListIdentityEntityId
+        /// Test GetIdentityEntityAliasIdId
         /// </summary>
         [Fact]
-        public void ListIdentityEntityIdTest()
+        public void GetIdentityEntityAliasIdIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string id = null;
+            //instance.GetIdentityEntityAliasIdId(id);
+        }
+
+        /// <summary>
+        /// Test GetIdentityEntityId
+        /// </summary>
+        [Fact]
+        public void GetIdentityEntityIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
-            //instance.ListIdentityEntityId(list);
+            //instance.GetIdentityEntityId(list);
         }
 
         /// <summary>
-        /// Test ListIdentityEntityName
+        /// Test GetIdentityEntityIdId
         /// </summary>
         [Fact]
-        public void ListIdentityEntityNameTest()
+        public void GetIdentityEntityIdIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string id = null;
+            //instance.GetIdentityEntityIdId(id);
+        }
+
+        /// <summary>
+        /// Test GetIdentityEntityName
+        /// </summary>
+        [Fact]
+        public void GetIdentityEntityNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
-            //instance.ListIdentityEntityName(list);
+            //instance.GetIdentityEntityName(list);
         }
 
         /// <summary>
-        /// Test ListIdentityGroupAliasId
+        /// Test GetIdentityEntityNameName
         /// </summary>
         [Fact]
-        public void ListIdentityGroupAliasIdTest()
+        public void GetIdentityEntityNameNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //instance.GetIdentityEntityNameName(name);
+        }
+
+        /// <summary>
+        /// Test GetIdentityGroupAliasId
+        /// </summary>
+        [Fact]
+        public void GetIdentityGroupAliasIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
-            //instance.ListIdentityGroupAliasId(list);
+            //instance.GetIdentityGroupAliasId(list);
         }
 
         /// <summary>
-        /// Test ListIdentityGroupId
+        /// Test GetIdentityGroupAliasIdId
         /// </summary>
         [Fact]
-        public void ListIdentityGroupIdTest()
+        public void GetIdentityGroupAliasIdIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string id = null;
+            //instance.GetIdentityGroupAliasIdId(id);
+        }
+
+        /// <summary>
+        /// Test GetIdentityGroupId
+        /// </summary>
+        [Fact]
+        public void GetIdentityGroupIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
-            //instance.ListIdentityGroupId(list);
+            //instance.GetIdentityGroupId(list);
         }
 
         /// <summary>
-        /// Test ListIdentityGroupName
+        /// Test GetIdentityGroupIdId
         /// </summary>
         [Fact]
-        public void ListIdentityGroupNameTest()
+        public void GetIdentityGroupIdIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string id = null;
+            //instance.GetIdentityGroupIdId(id);
+        }
+
+        /// <summary>
+        /// Test GetIdentityGroupName
+        /// </summary>
+        [Fact]
+        public void GetIdentityGroupNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
-            //instance.ListIdentityGroupName(list);
+            //instance.GetIdentityGroupName(list);
         }
 
         /// <summary>
-        /// Test ListIdentityMfaLoginEnforcement
+        /// Test GetIdentityGroupNameName
         /// </summary>
         [Fact]
-        public void ListIdentityMfaLoginEnforcementTest()
+        public void GetIdentityGroupNameNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //instance.GetIdentityGroupNameName(name);
+        }
+
+        /// <summary>
+        /// Test GetIdentityMfaLoginEnforcement
+        /// </summary>
+        [Fact]
+        public void GetIdentityMfaLoginEnforcementTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
-            //instance.ListIdentityMfaLoginEnforcement(list);
+            //instance.GetIdentityMfaLoginEnforcement(list);
         }
 
         /// <summary>
-        /// Test ListIdentityMfaMethod
+        /// Test GetIdentityMfaLoginEnforcementName
         /// </summary>
         [Fact]
-        public void ListIdentityMfaMethodTest()
+        public void GetIdentityMfaLoginEnforcementNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //instance.GetIdentityMfaLoginEnforcementName(name);
+        }
+
+        /// <summary>
+        /// Test GetIdentityMfaMethod
+        /// </summary>
+        [Fact]
+        public void GetIdentityMfaMethodTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
-            //instance.ListIdentityMfaMethod(list);
+            //instance.GetIdentityMfaMethod(list);
         }
 
         /// <summary>
-        /// Test ListIdentityMfaMethodDuo
+        /// Test GetIdentityMfaMethodDuo
         /// </summary>
         [Fact]
-        public void ListIdentityMfaMethodDuoTest()
+        public void GetIdentityMfaMethodDuoTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
-            //instance.ListIdentityMfaMethodDuo(list);
+            //instance.GetIdentityMfaMethodDuo(list);
         }
 
         /// <summary>
-        /// Test ListIdentityMfaMethodOkta
+        /// Test GetIdentityMfaMethodDuoMethodId
         /// </summary>
         [Fact]
-        public void ListIdentityMfaMethodOktaTest()
+        public void GetIdentityMfaMethodDuoMethodIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string methodId = null;
+            //instance.GetIdentityMfaMethodDuoMethodId(methodId);
+        }
+
+        /// <summary>
+        /// Test GetIdentityMfaMethodMethodId
+        /// </summary>
+        [Fact]
+        public void GetIdentityMfaMethodMethodIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string methodId = null;
+            //instance.GetIdentityMfaMethodMethodId(methodId);
+        }
+
+        /// <summary>
+        /// Test GetIdentityMfaMethodOkta
+        /// </summary>
+        [Fact]
+        public void GetIdentityMfaMethodOktaTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
-            //instance.ListIdentityMfaMethodOkta(list);
+            //instance.GetIdentityMfaMethodOkta(list);
         }
 
         /// <summary>
-        /// Test ListIdentityMfaMethodPingid
+        /// Test GetIdentityMfaMethodOktaMethodId
         /// </summary>
         [Fact]
-        public void ListIdentityMfaMethodPingidTest()
+        public void GetIdentityMfaMethodOktaMethodIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string methodId = null;
+            //instance.GetIdentityMfaMethodOktaMethodId(methodId);
+        }
+
+        /// <summary>
+        /// Test GetIdentityMfaMethodPingid
+        /// </summary>
+        [Fact]
+        public void GetIdentityMfaMethodPingidTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
-            //instance.ListIdentityMfaMethodPingid(list);
+            //instance.GetIdentityMfaMethodPingid(list);
         }
 
         /// <summary>
-        /// Test ListIdentityMfaMethodTotp
+        /// Test GetIdentityMfaMethodPingidMethodId
         /// </summary>
         [Fact]
-        public void ListIdentityMfaMethodTotpTest()
+        public void GetIdentityMfaMethodPingidMethodIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string methodId = null;
+            //instance.GetIdentityMfaMethodPingidMethodId(methodId);
+        }
+
+        /// <summary>
+        /// Test GetIdentityMfaMethodTotp
+        /// </summary>
+        [Fact]
+        public void GetIdentityMfaMethodTotpTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
-            //instance.ListIdentityMfaMethodTotp(list);
+            //instance.GetIdentityMfaMethodTotp(list);
         }
 
         /// <summary>
-        /// Test ListIdentityOidcAssignment
+        /// Test GetIdentityMfaMethodTotpMethodId
         /// </summary>
         [Fact]
-        public void ListIdentityOidcAssignmentTest()
+        public void GetIdentityMfaMethodTotpMethodIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string methodId = null;
+            //instance.GetIdentityMfaMethodTotpMethodId(methodId);
+        }
+
+        /// <summary>
+        /// Test GetIdentityOidcAssignment
+        /// </summary>
+        [Fact]
+        public void GetIdentityOidcAssignmentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
-            //instance.ListIdentityOidcAssignment(list);
+            //instance.GetIdentityOidcAssignment(list);
         }
 
         /// <summary>
-        /// Test ListIdentityOidcClient
+        /// Test GetIdentityOidcAssignmentName
         /// </summary>
         [Fact]
-        public void ListIdentityOidcClientTest()
+        public void GetIdentityOidcAssignmentNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //instance.GetIdentityOidcAssignmentName(name);
+        }
+
+        /// <summary>
+        /// Test GetIdentityOidcClient
+        /// </summary>
+        [Fact]
+        public void GetIdentityOidcClientTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
-            //instance.ListIdentityOidcClient(list);
+            //instance.GetIdentityOidcClient(list);
         }
 
         /// <summary>
-        /// Test ListIdentityOidcKey
+        /// Test GetIdentityOidcClientName
         /// </summary>
         [Fact]
-        public void ListIdentityOidcKeyTest()
+        public void GetIdentityOidcClientNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //instance.GetIdentityOidcClientName(name);
+        }
+
+        /// <summary>
+        /// Test GetIdentityOidcConfig
+        /// </summary>
+        [Fact]
+        public void GetIdentityOidcConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetIdentityOidcConfig();
+        }
+
+        /// <summary>
+        /// Test GetIdentityOidcKey
+        /// </summary>
+        [Fact]
+        public void GetIdentityOidcKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
-            //instance.ListIdentityOidcKey(list);
+            //instance.GetIdentityOidcKey(list);
         }
 
         /// <summary>
-        /// Test ListIdentityOidcProvider
+        /// Test GetIdentityOidcKeyName
         /// </summary>
         [Fact]
-        public void ListIdentityOidcProviderTest()
+        public void GetIdentityOidcKeyNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //instance.GetIdentityOidcKeyName(name);
+        }
+
+        /// <summary>
+        /// Test GetIdentityOidcProvider
+        /// </summary>
+        [Fact]
+        public void GetIdentityOidcProviderTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
             //string allowedClientId = null;
-            //instance.ListIdentityOidcProvider(list, allowedClientId);
+            //instance.GetIdentityOidcProvider(list, allowedClientId);
         }
 
         /// <summary>
-        /// Test ListIdentityOidcRole
+        /// Test GetIdentityOidcProviderName
         /// </summary>
         [Fact]
-        public void ListIdentityOidcRoleTest()
+        public void GetIdentityOidcProviderNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //instance.GetIdentityOidcProviderName(name);
+        }
+
+        /// <summary>
+        /// Test GetIdentityOidcProviderNameAuthorize
+        /// </summary>
+        [Fact]
+        public void GetIdentityOidcProviderNameAuthorizeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //instance.GetIdentityOidcProviderNameAuthorize(name);
+        }
+
+        /// <summary>
+        /// Test GetIdentityOidcProviderNameUserinfo
+        /// </summary>
+        [Fact]
+        public void GetIdentityOidcProviderNameUserinfoTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //instance.GetIdentityOidcProviderNameUserinfo(name);
+        }
+
+        /// <summary>
+        /// Test GetIdentityOidcProviderNameWellKnownKeys
+        /// </summary>
+        [Fact]
+        public void GetIdentityOidcProviderNameWellKnownKeysTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //instance.GetIdentityOidcProviderNameWellKnownKeys(name);
+        }
+
+        /// <summary>
+        /// Test GetIdentityOidcProviderNameWellKnownOpenidConfiguration
+        /// </summary>
+        [Fact]
+        public void GetIdentityOidcProviderNameWellKnownOpenidConfigurationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //instance.GetIdentityOidcProviderNameWellKnownOpenidConfiguration(name);
+        }
+
+        /// <summary>
+        /// Test GetIdentityOidcRole
+        /// </summary>
+        [Fact]
+        public void GetIdentityOidcRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
-            //instance.ListIdentityOidcRole(list);
+            //instance.GetIdentityOidcRole(list);
         }
 
         /// <summary>
-        /// Test ListIdentityOidcScope
+        /// Test GetIdentityOidcRoleName
         /// </summary>
         [Fact]
-        public void ListIdentityOidcScopeTest()
+        public void GetIdentityOidcRoleNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //instance.GetIdentityOidcRoleName(name);
+        }
+
+        /// <summary>
+        /// Test GetIdentityOidcScope
+        /// </summary>
+        [Fact]
+        public void GetIdentityOidcScopeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
-            //instance.ListIdentityOidcScope(list);
+            //instance.GetIdentityOidcScope(list);
         }
 
         /// <summary>
-        /// Test ListIdentityPersonaId
+        /// Test GetIdentityOidcScopeName
         /// </summary>
         [Fact]
-        public void ListIdentityPersonaIdTest()
+        public void GetIdentityOidcScopeNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //instance.GetIdentityOidcScopeName(name);
+        }
+
+        /// <summary>
+        /// Test GetIdentityOidcTokenName
+        /// </summary>
+        [Fact]
+        public void GetIdentityOidcTokenNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //instance.GetIdentityOidcTokenName(name);
+        }
+
+        /// <summary>
+        /// Test GetIdentityOidcWellKnownKeys
+        /// </summary>
+        [Fact]
+        public void GetIdentityOidcWellKnownKeysTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetIdentityOidcWellKnownKeys();
+        }
+
+        /// <summary>
+        /// Test GetIdentityOidcWellKnownOpenidConfiguration
+        /// </summary>
+        [Fact]
+        public void GetIdentityOidcWellKnownOpenidConfigurationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetIdentityOidcWellKnownOpenidConfiguration();
+        }
+
+        /// <summary>
+        /// Test GetIdentityPersonaId
+        /// </summary>
+        [Fact]
+        public void GetIdentityPersonaIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
-            //instance.ListIdentityPersonaId(list);
+            //instance.GetIdentityPersonaId(list);
         }
 
         /// <summary>
-        /// Test ReadIdentityAliasIdId
+        /// Test GetIdentityPersonaIdId
         /// </summary>
         [Fact]
-        public void ReadIdentityAliasIdIdTest()
+        public void GetIdentityPersonaIdIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
-            //instance.ReadIdentityAliasIdId(id);
+            //instance.GetIdentityPersonaIdId(id);
         }
 
         /// <summary>
-        /// Test ReadIdentityEntityAliasIdId
+        /// Test PostIdentityAlias
         /// </summary>
         [Fact]
-        public void ReadIdentityEntityAliasIdIdTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string id = null;
-            //instance.ReadIdentityEntityAliasIdId(id);
-        }
-
-        /// <summary>
-        /// Test ReadIdentityEntityIdId
-        /// </summary>
-        [Fact]
-        public void ReadIdentityEntityIdIdTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string id = null;
-            //instance.ReadIdentityEntityIdId(id);
-        }
-
-        /// <summary>
-        /// Test ReadIdentityEntityNameName
-        /// </summary>
-        [Fact]
-        public void ReadIdentityEntityNameNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //instance.ReadIdentityEntityNameName(name);
-        }
-
-        /// <summary>
-        /// Test ReadIdentityGroupAliasIdId
-        /// </summary>
-        [Fact]
-        public void ReadIdentityGroupAliasIdIdTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string id = null;
-            //instance.ReadIdentityGroupAliasIdId(id);
-        }
-
-        /// <summary>
-        /// Test ReadIdentityGroupIdId
-        /// </summary>
-        [Fact]
-        public void ReadIdentityGroupIdIdTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string id = null;
-            //instance.ReadIdentityGroupIdId(id);
-        }
-
-        /// <summary>
-        /// Test ReadIdentityGroupNameName
-        /// </summary>
-        [Fact]
-        public void ReadIdentityGroupNameNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //instance.ReadIdentityGroupNameName(name);
-        }
-
-        /// <summary>
-        /// Test ReadIdentityMfaLoginEnforcementName
-        /// </summary>
-        [Fact]
-        public void ReadIdentityMfaLoginEnforcementNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //instance.ReadIdentityMfaLoginEnforcementName(name);
-        }
-
-        /// <summary>
-        /// Test ReadIdentityMfaMethodDuoMethodId
-        /// </summary>
-        [Fact]
-        public void ReadIdentityMfaMethodDuoMethodIdTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string methodId = null;
-            //instance.ReadIdentityMfaMethodDuoMethodId(methodId);
-        }
-
-        /// <summary>
-        /// Test ReadIdentityMfaMethodMethodId
-        /// </summary>
-        [Fact]
-        public void ReadIdentityMfaMethodMethodIdTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string methodId = null;
-            //instance.ReadIdentityMfaMethodMethodId(methodId);
-        }
-
-        /// <summary>
-        /// Test ReadIdentityMfaMethodOktaMethodId
-        /// </summary>
-        [Fact]
-        public void ReadIdentityMfaMethodOktaMethodIdTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string methodId = null;
-            //instance.ReadIdentityMfaMethodOktaMethodId(methodId);
-        }
-
-        /// <summary>
-        /// Test ReadIdentityMfaMethodPingidMethodId
-        /// </summary>
-        [Fact]
-        public void ReadIdentityMfaMethodPingidMethodIdTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string methodId = null;
-            //instance.ReadIdentityMfaMethodPingidMethodId(methodId);
-        }
-
-        /// <summary>
-        /// Test ReadIdentityMfaMethodTotpMethodId
-        /// </summary>
-        [Fact]
-        public void ReadIdentityMfaMethodTotpMethodIdTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string methodId = null;
-            //instance.ReadIdentityMfaMethodTotpMethodId(methodId);
-        }
-
-        /// <summary>
-        /// Test ReadIdentityOidcAssignmentName
-        /// </summary>
-        [Fact]
-        public void ReadIdentityOidcAssignmentNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //instance.ReadIdentityOidcAssignmentName(name);
-        }
-
-        /// <summary>
-        /// Test ReadIdentityOidcClientName
-        /// </summary>
-        [Fact]
-        public void ReadIdentityOidcClientNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //instance.ReadIdentityOidcClientName(name);
-        }
-
-        /// <summary>
-        /// Test ReadIdentityOidcConfig
-        /// </summary>
-        [Fact]
-        public void ReadIdentityOidcConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadIdentityOidcConfig();
-        }
-
-        /// <summary>
-        /// Test ReadIdentityOidcKeyName
-        /// </summary>
-        [Fact]
-        public void ReadIdentityOidcKeyNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //instance.ReadIdentityOidcKeyName(name);
-        }
-
-        /// <summary>
-        /// Test ReadIdentityOidcProviderName
-        /// </summary>
-        [Fact]
-        public void ReadIdentityOidcProviderNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //instance.ReadIdentityOidcProviderName(name);
-        }
-
-        /// <summary>
-        /// Test ReadIdentityOidcProviderNameAuthorize
-        /// </summary>
-        [Fact]
-        public void ReadIdentityOidcProviderNameAuthorizeTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //instance.ReadIdentityOidcProviderNameAuthorize(name);
-        }
-
-        /// <summary>
-        /// Test ReadIdentityOidcProviderNameUserinfo
-        /// </summary>
-        [Fact]
-        public void ReadIdentityOidcProviderNameUserinfoTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //instance.ReadIdentityOidcProviderNameUserinfo(name);
-        }
-
-        /// <summary>
-        /// Test ReadIdentityOidcProviderNameWellKnownKeys
-        /// </summary>
-        [Fact]
-        public void ReadIdentityOidcProviderNameWellKnownKeysTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //instance.ReadIdentityOidcProviderNameWellKnownKeys(name);
-        }
-
-        /// <summary>
-        /// Test ReadIdentityOidcProviderNameWellKnownOpenidConfiguration
-        /// </summary>
-        [Fact]
-        public void ReadIdentityOidcProviderNameWellKnownOpenidConfigurationTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //instance.ReadIdentityOidcProviderNameWellKnownOpenidConfiguration(name);
-        }
-
-        /// <summary>
-        /// Test ReadIdentityOidcRoleName
-        /// </summary>
-        [Fact]
-        public void ReadIdentityOidcRoleNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //instance.ReadIdentityOidcRoleName(name);
-        }
-
-        /// <summary>
-        /// Test ReadIdentityOidcScopeName
-        /// </summary>
-        [Fact]
-        public void ReadIdentityOidcScopeNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //instance.ReadIdentityOidcScopeName(name);
-        }
-
-        /// <summary>
-        /// Test ReadIdentityOidcTokenName
-        /// </summary>
-        [Fact]
-        public void ReadIdentityOidcTokenNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //instance.ReadIdentityOidcTokenName(name);
-        }
-
-        /// <summary>
-        /// Test ReadIdentityOidcWellKnownKeys
-        /// </summary>
-        [Fact]
-        public void ReadIdentityOidcWellKnownKeysTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadIdentityOidcWellKnownKeys();
-        }
-
-        /// <summary>
-        /// Test ReadIdentityOidcWellKnownOpenidConfiguration
-        /// </summary>
-        [Fact]
-        public void ReadIdentityOidcWellKnownOpenidConfigurationTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadIdentityOidcWellKnownOpenidConfiguration();
-        }
-
-        /// <summary>
-        /// Test ReadIdentityPersonaIdId
-        /// </summary>
-        [Fact]
-        public void ReadIdentityPersonaIdIdTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string id = null;
-            //instance.ReadIdentityPersonaIdId(id);
-        }
-
-        /// <summary>
-        /// Test UpdateIdentityAlias
-        /// </summary>
-        [Fact]
-        public void UpdateIdentityAliasTest()
+        public void PostIdentityAliasTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //IdentityAliasRequest identityAliasRequest = null;
-            //instance.UpdateIdentityAlias(identityAliasRequest);
+            //instance.PostIdentityAlias(identityAliasRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityAliasIdId
+        /// Test PostIdentityAliasIdId
         /// </summary>
         [Fact]
-        public void UpdateIdentityAliasIdIdTest()
+        public void PostIdentityAliasIdIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
             //IdentityAliasIdRequest identityAliasIdRequest = null;
-            //instance.UpdateIdentityAliasIdId(id, identityAliasIdRequest);
+            //instance.PostIdentityAliasIdId(id, identityAliasIdRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityEntity
+        /// Test PostIdentityEntity
         /// </summary>
         [Fact]
-        public void UpdateIdentityEntityTest()
+        public void PostIdentityEntityTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //IdentityEntityRequest identityEntityRequest = null;
-            //instance.UpdateIdentityEntity(identityEntityRequest);
+            //instance.PostIdentityEntity(identityEntityRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityEntityAlias
+        /// Test PostIdentityEntityAlias
         /// </summary>
         [Fact]
-        public void UpdateIdentityEntityAliasTest()
+        public void PostIdentityEntityAliasTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //IdentityEntityAliasRequest identityEntityAliasRequest = null;
-            //instance.UpdateIdentityEntityAlias(identityEntityAliasRequest);
+            //instance.PostIdentityEntityAlias(identityEntityAliasRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityEntityAliasIdId
+        /// Test PostIdentityEntityAliasIdId
         /// </summary>
         [Fact]
-        public void UpdateIdentityEntityAliasIdIdTest()
+        public void PostIdentityEntityAliasIdIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
             //IdentityEntityAliasIdRequest identityEntityAliasIdRequest = null;
-            //instance.UpdateIdentityEntityAliasIdId(id, identityEntityAliasIdRequest);
+            //instance.PostIdentityEntityAliasIdId(id, identityEntityAliasIdRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityEntityBatchDelete
+        /// Test PostIdentityEntityBatchDelete
         /// </summary>
         [Fact]
-        public void UpdateIdentityEntityBatchDeleteTest()
+        public void PostIdentityEntityBatchDeleteTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //IdentityEntityBatchDeleteRequest identityEntityBatchDeleteRequest = null;
-            //instance.UpdateIdentityEntityBatchDelete(identityEntityBatchDeleteRequest);
+            //instance.PostIdentityEntityBatchDelete(identityEntityBatchDeleteRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityEntityIdId
+        /// Test PostIdentityEntityIdId
         /// </summary>
         [Fact]
-        public void UpdateIdentityEntityIdIdTest()
+        public void PostIdentityEntityIdIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
             //IdentityEntityIdRequest identityEntityIdRequest = null;
-            //instance.UpdateIdentityEntityIdId(id, identityEntityIdRequest);
+            //instance.PostIdentityEntityIdId(id, identityEntityIdRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityEntityMerge
+        /// Test PostIdentityEntityMerge
         /// </summary>
         [Fact]
-        public void UpdateIdentityEntityMergeTest()
+        public void PostIdentityEntityMergeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //IdentityEntityMergeRequest identityEntityMergeRequest = null;
-            //instance.UpdateIdentityEntityMerge(identityEntityMergeRequest);
+            //instance.PostIdentityEntityMerge(identityEntityMergeRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityEntityNameName
+        /// Test PostIdentityEntityNameName
         /// </summary>
         [Fact]
-        public void UpdateIdentityEntityNameNameTest()
+        public void PostIdentityEntityNameNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //IdentityEntityNameRequest identityEntityNameRequest = null;
-            //instance.UpdateIdentityEntityNameName(name, identityEntityNameRequest);
+            //instance.PostIdentityEntityNameName(name, identityEntityNameRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityGroup
+        /// Test PostIdentityGroup
         /// </summary>
         [Fact]
-        public void UpdateIdentityGroupTest()
+        public void PostIdentityGroupTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //IdentityGroupRequest identityGroupRequest = null;
-            //instance.UpdateIdentityGroup(identityGroupRequest);
+            //instance.PostIdentityGroup(identityGroupRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityGroupAlias
+        /// Test PostIdentityGroupAlias
         /// </summary>
         [Fact]
-        public void UpdateIdentityGroupAliasTest()
+        public void PostIdentityGroupAliasTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //IdentityGroupAliasRequest identityGroupAliasRequest = null;
-            //instance.UpdateIdentityGroupAlias(identityGroupAliasRequest);
+            //instance.PostIdentityGroupAlias(identityGroupAliasRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityGroupAliasIdId
+        /// Test PostIdentityGroupAliasIdId
         /// </summary>
         [Fact]
-        public void UpdateIdentityGroupAliasIdIdTest()
+        public void PostIdentityGroupAliasIdIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
             //IdentityGroupAliasIdRequest identityGroupAliasIdRequest = null;
-            //instance.UpdateIdentityGroupAliasIdId(id, identityGroupAliasIdRequest);
+            //instance.PostIdentityGroupAliasIdId(id, identityGroupAliasIdRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityGroupIdId
+        /// Test PostIdentityGroupIdId
         /// </summary>
         [Fact]
-        public void UpdateIdentityGroupIdIdTest()
+        public void PostIdentityGroupIdIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
             //IdentityGroupIdRequest identityGroupIdRequest = null;
-            //instance.UpdateIdentityGroupIdId(id, identityGroupIdRequest);
+            //instance.PostIdentityGroupIdId(id, identityGroupIdRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityGroupNameName
+        /// Test PostIdentityGroupNameName
         /// </summary>
         [Fact]
-        public void UpdateIdentityGroupNameNameTest()
+        public void PostIdentityGroupNameNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //IdentityGroupNameRequest identityGroupNameRequest = null;
-            //instance.UpdateIdentityGroupNameName(name, identityGroupNameRequest);
+            //instance.PostIdentityGroupNameName(name, identityGroupNameRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityLookupEntity
+        /// Test PostIdentityLookupEntity
         /// </summary>
         [Fact]
-        public void UpdateIdentityLookupEntityTest()
+        public void PostIdentityLookupEntityTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //IdentityLookupEntityRequest identityLookupEntityRequest = null;
-            //instance.UpdateIdentityLookupEntity(identityLookupEntityRequest);
+            //instance.PostIdentityLookupEntity(identityLookupEntityRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityLookupGroup
+        /// Test PostIdentityLookupGroup
         /// </summary>
         [Fact]
-        public void UpdateIdentityLookupGroupTest()
+        public void PostIdentityLookupGroupTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //IdentityLookupGroupRequest identityLookupGroupRequest = null;
-            //instance.UpdateIdentityLookupGroup(identityLookupGroupRequest);
+            //instance.PostIdentityLookupGroup(identityLookupGroupRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityMfaLoginEnforcementName
+        /// Test PostIdentityMfaLoginEnforcementName
         /// </summary>
         [Fact]
-        public void UpdateIdentityMfaLoginEnforcementNameTest()
+        public void PostIdentityMfaLoginEnforcementNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //IdentityMfaLoginEnforcementRequest identityMfaLoginEnforcementRequest = null;
-            //instance.UpdateIdentityMfaLoginEnforcementName(name, identityMfaLoginEnforcementRequest);
+            //instance.PostIdentityMfaLoginEnforcementName(name, identityMfaLoginEnforcementRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityMfaMethodDuoMethodId
+        /// Test PostIdentityMfaMethodDuoMethodId
         /// </summary>
         [Fact]
-        public void UpdateIdentityMfaMethodDuoMethodIdTest()
+        public void PostIdentityMfaMethodDuoMethodIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string methodId = null;
             //IdentityMfaMethodDuoRequest identityMfaMethodDuoRequest = null;
-            //instance.UpdateIdentityMfaMethodDuoMethodId(methodId, identityMfaMethodDuoRequest);
+            //instance.PostIdentityMfaMethodDuoMethodId(methodId, identityMfaMethodDuoRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityMfaMethodOktaMethodId
+        /// Test PostIdentityMfaMethodOktaMethodId
         /// </summary>
         [Fact]
-        public void UpdateIdentityMfaMethodOktaMethodIdTest()
+        public void PostIdentityMfaMethodOktaMethodIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string methodId = null;
             //IdentityMfaMethodOktaRequest identityMfaMethodOktaRequest = null;
-            //instance.UpdateIdentityMfaMethodOktaMethodId(methodId, identityMfaMethodOktaRequest);
+            //instance.PostIdentityMfaMethodOktaMethodId(methodId, identityMfaMethodOktaRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityMfaMethodPingidMethodId
+        /// Test PostIdentityMfaMethodPingidMethodId
         /// </summary>
         [Fact]
-        public void UpdateIdentityMfaMethodPingidMethodIdTest()
+        public void PostIdentityMfaMethodPingidMethodIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string methodId = null;
             //IdentityMfaMethodPingidRequest identityMfaMethodPingidRequest = null;
-            //instance.UpdateIdentityMfaMethodPingidMethodId(methodId, identityMfaMethodPingidRequest);
+            //instance.PostIdentityMfaMethodPingidMethodId(methodId, identityMfaMethodPingidRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityMfaMethodTotpAdminDestroy
+        /// Test PostIdentityMfaMethodTotpAdminDestroy
         /// </summary>
         [Fact]
-        public void UpdateIdentityMfaMethodTotpAdminDestroyTest()
+        public void PostIdentityMfaMethodTotpAdminDestroyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //IdentityMfaMethodTotpAdminDestroyRequest identityMfaMethodTotpAdminDestroyRequest = null;
-            //instance.UpdateIdentityMfaMethodTotpAdminDestroy(identityMfaMethodTotpAdminDestroyRequest);
+            //instance.PostIdentityMfaMethodTotpAdminDestroy(identityMfaMethodTotpAdminDestroyRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityMfaMethodTotpAdminGenerate
+        /// Test PostIdentityMfaMethodTotpAdminGenerate
         /// </summary>
         [Fact]
-        public void UpdateIdentityMfaMethodTotpAdminGenerateTest()
+        public void PostIdentityMfaMethodTotpAdminGenerateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //IdentityMfaMethodTotpAdminGenerateRequest identityMfaMethodTotpAdminGenerateRequest = null;
-            //instance.UpdateIdentityMfaMethodTotpAdminGenerate(identityMfaMethodTotpAdminGenerateRequest);
+            //instance.PostIdentityMfaMethodTotpAdminGenerate(identityMfaMethodTotpAdminGenerateRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityMfaMethodTotpGenerate
+        /// Test PostIdentityMfaMethodTotpGenerate
         /// </summary>
         [Fact]
-        public void UpdateIdentityMfaMethodTotpGenerateTest()
+        public void PostIdentityMfaMethodTotpGenerateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //IdentityMfaMethodTotpGenerateRequest identityMfaMethodTotpGenerateRequest = null;
-            //instance.UpdateIdentityMfaMethodTotpGenerate(identityMfaMethodTotpGenerateRequest);
+            //instance.PostIdentityMfaMethodTotpGenerate(identityMfaMethodTotpGenerateRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityMfaMethodTotpMethodId
+        /// Test PostIdentityMfaMethodTotpMethodId
         /// </summary>
         [Fact]
-        public void UpdateIdentityMfaMethodTotpMethodIdTest()
+        public void PostIdentityMfaMethodTotpMethodIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string methodId = null;
             //IdentityMfaMethodTotpRequest identityMfaMethodTotpRequest = null;
-            //instance.UpdateIdentityMfaMethodTotpMethodId(methodId, identityMfaMethodTotpRequest);
+            //instance.PostIdentityMfaMethodTotpMethodId(methodId, identityMfaMethodTotpRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityOidcAssignmentName
+        /// Test PostIdentityOidcAssignmentName
         /// </summary>
         [Fact]
-        public void UpdateIdentityOidcAssignmentNameTest()
+        public void PostIdentityOidcAssignmentNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //IdentityOidcAssignmentRequest identityOidcAssignmentRequest = null;
-            //instance.UpdateIdentityOidcAssignmentName(name, identityOidcAssignmentRequest);
+            //instance.PostIdentityOidcAssignmentName(name, identityOidcAssignmentRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityOidcClientName
+        /// Test PostIdentityOidcClientName
         /// </summary>
         [Fact]
-        public void UpdateIdentityOidcClientNameTest()
+        public void PostIdentityOidcClientNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //IdentityOidcClientRequest identityOidcClientRequest = null;
-            //instance.UpdateIdentityOidcClientName(name, identityOidcClientRequest);
+            //instance.PostIdentityOidcClientName(name, identityOidcClientRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityOidcConfig
+        /// Test PostIdentityOidcConfig
         /// </summary>
         [Fact]
-        public void UpdateIdentityOidcConfigTest()
+        public void PostIdentityOidcConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //IdentityOidcConfigRequest identityOidcConfigRequest = null;
-            //instance.UpdateIdentityOidcConfig(identityOidcConfigRequest);
+            //instance.PostIdentityOidcConfig(identityOidcConfigRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityOidcIntrospect
+        /// Test PostIdentityOidcIntrospect
         /// </summary>
         [Fact]
-        public void UpdateIdentityOidcIntrospectTest()
+        public void PostIdentityOidcIntrospectTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //IdentityOidcIntrospectRequest identityOidcIntrospectRequest = null;
-            //instance.UpdateIdentityOidcIntrospect(identityOidcIntrospectRequest);
+            //instance.PostIdentityOidcIntrospect(identityOidcIntrospectRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityOidcKeyName
+        /// Test PostIdentityOidcKeyName
         /// </summary>
         [Fact]
-        public void UpdateIdentityOidcKeyNameTest()
+        public void PostIdentityOidcKeyNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //IdentityOidcKeyRequest identityOidcKeyRequest = null;
-            //instance.UpdateIdentityOidcKeyName(name, identityOidcKeyRequest);
+            //instance.PostIdentityOidcKeyName(name, identityOidcKeyRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityOidcKeyNameRotate
+        /// Test PostIdentityOidcKeyNameRotate
         /// </summary>
         [Fact]
-        public void UpdateIdentityOidcKeyNameRotateTest()
+        public void PostIdentityOidcKeyNameRotateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //IdentityOidcKeyRotateRequest identityOidcKeyRotateRequest = null;
-            //instance.UpdateIdentityOidcKeyNameRotate(name, identityOidcKeyRotateRequest);
+            //instance.PostIdentityOidcKeyNameRotate(name, identityOidcKeyRotateRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityOidcProviderName
+        /// Test PostIdentityOidcProviderName
         /// </summary>
         [Fact]
-        public void UpdateIdentityOidcProviderNameTest()
+        public void PostIdentityOidcProviderNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //IdentityOidcProviderRequest identityOidcProviderRequest = null;
-            //instance.UpdateIdentityOidcProviderName(name, identityOidcProviderRequest);
+            //instance.PostIdentityOidcProviderName(name, identityOidcProviderRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityOidcProviderNameAuthorize
+        /// Test PostIdentityOidcProviderNameAuthorize
         /// </summary>
         [Fact]
-        public void UpdateIdentityOidcProviderNameAuthorizeTest()
+        public void PostIdentityOidcProviderNameAuthorizeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //IdentityOidcProviderAuthorizeRequest identityOidcProviderAuthorizeRequest = null;
-            //instance.UpdateIdentityOidcProviderNameAuthorize(name, identityOidcProviderAuthorizeRequest);
+            //instance.PostIdentityOidcProviderNameAuthorize(name, identityOidcProviderAuthorizeRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityOidcProviderNameToken
+        /// Test PostIdentityOidcProviderNameToken
         /// </summary>
         [Fact]
-        public void UpdateIdentityOidcProviderNameTokenTest()
+        public void PostIdentityOidcProviderNameTokenTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //IdentityOidcProviderTokenRequest identityOidcProviderTokenRequest = null;
-            //instance.UpdateIdentityOidcProviderNameToken(name, identityOidcProviderTokenRequest);
+            //instance.PostIdentityOidcProviderNameToken(name, identityOidcProviderTokenRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityOidcProviderNameUserinfo
+        /// Test PostIdentityOidcProviderNameUserinfo
         /// </summary>
         [Fact]
-        public void UpdateIdentityOidcProviderNameUserinfoTest()
+        public void PostIdentityOidcProviderNameUserinfoTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //instance.UpdateIdentityOidcProviderNameUserinfo(name);
+            //instance.PostIdentityOidcProviderNameUserinfo(name);
         }
 
         /// <summary>
-        /// Test UpdateIdentityOidcRoleName
+        /// Test PostIdentityOidcRoleName
         /// </summary>
         [Fact]
-        public void UpdateIdentityOidcRoleNameTest()
+        public void PostIdentityOidcRoleNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //IdentityOidcRoleRequest identityOidcRoleRequest = null;
-            //instance.UpdateIdentityOidcRoleName(name, identityOidcRoleRequest);
+            //instance.PostIdentityOidcRoleName(name, identityOidcRoleRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityOidcScopeName
+        /// Test PostIdentityOidcScopeName
         /// </summary>
         [Fact]
-        public void UpdateIdentityOidcScopeNameTest()
+        public void PostIdentityOidcScopeNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //IdentityOidcScopeRequest identityOidcScopeRequest = null;
-            //instance.UpdateIdentityOidcScopeName(name, identityOidcScopeRequest);
+            //instance.PostIdentityOidcScopeName(name, identityOidcScopeRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityPersona
+        /// Test PostIdentityPersona
         /// </summary>
         [Fact]
-        public void UpdateIdentityPersonaTest()
+        public void PostIdentityPersonaTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //IdentityPersonaRequest identityPersonaRequest = null;
-            //instance.UpdateIdentityPersona(identityPersonaRequest);
+            //instance.PostIdentityPersona(identityPersonaRequest);
         }
 
         /// <summary>
-        /// Test UpdateIdentityPersonaIdId
+        /// Test PostIdentityPersonaIdId
         /// </summary>
         [Fact]
-        public void UpdateIdentityPersonaIdIdTest()
+        public void PostIdentityPersonaIdIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
             //IdentityPersonaIdRequest identityPersonaIdRequest = null;
-            //instance.UpdateIdentityPersonaIdId(id, identityPersonaIdRequest);
+            //instance.PostIdentityPersonaIdId(id, identityPersonaIdRequest);
         }
     }
 }

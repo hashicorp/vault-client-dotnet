@@ -64,6 +64,14 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'Default'
         }
+        /// <summary>
+        /// Test the property 'DefaultFollowsLatestIssuer'
+        /// </summary>
+        [Fact]
+        public void DefaultFollowsLatestIssuerTest()
+        {
+            // TODO unit test for the property 'DefaultFollowsLatestIssuer'
+        }
 
     }
 

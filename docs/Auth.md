@@ -4,178 +4,347 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DeleteApproleRoleRoleName**](Auth.md#deleteapprolerolerolename) | **DELETE** /auth/{mount_path}/role/{role_name} | Register an role with the backend.
-[**DeleteApproleRoleRoleNameBindSecretId**](Auth.md#deleteapprolerolerolenamebindsecretid) | **DELETE** /auth/{mount_path}/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
-[**DeleteApproleRoleRoleNameBoundCidrList**](Auth.md#deleteapprolerolerolenameboundcidrlist) | **DELETE** /auth/{mount_path}/role/{role_name}/bound-cidr-list | Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-[**DeleteApproleRoleRoleNamePeriod**](Auth.md#deleteapprolerolerolenameperiod) | **DELETE** /auth/{mount_path}/role/{role_name}/period | Updates the value of &#39;period&#39; on the role
-[**DeleteApproleRoleRoleNamePolicies**](Auth.md#deleteapprolerolerolenamepolicies) | **DELETE** /auth/{mount_path}/role/{role_name}/policies | Policies of the role.
-[**DeleteApproleRoleRoleNameSecretIdAccessorDestroy**](Auth.md#deleteapprolerolerolenamesecretidaccessordestroy) | **DELETE** /auth/{mount_path}/role/{role_name}/secret-id-accessor/destroy | 
-[**DeleteApproleRoleRoleNameSecretIdBoundCidrs**](Auth.md#deleteapprolerolerolenamesecretidboundcidrs) | **DELETE** /auth/{mount_path}/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-[**DeleteApproleRoleRoleNameSecretIdDestroy**](Auth.md#deleteapprolerolerolenamesecretiddestroy) | **DELETE** /auth/{mount_path}/role/{role_name}/secret-id/destroy | Invalidate an issued secret_id
-[**DeleteApproleRoleRoleNameSecretIdNumUses**](Auth.md#deleteapprolerolerolenamesecretidnumuses) | **DELETE** /auth/{mount_path}/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
-[**DeleteApproleRoleRoleNameSecretIdTtl**](Auth.md#deleteapprolerolerolenamesecretidttl) | **DELETE** /auth/{mount_path}/role/{role_name}/secret-id-ttl | Duration in seconds of the SecretID generated against the role.
-[**DeleteApproleRoleRoleNameTokenBoundCidrs**](Auth.md#deleteapprolerolerolenametokenboundcidrs) | **DELETE** /auth/{mount_path}/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
-[**DeleteApproleRoleRoleNameTokenMaxTtl**](Auth.md#deleteapprolerolerolenametokenmaxttl) | **DELETE** /auth/{mount_path}/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
-[**DeleteApproleRoleRoleNameTokenNumUses**](Auth.md#deleteapprolerolerolenametokennumuses) | **DELETE** /auth/{mount_path}/role/{role_name}/token-num-uses | Number of times issued tokens can be used
-[**DeleteApproleRoleRoleNameTokenTtl**](Auth.md#deleteapprolerolerolenametokenttl) | **DELETE** /auth/{mount_path}/role/{role_name}/token-ttl | Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
-[**DeleteAwsConfigCertificateCertName**](Auth.md#deleteawsconfigcertificatecertname) | **DELETE** /auth/{mount_path}/config/certificate/{cert_name} | 
-[**DeleteAwsConfigClient**](Auth.md#deleteawsconfigclient) | **DELETE** /auth/{mount_path}/config/client | 
-[**DeleteAwsConfigStsAccountId**](Auth.md#deleteawsconfigstsaccountid) | **DELETE** /auth/{mount_path}/config/sts/{account_id} | 
-[**DeleteAwsConfigTidyIdentityAccesslist**](Auth.md#deleteawsconfigtidyidentityaccesslist) | **DELETE** /auth/{mount_path}/config/tidy/identity-accesslist | 
-[**DeleteAwsConfigTidyIdentityWhitelist**](Auth.md#deleteawsconfigtidyidentitywhitelist) | **DELETE** /auth/{mount_path}/config/tidy/identity-whitelist | 
-[**DeleteAwsConfigTidyRoletagBlacklist**](Auth.md#deleteawsconfigtidyroletagblacklist) | **DELETE** /auth/{mount_path}/config/tidy/roletag-blacklist | 
-[**DeleteAwsConfigTidyRoletagDenylist**](Auth.md#deleteawsconfigtidyroletagdenylist) | **DELETE** /auth/{mount_path}/config/tidy/roletag-denylist | 
-[**DeleteAwsIdentityAccesslistInstanceId**](Auth.md#deleteawsidentityaccesslistinstanceid) | **DELETE** /auth/{mount_path}/identity-accesslist/{instance_id} | 
-[**DeleteAwsIdentityWhitelistInstanceId**](Auth.md#deleteawsidentitywhitelistinstanceid) | **DELETE** /auth/{mount_path}/identity-whitelist/{instance_id} | 
-[**DeleteAwsRoleRole**](Auth.md#deleteawsrolerole) | **DELETE** /auth/{mount_path}/role/{role} | 
-[**DeleteAwsRoletagBlacklistRoleTag**](Auth.md#deleteawsroletagblacklistroletag) | **DELETE** /auth/{mount_path}/roletag-blacklist/{role_tag} | 
-[**DeleteAwsRoletagDenylistRoleTag**](Auth.md#deleteawsroletagdenylistroletag) | **DELETE** /auth/{mount_path}/roletag-denylist/{role_tag} | 
-[**DeleteCertCertsName**](Auth.md#deletecertcertsname) | **DELETE** /auth/{mount_path}/certs/{name} | Manage trusted certificates used for authentication.
-[**DeleteCertCrlsName**](Auth.md#deletecertcrlsname) | **DELETE** /auth/{mount_path}/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
-[**DeleteCfRolesRole**](Auth.md#deletecfrolesrole) | **DELETE** /auth/{mount_path}/roles/{role} | 
-[**DeleteGithubMapTeamsKey**](Auth.md#deletegithubmapteamskey) | **DELETE** /auth/{mount_path}/map/teams/{key} | Read/write/delete a single teams mapping
-[**DeleteGithubMapUsersKey**](Auth.md#deletegithubmapuserskey) | **DELETE** /auth/{mount_path}/map/users/{key} | Read/write/delete a single users mapping
-[**DeleteKerberosGroupsName**](Auth.md#deletekerberosgroupsname) | **DELETE** /auth/{mount_path}/groups/{name} | 
-[**DeleteOidcRoleName**](Auth.md#deleteoidcrolename) | **DELETE** /auth/{mount_path}/role/{name} | Delete an existing role.
-[**DeleteRadiusUsersName**](Auth.md#deleteradiususersname) | **DELETE** /auth/{mount_path}/users/{name} | Manage users allowed to authenticate.
-[**DeleteTokenRolesRoleName**](Auth.md#deletetokenrolesrolename) | **DELETE** /auth/{mount_path}/roles/{role_name} | 
-[**DeleteUserpassUsersUsername**](Auth.md#deleteuserpassusersusername) | **DELETE** /auth/{mount_path}/users/{username} | Manage users allowed to authenticate.
-[**ListApproleRoleRoleNameSecretId**](Auth.md#listapprolerolerolenamesecretid) | **GET** /auth/{mount_path}/role/{role_name}/secret-id | Generate a SecretID against this role.
-[**ListAwsConfigCertificates**](Auth.md#listawsconfigcertificates) | **GET** /auth/{mount_path}/config/certificates | 
-[**ListAwsConfigSts**](Auth.md#listawsconfigsts) | **GET** /auth/{mount_path}/config/sts | 
-[**ListAwsIdentityAccesslist**](Auth.md#listawsidentityaccesslist) | **GET** /auth/{mount_path}/identity-accesslist | 
-[**ListAwsIdentityWhitelist**](Auth.md#listawsidentitywhitelist) | **GET** /auth/{mount_path}/identity-whitelist | 
-[**ListAwsRoletagBlacklist**](Auth.md#listawsroletagblacklist) | **GET** /auth/{mount_path}/roletag-blacklist | 
-[**ListAwsRoletagDenylist**](Auth.md#listawsroletagdenylist) | **GET** /auth/{mount_path}/roletag-denylist | 
-[**ListCertCerts**](Auth.md#listcertcerts) | **GET** /auth/{mount_path}/certs | Manage trusted certificates used for authentication.
-[**ListGcpRoles**](Auth.md#listgcproles) | **GET** /auth/{mount_path}/roles | Lists all the roles that are registered with Vault.
-[**ListKerberosGroups**](Auth.md#listkerberosgroups) | **GET** /auth/{mount_path}/groups | 
-[**ListOidcRole**](Auth.md#listoidcrole) | **GET** /auth/{mount_path}/role | Lists all the roles registered with the backend.
-[**ListTokenAccessors**](Auth.md#listtokenaccessors) | **GET** /auth/{mount_path}/accessors/ | List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires &#39;sudo&#39; capability in addition to &#39;list&#39;.
-[**ListUserpassUsers**](Auth.md#listuserpassusers) | **GET** /auth/{mount_path}/users | Manage users allowed to authenticate.
-[**ReadApproleRoleRoleName**](Auth.md#readapprolerolerolename) | **GET** /auth/{mount_path}/role/{role_name} | Register an role with the backend.
-[**ReadApproleRoleRoleNameBindSecretId**](Auth.md#readapprolerolerolenamebindsecretid) | **GET** /auth/{mount_path}/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
-[**ReadApproleRoleRoleNameBoundCidrList**](Auth.md#readapprolerolerolenameboundcidrlist) | **GET** /auth/{mount_path}/role/{role_name}/bound-cidr-list | Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-[**ReadApproleRoleRoleNameLocalSecretIds**](Auth.md#readapprolerolerolenamelocalsecretids) | **GET** /auth/{mount_path}/role/{role_name}/local-secret-ids | Enables cluster local secret IDs
-[**ReadApproleRoleRoleNamePeriod**](Auth.md#readapprolerolerolenameperiod) | **GET** /auth/{mount_path}/role/{role_name}/period | Updates the value of &#39;period&#39; on the role
-[**ReadApproleRoleRoleNamePolicies**](Auth.md#readapprolerolerolenamepolicies) | **GET** /auth/{mount_path}/role/{role_name}/policies | Policies of the role.
-[**ReadApproleRoleRoleNameRoleId**](Auth.md#readapprolerolerolenameroleid) | **GET** /auth/{mount_path}/role/{role_name}/role-id | Returns the &#39;role_id&#39; of the role.
-[**ReadApproleRoleRoleNameSecretIdBoundCidrs**](Auth.md#readapprolerolerolenamesecretidboundcidrs) | **GET** /auth/{mount_path}/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-[**ReadApproleRoleRoleNameSecretIdNumUses**](Auth.md#readapprolerolerolenamesecretidnumuses) | **GET** /auth/{mount_path}/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
-[**ReadApproleRoleRoleNameSecretIdTtl**](Auth.md#readapprolerolerolenamesecretidttl) | **GET** /auth/{mount_path}/role/{role_name}/secret-id-ttl | Duration in seconds of the SecretID generated against the role.
-[**ReadApproleRoleRoleNameTokenBoundCidrs**](Auth.md#readapprolerolerolenametokenboundcidrs) | **GET** /auth/{mount_path}/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
-[**ReadApproleRoleRoleNameTokenMaxTtl**](Auth.md#readapprolerolerolenametokenmaxttl) | **GET** /auth/{mount_path}/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
-[**ReadApproleRoleRoleNameTokenNumUses**](Auth.md#readapprolerolerolenametokennumuses) | **GET** /auth/{mount_path}/role/{role_name}/token-num-uses | Number of times issued tokens can be used
-[**ReadApproleRoleRoleNameTokenTtl**](Auth.md#readapprolerolerolenametokenttl) | **GET** /auth/{mount_path}/role/{role_name}/token-ttl | Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
-[**ReadAwsConfigCertificateCertName**](Auth.md#readawsconfigcertificatecertname) | **GET** /auth/{mount_path}/config/certificate/{cert_name} | 
-[**ReadAwsConfigClient**](Auth.md#readawsconfigclient) | **GET** /auth/{mount_path}/config/client | 
-[**ReadAwsConfigIdentity**](Auth.md#readawsconfigidentity) | **GET** /auth/{mount_path}/config/identity | 
-[**ReadAwsConfigStsAccountId**](Auth.md#readawsconfigstsaccountid) | **GET** /auth/{mount_path}/config/sts/{account_id} | 
-[**ReadAwsConfigTidyIdentityAccesslist**](Auth.md#readawsconfigtidyidentityaccesslist) | **GET** /auth/{mount_path}/config/tidy/identity-accesslist | 
-[**ReadAwsConfigTidyIdentityWhitelist**](Auth.md#readawsconfigtidyidentitywhitelist) | **GET** /auth/{mount_path}/config/tidy/identity-whitelist | 
-[**ReadAwsConfigTidyRoletagBlacklist**](Auth.md#readawsconfigtidyroletagblacklist) | **GET** /auth/{mount_path}/config/tidy/roletag-blacklist | 
-[**ReadAwsConfigTidyRoletagDenylist**](Auth.md#readawsconfigtidyroletagdenylist) | **GET** /auth/{mount_path}/config/tidy/roletag-denylist | 
-[**ReadAwsIdentityAccesslistInstanceId**](Auth.md#readawsidentityaccesslistinstanceid) | **GET** /auth/{mount_path}/identity-accesslist/{instance_id} | 
-[**ReadAwsIdentityWhitelistInstanceId**](Auth.md#readawsidentitywhitelistinstanceid) | **GET** /auth/{mount_path}/identity-whitelist/{instance_id} | 
-[**ReadAwsRoleRole**](Auth.md#readawsrolerole) | **GET** /auth/{mount_path}/role/{role} | 
-[**ReadAwsRoletagBlacklistRoleTag**](Auth.md#readawsroletagblacklistroletag) | **GET** /auth/{mount_path}/roletag-blacklist/{role_tag} | 
-[**ReadAwsRoletagDenylistRoleTag**](Auth.md#readawsroletagdenylistroletag) | **GET** /auth/{mount_path}/roletag-denylist/{role_tag} | 
-[**ReadCertCertsName**](Auth.md#readcertcertsname) | **GET** /auth/{mount_path}/certs/{name} | Manage trusted certificates used for authentication.
-[**ReadCertCrlsName**](Auth.md#readcertcrlsname) | **GET** /auth/{mount_path}/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
-[**ReadCfRolesRole**](Auth.md#readcfrolesrole) | **GET** /auth/{mount_path}/roles/{role} | 
-[**ReadGithubMapTeams**](Auth.md#readgithubmapteams) | **GET** /auth/{mount_path}/map/teams | Read mappings for teams
-[**ReadGithubMapTeamsKey**](Auth.md#readgithubmapteamskey) | **GET** /auth/{mount_path}/map/teams/{key} | Read/write/delete a single teams mapping
-[**ReadGithubMapUsers**](Auth.md#readgithubmapusers) | **GET** /auth/{mount_path}/map/users | Read mappings for users
-[**ReadGithubMapUsersKey**](Auth.md#readgithubmapuserskey) | **GET** /auth/{mount_path}/map/users/{key} | Read/write/delete a single users mapping
-[**ReadKerberosConfigLdap**](Auth.md#readkerberosconfigldap) | **GET** /auth/{mount_path}/config/ldap | 
-[**ReadKerberosGroupsName**](Auth.md#readkerberosgroupsname) | **GET** /auth/{mount_path}/groups/{name} | 
-[**ReadOidcConfig**](Auth.md#readoidcconfig) | **GET** /auth/{mount_path}/config | Read the current JWT authentication backend configuration.
-[**ReadOidcOidcCallback**](Auth.md#readoidcoidccallback) | **GET** /auth/{mount_path}/oidc/callback | Callback endpoint to complete an OIDC login.
-[**ReadOidcRoleName**](Auth.md#readoidcrolename) | **GET** /auth/{mount_path}/role/{name} | Read an existing role.
-[**ReadOktaVerifyNonce**](Auth.md#readoktaverifynonce) | **GET** /auth/{mount_path}/verify/{nonce} | 
-[**ReadRadiusUsersName**](Auth.md#readradiususersname) | **GET** /auth/{mount_path}/users/{name} | Manage users allowed to authenticate.
-[**ReadTokenLookup**](Auth.md#readtokenlookup) | **GET** /auth/{mount_path}/lookup | This endpoint will lookup a token and its properties.
-[**ReadTokenLookupSelf**](Auth.md#readtokenlookupself) | **GET** /auth/{mount_path}/lookup-self | This endpoint will lookup a token and its properties.
-[**ReadTokenRolesRoleName**](Auth.md#readtokenrolesrolename) | **GET** /auth/{mount_path}/roles/{role_name} | 
-[**ReadUserpassUsersUsername**](Auth.md#readuserpassusersusername) | **GET** /auth/{mount_path}/users/{username} | Manage users allowed to authenticate.
-[**UpdateApproleRoleRoleName**](Auth.md#updateapprolerolerolename) | **POST** /auth/{mount_path}/role/{role_name} | Register an role with the backend.
-[**UpdateApproleRoleRoleNameBindSecretId**](Auth.md#updateapprolerolerolenamebindsecretid) | **POST** /auth/{mount_path}/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
-[**UpdateApproleRoleRoleNameBoundCidrList**](Auth.md#updateapprolerolerolenameboundcidrlist) | **POST** /auth/{mount_path}/role/{role_name}/bound-cidr-list | Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-[**UpdateApproleRoleRoleNameCustomSecretId**](Auth.md#updateapprolerolerolenamecustomsecretid) | **POST** /auth/{mount_path}/role/{role_name}/custom-secret-id | Assign a SecretID of choice against the role.
-[**UpdateApproleRoleRoleNamePeriod**](Auth.md#updateapprolerolerolenameperiod) | **POST** /auth/{mount_path}/role/{role_name}/period | Updates the value of &#39;period&#39; on the role
-[**UpdateApproleRoleRoleNamePolicies**](Auth.md#updateapprolerolerolenamepolicies) | **POST** /auth/{mount_path}/role/{role_name}/policies | Policies of the role.
-[**UpdateApproleRoleRoleNameRoleId**](Auth.md#updateapprolerolerolenameroleid) | **POST** /auth/{mount_path}/role/{role_name}/role-id | Returns the &#39;role_id&#39; of the role.
-[**UpdateApproleRoleRoleNameSecretId**](Auth.md#updateapprolerolerolenamesecretid) | **POST** /auth/{mount_path}/role/{role_name}/secret-id | Generate a SecretID against this role.
-[**UpdateApproleRoleRoleNameSecretIdAccessorDestroy**](Auth.md#updateapprolerolerolenamesecretidaccessordestroy) | **POST** /auth/{mount_path}/role/{role_name}/secret-id-accessor/destroy | 
-[**UpdateApproleRoleRoleNameSecretIdAccessorLookup**](Auth.md#updateapprolerolerolenamesecretidaccessorlookup) | **POST** /auth/{mount_path}/role/{role_name}/secret-id-accessor/lookup | 
-[**UpdateApproleRoleRoleNameSecretIdBoundCidrs**](Auth.md#updateapprolerolerolenamesecretidboundcidrs) | **POST** /auth/{mount_path}/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-[**UpdateApproleRoleRoleNameSecretIdDestroy**](Auth.md#updateapprolerolerolenamesecretiddestroy) | **POST** /auth/{mount_path}/role/{role_name}/secret-id/destroy | Invalidate an issued secret_id
-[**UpdateApproleRoleRoleNameSecretIdLookup**](Auth.md#updateapprolerolerolenamesecretidlookup) | **POST** /auth/{mount_path}/role/{role_name}/secret-id/lookup | Read the properties of an issued secret_id
-[**UpdateApproleRoleRoleNameSecretIdNumUses**](Auth.md#updateapprolerolerolenamesecretidnumuses) | **POST** /auth/{mount_path}/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
-[**UpdateApproleRoleRoleNameSecretIdTtl**](Auth.md#updateapprolerolerolenamesecretidttl) | **POST** /auth/{mount_path}/role/{role_name}/secret-id-ttl | Duration in seconds of the SecretID generated against the role.
-[**UpdateApproleRoleRoleNameTokenBoundCidrs**](Auth.md#updateapprolerolerolenametokenboundcidrs) | **POST** /auth/{mount_path}/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
-[**UpdateApproleRoleRoleNameTokenMaxTtl**](Auth.md#updateapprolerolerolenametokenmaxttl) | **POST** /auth/{mount_path}/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
-[**UpdateApproleRoleRoleNameTokenNumUses**](Auth.md#updateapprolerolerolenametokennumuses) | **POST** /auth/{mount_path}/role/{role_name}/token-num-uses | Number of times issued tokens can be used
-[**UpdateApproleRoleRoleNameTokenTtl**](Auth.md#updateapprolerolerolenametokenttl) | **POST** /auth/{mount_path}/role/{role_name}/token-ttl | Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
-[**UpdateApproleTidySecretId**](Auth.md#updateapproletidysecretid) | **POST** /auth/{mount_path}/tidy/secret-id | Trigger the clean-up of expired SecretID entries.
-[**UpdateAwsConfigCertificateCertName**](Auth.md#updateawsconfigcertificatecertname) | **POST** /auth/{mount_path}/config/certificate/{cert_name} | 
-[**UpdateAwsConfigClient**](Auth.md#updateawsconfigclient) | **POST** /auth/{mount_path}/config/client | 
-[**UpdateAwsConfigIdentity**](Auth.md#updateawsconfigidentity) | **POST** /auth/{mount_path}/config/identity | 
-[**UpdateAwsConfigRotateRoot**](Auth.md#updateawsconfigrotateroot) | **POST** /auth/{mount_path}/config/rotate-root | 
-[**UpdateAwsConfigStsAccountId**](Auth.md#updateawsconfigstsaccountid) | **POST** /auth/{mount_path}/config/sts/{account_id} | 
-[**UpdateAwsConfigTidyIdentityAccesslist**](Auth.md#updateawsconfigtidyidentityaccesslist) | **POST** /auth/{mount_path}/config/tidy/identity-accesslist | 
-[**UpdateAwsConfigTidyIdentityWhitelist**](Auth.md#updateawsconfigtidyidentitywhitelist) | **POST** /auth/{mount_path}/config/tidy/identity-whitelist | 
-[**UpdateAwsConfigTidyRoletagBlacklist**](Auth.md#updateawsconfigtidyroletagblacklist) | **POST** /auth/{mount_path}/config/tidy/roletag-blacklist | 
-[**UpdateAwsConfigTidyRoletagDenylist**](Auth.md#updateawsconfigtidyroletagdenylist) | **POST** /auth/{mount_path}/config/tidy/roletag-denylist | 
-[**UpdateAwsRoleRole**](Auth.md#updateawsrolerole) | **POST** /auth/{mount_path}/role/{role} | 
-[**UpdateAwsRoleRoleTag**](Auth.md#updateawsroleroletag) | **POST** /auth/{mount_path}/role/{role}/tag | 
-[**UpdateAwsRoletagBlacklistRoleTag**](Auth.md#updateawsroletagblacklistroletag) | **POST** /auth/{mount_path}/roletag-blacklist/{role_tag} | 
-[**UpdateAwsRoletagDenylistRoleTag**](Auth.md#updateawsroletagdenylistroletag) | **POST** /auth/{mount_path}/roletag-denylist/{role_tag} | 
-[**UpdateAwsTidyIdentityAccesslist**](Auth.md#updateawstidyidentityaccesslist) | **POST** /auth/{mount_path}/tidy/identity-accesslist | 
-[**UpdateAwsTidyIdentityWhitelist**](Auth.md#updateawstidyidentitywhitelist) | **POST** /auth/{mount_path}/tidy/identity-whitelist | 
-[**UpdateAwsTidyRoletagBlacklist**](Auth.md#updateawstidyroletagblacklist) | **POST** /auth/{mount_path}/tidy/roletag-blacklist | 
-[**UpdateAwsTidyRoletagDenylist**](Auth.md#updateawstidyroletagdenylist) | **POST** /auth/{mount_path}/tidy/roletag-denylist | 
-[**UpdateCertCertsName**](Auth.md#updatecertcertsname) | **POST** /auth/{mount_path}/certs/{name} | Manage trusted certificates used for authentication.
-[**UpdateCertCrlsName**](Auth.md#updatecertcrlsname) | **POST** /auth/{mount_path}/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
-[**UpdateCfRolesRole**](Auth.md#updatecfrolesrole) | **POST** /auth/{mount_path}/roles/{role} | 
-[**UpdateGcpRoleNameLabels**](Auth.md#updategcprolenamelabels) | **POST** /auth/{mount_path}/role/{name}/labels | Add or remove labels for an existing &#39;gce&#39; role
-[**UpdateGcpRoleNameServiceAccounts**](Auth.md#updategcprolenameserviceaccounts) | **POST** /auth/{mount_path}/role/{name}/service-accounts | Add or remove service accounts for an existing &#x60;iam&#x60; role
-[**UpdateGithubMapTeamsKey**](Auth.md#updategithubmapteamskey) | **POST** /auth/{mount_path}/map/teams/{key} | Read/write/delete a single teams mapping
-[**UpdateGithubMapUsersKey**](Auth.md#updategithubmapuserskey) | **POST** /auth/{mount_path}/map/users/{key} | Read/write/delete a single users mapping
-[**UpdateKerberosConfigLdap**](Auth.md#updatekerberosconfigldap) | **POST** /auth/{mount_path}/config/ldap | 
-[**UpdateKerberosGroupsName**](Auth.md#updatekerberosgroupsname) | **POST** /auth/{mount_path}/groups/{name} | 
-[**UpdateOciLoginRole**](Auth.md#updateociloginrole) | **POST** /auth/{mount_path}/login/{role} | Authenticates to Vault using OCI credentials
-[**UpdateOidcConfig**](Auth.md#updateoidcconfig) | **POST** /auth/{mount_path}/config | Configure the JWT authentication backend.
-[**UpdateOidcLogin**](Auth.md#updateoidclogin) | **POST** /auth/{mount_path}/login | Authenticates to Vault using a JWT (or OIDC) token.
-[**UpdateOidcOidcAuthUrl**](Auth.md#updateoidcoidcauthurl) | **POST** /auth/{mount_path}/oidc/auth_url | Request an authorization URL to start an OIDC login flow.
-[**UpdateOidcOidcCallback**](Auth.md#updateoidcoidccallback) | **POST** /auth/{mount_path}/oidc/callback | Callback endpoint to handle form_posts.
-[**UpdateOidcRoleName**](Auth.md#updateoidcrolename) | **POST** /auth/{mount_path}/role/{name} | Register an role with the backend.
-[**UpdateRadiusLoginUrlusername**](Auth.md#updateradiusloginurlusername) | **POST** /auth/{mount_path}/login/{urlusername} | Log in with a username and password.
-[**UpdateRadiusUsersName**](Auth.md#updateradiususersname) | **POST** /auth/{mount_path}/users/{name} | Manage users allowed to authenticate.
-[**UpdateTokenCreate**](Auth.md#updatetokencreate) | **POST** /auth/{mount_path}/create | The token create path is used to create new tokens.
-[**UpdateTokenCreateOrphan**](Auth.md#updatetokencreateorphan) | **POST** /auth/{mount_path}/create-orphan | The token create path is used to create new orphan tokens.
-[**UpdateTokenCreateRoleName**](Auth.md#updatetokencreaterolename) | **POST** /auth/{mount_path}/create/{role_name} | This token create path is used to create new tokens adhering to the given role.
-[**UpdateTokenLookup**](Auth.md#updatetokenlookup) | **POST** /auth/{mount_path}/lookup | This endpoint will lookup a token and its properties.
-[**UpdateTokenLookupAccessor**](Auth.md#updatetokenlookupaccessor) | **POST** /auth/{mount_path}/lookup-accessor | This endpoint will lookup a token associated with the given accessor and its properties. Response will not contain the token ID.
-[**UpdateTokenLookupSelf**](Auth.md#updatetokenlookupself) | **POST** /auth/{mount_path}/lookup-self | This endpoint will lookup a token and its properties.
-[**UpdateTokenRenew**](Auth.md#updatetokenrenew) | **POST** /auth/{mount_path}/renew | This endpoint will renew the given token and prevent expiration.
-[**UpdateTokenRenewAccessor**](Auth.md#updatetokenrenewaccessor) | **POST** /auth/{mount_path}/renew-accessor | This endpoint will renew a token associated with the given accessor and its properties. Response will not contain the token ID.
-[**UpdateTokenRenewSelf**](Auth.md#updatetokenrenewself) | **POST** /auth/{mount_path}/renew-self | This endpoint will renew the token used to call it and prevent expiration.
-[**UpdateTokenRevoke**](Auth.md#updatetokenrevoke) | **POST** /auth/{mount_path}/revoke | This endpoint will delete the given token and all of its child tokens.
-[**UpdateTokenRevokeAccessor**](Auth.md#updatetokenrevokeaccessor) | **POST** /auth/{mount_path}/revoke-accessor | This endpoint will delete the token associated with the accessor and all of its child tokens.
-[**UpdateTokenRevokeOrphan**](Auth.md#updatetokenrevokeorphan) | **POST** /auth/{mount_path}/revoke-orphan | This endpoint will delete the token and orphan its child tokens.
-[**UpdateTokenRevokeSelf**](Auth.md#updatetokenrevokeself) | **POST** /auth/{mount_path}/revoke-self | This endpoint will delete the token used to call it and all of its child tokens.
-[**UpdateTokenRolesRoleName**](Auth.md#updatetokenrolesrolename) | **POST** /auth/{mount_path}/roles/{role_name} | 
-[**UpdateTokenTidy**](Auth.md#updatetokentidy) | **POST** /auth/{mount_path}/tidy | This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
-[**UpdateUserpassLoginUsername**](Auth.md#updateuserpassloginusername) | **POST** /auth/{mount_path}/login/{username} | Log in with a username and password.
-[**UpdateUserpassUsersUsername**](Auth.md#updateuserpassusersusername) | **POST** /auth/{mount_path}/users/{username} | Manage users allowed to authenticate.
-[**UpdateUserpassUsersUsernamePassword**](Auth.md#updateuserpassusersusernamepassword) | **POST** /auth/{mount_path}/users/{username}/password | Reset user&#39;s password.
-[**UpdateUserpassUsersUsernamePolicies**](Auth.md#updateuserpassusersusernamepolicies) | **POST** /auth/{mount_path}/users/{username}/policies | Update the policies associated with the username.
+[**DeleteAuthAlicloudRoleRole**](Auth.md#deleteauthalicloudrolerole) | **DELETE** /auth/{alicloud_mount_path}/role/{role} | Create a role and associate policies to it.
+[**DeleteAuthApproleRoleRoleName**](Auth.md#deleteauthapprolerolerolename) | **DELETE** /auth/{approle_mount_path}/role/{role_name} | Register an role with the backend.
+[**DeleteAuthApproleRoleRoleNameBindSecretId**](Auth.md#deleteauthapprolerolerolenamebindsecretid) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
+[**DeleteAuthApproleRoleRoleNameBoundCidrList**](Auth.md#deleteauthapprolerolerolenameboundcidrlist) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/bound-cidr-list | Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+[**DeleteAuthApproleRoleRoleNamePeriod**](Auth.md#deleteauthapprolerolerolenameperiod) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/period | Updates the value of &#39;period&#39; on the role
+[**DeleteAuthApproleRoleRoleNamePolicies**](Auth.md#deleteauthapprolerolerolenamepolicies) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/policies | Policies of the role.
+[**DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroy**](Auth.md#deleteauthapprolerolerolenamesecretidaccessordestroy) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id-accessor/destroy | 
+[**DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs**](Auth.md#deleteauthapprolerolerolenamesecretidboundcidrs) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+[**DeleteAuthApproleRoleRoleNameSecretIdDestroy**](Auth.md#deleteauthapprolerolerolenamesecretiddestroy) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id/destroy | Invalidate an issued secret_id
+[**DeleteAuthApproleRoleRoleNameSecretIdNumUses**](Auth.md#deleteauthapprolerolerolenamesecretidnumuses) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
+[**DeleteAuthApproleRoleRoleNameSecretIdTtl**](Auth.md#deleteauthapprolerolerolenamesecretidttl) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id-ttl | Duration in seconds of the SecretID generated against the role.
+[**DeleteAuthApproleRoleRoleNameTokenBoundCidrs**](Auth.md#deleteauthapprolerolerolenametokenboundcidrs) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
+[**DeleteAuthApproleRoleRoleNameTokenMaxTtl**](Auth.md#deleteauthapprolerolerolenametokenmaxttl) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
+[**DeleteAuthApproleRoleRoleNameTokenNumUses**](Auth.md#deleteauthapprolerolerolenametokennumuses) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/token-num-uses | Number of times issued tokens can be used
+[**DeleteAuthApproleRoleRoleNameTokenTtl**](Auth.md#deleteauthapprolerolerolenametokenttl) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/token-ttl | Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
+[**DeleteAuthAwsConfigCertificateCertName**](Auth.md#deleteauthawsconfigcertificatecertname) | **DELETE** /auth/{aws_mount_path}/config/certificate/{cert_name} | 
+[**DeleteAuthAwsConfigClient**](Auth.md#deleteauthawsconfigclient) | **DELETE** /auth/{aws_mount_path}/config/client | 
+[**DeleteAuthAwsConfigStsAccountId**](Auth.md#deleteauthawsconfigstsaccountid) | **DELETE** /auth/{aws_mount_path}/config/sts/{account_id} | 
+[**DeleteAuthAwsConfigTidyIdentityAccesslist**](Auth.md#deleteauthawsconfigtidyidentityaccesslist) | **DELETE** /auth/{aws_mount_path}/config/tidy/identity-accesslist | 
+[**DeleteAuthAwsConfigTidyIdentityWhitelist**](Auth.md#deleteauthawsconfigtidyidentitywhitelist) | **DELETE** /auth/{aws_mount_path}/config/tidy/identity-whitelist | 
+[**DeleteAuthAwsConfigTidyRoletagBlacklist**](Auth.md#deleteauthawsconfigtidyroletagblacklist) | **DELETE** /auth/{aws_mount_path}/config/tidy/roletag-blacklist | 
+[**DeleteAuthAwsConfigTidyRoletagDenylist**](Auth.md#deleteauthawsconfigtidyroletagdenylist) | **DELETE** /auth/{aws_mount_path}/config/tidy/roletag-denylist | 
+[**DeleteAuthAwsIdentityAccesslistInstanceId**](Auth.md#deleteauthawsidentityaccesslistinstanceid) | **DELETE** /auth/{aws_mount_path}/identity-accesslist/{instance_id} | 
+[**DeleteAuthAwsIdentityWhitelistInstanceId**](Auth.md#deleteauthawsidentitywhitelistinstanceid) | **DELETE** /auth/{aws_mount_path}/identity-whitelist/{instance_id} | 
+[**DeleteAuthAwsRoleRole**](Auth.md#deleteauthawsrolerole) | **DELETE** /auth/{aws_mount_path}/role/{role} | 
+[**DeleteAuthAwsRoletagBlacklistRoleTag**](Auth.md#deleteauthawsroletagblacklistroletag) | **DELETE** /auth/{aws_mount_path}/roletag-blacklist/{role_tag} | 
+[**DeleteAuthAwsRoletagDenylistRoleTag**](Auth.md#deleteauthawsroletagdenylistroletag) | **DELETE** /auth/{aws_mount_path}/roletag-denylist/{role_tag} | 
+[**DeleteAuthAzureConfig**](Auth.md#deleteauthazureconfig) | **DELETE** /auth/{azure_mount_path}/config | 
+[**DeleteAuthAzureRoleName**](Auth.md#deleteauthazurerolename) | **DELETE** /auth/{azure_mount_path}/role/{name} | 
+[**DeleteAuthCertCertsName**](Auth.md#deleteauthcertcertsname) | **DELETE** /auth/{cert_mount_path}/certs/{name} | Manage trusted certificates used for authentication.
+[**DeleteAuthCertCrlsName**](Auth.md#deleteauthcertcrlsname) | **DELETE** /auth/{cert_mount_path}/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
+[**DeleteAuthCfConfig**](Auth.md#deleteauthcfconfig) | **DELETE** /auth/{cf_mount_path}/config | 
+[**DeleteAuthCfRolesRole**](Auth.md#deleteauthcfrolesrole) | **DELETE** /auth/{cf_mount_path}/roles/{role} | 
+[**DeleteAuthGcpRoleName**](Auth.md#deleteauthgcprolename) | **DELETE** /auth/{gcp_mount_path}/role/{name} | Create a GCP role with associated policies and required attributes.
+[**DeleteAuthGithubMapTeamsKey**](Auth.md#deleteauthgithubmapteamskey) | **DELETE** /auth/{github_mount_path}/map/teams/{key} | Read/write/delete a single teams mapping
+[**DeleteAuthGithubMapUsersKey**](Auth.md#deleteauthgithubmapuserskey) | **DELETE** /auth/{github_mount_path}/map/users/{key} | Read/write/delete a single users mapping
+[**DeleteAuthJwtRoleName**](Auth.md#deleteauthjwtrolename) | **DELETE** /auth/{jwt_mount_path}/role/{name} | Delete an existing role.
+[**DeleteAuthKerberosGroupsName**](Auth.md#deleteauthkerberosgroupsname) | **DELETE** /auth/{kerberos_mount_path}/groups/{name} | 
+[**DeleteAuthKubernetesRoleName**](Auth.md#deleteauthkubernetesrolename) | **DELETE** /auth/{kubernetes_mount_path}/role/{name} | Register an role with the backend.
+[**DeleteAuthLdapGroupsName**](Auth.md#deleteauthldapgroupsname) | **DELETE** /auth/{ldap_mount_path}/groups/{name} | Manage additional groups for users allowed to authenticate.
+[**DeleteAuthLdapUsersName**](Auth.md#deleteauthldapusersname) | **DELETE** /auth/{ldap_mount_path}/users/{name} | Manage users allowed to authenticate.
+[**DeleteAuthOciConfig**](Auth.md#deleteauthociconfig) | **DELETE** /auth/{oci_mount_path}/config | Manages the configuration for the Vault Auth Plugin.
+[**DeleteAuthOciRoleRole**](Auth.md#deleteauthocirolerole) | **DELETE** /auth/{oci_mount_path}/role/{role} | Create a role and associate policies to it.
+[**DeleteAuthOidcRoleName**](Auth.md#deleteauthoidcrolename) | **DELETE** /auth/{oidc_mount_path}/role/{name} | Delete an existing role.
+[**DeleteAuthOktaGroupsName**](Auth.md#deleteauthoktagroupsname) | **DELETE** /auth/{okta_mount_path}/groups/{name} | Manage users allowed to authenticate.
+[**DeleteAuthOktaUsersName**](Auth.md#deleteauthoktausersname) | **DELETE** /auth/{okta_mount_path}/users/{name} | Manage additional groups for users allowed to authenticate.
+[**DeleteAuthRadiusUsersName**](Auth.md#deleteauthradiususersname) | **DELETE** /auth/{radius_mount_path}/users/{name} | Manage users allowed to authenticate.
+[**DeleteAuthTokenRolesRoleName**](Auth.md#deleteauthtokenrolesrolename) | **DELETE** /auth/{token_mount_path}/roles/{role_name} | 
+[**DeleteAuthUserpassUsersUsername**](Auth.md#deleteauthuserpassusersusername) | **DELETE** /auth/{userpass_mount_path}/users/{username} | Manage users allowed to authenticate.
+[**GetAuthAlicloudRole**](Auth.md#getauthalicloudrole) | **GET** /auth/{alicloud_mount_path}/role | Lists all the roles that are registered with Vault.
+[**GetAuthAlicloudRoleRole**](Auth.md#getauthalicloudrolerole) | **GET** /auth/{alicloud_mount_path}/role/{role} | Create a role and associate policies to it.
+[**GetAuthAlicloudRoles**](Auth.md#getauthalicloudroles) | **GET** /auth/{alicloud_mount_path}/roles | Lists all the roles that are registered with Vault.
+[**GetAuthApproleRole**](Auth.md#getauthapprolerole) | **GET** /auth/{approle_mount_path}/role | Lists all the roles registered with the backend.
+[**GetAuthApproleRoleRoleName**](Auth.md#getauthapprolerolerolename) | **GET** /auth/{approle_mount_path}/role/{role_name} | Register an role with the backend.
+[**GetAuthApproleRoleRoleNameBindSecretId**](Auth.md#getauthapprolerolerolenamebindsecretid) | **GET** /auth/{approle_mount_path}/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
+[**GetAuthApproleRoleRoleNameBoundCidrList**](Auth.md#getauthapprolerolerolenameboundcidrlist) | **GET** /auth/{approle_mount_path}/role/{role_name}/bound-cidr-list | Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+[**GetAuthApproleRoleRoleNameLocalSecretIds**](Auth.md#getauthapprolerolerolenamelocalsecretids) | **GET** /auth/{approle_mount_path}/role/{role_name}/local-secret-ids | Enables cluster local secret IDs
+[**GetAuthApproleRoleRoleNamePeriod**](Auth.md#getauthapprolerolerolenameperiod) | **GET** /auth/{approle_mount_path}/role/{role_name}/period | Updates the value of &#39;period&#39; on the role
+[**GetAuthApproleRoleRoleNamePolicies**](Auth.md#getauthapprolerolerolenamepolicies) | **GET** /auth/{approle_mount_path}/role/{role_name}/policies | Policies of the role.
+[**GetAuthApproleRoleRoleNameRoleId**](Auth.md#getauthapprolerolerolenameroleid) | **GET** /auth/{approle_mount_path}/role/{role_name}/role-id | Returns the &#39;role_id&#39; of the role.
+[**GetAuthApproleRoleRoleNameSecretId**](Auth.md#getauthapprolerolerolenamesecretid) | **GET** /auth/{approle_mount_path}/role/{role_name}/secret-id | Generate a SecretID against this role.
+[**GetAuthApproleRoleRoleNameSecretIdBoundCidrs**](Auth.md#getauthapprolerolerolenamesecretidboundcidrs) | **GET** /auth/{approle_mount_path}/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+[**GetAuthApproleRoleRoleNameSecretIdNumUses**](Auth.md#getauthapprolerolerolenamesecretidnumuses) | **GET** /auth/{approle_mount_path}/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
+[**GetAuthApproleRoleRoleNameSecretIdTtl**](Auth.md#getauthapprolerolerolenamesecretidttl) | **GET** /auth/{approle_mount_path}/role/{role_name}/secret-id-ttl | Duration in seconds of the SecretID generated against the role.
+[**GetAuthApproleRoleRoleNameTokenBoundCidrs**](Auth.md#getauthapprolerolerolenametokenboundcidrs) | **GET** /auth/{approle_mount_path}/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
+[**GetAuthApproleRoleRoleNameTokenMaxTtl**](Auth.md#getauthapprolerolerolenametokenmaxttl) | **GET** /auth/{approle_mount_path}/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
+[**GetAuthApproleRoleRoleNameTokenNumUses**](Auth.md#getauthapprolerolerolenametokennumuses) | **GET** /auth/{approle_mount_path}/role/{role_name}/token-num-uses | Number of times issued tokens can be used
+[**GetAuthApproleRoleRoleNameTokenTtl**](Auth.md#getauthapprolerolerolenametokenttl) | **GET** /auth/{approle_mount_path}/role/{role_name}/token-ttl | Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
+[**GetAuthAwsConfigCertificateCertName**](Auth.md#getauthawsconfigcertificatecertname) | **GET** /auth/{aws_mount_path}/config/certificate/{cert_name} | 
+[**GetAuthAwsConfigCertificates**](Auth.md#getauthawsconfigcertificates) | **GET** /auth/{aws_mount_path}/config/certificates | 
+[**GetAuthAwsConfigClient**](Auth.md#getauthawsconfigclient) | **GET** /auth/{aws_mount_path}/config/client | 
+[**GetAuthAwsConfigIdentity**](Auth.md#getauthawsconfigidentity) | **GET** /auth/{aws_mount_path}/config/identity | 
+[**GetAuthAwsConfigSts**](Auth.md#getauthawsconfigsts) | **GET** /auth/{aws_mount_path}/config/sts | 
+[**GetAuthAwsConfigStsAccountId**](Auth.md#getauthawsconfigstsaccountid) | **GET** /auth/{aws_mount_path}/config/sts/{account_id} | 
+[**GetAuthAwsConfigTidyIdentityAccesslist**](Auth.md#getauthawsconfigtidyidentityaccesslist) | **GET** /auth/{aws_mount_path}/config/tidy/identity-accesslist | 
+[**GetAuthAwsConfigTidyIdentityWhitelist**](Auth.md#getauthawsconfigtidyidentitywhitelist) | **GET** /auth/{aws_mount_path}/config/tidy/identity-whitelist | 
+[**GetAuthAwsConfigTidyRoletagBlacklist**](Auth.md#getauthawsconfigtidyroletagblacklist) | **GET** /auth/{aws_mount_path}/config/tidy/roletag-blacklist | 
+[**GetAuthAwsConfigTidyRoletagDenylist**](Auth.md#getauthawsconfigtidyroletagdenylist) | **GET** /auth/{aws_mount_path}/config/tidy/roletag-denylist | 
+[**GetAuthAwsIdentityAccesslist**](Auth.md#getauthawsidentityaccesslist) | **GET** /auth/{aws_mount_path}/identity-accesslist | 
+[**GetAuthAwsIdentityAccesslistInstanceId**](Auth.md#getauthawsidentityaccesslistinstanceid) | **GET** /auth/{aws_mount_path}/identity-accesslist/{instance_id} | 
+[**GetAuthAwsIdentityWhitelist**](Auth.md#getauthawsidentitywhitelist) | **GET** /auth/{aws_mount_path}/identity-whitelist | 
+[**GetAuthAwsIdentityWhitelistInstanceId**](Auth.md#getauthawsidentitywhitelistinstanceid) | **GET** /auth/{aws_mount_path}/identity-whitelist/{instance_id} | 
+[**GetAuthAwsRole**](Auth.md#getauthawsrole) | **GET** /auth/{aws_mount_path}/role | 
+[**GetAuthAwsRoleRole**](Auth.md#getauthawsrolerole) | **GET** /auth/{aws_mount_path}/role/{role} | 
+[**GetAuthAwsRoles**](Auth.md#getauthawsroles) | **GET** /auth/{aws_mount_path}/roles | 
+[**GetAuthAwsRoletagBlacklist**](Auth.md#getauthawsroletagblacklist) | **GET** /auth/{aws_mount_path}/roletag-blacklist | 
+[**GetAuthAwsRoletagBlacklistRoleTag**](Auth.md#getauthawsroletagblacklistroletag) | **GET** /auth/{aws_mount_path}/roletag-blacklist/{role_tag} | 
+[**GetAuthAwsRoletagDenylist**](Auth.md#getauthawsroletagdenylist) | **GET** /auth/{aws_mount_path}/roletag-denylist | 
+[**GetAuthAwsRoletagDenylistRoleTag**](Auth.md#getauthawsroletagdenylistroletag) | **GET** /auth/{aws_mount_path}/roletag-denylist/{role_tag} | 
+[**GetAuthAzureConfig**](Auth.md#getauthazureconfig) | **GET** /auth/{azure_mount_path}/config | 
+[**GetAuthAzureRole**](Auth.md#getauthazurerole) | **GET** /auth/{azure_mount_path}/role | 
+[**GetAuthAzureRoleName**](Auth.md#getauthazurerolename) | **GET** /auth/{azure_mount_path}/role/{name} | 
+[**GetAuthCentrifyConfig**](Auth.md#getauthcentrifyconfig) | **GET** /auth/{centrify_mount_path}/config | This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
+[**GetAuthCertCerts**](Auth.md#getauthcertcerts) | **GET** /auth/{cert_mount_path}/certs | Manage trusted certificates used for authentication.
+[**GetAuthCertCertsName**](Auth.md#getauthcertcertsname) | **GET** /auth/{cert_mount_path}/certs/{name} | Manage trusted certificates used for authentication.
+[**GetAuthCertConfig**](Auth.md#getauthcertconfig) | **GET** /auth/{cert_mount_path}/config | 
+[**GetAuthCertCrlsName**](Auth.md#getauthcertcrlsname) | **GET** /auth/{cert_mount_path}/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
+[**GetAuthCfConfig**](Auth.md#getauthcfconfig) | **GET** /auth/{cf_mount_path}/config | 
+[**GetAuthCfRoles**](Auth.md#getauthcfroles) | **GET** /auth/{cf_mount_path}/roles | 
+[**GetAuthCfRolesRole**](Auth.md#getauthcfrolesrole) | **GET** /auth/{cf_mount_path}/roles/{role} | 
+[**GetAuthGcpConfig**](Auth.md#getauthgcpconfig) | **GET** /auth/{gcp_mount_path}/config | Configure credentials used to query the GCP IAM API to verify authenticating service accounts
+[**GetAuthGcpRole**](Auth.md#getauthgcprole) | **GET** /auth/{gcp_mount_path}/role | Lists all the roles that are registered with Vault.
+[**GetAuthGcpRoleName**](Auth.md#getauthgcprolename) | **GET** /auth/{gcp_mount_path}/role/{name} | Create a GCP role with associated policies and required attributes.
+[**GetAuthGcpRoles**](Auth.md#getauthgcproles) | **GET** /auth/{gcp_mount_path}/roles | Lists all the roles that are registered with Vault.
+[**GetAuthGithubConfig**](Auth.md#getauthgithubconfig) | **GET** /auth/{github_mount_path}/config | 
+[**GetAuthGithubMapTeams**](Auth.md#getauthgithubmapteams) | **GET** /auth/{github_mount_path}/map/teams | Read mappings for teams
+[**GetAuthGithubMapTeamsKey**](Auth.md#getauthgithubmapteamskey) | **GET** /auth/{github_mount_path}/map/teams/{key} | Read/write/delete a single teams mapping
+[**GetAuthGithubMapUsers**](Auth.md#getauthgithubmapusers) | **GET** /auth/{github_mount_path}/map/users | Read mappings for users
+[**GetAuthGithubMapUsersKey**](Auth.md#getauthgithubmapuserskey) | **GET** /auth/{github_mount_path}/map/users/{key} | Read/write/delete a single users mapping
+[**GetAuthJwtConfig**](Auth.md#getauthjwtconfig) | **GET** /auth/{jwt_mount_path}/config | Read the current JWT authentication backend configuration.
+[**GetAuthJwtOidcCallback**](Auth.md#getauthjwtoidccallback) | **GET** /auth/{jwt_mount_path}/oidc/callback | Callback endpoint to complete an OIDC login.
+[**GetAuthJwtRole**](Auth.md#getauthjwtrole) | **GET** /auth/{jwt_mount_path}/role | Lists all the roles registered with the backend.
+[**GetAuthJwtRoleName**](Auth.md#getauthjwtrolename) | **GET** /auth/{jwt_mount_path}/role/{name} | Read an existing role.
+[**GetAuthKerberosConfig**](Auth.md#getauthkerberosconfig) | **GET** /auth/{kerberos_mount_path}/config | 
+[**GetAuthKerberosConfigLdap**](Auth.md#getauthkerberosconfigldap) | **GET** /auth/{kerberos_mount_path}/config/ldap | 
+[**GetAuthKerberosGroups**](Auth.md#getauthkerberosgroups) | **GET** /auth/{kerberos_mount_path}/groups | 
+[**GetAuthKerberosGroupsName**](Auth.md#getauthkerberosgroupsname) | **GET** /auth/{kerberos_mount_path}/groups/{name} | 
+[**GetAuthKerberosLogin**](Auth.md#getauthkerberoslogin) | **GET** /auth/{kerberos_mount_path}/login | 
+[**GetAuthKubernetesConfig**](Auth.md#getauthkubernetesconfig) | **GET** /auth/{kubernetes_mount_path}/config | Configures the JWT Public Key and Kubernetes API information.
+[**GetAuthKubernetesRole**](Auth.md#getauthkubernetesrole) | **GET** /auth/{kubernetes_mount_path}/role | Lists all the roles registered with the backend.
+[**GetAuthKubernetesRoleName**](Auth.md#getauthkubernetesrolename) | **GET** /auth/{kubernetes_mount_path}/role/{name} | Register an role with the backend.
+[**GetAuthLdapConfig**](Auth.md#getauthldapconfig) | **GET** /auth/{ldap_mount_path}/config | Configure the LDAP server to connect to, along with its options.
+[**GetAuthLdapGroups**](Auth.md#getauthldapgroups) | **GET** /auth/{ldap_mount_path}/groups | Manage additional groups for users allowed to authenticate.
+[**GetAuthLdapGroupsName**](Auth.md#getauthldapgroupsname) | **GET** /auth/{ldap_mount_path}/groups/{name} | Manage additional groups for users allowed to authenticate.
+[**GetAuthLdapUsers**](Auth.md#getauthldapusers) | **GET** /auth/{ldap_mount_path}/users | Manage users allowed to authenticate.
+[**GetAuthLdapUsersName**](Auth.md#getauthldapusersname) | **GET** /auth/{ldap_mount_path}/users/{name} | Manage users allowed to authenticate.
+[**GetAuthOciConfig**](Auth.md#getauthociconfig) | **GET** /auth/{oci_mount_path}/config | Manages the configuration for the Vault Auth Plugin.
+[**GetAuthOciRole**](Auth.md#getauthocirole) | **GET** /auth/{oci_mount_path}/role | Lists all the roles that are registered with Vault.
+[**GetAuthOciRoleRole**](Auth.md#getauthocirolerole) | **GET** /auth/{oci_mount_path}/role/{role} | Create a role and associate policies to it.
+[**GetAuthOidcConfig**](Auth.md#getauthoidcconfig) | **GET** /auth/{oidc_mount_path}/config | Read the current JWT authentication backend configuration.
+[**GetAuthOidcOidcCallback**](Auth.md#getauthoidcoidccallback) | **GET** /auth/{oidc_mount_path}/oidc/callback | Callback endpoint to complete an OIDC login.
+[**GetAuthOidcRole**](Auth.md#getauthoidcrole) | **GET** /auth/{oidc_mount_path}/role | Lists all the roles registered with the backend.
+[**GetAuthOidcRoleName**](Auth.md#getauthoidcrolename) | **GET** /auth/{oidc_mount_path}/role/{name} | Read an existing role.
+[**GetAuthOktaConfig**](Auth.md#getauthoktaconfig) | **GET** /auth/{okta_mount_path}/config | This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
+[**GetAuthOktaGroups**](Auth.md#getauthoktagroups) | **GET** /auth/{okta_mount_path}/groups | Manage users allowed to authenticate.
+[**GetAuthOktaGroupsName**](Auth.md#getauthoktagroupsname) | **GET** /auth/{okta_mount_path}/groups/{name} | Manage users allowed to authenticate.
+[**GetAuthOktaUsers**](Auth.md#getauthoktausers) | **GET** /auth/{okta_mount_path}/users | Manage additional groups for users allowed to authenticate.
+[**GetAuthOktaUsersName**](Auth.md#getauthoktausersname) | **GET** /auth/{okta_mount_path}/users/{name} | Manage additional groups for users allowed to authenticate.
+[**GetAuthOktaVerifyNonce**](Auth.md#getauthoktaverifynonce) | **GET** /auth/{okta_mount_path}/verify/{nonce} | 
+[**GetAuthRadiusConfig**](Auth.md#getauthradiusconfig) | **GET** /auth/{radius_mount_path}/config | Configure the RADIUS server to connect to, along with its options.
+[**GetAuthRadiusUsers**](Auth.md#getauthradiususers) | **GET** /auth/{radius_mount_path}/users | Manage users allowed to authenticate.
+[**GetAuthRadiusUsersName**](Auth.md#getauthradiususersname) | **GET** /auth/{radius_mount_path}/users/{name} | Manage users allowed to authenticate.
+[**GetAuthTokenAccessors**](Auth.md#getauthtokenaccessors) | **GET** /auth/{token_mount_path}/accessors/ | List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires &#39;sudo&#39; capability in addition to &#39;list&#39;.
+[**GetAuthTokenLookup**](Auth.md#getauthtokenlookup) | **GET** /auth/{token_mount_path}/lookup | This endpoint will lookup a token and its properties.
+[**GetAuthTokenLookupSelf**](Auth.md#getauthtokenlookupself) | **GET** /auth/{token_mount_path}/lookup-self | This endpoint will lookup a token and its properties.
+[**GetAuthTokenRoles**](Auth.md#getauthtokenroles) | **GET** /auth/{token_mount_path}/roles | This endpoint lists configured roles.
+[**GetAuthTokenRolesRoleName**](Auth.md#getauthtokenrolesrolename) | **GET** /auth/{token_mount_path}/roles/{role_name} | 
+[**GetAuthUserpassUsers**](Auth.md#getauthuserpassusers) | **GET** /auth/{userpass_mount_path}/users | Manage users allowed to authenticate.
+[**GetAuthUserpassUsersUsername**](Auth.md#getauthuserpassusersusername) | **GET** /auth/{userpass_mount_path}/users/{username} | Manage users allowed to authenticate.
+[**PostAuthAlicloudLogin**](Auth.md#postauthalicloudlogin) | **POST** /auth/{alicloud_mount_path}/login | Authenticates an RAM entity with Vault.
+[**PostAuthAlicloudRoleRole**](Auth.md#postauthalicloudrolerole) | **POST** /auth/{alicloud_mount_path}/role/{role} | Create a role and associate policies to it.
+[**PostAuthApproleLogin**](Auth.md#postauthapprolelogin) | **POST** /auth/{approle_mount_path}/login | 
+[**PostAuthApproleRoleRoleName**](Auth.md#postauthapprolerolerolename) | **POST** /auth/{approle_mount_path}/role/{role_name} | Register an role with the backend.
+[**PostAuthApproleRoleRoleNameBindSecretId**](Auth.md#postauthapprolerolerolenamebindsecretid) | **POST** /auth/{approle_mount_path}/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
+[**PostAuthApproleRoleRoleNameBoundCidrList**](Auth.md#postauthapprolerolerolenameboundcidrlist) | **POST** /auth/{approle_mount_path}/role/{role_name}/bound-cidr-list | Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+[**PostAuthApproleRoleRoleNameCustomSecretId**](Auth.md#postauthapprolerolerolenamecustomsecretid) | **POST** /auth/{approle_mount_path}/role/{role_name}/custom-secret-id | Assign a SecretID of choice against the role.
+[**PostAuthApproleRoleRoleNamePeriod**](Auth.md#postauthapprolerolerolenameperiod) | **POST** /auth/{approle_mount_path}/role/{role_name}/period | Updates the value of &#39;period&#39; on the role
+[**PostAuthApproleRoleRoleNamePolicies**](Auth.md#postauthapprolerolerolenamepolicies) | **POST** /auth/{approle_mount_path}/role/{role_name}/policies | Policies of the role.
+[**PostAuthApproleRoleRoleNameRoleId**](Auth.md#postauthapprolerolerolenameroleid) | **POST** /auth/{approle_mount_path}/role/{role_name}/role-id | Returns the &#39;role_id&#39; of the role.
+[**PostAuthApproleRoleRoleNameSecretId**](Auth.md#postauthapprolerolerolenamesecretid) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id | Generate a SecretID against this role.
+[**PostAuthApproleRoleRoleNameSecretIdAccessorDestroy**](Auth.md#postauthapprolerolerolenamesecretidaccessordestroy) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-accessor/destroy | 
+[**PostAuthApproleRoleRoleNameSecretIdAccessorLookup**](Auth.md#postauthapprolerolerolenamesecretidaccessorlookup) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-accessor/lookup | 
+[**PostAuthApproleRoleRoleNameSecretIdBoundCidrs**](Auth.md#postauthapprolerolerolenamesecretidboundcidrs) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+[**PostAuthApproleRoleRoleNameSecretIdDestroy**](Auth.md#postauthapprolerolerolenamesecretiddestroy) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id/destroy | Invalidate an issued secret_id
+[**PostAuthApproleRoleRoleNameSecretIdLookup**](Auth.md#postauthapprolerolerolenamesecretidlookup) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id/lookup | Read the properties of an issued secret_id
+[**PostAuthApproleRoleRoleNameSecretIdNumUses**](Auth.md#postauthapprolerolerolenamesecretidnumuses) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
+[**PostAuthApproleRoleRoleNameSecretIdTtl**](Auth.md#postauthapprolerolerolenamesecretidttl) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-ttl | Duration in seconds of the SecretID generated against the role.
+[**PostAuthApproleRoleRoleNameTokenBoundCidrs**](Auth.md#postauthapprolerolerolenametokenboundcidrs) | **POST** /auth/{approle_mount_path}/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
+[**PostAuthApproleRoleRoleNameTokenMaxTtl**](Auth.md#postauthapprolerolerolenametokenmaxttl) | **POST** /auth/{approle_mount_path}/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
+[**PostAuthApproleRoleRoleNameTokenNumUses**](Auth.md#postauthapprolerolerolenametokennumuses) | **POST** /auth/{approle_mount_path}/role/{role_name}/token-num-uses | Number of times issued tokens can be used
+[**PostAuthApproleRoleRoleNameTokenTtl**](Auth.md#postauthapprolerolerolenametokenttl) | **POST** /auth/{approle_mount_path}/role/{role_name}/token-ttl | Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
+[**PostAuthApproleTidySecretId**](Auth.md#postauthapproletidysecretid) | **POST** /auth/{approle_mount_path}/tidy/secret-id | Trigger the clean-up of expired SecretID entries.
+[**PostAuthAwsConfigCertificateCertName**](Auth.md#postauthawsconfigcertificatecertname) | **POST** /auth/{aws_mount_path}/config/certificate/{cert_name} | 
+[**PostAuthAwsConfigClient**](Auth.md#postauthawsconfigclient) | **POST** /auth/{aws_mount_path}/config/client | 
+[**PostAuthAwsConfigIdentity**](Auth.md#postauthawsconfigidentity) | **POST** /auth/{aws_mount_path}/config/identity | 
+[**PostAuthAwsConfigRotateRoot**](Auth.md#postauthawsconfigrotateroot) | **POST** /auth/{aws_mount_path}/config/rotate-root | 
+[**PostAuthAwsConfigStsAccountId**](Auth.md#postauthawsconfigstsaccountid) | **POST** /auth/{aws_mount_path}/config/sts/{account_id} | 
+[**PostAuthAwsConfigTidyIdentityAccesslist**](Auth.md#postauthawsconfigtidyidentityaccesslist) | **POST** /auth/{aws_mount_path}/config/tidy/identity-accesslist | 
+[**PostAuthAwsConfigTidyIdentityWhitelist**](Auth.md#postauthawsconfigtidyidentitywhitelist) | **POST** /auth/{aws_mount_path}/config/tidy/identity-whitelist | 
+[**PostAuthAwsConfigTidyRoletagBlacklist**](Auth.md#postauthawsconfigtidyroletagblacklist) | **POST** /auth/{aws_mount_path}/config/tidy/roletag-blacklist | 
+[**PostAuthAwsConfigTidyRoletagDenylist**](Auth.md#postauthawsconfigtidyroletagdenylist) | **POST** /auth/{aws_mount_path}/config/tidy/roletag-denylist | 
+[**PostAuthAwsLogin**](Auth.md#postauthawslogin) | **POST** /auth/{aws_mount_path}/login | 
+[**PostAuthAwsRoleRole**](Auth.md#postauthawsrolerole) | **POST** /auth/{aws_mount_path}/role/{role} | 
+[**PostAuthAwsRoleRoleTag**](Auth.md#postauthawsroleroletag) | **POST** /auth/{aws_mount_path}/role/{role}/tag | 
+[**PostAuthAwsRoletagBlacklistRoleTag**](Auth.md#postauthawsroletagblacklistroletag) | **POST** /auth/{aws_mount_path}/roletag-blacklist/{role_tag} | 
+[**PostAuthAwsRoletagDenylistRoleTag**](Auth.md#postauthawsroletagdenylistroletag) | **POST** /auth/{aws_mount_path}/roletag-denylist/{role_tag} | 
+[**PostAuthAwsTidyIdentityAccesslist**](Auth.md#postauthawstidyidentityaccesslist) | **POST** /auth/{aws_mount_path}/tidy/identity-accesslist | 
+[**PostAuthAwsTidyIdentityWhitelist**](Auth.md#postauthawstidyidentitywhitelist) | **POST** /auth/{aws_mount_path}/tidy/identity-whitelist | 
+[**PostAuthAwsTidyRoletagBlacklist**](Auth.md#postauthawstidyroletagblacklist) | **POST** /auth/{aws_mount_path}/tidy/roletag-blacklist | 
+[**PostAuthAwsTidyRoletagDenylist**](Auth.md#postauthawstidyroletagdenylist) | **POST** /auth/{aws_mount_path}/tidy/roletag-denylist | 
+[**PostAuthAzureConfig**](Auth.md#postauthazureconfig) | **POST** /auth/{azure_mount_path}/config | 
+[**PostAuthAzureLogin**](Auth.md#postauthazurelogin) | **POST** /auth/{azure_mount_path}/login | 
+[**PostAuthAzureRoleName**](Auth.md#postauthazurerolename) | **POST** /auth/{azure_mount_path}/role/{name} | 
+[**PostAuthCentrifyConfig**](Auth.md#postauthcentrifyconfig) | **POST** /auth/{centrify_mount_path}/config | This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
+[**PostAuthCentrifyLogin**](Auth.md#postauthcentrifylogin) | **POST** /auth/{centrify_mount_path}/login | Log in with a username and password.
+[**PostAuthCertCertsName**](Auth.md#postauthcertcertsname) | **POST** /auth/{cert_mount_path}/certs/{name} | Manage trusted certificates used for authentication.
+[**PostAuthCertConfig**](Auth.md#postauthcertconfig) | **POST** /auth/{cert_mount_path}/config | 
+[**PostAuthCertCrlsName**](Auth.md#postauthcertcrlsname) | **POST** /auth/{cert_mount_path}/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
+[**PostAuthCertLogin**](Auth.md#postauthcertlogin) | **POST** /auth/{cert_mount_path}/login | 
+[**PostAuthCfConfig**](Auth.md#postauthcfconfig) | **POST** /auth/{cf_mount_path}/config | 
+[**PostAuthCfLogin**](Auth.md#postauthcflogin) | **POST** /auth/{cf_mount_path}/login | 
+[**PostAuthCfRolesRole**](Auth.md#postauthcfrolesrole) | **POST** /auth/{cf_mount_path}/roles/{role} | 
+[**PostAuthGcpConfig**](Auth.md#postauthgcpconfig) | **POST** /auth/{gcp_mount_path}/config | Configure credentials used to query the GCP IAM API to verify authenticating service accounts
+[**PostAuthGcpLogin**](Auth.md#postauthgcplogin) | **POST** /auth/{gcp_mount_path}/login | 
+[**PostAuthGcpRoleName**](Auth.md#postauthgcprolename) | **POST** /auth/{gcp_mount_path}/role/{name} | Create a GCP role with associated policies and required attributes.
+[**PostAuthGcpRoleNameLabels**](Auth.md#postauthgcprolenamelabels) | **POST** /auth/{gcp_mount_path}/role/{name}/labels | Add or remove labels for an existing &#39;gce&#39; role
+[**PostAuthGcpRoleNameServiceAccounts**](Auth.md#postauthgcprolenameserviceaccounts) | **POST** /auth/{gcp_mount_path}/role/{name}/service-accounts | Add or remove service accounts for an existing &#x60;iam&#x60; role
+[**PostAuthGithubConfig**](Auth.md#postauthgithubconfig) | **POST** /auth/{github_mount_path}/config | 
+[**PostAuthGithubLogin**](Auth.md#postauthgithublogin) | **POST** /auth/{github_mount_path}/login | 
+[**PostAuthGithubMapTeamsKey**](Auth.md#postauthgithubmapteamskey) | **POST** /auth/{github_mount_path}/map/teams/{key} | Read/write/delete a single teams mapping
+[**PostAuthGithubMapUsersKey**](Auth.md#postauthgithubmapuserskey) | **POST** /auth/{github_mount_path}/map/users/{key} | Read/write/delete a single users mapping
+[**PostAuthJwtConfig**](Auth.md#postauthjwtconfig) | **POST** /auth/{jwt_mount_path}/config | Configure the JWT authentication backend.
+[**PostAuthJwtLogin**](Auth.md#postauthjwtlogin) | **POST** /auth/{jwt_mount_path}/login | Authenticates to Vault using a JWT (or OIDC) token.
+[**PostAuthJwtOidcAuthUrl**](Auth.md#postauthjwtoidcauthurl) | **POST** /auth/{jwt_mount_path}/oidc/auth_url | Request an authorization URL to start an OIDC login flow.
+[**PostAuthJwtOidcCallback**](Auth.md#postauthjwtoidccallback) | **POST** /auth/{jwt_mount_path}/oidc/callback | Callback endpoint to handle form_posts.
+[**PostAuthJwtRoleName**](Auth.md#postauthjwtrolename) | **POST** /auth/{jwt_mount_path}/role/{name} | Register an role with the backend.
+[**PostAuthKerberosConfig**](Auth.md#postauthkerberosconfig) | **POST** /auth/{kerberos_mount_path}/config | 
+[**PostAuthKerberosConfigLdap**](Auth.md#postauthkerberosconfigldap) | **POST** /auth/{kerberos_mount_path}/config/ldap | 
+[**PostAuthKerberosGroupsName**](Auth.md#postauthkerberosgroupsname) | **POST** /auth/{kerberos_mount_path}/groups/{name} | 
+[**PostAuthKerberosLogin**](Auth.md#postauthkerberoslogin) | **POST** /auth/{kerberos_mount_path}/login | 
+[**PostAuthKubernetesConfig**](Auth.md#postauthkubernetesconfig) | **POST** /auth/{kubernetes_mount_path}/config | Configures the JWT Public Key and Kubernetes API information.
+[**PostAuthKubernetesLogin**](Auth.md#postauthkuberneteslogin) | **POST** /auth/{kubernetes_mount_path}/login | Authenticates Kubernetes service accounts with Vault.
+[**PostAuthKubernetesRoleName**](Auth.md#postauthkubernetesrolename) | **POST** /auth/{kubernetes_mount_path}/role/{name} | Register an role with the backend.
+[**PostAuthLdapConfig**](Auth.md#postauthldapconfig) | **POST** /auth/{ldap_mount_path}/config | Configure the LDAP server to connect to, along with its options.
+[**PostAuthLdapGroupsName**](Auth.md#postauthldapgroupsname) | **POST** /auth/{ldap_mount_path}/groups/{name} | Manage additional groups for users allowed to authenticate.
+[**PostAuthLdapLoginUsername**](Auth.md#postauthldaploginusername) | **POST** /auth/{ldap_mount_path}/login/{username} | Log in with a username and password.
+[**PostAuthLdapUsersName**](Auth.md#postauthldapusersname) | **POST** /auth/{ldap_mount_path}/users/{name} | Manage users allowed to authenticate.
+[**PostAuthOciConfig**](Auth.md#postauthociconfig) | **POST** /auth/{oci_mount_path}/config | Manages the configuration for the Vault Auth Plugin.
+[**PostAuthOciLoginRole**](Auth.md#postauthociloginrole) | **POST** /auth/{oci_mount_path}/login/{role} | Authenticates to Vault using OCI credentials
+[**PostAuthOciRoleRole**](Auth.md#postauthocirolerole) | **POST** /auth/{oci_mount_path}/role/{role} | Create a role and associate policies to it.
+[**PostAuthOidcConfig**](Auth.md#postauthoidcconfig) | **POST** /auth/{oidc_mount_path}/config | Configure the JWT authentication backend.
+[**PostAuthOidcLogin**](Auth.md#postauthoidclogin) | **POST** /auth/{oidc_mount_path}/login | Authenticates to Vault using a JWT (or OIDC) token.
+[**PostAuthOidcOidcAuthUrl**](Auth.md#postauthoidcoidcauthurl) | **POST** /auth/{oidc_mount_path}/oidc/auth_url | Request an authorization URL to start an OIDC login flow.
+[**PostAuthOidcOidcCallback**](Auth.md#postauthoidcoidccallback) | **POST** /auth/{oidc_mount_path}/oidc/callback | Callback endpoint to handle form_posts.
+[**PostAuthOidcRoleName**](Auth.md#postauthoidcrolename) | **POST** /auth/{oidc_mount_path}/role/{name} | Register an role with the backend.
+[**PostAuthOktaConfig**](Auth.md#postauthoktaconfig) | **POST** /auth/{okta_mount_path}/config | This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
+[**PostAuthOktaGroupsName**](Auth.md#postauthoktagroupsname) | **POST** /auth/{okta_mount_path}/groups/{name} | Manage users allowed to authenticate.
+[**PostAuthOktaLoginUsername**](Auth.md#postauthoktaloginusername) | **POST** /auth/{okta_mount_path}/login/{username} | Log in with a username and password.
+[**PostAuthOktaUsersName**](Auth.md#postauthoktausersname) | **POST** /auth/{okta_mount_path}/users/{name} | Manage additional groups for users allowed to authenticate.
+[**PostAuthRadiusConfig**](Auth.md#postauthradiusconfig) | **POST** /auth/{radius_mount_path}/config | Configure the RADIUS server to connect to, along with its options.
+[**PostAuthRadiusLogin**](Auth.md#postauthradiuslogin) | **POST** /auth/{radius_mount_path}/login | Log in with a username and password.
+[**PostAuthRadiusLoginUrlusername**](Auth.md#postauthradiusloginurlusername) | **POST** /auth/{radius_mount_path}/login/{urlusername} | Log in with a username and password.
+[**PostAuthRadiusUsersName**](Auth.md#postauthradiususersname) | **POST** /auth/{radius_mount_path}/users/{name} | Manage users allowed to authenticate.
+[**PostAuthTokenCreate**](Auth.md#postauthtokencreate) | **POST** /auth/{token_mount_path}/create | The token create path is used to create new tokens.
+[**PostAuthTokenCreateOrphan**](Auth.md#postauthtokencreateorphan) | **POST** /auth/{token_mount_path}/create-orphan | The token create path is used to create new orphan tokens.
+[**PostAuthTokenCreateRoleName**](Auth.md#postauthtokencreaterolename) | **POST** /auth/{token_mount_path}/create/{role_name} | This token create path is used to create new tokens adhering to the given role.
+[**PostAuthTokenLookup**](Auth.md#postauthtokenlookup) | **POST** /auth/{token_mount_path}/lookup | This endpoint will lookup a token and its properties.
+[**PostAuthTokenLookupAccessor**](Auth.md#postauthtokenlookupaccessor) | **POST** /auth/{token_mount_path}/lookup-accessor | This endpoint will lookup a token associated with the given accessor and its properties. Response will not contain the token ID.
+[**PostAuthTokenLookupSelf**](Auth.md#postauthtokenlookupself) | **POST** /auth/{token_mount_path}/lookup-self | This endpoint will lookup a token and its properties.
+[**PostAuthTokenRenew**](Auth.md#postauthtokenrenew) | **POST** /auth/{token_mount_path}/renew | This endpoint will renew the given token and prevent expiration.
+[**PostAuthTokenRenewAccessor**](Auth.md#postauthtokenrenewaccessor) | **POST** /auth/{token_mount_path}/renew-accessor | This endpoint will renew a token associated with the given accessor and its properties. Response will not contain the token ID.
+[**PostAuthTokenRenewSelf**](Auth.md#postauthtokenrenewself) | **POST** /auth/{token_mount_path}/renew-self | This endpoint will renew the token used to call it and prevent expiration.
+[**PostAuthTokenRevoke**](Auth.md#postauthtokenrevoke) | **POST** /auth/{token_mount_path}/revoke | This endpoint will delete the given token and all of its child tokens.
+[**PostAuthTokenRevokeAccessor**](Auth.md#postauthtokenrevokeaccessor) | **POST** /auth/{token_mount_path}/revoke-accessor | This endpoint will delete the token associated with the accessor and all of its child tokens.
+[**PostAuthTokenRevokeOrphan**](Auth.md#postauthtokenrevokeorphan) | **POST** /auth/{token_mount_path}/revoke-orphan | This endpoint will delete the token and orphan its child tokens.
+[**PostAuthTokenRevokeSelf**](Auth.md#postauthtokenrevokeself) | **POST** /auth/{token_mount_path}/revoke-self | This endpoint will delete the token used to call it and all of its child tokens.
+[**PostAuthTokenRolesRoleName**](Auth.md#postauthtokenrolesrolename) | **POST** /auth/{token_mount_path}/roles/{role_name} | 
+[**PostAuthTokenTidy**](Auth.md#postauthtokentidy) | **POST** /auth/{token_mount_path}/tidy | This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
+[**PostAuthUserpassLoginUsername**](Auth.md#postauthuserpassloginusername) | **POST** /auth/{userpass_mount_path}/login/{username} | Log in with a username and password.
+[**PostAuthUserpassUsersUsername**](Auth.md#postauthuserpassusersusername) | **POST** /auth/{userpass_mount_path}/users/{username} | Manage users allowed to authenticate.
+[**PostAuthUserpassUsersUsernamePassword**](Auth.md#postauthuserpassusersusernamepassword) | **POST** /auth/{userpass_mount_path}/users/{username}/password | Reset user&#39;s password.
+[**PostAuthUserpassUsersUsernamePolicies**](Auth.md#postauthuserpassusersusernamepolicies) | **POST** /auth/{userpass_mount_path}/users/{username}/policies | Update the policies associated with the username.
 
 
-<a name="deleteapprolerolerolename"></a>
-# **DeleteApproleRoleRoleName**
-> void DeleteApproleRoleRoleName (string roleName, string mountPath = null)
+<a name="deleteauthalicloudrolerole"></a>
+# **DeleteAuthAlicloudRoleRole**
+> void DeleteAuthAlicloudRoleRole (string role, string alicloudMountPath = null)
+
+Create a role and associate policies to it.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DeleteAuthAlicloudRoleRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var role = "role_example";  // string | The name of the role as it should appear in Vault.
+            var alicloudMountPath = "\"alicloud\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "alicloud")
+
+            try
+            {
+                // Create a role and associate policies to it.
+                apiInstance.DeleteAuthAlicloudRoleRole(role, alicloudMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.DeleteAuthAlicloudRoleRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **role** | **string**| The name of the role as it should appear in Vault. | 
+ **alicloudMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;alicloud&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | empty body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deleteauthapprolerolerolename"></a>
+# **DeleteAuthApproleRoleRoleName**
+> void DeleteAuthApproleRoleRoleName (string roleName, string approleMountPath = null)
 
 Register an role with the backend.
 
@@ -190,7 +359,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteApproleRoleRoleNameExample
+    public class DeleteAuthApproleRoleRoleNameExample
     {
         public static void Main()
         {
@@ -201,16 +370,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Register an role with the backend.
-                apiInstance.DeleteApproleRoleRoleName(roleName, mountPath);
+                apiInstance.DeleteAuthApproleRoleRoleName(roleName, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteApproleRoleRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -224,7 +393,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -247,9 +416,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteapprolerolerolenamebindsecretid"></a>
-# **DeleteApproleRoleRoleNameBindSecretId**
-> void DeleteApproleRoleRoleNameBindSecretId (string roleName, string mountPath = null)
+<a name="deleteauthapprolerolerolenamebindsecretid"></a>
+# **DeleteAuthApproleRoleRoleNameBindSecretId**
+> void DeleteAuthApproleRoleRoleNameBindSecretId (string roleName, string approleMountPath = null)
 
 Impose secret_id to be presented during login using this role.
 
@@ -264,7 +433,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteApproleRoleRoleNameBindSecretIdExample
+    public class DeleteAuthApproleRoleRoleNameBindSecretIdExample
     {
         public static void Main()
         {
@@ -275,16 +444,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Impose secret_id to be presented during login using this role.
-                apiInstance.DeleteApproleRoleRoleNameBindSecretId(roleName, mountPath);
+                apiInstance.DeleteAuthApproleRoleRoleNameBindSecretId(roleName, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteApproleRoleRoleNameBindSecretId: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNameBindSecretId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -298,7 +467,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -321,9 +490,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteapprolerolerolenameboundcidrlist"></a>
-# **DeleteApproleRoleRoleNameBoundCidrList**
-> void DeleteApproleRoleRoleNameBoundCidrList (string roleName, string mountPath = null)
+<a name="deleteauthapprolerolerolenameboundcidrlist"></a>
+# **DeleteAuthApproleRoleRoleNameBoundCidrList**
+> void DeleteAuthApproleRoleRoleNameBoundCidrList (string roleName, string approleMountPath = null)
 
 Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
 
@@ -338,7 +507,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteApproleRoleRoleNameBoundCidrListExample
+    public class DeleteAuthApproleRoleRoleNameBoundCidrListExample
     {
         public static void Main()
         {
@@ -349,16 +518,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-                apiInstance.DeleteApproleRoleRoleNameBoundCidrList(roleName, mountPath);
+                apiInstance.DeleteAuthApproleRoleRoleNameBoundCidrList(roleName, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteApproleRoleRoleNameBoundCidrList: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNameBoundCidrList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -372,7 +541,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -395,9 +564,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteapprolerolerolenameperiod"></a>
-# **DeleteApproleRoleRoleNamePeriod**
-> void DeleteApproleRoleRoleNamePeriod (string roleName, string mountPath = null)
+<a name="deleteauthapprolerolerolenameperiod"></a>
+# **DeleteAuthApproleRoleRoleNamePeriod**
+> void DeleteAuthApproleRoleRoleNamePeriod (string roleName, string approleMountPath = null)
 
 Updates the value of 'period' on the role
 
@@ -412,7 +581,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteApproleRoleRoleNamePeriodExample
+    public class DeleteAuthApproleRoleRoleNamePeriodExample
     {
         public static void Main()
         {
@@ -423,16 +592,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Updates the value of 'period' on the role
-                apiInstance.DeleteApproleRoleRoleNamePeriod(roleName, mountPath);
+                apiInstance.DeleteAuthApproleRoleRoleNamePeriod(roleName, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteApproleRoleRoleNamePeriod: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNamePeriod: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -446,7 +615,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -469,9 +638,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteapprolerolerolenamepolicies"></a>
-# **DeleteApproleRoleRoleNamePolicies**
-> void DeleteApproleRoleRoleNamePolicies (string roleName, string mountPath = null)
+<a name="deleteauthapprolerolerolenamepolicies"></a>
+# **DeleteAuthApproleRoleRoleNamePolicies**
+> void DeleteAuthApproleRoleRoleNamePolicies (string roleName, string approleMountPath = null)
 
 Policies of the role.
 
@@ -486,7 +655,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteApproleRoleRoleNamePoliciesExample
+    public class DeleteAuthApproleRoleRoleNamePoliciesExample
     {
         public static void Main()
         {
@@ -497,16 +666,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Policies of the role.
-                apiInstance.DeleteApproleRoleRoleNamePolicies(roleName, mountPath);
+                apiInstance.DeleteAuthApproleRoleRoleNamePolicies(roleName, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteApproleRoleRoleNamePolicies: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNamePolicies: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -520,7 +689,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -543,9 +712,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteapprolerolerolenamesecretidaccessordestroy"></a>
-# **DeleteApproleRoleRoleNameSecretIdAccessorDestroy**
-> void DeleteApproleRoleRoleNameSecretIdAccessorDestroy (string roleName, string mountPath = null)
+<a name="deleteauthapprolerolerolenamesecretidaccessordestroy"></a>
+# **DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroy**
+> void DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroy (string roleName, string approleMountPath = null)
 
 
 
@@ -560,7 +729,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteApproleRoleRoleNameSecretIdAccessorDestroyExample
+    public class DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroyExample
     {
         public static void Main()
         {
@@ -571,15 +740,15 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
-                apiInstance.DeleteApproleRoleRoleNameSecretIdAccessorDestroy(roleName, mountPath);
+                apiInstance.DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroy(roleName, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteApproleRoleRoleNameSecretIdAccessorDestroy: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroy: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -593,7 +762,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -616,9 +785,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteapprolerolerolenamesecretidboundcidrs"></a>
-# **DeleteApproleRoleRoleNameSecretIdBoundCidrs**
-> void DeleteApproleRoleRoleNameSecretIdBoundCidrs (string roleName, string mountPath = null)
+<a name="deleteauthapprolerolerolenamesecretidboundcidrs"></a>
+# **DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs**
+> void DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs (string roleName, string approleMountPath = null)
 
 Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
 
@@ -633,7 +802,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteApproleRoleRoleNameSecretIdBoundCidrsExample
+    public class DeleteAuthApproleRoleRoleNameSecretIdBoundCidrsExample
     {
         public static void Main()
         {
@@ -644,16 +813,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-                apiInstance.DeleteApproleRoleRoleNameSecretIdBoundCidrs(roleName, mountPath);
+                apiInstance.DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs(roleName, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteApproleRoleRoleNameSecretIdBoundCidrs: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -667,7 +836,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -690,9 +859,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteapprolerolerolenamesecretiddestroy"></a>
-# **DeleteApproleRoleRoleNameSecretIdDestroy**
-> void DeleteApproleRoleRoleNameSecretIdDestroy (string roleName, string mountPath = null)
+<a name="deleteauthapprolerolerolenamesecretiddestroy"></a>
+# **DeleteAuthApproleRoleRoleNameSecretIdDestroy**
+> void DeleteAuthApproleRoleRoleNameSecretIdDestroy (string roleName, string approleMountPath = null)
 
 Invalidate an issued secret_id
 
@@ -707,7 +876,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteApproleRoleRoleNameSecretIdDestroyExample
+    public class DeleteAuthApproleRoleRoleNameSecretIdDestroyExample
     {
         public static void Main()
         {
@@ -718,16 +887,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Invalidate an issued secret_id
-                apiInstance.DeleteApproleRoleRoleNameSecretIdDestroy(roleName, mountPath);
+                apiInstance.DeleteAuthApproleRoleRoleNameSecretIdDestroy(roleName, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteApproleRoleRoleNameSecretIdDestroy: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNameSecretIdDestroy: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -741,7 +910,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -764,9 +933,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteapprolerolerolenamesecretidnumuses"></a>
-# **DeleteApproleRoleRoleNameSecretIdNumUses**
-> void DeleteApproleRoleRoleNameSecretIdNumUses (string roleName, string mountPath = null)
+<a name="deleteauthapprolerolerolenamesecretidnumuses"></a>
+# **DeleteAuthApproleRoleRoleNameSecretIdNumUses**
+> void DeleteAuthApproleRoleRoleNameSecretIdNumUses (string roleName, string approleMountPath = null)
 
 Use limit of the SecretID generated against the role.
 
@@ -781,7 +950,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteApproleRoleRoleNameSecretIdNumUsesExample
+    public class DeleteAuthApproleRoleRoleNameSecretIdNumUsesExample
     {
         public static void Main()
         {
@@ -792,16 +961,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Use limit of the SecretID generated against the role.
-                apiInstance.DeleteApproleRoleRoleNameSecretIdNumUses(roleName, mountPath);
+                apiInstance.DeleteAuthApproleRoleRoleNameSecretIdNumUses(roleName, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteApproleRoleRoleNameSecretIdNumUses: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNameSecretIdNumUses: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -815,7 +984,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -838,9 +1007,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteapprolerolerolenamesecretidttl"></a>
-# **DeleteApproleRoleRoleNameSecretIdTtl**
-> void DeleteApproleRoleRoleNameSecretIdTtl (string roleName, string mountPath = null)
+<a name="deleteauthapprolerolerolenamesecretidttl"></a>
+# **DeleteAuthApproleRoleRoleNameSecretIdTtl**
+> void DeleteAuthApproleRoleRoleNameSecretIdTtl (string roleName, string approleMountPath = null)
 
 Duration in seconds of the SecretID generated against the role.
 
@@ -855,7 +1024,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteApproleRoleRoleNameSecretIdTtlExample
+    public class DeleteAuthApproleRoleRoleNameSecretIdTtlExample
     {
         public static void Main()
         {
@@ -866,16 +1035,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Duration in seconds of the SecretID generated against the role.
-                apiInstance.DeleteApproleRoleRoleNameSecretIdTtl(roleName, mountPath);
+                apiInstance.DeleteAuthApproleRoleRoleNameSecretIdTtl(roleName, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteApproleRoleRoleNameSecretIdTtl: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNameSecretIdTtl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -889,7 +1058,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -912,9 +1081,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteapprolerolerolenametokenboundcidrs"></a>
-# **DeleteApproleRoleRoleNameTokenBoundCidrs**
-> void DeleteApproleRoleRoleNameTokenBoundCidrs (string roleName, string mountPath = null)
+<a name="deleteauthapprolerolerolenametokenboundcidrs"></a>
+# **DeleteAuthApproleRoleRoleNameTokenBoundCidrs**
+> void DeleteAuthApproleRoleRoleNameTokenBoundCidrs (string roleName, string approleMountPath = null)
 
 Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
 
@@ -929,7 +1098,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteApproleRoleRoleNameTokenBoundCidrsExample
+    public class DeleteAuthApproleRoleRoleNameTokenBoundCidrsExample
     {
         public static void Main()
         {
@@ -940,16 +1109,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
-                apiInstance.DeleteApproleRoleRoleNameTokenBoundCidrs(roleName, mountPath);
+                apiInstance.DeleteAuthApproleRoleRoleNameTokenBoundCidrs(roleName, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteApproleRoleRoleNameTokenBoundCidrs: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNameTokenBoundCidrs: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -963,7 +1132,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -986,9 +1155,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteapprolerolerolenametokenmaxttl"></a>
-# **DeleteApproleRoleRoleNameTokenMaxTtl**
-> void DeleteApproleRoleRoleNameTokenMaxTtl (string roleName, string mountPath = null)
+<a name="deleteauthapprolerolerolenametokenmaxttl"></a>
+# **DeleteAuthApproleRoleRoleNameTokenMaxTtl**
+> void DeleteAuthApproleRoleRoleNameTokenMaxTtl (string roleName, string approleMountPath = null)
 
 Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
 
@@ -1003,7 +1172,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteApproleRoleRoleNameTokenMaxTtlExample
+    public class DeleteAuthApproleRoleRoleNameTokenMaxTtlExample
     {
         public static void Main()
         {
@@ -1014,16 +1183,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
-                apiInstance.DeleteApproleRoleRoleNameTokenMaxTtl(roleName, mountPath);
+                apiInstance.DeleteAuthApproleRoleRoleNameTokenMaxTtl(roleName, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteApproleRoleRoleNameTokenMaxTtl: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNameTokenMaxTtl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1037,7 +1206,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -1060,9 +1229,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteapprolerolerolenametokennumuses"></a>
-# **DeleteApproleRoleRoleNameTokenNumUses**
-> void DeleteApproleRoleRoleNameTokenNumUses (string roleName, string mountPath = null)
+<a name="deleteauthapprolerolerolenametokennumuses"></a>
+# **DeleteAuthApproleRoleRoleNameTokenNumUses**
+> void DeleteAuthApproleRoleRoleNameTokenNumUses (string roleName, string approleMountPath = null)
 
 Number of times issued tokens can be used
 
@@ -1077,7 +1246,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteApproleRoleRoleNameTokenNumUsesExample
+    public class DeleteAuthApproleRoleRoleNameTokenNumUsesExample
     {
         public static void Main()
         {
@@ -1088,16 +1257,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Number of times issued tokens can be used
-                apiInstance.DeleteApproleRoleRoleNameTokenNumUses(roleName, mountPath);
+                apiInstance.DeleteAuthApproleRoleRoleNameTokenNumUses(roleName, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteApproleRoleRoleNameTokenNumUses: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNameTokenNumUses: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1111,7 +1280,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -1134,9 +1303,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteapprolerolerolenametokenttl"></a>
-# **DeleteApproleRoleRoleNameTokenTtl**
-> void DeleteApproleRoleRoleNameTokenTtl (string roleName, string mountPath = null)
+<a name="deleteauthapprolerolerolenametokenttl"></a>
+# **DeleteAuthApproleRoleRoleNameTokenTtl**
+> void DeleteAuthApproleRoleRoleNameTokenTtl (string roleName, string approleMountPath = null)
 
 Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
 
@@ -1151,7 +1320,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteApproleRoleRoleNameTokenTtlExample
+    public class DeleteAuthApproleRoleRoleNameTokenTtlExample
     {
         public static void Main()
         {
@@ -1162,16 +1331,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
-                apiInstance.DeleteApproleRoleRoleNameTokenTtl(roleName, mountPath);
+                apiInstance.DeleteAuthApproleRoleRoleNameTokenTtl(roleName, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteApproleRoleRoleNameTokenTtl: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthApproleRoleRoleNameTokenTtl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1185,7 +1354,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -1208,9 +1377,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteawsconfigcertificatecertname"></a>
-# **DeleteAwsConfigCertificateCertName**
-> void DeleteAwsConfigCertificateCertName (string certName, string mountPath = null)
+<a name="deleteauthawsconfigcertificatecertname"></a>
+# **DeleteAuthAwsConfigCertificateCertName**
+> void DeleteAuthAwsConfigCertificateCertName (string certName, string awsMountPath = null)
 
 
 
@@ -1225,7 +1394,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteAwsConfigCertificateCertNameExample
+    public class DeleteAuthAwsConfigCertificateCertNameExample
     {
         public static void Main()
         {
@@ -1236,15 +1405,15 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var certName = "certName_example";  // string | Name of the certificate.
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.DeleteAwsConfigCertificateCertName(certName, mountPath);
+                apiInstance.DeleteAuthAwsConfigCertificateCertName(certName, awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteAwsConfigCertificateCertName: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAwsConfigCertificateCertName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1258,7 +1427,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **certName** | **string**| Name of the certificate. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -1281,9 +1450,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteawsconfigclient"></a>
-# **DeleteAwsConfigClient**
-> void DeleteAwsConfigClient (string mountPath = null)
+<a name="deleteauthawsconfigclient"></a>
+# **DeleteAuthAwsConfigClient**
+> void DeleteAuthAwsConfigClient (string awsMountPath = null)
 
 
 
@@ -1298,7 +1467,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteAwsConfigClientExample
+    public class DeleteAuthAwsConfigClientExample
     {
         public static void Main()
         {
@@ -1308,15 +1477,15 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.DeleteAwsConfigClient(mountPath);
+                apiInstance.DeleteAuthAwsConfigClient(awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteAwsConfigClient: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAwsConfigClient: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1329,7 +1498,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -1352,9 +1521,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteawsconfigstsaccountid"></a>
-# **DeleteAwsConfigStsAccountId**
-> void DeleteAwsConfigStsAccountId (string accountId, string mountPath = null)
+<a name="deleteauthawsconfigstsaccountid"></a>
+# **DeleteAuthAwsConfigStsAccountId**
+> void DeleteAuthAwsConfigStsAccountId (string accountId, string awsMountPath = null)
 
 
 
@@ -1369,7 +1538,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteAwsConfigStsAccountIdExample
+    public class DeleteAuthAwsConfigStsAccountIdExample
     {
         public static void Main()
         {
@@ -1380,15 +1549,15 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var accountId = "accountId_example";  // string | AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account.
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.DeleteAwsConfigStsAccountId(accountId, mountPath);
+                apiInstance.DeleteAuthAwsConfigStsAccountId(accountId, awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteAwsConfigStsAccountId: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAwsConfigStsAccountId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1402,7 +1571,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accountId** | **string**| AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -1425,9 +1594,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteawsconfigtidyidentityaccesslist"></a>
-# **DeleteAwsConfigTidyIdentityAccesslist**
-> void DeleteAwsConfigTidyIdentityAccesslist (string mountPath = null)
+<a name="deleteauthawsconfigtidyidentityaccesslist"></a>
+# **DeleteAuthAwsConfigTidyIdentityAccesslist**
+> void DeleteAuthAwsConfigTidyIdentityAccesslist (string awsMountPath = null)
 
 
 
@@ -1442,7 +1611,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteAwsConfigTidyIdentityAccesslistExample
+    public class DeleteAuthAwsConfigTidyIdentityAccesslistExample
     {
         public static void Main()
         {
@@ -1452,15 +1621,15 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.DeleteAwsConfigTidyIdentityAccesslist(mountPath);
+                apiInstance.DeleteAuthAwsConfigTidyIdentityAccesslist(awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteAwsConfigTidyIdentityAccesslist: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAwsConfigTidyIdentityAccesslist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1473,7 +1642,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -1496,9 +1665,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteawsconfigtidyidentitywhitelist"></a>
-# **DeleteAwsConfigTidyIdentityWhitelist**
-> void DeleteAwsConfigTidyIdentityWhitelist (string mountPath = null)
+<a name="deleteauthawsconfigtidyidentitywhitelist"></a>
+# **DeleteAuthAwsConfigTidyIdentityWhitelist**
+> void DeleteAuthAwsConfigTidyIdentityWhitelist (string awsMountPath = null)
 
 
 
@@ -1513,7 +1682,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteAwsConfigTidyIdentityWhitelistExample
+    public class DeleteAuthAwsConfigTidyIdentityWhitelistExample
     {
         public static void Main()
         {
@@ -1523,15 +1692,15 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.DeleteAwsConfigTidyIdentityWhitelist(mountPath);
+                apiInstance.DeleteAuthAwsConfigTidyIdentityWhitelist(awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteAwsConfigTidyIdentityWhitelist: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAwsConfigTidyIdentityWhitelist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1544,7 +1713,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -1567,9 +1736,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteawsconfigtidyroletagblacklist"></a>
-# **DeleteAwsConfigTidyRoletagBlacklist**
-> void DeleteAwsConfigTidyRoletagBlacklist (string mountPath = null)
+<a name="deleteauthawsconfigtidyroletagblacklist"></a>
+# **DeleteAuthAwsConfigTidyRoletagBlacklist**
+> void DeleteAuthAwsConfigTidyRoletagBlacklist (string awsMountPath = null)
 
 
 
@@ -1584,7 +1753,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteAwsConfigTidyRoletagBlacklistExample
+    public class DeleteAuthAwsConfigTidyRoletagBlacklistExample
     {
         public static void Main()
         {
@@ -1594,15 +1763,15 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.DeleteAwsConfigTidyRoletagBlacklist(mountPath);
+                apiInstance.DeleteAuthAwsConfigTidyRoletagBlacklist(awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteAwsConfigTidyRoletagBlacklist: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAwsConfigTidyRoletagBlacklist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1615,7 +1784,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -1638,9 +1807,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteawsconfigtidyroletagdenylist"></a>
-# **DeleteAwsConfigTidyRoletagDenylist**
-> void DeleteAwsConfigTidyRoletagDenylist (string mountPath = null)
+<a name="deleteauthawsconfigtidyroletagdenylist"></a>
+# **DeleteAuthAwsConfigTidyRoletagDenylist**
+> void DeleteAuthAwsConfigTidyRoletagDenylist (string awsMountPath = null)
 
 
 
@@ -1655,7 +1824,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteAwsConfigTidyRoletagDenylistExample
+    public class DeleteAuthAwsConfigTidyRoletagDenylistExample
     {
         public static void Main()
         {
@@ -1665,15 +1834,15 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.DeleteAwsConfigTidyRoletagDenylist(mountPath);
+                apiInstance.DeleteAuthAwsConfigTidyRoletagDenylist(awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteAwsConfigTidyRoletagDenylist: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAwsConfigTidyRoletagDenylist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1686,7 +1855,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -1709,9 +1878,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteawsidentityaccesslistinstanceid"></a>
-# **DeleteAwsIdentityAccesslistInstanceId**
-> void DeleteAwsIdentityAccesslistInstanceId (string instanceId, string mountPath = null)
+<a name="deleteauthawsidentityaccesslistinstanceid"></a>
+# **DeleteAuthAwsIdentityAccesslistInstanceId**
+> void DeleteAuthAwsIdentityAccesslistInstanceId (string instanceId, string awsMountPath = null)
 
 
 
@@ -1726,7 +1895,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteAwsIdentityAccesslistInstanceIdExample
+    public class DeleteAuthAwsIdentityAccesslistInstanceIdExample
     {
         public static void Main()
         {
@@ -1737,15 +1906,15 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var instanceId = "instanceId_example";  // string | EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.DeleteAwsIdentityAccesslistInstanceId(instanceId, mountPath);
+                apiInstance.DeleteAuthAwsIdentityAccesslistInstanceId(instanceId, awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteAwsIdentityAccesslistInstanceId: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAwsIdentityAccesslistInstanceId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1759,7 +1928,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceId** | **string**| EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -1782,9 +1951,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteawsidentitywhitelistinstanceid"></a>
-# **DeleteAwsIdentityWhitelistInstanceId**
-> void DeleteAwsIdentityWhitelistInstanceId (string instanceId, string mountPath = null)
+<a name="deleteauthawsidentitywhitelistinstanceid"></a>
+# **DeleteAuthAwsIdentityWhitelistInstanceId**
+> void DeleteAuthAwsIdentityWhitelistInstanceId (string instanceId, string awsMountPath = null)
 
 
 
@@ -1799,7 +1968,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteAwsIdentityWhitelistInstanceIdExample
+    public class DeleteAuthAwsIdentityWhitelistInstanceIdExample
     {
         public static void Main()
         {
@@ -1810,15 +1979,15 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var instanceId = "instanceId_example";  // string | EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.DeleteAwsIdentityWhitelistInstanceId(instanceId, mountPath);
+                apiInstance.DeleteAuthAwsIdentityWhitelistInstanceId(instanceId, awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteAwsIdentityWhitelistInstanceId: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAwsIdentityWhitelistInstanceId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1832,7 +2001,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceId** | **string**| EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -1855,9 +2024,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteawsrolerole"></a>
-# **DeleteAwsRoleRole**
-> void DeleteAwsRoleRole (string role, string mountPath = null)
+<a name="deleteauthawsrolerole"></a>
+# **DeleteAuthAwsRoleRole**
+> void DeleteAuthAwsRoleRole (string role, string awsMountPath = null)
 
 
 
@@ -1872,7 +2041,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteAwsRoleRoleExample
+    public class DeleteAuthAwsRoleRoleExample
     {
         public static void Main()
         {
@@ -1883,15 +2052,15 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | Name of the role.
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.DeleteAwsRoleRole(role, mountPath);
+                apiInstance.DeleteAuthAwsRoleRole(role, awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteAwsRoleRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAwsRoleRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1905,7 +2074,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **role** | **string**| Name of the role. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -1928,9 +2097,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteawsroletagblacklistroletag"></a>
-# **DeleteAwsRoletagBlacklistRoleTag**
-> void DeleteAwsRoletagBlacklistRoleTag (string roleTag, string mountPath = null)
+<a name="deleteauthawsroletagblacklistroletag"></a>
+# **DeleteAuthAwsRoletagBlacklistRoleTag**
+> void DeleteAuthAwsRoletagBlacklistRoleTag (string roleTag, string awsMountPath = null)
 
 
 
@@ -1945,7 +2114,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteAwsRoletagBlacklistRoleTagExample
+    public class DeleteAuthAwsRoletagBlacklistRoleTagExample
     {
         public static void Main()
         {
@@ -1956,15 +2125,15 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleTag = "roleTag_example";  // string | Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.DeleteAwsRoletagBlacklistRoleTag(roleTag, mountPath);
+                apiInstance.DeleteAuthAwsRoletagBlacklistRoleTag(roleTag, awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteAwsRoletagBlacklistRoleTag: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAwsRoletagBlacklistRoleTag: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1978,7 +2147,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleTag** | **string**| Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -2001,9 +2170,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteawsroletagdenylistroletag"></a>
-# **DeleteAwsRoletagDenylistRoleTag**
-> void DeleteAwsRoletagDenylistRoleTag (string roleTag, string mountPath = null)
+<a name="deleteauthawsroletagdenylistroletag"></a>
+# **DeleteAuthAwsRoletagDenylistRoleTag**
+> void DeleteAuthAwsRoletagDenylistRoleTag (string roleTag, string awsMountPath = null)
 
 
 
@@ -2018,7 +2187,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteAwsRoletagDenylistRoleTagExample
+    public class DeleteAuthAwsRoletagDenylistRoleTagExample
     {
         public static void Main()
         {
@@ -2029,15 +2198,15 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleTag = "roleTag_example";  // string | Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.DeleteAwsRoletagDenylistRoleTag(roleTag, mountPath);
+                apiInstance.DeleteAuthAwsRoletagDenylistRoleTag(roleTag, awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteAwsRoletagDenylistRoleTag: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthAwsRoletagDenylistRoleTag: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2051,7 +2220,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleTag** | **string**| Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -2074,9 +2243,153 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletecertcertsname"></a>
-# **DeleteCertCertsName**
-> void DeleteCertCertsName (string name, string mountPath = null)
+<a name="deleteauthazureconfig"></a>
+# **DeleteAuthAzureConfig**
+> void DeleteAuthAzureConfig (string azureMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DeleteAuthAzureConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var azureMountPath = "\"azure\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "azure")
+
+            try
+            {
+                apiInstance.DeleteAuthAzureConfig(azureMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.DeleteAuthAzureConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **azureMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;azure&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | empty body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deleteauthazurerolename"></a>
+# **DeleteAuthAzureRoleName**
+> void DeleteAuthAzureRoleName (string name, string azureMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DeleteAuthAzureRoleNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the role.
+            var azureMountPath = "\"azure\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "azure")
+
+            try
+            {
+                apiInstance.DeleteAuthAzureRoleName(name, azureMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.DeleteAuthAzureRoleName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role. | 
+ **azureMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;azure&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | empty body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deleteauthcertcertsname"></a>
+# **DeleteAuthCertCertsName**
+> void DeleteAuthCertCertsName (string name, string certMountPath = null)
 
 Manage trusted certificates used for authentication.
 
@@ -2091,7 +2404,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteCertCertsNameExample
+    public class DeleteAuthCertCertsNameExample
     {
         public static void Main()
         {
@@ -2102,16 +2415,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the certificate
-            var mountPath = "\"cert\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cert")
+            var certMountPath = "\"cert\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cert")
 
             try
             {
                 // Manage trusted certificates used for authentication.
-                apiInstance.DeleteCertCertsName(name, mountPath);
+                apiInstance.DeleteAuthCertCertsName(name, certMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteCertCertsName: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthCertCertsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2125,7 +2438,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The name of the certificate | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cert&quot;]
+ **certMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cert&quot;]
 
 ### Return type
 
@@ -2148,9 +2461,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletecertcrlsname"></a>
-# **DeleteCertCrlsName**
-> void DeleteCertCrlsName (string name, string mountPath = null)
+<a name="deleteauthcertcrlsname"></a>
+# **DeleteAuthCertCrlsName**
+> void DeleteAuthCertCrlsName (string name, string certMountPath = null)
 
 Manage Certificate Revocation Lists checked during authentication.
 
@@ -2165,7 +2478,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteCertCrlsNameExample
+    public class DeleteAuthCertCrlsNameExample
     {
         public static void Main()
         {
@@ -2176,16 +2489,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the certificate
-            var mountPath = "\"cert\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cert")
+            var certMountPath = "\"cert\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cert")
 
             try
             {
                 // Manage Certificate Revocation Lists checked during authentication.
-                apiInstance.DeleteCertCrlsName(name, mountPath);
+                apiInstance.DeleteAuthCertCrlsName(name, certMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteCertCrlsName: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthCertCrlsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2199,7 +2512,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The name of the certificate | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cert&quot;]
+ **certMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cert&quot;]
 
 ### Return type
 
@@ -2222,9 +2535,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletecfrolesrole"></a>
-# **DeleteCfRolesRole**
-> void DeleteCfRolesRole (string role, string mountPath = null)
+<a name="deleteauthcfconfig"></a>
+# **DeleteAuthCfConfig**
+> void DeleteAuthCfConfig (string cfMountPath = null)
 
 
 
@@ -2239,7 +2552,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteCfRolesRoleExample
+    public class DeleteAuthCfConfigExample
     {
         public static void Main()
         {
@@ -2249,16 +2562,15 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var role = "role_example";  // string | The name of the role.
-            var mountPath = "\"cf\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cf")
+            var cfMountPath = "\"cf\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cf")
 
             try
             {
-                apiInstance.DeleteCfRolesRole(role, mountPath);
+                apiInstance.DeleteAuthCfConfig(cfMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteCfRolesRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthCfConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2271,8 +2583,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **role** | **string**| The name of the role. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cf&quot;]
+ **cfMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cf&quot;]
 
 ### Return type
 
@@ -2295,9 +2606,156 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletegithubmapteamskey"></a>
-# **DeleteGithubMapTeamsKey**
-> void DeleteGithubMapTeamsKey (string key, string mountPath = null)
+<a name="deleteauthcfrolesrole"></a>
+# **DeleteAuthCfRolesRole**
+> void DeleteAuthCfRolesRole (string role, string cfMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DeleteAuthCfRolesRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var role = "role_example";  // string | The name of the role.
+            var cfMountPath = "\"cf\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cf")
+
+            try
+            {
+                apiInstance.DeleteAuthCfRolesRole(role, cfMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.DeleteAuthCfRolesRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **role** | **string**| The name of the role. | 
+ **cfMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cf&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | empty body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deleteauthgcprolename"></a>
+# **DeleteAuthGcpRoleName**
+> void DeleteAuthGcpRoleName (string name, string gcpMountPath = null)
+
+Create a GCP role with associated policies and required attributes.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DeleteAuthGcpRoleNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the role.
+            var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+
+            try
+            {
+                // Create a GCP role with associated policies and required attributes.
+                apiInstance.DeleteAuthGcpRoleName(name, gcpMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.DeleteAuthGcpRoleName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role. | 
+ **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | empty body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deleteauthgithubmapteamskey"></a>
+# **DeleteAuthGithubMapTeamsKey**
+> void DeleteAuthGithubMapTeamsKey (string key, string githubMountPath = null)
 
 Read/write/delete a single teams mapping
 
@@ -2312,7 +2770,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteGithubMapTeamsKeyExample
+    public class DeleteAuthGithubMapTeamsKeyExample
     {
         public static void Main()
         {
@@ -2323,16 +2781,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Key for the teams mapping
-            var mountPath = "\"github\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "github")
+            var githubMountPath = "\"github\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "github")
 
             try
             {
                 // Read/write/delete a single teams mapping
-                apiInstance.DeleteGithubMapTeamsKey(key, mountPath);
+                apiInstance.DeleteAuthGithubMapTeamsKey(key, githubMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteGithubMapTeamsKey: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthGithubMapTeamsKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2346,7 +2804,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| Key for the teams mapping | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;github&quot;]
+ **githubMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;github&quot;]
 
 ### Return type
 
@@ -2369,9 +2827,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletegithubmapuserskey"></a>
-# **DeleteGithubMapUsersKey**
-> void DeleteGithubMapUsersKey (string key, string mountPath = null)
+<a name="deleteauthgithubmapuserskey"></a>
+# **DeleteAuthGithubMapUsersKey**
+> void DeleteAuthGithubMapUsersKey (string key, string githubMountPath = null)
 
 Read/write/delete a single users mapping
 
@@ -2386,7 +2844,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteGithubMapUsersKeyExample
+    public class DeleteAuthGithubMapUsersKeyExample
     {
         public static void Main()
         {
@@ -2397,16 +2855,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Key for the users mapping
-            var mountPath = "\"github\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "github")
+            var githubMountPath = "\"github\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "github")
 
             try
             {
                 // Read/write/delete a single users mapping
-                apiInstance.DeleteGithubMapUsersKey(key, mountPath);
+                apiInstance.DeleteAuthGithubMapUsersKey(key, githubMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteGithubMapUsersKey: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthGithubMapUsersKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2420,7 +2878,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| Key for the users mapping | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;github&quot;]
+ **githubMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;github&quot;]
 
 ### Return type
 
@@ -2443,82 +2901,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletekerberosgroupsname"></a>
-# **DeleteKerberosGroupsName**
-> void DeleteKerberosGroupsName (string name, string mountPath = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class DeleteKerberosGroupsNameExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var name = "name_example";  // string | Name of the LDAP group.
-            var mountPath = "\"kerberos\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kerberos")
-
-            try
-            {
-                apiInstance.DeleteKerberosGroupsName(name, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.DeleteKerberosGroupsName: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string**| Name of the LDAP group. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kerberos&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **204** | empty body |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="deleteoidcrolename"></a>
-# **DeleteOidcRoleName**
-> void DeleteOidcRoleName (string name, string mountPath = null)
+<a name="deleteauthjwtrolename"></a>
+# **DeleteAuthJwtRoleName**
+> void DeleteAuthJwtRoleName (string name, string jwtMountPath = null)
 
 Delete an existing role.
 
@@ -2533,7 +2918,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteOidcRoleNameExample
+    public class DeleteAuthJwtRoleNameExample
     {
         public static void Main()
         {
@@ -2544,16 +2929,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
-            var mountPath = "\"oidc\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oidc")
+            var jwtMountPath = "\"jwt\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "jwt")
 
             try
             {
                 // Delete an existing role.
-                apiInstance.DeleteOidcRoleName(name, mountPath);
+                apiInstance.DeleteAuthJwtRoleName(name, jwtMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteOidcRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthJwtRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2567,7 +2952,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the role. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oidc&quot;]
+ **jwtMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;jwt&quot;]
 
 ### Return type
 
@@ -2590,9 +2975,230 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteradiususersname"></a>
-# **DeleteRadiusUsersName**
-> void DeleteRadiusUsersName (string name, string mountPath = null)
+<a name="deleteauthkerberosgroupsname"></a>
+# **DeleteAuthKerberosGroupsName**
+> void DeleteAuthKerberosGroupsName (string name, string kerberosMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DeleteAuthKerberosGroupsNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the LDAP group.
+            var kerberosMountPath = "\"kerberos\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kerberos")
+
+            try
+            {
+                apiInstance.DeleteAuthKerberosGroupsName(name, kerberosMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.DeleteAuthKerberosGroupsName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the LDAP group. | 
+ **kerberosMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kerberos&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | empty body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deleteauthkubernetesrolename"></a>
+# **DeleteAuthKubernetesRoleName**
+> void DeleteAuthKubernetesRoleName (string name, string kubernetesMountPath = null)
+
+Register an role with the backend.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DeleteAuthKubernetesRoleNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the role.
+            var kubernetesMountPath = "\"kubernetes\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kubernetes")
+
+            try
+            {
+                // Register an role with the backend.
+                apiInstance.DeleteAuthKubernetesRoleName(name, kubernetesMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.DeleteAuthKubernetesRoleName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role. | 
+ **kubernetesMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kubernetes&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | empty body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deleteauthldapgroupsname"></a>
+# **DeleteAuthLdapGroupsName**
+> void DeleteAuthLdapGroupsName (string name, string ldapMountPath = null)
+
+Manage additional groups for users allowed to authenticate.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DeleteAuthLdapGroupsNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the LDAP group.
+            var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+
+            try
+            {
+                // Manage additional groups for users allowed to authenticate.
+                apiInstance.DeleteAuthLdapGroupsName(name, ldapMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.DeleteAuthLdapGroupsName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the LDAP group. | 
+ **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | empty body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deleteauthldapusersname"></a>
+# **DeleteAuthLdapUsersName**
+> void DeleteAuthLdapUsersName (string name, string ldapMountPath = null)
 
 Manage users allowed to authenticate.
 
@@ -2607,7 +3213,449 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteRadiusUsersNameExample
+    public class DeleteAuthLdapUsersNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the LDAP user.
+            var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+
+            try
+            {
+                // Manage users allowed to authenticate.
+                apiInstance.DeleteAuthLdapUsersName(name, ldapMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.DeleteAuthLdapUsersName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the LDAP user. | 
+ **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | empty body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deleteauthociconfig"></a>
+# **DeleteAuthOciConfig**
+> void DeleteAuthOciConfig (string ociMountPath = null)
+
+Manages the configuration for the Vault Auth Plugin.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DeleteAuthOciConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var ociMountPath = "\"oci\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oci")
+
+            try
+            {
+                // Manages the configuration for the Vault Auth Plugin.
+                apiInstance.DeleteAuthOciConfig(ociMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.DeleteAuthOciConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ociMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oci&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | empty body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deleteauthocirolerole"></a>
+# **DeleteAuthOciRoleRole**
+> void DeleteAuthOciRoleRole (string role, string ociMountPath = null)
+
+Create a role and associate policies to it.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DeleteAuthOciRoleRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var role = "role_example";  // string | Name of the role.
+            var ociMountPath = "\"oci\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oci")
+
+            try
+            {
+                // Create a role and associate policies to it.
+                apiInstance.DeleteAuthOciRoleRole(role, ociMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.DeleteAuthOciRoleRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **role** | **string**| Name of the role. | 
+ **ociMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oci&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | empty body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deleteauthoidcrolename"></a>
+# **DeleteAuthOidcRoleName**
+> void DeleteAuthOidcRoleName (string name, string oidcMountPath = null)
+
+Delete an existing role.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DeleteAuthOidcRoleNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the role.
+            var oidcMountPath = "\"oidc\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oidc")
+
+            try
+            {
+                // Delete an existing role.
+                apiInstance.DeleteAuthOidcRoleName(name, oidcMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.DeleteAuthOidcRoleName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role. | 
+ **oidcMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oidc&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | empty body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deleteauthoktagroupsname"></a>
+# **DeleteAuthOktaGroupsName**
+> void DeleteAuthOktaGroupsName (string name, string oktaMountPath = null)
+
+Manage users allowed to authenticate.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DeleteAuthOktaGroupsNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the Okta group.
+            var oktaMountPath = "\"okta\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "okta")
+
+            try
+            {
+                // Manage users allowed to authenticate.
+                apiInstance.DeleteAuthOktaGroupsName(name, oktaMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.DeleteAuthOktaGroupsName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the Okta group. | 
+ **oktaMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;okta&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | empty body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deleteauthoktausersname"></a>
+# **DeleteAuthOktaUsersName**
+> void DeleteAuthOktaUsersName (string name, string oktaMountPath = null)
+
+Manage additional groups for users allowed to authenticate.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DeleteAuthOktaUsersNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the user.
+            var oktaMountPath = "\"okta\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "okta")
+
+            try
+            {
+                // Manage additional groups for users allowed to authenticate.
+                apiInstance.DeleteAuthOktaUsersName(name, oktaMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.DeleteAuthOktaUsersName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the user. | 
+ **oktaMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;okta&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | empty body |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deleteauthradiususersname"></a>
+# **DeleteAuthRadiusUsersName**
+> void DeleteAuthRadiusUsersName (string name, string radiusMountPath = null)
+
+Manage users allowed to authenticate.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class DeleteAuthRadiusUsersNameExample
     {
         public static void Main()
         {
@@ -2618,16 +3666,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the RADIUS user.
-            var mountPath = "\"radius\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "radius")
+            var radiusMountPath = "\"radius\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "radius")
 
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.DeleteRadiusUsersName(name, mountPath);
+                apiInstance.DeleteAuthRadiusUsersName(name, radiusMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteRadiusUsersName: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthRadiusUsersName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2641,7 +3689,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the RADIUS user. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;radius&quot;]
+ **radiusMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;radius&quot;]
 
 ### Return type
 
@@ -2664,9 +3712,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletetokenrolesrolename"></a>
-# **DeleteTokenRolesRoleName**
-> void DeleteTokenRolesRoleName (string roleName, string mountPath = null)
+<a name="deleteauthtokenrolesrolename"></a>
+# **DeleteAuthTokenRolesRoleName**
+> void DeleteAuthTokenRolesRoleName (string roleName, string tokenMountPath = null)
 
 
 
@@ -2681,7 +3729,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteTokenRolesRoleNameExample
+    public class DeleteAuthTokenRolesRoleNameExample
     {
         public static void Main()
         {
@@ -2692,15 +3740,15 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role
-            var mountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
+            var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
 
             try
             {
-                apiInstance.DeleteTokenRolesRoleName(roleName, mountPath);
+                apiInstance.DeleteAuthTokenRolesRoleName(roleName, tokenMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteTokenRolesRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthTokenRolesRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2714,7 +3762,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
+ **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
 
 ### Return type
 
@@ -2737,9 +3785,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteuserpassusersusername"></a>
-# **DeleteUserpassUsersUsername**
-> void DeleteUserpassUsersUsername (string username, string mountPath = null)
+<a name="deleteauthuserpassusersusername"></a>
+# **DeleteAuthUserpassUsersUsername**
+> void DeleteAuthUserpassUsersUsername (string username, string userpassMountPath = null)
 
 Manage users allowed to authenticate.
 
@@ -2754,7 +3802,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteUserpassUsersUsernameExample
+    public class DeleteAuthUserpassUsersUsernameExample
     {
         public static void Main()
         {
@@ -2765,16 +3813,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var username = "username_example";  // string | Username for this user.
-            var mountPath = "\"userpass\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "userpass")
+            var userpassMountPath = "\"userpass\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "userpass")
 
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.DeleteUserpassUsersUsername(username, mountPath);
+                apiInstance.DeleteAuthUserpassUsersUsername(username, userpassMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.DeleteUserpassUsersUsername: " + e.Message );
+                Debug.Print("Exception when calling Auth.DeleteAuthUserpassUsersUsername: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2788,7 +3836,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **username** | **string**| Username for this user. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;userpass&quot;]
+ **userpassMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;userpass&quot;]
 
 ### Return type
 
@@ -2811,597 +3859,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listapprolerolerolenamesecretid"></a>
-# **ListApproleRoleRoleNameSecretId**
-> void ListApproleRoleRoleNameSecretId (string roleName, string list, string mountPath = null)
-
-Generate a SecretID against this role.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ListApproleRoleRoleNameSecretIdExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var list = "true";  // string | Must be set to `true`
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-
-            try
-            {
-                // Generate a SecretID against this role.
-                apiInstance.ListApproleRoleRoleNameSecretId(roleName, list, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ListApproleRoleRoleNameSecretId: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **list** | **string**| Must be set to &#x60;true&#x60; | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="listawsconfigcertificates"></a>
-# **ListAwsConfigCertificates**
-> void ListAwsConfigCertificates (string list, string mountPath = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ListAwsConfigCertificatesExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var list = "true";  // string | Must be set to `true`
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-
-            try
-            {
-                apiInstance.ListAwsConfigCertificates(list, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ListAwsConfigCertificates: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **list** | **string**| Must be set to &#x60;true&#x60; | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="listawsconfigsts"></a>
-# **ListAwsConfigSts**
-> void ListAwsConfigSts (string list, string mountPath = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ListAwsConfigStsExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var list = "true";  // string | Must be set to `true`
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-
-            try
-            {
-                apiInstance.ListAwsConfigSts(list, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ListAwsConfigSts: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **list** | **string**| Must be set to &#x60;true&#x60; | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="listawsidentityaccesslist"></a>
-# **ListAwsIdentityAccesslist**
-> void ListAwsIdentityAccesslist (string list, string mountPath = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ListAwsIdentityAccesslistExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var list = "true";  // string | Must be set to `true`
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-
-            try
-            {
-                apiInstance.ListAwsIdentityAccesslist(list, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ListAwsIdentityAccesslist: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **list** | **string**| Must be set to &#x60;true&#x60; | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="listawsidentitywhitelist"></a>
-# **ListAwsIdentityWhitelist**
-> void ListAwsIdentityWhitelist (string list, string mountPath = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ListAwsIdentityWhitelistExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var list = "true";  // string | Must be set to `true`
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-
-            try
-            {
-                apiInstance.ListAwsIdentityWhitelist(list, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ListAwsIdentityWhitelist: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **list** | **string**| Must be set to &#x60;true&#x60; | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="listawsroletagblacklist"></a>
-# **ListAwsRoletagBlacklist**
-> void ListAwsRoletagBlacklist (string list, string mountPath = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ListAwsRoletagBlacklistExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var list = "true";  // string | Must be set to `true`
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-
-            try
-            {
-                apiInstance.ListAwsRoletagBlacklist(list, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ListAwsRoletagBlacklist: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **list** | **string**| Must be set to &#x60;true&#x60; | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="listawsroletagdenylist"></a>
-# **ListAwsRoletagDenylist**
-> void ListAwsRoletagDenylist (string list, string mountPath = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ListAwsRoletagDenylistExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var list = "true";  // string | Must be set to `true`
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-
-            try
-            {
-                apiInstance.ListAwsRoletagDenylist(list, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ListAwsRoletagDenylist: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **list** | **string**| Must be set to &#x60;true&#x60; | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="listcertcerts"></a>
-# **ListCertCerts**
-> void ListCertCerts (string list, string mountPath = null)
-
-Manage trusted certificates used for authentication.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ListCertCertsExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var list = "true";  // string | Must be set to `true`
-            var mountPath = "\"cert\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cert")
-
-            try
-            {
-                // Manage trusted certificates used for authentication.
-                apiInstance.ListCertCerts(list, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ListCertCerts: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **list** | **string**| Must be set to &#x60;true&#x60; | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cert&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="listgcproles"></a>
-# **ListGcpRoles**
-> void ListGcpRoles (string list, string mountPath = null)
+<a name="getauthalicloudrole"></a>
+# **GetAuthAlicloudRole**
+> void GetAuthAlicloudRole (string list, string alicloudMountPath = null)
 
 Lists all the roles that are registered with Vault.
 
@@ -3416,7 +3876,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ListGcpRolesExample
+    public class GetAuthAlicloudRoleExample
     {
         public static void Main()
         {
@@ -3427,16 +3887,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
-            var mountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+            var alicloudMountPath = "\"alicloud\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "alicloud")
 
             try
             {
                 // Lists all the roles that are registered with Vault.
-                apiInstance.ListGcpRoles(list, mountPath);
+                apiInstance.GetAuthAlicloudRole(list, alicloudMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.ListGcpRoles: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAlicloudRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3450,7 +3910,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list** | **string**| Must be set to &#x60;true&#x60; | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
+ **alicloudMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;alicloud&quot;]
 
 ### Return type
 
@@ -3473,9 +3933,1343 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listkerberosgroups"></a>
-# **ListKerberosGroups**
-> void ListKerberosGroups (string list, string mountPath = null)
+<a name="getauthalicloudrolerole"></a>
+# **GetAuthAlicloudRoleRole**
+> void GetAuthAlicloudRoleRole (string role, string alicloudMountPath = null)
+
+Create a role and associate policies to it.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAlicloudRoleRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var role = "role_example";  // string | The name of the role as it should appear in Vault.
+            var alicloudMountPath = "\"alicloud\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "alicloud")
+
+            try
+            {
+                // Create a role and associate policies to it.
+                apiInstance.GetAuthAlicloudRoleRole(role, alicloudMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAlicloudRoleRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **role** | **string**| The name of the role as it should appear in Vault. | 
+ **alicloudMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;alicloud&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthalicloudroles"></a>
+# **GetAuthAlicloudRoles**
+> void GetAuthAlicloudRoles (string list, string alicloudMountPath = null)
+
+Lists all the roles that are registered with Vault.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAlicloudRolesExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var alicloudMountPath = "\"alicloud\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "alicloud")
+
+            try
+            {
+                // Lists all the roles that are registered with Vault.
+                apiInstance.GetAuthAlicloudRoles(list, alicloudMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAlicloudRoles: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **alicloudMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;alicloud&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthapprolerole"></a>
+# **GetAuthApproleRole**
+> void GetAuthApproleRole (string list, string approleMountPath = null)
+
+Lists all the roles registered with the backend.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthApproleRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+
+            try
+            {
+                // Lists all the roles registered with the backend.
+                apiInstance.GetAuthApproleRole(list, approleMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthApproleRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthapprolerolerolename"></a>
+# **GetAuthApproleRoleRoleName**
+> void GetAuthApproleRoleRoleName (string roleName, string approleMountPath = null)
+
+Register an role with the backend.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthApproleRoleRoleNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+
+            try
+            {
+                // Register an role with the backend.
+                apiInstance.GetAuthApproleRoleRoleName(roleName, approleMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthapprolerolerolenamebindsecretid"></a>
+# **GetAuthApproleRoleRoleNameBindSecretId**
+> void GetAuthApproleRoleRoleNameBindSecretId (string roleName, string approleMountPath = null)
+
+Impose secret_id to be presented during login using this role.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthApproleRoleRoleNameBindSecretIdExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+
+            try
+            {
+                // Impose secret_id to be presented during login using this role.
+                apiInstance.GetAuthApproleRoleRoleNameBindSecretId(roleName, approleMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNameBindSecretId: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthapprolerolerolenameboundcidrlist"></a>
+# **GetAuthApproleRoleRoleNameBoundCidrList**
+> void GetAuthApproleRoleRoleNameBoundCidrList (string roleName, string approleMountPath = null)
+
+Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthApproleRoleRoleNameBoundCidrListExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+
+            try
+            {
+                // Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+                apiInstance.GetAuthApproleRoleRoleNameBoundCidrList(roleName, approleMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNameBoundCidrList: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthapprolerolerolenamelocalsecretids"></a>
+# **GetAuthApproleRoleRoleNameLocalSecretIds**
+> void GetAuthApproleRoleRoleNameLocalSecretIds (string roleName, string approleMountPath = null)
+
+Enables cluster local secret IDs
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthApproleRoleRoleNameLocalSecretIdsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+
+            try
+            {
+                // Enables cluster local secret IDs
+                apiInstance.GetAuthApproleRoleRoleNameLocalSecretIds(roleName, approleMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNameLocalSecretIds: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthapprolerolerolenameperiod"></a>
+# **GetAuthApproleRoleRoleNamePeriod**
+> void GetAuthApproleRoleRoleNamePeriod (string roleName, string approleMountPath = null)
+
+Updates the value of 'period' on the role
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthApproleRoleRoleNamePeriodExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+
+            try
+            {
+                // Updates the value of 'period' on the role
+                apiInstance.GetAuthApproleRoleRoleNamePeriod(roleName, approleMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNamePeriod: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthapprolerolerolenamepolicies"></a>
+# **GetAuthApproleRoleRoleNamePolicies**
+> void GetAuthApproleRoleRoleNamePolicies (string roleName, string approleMountPath = null)
+
+Policies of the role.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthApproleRoleRoleNamePoliciesExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+
+            try
+            {
+                // Policies of the role.
+                apiInstance.GetAuthApproleRoleRoleNamePolicies(roleName, approleMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNamePolicies: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthapprolerolerolenameroleid"></a>
+# **GetAuthApproleRoleRoleNameRoleId**
+> void GetAuthApproleRoleRoleNameRoleId (string roleName, string approleMountPath = null)
+
+Returns the 'role_id' of the role.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthApproleRoleRoleNameRoleIdExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+
+            try
+            {
+                // Returns the 'role_id' of the role.
+                apiInstance.GetAuthApproleRoleRoleNameRoleId(roleName, approleMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNameRoleId: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthapprolerolerolenamesecretid"></a>
+# **GetAuthApproleRoleRoleNameSecretId**
+> void GetAuthApproleRoleRoleNameSecretId (string roleName, string list, string approleMountPath = null)
+
+Generate a SecretID against this role.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthApproleRoleRoleNameSecretIdExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
+            var list = "true";  // string | Must be set to `true`
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+
+            try
+            {
+                // Generate a SecretID against this role.
+                apiInstance.GetAuthApproleRoleRoleNameSecretId(roleName, list, approleMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNameSecretId: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthapprolerolerolenamesecretidboundcidrs"></a>
+# **GetAuthApproleRoleRoleNameSecretIdBoundCidrs**
+> void GetAuthApproleRoleRoleNameSecretIdBoundCidrs (string roleName, string approleMountPath = null)
+
+Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthApproleRoleRoleNameSecretIdBoundCidrsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+
+            try
+            {
+                // Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+                apiInstance.GetAuthApproleRoleRoleNameSecretIdBoundCidrs(roleName, approleMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNameSecretIdBoundCidrs: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthapprolerolerolenamesecretidnumuses"></a>
+# **GetAuthApproleRoleRoleNameSecretIdNumUses**
+> void GetAuthApproleRoleRoleNameSecretIdNumUses (string roleName, string approleMountPath = null)
+
+Use limit of the SecretID generated against the role.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthApproleRoleRoleNameSecretIdNumUsesExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+
+            try
+            {
+                // Use limit of the SecretID generated against the role.
+                apiInstance.GetAuthApproleRoleRoleNameSecretIdNumUses(roleName, approleMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNameSecretIdNumUses: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthapprolerolerolenamesecretidttl"></a>
+# **GetAuthApproleRoleRoleNameSecretIdTtl**
+> void GetAuthApproleRoleRoleNameSecretIdTtl (string roleName, string approleMountPath = null)
+
+Duration in seconds of the SecretID generated against the role.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthApproleRoleRoleNameSecretIdTtlExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+
+            try
+            {
+                // Duration in seconds of the SecretID generated against the role.
+                apiInstance.GetAuthApproleRoleRoleNameSecretIdTtl(roleName, approleMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNameSecretIdTtl: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthapprolerolerolenametokenboundcidrs"></a>
+# **GetAuthApproleRoleRoleNameTokenBoundCidrs**
+> void GetAuthApproleRoleRoleNameTokenBoundCidrs (string roleName, string approleMountPath = null)
+
+Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthApproleRoleRoleNameTokenBoundCidrsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+
+            try
+            {
+                // Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
+                apiInstance.GetAuthApproleRoleRoleNameTokenBoundCidrs(roleName, approleMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNameTokenBoundCidrs: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthapprolerolerolenametokenmaxttl"></a>
+# **GetAuthApproleRoleRoleNameTokenMaxTtl**
+> void GetAuthApproleRoleRoleNameTokenMaxTtl (string roleName, string approleMountPath = null)
+
+Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthApproleRoleRoleNameTokenMaxTtlExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+
+            try
+            {
+                // Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
+                apiInstance.GetAuthApproleRoleRoleNameTokenMaxTtl(roleName, approleMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNameTokenMaxTtl: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthapprolerolerolenametokennumuses"></a>
+# **GetAuthApproleRoleRoleNameTokenNumUses**
+> void GetAuthApproleRoleRoleNameTokenNumUses (string roleName, string approleMountPath = null)
+
+Number of times issued tokens can be used
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthApproleRoleRoleNameTokenNumUsesExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+
+            try
+            {
+                // Number of times issued tokens can be used
+                apiInstance.GetAuthApproleRoleRoleNameTokenNumUses(roleName, approleMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNameTokenNumUses: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthapprolerolerolenametokenttl"></a>
+# **GetAuthApproleRoleRoleNameTokenTtl**
+> void GetAuthApproleRoleRoleNameTokenTtl (string roleName, string approleMountPath = null)
+
+Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthApproleRoleRoleNameTokenTtlExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+
+            try
+            {
+                // Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
+                apiInstance.GetAuthApproleRoleRoleNameTokenTtl(roleName, approleMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthApproleRoleRoleNameTokenTtl: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthawsconfigcertificatecertname"></a>
+# **GetAuthAwsConfigCertificateCertName**
+> void GetAuthAwsConfigCertificateCertName (string certName, string awsMountPath = null)
 
 
 
@@ -3490,7 +5284,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ListKerberosGroupsExample
+    public class GetAuthAwsConfigCertificateCertNameExample
     {
         public static void Main()
         {
@@ -3500,16 +5294,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var list = "true";  // string | Must be set to `true`
-            var mountPath = "\"kerberos\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kerberos")
+            var certName = "certName_example";  // string | Name of the certificate.
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.ListKerberosGroups(list, mountPath);
+                apiInstance.GetAuthAwsConfigCertificateCertName(certName, awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.ListKerberosGroups: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthAwsConfigCertificateCertName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3522,8 +5316,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **list** | **string**| Must be set to &#x60;true&#x60; | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kerberos&quot;]
+ **certName** | **string**| Name of the certificate. | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -3546,9 +5340,3061 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listoidcrole"></a>
-# **ListOidcRole**
-> void ListOidcRole (string list, string mountPath = null)
+<a name="getauthawsconfigcertificates"></a>
+# **GetAuthAwsConfigCertificates**
+> void GetAuthAwsConfigCertificates (string list, string awsMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAwsConfigCertificatesExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+
+            try
+            {
+                apiInstance.GetAuthAwsConfigCertificates(list, awsMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAwsConfigCertificates: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthawsconfigclient"></a>
+# **GetAuthAwsConfigClient**
+> void GetAuthAwsConfigClient (string awsMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAwsConfigClientExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+
+            try
+            {
+                apiInstance.GetAuthAwsConfigClient(awsMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAwsConfigClient: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthawsconfigidentity"></a>
+# **GetAuthAwsConfigIdentity**
+> void GetAuthAwsConfigIdentity (string awsMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAwsConfigIdentityExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+
+            try
+            {
+                apiInstance.GetAuthAwsConfigIdentity(awsMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAwsConfigIdentity: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthawsconfigsts"></a>
+# **GetAuthAwsConfigSts**
+> void GetAuthAwsConfigSts (string list, string awsMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAwsConfigStsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+
+            try
+            {
+                apiInstance.GetAuthAwsConfigSts(list, awsMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAwsConfigSts: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthawsconfigstsaccountid"></a>
+# **GetAuthAwsConfigStsAccountId**
+> void GetAuthAwsConfigStsAccountId (string accountId, string awsMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAwsConfigStsAccountIdExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var accountId = "accountId_example";  // string | AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account.
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+
+            try
+            {
+                apiInstance.GetAuthAwsConfigStsAccountId(accountId, awsMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAwsConfigStsAccountId: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountId** | **string**| AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account. | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthawsconfigtidyidentityaccesslist"></a>
+# **GetAuthAwsConfigTidyIdentityAccesslist**
+> void GetAuthAwsConfigTidyIdentityAccesslist (string awsMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAwsConfigTidyIdentityAccesslistExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+
+            try
+            {
+                apiInstance.GetAuthAwsConfigTidyIdentityAccesslist(awsMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAwsConfigTidyIdentityAccesslist: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthawsconfigtidyidentitywhitelist"></a>
+# **GetAuthAwsConfigTidyIdentityWhitelist**
+> void GetAuthAwsConfigTidyIdentityWhitelist (string awsMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAwsConfigTidyIdentityWhitelistExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+
+            try
+            {
+                apiInstance.GetAuthAwsConfigTidyIdentityWhitelist(awsMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAwsConfigTidyIdentityWhitelist: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthawsconfigtidyroletagblacklist"></a>
+# **GetAuthAwsConfigTidyRoletagBlacklist**
+> void GetAuthAwsConfigTidyRoletagBlacklist (string awsMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAwsConfigTidyRoletagBlacklistExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+
+            try
+            {
+                apiInstance.GetAuthAwsConfigTidyRoletagBlacklist(awsMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAwsConfigTidyRoletagBlacklist: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthawsconfigtidyroletagdenylist"></a>
+# **GetAuthAwsConfigTidyRoletagDenylist**
+> void GetAuthAwsConfigTidyRoletagDenylist (string awsMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAwsConfigTidyRoletagDenylistExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+
+            try
+            {
+                apiInstance.GetAuthAwsConfigTidyRoletagDenylist(awsMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAwsConfigTidyRoletagDenylist: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthawsidentityaccesslist"></a>
+# **GetAuthAwsIdentityAccesslist**
+> void GetAuthAwsIdentityAccesslist (string list, string awsMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAwsIdentityAccesslistExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+
+            try
+            {
+                apiInstance.GetAuthAwsIdentityAccesslist(list, awsMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAwsIdentityAccesslist: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthawsidentityaccesslistinstanceid"></a>
+# **GetAuthAwsIdentityAccesslistInstanceId**
+> void GetAuthAwsIdentityAccesslistInstanceId (string instanceId, string awsMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAwsIdentityAccesslistInstanceIdExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var instanceId = "instanceId_example";  // string | EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+
+            try
+            {
+                apiInstance.GetAuthAwsIdentityAccesslistInstanceId(instanceId, awsMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAwsIdentityAccesslistInstanceId: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **instanceId** | **string**| EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID. | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthawsidentitywhitelist"></a>
+# **GetAuthAwsIdentityWhitelist**
+> void GetAuthAwsIdentityWhitelist (string list, string awsMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAwsIdentityWhitelistExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+
+            try
+            {
+                apiInstance.GetAuthAwsIdentityWhitelist(list, awsMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAwsIdentityWhitelist: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthawsidentitywhitelistinstanceid"></a>
+# **GetAuthAwsIdentityWhitelistInstanceId**
+> void GetAuthAwsIdentityWhitelistInstanceId (string instanceId, string awsMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAwsIdentityWhitelistInstanceIdExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var instanceId = "instanceId_example";  // string | EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+
+            try
+            {
+                apiInstance.GetAuthAwsIdentityWhitelistInstanceId(instanceId, awsMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAwsIdentityWhitelistInstanceId: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **instanceId** | **string**| EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID. | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthawsrole"></a>
+# **GetAuthAwsRole**
+> void GetAuthAwsRole (string list, string awsMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAwsRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+
+            try
+            {
+                apiInstance.GetAuthAwsRole(list, awsMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAwsRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthawsrolerole"></a>
+# **GetAuthAwsRoleRole**
+> void GetAuthAwsRoleRole (string role, string awsMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAwsRoleRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var role = "role_example";  // string | Name of the role.
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+
+            try
+            {
+                apiInstance.GetAuthAwsRoleRole(role, awsMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAwsRoleRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **role** | **string**| Name of the role. | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthawsroles"></a>
+# **GetAuthAwsRoles**
+> void GetAuthAwsRoles (string list, string awsMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAwsRolesExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+
+            try
+            {
+                apiInstance.GetAuthAwsRoles(list, awsMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAwsRoles: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthawsroletagblacklist"></a>
+# **GetAuthAwsRoletagBlacklist**
+> void GetAuthAwsRoletagBlacklist (string list, string awsMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAwsRoletagBlacklistExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+
+            try
+            {
+                apiInstance.GetAuthAwsRoletagBlacklist(list, awsMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAwsRoletagBlacklist: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthawsroletagblacklistroletag"></a>
+# **GetAuthAwsRoletagBlacklistRoleTag**
+> void GetAuthAwsRoletagBlacklistRoleTag (string roleTag, string awsMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAwsRoletagBlacklistRoleTagExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var roleTag = "roleTag_example";  // string | Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+
+            try
+            {
+                apiInstance.GetAuthAwsRoletagBlacklistRoleTag(roleTag, awsMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAwsRoletagBlacklistRoleTag: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **roleTag** | **string**| Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded. | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthawsroletagdenylist"></a>
+# **GetAuthAwsRoletagDenylist**
+> void GetAuthAwsRoletagDenylist (string list, string awsMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAwsRoletagDenylistExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+
+            try
+            {
+                apiInstance.GetAuthAwsRoletagDenylist(list, awsMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAwsRoletagDenylist: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthawsroletagdenylistroletag"></a>
+# **GetAuthAwsRoletagDenylistRoleTag**
+> void GetAuthAwsRoletagDenylistRoleTag (string roleTag, string awsMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAwsRoletagDenylistRoleTagExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var roleTag = "roleTag_example";  // string | Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+
+            try
+            {
+                apiInstance.GetAuthAwsRoletagDenylistRoleTag(roleTag, awsMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAwsRoletagDenylistRoleTag: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **roleTag** | **string**| Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded. | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthazureconfig"></a>
+# **GetAuthAzureConfig**
+> void GetAuthAzureConfig (string azureMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAzureConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var azureMountPath = "\"azure\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "azure")
+
+            try
+            {
+                apiInstance.GetAuthAzureConfig(azureMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAzureConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **azureMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;azure&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthazurerole"></a>
+# **GetAuthAzureRole**
+> void GetAuthAzureRole (string list, string azureMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAzureRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var azureMountPath = "\"azure\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "azure")
+
+            try
+            {
+                apiInstance.GetAuthAzureRole(list, azureMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAzureRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **azureMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;azure&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthazurerolename"></a>
+# **GetAuthAzureRoleName**
+> void GetAuthAzureRoleName (string name, string azureMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthAzureRoleNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the role.
+            var azureMountPath = "\"azure\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "azure")
+
+            try
+            {
+                apiInstance.GetAuthAzureRoleName(name, azureMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthAzureRoleName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role. | 
+ **azureMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;azure&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthcentrifyconfig"></a>
+# **GetAuthCentrifyConfig**
+> void GetAuthCentrifyConfig (string centrifyMountPath = null)
+
+This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthCentrifyConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var centrifyMountPath = "\"centrify\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "centrify")
+
+            try
+            {
+                // This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
+                apiInstance.GetAuthCentrifyConfig(centrifyMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthCentrifyConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **centrifyMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;centrify&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthcertcerts"></a>
+# **GetAuthCertCerts**
+> void GetAuthCertCerts (string list, string certMountPath = null)
+
+Manage trusted certificates used for authentication.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthCertCertsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var certMountPath = "\"cert\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cert")
+
+            try
+            {
+                // Manage trusted certificates used for authentication.
+                apiInstance.GetAuthCertCerts(list, certMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthCertCerts: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **certMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cert&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthcertcertsname"></a>
+# **GetAuthCertCertsName**
+> void GetAuthCertCertsName (string name, string certMountPath = null)
+
+Manage trusted certificates used for authentication.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthCertCertsNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | The name of the certificate
+            var certMountPath = "\"cert\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cert")
+
+            try
+            {
+                // Manage trusted certificates used for authentication.
+                apiInstance.GetAuthCertCertsName(name, certMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthCertCertsName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The name of the certificate | 
+ **certMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cert&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthcertconfig"></a>
+# **GetAuthCertConfig**
+> void GetAuthCertConfig (string certMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthCertConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var certMountPath = "\"cert\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cert")
+
+            try
+            {
+                apiInstance.GetAuthCertConfig(certMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthCertConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **certMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cert&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthcertcrlsname"></a>
+# **GetAuthCertCrlsName**
+> void GetAuthCertCrlsName (string name, string certMountPath = null)
+
+Manage Certificate Revocation Lists checked during authentication.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthCertCrlsNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | The name of the certificate
+            var certMountPath = "\"cert\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cert")
+
+            try
+            {
+                // Manage Certificate Revocation Lists checked during authentication.
+                apiInstance.GetAuthCertCrlsName(name, certMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthCertCrlsName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The name of the certificate | 
+ **certMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cert&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthcfconfig"></a>
+# **GetAuthCfConfig**
+> void GetAuthCfConfig (string cfMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthCfConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var cfMountPath = "\"cf\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cf")
+
+            try
+            {
+                apiInstance.GetAuthCfConfig(cfMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthCfConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cfMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cf&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthcfroles"></a>
+# **GetAuthCfRoles**
+> void GetAuthCfRoles (string list, string cfMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthCfRolesExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var cfMountPath = "\"cf\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cf")
+
+            try
+            {
+                apiInstance.GetAuthCfRoles(list, cfMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthCfRoles: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **cfMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cf&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthcfrolesrole"></a>
+# **GetAuthCfRolesRole**
+> void GetAuthCfRolesRole (string role, string cfMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthCfRolesRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var role = "role_example";  // string | The name of the role.
+            var cfMountPath = "\"cf\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cf")
+
+            try
+            {
+                apiInstance.GetAuthCfRolesRole(role, cfMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthCfRolesRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **role** | **string**| The name of the role. | 
+ **cfMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cf&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthgcpconfig"></a>
+# **GetAuthGcpConfig**
+> void GetAuthGcpConfig (string gcpMountPath = null)
+
+Configure credentials used to query the GCP IAM API to verify authenticating service accounts
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthGcpConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+
+            try
+            {
+                // Configure credentials used to query the GCP IAM API to verify authenticating service accounts
+                apiInstance.GetAuthGcpConfig(gcpMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthGcpConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthgcprole"></a>
+# **GetAuthGcpRole**
+> void GetAuthGcpRole (string list, string gcpMountPath = null)
+
+Lists all the roles that are registered with Vault.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthGcpRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+
+            try
+            {
+                // Lists all the roles that are registered with Vault.
+                apiInstance.GetAuthGcpRole(list, gcpMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthGcpRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthgcprolename"></a>
+# **GetAuthGcpRoleName**
+> void GetAuthGcpRoleName (string name, string gcpMountPath = null)
+
+Create a GCP role with associated policies and required attributes.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthGcpRoleNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the role.
+            var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+
+            try
+            {
+                // Create a GCP role with associated policies and required attributes.
+                apiInstance.GetAuthGcpRoleName(name, gcpMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthGcpRoleName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role. | 
+ **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthgcproles"></a>
+# **GetAuthGcpRoles**
+> void GetAuthGcpRoles (string list, string gcpMountPath = null)
+
+Lists all the roles that are registered with Vault.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthGcpRolesExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+
+            try
+            {
+                // Lists all the roles that are registered with Vault.
+                apiInstance.GetAuthGcpRoles(list, gcpMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthGcpRoles: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthgithubconfig"></a>
+# **GetAuthGithubConfig**
+> void GetAuthGithubConfig (string githubMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthGithubConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var githubMountPath = "\"github\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "github")
+
+            try
+            {
+                apiInstance.GetAuthGithubConfig(githubMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthGithubConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **githubMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;github&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthgithubmapteams"></a>
+# **GetAuthGithubMapTeams**
+> void GetAuthGithubMapTeams (string githubMountPath = null, string list = null)
+
+Read mappings for teams
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthGithubMapTeamsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var githubMountPath = "\"github\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "github")
+            var list = "list_example";  // string | Return a list if `true` (optional) 
+
+            try
+            {
+                // Read mappings for teams
+                apiInstance.GetAuthGithubMapTeams(githubMountPath, list);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthGithubMapTeams: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **githubMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;github&quot;]
+ **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthgithubmapteamskey"></a>
+# **GetAuthGithubMapTeamsKey**
+> void GetAuthGithubMapTeamsKey (string key, string githubMountPath = null)
+
+Read/write/delete a single teams mapping
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthGithubMapTeamsKeyExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var key = "key_example";  // string | Key for the teams mapping
+            var githubMountPath = "\"github\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "github")
+
+            try
+            {
+                // Read/write/delete a single teams mapping
+                apiInstance.GetAuthGithubMapTeamsKey(key, githubMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthGithubMapTeamsKey: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **key** | **string**| Key for the teams mapping | 
+ **githubMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;github&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthgithubmapusers"></a>
+# **GetAuthGithubMapUsers**
+> void GetAuthGithubMapUsers (string githubMountPath = null, string list = null)
+
+Read mappings for users
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthGithubMapUsersExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var githubMountPath = "\"github\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "github")
+            var list = "list_example";  // string | Return a list if `true` (optional) 
+
+            try
+            {
+                // Read mappings for users
+                apiInstance.GetAuthGithubMapUsers(githubMountPath, list);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthGithubMapUsers: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **githubMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;github&quot;]
+ **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthgithubmapuserskey"></a>
+# **GetAuthGithubMapUsersKey**
+> void GetAuthGithubMapUsersKey (string key, string githubMountPath = null)
+
+Read/write/delete a single users mapping
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthGithubMapUsersKeyExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var key = "key_example";  // string | Key for the users mapping
+            var githubMountPath = "\"github\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "github")
+
+            try
+            {
+                // Read/write/delete a single users mapping
+                apiInstance.GetAuthGithubMapUsersKey(key, githubMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthGithubMapUsersKey: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **key** | **string**| Key for the users mapping | 
+ **githubMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;github&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthjwtconfig"></a>
+# **GetAuthJwtConfig**
+> void GetAuthJwtConfig (string jwtMountPath = null)
+
+Read the current JWT authentication backend configuration.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthJwtConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var jwtMountPath = "\"jwt\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "jwt")
+
+            try
+            {
+                // Read the current JWT authentication backend configuration.
+                apiInstance.GetAuthJwtConfig(jwtMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthJwtConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **jwtMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;jwt&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthjwtoidccallback"></a>
+# **GetAuthJwtOidcCallback**
+> void GetAuthJwtOidcCallback (string jwtMountPath = null)
+
+Callback endpoint to complete an OIDC login.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthJwtOidcCallbackExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var jwtMountPath = "\"jwt\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "jwt")
+
+            try
+            {
+                // Callback endpoint to complete an OIDC login.
+                apiInstance.GetAuthJwtOidcCallback(jwtMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthJwtOidcCallback: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **jwtMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;jwt&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthjwtrole"></a>
+# **GetAuthJwtRole**
+> void GetAuthJwtRole (string list, string jwtMountPath = null)
 
 Lists all the roles registered with the backend.
 
@@ -3565,7 +8411,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ListOidcRoleExample
+    public class GetAuthJwtRoleExample
     {
         public static void Main()
         {
@@ -3576,16 +8422,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var list = "true";  // string | Must be set to `true`
-            var mountPath = "\"oidc\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oidc")
+            var jwtMountPath = "\"jwt\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "jwt")
 
             try
             {
                 // Lists all the roles registered with the backend.
-                apiInstance.ListOidcRole(list, mountPath);
+                apiInstance.GetAuthJwtRole(list, jwtMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.ListOidcRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthJwtRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3599,7 +8445,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **list** | **string**| Must be set to &#x60;true&#x60; | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oidc&quot;]
+ **jwtMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;jwt&quot;]
 
 ### Return type
 
@@ -3622,2935 +8468,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listtokenaccessors"></a>
-# **ListTokenAccessors**
-> void ListTokenAccessors (string list, string mountPath = null)
-
-List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires 'sudo' capability in addition to 'list'.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ListTokenAccessorsExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var list = "true";  // string | Must be set to `true`
-            var mountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
-
-            try
-            {
-                // List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires 'sudo' capability in addition to 'list'.
-                apiInstance.ListTokenAccessors(list, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ListTokenAccessors: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **list** | **string**| Must be set to &#x60;true&#x60; | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="listuserpassusers"></a>
-# **ListUserpassUsers**
-> void ListUserpassUsers (string list, string mountPath = null)
-
-Manage users allowed to authenticate.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ListUserpassUsersExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var list = "true";  // string | Must be set to `true`
-            var mountPath = "\"userpass\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "userpass")
-
-            try
-            {
-                // Manage users allowed to authenticate.
-                apiInstance.ListUserpassUsers(list, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ListUserpassUsers: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **list** | **string**| Must be set to &#x60;true&#x60; | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;userpass&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readapprolerolerolename"></a>
-# **ReadApproleRoleRoleName**
-> void ReadApproleRoleRoleName (string roleName, string mountPath = null)
-
-Register an role with the backend.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadApproleRoleRoleNameExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-
-            try
-            {
-                // Register an role with the backend.
-                apiInstance.ReadApproleRoleRoleName(roleName, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadApproleRoleRoleName: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readapprolerolerolenamebindsecretid"></a>
-# **ReadApproleRoleRoleNameBindSecretId**
-> void ReadApproleRoleRoleNameBindSecretId (string roleName, string mountPath = null)
-
-Impose secret_id to be presented during login using this role.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadApproleRoleRoleNameBindSecretIdExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-
-            try
-            {
-                // Impose secret_id to be presented during login using this role.
-                apiInstance.ReadApproleRoleRoleNameBindSecretId(roleName, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadApproleRoleRoleNameBindSecretId: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readapprolerolerolenameboundcidrlist"></a>
-# **ReadApproleRoleRoleNameBoundCidrList**
-> void ReadApproleRoleRoleNameBoundCidrList (string roleName, string mountPath = null)
-
-Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadApproleRoleRoleNameBoundCidrListExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-
-            try
-            {
-                // Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-                apiInstance.ReadApproleRoleRoleNameBoundCidrList(roleName, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadApproleRoleRoleNameBoundCidrList: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readapprolerolerolenamelocalsecretids"></a>
-# **ReadApproleRoleRoleNameLocalSecretIds**
-> void ReadApproleRoleRoleNameLocalSecretIds (string roleName, string mountPath = null)
-
-Enables cluster local secret IDs
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadApproleRoleRoleNameLocalSecretIdsExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-
-            try
-            {
-                // Enables cluster local secret IDs
-                apiInstance.ReadApproleRoleRoleNameLocalSecretIds(roleName, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadApproleRoleRoleNameLocalSecretIds: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readapprolerolerolenameperiod"></a>
-# **ReadApproleRoleRoleNamePeriod**
-> void ReadApproleRoleRoleNamePeriod (string roleName, string mountPath = null)
-
-Updates the value of 'period' on the role
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadApproleRoleRoleNamePeriodExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-
-            try
-            {
-                // Updates the value of 'period' on the role
-                apiInstance.ReadApproleRoleRoleNamePeriod(roleName, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadApproleRoleRoleNamePeriod: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readapprolerolerolenamepolicies"></a>
-# **ReadApproleRoleRoleNamePolicies**
-> void ReadApproleRoleRoleNamePolicies (string roleName, string mountPath = null)
-
-Policies of the role.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadApproleRoleRoleNamePoliciesExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-
-            try
-            {
-                // Policies of the role.
-                apiInstance.ReadApproleRoleRoleNamePolicies(roleName, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadApproleRoleRoleNamePolicies: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readapprolerolerolenameroleid"></a>
-# **ReadApproleRoleRoleNameRoleId**
-> void ReadApproleRoleRoleNameRoleId (string roleName, string mountPath = null)
-
-Returns the 'role_id' of the role.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadApproleRoleRoleNameRoleIdExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-
-            try
-            {
-                // Returns the 'role_id' of the role.
-                apiInstance.ReadApproleRoleRoleNameRoleId(roleName, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadApproleRoleRoleNameRoleId: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readapprolerolerolenamesecretidboundcidrs"></a>
-# **ReadApproleRoleRoleNameSecretIdBoundCidrs**
-> void ReadApproleRoleRoleNameSecretIdBoundCidrs (string roleName, string mountPath = null)
-
-Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadApproleRoleRoleNameSecretIdBoundCidrsExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-
-            try
-            {
-                // Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-                apiInstance.ReadApproleRoleRoleNameSecretIdBoundCidrs(roleName, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadApproleRoleRoleNameSecretIdBoundCidrs: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readapprolerolerolenamesecretidnumuses"></a>
-# **ReadApproleRoleRoleNameSecretIdNumUses**
-> void ReadApproleRoleRoleNameSecretIdNumUses (string roleName, string mountPath = null)
-
-Use limit of the SecretID generated against the role.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadApproleRoleRoleNameSecretIdNumUsesExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-
-            try
-            {
-                // Use limit of the SecretID generated against the role.
-                apiInstance.ReadApproleRoleRoleNameSecretIdNumUses(roleName, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadApproleRoleRoleNameSecretIdNumUses: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readapprolerolerolenamesecretidttl"></a>
-# **ReadApproleRoleRoleNameSecretIdTtl**
-> void ReadApproleRoleRoleNameSecretIdTtl (string roleName, string mountPath = null)
-
-Duration in seconds of the SecretID generated against the role.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadApproleRoleRoleNameSecretIdTtlExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-
-            try
-            {
-                // Duration in seconds of the SecretID generated against the role.
-                apiInstance.ReadApproleRoleRoleNameSecretIdTtl(roleName, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadApproleRoleRoleNameSecretIdTtl: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readapprolerolerolenametokenboundcidrs"></a>
-# **ReadApproleRoleRoleNameTokenBoundCidrs**
-> void ReadApproleRoleRoleNameTokenBoundCidrs (string roleName, string mountPath = null)
-
-Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadApproleRoleRoleNameTokenBoundCidrsExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-
-            try
-            {
-                // Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
-                apiInstance.ReadApproleRoleRoleNameTokenBoundCidrs(roleName, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadApproleRoleRoleNameTokenBoundCidrs: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readapprolerolerolenametokenmaxttl"></a>
-# **ReadApproleRoleRoleNameTokenMaxTtl**
-> void ReadApproleRoleRoleNameTokenMaxTtl (string roleName, string mountPath = null)
-
-Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadApproleRoleRoleNameTokenMaxTtlExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-
-            try
-            {
-                // Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
-                apiInstance.ReadApproleRoleRoleNameTokenMaxTtl(roleName, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadApproleRoleRoleNameTokenMaxTtl: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readapprolerolerolenametokennumuses"></a>
-# **ReadApproleRoleRoleNameTokenNumUses**
-> void ReadApproleRoleRoleNameTokenNumUses (string roleName, string mountPath = null)
-
-Number of times issued tokens can be used
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadApproleRoleRoleNameTokenNumUsesExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-
-            try
-            {
-                // Number of times issued tokens can be used
-                apiInstance.ReadApproleRoleRoleNameTokenNumUses(roleName, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadApproleRoleRoleNameTokenNumUses: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readapprolerolerolenametokenttl"></a>
-# **ReadApproleRoleRoleNameTokenTtl**
-> void ReadApproleRoleRoleNameTokenTtl (string roleName, string mountPath = null)
-
-Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadApproleRoleRoleNameTokenTtlExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-
-            try
-            {
-                // Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
-                apiInstance.ReadApproleRoleRoleNameTokenTtl(roleName, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadApproleRoleRoleNameTokenTtl: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readawsconfigcertificatecertname"></a>
-# **ReadAwsConfigCertificateCertName**
-> void ReadAwsConfigCertificateCertName (string certName, string mountPath = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadAwsConfigCertificateCertNameExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var certName = "certName_example";  // string | Name of the certificate.
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-
-            try
-            {
-                apiInstance.ReadAwsConfigCertificateCertName(certName, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadAwsConfigCertificateCertName: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **certName** | **string**| Name of the certificate. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readawsconfigclient"></a>
-# **ReadAwsConfigClient**
-> void ReadAwsConfigClient (string mountPath = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadAwsConfigClientExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-
-            try
-            {
-                apiInstance.ReadAwsConfigClient(mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadAwsConfigClient: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readawsconfigidentity"></a>
-# **ReadAwsConfigIdentity**
-> void ReadAwsConfigIdentity (string mountPath = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadAwsConfigIdentityExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-
-            try
-            {
-                apiInstance.ReadAwsConfigIdentity(mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadAwsConfigIdentity: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readawsconfigstsaccountid"></a>
-# **ReadAwsConfigStsAccountId**
-> void ReadAwsConfigStsAccountId (string accountId, string mountPath = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadAwsConfigStsAccountIdExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var accountId = "accountId_example";  // string | AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account.
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-
-            try
-            {
-                apiInstance.ReadAwsConfigStsAccountId(accountId, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadAwsConfigStsAccountId: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountId** | **string**| AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readawsconfigtidyidentityaccesslist"></a>
-# **ReadAwsConfigTidyIdentityAccesslist**
-> void ReadAwsConfigTidyIdentityAccesslist (string mountPath = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadAwsConfigTidyIdentityAccesslistExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-
-            try
-            {
-                apiInstance.ReadAwsConfigTidyIdentityAccesslist(mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadAwsConfigTidyIdentityAccesslist: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readawsconfigtidyidentitywhitelist"></a>
-# **ReadAwsConfigTidyIdentityWhitelist**
-> void ReadAwsConfigTidyIdentityWhitelist (string mountPath = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadAwsConfigTidyIdentityWhitelistExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-
-            try
-            {
-                apiInstance.ReadAwsConfigTidyIdentityWhitelist(mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadAwsConfigTidyIdentityWhitelist: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readawsconfigtidyroletagblacklist"></a>
-# **ReadAwsConfigTidyRoletagBlacklist**
-> void ReadAwsConfigTidyRoletagBlacklist (string mountPath = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadAwsConfigTidyRoletagBlacklistExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-
-            try
-            {
-                apiInstance.ReadAwsConfigTidyRoletagBlacklist(mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadAwsConfigTidyRoletagBlacklist: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readawsconfigtidyroletagdenylist"></a>
-# **ReadAwsConfigTidyRoletagDenylist**
-> void ReadAwsConfigTidyRoletagDenylist (string mountPath = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadAwsConfigTidyRoletagDenylistExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-
-            try
-            {
-                apiInstance.ReadAwsConfigTidyRoletagDenylist(mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadAwsConfigTidyRoletagDenylist: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readawsidentityaccesslistinstanceid"></a>
-# **ReadAwsIdentityAccesslistInstanceId**
-> void ReadAwsIdentityAccesslistInstanceId (string instanceId, string mountPath = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadAwsIdentityAccesslistInstanceIdExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var instanceId = "instanceId_example";  // string | EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-
-            try
-            {
-                apiInstance.ReadAwsIdentityAccesslistInstanceId(instanceId, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadAwsIdentityAccesslistInstanceId: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **instanceId** | **string**| EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readawsidentitywhitelistinstanceid"></a>
-# **ReadAwsIdentityWhitelistInstanceId**
-> void ReadAwsIdentityWhitelistInstanceId (string instanceId, string mountPath = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadAwsIdentityWhitelistInstanceIdExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var instanceId = "instanceId_example";  // string | EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-
-            try
-            {
-                apiInstance.ReadAwsIdentityWhitelistInstanceId(instanceId, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadAwsIdentityWhitelistInstanceId: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **instanceId** | **string**| EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readawsrolerole"></a>
-# **ReadAwsRoleRole**
-> void ReadAwsRoleRole (string role, string mountPath = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadAwsRoleRoleExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var role = "role_example";  // string | Name of the role.
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-
-            try
-            {
-                apiInstance.ReadAwsRoleRole(role, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadAwsRoleRole: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **role** | **string**| Name of the role. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readawsroletagblacklistroletag"></a>
-# **ReadAwsRoletagBlacklistRoleTag**
-> void ReadAwsRoletagBlacklistRoleTag (string roleTag, string mountPath = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadAwsRoletagBlacklistRoleTagExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var roleTag = "roleTag_example";  // string | Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-
-            try
-            {
-                apiInstance.ReadAwsRoletagBlacklistRoleTag(roleTag, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadAwsRoletagBlacklistRoleTag: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **roleTag** | **string**| Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readawsroletagdenylistroletag"></a>
-# **ReadAwsRoletagDenylistRoleTag**
-> void ReadAwsRoletagDenylistRoleTag (string roleTag, string mountPath = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadAwsRoletagDenylistRoleTagExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var roleTag = "roleTag_example";  // string | Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-
-            try
-            {
-                apiInstance.ReadAwsRoletagDenylistRoleTag(roleTag, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadAwsRoletagDenylistRoleTag: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **roleTag** | **string**| Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readcertcertsname"></a>
-# **ReadCertCertsName**
-> void ReadCertCertsName (string name, string mountPath = null)
-
-Manage trusted certificates used for authentication.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadCertCertsNameExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var name = "name_example";  // string | The name of the certificate
-            var mountPath = "\"cert\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cert")
-
-            try
-            {
-                // Manage trusted certificates used for authentication.
-                apiInstance.ReadCertCertsName(name, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadCertCertsName: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the certificate | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cert&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readcertcrlsname"></a>
-# **ReadCertCrlsName**
-> void ReadCertCrlsName (string name, string mountPath = null)
-
-Manage Certificate Revocation Lists checked during authentication.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadCertCrlsNameExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var name = "name_example";  // string | The name of the certificate
-            var mountPath = "\"cert\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cert")
-
-            try
-            {
-                // Manage Certificate Revocation Lists checked during authentication.
-                apiInstance.ReadCertCrlsName(name, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadCertCrlsName: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the certificate | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cert&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readcfrolesrole"></a>
-# **ReadCfRolesRole**
-> void ReadCfRolesRole (string role, string mountPath = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadCfRolesRoleExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var role = "role_example";  // string | The name of the role.
-            var mountPath = "\"cf\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cf")
-
-            try
-            {
-                apiInstance.ReadCfRolesRole(role, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadCfRolesRole: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **role** | **string**| The name of the role. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cf&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readgithubmapteams"></a>
-# **ReadGithubMapTeams**
-> void ReadGithubMapTeams (string mountPath = null, string list = null)
-
-Read mappings for teams
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadGithubMapTeamsExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"github\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "github")
-            var list = "list_example";  // string | Return a list if `true` (optional) 
-
-            try
-            {
-                // Read mappings for teams
-                apiInstance.ReadGithubMapTeams(mountPath, list);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadGithubMapTeams: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;github&quot;]
- **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readgithubmapteamskey"></a>
-# **ReadGithubMapTeamsKey**
-> void ReadGithubMapTeamsKey (string key, string mountPath = null)
-
-Read/write/delete a single teams mapping
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadGithubMapTeamsKeyExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var key = "key_example";  // string | Key for the teams mapping
-            var mountPath = "\"github\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "github")
-
-            try
-            {
-                // Read/write/delete a single teams mapping
-                apiInstance.ReadGithubMapTeamsKey(key, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadGithubMapTeamsKey: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **key** | **string**| Key for the teams mapping | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;github&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readgithubmapusers"></a>
-# **ReadGithubMapUsers**
-> void ReadGithubMapUsers (string mountPath = null, string list = null)
-
-Read mappings for users
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadGithubMapUsersExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"github\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "github")
-            var list = "list_example";  // string | Return a list if `true` (optional) 
-
-            try
-            {
-                // Read mappings for users
-                apiInstance.ReadGithubMapUsers(mountPath, list);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadGithubMapUsers: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;github&quot;]
- **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readgithubmapuserskey"></a>
-# **ReadGithubMapUsersKey**
-> void ReadGithubMapUsersKey (string key, string mountPath = null)
-
-Read/write/delete a single users mapping
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadGithubMapUsersKeyExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var key = "key_example";  // string | Key for the users mapping
-            var mountPath = "\"github\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "github")
-
-            try
-            {
-                // Read/write/delete a single users mapping
-                apiInstance.ReadGithubMapUsersKey(key, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadGithubMapUsersKey: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **key** | **string**| Key for the users mapping | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;github&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readkerberosconfigldap"></a>
-# **ReadKerberosConfigLdap**
-> void ReadKerberosConfigLdap (string mountPath = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadKerberosConfigLdapExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"kerberos\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kerberos")
-
-            try
-            {
-                apiInstance.ReadKerberosConfigLdap(mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadKerberosConfigLdap: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kerberos&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readkerberosgroupsname"></a>
-# **ReadKerberosGroupsName**
-> void ReadKerberosGroupsName (string name, string mountPath = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadKerberosGroupsNameExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var name = "name_example";  // string | Name of the LDAP group.
-            var mountPath = "\"kerberos\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kerberos")
-
-            try
-            {
-                apiInstance.ReadKerberosGroupsName(name, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadKerberosGroupsName: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string**| Name of the LDAP group. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kerberos&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readoidcconfig"></a>
-# **ReadOidcConfig**
-> void ReadOidcConfig (string mountPath = null)
-
-Read the current JWT authentication backend configuration.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadOidcConfigExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"oidc\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oidc")
-
-            try
-            {
-                // Read the current JWT authentication backend configuration.
-                apiInstance.ReadOidcConfig(mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadOidcConfig: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oidc&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readoidcoidccallback"></a>
-# **ReadOidcOidcCallback**
-> void ReadOidcOidcCallback (string mountPath = null)
-
-Callback endpoint to complete an OIDC login.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadOidcOidcCallbackExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"oidc\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oidc")
-
-            try
-            {
-                // Callback endpoint to complete an OIDC login.
-                apiInstance.ReadOidcOidcCallback(mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadOidcOidcCallback: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oidc&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readoidcrolename"></a>
-# **ReadOidcRoleName**
-> void ReadOidcRoleName (string name, string mountPath = null)
+<a name="getauthjwtrolename"></a>
+# **GetAuthJwtRoleName**
+> void GetAuthJwtRoleName (string name, string jwtMountPath = null)
 
 Read an existing role.
 
@@ -6565,7 +8485,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadOidcRoleNameExample
+    public class GetAuthJwtRoleNameExample
     {
         public static void Main()
         {
@@ -6576,16 +8496,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
-            var mountPath = "\"oidc\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oidc")
+            var jwtMountPath = "\"jwt\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "jwt")
 
             try
             {
                 // Read an existing role.
-                apiInstance.ReadOidcRoleName(name, mountPath);
+                apiInstance.GetAuthJwtRoleName(name, jwtMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.ReadOidcRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthJwtRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6599,7 +8519,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the role. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oidc&quot;]
+ **jwtMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;jwt&quot;]
 
 ### Return type
 
@@ -6622,9 +8542,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readoktaverifynonce"></a>
-# **ReadOktaVerifyNonce**
-> void ReadOktaVerifyNonce (string nonce, string mountPath = null)
+<a name="getauthkerberosconfig"></a>
+# **GetAuthKerberosConfig**
+> void GetAuthKerberosConfig (string kerberosMountPath = null)
 
 
 
@@ -6639,7 +8559,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadOktaVerifyNonceExample
+    public class GetAuthKerberosConfigExample
     {
         public static void Main()
         {
@@ -6649,16 +8569,15 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var nonce = "nonce_example";  // string | Nonce provided during a login request to retrieve the number verification challenge for the matching request.
-            var mountPath = "\"okta\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "okta")
+            var kerberosMountPath = "\"kerberos\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kerberos")
 
             try
             {
-                apiInstance.ReadOktaVerifyNonce(nonce, mountPath);
+                apiInstance.GetAuthKerberosConfig(kerberosMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.ReadOktaVerifyNonce: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthKerberosConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6671,8 +8590,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **nonce** | **string**| Nonce provided during a login request to retrieve the number verification challenge for the matching request. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;okta&quot;]
+ **kerberosMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kerberos&quot;]
 
 ### Return type
 
@@ -6695,227 +8613,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readradiususersname"></a>
-# **ReadRadiusUsersName**
-> void ReadRadiusUsersName (string name, string mountPath = null)
-
-Manage users allowed to authenticate.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadRadiusUsersNameExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var name = "name_example";  // string | Name of the RADIUS user.
-            var mountPath = "\"radius\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "radius")
-
-            try
-            {
-                // Manage users allowed to authenticate.
-                apiInstance.ReadRadiusUsersName(name, mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadRadiusUsersName: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string**| Name of the RADIUS user. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;radius&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readtokenlookup"></a>
-# **ReadTokenLookup**
-> void ReadTokenLookup (string mountPath = null)
-
-This endpoint will lookup a token and its properties.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadTokenLookupExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
-
-            try
-            {
-                // This endpoint will lookup a token and its properties.
-                apiInstance.ReadTokenLookup(mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadTokenLookup: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readtokenlookupself"></a>
-# **ReadTokenLookupSelf**
-> void ReadTokenLookupSelf (string mountPath = null)
-
-This endpoint will lookup a token and its properties.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ReadTokenLookupSelfExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
-
-            try
-            {
-                // This endpoint will lookup a token and its properties.
-                apiInstance.ReadTokenLookupSelf(mountPath);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.ReadTokenLookupSelf: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readtokenrolesrolename"></a>
-# **ReadTokenRolesRoleName**
-> void ReadTokenRolesRoleName (string roleName, string mountPath = null)
+<a name="getauthkerberosconfigldap"></a>
+# **GetAuthKerberosConfigLdap**
+> void GetAuthKerberosConfigLdap (string kerberosMountPath = null)
 
 
 
@@ -6930,7 +8630,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadTokenRolesRoleNameExample
+    public class GetAuthKerberosConfigLdapExample
     {
         public static void Main()
         {
@@ -6940,16 +8640,15 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var roleName = "roleName_example";  // string | Name of the role
-            var mountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
+            var kerberosMountPath = "\"kerberos\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kerberos")
 
             try
             {
-                apiInstance.ReadTokenRolesRoleName(roleName, mountPath);
+                apiInstance.GetAuthKerberosConfigLdap(kerberosMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.ReadTokenRolesRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthKerberosConfigLdap: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6962,8 +8661,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **roleName** | **string**| Name of the role | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
+ **kerberosMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kerberos&quot;]
 
 ### Return type
 
@@ -6986,11 +8684,11 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readuserpassusersusername"></a>
-# **ReadUserpassUsersUsername**
-> void ReadUserpassUsersUsername (string username, string mountPath = null)
+<a name="getauthkerberosgroups"></a>
+# **GetAuthKerberosGroups**
+> void GetAuthKerberosGroups (string list, string kerberosMountPath = null)
 
-Manage users allowed to authenticate.
+
 
 ### Example
 ```csharp
@@ -7003,7 +8701,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadUserpassUsersUsernameExample
+    public class GetAuthKerberosGroupsExample
     {
         public static void Main()
         {
@@ -7013,17 +8711,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var username = "username_example";  // string | Username for this user.
-            var mountPath = "\"userpass\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "userpass")
+            var list = "true";  // string | Must be set to `true`
+            var kerberosMountPath = "\"kerberos\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kerberos")
 
             try
             {
-                // Manage users allowed to authenticate.
-                apiInstance.ReadUserpassUsersUsername(username, mountPath);
+                apiInstance.GetAuthKerberosGroups(list, kerberosMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.ReadUserpassUsersUsername: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthKerberosGroups: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7036,8 +8733,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **string**| Username for this user. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;userpass&quot;]
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **kerberosMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kerberos&quot;]
 
 ### Return type
 
@@ -7060,9 +8757,299 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateapprolerolerolename"></a>
-# **UpdateApproleRoleRoleName**
-> void UpdateApproleRoleRoleName (string roleName, string mountPath = null, ApproleRoleRequest approleRoleRequest = null)
+<a name="getauthkerberosgroupsname"></a>
+# **GetAuthKerberosGroupsName**
+> void GetAuthKerberosGroupsName (string name, string kerberosMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthKerberosGroupsNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the LDAP group.
+            var kerberosMountPath = "\"kerberos\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kerberos")
+
+            try
+            {
+                apiInstance.GetAuthKerberosGroupsName(name, kerberosMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthKerberosGroupsName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the LDAP group. | 
+ **kerberosMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kerberos&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthkerberoslogin"></a>
+# **GetAuthKerberosLogin**
+> void GetAuthKerberosLogin (string kerberosMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthKerberosLoginExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var kerberosMountPath = "\"kerberos\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kerberos")
+
+            try
+            {
+                apiInstance.GetAuthKerberosLogin(kerberosMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthKerberosLogin: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **kerberosMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kerberos&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthkubernetesconfig"></a>
+# **GetAuthKubernetesConfig**
+> void GetAuthKubernetesConfig (string kubernetesMountPath = null)
+
+Configures the JWT Public Key and Kubernetes API information.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthKubernetesConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var kubernetesMountPath = "\"kubernetes\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kubernetes")
+
+            try
+            {
+                // Configures the JWT Public Key and Kubernetes API information.
+                apiInstance.GetAuthKubernetesConfig(kubernetesMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthKubernetesConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **kubernetesMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kubernetes&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthkubernetesrole"></a>
+# **GetAuthKubernetesRole**
+> void GetAuthKubernetesRole (string list, string kubernetesMountPath = null)
+
+Lists all the roles registered with the backend.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthKubernetesRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var kubernetesMountPath = "\"kubernetes\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kubernetes")
+
+            try
+            {
+                // Lists all the roles registered with the backend.
+                apiInstance.GetAuthKubernetesRole(list, kubernetesMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthKubernetesRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **kubernetesMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kubernetes&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthkubernetesrolename"></a>
+# **GetAuthKubernetesRoleName**
+> void GetAuthKubernetesRoleName (string name, string kubernetesMountPath = null)
 
 Register an role with the backend.
 
@@ -7077,7 +9064,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateApproleRoleRoleNameExample
+    public class GetAuthKubernetesRoleNameExample
     {
         public static void Main()
         {
@@ -7087,18 +9074,17 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-            var approleRoleRequest = new ApproleRoleRequest(); // ApproleRoleRequest |  (optional) 
+            var name = "name_example";  // string | Name of the role.
+            var kubernetesMountPath = "\"kubernetes\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kubernetes")
 
             try
             {
                 // Register an role with the backend.
-                apiInstance.UpdateApproleRoleRoleName(roleName, mountPath, approleRoleRequest);
+                apiInstance.GetAuthKubernetesRoleName(name, kubernetesMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateApproleRoleRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.GetAuthKubernetesRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7111,9 +9097,2138 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
- **approleRoleRequest** | [**ApproleRoleRequest**](ApproleRoleRequest.md)|  | [optional] 
+ **name** | **string**| Name of the role. | 
+ **kubernetesMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kubernetes&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthldapconfig"></a>
+# **GetAuthLdapConfig**
+> void GetAuthLdapConfig (string ldapMountPath = null)
+
+Configure the LDAP server to connect to, along with its options.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthLdapConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+
+            try
+            {
+                // Configure the LDAP server to connect to, along with its options.
+                apiInstance.GetAuthLdapConfig(ldapMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthLdapConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthldapgroups"></a>
+# **GetAuthLdapGroups**
+> void GetAuthLdapGroups (string list, string ldapMountPath = null)
+
+Manage additional groups for users allowed to authenticate.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthLdapGroupsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+
+            try
+            {
+                // Manage additional groups for users allowed to authenticate.
+                apiInstance.GetAuthLdapGroups(list, ldapMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthLdapGroups: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthldapgroupsname"></a>
+# **GetAuthLdapGroupsName**
+> void GetAuthLdapGroupsName (string name, string ldapMountPath = null)
+
+Manage additional groups for users allowed to authenticate.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthLdapGroupsNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the LDAP group.
+            var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+
+            try
+            {
+                // Manage additional groups for users allowed to authenticate.
+                apiInstance.GetAuthLdapGroupsName(name, ldapMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthLdapGroupsName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the LDAP group. | 
+ **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthldapusers"></a>
+# **GetAuthLdapUsers**
+> void GetAuthLdapUsers (string list, string ldapMountPath = null)
+
+Manage users allowed to authenticate.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthLdapUsersExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+
+            try
+            {
+                // Manage users allowed to authenticate.
+                apiInstance.GetAuthLdapUsers(list, ldapMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthLdapUsers: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthldapusersname"></a>
+# **GetAuthLdapUsersName**
+> void GetAuthLdapUsersName (string name, string ldapMountPath = null)
+
+Manage users allowed to authenticate.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthLdapUsersNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the LDAP user.
+            var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+
+            try
+            {
+                // Manage users allowed to authenticate.
+                apiInstance.GetAuthLdapUsersName(name, ldapMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthLdapUsersName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the LDAP user. | 
+ **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthociconfig"></a>
+# **GetAuthOciConfig**
+> void GetAuthOciConfig (string ociMountPath = null)
+
+Manages the configuration for the Vault Auth Plugin.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthOciConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var ociMountPath = "\"oci\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oci")
+
+            try
+            {
+                // Manages the configuration for the Vault Auth Plugin.
+                apiInstance.GetAuthOciConfig(ociMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthOciConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ociMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oci&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthocirole"></a>
+# **GetAuthOciRole**
+> void GetAuthOciRole (string list, string ociMountPath = null)
+
+Lists all the roles that are registered with Vault.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthOciRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var ociMountPath = "\"oci\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oci")
+
+            try
+            {
+                // Lists all the roles that are registered with Vault.
+                apiInstance.GetAuthOciRole(list, ociMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthOciRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **ociMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oci&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthocirolerole"></a>
+# **GetAuthOciRoleRole**
+> void GetAuthOciRoleRole (string role, string ociMountPath = null)
+
+Create a role and associate policies to it.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthOciRoleRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var role = "role_example";  // string | Name of the role.
+            var ociMountPath = "\"oci\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oci")
+
+            try
+            {
+                // Create a role and associate policies to it.
+                apiInstance.GetAuthOciRoleRole(role, ociMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthOciRoleRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **role** | **string**| Name of the role. | 
+ **ociMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oci&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthoidcconfig"></a>
+# **GetAuthOidcConfig**
+> void GetAuthOidcConfig (string oidcMountPath = null)
+
+Read the current JWT authentication backend configuration.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthOidcConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var oidcMountPath = "\"oidc\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oidc")
+
+            try
+            {
+                // Read the current JWT authentication backend configuration.
+                apiInstance.GetAuthOidcConfig(oidcMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthOidcConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **oidcMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oidc&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthoidcoidccallback"></a>
+# **GetAuthOidcOidcCallback**
+> void GetAuthOidcOidcCallback (string oidcMountPath = null)
+
+Callback endpoint to complete an OIDC login.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthOidcOidcCallbackExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var oidcMountPath = "\"oidc\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oidc")
+
+            try
+            {
+                // Callback endpoint to complete an OIDC login.
+                apiInstance.GetAuthOidcOidcCallback(oidcMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthOidcOidcCallback: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **oidcMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oidc&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthoidcrole"></a>
+# **GetAuthOidcRole**
+> void GetAuthOidcRole (string list, string oidcMountPath = null)
+
+Lists all the roles registered with the backend.
+
+The list will contain the names of the roles.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthOidcRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var oidcMountPath = "\"oidc\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oidc")
+
+            try
+            {
+                // Lists all the roles registered with the backend.
+                apiInstance.GetAuthOidcRole(list, oidcMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthOidcRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **oidcMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oidc&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthoidcrolename"></a>
+# **GetAuthOidcRoleName**
+> void GetAuthOidcRoleName (string name, string oidcMountPath = null)
+
+Read an existing role.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthOidcRoleNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the role.
+            var oidcMountPath = "\"oidc\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oidc")
+
+            try
+            {
+                // Read an existing role.
+                apiInstance.GetAuthOidcRoleName(name, oidcMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthOidcRoleName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role. | 
+ **oidcMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oidc&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthoktaconfig"></a>
+# **GetAuthOktaConfig**
+> void GetAuthOktaConfig (string oktaMountPath = null)
+
+This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthOktaConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var oktaMountPath = "\"okta\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "okta")
+
+            try
+            {
+                // This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
+                apiInstance.GetAuthOktaConfig(oktaMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthOktaConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **oktaMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;okta&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthoktagroups"></a>
+# **GetAuthOktaGroups**
+> void GetAuthOktaGroups (string list, string oktaMountPath = null)
+
+Manage users allowed to authenticate.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthOktaGroupsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var oktaMountPath = "\"okta\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "okta")
+
+            try
+            {
+                // Manage users allowed to authenticate.
+                apiInstance.GetAuthOktaGroups(list, oktaMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthOktaGroups: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **oktaMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;okta&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthoktagroupsname"></a>
+# **GetAuthOktaGroupsName**
+> void GetAuthOktaGroupsName (string name, string oktaMountPath = null)
+
+Manage users allowed to authenticate.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthOktaGroupsNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the Okta group.
+            var oktaMountPath = "\"okta\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "okta")
+
+            try
+            {
+                // Manage users allowed to authenticate.
+                apiInstance.GetAuthOktaGroupsName(name, oktaMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthOktaGroupsName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the Okta group. | 
+ **oktaMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;okta&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthoktausers"></a>
+# **GetAuthOktaUsers**
+> void GetAuthOktaUsers (string list, string oktaMountPath = null)
+
+Manage additional groups for users allowed to authenticate.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthOktaUsersExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var oktaMountPath = "\"okta\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "okta")
+
+            try
+            {
+                // Manage additional groups for users allowed to authenticate.
+                apiInstance.GetAuthOktaUsers(list, oktaMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthOktaUsers: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **oktaMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;okta&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthoktausersname"></a>
+# **GetAuthOktaUsersName**
+> void GetAuthOktaUsersName (string name, string oktaMountPath = null)
+
+Manage additional groups for users allowed to authenticate.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthOktaUsersNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the user.
+            var oktaMountPath = "\"okta\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "okta")
+
+            try
+            {
+                // Manage additional groups for users allowed to authenticate.
+                apiInstance.GetAuthOktaUsersName(name, oktaMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthOktaUsersName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the user. | 
+ **oktaMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;okta&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthoktaverifynonce"></a>
+# **GetAuthOktaVerifyNonce**
+> void GetAuthOktaVerifyNonce (string nonce, string oktaMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthOktaVerifyNonceExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var nonce = "nonce_example";  // string | Nonce provided during a login request to retrieve the number verification challenge for the matching request.
+            var oktaMountPath = "\"okta\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "okta")
+
+            try
+            {
+                apiInstance.GetAuthOktaVerifyNonce(nonce, oktaMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthOktaVerifyNonce: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **nonce** | **string**| Nonce provided during a login request to retrieve the number verification challenge for the matching request. | 
+ **oktaMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;okta&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthradiusconfig"></a>
+# **GetAuthRadiusConfig**
+> void GetAuthRadiusConfig (string radiusMountPath = null)
+
+Configure the RADIUS server to connect to, along with its options.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthRadiusConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var radiusMountPath = "\"radius\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "radius")
+
+            try
+            {
+                // Configure the RADIUS server to connect to, along with its options.
+                apiInstance.GetAuthRadiusConfig(radiusMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthRadiusConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **radiusMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;radius&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthradiususers"></a>
+# **GetAuthRadiusUsers**
+> void GetAuthRadiusUsers (string list, string radiusMountPath = null)
+
+Manage users allowed to authenticate.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthRadiusUsersExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var radiusMountPath = "\"radius\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "radius")
+
+            try
+            {
+                // Manage users allowed to authenticate.
+                apiInstance.GetAuthRadiusUsers(list, radiusMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthRadiusUsers: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **radiusMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;radius&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthradiususersname"></a>
+# **GetAuthRadiusUsersName**
+> void GetAuthRadiusUsersName (string name, string radiusMountPath = null)
+
+Manage users allowed to authenticate.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthRadiusUsersNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the RADIUS user.
+            var radiusMountPath = "\"radius\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "radius")
+
+            try
+            {
+                // Manage users allowed to authenticate.
+                apiInstance.GetAuthRadiusUsersName(name, radiusMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthRadiusUsersName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the RADIUS user. | 
+ **radiusMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;radius&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthtokenaccessors"></a>
+# **GetAuthTokenAccessors**
+> void GetAuthTokenAccessors (string list, string tokenMountPath = null)
+
+List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires 'sudo' capability in addition to 'list'.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthTokenAccessorsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
+
+            try
+            {
+                // List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires 'sudo' capability in addition to 'list'.
+                apiInstance.GetAuthTokenAccessors(list, tokenMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthTokenAccessors: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthtokenlookup"></a>
+# **GetAuthTokenLookup**
+> void GetAuthTokenLookup (string tokenMountPath = null)
+
+This endpoint will lookup a token and its properties.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthTokenLookupExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
+
+            try
+            {
+                // This endpoint will lookup a token and its properties.
+                apiInstance.GetAuthTokenLookup(tokenMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthTokenLookup: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthtokenlookupself"></a>
+# **GetAuthTokenLookupSelf**
+> void GetAuthTokenLookupSelf (string tokenMountPath = null)
+
+This endpoint will lookup a token and its properties.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthTokenLookupSelfExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
+
+            try
+            {
+                // This endpoint will lookup a token and its properties.
+                apiInstance.GetAuthTokenLookupSelf(tokenMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthTokenLookupSelf: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthtokenroles"></a>
+# **GetAuthTokenRoles**
+> void GetAuthTokenRoles (string list, string tokenMountPath = null)
+
+This endpoint lists configured roles.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthTokenRolesExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
+
+            try
+            {
+                // This endpoint lists configured roles.
+                apiInstance.GetAuthTokenRoles(list, tokenMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthTokenRoles: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthtokenrolesrolename"></a>
+# **GetAuthTokenRolesRoleName**
+> void GetAuthTokenRolesRoleName (string roleName, string tokenMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthTokenRolesRoleNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var roleName = "roleName_example";  // string | Name of the role
+            var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
+
+            try
+            {
+                apiInstance.GetAuthTokenRolesRoleName(roleName, tokenMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthTokenRolesRoleName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **roleName** | **string**| Name of the role | 
+ **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthuserpassusers"></a>
+# **GetAuthUserpassUsers**
+> void GetAuthUserpassUsers (string list, string userpassMountPath = null)
+
+Manage users allowed to authenticate.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthUserpassUsersExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var userpassMountPath = "\"userpass\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "userpass")
+
+            try
+            {
+                // Manage users allowed to authenticate.
+                apiInstance.GetAuthUserpassUsers(list, userpassMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthUserpassUsers: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+ **userpassMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;userpass&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthuserpassusersusername"></a>
+# **GetAuthUserpassUsersUsername**
+> void GetAuthUserpassUsersUsername (string username, string userpassMountPath = null)
+
+Manage users allowed to authenticate.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthUserpassUsersUsernameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var username = "username_example";  // string | Username for this user.
+            var userpassMountPath = "\"userpass\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "userpass")
+
+            try
+            {
+                // Manage users allowed to authenticate.
+                apiInstance.GetAuthUserpassUsersUsername(username, userpassMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthUserpassUsersUsername: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **username** | **string**| Username for this user. | 
+ **userpassMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;userpass&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthalicloudlogin"></a>
+# **PostAuthAlicloudLogin**
+> void PostAuthAlicloudLogin (AlicloudLoginRequest alicloudLoginRequest, string alicloudMountPath = null)
+
+Authenticates an RAM entity with Vault.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthAlicloudLoginExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var alicloudLoginRequest = new AlicloudLoginRequest(); // AlicloudLoginRequest | 
+            var alicloudMountPath = "\"alicloud\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "alicloud")
+
+            try
+            {
+                // Authenticates an RAM entity with Vault.
+                apiInstance.PostAuthAlicloudLogin(alicloudLoginRequest, alicloudMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthAlicloudLogin: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **alicloudLoginRequest** | [**AlicloudLoginRequest**](AlicloudLoginRequest.md)|  | 
+ **alicloudMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;alicloud&quot;]
 
 ### Return type
 
@@ -7136,9 +11251,234 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateapprolerolerolenamebindsecretid"></a>
-# **UpdateApproleRoleRoleNameBindSecretId**
-> void UpdateApproleRoleRoleNameBindSecretId (string roleName, string mountPath = null, ApproleRoleBindSecretIdRequest approleRoleBindSecretIdRequest = null)
+<a name="postauthalicloudrolerole"></a>
+# **PostAuthAlicloudRoleRole**
+> void PostAuthAlicloudRoleRole (string role, AlicloudRoleRequest alicloudRoleRequest, string alicloudMountPath = null)
+
+Create a role and associate policies to it.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthAlicloudRoleRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var role = "role_example";  // string | The name of the role as it should appear in Vault.
+            var alicloudRoleRequest = new AlicloudRoleRequest(); // AlicloudRoleRequest | 
+            var alicloudMountPath = "\"alicloud\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "alicloud")
+
+            try
+            {
+                // Create a role and associate policies to it.
+                apiInstance.PostAuthAlicloudRoleRole(role, alicloudRoleRequest, alicloudMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthAlicloudRoleRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **role** | **string**| The name of the role as it should appear in Vault. | 
+ **alicloudRoleRequest** | [**AlicloudRoleRequest**](AlicloudRoleRequest.md)|  | 
+ **alicloudMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;alicloud&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthapprolelogin"></a>
+# **PostAuthApproleLogin**
+> void PostAuthApproleLogin (ApproleLoginRequest approleLoginRequest, string approleMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthApproleLoginExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var approleLoginRequest = new ApproleLoginRequest(); // ApproleLoginRequest | 
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+
+            try
+            {
+                apiInstance.PostAuthApproleLogin(approleLoginRequest, approleMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthApproleLogin: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **approleLoginRequest** | [**ApproleLoginRequest**](ApproleLoginRequest.md)|  | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthapprolerolerolename"></a>
+# **PostAuthApproleRoleRoleName**
+> void PostAuthApproleRoleRoleName (string roleName, ApproleRoleRequest approleRoleRequest, string approleMountPath = null)
+
+Register an role with the backend.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthApproleRoleRoleNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
+            var approleRoleRequest = new ApproleRoleRequest(); // ApproleRoleRequest | 
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+
+            try
+            {
+                // Register an role with the backend.
+                apiInstance.PostAuthApproleRoleRoleName(roleName, approleRoleRequest, approleMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
+ **approleRoleRequest** | [**ApproleRoleRequest**](ApproleRoleRequest.md)|  | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthapprolerolerolenamebindsecretid"></a>
+# **PostAuthApproleRoleRoleNameBindSecretId**
+> void PostAuthApproleRoleRoleNameBindSecretId (string roleName, ApproleRoleBindSecretIdRequest approleRoleBindSecretIdRequest, string approleMountPath = null)
 
 Impose secret_id to be presented during login using this role.
 
@@ -7153,7 +11493,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateApproleRoleRoleNameBindSecretIdExample
+    public class PostAuthApproleRoleRoleNameBindSecretIdExample
     {
         public static void Main()
         {
@@ -7164,17 +11504,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-            var approleRoleBindSecretIdRequest = new ApproleRoleBindSecretIdRequest(); // ApproleRoleBindSecretIdRequest |  (optional) 
+            var approleRoleBindSecretIdRequest = new ApproleRoleBindSecretIdRequest(); // ApproleRoleBindSecretIdRequest | 
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Impose secret_id to be presented during login using this role.
-                apiInstance.UpdateApproleRoleRoleNameBindSecretId(roleName, mountPath, approleRoleBindSecretIdRequest);
+                apiInstance.PostAuthApproleRoleRoleNameBindSecretId(roleName, approleRoleBindSecretIdRequest, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateApproleRoleRoleNameBindSecretId: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameBindSecretId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7188,8 +11528,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
- **approleRoleBindSecretIdRequest** | [**ApproleRoleBindSecretIdRequest**](ApproleRoleBindSecretIdRequest.md)|  | [optional] 
+ **approleRoleBindSecretIdRequest** | [**ApproleRoleBindSecretIdRequest**](ApproleRoleBindSecretIdRequest.md)|  | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -7212,9 +11552,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateapprolerolerolenameboundcidrlist"></a>
-# **UpdateApproleRoleRoleNameBoundCidrList**
-> void UpdateApproleRoleRoleNameBoundCidrList (string roleName, string mountPath = null, ApproleRoleBoundCidrListRequest approleRoleBoundCidrListRequest = null)
+<a name="postauthapprolerolerolenameboundcidrlist"></a>
+# **PostAuthApproleRoleRoleNameBoundCidrList**
+> void PostAuthApproleRoleRoleNameBoundCidrList (string roleName, ApproleRoleBoundCidrListRequest approleRoleBoundCidrListRequest, string approleMountPath = null)
 
 Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
 
@@ -7229,7 +11569,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateApproleRoleRoleNameBoundCidrListExample
+    public class PostAuthApproleRoleRoleNameBoundCidrListExample
     {
         public static void Main()
         {
@@ -7240,17 +11580,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-            var approleRoleBoundCidrListRequest = new ApproleRoleBoundCidrListRequest(); // ApproleRoleBoundCidrListRequest |  (optional) 
+            var approleRoleBoundCidrListRequest = new ApproleRoleBoundCidrListRequest(); // ApproleRoleBoundCidrListRequest | 
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-                apiInstance.UpdateApproleRoleRoleNameBoundCidrList(roleName, mountPath, approleRoleBoundCidrListRequest);
+                apiInstance.PostAuthApproleRoleRoleNameBoundCidrList(roleName, approleRoleBoundCidrListRequest, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateApproleRoleRoleNameBoundCidrList: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameBoundCidrList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7264,8 +11604,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
- **approleRoleBoundCidrListRequest** | [**ApproleRoleBoundCidrListRequest**](ApproleRoleBoundCidrListRequest.md)|  | [optional] 
+ **approleRoleBoundCidrListRequest** | [**ApproleRoleBoundCidrListRequest**](ApproleRoleBoundCidrListRequest.md)|  | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -7288,9 +11628,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateapprolerolerolenamecustomsecretid"></a>
-# **UpdateApproleRoleRoleNameCustomSecretId**
-> void UpdateApproleRoleRoleNameCustomSecretId (string roleName, string mountPath = null, ApproleRoleCustomSecretIdRequest approleRoleCustomSecretIdRequest = null)
+<a name="postauthapprolerolerolenamecustomsecretid"></a>
+# **PostAuthApproleRoleRoleNameCustomSecretId**
+> void PostAuthApproleRoleRoleNameCustomSecretId (string roleName, ApproleRoleCustomSecretIdRequest approleRoleCustomSecretIdRequest, string approleMountPath = null)
 
 Assign a SecretID of choice against the role.
 
@@ -7305,7 +11645,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateApproleRoleRoleNameCustomSecretIdExample
+    public class PostAuthApproleRoleRoleNameCustomSecretIdExample
     {
         public static void Main()
         {
@@ -7316,17 +11656,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-            var approleRoleCustomSecretIdRequest = new ApproleRoleCustomSecretIdRequest(); // ApproleRoleCustomSecretIdRequest |  (optional) 
+            var approleRoleCustomSecretIdRequest = new ApproleRoleCustomSecretIdRequest(); // ApproleRoleCustomSecretIdRequest | 
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Assign a SecretID of choice against the role.
-                apiInstance.UpdateApproleRoleRoleNameCustomSecretId(roleName, mountPath, approleRoleCustomSecretIdRequest);
+                apiInstance.PostAuthApproleRoleRoleNameCustomSecretId(roleName, approleRoleCustomSecretIdRequest, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateApproleRoleRoleNameCustomSecretId: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameCustomSecretId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7340,8 +11680,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
- **approleRoleCustomSecretIdRequest** | [**ApproleRoleCustomSecretIdRequest**](ApproleRoleCustomSecretIdRequest.md)|  | [optional] 
+ **approleRoleCustomSecretIdRequest** | [**ApproleRoleCustomSecretIdRequest**](ApproleRoleCustomSecretIdRequest.md)|  | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -7364,9 +11704,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateapprolerolerolenameperiod"></a>
-# **UpdateApproleRoleRoleNamePeriod**
-> void UpdateApproleRoleRoleNamePeriod (string roleName, string mountPath = null, ApproleRolePeriodRequest approleRolePeriodRequest = null)
+<a name="postauthapprolerolerolenameperiod"></a>
+# **PostAuthApproleRoleRoleNamePeriod**
+> void PostAuthApproleRoleRoleNamePeriod (string roleName, ApproleRolePeriodRequest approleRolePeriodRequest, string approleMountPath = null)
 
 Updates the value of 'period' on the role
 
@@ -7381,7 +11721,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateApproleRoleRoleNamePeriodExample
+    public class PostAuthApproleRoleRoleNamePeriodExample
     {
         public static void Main()
         {
@@ -7392,17 +11732,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-            var approleRolePeriodRequest = new ApproleRolePeriodRequest(); // ApproleRolePeriodRequest |  (optional) 
+            var approleRolePeriodRequest = new ApproleRolePeriodRequest(); // ApproleRolePeriodRequest | 
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Updates the value of 'period' on the role
-                apiInstance.UpdateApproleRoleRoleNamePeriod(roleName, mountPath, approleRolePeriodRequest);
+                apiInstance.PostAuthApproleRoleRoleNamePeriod(roleName, approleRolePeriodRequest, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateApproleRoleRoleNamePeriod: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNamePeriod: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7416,8 +11756,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
- **approleRolePeriodRequest** | [**ApproleRolePeriodRequest**](ApproleRolePeriodRequest.md)|  | [optional] 
+ **approleRolePeriodRequest** | [**ApproleRolePeriodRequest**](ApproleRolePeriodRequest.md)|  | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -7440,9 +11780,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateapprolerolerolenamepolicies"></a>
-# **UpdateApproleRoleRoleNamePolicies**
-> void UpdateApproleRoleRoleNamePolicies (string roleName, string mountPath = null, ApproleRolePoliciesRequest approleRolePoliciesRequest = null)
+<a name="postauthapprolerolerolenamepolicies"></a>
+# **PostAuthApproleRoleRoleNamePolicies**
+> void PostAuthApproleRoleRoleNamePolicies (string roleName, ApproleRolePoliciesRequest approleRolePoliciesRequest, string approleMountPath = null)
 
 Policies of the role.
 
@@ -7457,7 +11797,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateApproleRoleRoleNamePoliciesExample
+    public class PostAuthApproleRoleRoleNamePoliciesExample
     {
         public static void Main()
         {
@@ -7468,17 +11808,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-            var approleRolePoliciesRequest = new ApproleRolePoliciesRequest(); // ApproleRolePoliciesRequest |  (optional) 
+            var approleRolePoliciesRequest = new ApproleRolePoliciesRequest(); // ApproleRolePoliciesRequest | 
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Policies of the role.
-                apiInstance.UpdateApproleRoleRoleNamePolicies(roleName, mountPath, approleRolePoliciesRequest);
+                apiInstance.PostAuthApproleRoleRoleNamePolicies(roleName, approleRolePoliciesRequest, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateApproleRoleRoleNamePolicies: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNamePolicies: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7492,8 +11832,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
- **approleRolePoliciesRequest** | [**ApproleRolePoliciesRequest**](ApproleRolePoliciesRequest.md)|  | [optional] 
+ **approleRolePoliciesRequest** | [**ApproleRolePoliciesRequest**](ApproleRolePoliciesRequest.md)|  | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -7516,9 +11856,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateapprolerolerolenameroleid"></a>
-# **UpdateApproleRoleRoleNameRoleId**
-> void UpdateApproleRoleRoleNameRoleId (string roleName, string mountPath = null, ApproleRoleRoleIdRequest approleRoleRoleIdRequest = null)
+<a name="postauthapprolerolerolenameroleid"></a>
+# **PostAuthApproleRoleRoleNameRoleId**
+> void PostAuthApproleRoleRoleNameRoleId (string roleName, ApproleRoleRoleIdRequest approleRoleRoleIdRequest, string approleMountPath = null)
 
 Returns the 'role_id' of the role.
 
@@ -7533,7 +11873,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateApproleRoleRoleNameRoleIdExample
+    public class PostAuthApproleRoleRoleNameRoleIdExample
     {
         public static void Main()
         {
@@ -7544,17 +11884,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-            var approleRoleRoleIdRequest = new ApproleRoleRoleIdRequest(); // ApproleRoleRoleIdRequest |  (optional) 
+            var approleRoleRoleIdRequest = new ApproleRoleRoleIdRequest(); // ApproleRoleRoleIdRequest | 
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Returns the 'role_id' of the role.
-                apiInstance.UpdateApproleRoleRoleNameRoleId(roleName, mountPath, approleRoleRoleIdRequest);
+                apiInstance.PostAuthApproleRoleRoleNameRoleId(roleName, approleRoleRoleIdRequest, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateApproleRoleRoleNameRoleId: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameRoleId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7568,8 +11908,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
- **approleRoleRoleIdRequest** | [**ApproleRoleRoleIdRequest**](ApproleRoleRoleIdRequest.md)|  | [optional] 
+ **approleRoleRoleIdRequest** | [**ApproleRoleRoleIdRequest**](ApproleRoleRoleIdRequest.md)|  | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -7592,9 +11932,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateapprolerolerolenamesecretid"></a>
-# **UpdateApproleRoleRoleNameSecretId**
-> void UpdateApproleRoleRoleNameSecretId (string roleName, string mountPath = null, ApproleRoleSecretIdRequest approleRoleSecretIdRequest = null)
+<a name="postauthapprolerolerolenamesecretid"></a>
+# **PostAuthApproleRoleRoleNameSecretId**
+> void PostAuthApproleRoleRoleNameSecretId (string roleName, ApproleRoleSecretIdRequest approleRoleSecretIdRequest, string approleMountPath = null)
 
 Generate a SecretID against this role.
 
@@ -7609,7 +11949,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateApproleRoleRoleNameSecretIdExample
+    public class PostAuthApproleRoleRoleNameSecretIdExample
     {
         public static void Main()
         {
@@ -7620,17 +11960,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-            var approleRoleSecretIdRequest = new ApproleRoleSecretIdRequest(); // ApproleRoleSecretIdRequest |  (optional) 
+            var approleRoleSecretIdRequest = new ApproleRoleSecretIdRequest(); // ApproleRoleSecretIdRequest | 
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Generate a SecretID against this role.
-                apiInstance.UpdateApproleRoleRoleNameSecretId(roleName, mountPath, approleRoleSecretIdRequest);
+                apiInstance.PostAuthApproleRoleRoleNameSecretId(roleName, approleRoleSecretIdRequest, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateApproleRoleRoleNameSecretId: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameSecretId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7644,8 +11984,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
- **approleRoleSecretIdRequest** | [**ApproleRoleSecretIdRequest**](ApproleRoleSecretIdRequest.md)|  | [optional] 
+ **approleRoleSecretIdRequest** | [**ApproleRoleSecretIdRequest**](ApproleRoleSecretIdRequest.md)|  | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -7668,9 +12008,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateapprolerolerolenamesecretidaccessordestroy"></a>
-# **UpdateApproleRoleRoleNameSecretIdAccessorDestroy**
-> void UpdateApproleRoleRoleNameSecretIdAccessorDestroy (string roleName, string mountPath = null, ApproleRoleSecretIdAccessorDestroyRequest approleRoleSecretIdAccessorDestroyRequest = null)
+<a name="postauthapprolerolerolenamesecretidaccessordestroy"></a>
+# **PostAuthApproleRoleRoleNameSecretIdAccessorDestroy**
+> void PostAuthApproleRoleRoleNameSecretIdAccessorDestroy (string roleName, ApproleRoleSecretIdAccessorDestroyRequest approleRoleSecretIdAccessorDestroyRequest, string approleMountPath = null)
 
 
 
@@ -7685,7 +12025,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateApproleRoleRoleNameSecretIdAccessorDestroyExample
+    public class PostAuthApproleRoleRoleNameSecretIdAccessorDestroyExample
     {
         public static void Main()
         {
@@ -7696,16 +12036,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-            var approleRoleSecretIdAccessorDestroyRequest = new ApproleRoleSecretIdAccessorDestroyRequest(); // ApproleRoleSecretIdAccessorDestroyRequest |  (optional) 
+            var approleRoleSecretIdAccessorDestroyRequest = new ApproleRoleSecretIdAccessorDestroyRequest(); // ApproleRoleSecretIdAccessorDestroyRequest | 
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
-                apiInstance.UpdateApproleRoleRoleNameSecretIdAccessorDestroy(roleName, mountPath, approleRoleSecretIdAccessorDestroyRequest);
+                apiInstance.PostAuthApproleRoleRoleNameSecretIdAccessorDestroy(roleName, approleRoleSecretIdAccessorDestroyRequest, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateApproleRoleRoleNameSecretIdAccessorDestroy: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameSecretIdAccessorDestroy: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7719,8 +12059,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
- **approleRoleSecretIdAccessorDestroyRequest** | [**ApproleRoleSecretIdAccessorDestroyRequest**](ApproleRoleSecretIdAccessorDestroyRequest.md)|  | [optional] 
+ **approleRoleSecretIdAccessorDestroyRequest** | [**ApproleRoleSecretIdAccessorDestroyRequest**](ApproleRoleSecretIdAccessorDestroyRequest.md)|  | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -7743,9 +12083,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateapprolerolerolenamesecretidaccessorlookup"></a>
-# **UpdateApproleRoleRoleNameSecretIdAccessorLookup**
-> void UpdateApproleRoleRoleNameSecretIdAccessorLookup (string roleName, string mountPath = null, ApproleRoleSecretIdAccessorLookupRequest approleRoleSecretIdAccessorLookupRequest = null)
+<a name="postauthapprolerolerolenamesecretidaccessorlookup"></a>
+# **PostAuthApproleRoleRoleNameSecretIdAccessorLookup**
+> void PostAuthApproleRoleRoleNameSecretIdAccessorLookup (string roleName, ApproleRoleSecretIdAccessorLookupRequest approleRoleSecretIdAccessorLookupRequest, string approleMountPath = null)
 
 
 
@@ -7760,7 +12100,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateApproleRoleRoleNameSecretIdAccessorLookupExample
+    public class PostAuthApproleRoleRoleNameSecretIdAccessorLookupExample
     {
         public static void Main()
         {
@@ -7771,16 +12111,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-            var approleRoleSecretIdAccessorLookupRequest = new ApproleRoleSecretIdAccessorLookupRequest(); // ApproleRoleSecretIdAccessorLookupRequest |  (optional) 
+            var approleRoleSecretIdAccessorLookupRequest = new ApproleRoleSecretIdAccessorLookupRequest(); // ApproleRoleSecretIdAccessorLookupRequest | 
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
-                apiInstance.UpdateApproleRoleRoleNameSecretIdAccessorLookup(roleName, mountPath, approleRoleSecretIdAccessorLookupRequest);
+                apiInstance.PostAuthApproleRoleRoleNameSecretIdAccessorLookup(roleName, approleRoleSecretIdAccessorLookupRequest, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateApproleRoleRoleNameSecretIdAccessorLookup: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameSecretIdAccessorLookup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7794,8 +12134,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
- **approleRoleSecretIdAccessorLookupRequest** | [**ApproleRoleSecretIdAccessorLookupRequest**](ApproleRoleSecretIdAccessorLookupRequest.md)|  | [optional] 
+ **approleRoleSecretIdAccessorLookupRequest** | [**ApproleRoleSecretIdAccessorLookupRequest**](ApproleRoleSecretIdAccessorLookupRequest.md)|  | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -7818,9 +12158,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateapprolerolerolenamesecretidboundcidrs"></a>
-# **UpdateApproleRoleRoleNameSecretIdBoundCidrs**
-> void UpdateApproleRoleRoleNameSecretIdBoundCidrs (string roleName, string mountPath = null, ApproleRoleSecretIdBoundCidrsRequest approleRoleSecretIdBoundCidrsRequest = null)
+<a name="postauthapprolerolerolenamesecretidboundcidrs"></a>
+# **PostAuthApproleRoleRoleNameSecretIdBoundCidrs**
+> void PostAuthApproleRoleRoleNameSecretIdBoundCidrs (string roleName, ApproleRoleSecretIdBoundCidrsRequest approleRoleSecretIdBoundCidrsRequest, string approleMountPath = null)
 
 Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
 
@@ -7835,7 +12175,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateApproleRoleRoleNameSecretIdBoundCidrsExample
+    public class PostAuthApproleRoleRoleNameSecretIdBoundCidrsExample
     {
         public static void Main()
         {
@@ -7846,17 +12186,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-            var approleRoleSecretIdBoundCidrsRequest = new ApproleRoleSecretIdBoundCidrsRequest(); // ApproleRoleSecretIdBoundCidrsRequest |  (optional) 
+            var approleRoleSecretIdBoundCidrsRequest = new ApproleRoleSecretIdBoundCidrsRequest(); // ApproleRoleSecretIdBoundCidrsRequest | 
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-                apiInstance.UpdateApproleRoleRoleNameSecretIdBoundCidrs(roleName, mountPath, approleRoleSecretIdBoundCidrsRequest);
+                apiInstance.PostAuthApproleRoleRoleNameSecretIdBoundCidrs(roleName, approleRoleSecretIdBoundCidrsRequest, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateApproleRoleRoleNameSecretIdBoundCidrs: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameSecretIdBoundCidrs: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7870,8 +12210,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
- **approleRoleSecretIdBoundCidrsRequest** | [**ApproleRoleSecretIdBoundCidrsRequest**](ApproleRoleSecretIdBoundCidrsRequest.md)|  | [optional] 
+ **approleRoleSecretIdBoundCidrsRequest** | [**ApproleRoleSecretIdBoundCidrsRequest**](ApproleRoleSecretIdBoundCidrsRequest.md)|  | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -7894,9 +12234,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateapprolerolerolenamesecretiddestroy"></a>
-# **UpdateApproleRoleRoleNameSecretIdDestroy**
-> void UpdateApproleRoleRoleNameSecretIdDestroy (string roleName, string mountPath = null, ApproleRoleSecretIdDestroyRequest approleRoleSecretIdDestroyRequest = null)
+<a name="postauthapprolerolerolenamesecretiddestroy"></a>
+# **PostAuthApproleRoleRoleNameSecretIdDestroy**
+> void PostAuthApproleRoleRoleNameSecretIdDestroy (string roleName, ApproleRoleSecretIdDestroyRequest approleRoleSecretIdDestroyRequest, string approleMountPath = null)
 
 Invalidate an issued secret_id
 
@@ -7911,7 +12251,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateApproleRoleRoleNameSecretIdDestroyExample
+    public class PostAuthApproleRoleRoleNameSecretIdDestroyExample
     {
         public static void Main()
         {
@@ -7922,17 +12262,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-            var approleRoleSecretIdDestroyRequest = new ApproleRoleSecretIdDestroyRequest(); // ApproleRoleSecretIdDestroyRequest |  (optional) 
+            var approleRoleSecretIdDestroyRequest = new ApproleRoleSecretIdDestroyRequest(); // ApproleRoleSecretIdDestroyRequest | 
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Invalidate an issued secret_id
-                apiInstance.UpdateApproleRoleRoleNameSecretIdDestroy(roleName, mountPath, approleRoleSecretIdDestroyRequest);
+                apiInstance.PostAuthApproleRoleRoleNameSecretIdDestroy(roleName, approleRoleSecretIdDestroyRequest, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateApproleRoleRoleNameSecretIdDestroy: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameSecretIdDestroy: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7946,8 +12286,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
- **approleRoleSecretIdDestroyRequest** | [**ApproleRoleSecretIdDestroyRequest**](ApproleRoleSecretIdDestroyRequest.md)|  | [optional] 
+ **approleRoleSecretIdDestroyRequest** | [**ApproleRoleSecretIdDestroyRequest**](ApproleRoleSecretIdDestroyRequest.md)|  | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -7970,9 +12310,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateapprolerolerolenamesecretidlookup"></a>
-# **UpdateApproleRoleRoleNameSecretIdLookup**
-> void UpdateApproleRoleRoleNameSecretIdLookup (string roleName, string mountPath = null, ApproleRoleSecretIdLookupRequest approleRoleSecretIdLookupRequest = null)
+<a name="postauthapprolerolerolenamesecretidlookup"></a>
+# **PostAuthApproleRoleRoleNameSecretIdLookup**
+> void PostAuthApproleRoleRoleNameSecretIdLookup (string roleName, ApproleRoleSecretIdLookupRequest approleRoleSecretIdLookupRequest, string approleMountPath = null)
 
 Read the properties of an issued secret_id
 
@@ -7987,7 +12327,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateApproleRoleRoleNameSecretIdLookupExample
+    public class PostAuthApproleRoleRoleNameSecretIdLookupExample
     {
         public static void Main()
         {
@@ -7998,17 +12338,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-            var approleRoleSecretIdLookupRequest = new ApproleRoleSecretIdLookupRequest(); // ApproleRoleSecretIdLookupRequest |  (optional) 
+            var approleRoleSecretIdLookupRequest = new ApproleRoleSecretIdLookupRequest(); // ApproleRoleSecretIdLookupRequest | 
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Read the properties of an issued secret_id
-                apiInstance.UpdateApproleRoleRoleNameSecretIdLookup(roleName, mountPath, approleRoleSecretIdLookupRequest);
+                apiInstance.PostAuthApproleRoleRoleNameSecretIdLookup(roleName, approleRoleSecretIdLookupRequest, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateApproleRoleRoleNameSecretIdLookup: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameSecretIdLookup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8022,8 +12362,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
- **approleRoleSecretIdLookupRequest** | [**ApproleRoleSecretIdLookupRequest**](ApproleRoleSecretIdLookupRequest.md)|  | [optional] 
+ **approleRoleSecretIdLookupRequest** | [**ApproleRoleSecretIdLookupRequest**](ApproleRoleSecretIdLookupRequest.md)|  | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -8046,9 +12386,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateapprolerolerolenamesecretidnumuses"></a>
-# **UpdateApproleRoleRoleNameSecretIdNumUses**
-> void UpdateApproleRoleRoleNameSecretIdNumUses (string roleName, string mountPath = null, ApproleRoleSecretIdNumUsesRequest approleRoleSecretIdNumUsesRequest = null)
+<a name="postauthapprolerolerolenamesecretidnumuses"></a>
+# **PostAuthApproleRoleRoleNameSecretIdNumUses**
+> void PostAuthApproleRoleRoleNameSecretIdNumUses (string roleName, ApproleRoleSecretIdNumUsesRequest approleRoleSecretIdNumUsesRequest, string approleMountPath = null)
 
 Use limit of the SecretID generated against the role.
 
@@ -8063,7 +12403,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateApproleRoleRoleNameSecretIdNumUsesExample
+    public class PostAuthApproleRoleRoleNameSecretIdNumUsesExample
     {
         public static void Main()
         {
@@ -8074,17 +12414,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-            var approleRoleSecretIdNumUsesRequest = new ApproleRoleSecretIdNumUsesRequest(); // ApproleRoleSecretIdNumUsesRequest |  (optional) 
+            var approleRoleSecretIdNumUsesRequest = new ApproleRoleSecretIdNumUsesRequest(); // ApproleRoleSecretIdNumUsesRequest | 
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Use limit of the SecretID generated against the role.
-                apiInstance.UpdateApproleRoleRoleNameSecretIdNumUses(roleName, mountPath, approleRoleSecretIdNumUsesRequest);
+                apiInstance.PostAuthApproleRoleRoleNameSecretIdNumUses(roleName, approleRoleSecretIdNumUsesRequest, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateApproleRoleRoleNameSecretIdNumUses: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameSecretIdNumUses: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8098,8 +12438,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
- **approleRoleSecretIdNumUsesRequest** | [**ApproleRoleSecretIdNumUsesRequest**](ApproleRoleSecretIdNumUsesRequest.md)|  | [optional] 
+ **approleRoleSecretIdNumUsesRequest** | [**ApproleRoleSecretIdNumUsesRequest**](ApproleRoleSecretIdNumUsesRequest.md)|  | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -8122,9 +12462,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateapprolerolerolenamesecretidttl"></a>
-# **UpdateApproleRoleRoleNameSecretIdTtl**
-> void UpdateApproleRoleRoleNameSecretIdTtl (string roleName, string mountPath = null, ApproleRoleSecretIdTtlRequest approleRoleSecretIdTtlRequest = null)
+<a name="postauthapprolerolerolenamesecretidttl"></a>
+# **PostAuthApproleRoleRoleNameSecretIdTtl**
+> void PostAuthApproleRoleRoleNameSecretIdTtl (string roleName, ApproleRoleSecretIdTtlRequest approleRoleSecretIdTtlRequest, string approleMountPath = null)
 
 Duration in seconds of the SecretID generated against the role.
 
@@ -8139,7 +12479,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateApproleRoleRoleNameSecretIdTtlExample
+    public class PostAuthApproleRoleRoleNameSecretIdTtlExample
     {
         public static void Main()
         {
@@ -8150,17 +12490,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-            var approleRoleSecretIdTtlRequest = new ApproleRoleSecretIdTtlRequest(); // ApproleRoleSecretIdTtlRequest |  (optional) 
+            var approleRoleSecretIdTtlRequest = new ApproleRoleSecretIdTtlRequest(); // ApproleRoleSecretIdTtlRequest | 
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Duration in seconds of the SecretID generated against the role.
-                apiInstance.UpdateApproleRoleRoleNameSecretIdTtl(roleName, mountPath, approleRoleSecretIdTtlRequest);
+                apiInstance.PostAuthApproleRoleRoleNameSecretIdTtl(roleName, approleRoleSecretIdTtlRequest, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateApproleRoleRoleNameSecretIdTtl: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameSecretIdTtl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8174,8 +12514,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
- **approleRoleSecretIdTtlRequest** | [**ApproleRoleSecretIdTtlRequest**](ApproleRoleSecretIdTtlRequest.md)|  | [optional] 
+ **approleRoleSecretIdTtlRequest** | [**ApproleRoleSecretIdTtlRequest**](ApproleRoleSecretIdTtlRequest.md)|  | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -8198,9 +12538,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateapprolerolerolenametokenboundcidrs"></a>
-# **UpdateApproleRoleRoleNameTokenBoundCidrs**
-> void UpdateApproleRoleRoleNameTokenBoundCidrs (string roleName, string mountPath = null, ApproleRoleTokenBoundCidrsRequest approleRoleTokenBoundCidrsRequest = null)
+<a name="postauthapprolerolerolenametokenboundcidrs"></a>
+# **PostAuthApproleRoleRoleNameTokenBoundCidrs**
+> void PostAuthApproleRoleRoleNameTokenBoundCidrs (string roleName, ApproleRoleTokenBoundCidrsRequest approleRoleTokenBoundCidrsRequest, string approleMountPath = null)
 
 Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
 
@@ -8215,7 +12555,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateApproleRoleRoleNameTokenBoundCidrsExample
+    public class PostAuthApproleRoleRoleNameTokenBoundCidrsExample
     {
         public static void Main()
         {
@@ -8226,17 +12566,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-            var approleRoleTokenBoundCidrsRequest = new ApproleRoleTokenBoundCidrsRequest(); // ApproleRoleTokenBoundCidrsRequest |  (optional) 
+            var approleRoleTokenBoundCidrsRequest = new ApproleRoleTokenBoundCidrsRequest(); // ApproleRoleTokenBoundCidrsRequest | 
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
-                apiInstance.UpdateApproleRoleRoleNameTokenBoundCidrs(roleName, mountPath, approleRoleTokenBoundCidrsRequest);
+                apiInstance.PostAuthApproleRoleRoleNameTokenBoundCidrs(roleName, approleRoleTokenBoundCidrsRequest, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateApproleRoleRoleNameTokenBoundCidrs: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameTokenBoundCidrs: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8250,8 +12590,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
- **approleRoleTokenBoundCidrsRequest** | [**ApproleRoleTokenBoundCidrsRequest**](ApproleRoleTokenBoundCidrsRequest.md)|  | [optional] 
+ **approleRoleTokenBoundCidrsRequest** | [**ApproleRoleTokenBoundCidrsRequest**](ApproleRoleTokenBoundCidrsRequest.md)|  | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -8274,9 +12614,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateapprolerolerolenametokenmaxttl"></a>
-# **UpdateApproleRoleRoleNameTokenMaxTtl**
-> void UpdateApproleRoleRoleNameTokenMaxTtl (string roleName, string mountPath = null, ApproleRoleTokenMaxTtlRequest approleRoleTokenMaxTtlRequest = null)
+<a name="postauthapprolerolerolenametokenmaxttl"></a>
+# **PostAuthApproleRoleRoleNameTokenMaxTtl**
+> void PostAuthApproleRoleRoleNameTokenMaxTtl (string roleName, ApproleRoleTokenMaxTtlRequest approleRoleTokenMaxTtlRequest, string approleMountPath = null)
 
 Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
 
@@ -8291,7 +12631,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateApproleRoleRoleNameTokenMaxTtlExample
+    public class PostAuthApproleRoleRoleNameTokenMaxTtlExample
     {
         public static void Main()
         {
@@ -8302,17 +12642,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-            var approleRoleTokenMaxTtlRequest = new ApproleRoleTokenMaxTtlRequest(); // ApproleRoleTokenMaxTtlRequest |  (optional) 
+            var approleRoleTokenMaxTtlRequest = new ApproleRoleTokenMaxTtlRequest(); // ApproleRoleTokenMaxTtlRequest | 
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
-                apiInstance.UpdateApproleRoleRoleNameTokenMaxTtl(roleName, mountPath, approleRoleTokenMaxTtlRequest);
+                apiInstance.PostAuthApproleRoleRoleNameTokenMaxTtl(roleName, approleRoleTokenMaxTtlRequest, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateApproleRoleRoleNameTokenMaxTtl: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameTokenMaxTtl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8326,8 +12666,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
- **approleRoleTokenMaxTtlRequest** | [**ApproleRoleTokenMaxTtlRequest**](ApproleRoleTokenMaxTtlRequest.md)|  | [optional] 
+ **approleRoleTokenMaxTtlRequest** | [**ApproleRoleTokenMaxTtlRequest**](ApproleRoleTokenMaxTtlRequest.md)|  | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -8350,9 +12690,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateapprolerolerolenametokennumuses"></a>
-# **UpdateApproleRoleRoleNameTokenNumUses**
-> void UpdateApproleRoleRoleNameTokenNumUses (string roleName, string mountPath = null, ApproleRoleTokenNumUsesRequest approleRoleTokenNumUsesRequest = null)
+<a name="postauthapprolerolerolenametokennumuses"></a>
+# **PostAuthApproleRoleRoleNameTokenNumUses**
+> void PostAuthApproleRoleRoleNameTokenNumUses (string roleName, ApproleRoleTokenNumUsesRequest approleRoleTokenNumUsesRequest, string approleMountPath = null)
 
 Number of times issued tokens can be used
 
@@ -8367,7 +12707,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateApproleRoleRoleNameTokenNumUsesExample
+    public class PostAuthApproleRoleRoleNameTokenNumUsesExample
     {
         public static void Main()
         {
@@ -8378,17 +12718,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-            var approleRoleTokenNumUsesRequest = new ApproleRoleTokenNumUsesRequest(); // ApproleRoleTokenNumUsesRequest |  (optional) 
+            var approleRoleTokenNumUsesRequest = new ApproleRoleTokenNumUsesRequest(); // ApproleRoleTokenNumUsesRequest | 
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Number of times issued tokens can be used
-                apiInstance.UpdateApproleRoleRoleNameTokenNumUses(roleName, mountPath, approleRoleTokenNumUsesRequest);
+                apiInstance.PostAuthApproleRoleRoleNameTokenNumUses(roleName, approleRoleTokenNumUsesRequest, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateApproleRoleRoleNameTokenNumUses: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameTokenNumUses: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8402,8 +12742,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
- **approleRoleTokenNumUsesRequest** | [**ApproleRoleTokenNumUsesRequest**](ApproleRoleTokenNumUsesRequest.md)|  | [optional] 
+ **approleRoleTokenNumUsesRequest** | [**ApproleRoleTokenNumUsesRequest**](ApproleRoleTokenNumUsesRequest.md)|  | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -8426,9 +12766,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateapprolerolerolenametokenttl"></a>
-# **UpdateApproleRoleRoleNameTokenTtl**
-> void UpdateApproleRoleRoleNameTokenTtl (string roleName, string mountPath = null, ApproleRoleTokenTtlRequest approleRoleTokenTtlRequest = null)
+<a name="postauthapprolerolerolenametokenttl"></a>
+# **PostAuthApproleRoleRoleNameTokenTtl**
+> void PostAuthApproleRoleRoleNameTokenTtl (string roleName, ApproleRoleTokenTtlRequest approleRoleTokenTtlRequest, string approleMountPath = null)
 
 Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
 
@@ -8443,7 +12783,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateApproleRoleRoleNameTokenTtlExample
+    public class PostAuthApproleRoleRoleNameTokenTtlExample
     {
         public static void Main()
         {
@@ -8454,17 +12794,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role. Must be less than 4096 bytes.
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
-            var approleRoleTokenTtlRequest = new ApproleRoleTokenTtlRequest(); // ApproleRoleTokenTtlRequest |  (optional) 
+            var approleRoleTokenTtlRequest = new ApproleRoleTokenTtlRequest(); // ApproleRoleTokenTtlRequest | 
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
-                apiInstance.UpdateApproleRoleRoleNameTokenTtl(roleName, mountPath, approleRoleTokenTtlRequest);
+                apiInstance.PostAuthApproleRoleRoleNameTokenTtl(roleName, approleRoleTokenTtlRequest, approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateApproleRoleRoleNameTokenTtl: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleRoleRoleNameTokenTtl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8478,8 +12818,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role. Must be less than 4096 bytes. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
- **approleRoleTokenTtlRequest** | [**ApproleRoleTokenTtlRequest**](ApproleRoleTokenTtlRequest.md)|  | [optional] 
+ **approleRoleTokenTtlRequest** | [**ApproleRoleTokenTtlRequest**](ApproleRoleTokenTtlRequest.md)|  | 
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -8502,9 +12842,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateapproletidysecretid"></a>
-# **UpdateApproleTidySecretId**
-> void UpdateApproleTidySecretId (string mountPath = null)
+<a name="postauthapproletidysecretid"></a>
+# **PostAuthApproleTidySecretId**
+> void PostAuthApproleTidySecretId (string approleMountPath = null)
 
 Trigger the clean-up of expired SecretID entries.
 
@@ -8519,7 +12859,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateApproleTidySecretIdExample
+    public class PostAuthApproleTidySecretIdExample
     {
         public static void Main()
         {
@@ -8529,16 +12869,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
+            var approleMountPath = "\"approle\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "approle")
 
             try
             {
                 // Trigger the clean-up of expired SecretID entries.
-                apiInstance.UpdateApproleTidySecretId(mountPath);
+                apiInstance.PostAuthApproleTidySecretId(approleMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateApproleTidySecretId: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthApproleTidySecretId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8551,7 +12891,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
+ **approleMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;approle&quot;]
 
 ### Return type
 
@@ -8574,9 +12914,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateawsconfigcertificatecertname"></a>
-# **UpdateAwsConfigCertificateCertName**
-> void UpdateAwsConfigCertificateCertName (string certName, string mountPath = null, AwsConfigCertificateRequest awsConfigCertificateRequest = null)
+<a name="postauthawsconfigcertificatecertname"></a>
+# **PostAuthAwsConfigCertificateCertName**
+> void PostAuthAwsConfigCertificateCertName (string certName, AwsConfigCertificateRequest awsConfigCertificateRequest, string awsMountPath = null)
 
 
 
@@ -8591,7 +12931,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateAwsConfigCertificateCertNameExample
+    public class PostAuthAwsConfigCertificateCertNameExample
     {
         public static void Main()
         {
@@ -8602,16 +12942,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var certName = "certName_example";  // string | Name of the certificate.
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-            var awsConfigCertificateRequest = new AwsConfigCertificateRequest(); // AwsConfigCertificateRequest |  (optional) 
+            var awsConfigCertificateRequest = new AwsConfigCertificateRequest(); // AwsConfigCertificateRequest | 
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.UpdateAwsConfigCertificateCertName(certName, mountPath, awsConfigCertificateRequest);
+                apiInstance.PostAuthAwsConfigCertificateCertName(certName, awsConfigCertificateRequest, awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateAwsConfigCertificateCertName: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsConfigCertificateCertName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8625,8 +12965,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **certName** | **string**| Name of the certificate. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
- **awsConfigCertificateRequest** | [**AwsConfigCertificateRequest**](AwsConfigCertificateRequest.md)|  | [optional] 
+ **awsConfigCertificateRequest** | [**AwsConfigCertificateRequest**](AwsConfigCertificateRequest.md)|  | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -8649,9 +12989,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateawsconfigclient"></a>
-# **UpdateAwsConfigClient**
-> void UpdateAwsConfigClient (string mountPath = null, AwsConfigClientRequest awsConfigClientRequest = null)
+<a name="postauthawsconfigclient"></a>
+# **PostAuthAwsConfigClient**
+> void PostAuthAwsConfigClient (AwsConfigClientRequest awsConfigClientRequest, string awsMountPath = null)
 
 
 
@@ -8666,7 +13006,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateAwsConfigClientExample
+    public class PostAuthAwsConfigClientExample
     {
         public static void Main()
         {
@@ -8676,16 +13016,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-            var awsConfigClientRequest = new AwsConfigClientRequest(); // AwsConfigClientRequest |  (optional) 
+            var awsConfigClientRequest = new AwsConfigClientRequest(); // AwsConfigClientRequest | 
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.UpdateAwsConfigClient(mountPath, awsConfigClientRequest);
+                apiInstance.PostAuthAwsConfigClient(awsConfigClientRequest, awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateAwsConfigClient: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsConfigClient: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8698,8 +13038,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
- **awsConfigClientRequest** | [**AwsConfigClientRequest**](AwsConfigClientRequest.md)|  | [optional] 
+ **awsConfigClientRequest** | [**AwsConfigClientRequest**](AwsConfigClientRequest.md)|  | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -8722,9 +13062,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateawsconfigidentity"></a>
-# **UpdateAwsConfigIdentity**
-> void UpdateAwsConfigIdentity (string mountPath = null, AwsConfigIdentityRequest awsConfigIdentityRequest = null)
+<a name="postauthawsconfigidentity"></a>
+# **PostAuthAwsConfigIdentity**
+> void PostAuthAwsConfigIdentity (AwsConfigIdentityRequest awsConfigIdentityRequest, string awsMountPath = null)
 
 
 
@@ -8739,7 +13079,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateAwsConfigIdentityExample
+    public class PostAuthAwsConfigIdentityExample
     {
         public static void Main()
         {
@@ -8749,16 +13089,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-            var awsConfigIdentityRequest = new AwsConfigIdentityRequest(); // AwsConfigIdentityRequest |  (optional) 
+            var awsConfigIdentityRequest = new AwsConfigIdentityRequest(); // AwsConfigIdentityRequest | 
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.UpdateAwsConfigIdentity(mountPath, awsConfigIdentityRequest);
+                apiInstance.PostAuthAwsConfigIdentity(awsConfigIdentityRequest, awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateAwsConfigIdentity: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsConfigIdentity: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8771,8 +13111,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
- **awsConfigIdentityRequest** | [**AwsConfigIdentityRequest**](AwsConfigIdentityRequest.md)|  | [optional] 
+ **awsConfigIdentityRequest** | [**AwsConfigIdentityRequest**](AwsConfigIdentityRequest.md)|  | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -8795,9 +13135,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateawsconfigrotateroot"></a>
-# **UpdateAwsConfigRotateRoot**
-> void UpdateAwsConfigRotateRoot (string mountPath = null)
+<a name="postauthawsconfigrotateroot"></a>
+# **PostAuthAwsConfigRotateRoot**
+> void PostAuthAwsConfigRotateRoot (string awsMountPath = null)
 
 
 
@@ -8812,7 +13152,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateAwsConfigRotateRootExample
+    public class PostAuthAwsConfigRotateRootExample
     {
         public static void Main()
         {
@@ -8822,15 +13162,15 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.UpdateAwsConfigRotateRoot(mountPath);
+                apiInstance.PostAuthAwsConfigRotateRoot(awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateAwsConfigRotateRoot: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsConfigRotateRoot: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8843,7 +13183,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -8866,9 +13206,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateawsconfigstsaccountid"></a>
-# **UpdateAwsConfigStsAccountId**
-> void UpdateAwsConfigStsAccountId (string accountId, string mountPath = null, AwsConfigStsRequest awsConfigStsRequest = null)
+<a name="postauthawsconfigstsaccountid"></a>
+# **PostAuthAwsConfigStsAccountId**
+> void PostAuthAwsConfigStsAccountId (string accountId, AwsConfigStsRequest awsConfigStsRequest, string awsMountPath = null)
 
 
 
@@ -8883,7 +13223,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateAwsConfigStsAccountIdExample
+    public class PostAuthAwsConfigStsAccountIdExample
     {
         public static void Main()
         {
@@ -8894,16 +13234,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var accountId = "accountId_example";  // string | AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account.
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-            var awsConfigStsRequest = new AwsConfigStsRequest(); // AwsConfigStsRequest |  (optional) 
+            var awsConfigStsRequest = new AwsConfigStsRequest(); // AwsConfigStsRequest | 
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.UpdateAwsConfigStsAccountId(accountId, mountPath, awsConfigStsRequest);
+                apiInstance.PostAuthAwsConfigStsAccountId(accountId, awsConfigStsRequest, awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateAwsConfigStsAccountId: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsConfigStsAccountId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8917,8 +13257,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accountId** | **string**| AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
- **awsConfigStsRequest** | [**AwsConfigStsRequest**](AwsConfigStsRequest.md)|  | [optional] 
+ **awsConfigStsRequest** | [**AwsConfigStsRequest**](AwsConfigStsRequest.md)|  | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -8941,9 +13281,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateawsconfigtidyidentityaccesslist"></a>
-# **UpdateAwsConfigTidyIdentityAccesslist**
-> void UpdateAwsConfigTidyIdentityAccesslist (string mountPath = null, AwsConfigTidyIdentityAccesslistRequest awsConfigTidyIdentityAccesslistRequest = null)
+<a name="postauthawsconfigtidyidentityaccesslist"></a>
+# **PostAuthAwsConfigTidyIdentityAccesslist**
+> void PostAuthAwsConfigTidyIdentityAccesslist (AwsConfigTidyIdentityAccesslistRequest awsConfigTidyIdentityAccesslistRequest, string awsMountPath = null)
 
 
 
@@ -8958,7 +13298,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateAwsConfigTidyIdentityAccesslistExample
+    public class PostAuthAwsConfigTidyIdentityAccesslistExample
     {
         public static void Main()
         {
@@ -8968,16 +13308,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-            var awsConfigTidyIdentityAccesslistRequest = new AwsConfigTidyIdentityAccesslistRequest(); // AwsConfigTidyIdentityAccesslistRequest |  (optional) 
+            var awsConfigTidyIdentityAccesslistRequest = new AwsConfigTidyIdentityAccesslistRequest(); // AwsConfigTidyIdentityAccesslistRequest | 
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.UpdateAwsConfigTidyIdentityAccesslist(mountPath, awsConfigTidyIdentityAccesslistRequest);
+                apiInstance.PostAuthAwsConfigTidyIdentityAccesslist(awsConfigTidyIdentityAccesslistRequest, awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateAwsConfigTidyIdentityAccesslist: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsConfigTidyIdentityAccesslist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8990,8 +13330,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
- **awsConfigTidyIdentityAccesslistRequest** | [**AwsConfigTidyIdentityAccesslistRequest**](AwsConfigTidyIdentityAccesslistRequest.md)|  | [optional] 
+ **awsConfigTidyIdentityAccesslistRequest** | [**AwsConfigTidyIdentityAccesslistRequest**](AwsConfigTidyIdentityAccesslistRequest.md)|  | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -9014,9 +13354,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateawsconfigtidyidentitywhitelist"></a>
-# **UpdateAwsConfigTidyIdentityWhitelist**
-> void UpdateAwsConfigTidyIdentityWhitelist (string mountPath = null, AwsConfigTidyIdentityWhitelistRequest awsConfigTidyIdentityWhitelistRequest = null)
+<a name="postauthawsconfigtidyidentitywhitelist"></a>
+# **PostAuthAwsConfigTidyIdentityWhitelist**
+> void PostAuthAwsConfigTidyIdentityWhitelist (AwsConfigTidyIdentityWhitelistRequest awsConfigTidyIdentityWhitelistRequest, string awsMountPath = null)
 
 
 
@@ -9031,7 +13371,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateAwsConfigTidyIdentityWhitelistExample
+    public class PostAuthAwsConfigTidyIdentityWhitelistExample
     {
         public static void Main()
         {
@@ -9041,16 +13381,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-            var awsConfigTidyIdentityWhitelistRequest = new AwsConfigTidyIdentityWhitelistRequest(); // AwsConfigTidyIdentityWhitelistRequest |  (optional) 
+            var awsConfigTidyIdentityWhitelistRequest = new AwsConfigTidyIdentityWhitelistRequest(); // AwsConfigTidyIdentityWhitelistRequest | 
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.UpdateAwsConfigTidyIdentityWhitelist(mountPath, awsConfigTidyIdentityWhitelistRequest);
+                apiInstance.PostAuthAwsConfigTidyIdentityWhitelist(awsConfigTidyIdentityWhitelistRequest, awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateAwsConfigTidyIdentityWhitelist: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsConfigTidyIdentityWhitelist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9063,8 +13403,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
- **awsConfigTidyIdentityWhitelistRequest** | [**AwsConfigTidyIdentityWhitelistRequest**](AwsConfigTidyIdentityWhitelistRequest.md)|  | [optional] 
+ **awsConfigTidyIdentityWhitelistRequest** | [**AwsConfigTidyIdentityWhitelistRequest**](AwsConfigTidyIdentityWhitelistRequest.md)|  | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -9087,9 +13427,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateawsconfigtidyroletagblacklist"></a>
-# **UpdateAwsConfigTidyRoletagBlacklist**
-> void UpdateAwsConfigTidyRoletagBlacklist (string mountPath = null, AwsConfigTidyRoletagBlacklistRequest awsConfigTidyRoletagBlacklistRequest = null)
+<a name="postauthawsconfigtidyroletagblacklist"></a>
+# **PostAuthAwsConfigTidyRoletagBlacklist**
+> void PostAuthAwsConfigTidyRoletagBlacklist (AwsConfigTidyRoletagBlacklistRequest awsConfigTidyRoletagBlacklistRequest, string awsMountPath = null)
 
 
 
@@ -9104,7 +13444,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateAwsConfigTidyRoletagBlacklistExample
+    public class PostAuthAwsConfigTidyRoletagBlacklistExample
     {
         public static void Main()
         {
@@ -9114,16 +13454,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-            var awsConfigTidyRoletagBlacklistRequest = new AwsConfigTidyRoletagBlacklistRequest(); // AwsConfigTidyRoletagBlacklistRequest |  (optional) 
+            var awsConfigTidyRoletagBlacklistRequest = new AwsConfigTidyRoletagBlacklistRequest(); // AwsConfigTidyRoletagBlacklistRequest | 
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.UpdateAwsConfigTidyRoletagBlacklist(mountPath, awsConfigTidyRoletagBlacklistRequest);
+                apiInstance.PostAuthAwsConfigTidyRoletagBlacklist(awsConfigTidyRoletagBlacklistRequest, awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateAwsConfigTidyRoletagBlacklist: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsConfigTidyRoletagBlacklist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9136,8 +13476,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
- **awsConfigTidyRoletagBlacklistRequest** | [**AwsConfigTidyRoletagBlacklistRequest**](AwsConfigTidyRoletagBlacklistRequest.md)|  | [optional] 
+ **awsConfigTidyRoletagBlacklistRequest** | [**AwsConfigTidyRoletagBlacklistRequest**](AwsConfigTidyRoletagBlacklistRequest.md)|  | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -9160,9 +13500,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateawsconfigtidyroletagdenylist"></a>
-# **UpdateAwsConfigTidyRoletagDenylist**
-> void UpdateAwsConfigTidyRoletagDenylist (string mountPath = null, AwsConfigTidyRoletagDenylistRequest awsConfigTidyRoletagDenylistRequest = null)
+<a name="postauthawsconfigtidyroletagdenylist"></a>
+# **PostAuthAwsConfigTidyRoletagDenylist**
+> void PostAuthAwsConfigTidyRoletagDenylist (AwsConfigTidyRoletagDenylistRequest awsConfigTidyRoletagDenylistRequest, string awsMountPath = null)
 
 
 
@@ -9177,7 +13517,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateAwsConfigTidyRoletagDenylistExample
+    public class PostAuthAwsConfigTidyRoletagDenylistExample
     {
         public static void Main()
         {
@@ -9187,16 +13527,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-            var awsConfigTidyRoletagDenylistRequest = new AwsConfigTidyRoletagDenylistRequest(); // AwsConfigTidyRoletagDenylistRequest |  (optional) 
+            var awsConfigTidyRoletagDenylistRequest = new AwsConfigTidyRoletagDenylistRequest(); // AwsConfigTidyRoletagDenylistRequest | 
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.UpdateAwsConfigTidyRoletagDenylist(mountPath, awsConfigTidyRoletagDenylistRequest);
+                apiInstance.PostAuthAwsConfigTidyRoletagDenylist(awsConfigTidyRoletagDenylistRequest, awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateAwsConfigTidyRoletagDenylist: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsConfigTidyRoletagDenylist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9209,8 +13549,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
- **awsConfigTidyRoletagDenylistRequest** | [**AwsConfigTidyRoletagDenylistRequest**](AwsConfigTidyRoletagDenylistRequest.md)|  | [optional] 
+ **awsConfigTidyRoletagDenylistRequest** | [**AwsConfigTidyRoletagDenylistRequest**](AwsConfigTidyRoletagDenylistRequest.md)|  | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -9233,9 +13573,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateawsrolerole"></a>
-# **UpdateAwsRoleRole**
-> void UpdateAwsRoleRole (string role, string mountPath = null, AwsRoleRequest awsRoleRequest = null)
+<a name="postauthawslogin"></a>
+# **PostAuthAwsLogin**
+> void PostAuthAwsLogin (AwsLoginRequest awsLoginRequest, string awsMountPath = null)
 
 
 
@@ -9250,7 +13590,80 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateAwsRoleRoleExample
+    public class PostAuthAwsLoginExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var awsLoginRequest = new AwsLoginRequest(); // AwsLoginRequest | 
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+
+            try
+            {
+                apiInstance.PostAuthAwsLogin(awsLoginRequest, awsMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthAwsLogin: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **awsLoginRequest** | [**AwsLoginRequest**](AwsLoginRequest.md)|  | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthawsrolerole"></a>
+# **PostAuthAwsRoleRole**
+> void PostAuthAwsRoleRole (string role, AwsRoleRequest awsRoleRequest, string awsMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthAwsRoleRoleExample
     {
         public static void Main()
         {
@@ -9261,16 +13674,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | Name of the role.
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-            var awsRoleRequest = new AwsRoleRequest(); // AwsRoleRequest |  (optional) 
+            var awsRoleRequest = new AwsRoleRequest(); // AwsRoleRequest | 
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.UpdateAwsRoleRole(role, mountPath, awsRoleRequest);
+                apiInstance.PostAuthAwsRoleRole(role, awsRoleRequest, awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateAwsRoleRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsRoleRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9284,8 +13697,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **role** | **string**| Name of the role. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
- **awsRoleRequest** | [**AwsRoleRequest**](AwsRoleRequest.md)|  | [optional] 
+ **awsRoleRequest** | [**AwsRoleRequest**](AwsRoleRequest.md)|  | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -9308,9 +13721,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateawsroleroletag"></a>
-# **UpdateAwsRoleRoleTag**
-> void UpdateAwsRoleRoleTag (string role, string mountPath = null, AwsRoleTagRequest awsRoleTagRequest = null)
+<a name="postauthawsroleroletag"></a>
+# **PostAuthAwsRoleRoleTag**
+> void PostAuthAwsRoleRoleTag (string role, AwsRoleTagRequest awsRoleTagRequest, string awsMountPath = null)
 
 
 
@@ -9325,7 +13738,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateAwsRoleRoleTagExample
+    public class PostAuthAwsRoleRoleTagExample
     {
         public static void Main()
         {
@@ -9336,16 +13749,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var role = "role_example";  // string | Name of the role.
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-            var awsRoleTagRequest = new AwsRoleTagRequest(); // AwsRoleTagRequest |  (optional) 
+            var awsRoleTagRequest = new AwsRoleTagRequest(); // AwsRoleTagRequest | 
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.UpdateAwsRoleRoleTag(role, mountPath, awsRoleTagRequest);
+                apiInstance.PostAuthAwsRoleRoleTag(role, awsRoleTagRequest, awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateAwsRoleRoleTag: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsRoleRoleTag: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9359,8 +13772,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **role** | **string**| Name of the role. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
- **awsRoleTagRequest** | [**AwsRoleTagRequest**](AwsRoleTagRequest.md)|  | [optional] 
+ **awsRoleTagRequest** | [**AwsRoleTagRequest**](AwsRoleTagRequest.md)|  | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -9383,9 +13796,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateawsroletagblacklistroletag"></a>
-# **UpdateAwsRoletagBlacklistRoleTag**
-> void UpdateAwsRoletagBlacklistRoleTag (string roleTag, string mountPath = null)
+<a name="postauthawsroletagblacklistroletag"></a>
+# **PostAuthAwsRoletagBlacklistRoleTag**
+> void PostAuthAwsRoletagBlacklistRoleTag (string roleTag, string awsMountPath = null)
 
 
 
@@ -9400,7 +13813,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateAwsRoletagBlacklistRoleTagExample
+    public class PostAuthAwsRoletagBlacklistRoleTagExample
     {
         public static void Main()
         {
@@ -9411,15 +13824,15 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleTag = "roleTag_example";  // string | Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.UpdateAwsRoletagBlacklistRoleTag(roleTag, mountPath);
+                apiInstance.PostAuthAwsRoletagBlacklistRoleTag(roleTag, awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateAwsRoletagBlacklistRoleTag: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsRoletagBlacklistRoleTag: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9433,7 +13846,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleTag** | **string**| Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -9456,9 +13869,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateawsroletagdenylistroletag"></a>
-# **UpdateAwsRoletagDenylistRoleTag**
-> void UpdateAwsRoletagDenylistRoleTag (string roleTag, string mountPath = null)
+<a name="postauthawsroletagdenylistroletag"></a>
+# **PostAuthAwsRoletagDenylistRoleTag**
+> void PostAuthAwsRoletagDenylistRoleTag (string roleTag, string awsMountPath = null)
 
 
 
@@ -9473,7 +13886,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateAwsRoletagDenylistRoleTagExample
+    public class PostAuthAwsRoletagDenylistRoleTagExample
     {
         public static void Main()
         {
@@ -9484,15 +13897,15 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleTag = "roleTag_example";  // string | Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.UpdateAwsRoletagDenylistRoleTag(roleTag, mountPath);
+                apiInstance.PostAuthAwsRoletagDenylistRoleTag(roleTag, awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateAwsRoletagDenylistRoleTag: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsRoletagDenylistRoleTag: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9506,7 +13919,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleTag** | **string**| Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -9529,9 +13942,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateawstidyidentityaccesslist"></a>
-# **UpdateAwsTidyIdentityAccesslist**
-> void UpdateAwsTidyIdentityAccesslist (string mountPath = null, AwsTidyIdentityAccesslistRequest awsTidyIdentityAccesslistRequest = null)
+<a name="postauthawstidyidentityaccesslist"></a>
+# **PostAuthAwsTidyIdentityAccesslist**
+> void PostAuthAwsTidyIdentityAccesslist (AwsTidyIdentityAccesslistRequest awsTidyIdentityAccesslistRequest, string awsMountPath = null)
 
 
 
@@ -9546,7 +13959,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateAwsTidyIdentityAccesslistExample
+    public class PostAuthAwsTidyIdentityAccesslistExample
     {
         public static void Main()
         {
@@ -9556,16 +13969,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-            var awsTidyIdentityAccesslistRequest = new AwsTidyIdentityAccesslistRequest(); // AwsTidyIdentityAccesslistRequest |  (optional) 
+            var awsTidyIdentityAccesslistRequest = new AwsTidyIdentityAccesslistRequest(); // AwsTidyIdentityAccesslistRequest | 
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.UpdateAwsTidyIdentityAccesslist(mountPath, awsTidyIdentityAccesslistRequest);
+                apiInstance.PostAuthAwsTidyIdentityAccesslist(awsTidyIdentityAccesslistRequest, awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateAwsTidyIdentityAccesslist: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsTidyIdentityAccesslist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9578,8 +13991,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
- **awsTidyIdentityAccesslistRequest** | [**AwsTidyIdentityAccesslistRequest**](AwsTidyIdentityAccesslistRequest.md)|  | [optional] 
+ **awsTidyIdentityAccesslistRequest** | [**AwsTidyIdentityAccesslistRequest**](AwsTidyIdentityAccesslistRequest.md)|  | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -9602,9 +14015,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateawstidyidentitywhitelist"></a>
-# **UpdateAwsTidyIdentityWhitelist**
-> void UpdateAwsTidyIdentityWhitelist (string mountPath = null, AwsTidyIdentityWhitelistRequest awsTidyIdentityWhitelistRequest = null)
+<a name="postauthawstidyidentitywhitelist"></a>
+# **PostAuthAwsTidyIdentityWhitelist**
+> void PostAuthAwsTidyIdentityWhitelist (AwsTidyIdentityWhitelistRequest awsTidyIdentityWhitelistRequest, string awsMountPath = null)
 
 
 
@@ -9619,7 +14032,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateAwsTidyIdentityWhitelistExample
+    public class PostAuthAwsTidyIdentityWhitelistExample
     {
         public static void Main()
         {
@@ -9629,16 +14042,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-            var awsTidyIdentityWhitelistRequest = new AwsTidyIdentityWhitelistRequest(); // AwsTidyIdentityWhitelistRequest |  (optional) 
+            var awsTidyIdentityWhitelistRequest = new AwsTidyIdentityWhitelistRequest(); // AwsTidyIdentityWhitelistRequest | 
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.UpdateAwsTidyIdentityWhitelist(mountPath, awsTidyIdentityWhitelistRequest);
+                apiInstance.PostAuthAwsTidyIdentityWhitelist(awsTidyIdentityWhitelistRequest, awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateAwsTidyIdentityWhitelist: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsTidyIdentityWhitelist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9651,8 +14064,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
- **awsTidyIdentityWhitelistRequest** | [**AwsTidyIdentityWhitelistRequest**](AwsTidyIdentityWhitelistRequest.md)|  | [optional] 
+ **awsTidyIdentityWhitelistRequest** | [**AwsTidyIdentityWhitelistRequest**](AwsTidyIdentityWhitelistRequest.md)|  | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -9675,9 +14088,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateawstidyroletagblacklist"></a>
-# **UpdateAwsTidyRoletagBlacklist**
-> void UpdateAwsTidyRoletagBlacklist (string mountPath = null, AwsTidyRoletagBlacklistRequest awsTidyRoletagBlacklistRequest = null)
+<a name="postauthawstidyroletagblacklist"></a>
+# **PostAuthAwsTidyRoletagBlacklist**
+> void PostAuthAwsTidyRoletagBlacklist (AwsTidyRoletagBlacklistRequest awsTidyRoletagBlacklistRequest, string awsMountPath = null)
 
 
 
@@ -9692,7 +14105,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateAwsTidyRoletagBlacklistExample
+    public class PostAuthAwsTidyRoletagBlacklistExample
     {
         public static void Main()
         {
@@ -9702,16 +14115,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-            var awsTidyRoletagBlacklistRequest = new AwsTidyRoletagBlacklistRequest(); // AwsTidyRoletagBlacklistRequest |  (optional) 
+            var awsTidyRoletagBlacklistRequest = new AwsTidyRoletagBlacklistRequest(); // AwsTidyRoletagBlacklistRequest | 
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.UpdateAwsTidyRoletagBlacklist(mountPath, awsTidyRoletagBlacklistRequest);
+                apiInstance.PostAuthAwsTidyRoletagBlacklist(awsTidyRoletagBlacklistRequest, awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateAwsTidyRoletagBlacklist: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsTidyRoletagBlacklist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9724,8 +14137,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
- **awsTidyRoletagBlacklistRequest** | [**AwsTidyRoletagBlacklistRequest**](AwsTidyRoletagBlacklistRequest.md)|  | [optional] 
+ **awsTidyRoletagBlacklistRequest** | [**AwsTidyRoletagBlacklistRequest**](AwsTidyRoletagBlacklistRequest.md)|  | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -9748,9 +14161,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateawstidyroletagdenylist"></a>
-# **UpdateAwsTidyRoletagDenylist**
-> void UpdateAwsTidyRoletagDenylist (string mountPath = null, AwsTidyRoletagDenylistRequest awsTidyRoletagDenylistRequest = null)
+<a name="postauthawstidyroletagdenylist"></a>
+# **PostAuthAwsTidyRoletagDenylist**
+> void PostAuthAwsTidyRoletagDenylist (AwsTidyRoletagDenylistRequest awsTidyRoletagDenylistRequest, string awsMountPath = null)
 
 
 
@@ -9765,7 +14178,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateAwsTidyRoletagDenylistExample
+    public class PostAuthAwsTidyRoletagDenylistExample
     {
         public static void Main()
         {
@@ -9775,16 +14188,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
-            var awsTidyRoletagDenylistRequest = new AwsTidyRoletagDenylistRequest(); // AwsTidyRoletagDenylistRequest |  (optional) 
+            var awsTidyRoletagDenylistRequest = new AwsTidyRoletagDenylistRequest(); // AwsTidyRoletagDenylistRequest | 
+            var awsMountPath = "\"aws\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "aws")
 
             try
             {
-                apiInstance.UpdateAwsTidyRoletagDenylist(mountPath, awsTidyRoletagDenylistRequest);
+                apiInstance.PostAuthAwsTidyRoletagDenylist(awsTidyRoletagDenylistRequest, awsMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateAwsTidyRoletagDenylist: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthAwsTidyRoletagDenylist: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9797,8 +14210,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
- **awsTidyRoletagDenylistRequest** | [**AwsTidyRoletagDenylistRequest**](AwsTidyRoletagDenylistRequest.md)|  | [optional] 
+ **awsTidyRoletagDenylistRequest** | [**AwsTidyRoletagDenylistRequest**](AwsTidyRoletagDenylistRequest.md)|  | 
+ **awsMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;aws&quot;]
 
 ### Return type
 
@@ -9821,9 +14234,378 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatecertcertsname"></a>
-# **UpdateCertCertsName**
-> void UpdateCertCertsName (string name, string mountPath = null, CertCertsRequest certCertsRequest = null)
+<a name="postauthazureconfig"></a>
+# **PostAuthAzureConfig**
+> void PostAuthAzureConfig (AzureConfigRequest azureConfigRequest, string azureMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthAzureConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var azureConfigRequest = new AzureConfigRequest(); // AzureConfigRequest | 
+            var azureMountPath = "\"azure\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "azure")
+
+            try
+            {
+                apiInstance.PostAuthAzureConfig(azureConfigRequest, azureMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthAzureConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **azureConfigRequest** | [**AzureConfigRequest**](AzureConfigRequest.md)|  | 
+ **azureMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;azure&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthazurelogin"></a>
+# **PostAuthAzureLogin**
+> void PostAuthAzureLogin (AzureLoginRequest azureLoginRequest, string azureMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthAzureLoginExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var azureLoginRequest = new AzureLoginRequest(); // AzureLoginRequest | 
+            var azureMountPath = "\"azure\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "azure")
+
+            try
+            {
+                apiInstance.PostAuthAzureLogin(azureLoginRequest, azureMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthAzureLogin: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **azureLoginRequest** | [**AzureLoginRequest**](AzureLoginRequest.md)|  | 
+ **azureMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;azure&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthazurerolename"></a>
+# **PostAuthAzureRoleName**
+> void PostAuthAzureRoleName (string name, AzureRoleRequest azureRoleRequest, string azureMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthAzureRoleNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the role.
+            var azureRoleRequest = new AzureRoleRequest(); // AzureRoleRequest | 
+            var azureMountPath = "\"azure\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "azure")
+
+            try
+            {
+                apiInstance.PostAuthAzureRoleName(name, azureRoleRequest, azureMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthAzureRoleName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role. | 
+ **azureRoleRequest** | [**AzureRoleRequest**](AzureRoleRequest.md)|  | 
+ **azureMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;azure&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthcentrifyconfig"></a>
+# **PostAuthCentrifyConfig**
+> void PostAuthCentrifyConfig (CentrifyConfigRequest centrifyConfigRequest, string centrifyMountPath = null)
+
+This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthCentrifyConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var centrifyConfigRequest = new CentrifyConfigRequest(); // CentrifyConfigRequest | 
+            var centrifyMountPath = "\"centrify\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "centrify")
+
+            try
+            {
+                // This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
+                apiInstance.PostAuthCentrifyConfig(centrifyConfigRequest, centrifyMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthCentrifyConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **centrifyConfigRequest** | [**CentrifyConfigRequest**](CentrifyConfigRequest.md)|  | 
+ **centrifyMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;centrify&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthcentrifylogin"></a>
+# **PostAuthCentrifyLogin**
+> void PostAuthCentrifyLogin (CentrifyLoginRequest centrifyLoginRequest, string centrifyMountPath = null)
+
+Log in with a username and password.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthCentrifyLoginExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var centrifyLoginRequest = new CentrifyLoginRequest(); // CentrifyLoginRequest | 
+            var centrifyMountPath = "\"centrify\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "centrify")
+
+            try
+            {
+                // Log in with a username and password.
+                apiInstance.PostAuthCentrifyLogin(centrifyLoginRequest, centrifyMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthCentrifyLogin: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **centrifyLoginRequest** | [**CentrifyLoginRequest**](CentrifyLoginRequest.md)|  | 
+ **centrifyMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;centrify&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthcertcertsname"></a>
+# **PostAuthCertCertsName**
+> void PostAuthCertCertsName (string name, CertCertsRequest certCertsRequest, string certMountPath = null)
 
 Manage trusted certificates used for authentication.
 
@@ -9838,7 +14620,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateCertCertsNameExample
+    public class PostAuthCertCertsNameExample
     {
         public static void Main()
         {
@@ -9849,17 +14631,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the certificate
-            var mountPath = "\"cert\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cert")
-            var certCertsRequest = new CertCertsRequest(); // CertCertsRequest |  (optional) 
+            var certCertsRequest = new CertCertsRequest(); // CertCertsRequest | 
+            var certMountPath = "\"cert\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cert")
 
             try
             {
                 // Manage trusted certificates used for authentication.
-                apiInstance.UpdateCertCertsName(name, mountPath, certCertsRequest);
+                apiInstance.PostAuthCertCertsName(name, certCertsRequest, certMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateCertCertsName: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthCertCertsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9873,8 +14655,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The name of the certificate | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cert&quot;]
- **certCertsRequest** | [**CertCertsRequest**](CertCertsRequest.md)|  | [optional] 
+ **certCertsRequest** | [**CertCertsRequest**](CertCertsRequest.md)|  | 
+ **certMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cert&quot;]
 
 ### Return type
 
@@ -9897,9 +14679,82 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatecertcrlsname"></a>
-# **UpdateCertCrlsName**
-> void UpdateCertCrlsName (string name, string mountPath = null, CertCrlsRequest certCrlsRequest = null)
+<a name="postauthcertconfig"></a>
+# **PostAuthCertConfig**
+> void PostAuthCertConfig (CertConfigRequest certConfigRequest, string certMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthCertConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var certConfigRequest = new CertConfigRequest(); // CertConfigRequest | 
+            var certMountPath = "\"cert\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cert")
+
+            try
+            {
+                apiInstance.PostAuthCertConfig(certConfigRequest, certMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthCertConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **certConfigRequest** | [**CertConfigRequest**](CertConfigRequest.md)|  | 
+ **certMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cert&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthcertcrlsname"></a>
+# **PostAuthCertCrlsName**
+> void PostAuthCertCrlsName (string name, CertCrlsRequest certCrlsRequest, string certMountPath = null)
 
 Manage Certificate Revocation Lists checked during authentication.
 
@@ -9914,7 +14769,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateCertCrlsNameExample
+    public class PostAuthCertCrlsNameExample
     {
         public static void Main()
         {
@@ -9925,17 +14780,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the certificate
-            var mountPath = "\"cert\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cert")
-            var certCrlsRequest = new CertCrlsRequest(); // CertCrlsRequest |  (optional) 
+            var certCrlsRequest = new CertCrlsRequest(); // CertCrlsRequest | 
+            var certMountPath = "\"cert\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cert")
 
             try
             {
                 // Manage Certificate Revocation Lists checked during authentication.
-                apiInstance.UpdateCertCrlsName(name, mountPath, certCrlsRequest);
+                apiInstance.PostAuthCertCrlsName(name, certCrlsRequest, certMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateCertCrlsName: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthCertCrlsName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9949,8 +14804,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The name of the certificate | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cert&quot;]
- **certCrlsRequest** | [**CertCrlsRequest**](CertCrlsRequest.md)|  | [optional] 
+ **certCrlsRequest** | [**CertCrlsRequest**](CertCrlsRequest.md)|  | 
+ **certMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cert&quot;]
 
 ### Return type
 
@@ -9973,9 +14828,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatecfrolesrole"></a>
-# **UpdateCfRolesRole**
-> void UpdateCfRolesRole (string role, string mountPath = null, CfRolesRequest cfRolesRequest = null)
+<a name="postauthcertlogin"></a>
+# **PostAuthCertLogin**
+> void PostAuthCertLogin (CertLoginRequest certLoginRequest, string certMountPath = null)
 
 
 
@@ -9990,7 +14845,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateCfRolesRoleExample
+    public class PostAuthCertLoginExample
     {
         public static void Main()
         {
@@ -10000,17 +14855,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var role = "role_example";  // string | The name of the role.
-            var mountPath = "\"cf\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cf")
-            var cfRolesRequest = new CfRolesRequest(); // CfRolesRequest |  (optional) 
+            var certLoginRequest = new CertLoginRequest(); // CertLoginRequest | 
+            var certMountPath = "\"cert\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cert")
 
             try
             {
-                apiInstance.UpdateCfRolesRole(role, mountPath, cfRolesRequest);
+                apiInstance.PostAuthCertLogin(certLoginRequest, certMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateCfRolesRole: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthCertLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10023,9 +14877,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **role** | **string**| The name of the role. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cf&quot;]
- **cfRolesRequest** | [**CfRolesRequest**](CfRolesRequest.md)|  | [optional] 
+ **certLoginRequest** | [**CertLoginRequest**](CertLoginRequest.md)|  | 
+ **certMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cert&quot;]
 
 ### Return type
 
@@ -10048,9 +14901,453 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updategcprolenamelabels"></a>
-# **UpdateGcpRoleNameLabels**
-> void UpdateGcpRoleNameLabels (string name, string mountPath = null, GcpRoleLabelsRequest gcpRoleLabelsRequest = null)
+<a name="postauthcfconfig"></a>
+# **PostAuthCfConfig**
+> void PostAuthCfConfig (CfConfigRequest cfConfigRequest, string cfMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthCfConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var cfConfigRequest = new CfConfigRequest(); // CfConfigRequest | 
+            var cfMountPath = "\"cf\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cf")
+
+            try
+            {
+                apiInstance.PostAuthCfConfig(cfConfigRequest, cfMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthCfConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cfConfigRequest** | [**CfConfigRequest**](CfConfigRequest.md)|  | 
+ **cfMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cf&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthcflogin"></a>
+# **PostAuthCfLogin**
+> void PostAuthCfLogin (CfLoginRequest cfLoginRequest, string cfMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthCfLoginExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var cfLoginRequest = new CfLoginRequest(); // CfLoginRequest | 
+            var cfMountPath = "\"cf\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cf")
+
+            try
+            {
+                apiInstance.PostAuthCfLogin(cfLoginRequest, cfMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthCfLogin: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cfLoginRequest** | [**CfLoginRequest**](CfLoginRequest.md)|  | 
+ **cfMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cf&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthcfrolesrole"></a>
+# **PostAuthCfRolesRole**
+> void PostAuthCfRolesRole (string role, CfRolesRequest cfRolesRequest, string cfMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthCfRolesRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var role = "role_example";  // string | The name of the role.
+            var cfRolesRequest = new CfRolesRequest(); // CfRolesRequest | 
+            var cfMountPath = "\"cf\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cf")
+
+            try
+            {
+                apiInstance.PostAuthCfRolesRole(role, cfRolesRequest, cfMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthCfRolesRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **role** | **string**| The name of the role. | 
+ **cfRolesRequest** | [**CfRolesRequest**](CfRolesRequest.md)|  | 
+ **cfMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cf&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthgcpconfig"></a>
+# **PostAuthGcpConfig**
+> void PostAuthGcpConfig (GcpConfigRequest gcpConfigRequest, string gcpMountPath = null)
+
+Configure credentials used to query the GCP IAM API to verify authenticating service accounts
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthGcpConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var gcpConfigRequest = new GcpConfigRequest(); // GcpConfigRequest | 
+            var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+
+            try
+            {
+                // Configure credentials used to query the GCP IAM API to verify authenticating service accounts
+                apiInstance.PostAuthGcpConfig(gcpConfigRequest, gcpMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthGcpConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **gcpConfigRequest** | [**GcpConfigRequest**](GcpConfigRequest.md)|  | 
+ **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthgcplogin"></a>
+# **PostAuthGcpLogin**
+> void PostAuthGcpLogin (GcpLoginRequest gcpLoginRequest, string gcpMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthGcpLoginExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var gcpLoginRequest = new GcpLoginRequest(); // GcpLoginRequest | 
+            var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+
+            try
+            {
+                apiInstance.PostAuthGcpLogin(gcpLoginRequest, gcpMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthGcpLogin: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **gcpLoginRequest** | [**GcpLoginRequest**](GcpLoginRequest.md)|  | 
+ **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthgcprolename"></a>
+# **PostAuthGcpRoleName**
+> void PostAuthGcpRoleName (string name, GcpRoleRequest gcpRoleRequest, string gcpMountPath = null)
+
+Create a GCP role with associated policies and required attributes.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthGcpRoleNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the role.
+            var gcpRoleRequest = new GcpRoleRequest(); // GcpRoleRequest | 
+            var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
+
+            try
+            {
+                // Create a GCP role with associated policies and required attributes.
+                apiInstance.PostAuthGcpRoleName(name, gcpRoleRequest, gcpMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthGcpRoleName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role. | 
+ **gcpRoleRequest** | [**GcpRoleRequest**](GcpRoleRequest.md)|  | 
+ **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthgcprolenamelabels"></a>
+# **PostAuthGcpRoleNameLabels**
+> void PostAuthGcpRoleNameLabels (string name, GcpRoleLabelsRequest gcpRoleLabelsRequest, string gcpMountPath = null)
 
 Add or remove labels for an existing 'gce' role
 
@@ -10065,7 +15362,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateGcpRoleNameLabelsExample
+    public class PostAuthGcpRoleNameLabelsExample
     {
         public static void Main()
         {
@@ -10076,17 +15373,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
-            var mountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
-            var gcpRoleLabelsRequest = new GcpRoleLabelsRequest(); // GcpRoleLabelsRequest |  (optional) 
+            var gcpRoleLabelsRequest = new GcpRoleLabelsRequest(); // GcpRoleLabelsRequest | 
+            var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
 
             try
             {
                 // Add or remove labels for an existing 'gce' role
-                apiInstance.UpdateGcpRoleNameLabels(name, mountPath, gcpRoleLabelsRequest);
+                apiInstance.PostAuthGcpRoleNameLabels(name, gcpRoleLabelsRequest, gcpMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateGcpRoleNameLabels: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthGcpRoleNameLabels: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10100,8 +15397,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the role. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
- **gcpRoleLabelsRequest** | [**GcpRoleLabelsRequest**](GcpRoleLabelsRequest.md)|  | [optional] 
+ **gcpRoleLabelsRequest** | [**GcpRoleLabelsRequest**](GcpRoleLabelsRequest.md)|  | 
+ **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
 ### Return type
 
@@ -10124,9 +15421,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updategcprolenameserviceaccounts"></a>
-# **UpdateGcpRoleNameServiceAccounts**
-> void UpdateGcpRoleNameServiceAccounts (string name, string mountPath = null, GcpRoleServiceAccountsRequest gcpRoleServiceAccountsRequest = null)
+<a name="postauthgcprolenameserviceaccounts"></a>
+# **PostAuthGcpRoleNameServiceAccounts**
+> void PostAuthGcpRoleNameServiceAccounts (string name, GcpRoleServiceAccountsRequest gcpRoleServiceAccountsRequest, string gcpMountPath = null)
 
 Add or remove service accounts for an existing `iam` role
 
@@ -10141,7 +15438,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateGcpRoleNameServiceAccountsExample
+    public class PostAuthGcpRoleNameServiceAccountsExample
     {
         public static void Main()
         {
@@ -10152,17 +15449,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
-            var mountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
-            var gcpRoleServiceAccountsRequest = new GcpRoleServiceAccountsRequest(); // GcpRoleServiceAccountsRequest |  (optional) 
+            var gcpRoleServiceAccountsRequest = new GcpRoleServiceAccountsRequest(); // GcpRoleServiceAccountsRequest | 
+            var gcpMountPath = "\"gcp\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "gcp")
 
             try
             {
                 // Add or remove service accounts for an existing `iam` role
-                apiInstance.UpdateGcpRoleNameServiceAccounts(name, mountPath, gcpRoleServiceAccountsRequest);
+                apiInstance.PostAuthGcpRoleNameServiceAccounts(name, gcpRoleServiceAccountsRequest, gcpMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateGcpRoleNameServiceAccounts: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthGcpRoleNameServiceAccounts: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10176,8 +15473,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the role. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
- **gcpRoleServiceAccountsRequest** | [**GcpRoleServiceAccountsRequest**](GcpRoleServiceAccountsRequest.md)|  | [optional] 
+ **gcpRoleServiceAccountsRequest** | [**GcpRoleServiceAccountsRequest**](GcpRoleServiceAccountsRequest.md)|  | 
+ **gcpMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;gcp&quot;]
 
 ### Return type
 
@@ -10200,9 +15497,155 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updategithubmapteamskey"></a>
-# **UpdateGithubMapTeamsKey**
-> void UpdateGithubMapTeamsKey (string key, string mountPath = null, GithubMapTeamsRequest githubMapTeamsRequest = null)
+<a name="postauthgithubconfig"></a>
+# **PostAuthGithubConfig**
+> void PostAuthGithubConfig (GithubConfigRequest githubConfigRequest, string githubMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthGithubConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var githubConfigRequest = new GithubConfigRequest(); // GithubConfigRequest | 
+            var githubMountPath = "\"github\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "github")
+
+            try
+            {
+                apiInstance.PostAuthGithubConfig(githubConfigRequest, githubMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthGithubConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **githubConfigRequest** | [**GithubConfigRequest**](GithubConfigRequest.md)|  | 
+ **githubMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;github&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthgithublogin"></a>
+# **PostAuthGithubLogin**
+> void PostAuthGithubLogin (GithubLoginRequest githubLoginRequest, string githubMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthGithubLoginExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var githubLoginRequest = new GithubLoginRequest(); // GithubLoginRequest | 
+            var githubMountPath = "\"github\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "github")
+
+            try
+            {
+                apiInstance.PostAuthGithubLogin(githubLoginRequest, githubMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthGithubLogin: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **githubLoginRequest** | [**GithubLoginRequest**](GithubLoginRequest.md)|  | 
+ **githubMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;github&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthgithubmapteamskey"></a>
+# **PostAuthGithubMapTeamsKey**
+> void PostAuthGithubMapTeamsKey (string key, GithubMapTeamsRequest githubMapTeamsRequest, string githubMountPath = null)
 
 Read/write/delete a single teams mapping
 
@@ -10217,7 +15660,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateGithubMapTeamsKeyExample
+    public class PostAuthGithubMapTeamsKeyExample
     {
         public static void Main()
         {
@@ -10228,17 +15671,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Key for the teams mapping
-            var mountPath = "\"github\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "github")
-            var githubMapTeamsRequest = new GithubMapTeamsRequest(); // GithubMapTeamsRequest |  (optional) 
+            var githubMapTeamsRequest = new GithubMapTeamsRequest(); // GithubMapTeamsRequest | 
+            var githubMountPath = "\"github\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "github")
 
             try
             {
                 // Read/write/delete a single teams mapping
-                apiInstance.UpdateGithubMapTeamsKey(key, mountPath, githubMapTeamsRequest);
+                apiInstance.PostAuthGithubMapTeamsKey(key, githubMapTeamsRequest, githubMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateGithubMapTeamsKey: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthGithubMapTeamsKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10252,8 +15695,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| Key for the teams mapping | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;github&quot;]
- **githubMapTeamsRequest** | [**GithubMapTeamsRequest**](GithubMapTeamsRequest.md)|  | [optional] 
+ **githubMapTeamsRequest** | [**GithubMapTeamsRequest**](GithubMapTeamsRequest.md)|  | 
+ **githubMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;github&quot;]
 
 ### Return type
 
@@ -10276,9 +15719,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updategithubmapuserskey"></a>
-# **UpdateGithubMapUsersKey**
-> void UpdateGithubMapUsersKey (string key, string mountPath = null, GithubMapUsersRequest githubMapUsersRequest = null)
+<a name="postauthgithubmapuserskey"></a>
+# **PostAuthGithubMapUsersKey**
+> void PostAuthGithubMapUsersKey (string key, GithubMapUsersRequest githubMapUsersRequest, string githubMountPath = null)
 
 Read/write/delete a single users mapping
 
@@ -10293,7 +15736,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateGithubMapUsersKeyExample
+    public class PostAuthGithubMapUsersKeyExample
     {
         public static void Main()
         {
@@ -10304,17 +15747,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var key = "key_example";  // string | Key for the users mapping
-            var mountPath = "\"github\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "github")
-            var githubMapUsersRequest = new GithubMapUsersRequest(); // GithubMapUsersRequest |  (optional) 
+            var githubMapUsersRequest = new GithubMapUsersRequest(); // GithubMapUsersRequest | 
+            var githubMountPath = "\"github\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "github")
 
             try
             {
                 // Read/write/delete a single users mapping
-                apiInstance.UpdateGithubMapUsersKey(key, mountPath, githubMapUsersRequest);
+                apiInstance.PostAuthGithubMapUsersKey(key, githubMapUsersRequest, githubMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateGithubMapUsersKey: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthGithubMapUsersKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10328,8 +15771,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| Key for the users mapping | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;github&quot;]
- **githubMapUsersRequest** | [**GithubMapUsersRequest**](GithubMapUsersRequest.md)|  | [optional] 
+ **githubMapUsersRequest** | [**GithubMapUsersRequest**](GithubMapUsersRequest.md)|  | 
+ **githubMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;github&quot;]
 
 ### Return type
 
@@ -10352,233 +15795,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatekerberosconfigldap"></a>
-# **UpdateKerberosConfigLdap**
-> void UpdateKerberosConfigLdap (string mountPath = null, KerberosConfigLdapRequest kerberosConfigLdapRequest = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class UpdateKerberosConfigLdapExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"kerberos\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kerberos")
-            var kerberosConfigLdapRequest = new KerberosConfigLdapRequest(); // KerberosConfigLdapRequest |  (optional) 
-
-            try
-            {
-                apiInstance.UpdateKerberosConfigLdap(mountPath, kerberosConfigLdapRequest);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.UpdateKerberosConfigLdap: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kerberos&quot;]
- **kerberosConfigLdapRequest** | [**KerberosConfigLdapRequest**](KerberosConfigLdapRequest.md)|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="updatekerberosgroupsname"></a>
-# **UpdateKerberosGroupsName**
-> void UpdateKerberosGroupsName (string name, string mountPath = null, KerberosGroupsRequest kerberosGroupsRequest = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class UpdateKerberosGroupsNameExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var name = "name_example";  // string | Name of the LDAP group.
-            var mountPath = "\"kerberos\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kerberos")
-            var kerberosGroupsRequest = new KerberosGroupsRequest(); // KerberosGroupsRequest |  (optional) 
-
-            try
-            {
-                apiInstance.UpdateKerberosGroupsName(name, mountPath, kerberosGroupsRequest);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.UpdateKerberosGroupsName: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string**| Name of the LDAP group. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kerberos&quot;]
- **kerberosGroupsRequest** | [**KerberosGroupsRequest**](KerberosGroupsRequest.md)|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="updateociloginrole"></a>
-# **UpdateOciLoginRole**
-> void UpdateOciLoginRole (string role, string mountPath = null, OciLoginRequest ociLoginRequest = null)
-
-Authenticates to Vault using OCI credentials
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class UpdateOciLoginRoleExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var role = "role_example";  // string | Name of the role.
-            var mountPath = "\"oci\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oci")
-            var ociLoginRequest = new OciLoginRequest(); // OciLoginRequest |  (optional) 
-
-            try
-            {
-                // Authenticates to Vault using OCI credentials
-                apiInstance.UpdateOciLoginRole(role, mountPath, ociLoginRequest);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Auth.UpdateOciLoginRole: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **role** | **string**| Name of the role. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oci&quot;]
- **ociLoginRequest** | [**OciLoginRequest**](OciLoginRequest.md)|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="updateoidcconfig"></a>
-# **UpdateOidcConfig**
-> void UpdateOidcConfig (string mountPath = null, OidcConfigRequest oidcConfigRequest = null)
+<a name="postauthjwtconfig"></a>
+# **PostAuthJwtConfig**
+> void PostAuthJwtConfig (JwtConfigRequest jwtConfigRequest, string jwtMountPath = null)
 
 Configure the JWT authentication backend.
 
@@ -10595,7 +15814,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateOidcConfigExample
+    public class PostAuthJwtConfigExample
     {
         public static void Main()
         {
@@ -10605,17 +15824,17 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"oidc\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oidc")
-            var oidcConfigRequest = new OidcConfigRequest(); // OidcConfigRequest |  (optional) 
+            var jwtConfigRequest = new JwtConfigRequest(); // JwtConfigRequest | 
+            var jwtMountPath = "\"jwt\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "jwt")
 
             try
             {
                 // Configure the JWT authentication backend.
-                apiInstance.UpdateOidcConfig(mountPath, oidcConfigRequest);
+                apiInstance.PostAuthJwtConfig(jwtConfigRequest, jwtMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateOidcConfig: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthJwtConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10628,8 +15847,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oidc&quot;]
- **oidcConfigRequest** | [**OidcConfigRequest**](OidcConfigRequest.md)|  | [optional] 
+ **jwtConfigRequest** | [**JwtConfigRequest**](JwtConfigRequest.md)|  | 
+ **jwtMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;jwt&quot;]
 
 ### Return type
 
@@ -10652,9 +15871,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateoidclogin"></a>
-# **UpdateOidcLogin**
-> void UpdateOidcLogin (string mountPath = null, OidcLoginRequest oidcLoginRequest = null)
+<a name="postauthjwtlogin"></a>
+# **PostAuthJwtLogin**
+> void PostAuthJwtLogin (JwtLoginRequest jwtLoginRequest, string jwtMountPath = null)
 
 Authenticates to Vault using a JWT (or OIDC) token.
 
@@ -10669,7 +15888,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateOidcLoginExample
+    public class PostAuthJwtLoginExample
     {
         public static void Main()
         {
@@ -10679,17 +15898,17 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"oidc\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oidc")
-            var oidcLoginRequest = new OidcLoginRequest(); // OidcLoginRequest |  (optional) 
+            var jwtLoginRequest = new JwtLoginRequest(); // JwtLoginRequest | 
+            var jwtMountPath = "\"jwt\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "jwt")
 
             try
             {
                 // Authenticates to Vault using a JWT (or OIDC) token.
-                apiInstance.UpdateOidcLogin(mountPath, oidcLoginRequest);
+                apiInstance.PostAuthJwtLogin(jwtLoginRequest, jwtMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateOidcLogin: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthJwtLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10702,8 +15921,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oidc&quot;]
- **oidcLoginRequest** | [**OidcLoginRequest**](OidcLoginRequest.md)|  | [optional] 
+ **jwtLoginRequest** | [**JwtLoginRequest**](JwtLoginRequest.md)|  | 
+ **jwtMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;jwt&quot;]
 
 ### Return type
 
@@ -10726,9 +15945,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateoidcoidcauthurl"></a>
-# **UpdateOidcOidcAuthUrl**
-> void UpdateOidcOidcAuthUrl (string mountPath = null, OidcOidcAuthUrlRequest oidcOidcAuthUrlRequest = null)
+<a name="postauthjwtoidcauthurl"></a>
+# **PostAuthJwtOidcAuthUrl**
+> void PostAuthJwtOidcAuthUrl (JwtOidcAuthUrlRequest jwtOidcAuthUrlRequest, string jwtMountPath = null)
 
 Request an authorization URL to start an OIDC login flow.
 
@@ -10743,7 +15962,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateOidcOidcAuthUrlExample
+    public class PostAuthJwtOidcAuthUrlExample
     {
         public static void Main()
         {
@@ -10753,17 +15972,17 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"oidc\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oidc")
-            var oidcOidcAuthUrlRequest = new OidcOidcAuthUrlRequest(); // OidcOidcAuthUrlRequest |  (optional) 
+            var jwtOidcAuthUrlRequest = new JwtOidcAuthUrlRequest(); // JwtOidcAuthUrlRequest | 
+            var jwtMountPath = "\"jwt\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "jwt")
 
             try
             {
                 // Request an authorization URL to start an OIDC login flow.
-                apiInstance.UpdateOidcOidcAuthUrl(mountPath, oidcOidcAuthUrlRequest);
+                apiInstance.PostAuthJwtOidcAuthUrl(jwtOidcAuthUrlRequest, jwtMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateOidcOidcAuthUrl: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthJwtOidcAuthUrl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10776,8 +15995,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oidc&quot;]
- **oidcOidcAuthUrlRequest** | [**OidcOidcAuthUrlRequest**](OidcOidcAuthUrlRequest.md)|  | [optional] 
+ **jwtOidcAuthUrlRequest** | [**JwtOidcAuthUrlRequest**](JwtOidcAuthUrlRequest.md)|  | 
+ **jwtMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;jwt&quot;]
 
 ### Return type
 
@@ -10800,9 +16019,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateoidcoidccallback"></a>
-# **UpdateOidcOidcCallback**
-> void UpdateOidcOidcCallback (string mountPath = null, OidcOidcCallbackRequest oidcOidcCallbackRequest = null)
+<a name="postauthjwtoidccallback"></a>
+# **PostAuthJwtOidcCallback**
+> void PostAuthJwtOidcCallback (JwtOidcCallbackRequest jwtOidcCallbackRequest, string jwtMountPath = null)
 
 Callback endpoint to handle form_posts.
 
@@ -10817,7 +16036,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateOidcOidcCallbackExample
+    public class PostAuthJwtOidcCallbackExample
     {
         public static void Main()
         {
@@ -10827,17 +16046,17 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"oidc\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oidc")
-            var oidcOidcCallbackRequest = new OidcOidcCallbackRequest(); // OidcOidcCallbackRequest |  (optional) 
+            var jwtOidcCallbackRequest = new JwtOidcCallbackRequest(); // JwtOidcCallbackRequest | 
+            var jwtMountPath = "\"jwt\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "jwt")
 
             try
             {
                 // Callback endpoint to handle form_posts.
-                apiInstance.UpdateOidcOidcCallback(mountPath, oidcOidcCallbackRequest);
+                apiInstance.PostAuthJwtOidcCallback(jwtOidcCallbackRequest, jwtMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateOidcOidcCallback: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthJwtOidcCallback: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10850,8 +16069,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oidc&quot;]
- **oidcOidcCallbackRequest** | [**OidcOidcCallbackRequest**](OidcOidcCallbackRequest.md)|  | [optional] 
+ **jwtOidcCallbackRequest** | [**JwtOidcCallbackRequest**](JwtOidcCallbackRequest.md)|  | 
+ **jwtMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;jwt&quot;]
 
 ### Return type
 
@@ -10874,9 +16093,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateoidcrolename"></a>
-# **UpdateOidcRoleName**
-> void UpdateOidcRoleName (string name, string mountPath = null, OidcRoleRequest oidcRoleRequest = null)
+<a name="postauthjwtrolename"></a>
+# **PostAuthJwtRoleName**
+> void PostAuthJwtRoleName (string name, JwtRoleRequest jwtRoleRequest, string jwtMountPath = null)
 
 Register an role with the backend.
 
@@ -10893,7 +16112,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateOidcRoleNameExample
+    public class PostAuthJwtRoleNameExample
     {
         public static void Main()
         {
@@ -10904,17 +16123,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the role.
-            var mountPath = "\"oidc\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oidc")
-            var oidcRoleRequest = new OidcRoleRequest(); // OidcRoleRequest |  (optional) 
+            var jwtRoleRequest = new JwtRoleRequest(); // JwtRoleRequest | 
+            var jwtMountPath = "\"jwt\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "jwt")
 
             try
             {
                 // Register an role with the backend.
-                apiInstance.UpdateOidcRoleName(name, mountPath, oidcRoleRequest);
+                apiInstance.PostAuthJwtRoleName(name, jwtRoleRequest, jwtMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateOidcRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthJwtRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10928,8 +16147,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the role. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oidc&quot;]
- **oidcRoleRequest** | [**OidcRoleRequest**](OidcRoleRequest.md)|  | [optional] 
+ **jwtRoleRequest** | [**JwtRoleRequest**](JwtRoleRequest.md)|  | 
+ **jwtMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;jwt&quot;]
 
 ### Return type
 
@@ -10952,9 +16171,677 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateradiusloginurlusername"></a>
-# **UpdateRadiusLoginUrlusername**
-> void UpdateRadiusLoginUrlusername (string urlusername, string mountPath = null, RadiusLoginRequest radiusLoginRequest = null)
+<a name="postauthkerberosconfig"></a>
+# **PostAuthKerberosConfig**
+> void PostAuthKerberosConfig (KerberosConfigRequest kerberosConfigRequest, string kerberosMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthKerberosConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var kerberosConfigRequest = new KerberosConfigRequest(); // KerberosConfigRequest | 
+            var kerberosMountPath = "\"kerberos\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kerberos")
+
+            try
+            {
+                apiInstance.PostAuthKerberosConfig(kerberosConfigRequest, kerberosMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthKerberosConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **kerberosConfigRequest** | [**KerberosConfigRequest**](KerberosConfigRequest.md)|  | 
+ **kerberosMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kerberos&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthkerberosconfigldap"></a>
+# **PostAuthKerberosConfigLdap**
+> void PostAuthKerberosConfigLdap (KerberosConfigLdapRequest kerberosConfigLdapRequest, string kerberosMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthKerberosConfigLdapExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var kerberosConfigLdapRequest = new KerberosConfigLdapRequest(); // KerberosConfigLdapRequest | 
+            var kerberosMountPath = "\"kerberos\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kerberos")
+
+            try
+            {
+                apiInstance.PostAuthKerberosConfigLdap(kerberosConfigLdapRequest, kerberosMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthKerberosConfigLdap: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **kerberosConfigLdapRequest** | [**KerberosConfigLdapRequest**](KerberosConfigLdapRequest.md)|  | 
+ **kerberosMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kerberos&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthkerberosgroupsname"></a>
+# **PostAuthKerberosGroupsName**
+> void PostAuthKerberosGroupsName (string name, KerberosGroupsRequest kerberosGroupsRequest, string kerberosMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthKerberosGroupsNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the LDAP group.
+            var kerberosGroupsRequest = new KerberosGroupsRequest(); // KerberosGroupsRequest | 
+            var kerberosMountPath = "\"kerberos\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kerberos")
+
+            try
+            {
+                apiInstance.PostAuthKerberosGroupsName(name, kerberosGroupsRequest, kerberosMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthKerberosGroupsName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the LDAP group. | 
+ **kerberosGroupsRequest** | [**KerberosGroupsRequest**](KerberosGroupsRequest.md)|  | 
+ **kerberosMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kerberos&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthkerberoslogin"></a>
+# **PostAuthKerberosLogin**
+> void PostAuthKerberosLogin (KerberosLoginRequest kerberosLoginRequest, string kerberosMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthKerberosLoginExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var kerberosLoginRequest = new KerberosLoginRequest(); // KerberosLoginRequest | 
+            var kerberosMountPath = "\"kerberos\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kerberos")
+
+            try
+            {
+                apiInstance.PostAuthKerberosLogin(kerberosLoginRequest, kerberosMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthKerberosLogin: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **kerberosLoginRequest** | [**KerberosLoginRequest**](KerberosLoginRequest.md)|  | 
+ **kerberosMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kerberos&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthkubernetesconfig"></a>
+# **PostAuthKubernetesConfig**
+> void PostAuthKubernetesConfig (KubernetesConfigRequest kubernetesConfigRequest, string kubernetesMountPath = null)
+
+Configures the JWT Public Key and Kubernetes API information.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthKubernetesConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var kubernetesConfigRequest = new KubernetesConfigRequest(); // KubernetesConfigRequest | 
+            var kubernetesMountPath = "\"kubernetes\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kubernetes")
+
+            try
+            {
+                // Configures the JWT Public Key and Kubernetes API information.
+                apiInstance.PostAuthKubernetesConfig(kubernetesConfigRequest, kubernetesMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthKubernetesConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **kubernetesConfigRequest** | [**KubernetesConfigRequest**](KubernetesConfigRequest.md)|  | 
+ **kubernetesMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kubernetes&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthkuberneteslogin"></a>
+# **PostAuthKubernetesLogin**
+> void PostAuthKubernetesLogin (KubernetesLoginRequest kubernetesLoginRequest, string kubernetesMountPath = null)
+
+Authenticates Kubernetes service accounts with Vault.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthKubernetesLoginExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var kubernetesLoginRequest = new KubernetesLoginRequest(); // KubernetesLoginRequest | 
+            var kubernetesMountPath = "\"kubernetes\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kubernetes")
+
+            try
+            {
+                // Authenticates Kubernetes service accounts with Vault.
+                apiInstance.PostAuthKubernetesLogin(kubernetesLoginRequest, kubernetesMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthKubernetesLogin: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **kubernetesLoginRequest** | [**KubernetesLoginRequest**](KubernetesLoginRequest.md)|  | 
+ **kubernetesMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kubernetes&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthkubernetesrolename"></a>
+# **PostAuthKubernetesRoleName**
+> void PostAuthKubernetesRoleName (string name, KubernetesRoleRequest kubernetesRoleRequest, string kubernetesMountPath = null)
+
+Register an role with the backend.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthKubernetesRoleNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the role.
+            var kubernetesRoleRequest = new KubernetesRoleRequest(); // KubernetesRoleRequest | 
+            var kubernetesMountPath = "\"kubernetes\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kubernetes")
+
+            try
+            {
+                // Register an role with the backend.
+                apiInstance.PostAuthKubernetesRoleName(name, kubernetesRoleRequest, kubernetesMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthKubernetesRoleName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role. | 
+ **kubernetesRoleRequest** | [**KubernetesRoleRequest**](KubernetesRoleRequest.md)|  | 
+ **kubernetesMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kubernetes&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthldapconfig"></a>
+# **PostAuthLdapConfig**
+> void PostAuthLdapConfig (LdapConfigRequest ldapConfigRequest, string ldapMountPath = null)
+
+Configure the LDAP server to connect to, along with its options.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthLdapConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var ldapConfigRequest = new LdapConfigRequest(); // LdapConfigRequest | 
+            var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+
+            try
+            {
+                // Configure the LDAP server to connect to, along with its options.
+                apiInstance.PostAuthLdapConfig(ldapConfigRequest, ldapMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthLdapConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ldapConfigRequest** | [**LdapConfigRequest**](LdapConfigRequest.md)|  | 
+ **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthldapgroupsname"></a>
+# **PostAuthLdapGroupsName**
+> void PostAuthLdapGroupsName (string name, LdapGroupsRequest ldapGroupsRequest, string ldapMountPath = null)
+
+Manage additional groups for users allowed to authenticate.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthLdapGroupsNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the LDAP group.
+            var ldapGroupsRequest = new LdapGroupsRequest(); // LdapGroupsRequest | 
+            var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
+
+            try
+            {
+                // Manage additional groups for users allowed to authenticate.
+                apiInstance.PostAuthLdapGroupsName(name, ldapGroupsRequest, ldapMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthLdapGroupsName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the LDAP group. | 
+ **ldapGroupsRequest** | [**LdapGroupsRequest**](LdapGroupsRequest.md)|  | 
+ **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthldaploginusername"></a>
+# **PostAuthLdapLoginUsername**
+> void PostAuthLdapLoginUsername (string username, LdapLoginRequest ldapLoginRequest, string ldapMountPath = null)
 
 Log in with a username and password.
 
@@ -10969,7 +16856,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateRadiusLoginUrlusernameExample
+    public class PostAuthLdapLoginUsernameExample
     {
         public static void Main()
         {
@@ -10979,18 +16866,18 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var urlusername = "urlusername_example";  // string | Username to be used for login. (URL parameter)
-            var mountPath = "\"radius\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "radius")
-            var radiusLoginRequest = new RadiusLoginRequest(); // RadiusLoginRequest |  (optional) 
+            var username = "username_example";  // string | DN (distinguished name) to be used for login.
+            var ldapLoginRequest = new LdapLoginRequest(); // LdapLoginRequest | 
+            var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
 
             try
             {
                 // Log in with a username and password.
-                apiInstance.UpdateRadiusLoginUrlusername(urlusername, mountPath, radiusLoginRequest);
+                apiInstance.PostAuthLdapLoginUsername(username, ldapLoginRequest, ldapMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateRadiusLoginUrlusername: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthLdapLoginUsername: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11003,9 +16890,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **urlusername** | **string**| Username to be used for login. (URL parameter) | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;radius&quot;]
- **radiusLoginRequest** | [**RadiusLoginRequest**](RadiusLoginRequest.md)|  | [optional] 
+ **username** | **string**| DN (distinguished name) to be used for login. | 
+ **ldapLoginRequest** | [**LdapLoginRequest**](LdapLoginRequest.md)|  | 
+ **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
 ### Return type
 
@@ -11028,9 +16915,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateradiususersname"></a>
-# **UpdateRadiusUsersName**
-> void UpdateRadiusUsersName (string name, string mountPath = null, RadiusUsersRequest radiusUsersRequest = null)
+<a name="postauthldapusersname"></a>
+# **PostAuthLdapUsersName**
+> void PostAuthLdapUsersName (string name, LdapUsersRequest ldapUsersRequest, string ldapMountPath = null)
 
 Manage users allowed to authenticate.
 
@@ -11045,7 +16932,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateRadiusUsersNameExample
+    public class PostAuthLdapUsersNameExample
     {
         public static void Main()
         {
@@ -11055,18 +16942,18 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var name = "name_example";  // string | Name of the RADIUS user.
-            var mountPath = "\"radius\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "radius")
-            var radiusUsersRequest = new RadiusUsersRequest(); // RadiusUsersRequest |  (optional) 
+            var name = "name_example";  // string | Name of the LDAP user.
+            var ldapUsersRequest = new LdapUsersRequest(); // LdapUsersRequest | 
+            var ldapMountPath = "\"ldap\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "ldap")
 
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.UpdateRadiusUsersName(name, mountPath, radiusUsersRequest);
+                apiInstance.PostAuthLdapUsersName(name, ldapUsersRequest, ldapMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateRadiusUsersName: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthLdapUsersName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11079,9 +16966,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| Name of the RADIUS user. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;radius&quot;]
- **radiusUsersRequest** | [**RadiusUsersRequest**](RadiusUsersRequest.md)|  | [optional] 
+ **name** | **string**| Name of the LDAP user. | 
+ **ldapUsersRequest** | [**LdapUsersRequest**](LdapUsersRequest.md)|  | 
+ **ldapMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;ldap&quot;]
 
 ### Return type
 
@@ -11104,9 +16991,1213 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatetokencreate"></a>
-# **UpdateTokenCreate**
-> void UpdateTokenCreate (string format = null, string mountPath = null, TokenCreateRequest tokenCreateRequest = null)
+<a name="postauthociconfig"></a>
+# **PostAuthOciConfig**
+> void PostAuthOciConfig (OciConfigRequest ociConfigRequest, string ociMountPath = null)
+
+Manages the configuration for the Vault Auth Plugin.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthOciConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var ociConfigRequest = new OciConfigRequest(); // OciConfigRequest | 
+            var ociMountPath = "\"oci\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oci")
+
+            try
+            {
+                // Manages the configuration for the Vault Auth Plugin.
+                apiInstance.PostAuthOciConfig(ociConfigRequest, ociMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthOciConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ociConfigRequest** | [**OciConfigRequest**](OciConfigRequest.md)|  | 
+ **ociMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oci&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthociloginrole"></a>
+# **PostAuthOciLoginRole**
+> void PostAuthOciLoginRole (string role, OciLoginRequest ociLoginRequest, string ociMountPath = null)
+
+Authenticates to Vault using OCI credentials
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthOciLoginRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var role = "role_example";  // string | Name of the role.
+            var ociLoginRequest = new OciLoginRequest(); // OciLoginRequest | 
+            var ociMountPath = "\"oci\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oci")
+
+            try
+            {
+                // Authenticates to Vault using OCI credentials
+                apiInstance.PostAuthOciLoginRole(role, ociLoginRequest, ociMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthOciLoginRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **role** | **string**| Name of the role. | 
+ **ociLoginRequest** | [**OciLoginRequest**](OciLoginRequest.md)|  | 
+ **ociMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oci&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthocirolerole"></a>
+# **PostAuthOciRoleRole**
+> void PostAuthOciRoleRole (string role, OciRoleRequest ociRoleRequest, string ociMountPath = null)
+
+Create a role and associate policies to it.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthOciRoleRoleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var role = "role_example";  // string | Name of the role.
+            var ociRoleRequest = new OciRoleRequest(); // OciRoleRequest | 
+            var ociMountPath = "\"oci\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oci")
+
+            try
+            {
+                // Create a role and associate policies to it.
+                apiInstance.PostAuthOciRoleRole(role, ociRoleRequest, ociMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthOciRoleRole: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **role** | **string**| Name of the role. | 
+ **ociRoleRequest** | [**OciRoleRequest**](OciRoleRequest.md)|  | 
+ **ociMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oci&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthoidcconfig"></a>
+# **PostAuthOidcConfig**
+> void PostAuthOidcConfig (OidcConfigRequest oidcConfigRequest, string oidcMountPath = null)
+
+Configure the JWT authentication backend.
+
+The JWT authentication backend validates JWTs (or OIDC) using the configured credentials. If using OIDC Discovery, the URL must be provided, along with (optionally) the CA cert to use for the connection. If performing JWT validation locally, a set of public keys must be provided.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthOidcConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var oidcConfigRequest = new OidcConfigRequest(); // OidcConfigRequest | 
+            var oidcMountPath = "\"oidc\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oidc")
+
+            try
+            {
+                // Configure the JWT authentication backend.
+                apiInstance.PostAuthOidcConfig(oidcConfigRequest, oidcMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthOidcConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **oidcConfigRequest** | [**OidcConfigRequest**](OidcConfigRequest.md)|  | 
+ **oidcMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oidc&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthoidclogin"></a>
+# **PostAuthOidcLogin**
+> void PostAuthOidcLogin (OidcLoginRequest oidcLoginRequest, string oidcMountPath = null)
+
+Authenticates to Vault using a JWT (or OIDC) token.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthOidcLoginExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var oidcLoginRequest = new OidcLoginRequest(); // OidcLoginRequest | 
+            var oidcMountPath = "\"oidc\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oidc")
+
+            try
+            {
+                // Authenticates to Vault using a JWT (or OIDC) token.
+                apiInstance.PostAuthOidcLogin(oidcLoginRequest, oidcMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthOidcLogin: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **oidcLoginRequest** | [**OidcLoginRequest**](OidcLoginRequest.md)|  | 
+ **oidcMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oidc&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthoidcoidcauthurl"></a>
+# **PostAuthOidcOidcAuthUrl**
+> void PostAuthOidcOidcAuthUrl (OidcOidcAuthUrlRequest oidcOidcAuthUrlRequest, string oidcMountPath = null)
+
+Request an authorization URL to start an OIDC login flow.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthOidcOidcAuthUrlExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var oidcOidcAuthUrlRequest = new OidcOidcAuthUrlRequest(); // OidcOidcAuthUrlRequest | 
+            var oidcMountPath = "\"oidc\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oidc")
+
+            try
+            {
+                // Request an authorization URL to start an OIDC login flow.
+                apiInstance.PostAuthOidcOidcAuthUrl(oidcOidcAuthUrlRequest, oidcMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthOidcOidcAuthUrl: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **oidcOidcAuthUrlRequest** | [**OidcOidcAuthUrlRequest**](OidcOidcAuthUrlRequest.md)|  | 
+ **oidcMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oidc&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthoidcoidccallback"></a>
+# **PostAuthOidcOidcCallback**
+> void PostAuthOidcOidcCallback (OidcOidcCallbackRequest oidcOidcCallbackRequest, string oidcMountPath = null)
+
+Callback endpoint to handle form_posts.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthOidcOidcCallbackExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var oidcOidcCallbackRequest = new OidcOidcCallbackRequest(); // OidcOidcCallbackRequest | 
+            var oidcMountPath = "\"oidc\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oidc")
+
+            try
+            {
+                // Callback endpoint to handle form_posts.
+                apiInstance.PostAuthOidcOidcCallback(oidcOidcCallbackRequest, oidcMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthOidcOidcCallback: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **oidcOidcCallbackRequest** | [**OidcOidcCallbackRequest**](OidcOidcCallbackRequest.md)|  | 
+ **oidcMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oidc&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthoidcrolename"></a>
+# **PostAuthOidcRoleName**
+> void PostAuthOidcRoleName (string name, OidcRoleRequest oidcRoleRequest, string oidcMountPath = null)
+
+Register an role with the backend.
+
+A role is required to authenticate with this backend. The role binds   JWT token information with token policies and settings.   The bindings, token polices and token settings can all be configured   using this endpoint
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthOidcRoleNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the role.
+            var oidcRoleRequest = new OidcRoleRequest(); // OidcRoleRequest | 
+            var oidcMountPath = "\"oidc\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "oidc")
+
+            try
+            {
+                // Register an role with the backend.
+                apiInstance.PostAuthOidcRoleName(name, oidcRoleRequest, oidcMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthOidcRoleName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the role. | 
+ **oidcRoleRequest** | [**OidcRoleRequest**](OidcRoleRequest.md)|  | 
+ **oidcMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;oidc&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthoktaconfig"></a>
+# **PostAuthOktaConfig**
+> void PostAuthOktaConfig (OktaConfigRequest oktaConfigRequest, string oktaMountPath = null)
+
+This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthOktaConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var oktaConfigRequest = new OktaConfigRequest(); // OktaConfigRequest | 
+            var oktaMountPath = "\"okta\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "okta")
+
+            try
+            {
+                // This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
+                apiInstance.PostAuthOktaConfig(oktaConfigRequest, oktaMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthOktaConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **oktaConfigRequest** | [**OktaConfigRequest**](OktaConfigRequest.md)|  | 
+ **oktaMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;okta&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthoktagroupsname"></a>
+# **PostAuthOktaGroupsName**
+> void PostAuthOktaGroupsName (string name, OktaGroupsRequest oktaGroupsRequest, string oktaMountPath = null)
+
+Manage users allowed to authenticate.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthOktaGroupsNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the Okta group.
+            var oktaGroupsRequest = new OktaGroupsRequest(); // OktaGroupsRequest | 
+            var oktaMountPath = "\"okta\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "okta")
+
+            try
+            {
+                // Manage users allowed to authenticate.
+                apiInstance.PostAuthOktaGroupsName(name, oktaGroupsRequest, oktaMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthOktaGroupsName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the Okta group. | 
+ **oktaGroupsRequest** | [**OktaGroupsRequest**](OktaGroupsRequest.md)|  | 
+ **oktaMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;okta&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthoktaloginusername"></a>
+# **PostAuthOktaLoginUsername**
+> void PostAuthOktaLoginUsername (string username, OktaLoginRequest oktaLoginRequest, string oktaMountPath = null)
+
+Log in with a username and password.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthOktaLoginUsernameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var username = "username_example";  // string | Username to be used for login.
+            var oktaLoginRequest = new OktaLoginRequest(); // OktaLoginRequest | 
+            var oktaMountPath = "\"okta\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "okta")
+
+            try
+            {
+                // Log in with a username and password.
+                apiInstance.PostAuthOktaLoginUsername(username, oktaLoginRequest, oktaMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthOktaLoginUsername: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **username** | **string**| Username to be used for login. | 
+ **oktaLoginRequest** | [**OktaLoginRequest**](OktaLoginRequest.md)|  | 
+ **oktaMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;okta&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthoktausersname"></a>
+# **PostAuthOktaUsersName**
+> void PostAuthOktaUsersName (string name, OktaUsersRequest oktaUsersRequest, string oktaMountPath = null)
+
+Manage additional groups for users allowed to authenticate.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthOktaUsersNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the user.
+            var oktaUsersRequest = new OktaUsersRequest(); // OktaUsersRequest | 
+            var oktaMountPath = "\"okta\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "okta")
+
+            try
+            {
+                // Manage additional groups for users allowed to authenticate.
+                apiInstance.PostAuthOktaUsersName(name, oktaUsersRequest, oktaMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthOktaUsersName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the user. | 
+ **oktaUsersRequest** | [**OktaUsersRequest**](OktaUsersRequest.md)|  | 
+ **oktaMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;okta&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthradiusconfig"></a>
+# **PostAuthRadiusConfig**
+> void PostAuthRadiusConfig (RadiusConfigRequest radiusConfigRequest, string radiusMountPath = null)
+
+Configure the RADIUS server to connect to, along with its options.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthRadiusConfigExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var radiusConfigRequest = new RadiusConfigRequest(); // RadiusConfigRequest | 
+            var radiusMountPath = "\"radius\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "radius")
+
+            try
+            {
+                // Configure the RADIUS server to connect to, along with its options.
+                apiInstance.PostAuthRadiusConfig(radiusConfigRequest, radiusMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthRadiusConfig: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **radiusConfigRequest** | [**RadiusConfigRequest**](RadiusConfigRequest.md)|  | 
+ **radiusMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;radius&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthradiuslogin"></a>
+# **PostAuthRadiusLogin**
+> void PostAuthRadiusLogin (RadiusLoginRequest radiusLoginRequest, string radiusMountPath = null)
+
+Log in with a username and password.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthRadiusLoginExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var radiusLoginRequest = new RadiusLoginRequest(); // RadiusLoginRequest | 
+            var radiusMountPath = "\"radius\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "radius")
+
+            try
+            {
+                // Log in with a username and password.
+                apiInstance.PostAuthRadiusLogin(radiusLoginRequest, radiusMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthRadiusLogin: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **radiusLoginRequest** | [**RadiusLoginRequest**](RadiusLoginRequest.md)|  | 
+ **radiusMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;radius&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthradiusloginurlusername"></a>
+# **PostAuthRadiusLoginUrlusername**
+> void PostAuthRadiusLoginUrlusername (string urlusername, RadiusLoginRequest radiusLoginRequest, string radiusMountPath = null)
+
+Log in with a username and password.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthRadiusLoginUrlusernameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var urlusername = "urlusername_example";  // string | Username to be used for login. (URL parameter)
+            var radiusLoginRequest = new RadiusLoginRequest(); // RadiusLoginRequest | 
+            var radiusMountPath = "\"radius\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "radius")
+
+            try
+            {
+                // Log in with a username and password.
+                apiInstance.PostAuthRadiusLoginUrlusername(urlusername, radiusLoginRequest, radiusMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthRadiusLoginUrlusername: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **urlusername** | **string**| Username to be used for login. (URL parameter) | 
+ **radiusLoginRequest** | [**RadiusLoginRequest**](RadiusLoginRequest.md)|  | 
+ **radiusMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;radius&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthradiususersname"></a>
+# **PostAuthRadiusUsersName**
+> void PostAuthRadiusUsersName (string name, RadiusUsersRequest radiusUsersRequest, string radiusMountPath = null)
+
+Manage users allowed to authenticate.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostAuthRadiusUsersNameExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var name = "name_example";  // string | Name of the RADIUS user.
+            var radiusUsersRequest = new RadiusUsersRequest(); // RadiusUsersRequest | 
+            var radiusMountPath = "\"radius\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "radius")
+
+            try
+            {
+                // Manage users allowed to authenticate.
+                apiInstance.PostAuthRadiusUsersName(name, radiusUsersRequest, radiusMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.PostAuthRadiusUsersName: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the RADIUS user. | 
+ **radiusUsersRequest** | [**RadiusUsersRequest**](RadiusUsersRequest.md)|  | 
+ **radiusMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;radius&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postauthtokencreate"></a>
+# **PostAuthTokenCreate**
+> void PostAuthTokenCreate (TokenCreateRequest tokenCreateRequest, string format = null, string tokenMountPath = null)
 
 The token create path is used to create new tokens.
 
@@ -11121,7 +18212,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateTokenCreateExample
+    public class PostAuthTokenCreateExample
     {
         public static void Main()
         {
@@ -11131,18 +18222,18 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var tokenCreateRequest = new TokenCreateRequest(); // TokenCreateRequest | 
             var format = "format_example";  // string | Return json formatted output (optional) 
-            var mountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
-            var tokenCreateRequest = new TokenCreateRequest(); // TokenCreateRequest |  (optional) 
+            var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
 
             try
             {
                 // The token create path is used to create new tokens.
-                apiInstance.UpdateTokenCreate(format, mountPath, tokenCreateRequest);
+                apiInstance.PostAuthTokenCreate(tokenCreateRequest, format, tokenMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateTokenCreate: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenCreate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11155,9 +18246,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **tokenCreateRequest** | [**TokenCreateRequest**](TokenCreateRequest.md)|  | 
  **format** | **string**| Return json formatted output | [optional] 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
- **tokenCreateRequest** | [**TokenCreateRequest**](TokenCreateRequest.md)|  | [optional] 
+ **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
 
 ### Return type
 
@@ -11180,9 +18271,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatetokencreateorphan"></a>
-# **UpdateTokenCreateOrphan**
-> void UpdateTokenCreateOrphan (string format = null, string mountPath = null, TokenCreateOrphanRequest tokenCreateOrphanRequest = null)
+<a name="postauthtokencreateorphan"></a>
+# **PostAuthTokenCreateOrphan**
+> void PostAuthTokenCreateOrphan (TokenCreateOrphanRequest tokenCreateOrphanRequest, string format = null, string tokenMountPath = null)
 
 The token create path is used to create new orphan tokens.
 
@@ -11197,7 +18288,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateTokenCreateOrphanExample
+    public class PostAuthTokenCreateOrphanExample
     {
         public static void Main()
         {
@@ -11207,18 +18298,18 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var tokenCreateOrphanRequest = new TokenCreateOrphanRequest(); // TokenCreateOrphanRequest | 
             var format = "format_example";  // string | Return json formatted output (optional) 
-            var mountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
-            var tokenCreateOrphanRequest = new TokenCreateOrphanRequest(); // TokenCreateOrphanRequest |  (optional) 
+            var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
 
             try
             {
                 // The token create path is used to create new orphan tokens.
-                apiInstance.UpdateTokenCreateOrphan(format, mountPath, tokenCreateOrphanRequest);
+                apiInstance.PostAuthTokenCreateOrphan(tokenCreateOrphanRequest, format, tokenMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateTokenCreateOrphan: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenCreateOrphan: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11231,9 +18322,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **tokenCreateOrphanRequest** | [**TokenCreateOrphanRequest**](TokenCreateOrphanRequest.md)|  | 
  **format** | **string**| Return json formatted output | [optional] 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
- **tokenCreateOrphanRequest** | [**TokenCreateOrphanRequest**](TokenCreateOrphanRequest.md)|  | [optional] 
+ **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
 
 ### Return type
 
@@ -11256,9 +18347,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatetokencreaterolename"></a>
-# **UpdateTokenCreateRoleName**
-> void UpdateTokenCreateRoleName (string roleName, string format = null, string mountPath = null, TokenCreateRequest tokenCreateRequest = null)
+<a name="postauthtokencreaterolename"></a>
+# **PostAuthTokenCreateRoleName**
+> void PostAuthTokenCreateRoleName (string roleName, TokenCreateRequest tokenCreateRequest, string format = null, string tokenMountPath = null)
 
 This token create path is used to create new tokens adhering to the given role.
 
@@ -11273,7 +18364,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateTokenCreateRoleNameExample
+    public class PostAuthTokenCreateRoleNameExample
     {
         public static void Main()
         {
@@ -11284,18 +18375,18 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role
+            var tokenCreateRequest = new TokenCreateRequest(); // TokenCreateRequest | 
             var format = "format_example";  // string | Return json formatted output (optional) 
-            var mountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
-            var tokenCreateRequest = new TokenCreateRequest(); // TokenCreateRequest |  (optional) 
+            var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
 
             try
             {
                 // This token create path is used to create new tokens adhering to the given role.
-                apiInstance.UpdateTokenCreateRoleName(roleName, format, mountPath, tokenCreateRequest);
+                apiInstance.PostAuthTokenCreateRoleName(roleName, tokenCreateRequest, format, tokenMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateTokenCreateRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenCreateRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11309,9 +18400,9 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role | 
+ **tokenCreateRequest** | [**TokenCreateRequest**](TokenCreateRequest.md)|  | 
  **format** | **string**| Return json formatted output | [optional] 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
- **tokenCreateRequest** | [**TokenCreateRequest**](TokenCreateRequest.md)|  | [optional] 
+ **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
 
 ### Return type
 
@@ -11334,9 +18425,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatetokenlookup"></a>
-# **UpdateTokenLookup**
-> void UpdateTokenLookup (string mountPath = null, TokenLookupRequest tokenLookupRequest = null)
+<a name="postauthtokenlookup"></a>
+# **PostAuthTokenLookup**
+> void PostAuthTokenLookup (TokenLookupRequest tokenLookupRequest, string tokenMountPath = null)
 
 This endpoint will lookup a token and its properties.
 
@@ -11351,7 +18442,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateTokenLookupExample
+    public class PostAuthTokenLookupExample
     {
         public static void Main()
         {
@@ -11361,17 +18452,17 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
-            var tokenLookupRequest = new TokenLookupRequest(); // TokenLookupRequest |  (optional) 
+            var tokenLookupRequest = new TokenLookupRequest(); // TokenLookupRequest | 
+            var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
 
             try
             {
                 // This endpoint will lookup a token and its properties.
-                apiInstance.UpdateTokenLookup(mountPath, tokenLookupRequest);
+                apiInstance.PostAuthTokenLookup(tokenLookupRequest, tokenMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateTokenLookup: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenLookup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11384,8 +18475,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
- **tokenLookupRequest** | [**TokenLookupRequest**](TokenLookupRequest.md)|  | [optional] 
+ **tokenLookupRequest** | [**TokenLookupRequest**](TokenLookupRequest.md)|  | 
+ **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
 
 ### Return type
 
@@ -11408,9 +18499,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatetokenlookupaccessor"></a>
-# **UpdateTokenLookupAccessor**
-> void UpdateTokenLookupAccessor (string mountPath = null, TokenLookupAccessorRequest tokenLookupAccessorRequest = null)
+<a name="postauthtokenlookupaccessor"></a>
+# **PostAuthTokenLookupAccessor**
+> void PostAuthTokenLookupAccessor (TokenLookupAccessorRequest tokenLookupAccessorRequest, string tokenMountPath = null)
 
 This endpoint will lookup a token associated with the given accessor and its properties. Response will not contain the token ID.
 
@@ -11425,7 +18516,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateTokenLookupAccessorExample
+    public class PostAuthTokenLookupAccessorExample
     {
         public static void Main()
         {
@@ -11435,17 +18526,17 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
-            var tokenLookupAccessorRequest = new TokenLookupAccessorRequest(); // TokenLookupAccessorRequest |  (optional) 
+            var tokenLookupAccessorRequest = new TokenLookupAccessorRequest(); // TokenLookupAccessorRequest | 
+            var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
 
             try
             {
                 // This endpoint will lookup a token associated with the given accessor and its properties. Response will not contain the token ID.
-                apiInstance.UpdateTokenLookupAccessor(mountPath, tokenLookupAccessorRequest);
+                apiInstance.PostAuthTokenLookupAccessor(tokenLookupAccessorRequest, tokenMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateTokenLookupAccessor: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenLookupAccessor: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11458,8 +18549,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
- **tokenLookupAccessorRequest** | [**TokenLookupAccessorRequest**](TokenLookupAccessorRequest.md)|  | [optional] 
+ **tokenLookupAccessorRequest** | [**TokenLookupAccessorRequest**](TokenLookupAccessorRequest.md)|  | 
+ **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
 
 ### Return type
 
@@ -11482,9 +18573,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatetokenlookupself"></a>
-# **UpdateTokenLookupSelf**
-> void UpdateTokenLookupSelf (string mountPath = null, TokenLookupSelfRequest tokenLookupSelfRequest = null)
+<a name="postauthtokenlookupself"></a>
+# **PostAuthTokenLookupSelf**
+> void PostAuthTokenLookupSelf (TokenLookupSelfRequest tokenLookupSelfRequest, string tokenMountPath = null)
 
 This endpoint will lookup a token and its properties.
 
@@ -11499,7 +18590,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateTokenLookupSelfExample
+    public class PostAuthTokenLookupSelfExample
     {
         public static void Main()
         {
@@ -11509,17 +18600,17 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
-            var tokenLookupSelfRequest = new TokenLookupSelfRequest(); // TokenLookupSelfRequest |  (optional) 
+            var tokenLookupSelfRequest = new TokenLookupSelfRequest(); // TokenLookupSelfRequest | 
+            var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
 
             try
             {
                 // This endpoint will lookup a token and its properties.
-                apiInstance.UpdateTokenLookupSelf(mountPath, tokenLookupSelfRequest);
+                apiInstance.PostAuthTokenLookupSelf(tokenLookupSelfRequest, tokenMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateTokenLookupSelf: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenLookupSelf: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11532,8 +18623,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
- **tokenLookupSelfRequest** | [**TokenLookupSelfRequest**](TokenLookupSelfRequest.md)|  | [optional] 
+ **tokenLookupSelfRequest** | [**TokenLookupSelfRequest**](TokenLookupSelfRequest.md)|  | 
+ **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
 
 ### Return type
 
@@ -11556,9 +18647,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatetokenrenew"></a>
-# **UpdateTokenRenew**
-> void UpdateTokenRenew (string mountPath = null, TokenRenewRequest tokenRenewRequest = null)
+<a name="postauthtokenrenew"></a>
+# **PostAuthTokenRenew**
+> void PostAuthTokenRenew (TokenRenewRequest tokenRenewRequest, string tokenMountPath = null)
 
 This endpoint will renew the given token and prevent expiration.
 
@@ -11573,7 +18664,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateTokenRenewExample
+    public class PostAuthTokenRenewExample
     {
         public static void Main()
         {
@@ -11583,17 +18674,17 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
-            var tokenRenewRequest = new TokenRenewRequest(); // TokenRenewRequest |  (optional) 
+            var tokenRenewRequest = new TokenRenewRequest(); // TokenRenewRequest | 
+            var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
 
             try
             {
                 // This endpoint will renew the given token and prevent expiration.
-                apiInstance.UpdateTokenRenew(mountPath, tokenRenewRequest);
+                apiInstance.PostAuthTokenRenew(tokenRenewRequest, tokenMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateTokenRenew: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenRenew: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11606,8 +18697,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
- **tokenRenewRequest** | [**TokenRenewRequest**](TokenRenewRequest.md)|  | [optional] 
+ **tokenRenewRequest** | [**TokenRenewRequest**](TokenRenewRequest.md)|  | 
+ **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
 
 ### Return type
 
@@ -11630,9 +18721,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatetokenrenewaccessor"></a>
-# **UpdateTokenRenewAccessor**
-> void UpdateTokenRenewAccessor (string mountPath = null, TokenRenewAccessorRequest tokenRenewAccessorRequest = null)
+<a name="postauthtokenrenewaccessor"></a>
+# **PostAuthTokenRenewAccessor**
+> void PostAuthTokenRenewAccessor (TokenRenewAccessorRequest tokenRenewAccessorRequest, string tokenMountPath = null)
 
 This endpoint will renew a token associated with the given accessor and its properties. Response will not contain the token ID.
 
@@ -11647,7 +18738,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateTokenRenewAccessorExample
+    public class PostAuthTokenRenewAccessorExample
     {
         public static void Main()
         {
@@ -11657,17 +18748,17 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
-            var tokenRenewAccessorRequest = new TokenRenewAccessorRequest(); // TokenRenewAccessorRequest |  (optional) 
+            var tokenRenewAccessorRequest = new TokenRenewAccessorRequest(); // TokenRenewAccessorRequest | 
+            var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
 
             try
             {
                 // This endpoint will renew a token associated with the given accessor and its properties. Response will not contain the token ID.
-                apiInstance.UpdateTokenRenewAccessor(mountPath, tokenRenewAccessorRequest);
+                apiInstance.PostAuthTokenRenewAccessor(tokenRenewAccessorRequest, tokenMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateTokenRenewAccessor: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenRenewAccessor: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11680,8 +18771,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
- **tokenRenewAccessorRequest** | [**TokenRenewAccessorRequest**](TokenRenewAccessorRequest.md)|  | [optional] 
+ **tokenRenewAccessorRequest** | [**TokenRenewAccessorRequest**](TokenRenewAccessorRequest.md)|  | 
+ **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
 
 ### Return type
 
@@ -11704,9 +18795,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatetokenrenewself"></a>
-# **UpdateTokenRenewSelf**
-> void UpdateTokenRenewSelf (string mountPath = null, TokenRenewSelfRequest tokenRenewSelfRequest = null)
+<a name="postauthtokenrenewself"></a>
+# **PostAuthTokenRenewSelf**
+> void PostAuthTokenRenewSelf (TokenRenewSelfRequest tokenRenewSelfRequest, string tokenMountPath = null)
 
 This endpoint will renew the token used to call it and prevent expiration.
 
@@ -11721,7 +18812,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateTokenRenewSelfExample
+    public class PostAuthTokenRenewSelfExample
     {
         public static void Main()
         {
@@ -11731,17 +18822,17 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
-            var tokenRenewSelfRequest = new TokenRenewSelfRequest(); // TokenRenewSelfRequest |  (optional) 
+            var tokenRenewSelfRequest = new TokenRenewSelfRequest(); // TokenRenewSelfRequest | 
+            var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
 
             try
             {
                 // This endpoint will renew the token used to call it and prevent expiration.
-                apiInstance.UpdateTokenRenewSelf(mountPath, tokenRenewSelfRequest);
+                apiInstance.PostAuthTokenRenewSelf(tokenRenewSelfRequest, tokenMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateTokenRenewSelf: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenRenewSelf: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11754,8 +18845,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
- **tokenRenewSelfRequest** | [**TokenRenewSelfRequest**](TokenRenewSelfRequest.md)|  | [optional] 
+ **tokenRenewSelfRequest** | [**TokenRenewSelfRequest**](TokenRenewSelfRequest.md)|  | 
+ **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
 
 ### Return type
 
@@ -11778,9 +18869,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatetokenrevoke"></a>
-# **UpdateTokenRevoke**
-> void UpdateTokenRevoke (string mountPath = null, TokenRevokeRequest tokenRevokeRequest = null)
+<a name="postauthtokenrevoke"></a>
+# **PostAuthTokenRevoke**
+> void PostAuthTokenRevoke (TokenRevokeRequest tokenRevokeRequest, string tokenMountPath = null)
 
 This endpoint will delete the given token and all of its child tokens.
 
@@ -11795,7 +18886,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateTokenRevokeExample
+    public class PostAuthTokenRevokeExample
     {
         public static void Main()
         {
@@ -11805,17 +18896,17 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
-            var tokenRevokeRequest = new TokenRevokeRequest(); // TokenRevokeRequest |  (optional) 
+            var tokenRevokeRequest = new TokenRevokeRequest(); // TokenRevokeRequest | 
+            var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
 
             try
             {
                 // This endpoint will delete the given token and all of its child tokens.
-                apiInstance.UpdateTokenRevoke(mountPath, tokenRevokeRequest);
+                apiInstance.PostAuthTokenRevoke(tokenRevokeRequest, tokenMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateTokenRevoke: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenRevoke: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11828,8 +18919,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
- **tokenRevokeRequest** | [**TokenRevokeRequest**](TokenRevokeRequest.md)|  | [optional] 
+ **tokenRevokeRequest** | [**TokenRevokeRequest**](TokenRevokeRequest.md)|  | 
+ **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
 
 ### Return type
 
@@ -11852,9 +18943,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatetokenrevokeaccessor"></a>
-# **UpdateTokenRevokeAccessor**
-> void UpdateTokenRevokeAccessor (string mountPath = null, TokenRevokeAccessorRequest tokenRevokeAccessorRequest = null)
+<a name="postauthtokenrevokeaccessor"></a>
+# **PostAuthTokenRevokeAccessor**
+> void PostAuthTokenRevokeAccessor (TokenRevokeAccessorRequest tokenRevokeAccessorRequest, string tokenMountPath = null)
 
 This endpoint will delete the token associated with the accessor and all of its child tokens.
 
@@ -11869,7 +18960,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateTokenRevokeAccessorExample
+    public class PostAuthTokenRevokeAccessorExample
     {
         public static void Main()
         {
@@ -11879,17 +18970,17 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
-            var tokenRevokeAccessorRequest = new TokenRevokeAccessorRequest(); // TokenRevokeAccessorRequest |  (optional) 
+            var tokenRevokeAccessorRequest = new TokenRevokeAccessorRequest(); // TokenRevokeAccessorRequest | 
+            var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
 
             try
             {
                 // This endpoint will delete the token associated with the accessor and all of its child tokens.
-                apiInstance.UpdateTokenRevokeAccessor(mountPath, tokenRevokeAccessorRequest);
+                apiInstance.PostAuthTokenRevokeAccessor(tokenRevokeAccessorRequest, tokenMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateTokenRevokeAccessor: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenRevokeAccessor: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11902,8 +18993,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
- **tokenRevokeAccessorRequest** | [**TokenRevokeAccessorRequest**](TokenRevokeAccessorRequest.md)|  | [optional] 
+ **tokenRevokeAccessorRequest** | [**TokenRevokeAccessorRequest**](TokenRevokeAccessorRequest.md)|  | 
+ **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
 
 ### Return type
 
@@ -11926,9 +19017,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatetokenrevokeorphan"></a>
-# **UpdateTokenRevokeOrphan**
-> void UpdateTokenRevokeOrphan (string mountPath = null, TokenRevokeOrphanRequest tokenRevokeOrphanRequest = null)
+<a name="postauthtokenrevokeorphan"></a>
+# **PostAuthTokenRevokeOrphan**
+> void PostAuthTokenRevokeOrphan (TokenRevokeOrphanRequest tokenRevokeOrphanRequest, string tokenMountPath = null)
 
 This endpoint will delete the token and orphan its child tokens.
 
@@ -11943,7 +19034,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateTokenRevokeOrphanExample
+    public class PostAuthTokenRevokeOrphanExample
     {
         public static void Main()
         {
@@ -11953,17 +19044,17 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
-            var tokenRevokeOrphanRequest = new TokenRevokeOrphanRequest(); // TokenRevokeOrphanRequest |  (optional) 
+            var tokenRevokeOrphanRequest = new TokenRevokeOrphanRequest(); // TokenRevokeOrphanRequest | 
+            var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
 
             try
             {
                 // This endpoint will delete the token and orphan its child tokens.
-                apiInstance.UpdateTokenRevokeOrphan(mountPath, tokenRevokeOrphanRequest);
+                apiInstance.PostAuthTokenRevokeOrphan(tokenRevokeOrphanRequest, tokenMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateTokenRevokeOrphan: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenRevokeOrphan: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11976,8 +19067,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
- **tokenRevokeOrphanRequest** | [**TokenRevokeOrphanRequest**](TokenRevokeOrphanRequest.md)|  | [optional] 
+ **tokenRevokeOrphanRequest** | [**TokenRevokeOrphanRequest**](TokenRevokeOrphanRequest.md)|  | 
+ **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
 
 ### Return type
 
@@ -12000,9 +19091,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatetokenrevokeself"></a>
-# **UpdateTokenRevokeSelf**
-> void UpdateTokenRevokeSelf (string mountPath = null)
+<a name="postauthtokenrevokeself"></a>
+# **PostAuthTokenRevokeSelf**
+> void PostAuthTokenRevokeSelf (string tokenMountPath = null)
 
 This endpoint will delete the token used to call it and all of its child tokens.
 
@@ -12017,7 +19108,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateTokenRevokeSelfExample
+    public class PostAuthTokenRevokeSelfExample
     {
         public static void Main()
         {
@@ -12027,16 +19118,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
+            var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
 
             try
             {
                 // This endpoint will delete the token used to call it and all of its child tokens.
-                apiInstance.UpdateTokenRevokeSelf(mountPath);
+                apiInstance.PostAuthTokenRevokeSelf(tokenMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateTokenRevokeSelf: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenRevokeSelf: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12049,7 +19140,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
+ **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
 
 ### Return type
 
@@ -12072,9 +19163,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatetokenrolesrolename"></a>
-# **UpdateTokenRolesRoleName**
-> void UpdateTokenRolesRoleName (string roleName, string mountPath = null, TokenRolesRequest tokenRolesRequest = null)
+<a name="postauthtokenrolesrolename"></a>
+# **PostAuthTokenRolesRoleName**
+> void PostAuthTokenRolesRoleName (string roleName, TokenRolesRequest tokenRolesRequest, string tokenMountPath = null)
 
 
 
@@ -12089,7 +19180,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateTokenRolesRoleNameExample
+    public class PostAuthTokenRolesRoleNameExample
     {
         public static void Main()
         {
@@ -12100,16 +19191,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role
-            var mountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
-            var tokenRolesRequest = new TokenRolesRequest(); // TokenRolesRequest |  (optional) 
+            var tokenRolesRequest = new TokenRolesRequest(); // TokenRolesRequest | 
+            var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
 
             try
             {
-                apiInstance.UpdateTokenRolesRoleName(roleName, mountPath, tokenRolesRequest);
+                apiInstance.PostAuthTokenRolesRoleName(roleName, tokenRolesRequest, tokenMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateTokenRolesRoleName: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenRolesRoleName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12123,8 +19214,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
- **tokenRolesRequest** | [**TokenRolesRequest**](TokenRolesRequest.md)|  | [optional] 
+ **tokenRolesRequest** | [**TokenRolesRequest**](TokenRolesRequest.md)|  | 
+ **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
 
 ### Return type
 
@@ -12147,9 +19238,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatetokentidy"></a>
-# **UpdateTokenTidy**
-> void UpdateTokenTidy (string mountPath = null)
+<a name="postauthtokentidy"></a>
+# **PostAuthTokenTidy**
+> void PostAuthTokenTidy (string tokenMountPath = null)
 
 This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
 
@@ -12164,7 +19255,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateTokenTidyExample
+    public class PostAuthTokenTidyExample
     {
         public static void Main()
         {
@@ -12174,16 +19265,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
-            var mountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
+            var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
 
             try
             {
                 // This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
-                apiInstance.UpdateTokenTidy(mountPath);
+                apiInstance.PostAuthTokenTidy(tokenMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateTokenTidy: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthTokenTidy: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12196,7 +19287,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
+ **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
 
 ### Return type
 
@@ -12219,9 +19310,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateuserpassloginusername"></a>
-# **UpdateUserpassLoginUsername**
-> void UpdateUserpassLoginUsername (string username, string mountPath = null, UserpassLoginRequest userpassLoginRequest = null)
+<a name="postauthuserpassloginusername"></a>
+# **PostAuthUserpassLoginUsername**
+> void PostAuthUserpassLoginUsername (string username, UserpassLoginRequest userpassLoginRequest, string userpassMountPath = null)
 
 Log in with a username and password.
 
@@ -12236,7 +19327,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateUserpassLoginUsernameExample
+    public class PostAuthUserpassLoginUsernameExample
     {
         public static void Main()
         {
@@ -12247,17 +19338,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var username = "username_example";  // string | Username of the user.
-            var mountPath = "\"userpass\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "userpass")
-            var userpassLoginRequest = new UserpassLoginRequest(); // UserpassLoginRequest |  (optional) 
+            var userpassLoginRequest = new UserpassLoginRequest(); // UserpassLoginRequest | 
+            var userpassMountPath = "\"userpass\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "userpass")
 
             try
             {
                 // Log in with a username and password.
-                apiInstance.UpdateUserpassLoginUsername(username, mountPath, userpassLoginRequest);
+                apiInstance.PostAuthUserpassLoginUsername(username, userpassLoginRequest, userpassMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateUserpassLoginUsername: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthUserpassLoginUsername: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12271,8 +19362,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **username** | **string**| Username of the user. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;userpass&quot;]
- **userpassLoginRequest** | [**UserpassLoginRequest**](UserpassLoginRequest.md)|  | [optional] 
+ **userpassLoginRequest** | [**UserpassLoginRequest**](UserpassLoginRequest.md)|  | 
+ **userpassMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;userpass&quot;]
 
 ### Return type
 
@@ -12295,9 +19386,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateuserpassusersusername"></a>
-# **UpdateUserpassUsersUsername**
-> void UpdateUserpassUsersUsername (string username, string mountPath = null, UserpassUsersRequest userpassUsersRequest = null)
+<a name="postauthuserpassusersusername"></a>
+# **PostAuthUserpassUsersUsername**
+> void PostAuthUserpassUsersUsername (string username, UserpassUsersRequest userpassUsersRequest, string userpassMountPath = null)
 
 Manage users allowed to authenticate.
 
@@ -12312,7 +19403,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateUserpassUsersUsernameExample
+    public class PostAuthUserpassUsersUsernameExample
     {
         public static void Main()
         {
@@ -12323,17 +19414,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var username = "username_example";  // string | Username for this user.
-            var mountPath = "\"userpass\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "userpass")
-            var userpassUsersRequest = new UserpassUsersRequest(); // UserpassUsersRequest |  (optional) 
+            var userpassUsersRequest = new UserpassUsersRequest(); // UserpassUsersRequest | 
+            var userpassMountPath = "\"userpass\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "userpass")
 
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.UpdateUserpassUsersUsername(username, mountPath, userpassUsersRequest);
+                apiInstance.PostAuthUserpassUsersUsername(username, userpassUsersRequest, userpassMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateUserpassUsersUsername: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthUserpassUsersUsername: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12347,8 +19438,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **username** | **string**| Username for this user. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;userpass&quot;]
- **userpassUsersRequest** | [**UserpassUsersRequest**](UserpassUsersRequest.md)|  | [optional] 
+ **userpassUsersRequest** | [**UserpassUsersRequest**](UserpassUsersRequest.md)|  | 
+ **userpassMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;userpass&quot;]
 
 ### Return type
 
@@ -12371,9 +19462,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateuserpassusersusernamepassword"></a>
-# **UpdateUserpassUsersUsernamePassword**
-> void UpdateUserpassUsersUsernamePassword (string username, string mountPath = null, UserpassUsersPasswordRequest userpassUsersPasswordRequest = null)
+<a name="postauthuserpassusersusernamepassword"></a>
+# **PostAuthUserpassUsersUsernamePassword**
+> void PostAuthUserpassUsersUsernamePassword (string username, UserpassUsersPasswordRequest userpassUsersPasswordRequest, string userpassMountPath = null)
 
 Reset user's password.
 
@@ -12388,7 +19479,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateUserpassUsersUsernamePasswordExample
+    public class PostAuthUserpassUsersUsernamePasswordExample
     {
         public static void Main()
         {
@@ -12399,17 +19490,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var username = "username_example";  // string | Username for this user.
-            var mountPath = "\"userpass\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "userpass")
-            var userpassUsersPasswordRequest = new UserpassUsersPasswordRequest(); // UserpassUsersPasswordRequest |  (optional) 
+            var userpassUsersPasswordRequest = new UserpassUsersPasswordRequest(); // UserpassUsersPasswordRequest | 
+            var userpassMountPath = "\"userpass\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "userpass")
 
             try
             {
                 // Reset user's password.
-                apiInstance.UpdateUserpassUsersUsernamePassword(username, mountPath, userpassUsersPasswordRequest);
+                apiInstance.PostAuthUserpassUsersUsernamePassword(username, userpassUsersPasswordRequest, userpassMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateUserpassUsersUsernamePassword: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthUserpassUsersUsernamePassword: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12423,8 +19514,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **username** | **string**| Username for this user. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;userpass&quot;]
- **userpassUsersPasswordRequest** | [**UserpassUsersPasswordRequest**](UserpassUsersPasswordRequest.md)|  | [optional] 
+ **userpassUsersPasswordRequest** | [**UserpassUsersPasswordRequest**](UserpassUsersPasswordRequest.md)|  | 
+ **userpassMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;userpass&quot;]
 
 ### Return type
 
@@ -12447,9 +19538,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateuserpassusersusernamepolicies"></a>
-# **UpdateUserpassUsersUsernamePolicies**
-> void UpdateUserpassUsersUsernamePolicies (string username, string mountPath = null, UserpassUsersPoliciesRequest userpassUsersPoliciesRequest = null)
+<a name="postauthuserpassusersusernamepolicies"></a>
+# **PostAuthUserpassUsersUsernamePolicies**
+> void PostAuthUserpassUsersUsernamePolicies (string username, UserpassUsersPoliciesRequest userpassUsersPoliciesRequest, string userpassMountPath = null)
 
 Update the policies associated with the username.
 
@@ -12464,7 +19555,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateUserpassUsersUsernamePoliciesExample
+    public class PostAuthUserpassUsersUsernamePoliciesExample
     {
         public static void Main()
         {
@@ -12475,17 +19566,17 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var username = "username_example";  // string | Username for this user.
-            var mountPath = "\"userpass\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "userpass")
-            var userpassUsersPoliciesRequest = new UserpassUsersPoliciesRequest(); // UserpassUsersPoliciesRequest |  (optional) 
+            var userpassUsersPoliciesRequest = new UserpassUsersPoliciesRequest(); // UserpassUsersPoliciesRequest | 
+            var userpassMountPath = "\"userpass\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "userpass")
 
             try
             {
                 // Update the policies associated with the username.
-                apiInstance.UpdateUserpassUsersUsernamePolicies(username, mountPath, userpassUsersPoliciesRequest);
+                apiInstance.PostAuthUserpassUsersUsernamePolicies(username, userpassUsersPoliciesRequest, userpassMountPath);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Auth.UpdateUserpassUsersUsernamePolicies: " + e.Message );
+                Debug.Print("Exception when calling Auth.PostAuthUserpassUsersUsernamePolicies: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -12499,8 +19590,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **username** | **string**| Username for this user. | 
- **mountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;userpass&quot;]
- **userpassUsersPoliciesRequest** | [**UserpassUsersPoliciesRequest**](UserpassUsersPoliciesRequest.md)|  | [optional] 
+ **userpassUsersPoliciesRequest** | [**UserpassUsersPoliciesRequest**](UserpassUsersPoliciesRequest.md)|  | 
+ **userpassMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;userpass&quot;]
 
 ### Return type
 

@@ -54,2032 +54,3166 @@ namespace Vault.Test.Api
         }
 
         /// <summary>
-        /// Test DeleteApproleRoleRoleName
+        /// Test DeleteAuthAlicloudRoleRole
         /// </summary>
         [Fact]
-        public void DeleteApproleRoleRoleNameTest()
+        public void DeleteAuthAlicloudRoleRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string roleName = null;
-            //string mountPath = null;
-            //instance.DeleteApproleRoleRoleName(roleName, mountPath);
+            //string role = null;
+            //string alicloudMountPath = null;
+            //instance.DeleteAuthAlicloudRoleRole(role, alicloudMountPath);
         }
 
         /// <summary>
-        /// Test DeleteApproleRoleRoleNameBindSecretId
+        /// Test DeleteAuthApproleRoleRoleName
         /// </summary>
         [Fact]
-        public void DeleteApproleRoleRoleNameBindSecretIdTest()
+        public void DeleteAuthApproleRoleRoleNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
-            //instance.DeleteApproleRoleRoleNameBindSecretId(roleName, mountPath);
+            //string approleMountPath = null;
+            //instance.DeleteAuthApproleRoleRoleName(roleName, approleMountPath);
         }
 
         /// <summary>
-        /// Test DeleteApproleRoleRoleNameBoundCidrList
+        /// Test DeleteAuthApproleRoleRoleNameBindSecretId
         /// </summary>
         [Fact]
-        public void DeleteApproleRoleRoleNameBoundCidrListTest()
+        public void DeleteAuthApproleRoleRoleNameBindSecretIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
-            //instance.DeleteApproleRoleRoleNameBoundCidrList(roleName, mountPath);
+            //string approleMountPath = null;
+            //instance.DeleteAuthApproleRoleRoleNameBindSecretId(roleName, approleMountPath);
         }
 
         /// <summary>
-        /// Test DeleteApproleRoleRoleNamePeriod
+        /// Test DeleteAuthApproleRoleRoleNameBoundCidrList
         /// </summary>
         [Fact]
-        public void DeleteApproleRoleRoleNamePeriodTest()
+        public void DeleteAuthApproleRoleRoleNameBoundCidrListTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
-            //instance.DeleteApproleRoleRoleNamePeriod(roleName, mountPath);
+            //string approleMountPath = null;
+            //instance.DeleteAuthApproleRoleRoleNameBoundCidrList(roleName, approleMountPath);
         }
 
         /// <summary>
-        /// Test DeleteApproleRoleRoleNamePolicies
+        /// Test DeleteAuthApproleRoleRoleNamePeriod
         /// </summary>
         [Fact]
-        public void DeleteApproleRoleRoleNamePoliciesTest()
+        public void DeleteAuthApproleRoleRoleNamePeriodTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
-            //instance.DeleteApproleRoleRoleNamePolicies(roleName, mountPath);
+            //string approleMountPath = null;
+            //instance.DeleteAuthApproleRoleRoleNamePeriod(roleName, approleMountPath);
         }
 
         /// <summary>
-        /// Test DeleteApproleRoleRoleNameSecretIdAccessorDestroy
+        /// Test DeleteAuthApproleRoleRoleNamePolicies
         /// </summary>
         [Fact]
-        public void DeleteApproleRoleRoleNameSecretIdAccessorDestroyTest()
+        public void DeleteAuthApproleRoleRoleNamePoliciesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
-            //instance.DeleteApproleRoleRoleNameSecretIdAccessorDestroy(roleName, mountPath);
+            //string approleMountPath = null;
+            //instance.DeleteAuthApproleRoleRoleNamePolicies(roleName, approleMountPath);
         }
 
         /// <summary>
-        /// Test DeleteApproleRoleRoleNameSecretIdBoundCidrs
+        /// Test DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroy
         /// </summary>
         [Fact]
-        public void DeleteApproleRoleRoleNameSecretIdBoundCidrsTest()
+        public void DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
-            //instance.DeleteApproleRoleRoleNameSecretIdBoundCidrs(roleName, mountPath);
+            //string approleMountPath = null;
+            //instance.DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroy(roleName, approleMountPath);
         }
 
         /// <summary>
-        /// Test DeleteApproleRoleRoleNameSecretIdDestroy
+        /// Test DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs
         /// </summary>
         [Fact]
-        public void DeleteApproleRoleRoleNameSecretIdDestroyTest()
+        public void DeleteAuthApproleRoleRoleNameSecretIdBoundCidrsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
-            //instance.DeleteApproleRoleRoleNameSecretIdDestroy(roleName, mountPath);
+            //string approleMountPath = null;
+            //instance.DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs(roleName, approleMountPath);
         }
 
         /// <summary>
-        /// Test DeleteApproleRoleRoleNameSecretIdNumUses
+        /// Test DeleteAuthApproleRoleRoleNameSecretIdDestroy
         /// </summary>
         [Fact]
-        public void DeleteApproleRoleRoleNameSecretIdNumUsesTest()
+        public void DeleteAuthApproleRoleRoleNameSecretIdDestroyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
-            //instance.DeleteApproleRoleRoleNameSecretIdNumUses(roleName, mountPath);
+            //string approleMountPath = null;
+            //instance.DeleteAuthApproleRoleRoleNameSecretIdDestroy(roleName, approleMountPath);
         }
 
         /// <summary>
-        /// Test DeleteApproleRoleRoleNameSecretIdTtl
+        /// Test DeleteAuthApproleRoleRoleNameSecretIdNumUses
         /// </summary>
         [Fact]
-        public void DeleteApproleRoleRoleNameSecretIdTtlTest()
+        public void DeleteAuthApproleRoleRoleNameSecretIdNumUsesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
-            //instance.DeleteApproleRoleRoleNameSecretIdTtl(roleName, mountPath);
+            //string approleMountPath = null;
+            //instance.DeleteAuthApproleRoleRoleNameSecretIdNumUses(roleName, approleMountPath);
         }
 
         /// <summary>
-        /// Test DeleteApproleRoleRoleNameTokenBoundCidrs
+        /// Test DeleteAuthApproleRoleRoleNameSecretIdTtl
         /// </summary>
         [Fact]
-        public void DeleteApproleRoleRoleNameTokenBoundCidrsTest()
+        public void DeleteAuthApproleRoleRoleNameSecretIdTtlTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
-            //instance.DeleteApproleRoleRoleNameTokenBoundCidrs(roleName, mountPath);
+            //string approleMountPath = null;
+            //instance.DeleteAuthApproleRoleRoleNameSecretIdTtl(roleName, approleMountPath);
         }
 
         /// <summary>
-        /// Test DeleteApproleRoleRoleNameTokenMaxTtl
+        /// Test DeleteAuthApproleRoleRoleNameTokenBoundCidrs
         /// </summary>
         [Fact]
-        public void DeleteApproleRoleRoleNameTokenMaxTtlTest()
+        public void DeleteAuthApproleRoleRoleNameTokenBoundCidrsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
-            //instance.DeleteApproleRoleRoleNameTokenMaxTtl(roleName, mountPath);
+            //string approleMountPath = null;
+            //instance.DeleteAuthApproleRoleRoleNameTokenBoundCidrs(roleName, approleMountPath);
         }
 
         /// <summary>
-        /// Test DeleteApproleRoleRoleNameTokenNumUses
+        /// Test DeleteAuthApproleRoleRoleNameTokenMaxTtl
         /// </summary>
         [Fact]
-        public void DeleteApproleRoleRoleNameTokenNumUsesTest()
+        public void DeleteAuthApproleRoleRoleNameTokenMaxTtlTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
-            //instance.DeleteApproleRoleRoleNameTokenNumUses(roleName, mountPath);
+            //string approleMountPath = null;
+            //instance.DeleteAuthApproleRoleRoleNameTokenMaxTtl(roleName, approleMountPath);
         }
 
         /// <summary>
-        /// Test DeleteApproleRoleRoleNameTokenTtl
+        /// Test DeleteAuthApproleRoleRoleNameTokenNumUses
         /// </summary>
         [Fact]
-        public void DeleteApproleRoleRoleNameTokenTtlTest()
+        public void DeleteAuthApproleRoleRoleNameTokenNumUsesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
-            //instance.DeleteApproleRoleRoleNameTokenTtl(roleName, mountPath);
+            //string approleMountPath = null;
+            //instance.DeleteAuthApproleRoleRoleNameTokenNumUses(roleName, approleMountPath);
         }
 
         /// <summary>
-        /// Test DeleteAwsConfigCertificateCertName
+        /// Test DeleteAuthApproleRoleRoleNameTokenTtl
         /// </summary>
         [Fact]
-        public void DeleteAwsConfigCertificateCertNameTest()
+        public void DeleteAuthApproleRoleRoleNameTokenTtlTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string roleName = null;
+            //string approleMountPath = null;
+            //instance.DeleteAuthApproleRoleRoleNameTokenTtl(roleName, approleMountPath);
+        }
+
+        /// <summary>
+        /// Test DeleteAuthAwsConfigCertificateCertName
+        /// </summary>
+        [Fact]
+        public void DeleteAuthAwsConfigCertificateCertNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string certName = null;
-            //string mountPath = null;
-            //instance.DeleteAwsConfigCertificateCertName(certName, mountPath);
+            //string awsMountPath = null;
+            //instance.DeleteAuthAwsConfigCertificateCertName(certName, awsMountPath);
         }
 
         /// <summary>
-        /// Test DeleteAwsConfigClient
+        /// Test DeleteAuthAwsConfigClient
         /// </summary>
         [Fact]
-        public void DeleteAwsConfigClientTest()
+        public void DeleteAuthAwsConfigClientTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //instance.DeleteAwsConfigClient(mountPath);
+            //string awsMountPath = null;
+            //instance.DeleteAuthAwsConfigClient(awsMountPath);
         }
 
         /// <summary>
-        /// Test DeleteAwsConfigStsAccountId
+        /// Test DeleteAuthAwsConfigStsAccountId
         /// </summary>
         [Fact]
-        public void DeleteAwsConfigStsAccountIdTest()
+        public void DeleteAuthAwsConfigStsAccountIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string accountId = null;
-            //string mountPath = null;
-            //instance.DeleteAwsConfigStsAccountId(accountId, mountPath);
+            //string awsMountPath = null;
+            //instance.DeleteAuthAwsConfigStsAccountId(accountId, awsMountPath);
         }
 
         /// <summary>
-        /// Test DeleteAwsConfigTidyIdentityAccesslist
+        /// Test DeleteAuthAwsConfigTidyIdentityAccesslist
         /// </summary>
         [Fact]
-        public void DeleteAwsConfigTidyIdentityAccesslistTest()
+        public void DeleteAuthAwsConfigTidyIdentityAccesslistTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //instance.DeleteAwsConfigTidyIdentityAccesslist(mountPath);
+            //string awsMountPath = null;
+            //instance.DeleteAuthAwsConfigTidyIdentityAccesslist(awsMountPath);
         }
 
         /// <summary>
-        /// Test DeleteAwsConfigTidyIdentityWhitelist
+        /// Test DeleteAuthAwsConfigTidyIdentityWhitelist
         /// </summary>
         [Fact]
-        public void DeleteAwsConfigTidyIdentityWhitelistTest()
+        public void DeleteAuthAwsConfigTidyIdentityWhitelistTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //instance.DeleteAwsConfigTidyIdentityWhitelist(mountPath);
+            //string awsMountPath = null;
+            //instance.DeleteAuthAwsConfigTidyIdentityWhitelist(awsMountPath);
         }
 
         /// <summary>
-        /// Test DeleteAwsConfigTidyRoletagBlacklist
+        /// Test DeleteAuthAwsConfigTidyRoletagBlacklist
         /// </summary>
         [Fact]
-        public void DeleteAwsConfigTidyRoletagBlacklistTest()
+        public void DeleteAuthAwsConfigTidyRoletagBlacklistTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //instance.DeleteAwsConfigTidyRoletagBlacklist(mountPath);
+            //string awsMountPath = null;
+            //instance.DeleteAuthAwsConfigTidyRoletagBlacklist(awsMountPath);
         }
 
         /// <summary>
-        /// Test DeleteAwsConfigTidyRoletagDenylist
+        /// Test DeleteAuthAwsConfigTidyRoletagDenylist
         /// </summary>
         [Fact]
-        public void DeleteAwsConfigTidyRoletagDenylistTest()
+        public void DeleteAuthAwsConfigTidyRoletagDenylistTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //instance.DeleteAwsConfigTidyRoletagDenylist(mountPath);
+            //string awsMountPath = null;
+            //instance.DeleteAuthAwsConfigTidyRoletagDenylist(awsMountPath);
         }
 
         /// <summary>
-        /// Test DeleteAwsIdentityAccesslistInstanceId
+        /// Test DeleteAuthAwsIdentityAccesslistInstanceId
         /// </summary>
         [Fact]
-        public void DeleteAwsIdentityAccesslistInstanceIdTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string instanceId = null;
-            //string mountPath = null;
-            //instance.DeleteAwsIdentityAccesslistInstanceId(instanceId, mountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteAwsIdentityWhitelistInstanceId
-        /// </summary>
-        [Fact]
-        public void DeleteAwsIdentityWhitelistInstanceIdTest()
+        public void DeleteAuthAwsIdentityAccesslistInstanceIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string instanceId = null;
-            //string mountPath = null;
-            //instance.DeleteAwsIdentityWhitelistInstanceId(instanceId, mountPath);
+            //string awsMountPath = null;
+            //instance.DeleteAuthAwsIdentityAccesslistInstanceId(instanceId, awsMountPath);
         }
 
         /// <summary>
-        /// Test DeleteAwsRoleRole
+        /// Test DeleteAuthAwsIdentityWhitelistInstanceId
         /// </summary>
         [Fact]
-        public void DeleteAwsRoleRoleTest()
+        public void DeleteAuthAwsIdentityWhitelistInstanceIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string instanceId = null;
+            //string awsMountPath = null;
+            //instance.DeleteAuthAwsIdentityWhitelistInstanceId(instanceId, awsMountPath);
+        }
+
+        /// <summary>
+        /// Test DeleteAuthAwsRoleRole
+        /// </summary>
+        [Fact]
+        public void DeleteAuthAwsRoleRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string role = null;
-            //string mountPath = null;
-            //instance.DeleteAwsRoleRole(role, mountPath);
+            //string awsMountPath = null;
+            //instance.DeleteAuthAwsRoleRole(role, awsMountPath);
         }
 
         /// <summary>
-        /// Test DeleteAwsRoletagBlacklistRoleTag
+        /// Test DeleteAuthAwsRoletagBlacklistRoleTag
         /// </summary>
         [Fact]
-        public void DeleteAwsRoletagBlacklistRoleTagTest()
+        public void DeleteAuthAwsRoletagBlacklistRoleTagTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleTag = null;
-            //string mountPath = null;
-            //instance.DeleteAwsRoletagBlacklistRoleTag(roleTag, mountPath);
+            //string awsMountPath = null;
+            //instance.DeleteAuthAwsRoletagBlacklistRoleTag(roleTag, awsMountPath);
         }
 
         /// <summary>
-        /// Test DeleteAwsRoletagDenylistRoleTag
+        /// Test DeleteAuthAwsRoletagDenylistRoleTag
         /// </summary>
         [Fact]
-        public void DeleteAwsRoletagDenylistRoleTagTest()
+        public void DeleteAuthAwsRoletagDenylistRoleTagTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleTag = null;
-            //string mountPath = null;
-            //instance.DeleteAwsRoletagDenylistRoleTag(roleTag, mountPath);
+            //string awsMountPath = null;
+            //instance.DeleteAuthAwsRoletagDenylistRoleTag(roleTag, awsMountPath);
         }
 
         /// <summary>
-        /// Test DeleteCertCertsName
+        /// Test DeleteAuthAzureConfig
         /// </summary>
         [Fact]
-        public void DeleteCertCertsNameTest()
+        public void DeleteAuthAzureConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string azureMountPath = null;
+            //instance.DeleteAuthAzureConfig(azureMountPath);
+        }
+
+        /// <summary>
+        /// Test DeleteAuthAzureRoleName
+        /// </summary>
+        [Fact]
+        public void DeleteAuthAzureRoleNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //string mountPath = null;
-            //instance.DeleteCertCertsName(name, mountPath);
+            //string azureMountPath = null;
+            //instance.DeleteAuthAzureRoleName(name, azureMountPath);
         }
 
         /// <summary>
-        /// Test DeleteCertCrlsName
+        /// Test DeleteAuthCertCertsName
         /// </summary>
         [Fact]
-        public void DeleteCertCrlsNameTest()
+        public void DeleteAuthCertCertsNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //string mountPath = null;
-            //instance.DeleteCertCrlsName(name, mountPath);
+            //string certMountPath = null;
+            //instance.DeleteAuthCertCertsName(name, certMountPath);
         }
 
         /// <summary>
-        /// Test DeleteCfRolesRole
+        /// Test DeleteAuthCertCrlsName
         /// </summary>
         [Fact]
-        public void DeleteCfRolesRoleTest()
+        public void DeleteAuthCertCrlsNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string certMountPath = null;
+            //instance.DeleteAuthCertCrlsName(name, certMountPath);
+        }
+
+        /// <summary>
+        /// Test DeleteAuthCfConfig
+        /// </summary>
+        [Fact]
+        public void DeleteAuthCfConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string cfMountPath = null;
+            //instance.DeleteAuthCfConfig(cfMountPath);
+        }
+
+        /// <summary>
+        /// Test DeleteAuthCfRolesRole
+        /// </summary>
+        [Fact]
+        public void DeleteAuthCfRolesRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string role = null;
-            //string mountPath = null;
-            //instance.DeleteCfRolesRole(role, mountPath);
+            //string cfMountPath = null;
+            //instance.DeleteAuthCfRolesRole(role, cfMountPath);
         }
 
         /// <summary>
-        /// Test DeleteGithubMapTeamsKey
+        /// Test DeleteAuthGcpRoleName
         /// </summary>
         [Fact]
-        public void DeleteGithubMapTeamsKeyTest()
+        public void DeleteAuthGcpRoleNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string gcpMountPath = null;
+            //instance.DeleteAuthGcpRoleName(name, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test DeleteAuthGithubMapTeamsKey
+        /// </summary>
+        [Fact]
+        public void DeleteAuthGithubMapTeamsKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string key = null;
-            //string mountPath = null;
-            //instance.DeleteGithubMapTeamsKey(key, mountPath);
+            //string githubMountPath = null;
+            //instance.DeleteAuthGithubMapTeamsKey(key, githubMountPath);
         }
 
         /// <summary>
-        /// Test DeleteGithubMapUsersKey
+        /// Test DeleteAuthGithubMapUsersKey
         /// </summary>
         [Fact]
-        public void DeleteGithubMapUsersKeyTest()
+        public void DeleteAuthGithubMapUsersKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string key = null;
-            //string mountPath = null;
-            //instance.DeleteGithubMapUsersKey(key, mountPath);
+            //string githubMountPath = null;
+            //instance.DeleteAuthGithubMapUsersKey(key, githubMountPath);
         }
 
         /// <summary>
-        /// Test DeleteKerberosGroupsName
+        /// Test DeleteAuthJwtRoleName
         /// </summary>
         [Fact]
-        public void DeleteKerberosGroupsNameTest()
+        public void DeleteAuthJwtRoleNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //string mountPath = null;
-            //instance.DeleteKerberosGroupsName(name, mountPath);
+            //string jwtMountPath = null;
+            //instance.DeleteAuthJwtRoleName(name, jwtMountPath);
         }
 
         /// <summary>
-        /// Test DeleteOidcRoleName
+        /// Test DeleteAuthKerberosGroupsName
         /// </summary>
         [Fact]
-        public void DeleteOidcRoleNameTest()
+        public void DeleteAuthKerberosGroupsNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //string mountPath = null;
-            //instance.DeleteOidcRoleName(name, mountPath);
+            //string kerberosMountPath = null;
+            //instance.DeleteAuthKerberosGroupsName(name, kerberosMountPath);
         }
 
         /// <summary>
-        /// Test DeleteRadiusUsersName
+        /// Test DeleteAuthKubernetesRoleName
         /// </summary>
         [Fact]
-        public void DeleteRadiusUsersNameTest()
+        public void DeleteAuthKubernetesRoleNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //string mountPath = null;
-            //instance.DeleteRadiusUsersName(name, mountPath);
+            //string kubernetesMountPath = null;
+            //instance.DeleteAuthKubernetesRoleName(name, kubernetesMountPath);
         }
 
         /// <summary>
-        /// Test DeleteTokenRolesRoleName
+        /// Test DeleteAuthLdapGroupsName
         /// </summary>
         [Fact]
-        public void DeleteTokenRolesRoleNameTest()
+        public void DeleteAuthLdapGroupsNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string ldapMountPath = null;
+            //instance.DeleteAuthLdapGroupsName(name, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test DeleteAuthLdapUsersName
+        /// </summary>
+        [Fact]
+        public void DeleteAuthLdapUsersNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string ldapMountPath = null;
+            //instance.DeleteAuthLdapUsersName(name, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test DeleteAuthOciConfig
+        /// </summary>
+        [Fact]
+        public void DeleteAuthOciConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string ociMountPath = null;
+            //instance.DeleteAuthOciConfig(ociMountPath);
+        }
+
+        /// <summary>
+        /// Test DeleteAuthOciRoleRole
+        /// </summary>
+        [Fact]
+        public void DeleteAuthOciRoleRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string role = null;
+            //string ociMountPath = null;
+            //instance.DeleteAuthOciRoleRole(role, ociMountPath);
+        }
+
+        /// <summary>
+        /// Test DeleteAuthOidcRoleName
+        /// </summary>
+        [Fact]
+        public void DeleteAuthOidcRoleNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string oidcMountPath = null;
+            //instance.DeleteAuthOidcRoleName(name, oidcMountPath);
+        }
+
+        /// <summary>
+        /// Test DeleteAuthOktaGroupsName
+        /// </summary>
+        [Fact]
+        public void DeleteAuthOktaGroupsNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string oktaMountPath = null;
+            //instance.DeleteAuthOktaGroupsName(name, oktaMountPath);
+        }
+
+        /// <summary>
+        /// Test DeleteAuthOktaUsersName
+        /// </summary>
+        [Fact]
+        public void DeleteAuthOktaUsersNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string oktaMountPath = null;
+            //instance.DeleteAuthOktaUsersName(name, oktaMountPath);
+        }
+
+        /// <summary>
+        /// Test DeleteAuthRadiusUsersName
+        /// </summary>
+        [Fact]
+        public void DeleteAuthRadiusUsersNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string radiusMountPath = null;
+            //instance.DeleteAuthRadiusUsersName(name, radiusMountPath);
+        }
+
+        /// <summary>
+        /// Test DeleteAuthTokenRolesRoleName
+        /// </summary>
+        [Fact]
+        public void DeleteAuthTokenRolesRoleNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
-            //instance.DeleteTokenRolesRoleName(roleName, mountPath);
+            //string tokenMountPath = null;
+            //instance.DeleteAuthTokenRolesRoleName(roleName, tokenMountPath);
         }
 
         /// <summary>
-        /// Test DeleteUserpassUsersUsername
+        /// Test DeleteAuthUserpassUsersUsername
         /// </summary>
         [Fact]
-        public void DeleteUserpassUsersUsernameTest()
+        public void DeleteAuthUserpassUsersUsernameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string username = null;
-            //string mountPath = null;
-            //instance.DeleteUserpassUsersUsername(username, mountPath);
+            //string userpassMountPath = null;
+            //instance.DeleteAuthUserpassUsersUsername(username, userpassMountPath);
         }
 
         /// <summary>
-        /// Test ListApproleRoleRoleNameSecretId
+        /// Test GetAuthAlicloudRole
         /// </summary>
         [Fact]
-        public void ListApproleRoleRoleNameSecretIdTest()
+        public void GetAuthAlicloudRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string alicloudMountPath = null;
+            //instance.GetAuthAlicloudRole(list, alicloudMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthAlicloudRoleRole
+        /// </summary>
+        [Fact]
+        public void GetAuthAlicloudRoleRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string role = null;
+            //string alicloudMountPath = null;
+            //instance.GetAuthAlicloudRoleRole(role, alicloudMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthAlicloudRoles
+        /// </summary>
+        [Fact]
+        public void GetAuthAlicloudRolesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string alicloudMountPath = null;
+            //instance.GetAuthAlicloudRoles(list, alicloudMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthApproleRole
+        /// </summary>
+        [Fact]
+        public void GetAuthApproleRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string approleMountPath = null;
+            //instance.GetAuthApproleRole(list, approleMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthApproleRoleRoleName
+        /// </summary>
+        [Fact]
+        public void GetAuthApproleRoleRoleNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string roleName = null;
+            //string approleMountPath = null;
+            //instance.GetAuthApproleRoleRoleName(roleName, approleMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthApproleRoleRoleNameBindSecretId
+        /// </summary>
+        [Fact]
+        public void GetAuthApproleRoleRoleNameBindSecretIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string roleName = null;
+            //string approleMountPath = null;
+            //instance.GetAuthApproleRoleRoleNameBindSecretId(roleName, approleMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthApproleRoleRoleNameBoundCidrList
+        /// </summary>
+        [Fact]
+        public void GetAuthApproleRoleRoleNameBoundCidrListTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string roleName = null;
+            //string approleMountPath = null;
+            //instance.GetAuthApproleRoleRoleNameBoundCidrList(roleName, approleMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthApproleRoleRoleNameLocalSecretIds
+        /// </summary>
+        [Fact]
+        public void GetAuthApproleRoleRoleNameLocalSecretIdsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string roleName = null;
+            //string approleMountPath = null;
+            //instance.GetAuthApproleRoleRoleNameLocalSecretIds(roleName, approleMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthApproleRoleRoleNamePeriod
+        /// </summary>
+        [Fact]
+        public void GetAuthApproleRoleRoleNamePeriodTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string roleName = null;
+            //string approleMountPath = null;
+            //instance.GetAuthApproleRoleRoleNamePeriod(roleName, approleMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthApproleRoleRoleNamePolicies
+        /// </summary>
+        [Fact]
+        public void GetAuthApproleRoleRoleNamePoliciesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string roleName = null;
+            //string approleMountPath = null;
+            //instance.GetAuthApproleRoleRoleNamePolicies(roleName, approleMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthApproleRoleRoleNameRoleId
+        /// </summary>
+        [Fact]
+        public void GetAuthApproleRoleRoleNameRoleIdTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string roleName = null;
+            //string approleMountPath = null;
+            //instance.GetAuthApproleRoleRoleNameRoleId(roleName, approleMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthApproleRoleRoleNameSecretId
+        /// </summary>
+        [Fact]
+        public void GetAuthApproleRoleRoleNameSecretIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
             //string list = null;
-            //string mountPath = null;
-            //instance.ListApproleRoleRoleNameSecretId(roleName, list, mountPath);
+            //string approleMountPath = null;
+            //instance.GetAuthApproleRoleRoleNameSecretId(roleName, list, approleMountPath);
         }
 
         /// <summary>
-        /// Test ListAwsConfigCertificates
+        /// Test GetAuthApproleRoleRoleNameSecretIdBoundCidrs
         /// </summary>
         [Fact]
-        public void ListAwsConfigCertificatesTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string mountPath = null;
-            //instance.ListAwsConfigCertificates(list, mountPath);
-        }
-
-        /// <summary>
-        /// Test ListAwsConfigSts
-        /// </summary>
-        [Fact]
-        public void ListAwsConfigStsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string mountPath = null;
-            //instance.ListAwsConfigSts(list, mountPath);
-        }
-
-        /// <summary>
-        /// Test ListAwsIdentityAccesslist
-        /// </summary>
-        [Fact]
-        public void ListAwsIdentityAccesslistTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string mountPath = null;
-            //instance.ListAwsIdentityAccesslist(list, mountPath);
-        }
-
-        /// <summary>
-        /// Test ListAwsIdentityWhitelist
-        /// </summary>
-        [Fact]
-        public void ListAwsIdentityWhitelistTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string mountPath = null;
-            //instance.ListAwsIdentityWhitelist(list, mountPath);
-        }
-
-        /// <summary>
-        /// Test ListAwsRoletagBlacklist
-        /// </summary>
-        [Fact]
-        public void ListAwsRoletagBlacklistTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string mountPath = null;
-            //instance.ListAwsRoletagBlacklist(list, mountPath);
-        }
-
-        /// <summary>
-        /// Test ListAwsRoletagDenylist
-        /// </summary>
-        [Fact]
-        public void ListAwsRoletagDenylistTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string mountPath = null;
-            //instance.ListAwsRoletagDenylist(list, mountPath);
-        }
-
-        /// <summary>
-        /// Test ListCertCerts
-        /// </summary>
-        [Fact]
-        public void ListCertCertsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string mountPath = null;
-            //instance.ListCertCerts(list, mountPath);
-        }
-
-        /// <summary>
-        /// Test ListGcpRoles
-        /// </summary>
-        [Fact]
-        public void ListGcpRolesTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string mountPath = null;
-            //instance.ListGcpRoles(list, mountPath);
-        }
-
-        /// <summary>
-        /// Test ListKerberosGroups
-        /// </summary>
-        [Fact]
-        public void ListKerberosGroupsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string mountPath = null;
-            //instance.ListKerberosGroups(list, mountPath);
-        }
-
-        /// <summary>
-        /// Test ListOidcRole
-        /// </summary>
-        [Fact]
-        public void ListOidcRoleTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string mountPath = null;
-            //instance.ListOidcRole(list, mountPath);
-        }
-
-        /// <summary>
-        /// Test ListTokenAccessors
-        /// </summary>
-        [Fact]
-        public void ListTokenAccessorsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string mountPath = null;
-            //instance.ListTokenAccessors(list, mountPath);
-        }
-
-        /// <summary>
-        /// Test ListUserpassUsers
-        /// </summary>
-        [Fact]
-        public void ListUserpassUsersTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string mountPath = null;
-            //instance.ListUserpassUsers(list, mountPath);
-        }
-
-        /// <summary>
-        /// Test ReadApproleRoleRoleName
-        /// </summary>
-        [Fact]
-        public void ReadApproleRoleRoleNameTest()
+        public void GetAuthApproleRoleRoleNameSecretIdBoundCidrsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
-            //instance.ReadApproleRoleRoleName(roleName, mountPath);
+            //string approleMountPath = null;
+            //instance.GetAuthApproleRoleRoleNameSecretIdBoundCidrs(roleName, approleMountPath);
         }
 
         /// <summary>
-        /// Test ReadApproleRoleRoleNameBindSecretId
+        /// Test GetAuthApproleRoleRoleNameSecretIdNumUses
         /// </summary>
         [Fact]
-        public void ReadApproleRoleRoleNameBindSecretIdTest()
+        public void GetAuthApproleRoleRoleNameSecretIdNumUsesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
-            //instance.ReadApproleRoleRoleNameBindSecretId(roleName, mountPath);
+            //string approleMountPath = null;
+            //instance.GetAuthApproleRoleRoleNameSecretIdNumUses(roleName, approleMountPath);
         }
 
         /// <summary>
-        /// Test ReadApproleRoleRoleNameBoundCidrList
+        /// Test GetAuthApproleRoleRoleNameSecretIdTtl
         /// </summary>
         [Fact]
-        public void ReadApproleRoleRoleNameBoundCidrListTest()
+        public void GetAuthApproleRoleRoleNameSecretIdTtlTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
-            //instance.ReadApproleRoleRoleNameBoundCidrList(roleName, mountPath);
+            //string approleMountPath = null;
+            //instance.GetAuthApproleRoleRoleNameSecretIdTtl(roleName, approleMountPath);
         }
 
         /// <summary>
-        /// Test ReadApproleRoleRoleNameLocalSecretIds
+        /// Test GetAuthApproleRoleRoleNameTokenBoundCidrs
         /// </summary>
         [Fact]
-        public void ReadApproleRoleRoleNameLocalSecretIdsTest()
+        public void GetAuthApproleRoleRoleNameTokenBoundCidrsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
-            //instance.ReadApproleRoleRoleNameLocalSecretIds(roleName, mountPath);
+            //string approleMountPath = null;
+            //instance.GetAuthApproleRoleRoleNameTokenBoundCidrs(roleName, approleMountPath);
         }
 
         /// <summary>
-        /// Test ReadApproleRoleRoleNamePeriod
+        /// Test GetAuthApproleRoleRoleNameTokenMaxTtl
         /// </summary>
         [Fact]
-        public void ReadApproleRoleRoleNamePeriodTest()
+        public void GetAuthApproleRoleRoleNameTokenMaxTtlTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
-            //instance.ReadApproleRoleRoleNamePeriod(roleName, mountPath);
+            //string approleMountPath = null;
+            //instance.GetAuthApproleRoleRoleNameTokenMaxTtl(roleName, approleMountPath);
         }
 
         /// <summary>
-        /// Test ReadApproleRoleRoleNamePolicies
+        /// Test GetAuthApproleRoleRoleNameTokenNumUses
         /// </summary>
         [Fact]
-        public void ReadApproleRoleRoleNamePoliciesTest()
+        public void GetAuthApproleRoleRoleNameTokenNumUsesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
-            //instance.ReadApproleRoleRoleNamePolicies(roleName, mountPath);
+            //string approleMountPath = null;
+            //instance.GetAuthApproleRoleRoleNameTokenNumUses(roleName, approleMountPath);
         }
 
         /// <summary>
-        /// Test ReadApproleRoleRoleNameRoleId
+        /// Test GetAuthApproleRoleRoleNameTokenTtl
         /// </summary>
         [Fact]
-        public void ReadApproleRoleRoleNameRoleIdTest()
+        public void GetAuthApproleRoleRoleNameTokenTtlTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
-            //instance.ReadApproleRoleRoleNameRoleId(roleName, mountPath);
+            //string approleMountPath = null;
+            //instance.GetAuthApproleRoleRoleNameTokenTtl(roleName, approleMountPath);
         }
 
         /// <summary>
-        /// Test ReadApproleRoleRoleNameSecretIdBoundCidrs
+        /// Test GetAuthAwsConfigCertificateCertName
         /// </summary>
         [Fact]
-        public void ReadApproleRoleRoleNameSecretIdBoundCidrsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string roleName = null;
-            //string mountPath = null;
-            //instance.ReadApproleRoleRoleNameSecretIdBoundCidrs(roleName, mountPath);
-        }
-
-        /// <summary>
-        /// Test ReadApproleRoleRoleNameSecretIdNumUses
-        /// </summary>
-        [Fact]
-        public void ReadApproleRoleRoleNameSecretIdNumUsesTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string roleName = null;
-            //string mountPath = null;
-            //instance.ReadApproleRoleRoleNameSecretIdNumUses(roleName, mountPath);
-        }
-
-        /// <summary>
-        /// Test ReadApproleRoleRoleNameSecretIdTtl
-        /// </summary>
-        [Fact]
-        public void ReadApproleRoleRoleNameSecretIdTtlTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string roleName = null;
-            //string mountPath = null;
-            //instance.ReadApproleRoleRoleNameSecretIdTtl(roleName, mountPath);
-        }
-
-        /// <summary>
-        /// Test ReadApproleRoleRoleNameTokenBoundCidrs
-        /// </summary>
-        [Fact]
-        public void ReadApproleRoleRoleNameTokenBoundCidrsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string roleName = null;
-            //string mountPath = null;
-            //instance.ReadApproleRoleRoleNameTokenBoundCidrs(roleName, mountPath);
-        }
-
-        /// <summary>
-        /// Test ReadApproleRoleRoleNameTokenMaxTtl
-        /// </summary>
-        [Fact]
-        public void ReadApproleRoleRoleNameTokenMaxTtlTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string roleName = null;
-            //string mountPath = null;
-            //instance.ReadApproleRoleRoleNameTokenMaxTtl(roleName, mountPath);
-        }
-
-        /// <summary>
-        /// Test ReadApproleRoleRoleNameTokenNumUses
-        /// </summary>
-        [Fact]
-        public void ReadApproleRoleRoleNameTokenNumUsesTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string roleName = null;
-            //string mountPath = null;
-            //instance.ReadApproleRoleRoleNameTokenNumUses(roleName, mountPath);
-        }
-
-        /// <summary>
-        /// Test ReadApproleRoleRoleNameTokenTtl
-        /// </summary>
-        [Fact]
-        public void ReadApproleRoleRoleNameTokenTtlTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string roleName = null;
-            //string mountPath = null;
-            //instance.ReadApproleRoleRoleNameTokenTtl(roleName, mountPath);
-        }
-
-        /// <summary>
-        /// Test ReadAwsConfigCertificateCertName
-        /// </summary>
-        [Fact]
-        public void ReadAwsConfigCertificateCertNameTest()
+        public void GetAuthAwsConfigCertificateCertNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string certName = null;
-            //string mountPath = null;
-            //instance.ReadAwsConfigCertificateCertName(certName, mountPath);
+            //string awsMountPath = null;
+            //instance.GetAuthAwsConfigCertificateCertName(certName, awsMountPath);
         }
 
         /// <summary>
-        /// Test ReadAwsConfigClient
+        /// Test GetAuthAwsConfigCertificates
         /// </summary>
         [Fact]
-        public void ReadAwsConfigClientTest()
+        public void GetAuthAwsConfigCertificatesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //instance.ReadAwsConfigClient(mountPath);
+            //string list = null;
+            //string awsMountPath = null;
+            //instance.GetAuthAwsConfigCertificates(list, awsMountPath);
         }
 
         /// <summary>
-        /// Test ReadAwsConfigIdentity
+        /// Test GetAuthAwsConfigClient
         /// </summary>
         [Fact]
-        public void ReadAwsConfigIdentityTest()
+        public void GetAuthAwsConfigClientTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //instance.ReadAwsConfigIdentity(mountPath);
+            //string awsMountPath = null;
+            //instance.GetAuthAwsConfigClient(awsMountPath);
         }
 
         /// <summary>
-        /// Test ReadAwsConfigStsAccountId
+        /// Test GetAuthAwsConfigIdentity
         /// </summary>
         [Fact]
-        public void ReadAwsConfigStsAccountIdTest()
+        public void GetAuthAwsConfigIdentityTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string awsMountPath = null;
+            //instance.GetAuthAwsConfigIdentity(awsMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthAwsConfigSts
+        /// </summary>
+        [Fact]
+        public void GetAuthAwsConfigStsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string awsMountPath = null;
+            //instance.GetAuthAwsConfigSts(list, awsMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthAwsConfigStsAccountId
+        /// </summary>
+        [Fact]
+        public void GetAuthAwsConfigStsAccountIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string accountId = null;
-            //string mountPath = null;
-            //instance.ReadAwsConfigStsAccountId(accountId, mountPath);
+            //string awsMountPath = null;
+            //instance.GetAuthAwsConfigStsAccountId(accountId, awsMountPath);
         }
 
         /// <summary>
-        /// Test ReadAwsConfigTidyIdentityAccesslist
+        /// Test GetAuthAwsConfigTidyIdentityAccesslist
         /// </summary>
         [Fact]
-        public void ReadAwsConfigTidyIdentityAccesslistTest()
+        public void GetAuthAwsConfigTidyIdentityAccesslistTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //instance.ReadAwsConfigTidyIdentityAccesslist(mountPath);
+            //string awsMountPath = null;
+            //instance.GetAuthAwsConfigTidyIdentityAccesslist(awsMountPath);
         }
 
         /// <summary>
-        /// Test ReadAwsConfigTidyIdentityWhitelist
+        /// Test GetAuthAwsConfigTidyIdentityWhitelist
         /// </summary>
         [Fact]
-        public void ReadAwsConfigTidyIdentityWhitelistTest()
+        public void GetAuthAwsConfigTidyIdentityWhitelistTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //instance.ReadAwsConfigTidyIdentityWhitelist(mountPath);
+            //string awsMountPath = null;
+            //instance.GetAuthAwsConfigTidyIdentityWhitelist(awsMountPath);
         }
 
         /// <summary>
-        /// Test ReadAwsConfigTidyRoletagBlacklist
+        /// Test GetAuthAwsConfigTidyRoletagBlacklist
         /// </summary>
         [Fact]
-        public void ReadAwsConfigTidyRoletagBlacklistTest()
+        public void GetAuthAwsConfigTidyRoletagBlacklistTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //instance.ReadAwsConfigTidyRoletagBlacklist(mountPath);
+            //string awsMountPath = null;
+            //instance.GetAuthAwsConfigTidyRoletagBlacklist(awsMountPath);
         }
 
         /// <summary>
-        /// Test ReadAwsConfigTidyRoletagDenylist
+        /// Test GetAuthAwsConfigTidyRoletagDenylist
         /// </summary>
         [Fact]
-        public void ReadAwsConfigTidyRoletagDenylistTest()
+        public void GetAuthAwsConfigTidyRoletagDenylistTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //instance.ReadAwsConfigTidyRoletagDenylist(mountPath);
+            //string awsMountPath = null;
+            //instance.GetAuthAwsConfigTidyRoletagDenylist(awsMountPath);
         }
 
         /// <summary>
-        /// Test ReadAwsIdentityAccesslistInstanceId
+        /// Test GetAuthAwsIdentityAccesslist
         /// </summary>
         [Fact]
-        public void ReadAwsIdentityAccesslistInstanceIdTest()
+        public void GetAuthAwsIdentityAccesslistTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string awsMountPath = null;
+            //instance.GetAuthAwsIdentityAccesslist(list, awsMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthAwsIdentityAccesslistInstanceId
+        /// </summary>
+        [Fact]
+        public void GetAuthAwsIdentityAccesslistInstanceIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string instanceId = null;
-            //string mountPath = null;
-            //instance.ReadAwsIdentityAccesslistInstanceId(instanceId, mountPath);
+            //string awsMountPath = null;
+            //instance.GetAuthAwsIdentityAccesslistInstanceId(instanceId, awsMountPath);
         }
 
         /// <summary>
-        /// Test ReadAwsIdentityWhitelistInstanceId
+        /// Test GetAuthAwsIdentityWhitelist
         /// </summary>
         [Fact]
-        public void ReadAwsIdentityWhitelistInstanceIdTest()
+        public void GetAuthAwsIdentityWhitelistTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string awsMountPath = null;
+            //instance.GetAuthAwsIdentityWhitelist(list, awsMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthAwsIdentityWhitelistInstanceId
+        /// </summary>
+        [Fact]
+        public void GetAuthAwsIdentityWhitelistInstanceIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string instanceId = null;
-            //string mountPath = null;
-            //instance.ReadAwsIdentityWhitelistInstanceId(instanceId, mountPath);
+            //string awsMountPath = null;
+            //instance.GetAuthAwsIdentityWhitelistInstanceId(instanceId, awsMountPath);
         }
 
         /// <summary>
-        /// Test ReadAwsRoleRole
+        /// Test GetAuthAwsRole
         /// </summary>
         [Fact]
-        public void ReadAwsRoleRoleTest()
+        public void GetAuthAwsRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string awsMountPath = null;
+            //instance.GetAuthAwsRole(list, awsMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthAwsRoleRole
+        /// </summary>
+        [Fact]
+        public void GetAuthAwsRoleRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string role = null;
-            //string mountPath = null;
-            //instance.ReadAwsRoleRole(role, mountPath);
+            //string awsMountPath = null;
+            //instance.GetAuthAwsRoleRole(role, awsMountPath);
         }
 
         /// <summary>
-        /// Test ReadAwsRoletagBlacklistRoleTag
+        /// Test GetAuthAwsRoles
         /// </summary>
         [Fact]
-        public void ReadAwsRoletagBlacklistRoleTagTest()
+        public void GetAuthAwsRolesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string awsMountPath = null;
+            //instance.GetAuthAwsRoles(list, awsMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthAwsRoletagBlacklist
+        /// </summary>
+        [Fact]
+        public void GetAuthAwsRoletagBlacklistTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string awsMountPath = null;
+            //instance.GetAuthAwsRoletagBlacklist(list, awsMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthAwsRoletagBlacklistRoleTag
+        /// </summary>
+        [Fact]
+        public void GetAuthAwsRoletagBlacklistRoleTagTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleTag = null;
-            //string mountPath = null;
-            //instance.ReadAwsRoletagBlacklistRoleTag(roleTag, mountPath);
+            //string awsMountPath = null;
+            //instance.GetAuthAwsRoletagBlacklistRoleTag(roleTag, awsMountPath);
         }
 
         /// <summary>
-        /// Test ReadAwsRoletagDenylistRoleTag
+        /// Test GetAuthAwsRoletagDenylist
         /// </summary>
         [Fact]
-        public void ReadAwsRoletagDenylistRoleTagTest()
+        public void GetAuthAwsRoletagDenylistTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string awsMountPath = null;
+            //instance.GetAuthAwsRoletagDenylist(list, awsMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthAwsRoletagDenylistRoleTag
+        /// </summary>
+        [Fact]
+        public void GetAuthAwsRoletagDenylistRoleTagTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleTag = null;
-            //string mountPath = null;
-            //instance.ReadAwsRoletagDenylistRoleTag(roleTag, mountPath);
+            //string awsMountPath = null;
+            //instance.GetAuthAwsRoletagDenylistRoleTag(roleTag, awsMountPath);
         }
 
         /// <summary>
-        /// Test ReadCertCertsName
+        /// Test GetAuthAzureConfig
         /// </summary>
         [Fact]
-        public void ReadCertCertsNameTest()
+        public void GetAuthAzureConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string azureMountPath = null;
+            //instance.GetAuthAzureConfig(azureMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthAzureRole
+        /// </summary>
+        [Fact]
+        public void GetAuthAzureRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string azureMountPath = null;
+            //instance.GetAuthAzureRole(list, azureMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthAzureRoleName
+        /// </summary>
+        [Fact]
+        public void GetAuthAzureRoleNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //string mountPath = null;
-            //instance.ReadCertCertsName(name, mountPath);
+            //string azureMountPath = null;
+            //instance.GetAuthAzureRoleName(name, azureMountPath);
         }
 
         /// <summary>
-        /// Test ReadCertCrlsName
+        /// Test GetAuthCentrifyConfig
         /// </summary>
         [Fact]
-        public void ReadCertCrlsNameTest()
+        public void GetAuthCentrifyConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string centrifyMountPath = null;
+            //instance.GetAuthCentrifyConfig(centrifyMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthCertCerts
+        /// </summary>
+        [Fact]
+        public void GetAuthCertCertsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string certMountPath = null;
+            //instance.GetAuthCertCerts(list, certMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthCertCertsName
+        /// </summary>
+        [Fact]
+        public void GetAuthCertCertsNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //string mountPath = null;
-            //instance.ReadCertCrlsName(name, mountPath);
+            //string certMountPath = null;
+            //instance.GetAuthCertCertsName(name, certMountPath);
         }
 
         /// <summary>
-        /// Test ReadCfRolesRole
+        /// Test GetAuthCertConfig
         /// </summary>
         [Fact]
-        public void ReadCfRolesRoleTest()
+        public void GetAuthCertConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string certMountPath = null;
+            //instance.GetAuthCertConfig(certMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthCertCrlsName
+        /// </summary>
+        [Fact]
+        public void GetAuthCertCrlsNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string certMountPath = null;
+            //instance.GetAuthCertCrlsName(name, certMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthCfConfig
+        /// </summary>
+        [Fact]
+        public void GetAuthCfConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string cfMountPath = null;
+            //instance.GetAuthCfConfig(cfMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthCfRoles
+        /// </summary>
+        [Fact]
+        public void GetAuthCfRolesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string cfMountPath = null;
+            //instance.GetAuthCfRoles(list, cfMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthCfRolesRole
+        /// </summary>
+        [Fact]
+        public void GetAuthCfRolesRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string role = null;
-            //string mountPath = null;
-            //instance.ReadCfRolesRole(role, mountPath);
+            //string cfMountPath = null;
+            //instance.GetAuthCfRolesRole(role, cfMountPath);
         }
 
         /// <summary>
-        /// Test ReadGithubMapTeams
+        /// Test GetAuthGcpConfig
         /// </summary>
         [Fact]
-        public void ReadGithubMapTeamsTest()
+        public void GetAuthGcpConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
+            //string gcpMountPath = null;
+            //instance.GetAuthGcpConfig(gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthGcpRole
+        /// </summary>
+        [Fact]
+        public void GetAuthGcpRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
-            //instance.ReadGithubMapTeams(mountPath, list);
+            //string gcpMountPath = null;
+            //instance.GetAuthGcpRole(list, gcpMountPath);
         }
 
         /// <summary>
-        /// Test ReadGithubMapTeamsKey
+        /// Test GetAuthGcpRoleName
         /// </summary>
         [Fact]
-        public void ReadGithubMapTeamsKeyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //string mountPath = null;
-            //instance.ReadGithubMapTeamsKey(key, mountPath);
-        }
-
-        /// <summary>
-        /// Test ReadGithubMapUsers
-        /// </summary>
-        [Fact]
-        public void ReadGithubMapUsersTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //string list = null;
-            //instance.ReadGithubMapUsers(mountPath, list);
-        }
-
-        /// <summary>
-        /// Test ReadGithubMapUsersKey
-        /// </summary>
-        [Fact]
-        public void ReadGithubMapUsersKeyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //string mountPath = null;
-            //instance.ReadGithubMapUsersKey(key, mountPath);
-        }
-
-        /// <summary>
-        /// Test ReadKerberosConfigLdap
-        /// </summary>
-        [Fact]
-        public void ReadKerberosConfigLdapTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //instance.ReadKerberosConfigLdap(mountPath);
-        }
-
-        /// <summary>
-        /// Test ReadKerberosGroupsName
-        /// </summary>
-        [Fact]
-        public void ReadKerberosGroupsNameTest()
+        public void GetAuthGcpRoleNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //string mountPath = null;
-            //instance.ReadKerberosGroupsName(name, mountPath);
+            //string gcpMountPath = null;
+            //instance.GetAuthGcpRoleName(name, gcpMountPath);
         }
 
         /// <summary>
-        /// Test ReadOidcConfig
+        /// Test GetAuthGcpRoles
         /// </summary>
         [Fact]
-        public void ReadOidcConfigTest()
+        public void GetAuthGcpRolesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //instance.ReadOidcConfig(mountPath);
+            //string list = null;
+            //string gcpMountPath = null;
+            //instance.GetAuthGcpRoles(list, gcpMountPath);
         }
 
         /// <summary>
-        /// Test ReadOidcOidcCallback
+        /// Test GetAuthGithubConfig
         /// </summary>
         [Fact]
-        public void ReadOidcOidcCallbackTest()
+        public void GetAuthGithubConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //instance.ReadOidcOidcCallback(mountPath);
+            //string githubMountPath = null;
+            //instance.GetAuthGithubConfig(githubMountPath);
         }
 
         /// <summary>
-        /// Test ReadOidcRoleName
+        /// Test GetAuthGithubMapTeams
         /// </summary>
         [Fact]
-        public void ReadOidcRoleNameTest()
+        public void GetAuthGithubMapTeamsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string githubMountPath = null;
+            //string list = null;
+            //instance.GetAuthGithubMapTeams(githubMountPath, list);
+        }
+
+        /// <summary>
+        /// Test GetAuthGithubMapTeamsKey
+        /// </summary>
+        [Fact]
+        public void GetAuthGithubMapTeamsKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string key = null;
+            //string githubMountPath = null;
+            //instance.GetAuthGithubMapTeamsKey(key, githubMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthGithubMapUsers
+        /// </summary>
+        [Fact]
+        public void GetAuthGithubMapUsersTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string githubMountPath = null;
+            //string list = null;
+            //instance.GetAuthGithubMapUsers(githubMountPath, list);
+        }
+
+        /// <summary>
+        /// Test GetAuthGithubMapUsersKey
+        /// </summary>
+        [Fact]
+        public void GetAuthGithubMapUsersKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string key = null;
+            //string githubMountPath = null;
+            //instance.GetAuthGithubMapUsersKey(key, githubMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthJwtConfig
+        /// </summary>
+        [Fact]
+        public void GetAuthJwtConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string jwtMountPath = null;
+            //instance.GetAuthJwtConfig(jwtMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthJwtOidcCallback
+        /// </summary>
+        [Fact]
+        public void GetAuthJwtOidcCallbackTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string jwtMountPath = null;
+            //instance.GetAuthJwtOidcCallback(jwtMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthJwtRole
+        /// </summary>
+        [Fact]
+        public void GetAuthJwtRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string jwtMountPath = null;
+            //instance.GetAuthJwtRole(list, jwtMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthJwtRoleName
+        /// </summary>
+        [Fact]
+        public void GetAuthJwtRoleNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //string mountPath = null;
-            //instance.ReadOidcRoleName(name, mountPath);
+            //string jwtMountPath = null;
+            //instance.GetAuthJwtRoleName(name, jwtMountPath);
         }
 
         /// <summary>
-        /// Test ReadOktaVerifyNonce
+        /// Test GetAuthKerberosConfig
         /// </summary>
         [Fact]
-        public void ReadOktaVerifyNonceTest()
+        public void GetAuthKerberosConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string kerberosMountPath = null;
+            //instance.GetAuthKerberosConfig(kerberosMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthKerberosConfigLdap
+        /// </summary>
+        [Fact]
+        public void GetAuthKerberosConfigLdapTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string kerberosMountPath = null;
+            //instance.GetAuthKerberosConfigLdap(kerberosMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthKerberosGroups
+        /// </summary>
+        [Fact]
+        public void GetAuthKerberosGroupsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string kerberosMountPath = null;
+            //instance.GetAuthKerberosGroups(list, kerberosMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthKerberosGroupsName
+        /// </summary>
+        [Fact]
+        public void GetAuthKerberosGroupsNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string kerberosMountPath = null;
+            //instance.GetAuthKerberosGroupsName(name, kerberosMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthKerberosLogin
+        /// </summary>
+        [Fact]
+        public void GetAuthKerberosLoginTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string kerberosMountPath = null;
+            //instance.GetAuthKerberosLogin(kerberosMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthKubernetesConfig
+        /// </summary>
+        [Fact]
+        public void GetAuthKubernetesConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string kubernetesMountPath = null;
+            //instance.GetAuthKubernetesConfig(kubernetesMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthKubernetesRole
+        /// </summary>
+        [Fact]
+        public void GetAuthKubernetesRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string kubernetesMountPath = null;
+            //instance.GetAuthKubernetesRole(list, kubernetesMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthKubernetesRoleName
+        /// </summary>
+        [Fact]
+        public void GetAuthKubernetesRoleNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string kubernetesMountPath = null;
+            //instance.GetAuthKubernetesRoleName(name, kubernetesMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthLdapConfig
+        /// </summary>
+        [Fact]
+        public void GetAuthLdapConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string ldapMountPath = null;
+            //instance.GetAuthLdapConfig(ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthLdapGroups
+        /// </summary>
+        [Fact]
+        public void GetAuthLdapGroupsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string ldapMountPath = null;
+            //instance.GetAuthLdapGroups(list, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthLdapGroupsName
+        /// </summary>
+        [Fact]
+        public void GetAuthLdapGroupsNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string ldapMountPath = null;
+            //instance.GetAuthLdapGroupsName(name, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthLdapUsers
+        /// </summary>
+        [Fact]
+        public void GetAuthLdapUsersTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string ldapMountPath = null;
+            //instance.GetAuthLdapUsers(list, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthLdapUsersName
+        /// </summary>
+        [Fact]
+        public void GetAuthLdapUsersNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string ldapMountPath = null;
+            //instance.GetAuthLdapUsersName(name, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthOciConfig
+        /// </summary>
+        [Fact]
+        public void GetAuthOciConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string ociMountPath = null;
+            //instance.GetAuthOciConfig(ociMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthOciRole
+        /// </summary>
+        [Fact]
+        public void GetAuthOciRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string ociMountPath = null;
+            //instance.GetAuthOciRole(list, ociMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthOciRoleRole
+        /// </summary>
+        [Fact]
+        public void GetAuthOciRoleRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string role = null;
+            //string ociMountPath = null;
+            //instance.GetAuthOciRoleRole(role, ociMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthOidcConfig
+        /// </summary>
+        [Fact]
+        public void GetAuthOidcConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string oidcMountPath = null;
+            //instance.GetAuthOidcConfig(oidcMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthOidcOidcCallback
+        /// </summary>
+        [Fact]
+        public void GetAuthOidcOidcCallbackTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string oidcMountPath = null;
+            //instance.GetAuthOidcOidcCallback(oidcMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthOidcRole
+        /// </summary>
+        [Fact]
+        public void GetAuthOidcRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string oidcMountPath = null;
+            //instance.GetAuthOidcRole(list, oidcMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthOidcRoleName
+        /// </summary>
+        [Fact]
+        public void GetAuthOidcRoleNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string oidcMountPath = null;
+            //instance.GetAuthOidcRoleName(name, oidcMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthOktaConfig
+        /// </summary>
+        [Fact]
+        public void GetAuthOktaConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string oktaMountPath = null;
+            //instance.GetAuthOktaConfig(oktaMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthOktaGroups
+        /// </summary>
+        [Fact]
+        public void GetAuthOktaGroupsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string oktaMountPath = null;
+            //instance.GetAuthOktaGroups(list, oktaMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthOktaGroupsName
+        /// </summary>
+        [Fact]
+        public void GetAuthOktaGroupsNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string oktaMountPath = null;
+            //instance.GetAuthOktaGroupsName(name, oktaMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthOktaUsers
+        /// </summary>
+        [Fact]
+        public void GetAuthOktaUsersTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string oktaMountPath = null;
+            //instance.GetAuthOktaUsers(list, oktaMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthOktaUsersName
+        /// </summary>
+        [Fact]
+        public void GetAuthOktaUsersNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string oktaMountPath = null;
+            //instance.GetAuthOktaUsersName(name, oktaMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthOktaVerifyNonce
+        /// </summary>
+        [Fact]
+        public void GetAuthOktaVerifyNonceTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string nonce = null;
-            //string mountPath = null;
-            //instance.ReadOktaVerifyNonce(nonce, mountPath);
+            //string oktaMountPath = null;
+            //instance.GetAuthOktaVerifyNonce(nonce, oktaMountPath);
         }
 
         /// <summary>
-        /// Test ReadRadiusUsersName
+        /// Test GetAuthRadiusConfig
         /// </summary>
         [Fact]
-        public void ReadRadiusUsersNameTest()
+        public void GetAuthRadiusConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string radiusMountPath = null;
+            //instance.GetAuthRadiusConfig(radiusMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthRadiusUsers
+        /// </summary>
+        [Fact]
+        public void GetAuthRadiusUsersTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string radiusMountPath = null;
+            //instance.GetAuthRadiusUsers(list, radiusMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthRadiusUsersName
+        /// </summary>
+        [Fact]
+        public void GetAuthRadiusUsersNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //string mountPath = null;
-            //instance.ReadRadiusUsersName(name, mountPath);
+            //string radiusMountPath = null;
+            //instance.GetAuthRadiusUsersName(name, radiusMountPath);
         }
 
         /// <summary>
-        /// Test ReadTokenLookup
+        /// Test GetAuthTokenAccessors
         /// </summary>
         [Fact]
-        public void ReadTokenLookupTest()
+        public void GetAuthTokenAccessorsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //instance.ReadTokenLookup(mountPath);
+            //string list = null;
+            //string tokenMountPath = null;
+            //instance.GetAuthTokenAccessors(list, tokenMountPath);
         }
 
         /// <summary>
-        /// Test ReadTokenLookupSelf
+        /// Test GetAuthTokenLookup
         /// </summary>
         [Fact]
-        public void ReadTokenLookupSelfTest()
+        public void GetAuthTokenLookupTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //instance.ReadTokenLookupSelf(mountPath);
+            //string tokenMountPath = null;
+            //instance.GetAuthTokenLookup(tokenMountPath);
         }
 
         /// <summary>
-        /// Test ReadTokenRolesRoleName
+        /// Test GetAuthTokenLookupSelf
         /// </summary>
         [Fact]
-        public void ReadTokenRolesRoleNameTest()
+        public void GetAuthTokenLookupSelfTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string tokenMountPath = null;
+            //instance.GetAuthTokenLookupSelf(tokenMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthTokenRoles
+        /// </summary>
+        [Fact]
+        public void GetAuthTokenRolesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string tokenMountPath = null;
+            //instance.GetAuthTokenRoles(list, tokenMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthTokenRolesRoleName
+        /// </summary>
+        [Fact]
+        public void GetAuthTokenRolesRoleNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
-            //instance.ReadTokenRolesRoleName(roleName, mountPath);
+            //string tokenMountPath = null;
+            //instance.GetAuthTokenRolesRoleName(roleName, tokenMountPath);
         }
 
         /// <summary>
-        /// Test ReadUserpassUsersUsername
+        /// Test GetAuthUserpassUsers
         /// </summary>
         [Fact]
-        public void ReadUserpassUsersUsernameTest()
+        public void GetAuthUserpassUsersTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string userpassMountPath = null;
+            //instance.GetAuthUserpassUsers(list, userpassMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthUserpassUsersUsername
+        /// </summary>
+        [Fact]
+        public void GetAuthUserpassUsersUsernameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string username = null;
-            //string mountPath = null;
-            //instance.ReadUserpassUsersUsername(username, mountPath);
+            //string userpassMountPath = null;
+            //instance.GetAuthUserpassUsersUsername(username, userpassMountPath);
         }
 
         /// <summary>
-        /// Test UpdateApproleRoleRoleName
+        /// Test PostAuthAlicloudLogin
         /// </summary>
         [Fact]
-        public void UpdateApproleRoleRoleNameTest()
+        public void PostAuthAlicloudLoginTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //AlicloudLoginRequest alicloudLoginRequest = null;
+            //string alicloudMountPath = null;
+            //instance.PostAuthAlicloudLogin(alicloudLoginRequest, alicloudMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthAlicloudRoleRole
+        /// </summary>
+        [Fact]
+        public void PostAuthAlicloudRoleRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string role = null;
+            //AlicloudRoleRequest alicloudRoleRequest = null;
+            //string alicloudMountPath = null;
+            //instance.PostAuthAlicloudRoleRole(role, alicloudRoleRequest, alicloudMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthApproleLogin
+        /// </summary>
+        [Fact]
+        public void PostAuthApproleLoginTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ApproleLoginRequest approleLoginRequest = null;
+            //string approleMountPath = null;
+            //instance.PostAuthApproleLogin(approleLoginRequest, approleMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthApproleRoleRoleName
+        /// </summary>
+        [Fact]
+        public void PostAuthApproleRoleRoleNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
             //ApproleRoleRequest approleRoleRequest = null;
-            //instance.UpdateApproleRoleRoleName(roleName, mountPath, approleRoleRequest);
+            //string approleMountPath = null;
+            //instance.PostAuthApproleRoleRoleName(roleName, approleRoleRequest, approleMountPath);
         }
 
         /// <summary>
-        /// Test UpdateApproleRoleRoleNameBindSecretId
+        /// Test PostAuthApproleRoleRoleNameBindSecretId
         /// </summary>
         [Fact]
-        public void UpdateApproleRoleRoleNameBindSecretIdTest()
+        public void PostAuthApproleRoleRoleNameBindSecretIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
             //ApproleRoleBindSecretIdRequest approleRoleBindSecretIdRequest = null;
-            //instance.UpdateApproleRoleRoleNameBindSecretId(roleName, mountPath, approleRoleBindSecretIdRequest);
+            //string approleMountPath = null;
+            //instance.PostAuthApproleRoleRoleNameBindSecretId(roleName, approleRoleBindSecretIdRequest, approleMountPath);
         }
 
         /// <summary>
-        /// Test UpdateApproleRoleRoleNameBoundCidrList
+        /// Test PostAuthApproleRoleRoleNameBoundCidrList
         /// </summary>
         [Fact]
-        public void UpdateApproleRoleRoleNameBoundCidrListTest()
+        public void PostAuthApproleRoleRoleNameBoundCidrListTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
             //ApproleRoleBoundCidrListRequest approleRoleBoundCidrListRequest = null;
-            //instance.UpdateApproleRoleRoleNameBoundCidrList(roleName, mountPath, approleRoleBoundCidrListRequest);
+            //string approleMountPath = null;
+            //instance.PostAuthApproleRoleRoleNameBoundCidrList(roleName, approleRoleBoundCidrListRequest, approleMountPath);
         }
 
         /// <summary>
-        /// Test UpdateApproleRoleRoleNameCustomSecretId
+        /// Test PostAuthApproleRoleRoleNameCustomSecretId
         /// </summary>
         [Fact]
-        public void UpdateApproleRoleRoleNameCustomSecretIdTest()
+        public void PostAuthApproleRoleRoleNameCustomSecretIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
             //ApproleRoleCustomSecretIdRequest approleRoleCustomSecretIdRequest = null;
-            //instance.UpdateApproleRoleRoleNameCustomSecretId(roleName, mountPath, approleRoleCustomSecretIdRequest);
+            //string approleMountPath = null;
+            //instance.PostAuthApproleRoleRoleNameCustomSecretId(roleName, approleRoleCustomSecretIdRequest, approleMountPath);
         }
 
         /// <summary>
-        /// Test UpdateApproleRoleRoleNamePeriod
+        /// Test PostAuthApproleRoleRoleNamePeriod
         /// </summary>
         [Fact]
-        public void UpdateApproleRoleRoleNamePeriodTest()
+        public void PostAuthApproleRoleRoleNamePeriodTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
             //ApproleRolePeriodRequest approleRolePeriodRequest = null;
-            //instance.UpdateApproleRoleRoleNamePeriod(roleName, mountPath, approleRolePeriodRequest);
+            //string approleMountPath = null;
+            //instance.PostAuthApproleRoleRoleNamePeriod(roleName, approleRolePeriodRequest, approleMountPath);
         }
 
         /// <summary>
-        /// Test UpdateApproleRoleRoleNamePolicies
+        /// Test PostAuthApproleRoleRoleNamePolicies
         /// </summary>
         [Fact]
-        public void UpdateApproleRoleRoleNamePoliciesTest()
+        public void PostAuthApproleRoleRoleNamePoliciesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
             //ApproleRolePoliciesRequest approleRolePoliciesRequest = null;
-            //instance.UpdateApproleRoleRoleNamePolicies(roleName, mountPath, approleRolePoliciesRequest);
+            //string approleMountPath = null;
+            //instance.PostAuthApproleRoleRoleNamePolicies(roleName, approleRolePoliciesRequest, approleMountPath);
         }
 
         /// <summary>
-        /// Test UpdateApproleRoleRoleNameRoleId
+        /// Test PostAuthApproleRoleRoleNameRoleId
         /// </summary>
         [Fact]
-        public void UpdateApproleRoleRoleNameRoleIdTest()
+        public void PostAuthApproleRoleRoleNameRoleIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
             //ApproleRoleRoleIdRequest approleRoleRoleIdRequest = null;
-            //instance.UpdateApproleRoleRoleNameRoleId(roleName, mountPath, approleRoleRoleIdRequest);
+            //string approleMountPath = null;
+            //instance.PostAuthApproleRoleRoleNameRoleId(roleName, approleRoleRoleIdRequest, approleMountPath);
         }
 
         /// <summary>
-        /// Test UpdateApproleRoleRoleNameSecretId
+        /// Test PostAuthApproleRoleRoleNameSecretId
         /// </summary>
         [Fact]
-        public void UpdateApproleRoleRoleNameSecretIdTest()
+        public void PostAuthApproleRoleRoleNameSecretIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
             //ApproleRoleSecretIdRequest approleRoleSecretIdRequest = null;
-            //instance.UpdateApproleRoleRoleNameSecretId(roleName, mountPath, approleRoleSecretIdRequest);
+            //string approleMountPath = null;
+            //instance.PostAuthApproleRoleRoleNameSecretId(roleName, approleRoleSecretIdRequest, approleMountPath);
         }
 
         /// <summary>
-        /// Test UpdateApproleRoleRoleNameSecretIdAccessorDestroy
+        /// Test PostAuthApproleRoleRoleNameSecretIdAccessorDestroy
         /// </summary>
         [Fact]
-        public void UpdateApproleRoleRoleNameSecretIdAccessorDestroyTest()
+        public void PostAuthApproleRoleRoleNameSecretIdAccessorDestroyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
             //ApproleRoleSecretIdAccessorDestroyRequest approleRoleSecretIdAccessorDestroyRequest = null;
-            //instance.UpdateApproleRoleRoleNameSecretIdAccessorDestroy(roleName, mountPath, approleRoleSecretIdAccessorDestroyRequest);
+            //string approleMountPath = null;
+            //instance.PostAuthApproleRoleRoleNameSecretIdAccessorDestroy(roleName, approleRoleSecretIdAccessorDestroyRequest, approleMountPath);
         }
 
         /// <summary>
-        /// Test UpdateApproleRoleRoleNameSecretIdAccessorLookup
+        /// Test PostAuthApproleRoleRoleNameSecretIdAccessorLookup
         /// </summary>
         [Fact]
-        public void UpdateApproleRoleRoleNameSecretIdAccessorLookupTest()
+        public void PostAuthApproleRoleRoleNameSecretIdAccessorLookupTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
             //ApproleRoleSecretIdAccessorLookupRequest approleRoleSecretIdAccessorLookupRequest = null;
-            //instance.UpdateApproleRoleRoleNameSecretIdAccessorLookup(roleName, mountPath, approleRoleSecretIdAccessorLookupRequest);
+            //string approleMountPath = null;
+            //instance.PostAuthApproleRoleRoleNameSecretIdAccessorLookup(roleName, approleRoleSecretIdAccessorLookupRequest, approleMountPath);
         }
 
         /// <summary>
-        /// Test UpdateApproleRoleRoleNameSecretIdBoundCidrs
+        /// Test PostAuthApproleRoleRoleNameSecretIdBoundCidrs
         /// </summary>
         [Fact]
-        public void UpdateApproleRoleRoleNameSecretIdBoundCidrsTest()
+        public void PostAuthApproleRoleRoleNameSecretIdBoundCidrsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
             //ApproleRoleSecretIdBoundCidrsRequest approleRoleSecretIdBoundCidrsRequest = null;
-            //instance.UpdateApproleRoleRoleNameSecretIdBoundCidrs(roleName, mountPath, approleRoleSecretIdBoundCidrsRequest);
+            //string approleMountPath = null;
+            //instance.PostAuthApproleRoleRoleNameSecretIdBoundCidrs(roleName, approleRoleSecretIdBoundCidrsRequest, approleMountPath);
         }
 
         /// <summary>
-        /// Test UpdateApproleRoleRoleNameSecretIdDestroy
+        /// Test PostAuthApproleRoleRoleNameSecretIdDestroy
         /// </summary>
         [Fact]
-        public void UpdateApproleRoleRoleNameSecretIdDestroyTest()
+        public void PostAuthApproleRoleRoleNameSecretIdDestroyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
             //ApproleRoleSecretIdDestroyRequest approleRoleSecretIdDestroyRequest = null;
-            //instance.UpdateApproleRoleRoleNameSecretIdDestroy(roleName, mountPath, approleRoleSecretIdDestroyRequest);
+            //string approleMountPath = null;
+            //instance.PostAuthApproleRoleRoleNameSecretIdDestroy(roleName, approleRoleSecretIdDestroyRequest, approleMountPath);
         }
 
         /// <summary>
-        /// Test UpdateApproleRoleRoleNameSecretIdLookup
+        /// Test PostAuthApproleRoleRoleNameSecretIdLookup
         /// </summary>
         [Fact]
-        public void UpdateApproleRoleRoleNameSecretIdLookupTest()
+        public void PostAuthApproleRoleRoleNameSecretIdLookupTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
             //ApproleRoleSecretIdLookupRequest approleRoleSecretIdLookupRequest = null;
-            //instance.UpdateApproleRoleRoleNameSecretIdLookup(roleName, mountPath, approleRoleSecretIdLookupRequest);
+            //string approleMountPath = null;
+            //instance.PostAuthApproleRoleRoleNameSecretIdLookup(roleName, approleRoleSecretIdLookupRequest, approleMountPath);
         }
 
         /// <summary>
-        /// Test UpdateApproleRoleRoleNameSecretIdNumUses
+        /// Test PostAuthApproleRoleRoleNameSecretIdNumUses
         /// </summary>
         [Fact]
-        public void UpdateApproleRoleRoleNameSecretIdNumUsesTest()
+        public void PostAuthApproleRoleRoleNameSecretIdNumUsesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
             //ApproleRoleSecretIdNumUsesRequest approleRoleSecretIdNumUsesRequest = null;
-            //instance.UpdateApproleRoleRoleNameSecretIdNumUses(roleName, mountPath, approleRoleSecretIdNumUsesRequest);
+            //string approleMountPath = null;
+            //instance.PostAuthApproleRoleRoleNameSecretIdNumUses(roleName, approleRoleSecretIdNumUsesRequest, approleMountPath);
         }
 
         /// <summary>
-        /// Test UpdateApproleRoleRoleNameSecretIdTtl
+        /// Test PostAuthApproleRoleRoleNameSecretIdTtl
         /// </summary>
         [Fact]
-        public void UpdateApproleRoleRoleNameSecretIdTtlTest()
+        public void PostAuthApproleRoleRoleNameSecretIdTtlTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
             //ApproleRoleSecretIdTtlRequest approleRoleSecretIdTtlRequest = null;
-            //instance.UpdateApproleRoleRoleNameSecretIdTtl(roleName, mountPath, approleRoleSecretIdTtlRequest);
+            //string approleMountPath = null;
+            //instance.PostAuthApproleRoleRoleNameSecretIdTtl(roleName, approleRoleSecretIdTtlRequest, approleMountPath);
         }
 
         /// <summary>
-        /// Test UpdateApproleRoleRoleNameTokenBoundCidrs
+        /// Test PostAuthApproleRoleRoleNameTokenBoundCidrs
         /// </summary>
         [Fact]
-        public void UpdateApproleRoleRoleNameTokenBoundCidrsTest()
+        public void PostAuthApproleRoleRoleNameTokenBoundCidrsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
             //ApproleRoleTokenBoundCidrsRequest approleRoleTokenBoundCidrsRequest = null;
-            //instance.UpdateApproleRoleRoleNameTokenBoundCidrs(roleName, mountPath, approleRoleTokenBoundCidrsRequest);
+            //string approleMountPath = null;
+            //instance.PostAuthApproleRoleRoleNameTokenBoundCidrs(roleName, approleRoleTokenBoundCidrsRequest, approleMountPath);
         }
 
         /// <summary>
-        /// Test UpdateApproleRoleRoleNameTokenMaxTtl
+        /// Test PostAuthApproleRoleRoleNameTokenMaxTtl
         /// </summary>
         [Fact]
-        public void UpdateApproleRoleRoleNameTokenMaxTtlTest()
+        public void PostAuthApproleRoleRoleNameTokenMaxTtlTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
             //ApproleRoleTokenMaxTtlRequest approleRoleTokenMaxTtlRequest = null;
-            //instance.UpdateApproleRoleRoleNameTokenMaxTtl(roleName, mountPath, approleRoleTokenMaxTtlRequest);
+            //string approleMountPath = null;
+            //instance.PostAuthApproleRoleRoleNameTokenMaxTtl(roleName, approleRoleTokenMaxTtlRequest, approleMountPath);
         }
 
         /// <summary>
-        /// Test UpdateApproleRoleRoleNameTokenNumUses
+        /// Test PostAuthApproleRoleRoleNameTokenNumUses
         /// </summary>
         [Fact]
-        public void UpdateApproleRoleRoleNameTokenNumUsesTest()
+        public void PostAuthApproleRoleRoleNameTokenNumUsesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
             //ApproleRoleTokenNumUsesRequest approleRoleTokenNumUsesRequest = null;
-            //instance.UpdateApproleRoleRoleNameTokenNumUses(roleName, mountPath, approleRoleTokenNumUsesRequest);
+            //string approleMountPath = null;
+            //instance.PostAuthApproleRoleRoleNameTokenNumUses(roleName, approleRoleTokenNumUsesRequest, approleMountPath);
         }
 
         /// <summary>
-        /// Test UpdateApproleRoleRoleNameTokenTtl
+        /// Test PostAuthApproleRoleRoleNameTokenTtl
         /// </summary>
         [Fact]
-        public void UpdateApproleRoleRoleNameTokenTtlTest()
+        public void PostAuthApproleRoleRoleNameTokenTtlTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
             //ApproleRoleTokenTtlRequest approleRoleTokenTtlRequest = null;
-            //instance.UpdateApproleRoleRoleNameTokenTtl(roleName, mountPath, approleRoleTokenTtlRequest);
+            //string approleMountPath = null;
+            //instance.PostAuthApproleRoleRoleNameTokenTtl(roleName, approleRoleTokenTtlRequest, approleMountPath);
         }
 
         /// <summary>
-        /// Test UpdateApproleTidySecretId
+        /// Test PostAuthApproleTidySecretId
         /// </summary>
         [Fact]
-        public void UpdateApproleTidySecretIdTest()
+        public void PostAuthApproleTidySecretIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //instance.UpdateApproleTidySecretId(mountPath);
+            //string approleMountPath = null;
+            //instance.PostAuthApproleTidySecretId(approleMountPath);
         }
 
         /// <summary>
-        /// Test UpdateAwsConfigCertificateCertName
+        /// Test PostAuthAwsConfigCertificateCertName
         /// </summary>
         [Fact]
-        public void UpdateAwsConfigCertificateCertNameTest()
+        public void PostAuthAwsConfigCertificateCertNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string certName = null;
-            //string mountPath = null;
             //AwsConfigCertificateRequest awsConfigCertificateRequest = null;
-            //instance.UpdateAwsConfigCertificateCertName(certName, mountPath, awsConfigCertificateRequest);
+            //string awsMountPath = null;
+            //instance.PostAuthAwsConfigCertificateCertName(certName, awsConfigCertificateRequest, awsMountPath);
         }
 
         /// <summary>
-        /// Test UpdateAwsConfigClient
+        /// Test PostAuthAwsConfigClient
         /// </summary>
         [Fact]
-        public void UpdateAwsConfigClientTest()
+        public void PostAuthAwsConfigClientTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
             //AwsConfigClientRequest awsConfigClientRequest = null;
-            //instance.UpdateAwsConfigClient(mountPath, awsConfigClientRequest);
+            //string awsMountPath = null;
+            //instance.PostAuthAwsConfigClient(awsConfigClientRequest, awsMountPath);
         }
 
         /// <summary>
-        /// Test UpdateAwsConfigIdentity
+        /// Test PostAuthAwsConfigIdentity
         /// </summary>
         [Fact]
-        public void UpdateAwsConfigIdentityTest()
+        public void PostAuthAwsConfigIdentityTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
             //AwsConfigIdentityRequest awsConfigIdentityRequest = null;
-            //instance.UpdateAwsConfigIdentity(mountPath, awsConfigIdentityRequest);
+            //string awsMountPath = null;
+            //instance.PostAuthAwsConfigIdentity(awsConfigIdentityRequest, awsMountPath);
         }
 
         /// <summary>
-        /// Test UpdateAwsConfigRotateRoot
+        /// Test PostAuthAwsConfigRotateRoot
         /// </summary>
         [Fact]
-        public void UpdateAwsConfigRotateRootTest()
+        public void PostAuthAwsConfigRotateRootTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //instance.UpdateAwsConfigRotateRoot(mountPath);
+            //string awsMountPath = null;
+            //instance.PostAuthAwsConfigRotateRoot(awsMountPath);
         }
 
         /// <summary>
-        /// Test UpdateAwsConfigStsAccountId
+        /// Test PostAuthAwsConfigStsAccountId
         /// </summary>
         [Fact]
-        public void UpdateAwsConfigStsAccountIdTest()
+        public void PostAuthAwsConfigStsAccountIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string accountId = null;
-            //string mountPath = null;
             //AwsConfigStsRequest awsConfigStsRequest = null;
-            //instance.UpdateAwsConfigStsAccountId(accountId, mountPath, awsConfigStsRequest);
+            //string awsMountPath = null;
+            //instance.PostAuthAwsConfigStsAccountId(accountId, awsConfigStsRequest, awsMountPath);
         }
 
         /// <summary>
-        /// Test UpdateAwsConfigTidyIdentityAccesslist
+        /// Test PostAuthAwsConfigTidyIdentityAccesslist
         /// </summary>
         [Fact]
-        public void UpdateAwsConfigTidyIdentityAccesslistTest()
+        public void PostAuthAwsConfigTidyIdentityAccesslistTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
             //AwsConfigTidyIdentityAccesslistRequest awsConfigTidyIdentityAccesslistRequest = null;
-            //instance.UpdateAwsConfigTidyIdentityAccesslist(mountPath, awsConfigTidyIdentityAccesslistRequest);
+            //string awsMountPath = null;
+            //instance.PostAuthAwsConfigTidyIdentityAccesslist(awsConfigTidyIdentityAccesslistRequest, awsMountPath);
         }
 
         /// <summary>
-        /// Test UpdateAwsConfigTidyIdentityWhitelist
+        /// Test PostAuthAwsConfigTidyIdentityWhitelist
         /// </summary>
         [Fact]
-        public void UpdateAwsConfigTidyIdentityWhitelistTest()
+        public void PostAuthAwsConfigTidyIdentityWhitelistTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
             //AwsConfigTidyIdentityWhitelistRequest awsConfigTidyIdentityWhitelistRequest = null;
-            //instance.UpdateAwsConfigTidyIdentityWhitelist(mountPath, awsConfigTidyIdentityWhitelistRequest);
+            //string awsMountPath = null;
+            //instance.PostAuthAwsConfigTidyIdentityWhitelist(awsConfigTidyIdentityWhitelistRequest, awsMountPath);
         }
 
         /// <summary>
-        /// Test UpdateAwsConfigTidyRoletagBlacklist
+        /// Test PostAuthAwsConfigTidyRoletagBlacklist
         /// </summary>
         [Fact]
-        public void UpdateAwsConfigTidyRoletagBlacklistTest()
+        public void PostAuthAwsConfigTidyRoletagBlacklistTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
             //AwsConfigTidyRoletagBlacklistRequest awsConfigTidyRoletagBlacklistRequest = null;
-            //instance.UpdateAwsConfigTidyRoletagBlacklist(mountPath, awsConfigTidyRoletagBlacklistRequest);
+            //string awsMountPath = null;
+            //instance.PostAuthAwsConfigTidyRoletagBlacklist(awsConfigTidyRoletagBlacklistRequest, awsMountPath);
         }
 
         /// <summary>
-        /// Test UpdateAwsConfigTidyRoletagDenylist
+        /// Test PostAuthAwsConfigTidyRoletagDenylist
         /// </summary>
         [Fact]
-        public void UpdateAwsConfigTidyRoletagDenylistTest()
+        public void PostAuthAwsConfigTidyRoletagDenylistTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
             //AwsConfigTidyRoletagDenylistRequest awsConfigTidyRoletagDenylistRequest = null;
-            //instance.UpdateAwsConfigTidyRoletagDenylist(mountPath, awsConfigTidyRoletagDenylistRequest);
+            //string awsMountPath = null;
+            //instance.PostAuthAwsConfigTidyRoletagDenylist(awsConfigTidyRoletagDenylistRequest, awsMountPath);
         }
 
         /// <summary>
-        /// Test UpdateAwsRoleRole
+        /// Test PostAuthAwsLogin
         /// </summary>
         [Fact]
-        public void UpdateAwsRoleRoleTest()
+        public void PostAuthAwsLoginTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //AwsLoginRequest awsLoginRequest = null;
+            //string awsMountPath = null;
+            //instance.PostAuthAwsLogin(awsLoginRequest, awsMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthAwsRoleRole
+        /// </summary>
+        [Fact]
+        public void PostAuthAwsRoleRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string role = null;
-            //string mountPath = null;
             //AwsRoleRequest awsRoleRequest = null;
-            //instance.UpdateAwsRoleRole(role, mountPath, awsRoleRequest);
+            //string awsMountPath = null;
+            //instance.PostAuthAwsRoleRole(role, awsRoleRequest, awsMountPath);
         }
 
         /// <summary>
-        /// Test UpdateAwsRoleRoleTag
+        /// Test PostAuthAwsRoleRoleTag
         /// </summary>
         [Fact]
-        public void UpdateAwsRoleRoleTagTest()
+        public void PostAuthAwsRoleRoleTagTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string role = null;
-            //string mountPath = null;
             //AwsRoleTagRequest awsRoleTagRequest = null;
-            //instance.UpdateAwsRoleRoleTag(role, mountPath, awsRoleTagRequest);
+            //string awsMountPath = null;
+            //instance.PostAuthAwsRoleRoleTag(role, awsRoleTagRequest, awsMountPath);
         }
 
         /// <summary>
-        /// Test UpdateAwsRoletagBlacklistRoleTag
+        /// Test PostAuthAwsRoletagBlacklistRoleTag
         /// </summary>
         [Fact]
-        public void UpdateAwsRoletagBlacklistRoleTagTest()
+        public void PostAuthAwsRoletagBlacklistRoleTagTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleTag = null;
-            //string mountPath = null;
-            //instance.UpdateAwsRoletagBlacklistRoleTag(roleTag, mountPath);
+            //string awsMountPath = null;
+            //instance.PostAuthAwsRoletagBlacklistRoleTag(roleTag, awsMountPath);
         }
 
         /// <summary>
-        /// Test UpdateAwsRoletagDenylistRoleTag
+        /// Test PostAuthAwsRoletagDenylistRoleTag
         /// </summary>
         [Fact]
-        public void UpdateAwsRoletagDenylistRoleTagTest()
+        public void PostAuthAwsRoletagDenylistRoleTagTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleTag = null;
-            //string mountPath = null;
-            //instance.UpdateAwsRoletagDenylistRoleTag(roleTag, mountPath);
+            //string awsMountPath = null;
+            //instance.PostAuthAwsRoletagDenylistRoleTag(roleTag, awsMountPath);
         }
 
         /// <summary>
-        /// Test UpdateAwsTidyIdentityAccesslist
+        /// Test PostAuthAwsTidyIdentityAccesslist
         /// </summary>
         [Fact]
-        public void UpdateAwsTidyIdentityAccesslistTest()
+        public void PostAuthAwsTidyIdentityAccesslistTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
             //AwsTidyIdentityAccesslistRequest awsTidyIdentityAccesslistRequest = null;
-            //instance.UpdateAwsTidyIdentityAccesslist(mountPath, awsTidyIdentityAccesslistRequest);
+            //string awsMountPath = null;
+            //instance.PostAuthAwsTidyIdentityAccesslist(awsTidyIdentityAccesslistRequest, awsMountPath);
         }
 
         /// <summary>
-        /// Test UpdateAwsTidyIdentityWhitelist
+        /// Test PostAuthAwsTidyIdentityWhitelist
         /// </summary>
         [Fact]
-        public void UpdateAwsTidyIdentityWhitelistTest()
+        public void PostAuthAwsTidyIdentityWhitelistTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
             //AwsTidyIdentityWhitelistRequest awsTidyIdentityWhitelistRequest = null;
-            //instance.UpdateAwsTidyIdentityWhitelist(mountPath, awsTidyIdentityWhitelistRequest);
+            //string awsMountPath = null;
+            //instance.PostAuthAwsTidyIdentityWhitelist(awsTidyIdentityWhitelistRequest, awsMountPath);
         }
 
         /// <summary>
-        /// Test UpdateAwsTidyRoletagBlacklist
+        /// Test PostAuthAwsTidyRoletagBlacklist
         /// </summary>
         [Fact]
-        public void UpdateAwsTidyRoletagBlacklistTest()
+        public void PostAuthAwsTidyRoletagBlacklistTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
             //AwsTidyRoletagBlacklistRequest awsTidyRoletagBlacklistRequest = null;
-            //instance.UpdateAwsTidyRoletagBlacklist(mountPath, awsTidyRoletagBlacklistRequest);
+            //string awsMountPath = null;
+            //instance.PostAuthAwsTidyRoletagBlacklist(awsTidyRoletagBlacklistRequest, awsMountPath);
         }
 
         /// <summary>
-        /// Test UpdateAwsTidyRoletagDenylist
+        /// Test PostAuthAwsTidyRoletagDenylist
         /// </summary>
         [Fact]
-        public void UpdateAwsTidyRoletagDenylistTest()
+        public void PostAuthAwsTidyRoletagDenylistTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
             //AwsTidyRoletagDenylistRequest awsTidyRoletagDenylistRequest = null;
-            //instance.UpdateAwsTidyRoletagDenylist(mountPath, awsTidyRoletagDenylistRequest);
+            //string awsMountPath = null;
+            //instance.PostAuthAwsTidyRoletagDenylist(awsTidyRoletagDenylistRequest, awsMountPath);
         }
 
         /// <summary>
-        /// Test UpdateCertCertsName
+        /// Test PostAuthAzureConfig
         /// </summary>
         [Fact]
-        public void UpdateCertCertsNameTest()
+        public void PostAuthAzureConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //AzureConfigRequest azureConfigRequest = null;
+            //string azureMountPath = null;
+            //instance.PostAuthAzureConfig(azureConfigRequest, azureMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthAzureLogin
+        /// </summary>
+        [Fact]
+        public void PostAuthAzureLoginTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //AzureLoginRequest azureLoginRequest = null;
+            //string azureMountPath = null;
+            //instance.PostAuthAzureLogin(azureLoginRequest, azureMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthAzureRoleName
+        /// </summary>
+        [Fact]
+        public void PostAuthAzureRoleNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //string mountPath = null;
+            //AzureRoleRequest azureRoleRequest = null;
+            //string azureMountPath = null;
+            //instance.PostAuthAzureRoleName(name, azureRoleRequest, azureMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthCentrifyConfig
+        /// </summary>
+        [Fact]
+        public void PostAuthCentrifyConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //CentrifyConfigRequest centrifyConfigRequest = null;
+            //string centrifyMountPath = null;
+            //instance.PostAuthCentrifyConfig(centrifyConfigRequest, centrifyMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthCentrifyLogin
+        /// </summary>
+        [Fact]
+        public void PostAuthCentrifyLoginTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //CentrifyLoginRequest centrifyLoginRequest = null;
+            //string centrifyMountPath = null;
+            //instance.PostAuthCentrifyLogin(centrifyLoginRequest, centrifyMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthCertCertsName
+        /// </summary>
+        [Fact]
+        public void PostAuthCertCertsNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
             //CertCertsRequest certCertsRequest = null;
-            //instance.UpdateCertCertsName(name, mountPath, certCertsRequest);
+            //string certMountPath = null;
+            //instance.PostAuthCertCertsName(name, certCertsRequest, certMountPath);
         }
 
         /// <summary>
-        /// Test UpdateCertCrlsName
+        /// Test PostAuthCertConfig
         /// </summary>
         [Fact]
-        public void UpdateCertCrlsNameTest()
+        public void PostAuthCertConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //CertConfigRequest certConfigRequest = null;
+            //string certMountPath = null;
+            //instance.PostAuthCertConfig(certConfigRequest, certMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthCertCrlsName
+        /// </summary>
+        [Fact]
+        public void PostAuthCertCrlsNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //string mountPath = null;
             //CertCrlsRequest certCrlsRequest = null;
-            //instance.UpdateCertCrlsName(name, mountPath, certCrlsRequest);
+            //string certMountPath = null;
+            //instance.PostAuthCertCrlsName(name, certCrlsRequest, certMountPath);
         }
 
         /// <summary>
-        /// Test UpdateCfRolesRole
+        /// Test PostAuthCertLogin
         /// </summary>
         [Fact]
-        public void UpdateCfRolesRoleTest()
+        public void PostAuthCertLoginTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //CertLoginRequest certLoginRequest = null;
+            //string certMountPath = null;
+            //instance.PostAuthCertLogin(certLoginRequest, certMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthCfConfig
+        /// </summary>
+        [Fact]
+        public void PostAuthCfConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //CfConfigRequest cfConfigRequest = null;
+            //string cfMountPath = null;
+            //instance.PostAuthCfConfig(cfConfigRequest, cfMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthCfLogin
+        /// </summary>
+        [Fact]
+        public void PostAuthCfLoginTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //CfLoginRequest cfLoginRequest = null;
+            //string cfMountPath = null;
+            //instance.PostAuthCfLogin(cfLoginRequest, cfMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthCfRolesRole
+        /// </summary>
+        [Fact]
+        public void PostAuthCfRolesRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string role = null;
-            //string mountPath = null;
             //CfRolesRequest cfRolesRequest = null;
-            //instance.UpdateCfRolesRole(role, mountPath, cfRolesRequest);
+            //string cfMountPath = null;
+            //instance.PostAuthCfRolesRole(role, cfRolesRequest, cfMountPath);
         }
 
         /// <summary>
-        /// Test UpdateGcpRoleNameLabels
+        /// Test PostAuthGcpConfig
         /// </summary>
         [Fact]
-        public void UpdateGcpRoleNameLabelsTest()
+        public void PostAuthGcpConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GcpConfigRequest gcpConfigRequest = null;
+            //string gcpMountPath = null;
+            //instance.PostAuthGcpConfig(gcpConfigRequest, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthGcpLogin
+        /// </summary>
+        [Fact]
+        public void PostAuthGcpLoginTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GcpLoginRequest gcpLoginRequest = null;
+            //string gcpMountPath = null;
+            //instance.PostAuthGcpLogin(gcpLoginRequest, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthGcpRoleName
+        /// </summary>
+        [Fact]
+        public void PostAuthGcpRoleNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //string mountPath = null;
+            //GcpRoleRequest gcpRoleRequest = null;
+            //string gcpMountPath = null;
+            //instance.PostAuthGcpRoleName(name, gcpRoleRequest, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthGcpRoleNameLabels
+        /// </summary>
+        [Fact]
+        public void PostAuthGcpRoleNameLabelsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
             //GcpRoleLabelsRequest gcpRoleLabelsRequest = null;
-            //instance.UpdateGcpRoleNameLabels(name, mountPath, gcpRoleLabelsRequest);
+            //string gcpMountPath = null;
+            //instance.PostAuthGcpRoleNameLabels(name, gcpRoleLabelsRequest, gcpMountPath);
         }
 
         /// <summary>
-        /// Test UpdateGcpRoleNameServiceAccounts
+        /// Test PostAuthGcpRoleNameServiceAccounts
         /// </summary>
         [Fact]
-        public void UpdateGcpRoleNameServiceAccountsTest()
+        public void PostAuthGcpRoleNameServiceAccountsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //string mountPath = null;
             //GcpRoleServiceAccountsRequest gcpRoleServiceAccountsRequest = null;
-            //instance.UpdateGcpRoleNameServiceAccounts(name, mountPath, gcpRoleServiceAccountsRequest);
+            //string gcpMountPath = null;
+            //instance.PostAuthGcpRoleNameServiceAccounts(name, gcpRoleServiceAccountsRequest, gcpMountPath);
         }
 
         /// <summary>
-        /// Test UpdateGithubMapTeamsKey
+        /// Test PostAuthGithubConfig
         /// </summary>
         [Fact]
-        public void UpdateGithubMapTeamsKeyTest()
+        public void PostAuthGithubConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GithubConfigRequest githubConfigRequest = null;
+            //string githubMountPath = null;
+            //instance.PostAuthGithubConfig(githubConfigRequest, githubMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthGithubLogin
+        /// </summary>
+        [Fact]
+        public void PostAuthGithubLoginTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GithubLoginRequest githubLoginRequest = null;
+            //string githubMountPath = null;
+            //instance.PostAuthGithubLogin(githubLoginRequest, githubMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthGithubMapTeamsKey
+        /// </summary>
+        [Fact]
+        public void PostAuthGithubMapTeamsKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string key = null;
-            //string mountPath = null;
             //GithubMapTeamsRequest githubMapTeamsRequest = null;
-            //instance.UpdateGithubMapTeamsKey(key, mountPath, githubMapTeamsRequest);
+            //string githubMountPath = null;
+            //instance.PostAuthGithubMapTeamsKey(key, githubMapTeamsRequest, githubMountPath);
         }
 
         /// <summary>
-        /// Test UpdateGithubMapUsersKey
+        /// Test PostAuthGithubMapUsersKey
         /// </summary>
         [Fact]
-        public void UpdateGithubMapUsersKeyTest()
+        public void PostAuthGithubMapUsersKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string key = null;
-            //string mountPath = null;
             //GithubMapUsersRequest githubMapUsersRequest = null;
-            //instance.UpdateGithubMapUsersKey(key, mountPath, githubMapUsersRequest);
+            //string githubMountPath = null;
+            //instance.PostAuthGithubMapUsersKey(key, githubMapUsersRequest, githubMountPath);
         }
 
         /// <summary>
-        /// Test UpdateKerberosConfigLdap
+        /// Test PostAuthJwtConfig
         /// </summary>
         [Fact]
-        public void UpdateKerberosConfigLdapTest()
+        public void PostAuthJwtConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //KerberosConfigLdapRequest kerberosConfigLdapRequest = null;
-            //instance.UpdateKerberosConfigLdap(mountPath, kerberosConfigLdapRequest);
+            //JwtConfigRequest jwtConfigRequest = null;
+            //string jwtMountPath = null;
+            //instance.PostAuthJwtConfig(jwtConfigRequest, jwtMountPath);
         }
 
         /// <summary>
-        /// Test UpdateKerberosGroupsName
+        /// Test PostAuthJwtLogin
         /// </summary>
         [Fact]
-        public void UpdateKerberosGroupsNameTest()
+        public void PostAuthJwtLoginTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //JwtLoginRequest jwtLoginRequest = null;
+            //string jwtMountPath = null;
+            //instance.PostAuthJwtLogin(jwtLoginRequest, jwtMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthJwtOidcAuthUrl
+        /// </summary>
+        [Fact]
+        public void PostAuthJwtOidcAuthUrlTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //JwtOidcAuthUrlRequest jwtOidcAuthUrlRequest = null;
+            //string jwtMountPath = null;
+            //instance.PostAuthJwtOidcAuthUrl(jwtOidcAuthUrlRequest, jwtMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthJwtOidcCallback
+        /// </summary>
+        [Fact]
+        public void PostAuthJwtOidcCallbackTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //JwtOidcCallbackRequest jwtOidcCallbackRequest = null;
+            //string jwtMountPath = null;
+            //instance.PostAuthJwtOidcCallback(jwtOidcCallbackRequest, jwtMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthJwtRoleName
+        /// </summary>
+        [Fact]
+        public void PostAuthJwtRoleNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //string mountPath = null;
-            //KerberosGroupsRequest kerberosGroupsRequest = null;
-            //instance.UpdateKerberosGroupsName(name, mountPath, kerberosGroupsRequest);
+            //JwtRoleRequest jwtRoleRequest = null;
+            //string jwtMountPath = null;
+            //instance.PostAuthJwtRoleName(name, jwtRoleRequest, jwtMountPath);
         }
 
         /// <summary>
-        /// Test UpdateOciLoginRole
+        /// Test PostAuthKerberosConfig
         /// </summary>
         [Fact]
-        public void UpdateOciLoginRoleTest()
+        public void PostAuthKerberosConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //KerberosConfigRequest kerberosConfigRequest = null;
+            //string kerberosMountPath = null;
+            //instance.PostAuthKerberosConfig(kerberosConfigRequest, kerberosMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthKerberosConfigLdap
+        /// </summary>
+        [Fact]
+        public void PostAuthKerberosConfigLdapTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //KerberosConfigLdapRequest kerberosConfigLdapRequest = null;
+            //string kerberosMountPath = null;
+            //instance.PostAuthKerberosConfigLdap(kerberosConfigLdapRequest, kerberosMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthKerberosGroupsName
+        /// </summary>
+        [Fact]
+        public void PostAuthKerberosGroupsNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //KerberosGroupsRequest kerberosGroupsRequest = null;
+            //string kerberosMountPath = null;
+            //instance.PostAuthKerberosGroupsName(name, kerberosGroupsRequest, kerberosMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthKerberosLogin
+        /// </summary>
+        [Fact]
+        public void PostAuthKerberosLoginTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //KerberosLoginRequest kerberosLoginRequest = null;
+            //string kerberosMountPath = null;
+            //instance.PostAuthKerberosLogin(kerberosLoginRequest, kerberosMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthKubernetesConfig
+        /// </summary>
+        [Fact]
+        public void PostAuthKubernetesConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //KubernetesConfigRequest kubernetesConfigRequest = null;
+            //string kubernetesMountPath = null;
+            //instance.PostAuthKubernetesConfig(kubernetesConfigRequest, kubernetesMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthKubernetesLogin
+        /// </summary>
+        [Fact]
+        public void PostAuthKubernetesLoginTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //KubernetesLoginRequest kubernetesLoginRequest = null;
+            //string kubernetesMountPath = null;
+            //instance.PostAuthKubernetesLogin(kubernetesLoginRequest, kubernetesMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthKubernetesRoleName
+        /// </summary>
+        [Fact]
+        public void PostAuthKubernetesRoleNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //KubernetesRoleRequest kubernetesRoleRequest = null;
+            //string kubernetesMountPath = null;
+            //instance.PostAuthKubernetesRoleName(name, kubernetesRoleRequest, kubernetesMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthLdapConfig
+        /// </summary>
+        [Fact]
+        public void PostAuthLdapConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //LdapConfigRequest ldapConfigRequest = null;
+            //string ldapMountPath = null;
+            //instance.PostAuthLdapConfig(ldapConfigRequest, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthLdapGroupsName
+        /// </summary>
+        [Fact]
+        public void PostAuthLdapGroupsNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //LdapGroupsRequest ldapGroupsRequest = null;
+            //string ldapMountPath = null;
+            //instance.PostAuthLdapGroupsName(name, ldapGroupsRequest, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthLdapLoginUsername
+        /// </summary>
+        [Fact]
+        public void PostAuthLdapLoginUsernameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string username = null;
+            //LdapLoginRequest ldapLoginRequest = null;
+            //string ldapMountPath = null;
+            //instance.PostAuthLdapLoginUsername(username, ldapLoginRequest, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthLdapUsersName
+        /// </summary>
+        [Fact]
+        public void PostAuthLdapUsersNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //LdapUsersRequest ldapUsersRequest = null;
+            //string ldapMountPath = null;
+            //instance.PostAuthLdapUsersName(name, ldapUsersRequest, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthOciConfig
+        /// </summary>
+        [Fact]
+        public void PostAuthOciConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //OciConfigRequest ociConfigRequest = null;
+            //string ociMountPath = null;
+            //instance.PostAuthOciConfig(ociConfigRequest, ociMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthOciLoginRole
+        /// </summary>
+        [Fact]
+        public void PostAuthOciLoginRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string role = null;
-            //string mountPath = null;
             //OciLoginRequest ociLoginRequest = null;
-            //instance.UpdateOciLoginRole(role, mountPath, ociLoginRequest);
+            //string ociMountPath = null;
+            //instance.PostAuthOciLoginRole(role, ociLoginRequest, ociMountPath);
         }
 
         /// <summary>
-        /// Test UpdateOidcConfig
+        /// Test PostAuthOciRoleRole
         /// </summary>
         [Fact]
-        public void UpdateOidcConfigTest()
+        public void PostAuthOciRoleRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
+            //string role = null;
+            //OciRoleRequest ociRoleRequest = null;
+            //string ociMountPath = null;
+            //instance.PostAuthOciRoleRole(role, ociRoleRequest, ociMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthOidcConfig
+        /// </summary>
+        [Fact]
+        public void PostAuthOidcConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
             //OidcConfigRequest oidcConfigRequest = null;
-            //instance.UpdateOidcConfig(mountPath, oidcConfigRequest);
+            //string oidcMountPath = null;
+            //instance.PostAuthOidcConfig(oidcConfigRequest, oidcMountPath);
         }
 
         /// <summary>
-        /// Test UpdateOidcLogin
+        /// Test PostAuthOidcLogin
         /// </summary>
         [Fact]
-        public void UpdateOidcLoginTest()
+        public void PostAuthOidcLoginTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
             //OidcLoginRequest oidcLoginRequest = null;
-            //instance.UpdateOidcLogin(mountPath, oidcLoginRequest);
+            //string oidcMountPath = null;
+            //instance.PostAuthOidcLogin(oidcLoginRequest, oidcMountPath);
         }
 
         /// <summary>
-        /// Test UpdateOidcOidcAuthUrl
+        /// Test PostAuthOidcOidcAuthUrl
         /// </summary>
         [Fact]
-        public void UpdateOidcOidcAuthUrlTest()
+        public void PostAuthOidcOidcAuthUrlTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
             //OidcOidcAuthUrlRequest oidcOidcAuthUrlRequest = null;
-            //instance.UpdateOidcOidcAuthUrl(mountPath, oidcOidcAuthUrlRequest);
+            //string oidcMountPath = null;
+            //instance.PostAuthOidcOidcAuthUrl(oidcOidcAuthUrlRequest, oidcMountPath);
         }
 
         /// <summary>
-        /// Test UpdateOidcOidcCallback
+        /// Test PostAuthOidcOidcCallback
         /// </summary>
         [Fact]
-        public void UpdateOidcOidcCallbackTest()
+        public void PostAuthOidcOidcCallbackTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
             //OidcOidcCallbackRequest oidcOidcCallbackRequest = null;
-            //instance.UpdateOidcOidcCallback(mountPath, oidcOidcCallbackRequest);
+            //string oidcMountPath = null;
+            //instance.PostAuthOidcOidcCallback(oidcOidcCallbackRequest, oidcMountPath);
         }
 
         /// <summary>
-        /// Test UpdateOidcRoleName
+        /// Test PostAuthOidcRoleName
         /// </summary>
         [Fact]
-        public void UpdateOidcRoleNameTest()
+        public void PostAuthOidcRoleNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //string mountPath = null;
             //OidcRoleRequest oidcRoleRequest = null;
-            //instance.UpdateOidcRoleName(name, mountPath, oidcRoleRequest);
+            //string oidcMountPath = null;
+            //instance.PostAuthOidcRoleName(name, oidcRoleRequest, oidcMountPath);
         }
 
         /// <summary>
-        /// Test UpdateRadiusLoginUrlusername
+        /// Test PostAuthOktaConfig
         /// </summary>
         [Fact]
-        public void UpdateRadiusLoginUrlusernameTest()
+        public void PostAuthOktaConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //OktaConfigRequest oktaConfigRequest = null;
+            //string oktaMountPath = null;
+            //instance.PostAuthOktaConfig(oktaConfigRequest, oktaMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthOktaGroupsName
+        /// </summary>
+        [Fact]
+        public void PostAuthOktaGroupsNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //OktaGroupsRequest oktaGroupsRequest = null;
+            //string oktaMountPath = null;
+            //instance.PostAuthOktaGroupsName(name, oktaGroupsRequest, oktaMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthOktaLoginUsername
+        /// </summary>
+        [Fact]
+        public void PostAuthOktaLoginUsernameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string username = null;
+            //OktaLoginRequest oktaLoginRequest = null;
+            //string oktaMountPath = null;
+            //instance.PostAuthOktaLoginUsername(username, oktaLoginRequest, oktaMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthOktaUsersName
+        /// </summary>
+        [Fact]
+        public void PostAuthOktaUsersNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //OktaUsersRequest oktaUsersRequest = null;
+            //string oktaMountPath = null;
+            //instance.PostAuthOktaUsersName(name, oktaUsersRequest, oktaMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthRadiusConfig
+        /// </summary>
+        [Fact]
+        public void PostAuthRadiusConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //RadiusConfigRequest radiusConfigRequest = null;
+            //string radiusMountPath = null;
+            //instance.PostAuthRadiusConfig(radiusConfigRequest, radiusMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthRadiusLogin
+        /// </summary>
+        [Fact]
+        public void PostAuthRadiusLoginTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //RadiusLoginRequest radiusLoginRequest = null;
+            //string radiusMountPath = null;
+            //instance.PostAuthRadiusLogin(radiusLoginRequest, radiusMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthRadiusLoginUrlusername
+        /// </summary>
+        [Fact]
+        public void PostAuthRadiusLoginUrlusernameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string urlusername = null;
-            //string mountPath = null;
             //RadiusLoginRequest radiusLoginRequest = null;
-            //instance.UpdateRadiusLoginUrlusername(urlusername, mountPath, radiusLoginRequest);
+            //string radiusMountPath = null;
+            //instance.PostAuthRadiusLoginUrlusername(urlusername, radiusLoginRequest, radiusMountPath);
         }
 
         /// <summary>
-        /// Test UpdateRadiusUsersName
+        /// Test PostAuthRadiusUsersName
         /// </summary>
         [Fact]
-        public void UpdateRadiusUsersNameTest()
+        public void PostAuthRadiusUsersNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //string mountPath = null;
             //RadiusUsersRequest radiusUsersRequest = null;
-            //instance.UpdateRadiusUsersName(name, mountPath, radiusUsersRequest);
+            //string radiusMountPath = null;
+            //instance.PostAuthRadiusUsersName(name, radiusUsersRequest, radiusMountPath);
         }
 
         /// <summary>
-        /// Test UpdateTokenCreate
+        /// Test PostAuthTokenCreate
         /// </summary>
         [Fact]
-        public void UpdateTokenCreateTest()
+        public void PostAuthTokenCreateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string format = null;
-            //string mountPath = null;
             //TokenCreateRequest tokenCreateRequest = null;
-            //instance.UpdateTokenCreate(format, mountPath, tokenCreateRequest);
+            //string format = null;
+            //string tokenMountPath = null;
+            //instance.PostAuthTokenCreate(tokenCreateRequest, format, tokenMountPath);
         }
 
         /// <summary>
-        /// Test UpdateTokenCreateOrphan
+        /// Test PostAuthTokenCreateOrphan
         /// </summary>
         [Fact]
-        public void UpdateTokenCreateOrphanTest()
+        public void PostAuthTokenCreateOrphanTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string format = null;
-            //string mountPath = null;
             //TokenCreateOrphanRequest tokenCreateOrphanRequest = null;
-            //instance.UpdateTokenCreateOrphan(format, mountPath, tokenCreateOrphanRequest);
-        }
-
-        /// <summary>
-        /// Test UpdateTokenCreateRoleName
-        /// </summary>
-        [Fact]
-        public void UpdateTokenCreateRoleNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string roleName = null;
             //string format = null;
-            //string mountPath = null;
-            //TokenCreateRequest tokenCreateRequest = null;
-            //instance.UpdateTokenCreateRoleName(roleName, format, mountPath, tokenCreateRequest);
+            //string tokenMountPath = null;
+            //instance.PostAuthTokenCreateOrphan(tokenCreateOrphanRequest, format, tokenMountPath);
         }
 
         /// <summary>
-        /// Test UpdateTokenLookup
+        /// Test PostAuthTokenCreateRoleName
         /// </summary>
         [Fact]
-        public void UpdateTokenLookupTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //TokenLookupRequest tokenLookupRequest = null;
-            //instance.UpdateTokenLookup(mountPath, tokenLookupRequest);
-        }
-
-        /// <summary>
-        /// Test UpdateTokenLookupAccessor
-        /// </summary>
-        [Fact]
-        public void UpdateTokenLookupAccessorTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //TokenLookupAccessorRequest tokenLookupAccessorRequest = null;
-            //instance.UpdateTokenLookupAccessor(mountPath, tokenLookupAccessorRequest);
-        }
-
-        /// <summary>
-        /// Test UpdateTokenLookupSelf
-        /// </summary>
-        [Fact]
-        public void UpdateTokenLookupSelfTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //TokenLookupSelfRequest tokenLookupSelfRequest = null;
-            //instance.UpdateTokenLookupSelf(mountPath, tokenLookupSelfRequest);
-        }
-
-        /// <summary>
-        /// Test UpdateTokenRenew
-        /// </summary>
-        [Fact]
-        public void UpdateTokenRenewTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //TokenRenewRequest tokenRenewRequest = null;
-            //instance.UpdateTokenRenew(mountPath, tokenRenewRequest);
-        }
-
-        /// <summary>
-        /// Test UpdateTokenRenewAccessor
-        /// </summary>
-        [Fact]
-        public void UpdateTokenRenewAccessorTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //TokenRenewAccessorRequest tokenRenewAccessorRequest = null;
-            //instance.UpdateTokenRenewAccessor(mountPath, tokenRenewAccessorRequest);
-        }
-
-        /// <summary>
-        /// Test UpdateTokenRenewSelf
-        /// </summary>
-        [Fact]
-        public void UpdateTokenRenewSelfTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //TokenRenewSelfRequest tokenRenewSelfRequest = null;
-            //instance.UpdateTokenRenewSelf(mountPath, tokenRenewSelfRequest);
-        }
-
-        /// <summary>
-        /// Test UpdateTokenRevoke
-        /// </summary>
-        [Fact]
-        public void UpdateTokenRevokeTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //TokenRevokeRequest tokenRevokeRequest = null;
-            //instance.UpdateTokenRevoke(mountPath, tokenRevokeRequest);
-        }
-
-        /// <summary>
-        /// Test UpdateTokenRevokeAccessor
-        /// </summary>
-        [Fact]
-        public void UpdateTokenRevokeAccessorTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //TokenRevokeAccessorRequest tokenRevokeAccessorRequest = null;
-            //instance.UpdateTokenRevokeAccessor(mountPath, tokenRevokeAccessorRequest);
-        }
-
-        /// <summary>
-        /// Test UpdateTokenRevokeOrphan
-        /// </summary>
-        [Fact]
-        public void UpdateTokenRevokeOrphanTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //TokenRevokeOrphanRequest tokenRevokeOrphanRequest = null;
-            //instance.UpdateTokenRevokeOrphan(mountPath, tokenRevokeOrphanRequest);
-        }
-
-        /// <summary>
-        /// Test UpdateTokenRevokeSelf
-        /// </summary>
-        [Fact]
-        public void UpdateTokenRevokeSelfTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //instance.UpdateTokenRevokeSelf(mountPath);
-        }
-
-        /// <summary>
-        /// Test UpdateTokenRolesRoleName
-        /// </summary>
-        [Fact]
-        public void UpdateTokenRolesRoleNameTest()
+        public void PostAuthTokenCreateRoleNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
-            //string mountPath = null;
+            //TokenCreateRequest tokenCreateRequest = null;
+            //string format = null;
+            //string tokenMountPath = null;
+            //instance.PostAuthTokenCreateRoleName(roleName, tokenCreateRequest, format, tokenMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthTokenLookup
+        /// </summary>
+        [Fact]
+        public void PostAuthTokenLookupTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //TokenLookupRequest tokenLookupRequest = null;
+            //string tokenMountPath = null;
+            //instance.PostAuthTokenLookup(tokenLookupRequest, tokenMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthTokenLookupAccessor
+        /// </summary>
+        [Fact]
+        public void PostAuthTokenLookupAccessorTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //TokenLookupAccessorRequest tokenLookupAccessorRequest = null;
+            //string tokenMountPath = null;
+            //instance.PostAuthTokenLookupAccessor(tokenLookupAccessorRequest, tokenMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthTokenLookupSelf
+        /// </summary>
+        [Fact]
+        public void PostAuthTokenLookupSelfTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //TokenLookupSelfRequest tokenLookupSelfRequest = null;
+            //string tokenMountPath = null;
+            //instance.PostAuthTokenLookupSelf(tokenLookupSelfRequest, tokenMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthTokenRenew
+        /// </summary>
+        [Fact]
+        public void PostAuthTokenRenewTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //TokenRenewRequest tokenRenewRequest = null;
+            //string tokenMountPath = null;
+            //instance.PostAuthTokenRenew(tokenRenewRequest, tokenMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthTokenRenewAccessor
+        /// </summary>
+        [Fact]
+        public void PostAuthTokenRenewAccessorTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //TokenRenewAccessorRequest tokenRenewAccessorRequest = null;
+            //string tokenMountPath = null;
+            //instance.PostAuthTokenRenewAccessor(tokenRenewAccessorRequest, tokenMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthTokenRenewSelf
+        /// </summary>
+        [Fact]
+        public void PostAuthTokenRenewSelfTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //TokenRenewSelfRequest tokenRenewSelfRequest = null;
+            //string tokenMountPath = null;
+            //instance.PostAuthTokenRenewSelf(tokenRenewSelfRequest, tokenMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthTokenRevoke
+        /// </summary>
+        [Fact]
+        public void PostAuthTokenRevokeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //TokenRevokeRequest tokenRevokeRequest = null;
+            //string tokenMountPath = null;
+            //instance.PostAuthTokenRevoke(tokenRevokeRequest, tokenMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthTokenRevokeAccessor
+        /// </summary>
+        [Fact]
+        public void PostAuthTokenRevokeAccessorTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //TokenRevokeAccessorRequest tokenRevokeAccessorRequest = null;
+            //string tokenMountPath = null;
+            //instance.PostAuthTokenRevokeAccessor(tokenRevokeAccessorRequest, tokenMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthTokenRevokeOrphan
+        /// </summary>
+        [Fact]
+        public void PostAuthTokenRevokeOrphanTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //TokenRevokeOrphanRequest tokenRevokeOrphanRequest = null;
+            //string tokenMountPath = null;
+            //instance.PostAuthTokenRevokeOrphan(tokenRevokeOrphanRequest, tokenMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthTokenRevokeSelf
+        /// </summary>
+        [Fact]
+        public void PostAuthTokenRevokeSelfTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string tokenMountPath = null;
+            //instance.PostAuthTokenRevokeSelf(tokenMountPath);
+        }
+
+        /// <summary>
+        /// Test PostAuthTokenRolesRoleName
+        /// </summary>
+        [Fact]
+        public void PostAuthTokenRolesRoleNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string roleName = null;
             //TokenRolesRequest tokenRolesRequest = null;
-            //instance.UpdateTokenRolesRoleName(roleName, mountPath, tokenRolesRequest);
+            //string tokenMountPath = null;
+            //instance.PostAuthTokenRolesRoleName(roleName, tokenRolesRequest, tokenMountPath);
         }
 
         /// <summary>
-        /// Test UpdateTokenTidy
+        /// Test PostAuthTokenTidy
         /// </summary>
         [Fact]
-        public void UpdateTokenTidyTest()
+        public void PostAuthTokenTidyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string mountPath = null;
-            //instance.UpdateTokenTidy(mountPath);
+            //string tokenMountPath = null;
+            //instance.PostAuthTokenTidy(tokenMountPath);
         }
 
         /// <summary>
-        /// Test UpdateUserpassLoginUsername
+        /// Test PostAuthUserpassLoginUsername
         /// </summary>
         [Fact]
-        public void UpdateUserpassLoginUsernameTest()
+        public void PostAuthUserpassLoginUsernameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string username = null;
-            //string mountPath = null;
             //UserpassLoginRequest userpassLoginRequest = null;
-            //instance.UpdateUserpassLoginUsername(username, mountPath, userpassLoginRequest);
+            //string userpassMountPath = null;
+            //instance.PostAuthUserpassLoginUsername(username, userpassLoginRequest, userpassMountPath);
         }
 
         /// <summary>
-        /// Test UpdateUserpassUsersUsername
+        /// Test PostAuthUserpassUsersUsername
         /// </summary>
         [Fact]
-        public void UpdateUserpassUsersUsernameTest()
+        public void PostAuthUserpassUsersUsernameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string username = null;
-            //string mountPath = null;
             //UserpassUsersRequest userpassUsersRequest = null;
-            //instance.UpdateUserpassUsersUsername(username, mountPath, userpassUsersRequest);
+            //string userpassMountPath = null;
+            //instance.PostAuthUserpassUsersUsername(username, userpassUsersRequest, userpassMountPath);
         }
 
         /// <summary>
-        /// Test UpdateUserpassUsersUsernamePassword
+        /// Test PostAuthUserpassUsersUsernamePassword
         /// </summary>
         [Fact]
-        public void UpdateUserpassUsersUsernamePasswordTest()
+        public void PostAuthUserpassUsersUsernamePasswordTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string username = null;
-            //string mountPath = null;
             //UserpassUsersPasswordRequest userpassUsersPasswordRequest = null;
-            //instance.UpdateUserpassUsersUsernamePassword(username, mountPath, userpassUsersPasswordRequest);
+            //string userpassMountPath = null;
+            //instance.PostAuthUserpassUsersUsernamePassword(username, userpassUsersPasswordRequest, userpassMountPath);
         }
 
         /// <summary>
-        /// Test UpdateUserpassUsersUsernamePolicies
+        /// Test PostAuthUserpassUsersUsernamePolicies
         /// </summary>
         [Fact]
-        public void UpdateUserpassUsersUsernamePoliciesTest()
+        public void PostAuthUserpassUsersUsernamePoliciesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string username = null;
-            //string mountPath = null;
             //UserpassUsersPoliciesRequest userpassUsersPoliciesRequest = null;
-            //instance.UpdateUserpassUsersUsernamePolicies(username, mountPath, userpassUsersPoliciesRequest);
+            //string userpassMountPath = null;
+            //instance.PostAuthUserpassUsersUsernamePolicies(username, userpassUsersPoliciesRequest, userpassMountPath);
         }
     }
 }
