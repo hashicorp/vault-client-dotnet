@@ -35,9 +35,11 @@ namespace Vault.Model
         /// Initializes a new instance of the <see cref="PkiConfigIssuersRequest" /> class.
         /// </summary>
         /// <param name="_default">Reference (name or identifier) to the default issuer..</param>
-        public PkiConfigIssuersRequest(string _default = default(string))
+        /// <param name="defaultFollowsLatestIssuer">Whether the default issuer should automatically follow the latest generated or imported issuer. Defaults to false. (default to false).</param>
+        public PkiConfigIssuersRequest(string _default = default(string), bool defaultFollowsLatestIssuer = false)
         {
             this.Default = _default;
+            this.DefaultFollowsLatestIssuer = defaultFollowsLatestIssuer;
         }
 
         /// <summary>
@@ -48,6 +50,13 @@ namespace Vault.Model
         public string Default { get; set; }
 
         /// <summary>
+        /// Whether the default issuer should automatically follow the latest generated or imported issuer. Defaults to false.
+        /// </summary>
+        /// <value>Whether the default issuer should automatically follow the latest generated or imported issuer. Defaults to false.</value>
+        [DataMember(Name = "default_follows_latest_issuer", EmitDefaultValue = true)]
+        public bool DefaultFollowsLatestIssuer { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -56,6 +65,7 @@ namespace Vault.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class PkiConfigIssuersRequest {\n");
             sb.Append("  Default: ").Append(Default).Append("\n");
+            sb.Append("  DefaultFollowsLatestIssuer: ").Append(DefaultFollowsLatestIssuer).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,6 +105,10 @@ namespace Vault.Model
                     this.Default == input.Default ||
                     (this.Default != null &&
                     this.Default.Equals(input.Default))
+                ) && 
+                (
+                    this.DefaultFollowsLatestIssuer == input.DefaultFollowsLatestIssuer ||
+                    this.DefaultFollowsLatestIssuer.Equals(input.DefaultFollowsLatestIssuer)
                 );
         }
 
@@ -111,6 +125,7 @@ namespace Vault.Model
                 {
                     hashCode = (hashCode * 59) + this.Default.GetHashCode();
                 }
+                hashCode = (hashCode * 59) + this.DefaultFollowsLatestIssuer.GetHashCode();
                 return hashCode;
             }
         }

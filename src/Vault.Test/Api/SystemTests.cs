@@ -54,1777 +54,1788 @@ namespace Vault.Test.Api
         }
 
         /// <summary>
-        /// Test DeleteSystemAuditPath
+        /// Test DeleteSysAuditPath
         /// </summary>
         [Fact]
-        public void DeleteSystemAuditPathTest()
+        public void DeleteSysAuditPathTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string path = null;
-            //instance.DeleteSystemAuditPath(path);
+            //instance.DeleteSysAuditPath(path);
         }
 
         /// <summary>
-        /// Test DeleteSystemAuthPath
+        /// Test DeleteSysAuthPath
         /// </summary>
         [Fact]
-        public void DeleteSystemAuthPathTest()
+        public void DeleteSysAuthPathTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string path = null;
-            //instance.DeleteSystemAuthPath(path);
+            //instance.DeleteSysAuthPath(path);
         }
 
         /// <summary>
-        /// Test DeleteSystemConfigAuditingRequestHeadersHeader
+        /// Test DeleteSysConfigAuditingRequestHeadersHeader
         /// </summary>
         [Fact]
-        public void DeleteSystemConfigAuditingRequestHeadersHeaderTest()
+        public void DeleteSysConfigAuditingRequestHeadersHeaderTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string header = null;
-            //instance.DeleteSystemConfigAuditingRequestHeadersHeader(header);
+            //instance.DeleteSysConfigAuditingRequestHeadersHeader(header);
         }
 
         /// <summary>
-        /// Test DeleteSystemConfigCors
+        /// Test DeleteSysConfigCors
         /// </summary>
         [Fact]
-        public void DeleteSystemConfigCorsTest()
+        public void DeleteSysConfigCorsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.DeleteSystemConfigCors();
+            //instance.DeleteSysConfigCors();
         }
 
         /// <summary>
-        /// Test DeleteSystemConfigUiHeadersHeader
+        /// Test DeleteSysConfigUiHeadersHeader
         /// </summary>
         [Fact]
-        public void DeleteSystemConfigUiHeadersHeaderTest()
+        public void DeleteSysConfigUiHeadersHeaderTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string header = null;
-            //instance.DeleteSystemConfigUiHeadersHeader(header);
+            //instance.DeleteSysConfigUiHeadersHeader(header);
         }
 
         /// <summary>
-        /// Test DeleteSystemGenerateRoot
+        /// Test DeleteSysGenerateRoot
         /// </summary>
         [Fact]
-        public void DeleteSystemGenerateRootTest()
+        public void DeleteSysGenerateRootTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.DeleteSystemGenerateRoot();
+            //instance.DeleteSysGenerateRoot();
         }
 
         /// <summary>
-        /// Test DeleteSystemGenerateRootAttempt
+        /// Test DeleteSysGenerateRootAttempt
         /// </summary>
         [Fact]
-        public void DeleteSystemGenerateRootAttemptTest()
+        public void DeleteSysGenerateRootAttemptTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.DeleteSystemGenerateRootAttempt();
+            //instance.DeleteSysGenerateRootAttempt();
         }
 
         /// <summary>
-        /// Test DeleteSystemLoggers
+        /// Test DeleteSysLoggers
         /// </summary>
         [Fact]
-        public void DeleteSystemLoggersTest()
+        public void DeleteSysLoggersTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.DeleteSystemLoggers();
+            //instance.DeleteSysLoggers();
         }
 
         /// <summary>
-        /// Test DeleteSystemLoggersName
+        /// Test DeleteSysLoggersName
         /// </summary>
         [Fact]
-        public void DeleteSystemLoggersNameTest()
+        public void DeleteSysLoggersNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //instance.DeleteSystemLoggersName(name);
+            //instance.DeleteSysLoggersName(name);
         }
 
         /// <summary>
-        /// Test DeleteSystemMountsPath
+        /// Test DeleteSysMountsPath
         /// </summary>
         [Fact]
-        public void DeleteSystemMountsPathTest()
+        public void DeleteSysMountsPathTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string path = null;
-            //instance.DeleteSystemMountsPath(path);
+            //instance.DeleteSysMountsPath(path);
         }
 
         /// <summary>
-        /// Test DeleteSystemPluginsCatalogName
+        /// Test DeleteSysPluginsCatalogName
         /// </summary>
         [Fact]
-        public void DeleteSystemPluginsCatalogNameTest()
+        public void DeleteSysPluginsCatalogNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //instance.DeleteSystemPluginsCatalogName(name);
+            //instance.DeleteSysPluginsCatalogName(name);
         }
 
         /// <summary>
-        /// Test DeleteSystemPluginsCatalogTypeName
+        /// Test DeleteSysPluginsCatalogTypeName
         /// </summary>
         [Fact]
-        public void DeleteSystemPluginsCatalogTypeNameTest()
+        public void DeleteSysPluginsCatalogTypeNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string type = null;
-            //instance.DeleteSystemPluginsCatalogTypeName(name, type);
+            //instance.DeleteSysPluginsCatalogTypeName(name, type);
         }
 
         /// <summary>
-        /// Test DeleteSystemPoliciesAclName
+        /// Test DeleteSysPoliciesAclName
         /// </summary>
         [Fact]
-        public void DeleteSystemPoliciesAclNameTest()
+        public void DeleteSysPoliciesAclNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //instance.DeleteSystemPoliciesAclName(name);
+            //instance.DeleteSysPoliciesAclName(name);
         }
 
         /// <summary>
-        /// Test DeleteSystemPoliciesPasswordName
+        /// Test DeleteSysPoliciesPasswordName
         /// </summary>
         [Fact]
-        public void DeleteSystemPoliciesPasswordNameTest()
+        public void DeleteSysPoliciesPasswordNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //instance.DeleteSystemPoliciesPasswordName(name);
+            //instance.DeleteSysPoliciesPasswordName(name);
         }
 
         /// <summary>
-        /// Test DeleteSystemPolicyName
+        /// Test DeleteSysPolicyName
         /// </summary>
         [Fact]
-        public void DeleteSystemPolicyNameTest()
+        public void DeleteSysPolicyNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //instance.DeleteSystemPolicyName(name);
+            //instance.DeleteSysPolicyName(name);
         }
 
         /// <summary>
-        /// Test DeleteSystemQuotasRateLimitName
+        /// Test DeleteSysQuotasRateLimitName
         /// </summary>
         [Fact]
-        public void DeleteSystemQuotasRateLimitNameTest()
+        public void DeleteSysQuotasRateLimitNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //instance.DeleteSystemQuotasRateLimitName(name);
+            //instance.DeleteSysQuotasRateLimitName(name);
         }
 
         /// <summary>
-        /// Test DeleteSystemRaw
+        /// Test DeleteSysRaw
         /// </summary>
         [Fact]
-        public void DeleteSystemRawTest()
+        public void DeleteSysRawTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.DeleteSystemRaw();
+            //instance.DeleteSysRaw();
         }
 
         /// <summary>
-        /// Test DeleteSystemRawPath
+        /// Test DeleteSysRawPath
         /// </summary>
         [Fact]
-        public void DeleteSystemRawPathTest()
+        public void DeleteSysRawPathTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string path = null;
-            //instance.DeleteSystemRawPath(path);
+            //instance.DeleteSysRawPath(path);
         }
 
         /// <summary>
-        /// Test DeleteSystemRekeyBackup
+        /// Test DeleteSysRekeyBackup
         /// </summary>
         [Fact]
-        public void DeleteSystemRekeyBackupTest()
+        public void DeleteSysRekeyBackupTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.DeleteSystemRekeyBackup();
+            //instance.DeleteSysRekeyBackup();
         }
 
         /// <summary>
-        /// Test DeleteSystemRekeyInit
+        /// Test DeleteSysRekeyInit
         /// </summary>
         [Fact]
-        public void DeleteSystemRekeyInitTest()
+        public void DeleteSysRekeyInitTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.DeleteSystemRekeyInit();
+            //instance.DeleteSysRekeyInit();
         }
 
         /// <summary>
-        /// Test DeleteSystemRekeyRecoveryKeyBackup
+        /// Test DeleteSysRekeyRecoveryKeyBackup
         /// </summary>
         [Fact]
-        public void DeleteSystemRekeyRecoveryKeyBackupTest()
+        public void DeleteSysRekeyRecoveryKeyBackupTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.DeleteSystemRekeyRecoveryKeyBackup();
+            //instance.DeleteSysRekeyRecoveryKeyBackup();
         }
 
         /// <summary>
-        /// Test DeleteSystemRekeyVerify
+        /// Test DeleteSysRekeyVerify
         /// </summary>
         [Fact]
-        public void DeleteSystemRekeyVerifyTest()
+        public void DeleteSysRekeyVerifyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.DeleteSystemRekeyVerify();
+            //instance.DeleteSysRekeyVerify();
         }
 
         /// <summary>
-        /// Test ListSystemConfigUiHeaders
+        /// Test GetSysAudit
         /// </summary>
         [Fact]
-        public void ListSystemConfigUiHeadersTest()
+        public void GetSysAuditTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysAudit();
+        }
+
+        /// <summary>
+        /// Test GetSysAuth
+        /// </summary>
+        [Fact]
+        public void GetSysAuthTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysAuth();
+        }
+
+        /// <summary>
+        /// Test GetSysAuthPath
+        /// </summary>
+        [Fact]
+        public void GetSysAuthPathTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string path = null;
+            //instance.GetSysAuthPath(path);
+        }
+
+        /// <summary>
+        /// Test GetSysAuthPathTune
+        /// </summary>
+        [Fact]
+        public void GetSysAuthPathTuneTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string path = null;
+            //instance.GetSysAuthPathTune(path);
+        }
+
+        /// <summary>
+        /// Test GetSysConfigAuditingRequestHeaders
+        /// </summary>
+        [Fact]
+        public void GetSysConfigAuditingRequestHeadersTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysConfigAuditingRequestHeaders();
+        }
+
+        /// <summary>
+        /// Test GetSysConfigAuditingRequestHeadersHeader
+        /// </summary>
+        [Fact]
+        public void GetSysConfigAuditingRequestHeadersHeaderTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string header = null;
+            //instance.GetSysConfigAuditingRequestHeadersHeader(header);
+        }
+
+        /// <summary>
+        /// Test GetSysConfigCors
+        /// </summary>
+        [Fact]
+        public void GetSysConfigCorsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysConfigCors();
+        }
+
+        /// <summary>
+        /// Test GetSysConfigStateSanitized
+        /// </summary>
+        [Fact]
+        public void GetSysConfigStateSanitizedTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysConfigStateSanitized();
+        }
+
+        /// <summary>
+        /// Test GetSysConfigUiHeaders
+        /// </summary>
+        [Fact]
+        public void GetSysConfigUiHeadersTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
-            //instance.ListSystemConfigUiHeaders(list);
+            //instance.GetSysConfigUiHeaders(list);
         }
 
         /// <summary>
-        /// Test ListSystemLeasesLookup
+        /// Test GetSysConfigUiHeadersHeader
         /// </summary>
         [Fact]
-        public void ListSystemLeasesLookupTest()
+        public void GetSysConfigUiHeadersHeaderTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string header = null;
+            //instance.GetSysConfigUiHeadersHeader(header);
+        }
+
+        /// <summary>
+        /// Test GetSysGenerateRoot
+        /// </summary>
+        [Fact]
+        public void GetSysGenerateRootTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysGenerateRoot();
+        }
+
+        /// <summary>
+        /// Test GetSysGenerateRootAttempt
+        /// </summary>
+        [Fact]
+        public void GetSysGenerateRootAttemptTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysGenerateRootAttempt();
+        }
+
+        /// <summary>
+        /// Test GetSysHaStatus
+        /// </summary>
+        [Fact]
+        public void GetSysHaStatusTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysHaStatus();
+        }
+
+        /// <summary>
+        /// Test GetSysHealth
+        /// </summary>
+        [Fact]
+        public void GetSysHealthTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysHealth();
+        }
+
+        /// <summary>
+        /// Test GetSysHostInfo
+        /// </summary>
+        [Fact]
+        public void GetSysHostInfoTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysHostInfo();
+        }
+
+        /// <summary>
+        /// Test GetSysInFlightReq
+        /// </summary>
+        [Fact]
+        public void GetSysInFlightReqTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysInFlightReq();
+        }
+
+        /// <summary>
+        /// Test GetSysInit
+        /// </summary>
+        [Fact]
+        public void GetSysInitTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysInit();
+        }
+
+        /// <summary>
+        /// Test GetSysInternalCountersActivity
+        /// </summary>
+        [Fact]
+        public void GetSysInternalCountersActivityTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysInternalCountersActivity();
+        }
+
+        /// <summary>
+        /// Test GetSysInternalCountersActivityExport
+        /// </summary>
+        [Fact]
+        public void GetSysInternalCountersActivityExportTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysInternalCountersActivityExport();
+        }
+
+        /// <summary>
+        /// Test GetSysInternalCountersActivityMonthly
+        /// </summary>
+        [Fact]
+        public void GetSysInternalCountersActivityMonthlyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysInternalCountersActivityMonthly();
+        }
+
+        /// <summary>
+        /// Test GetSysInternalCountersConfig
+        /// </summary>
+        [Fact]
+        public void GetSysInternalCountersConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysInternalCountersConfig();
+        }
+
+        /// <summary>
+        /// Test GetSysInternalCountersEntities
+        /// </summary>
+        [Fact]
+        public void GetSysInternalCountersEntitiesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysInternalCountersEntities();
+        }
+
+        /// <summary>
+        /// Test GetSysInternalCountersRequests
+        /// </summary>
+        [Fact]
+        public void GetSysInternalCountersRequestsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysInternalCountersRequests();
+        }
+
+        /// <summary>
+        /// Test GetSysInternalCountersTokens
+        /// </summary>
+        [Fact]
+        public void GetSysInternalCountersTokensTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysInternalCountersTokens();
+        }
+
+        /// <summary>
+        /// Test GetSysInternalInspectRouterTag
+        /// </summary>
+        [Fact]
+        public void GetSysInternalInspectRouterTagTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string tag = null;
+            //instance.GetSysInternalInspectRouterTag(tag);
+        }
+
+        /// <summary>
+        /// Test GetSysInternalSpecsOpenapi
+        /// </summary>
+        [Fact]
+        public void GetSysInternalSpecsOpenapiTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysInternalSpecsOpenapi();
+        }
+
+        /// <summary>
+        /// Test GetSysInternalUiFeatureFlags
+        /// </summary>
+        [Fact]
+        public void GetSysInternalUiFeatureFlagsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysInternalUiFeatureFlags();
+        }
+
+        /// <summary>
+        /// Test GetSysInternalUiMounts
+        /// </summary>
+        [Fact]
+        public void GetSysInternalUiMountsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysInternalUiMounts();
+        }
+
+        /// <summary>
+        /// Test GetSysInternalUiMountsPath
+        /// </summary>
+        [Fact]
+        public void GetSysInternalUiMountsPathTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string path = null;
+            //instance.GetSysInternalUiMountsPath(path);
+        }
+
+        /// <summary>
+        /// Test GetSysInternalUiNamespaces
+        /// </summary>
+        [Fact]
+        public void GetSysInternalUiNamespacesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysInternalUiNamespaces();
+        }
+
+        /// <summary>
+        /// Test GetSysInternalUiResultantAcl
+        /// </summary>
+        [Fact]
+        public void GetSysInternalUiResultantAclTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysInternalUiResultantAcl();
+        }
+
+        /// <summary>
+        /// Test GetSysKeyStatus
+        /// </summary>
+        [Fact]
+        public void GetSysKeyStatusTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysKeyStatus();
+        }
+
+        /// <summary>
+        /// Test GetSysLeader
+        /// </summary>
+        [Fact]
+        public void GetSysLeaderTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysLeader();
+        }
+
+        /// <summary>
+        /// Test GetSysLeases
+        /// </summary>
+        [Fact]
+        public void GetSysLeasesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysLeases();
+        }
+
+        /// <summary>
+        /// Test GetSysLeasesCount
+        /// </summary>
+        [Fact]
+        public void GetSysLeasesCountTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysLeasesCount();
+        }
+
+        /// <summary>
+        /// Test GetSysLeasesLookup
+        /// </summary>
+        [Fact]
+        public void GetSysLeasesLookupTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
-            //instance.ListSystemLeasesLookup(list);
+            //instance.GetSysLeasesLookup(list);
         }
 
         /// <summary>
-        /// Test ListSystemLeasesLookupPrefix
+        /// Test GetSysLeasesLookupPrefix
         /// </summary>
         [Fact]
-        public void ListSystemLeasesLookupPrefixTest()
+        public void GetSysLeasesLookupPrefixTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string prefix = null;
             //string list = null;
-            //instance.ListSystemLeasesLookupPrefix(prefix, list);
+            //instance.GetSysLeasesLookupPrefix(prefix, list);
         }
 
         /// <summary>
-        /// Test ListSystemPluginsCatalogType
+        /// Test GetSysMetrics
         /// </summary>
         [Fact]
-        public void ListSystemPluginsCatalogTypeTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string type = null;
-            //string list = null;
-            //instance.ListSystemPluginsCatalogType(type, list);
-        }
-
-        /// <summary>
-        /// Test ListSystemPoliciesAcl
-        /// </summary>
-        [Fact]
-        public void ListSystemPoliciesAclTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //instance.ListSystemPoliciesAcl(list);
-        }
-
-        /// <summary>
-        /// Test ListSystemPoliciesPassword
-        /// </summary>
-        [Fact]
-        public void ListSystemPoliciesPasswordTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //instance.ListSystemPoliciesPassword(list);
-        }
-
-        /// <summary>
-        /// Test ListSystemQuotasRateLimit
-        /// </summary>
-        [Fact]
-        public void ListSystemQuotasRateLimitTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //instance.ListSystemQuotasRateLimit(list);
-        }
-
-        /// <summary>
-        /// Test ListSystemVersionHistory
-        /// </summary>
-        [Fact]
-        public void ListSystemVersionHistoryTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //instance.ListSystemVersionHistory(list);
-        }
-
-        /// <summary>
-        /// Test ReadSystemAudit
-        /// </summary>
-        [Fact]
-        public void ReadSystemAuditTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemAudit();
-        }
-
-        /// <summary>
-        /// Test ReadSystemAuth
-        /// </summary>
-        [Fact]
-        public void ReadSystemAuthTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemAuth();
-        }
-
-        /// <summary>
-        /// Test ReadSystemAuthPath
-        /// </summary>
-        [Fact]
-        public void ReadSystemAuthPathTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //instance.ReadSystemAuthPath(path);
-        }
-
-        /// <summary>
-        /// Test ReadSystemAuthPathTune
-        /// </summary>
-        [Fact]
-        public void ReadSystemAuthPathTuneTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //instance.ReadSystemAuthPathTune(path);
-        }
-
-        /// <summary>
-        /// Test ReadSystemConfigAuditingRequestHeaders
-        /// </summary>
-        [Fact]
-        public void ReadSystemConfigAuditingRequestHeadersTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemConfigAuditingRequestHeaders();
-        }
-
-        /// <summary>
-        /// Test ReadSystemConfigAuditingRequestHeadersHeader
-        /// </summary>
-        [Fact]
-        public void ReadSystemConfigAuditingRequestHeadersHeaderTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string header = null;
-            //instance.ReadSystemConfigAuditingRequestHeadersHeader(header);
-        }
-
-        /// <summary>
-        /// Test ReadSystemConfigCors
-        /// </summary>
-        [Fact]
-        public void ReadSystemConfigCorsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemConfigCors();
-        }
-
-        /// <summary>
-        /// Test ReadSystemConfigStateSanitized
-        /// </summary>
-        [Fact]
-        public void ReadSystemConfigStateSanitizedTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemConfigStateSanitized();
-        }
-
-        /// <summary>
-        /// Test ReadSystemConfigUiHeadersHeader
-        /// </summary>
-        [Fact]
-        public void ReadSystemConfigUiHeadersHeaderTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string header = null;
-            //instance.ReadSystemConfigUiHeadersHeader(header);
-        }
-
-        /// <summary>
-        /// Test ReadSystemGenerateRoot
-        /// </summary>
-        [Fact]
-        public void ReadSystemGenerateRootTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemGenerateRoot();
-        }
-
-        /// <summary>
-        /// Test ReadSystemGenerateRootAttempt
-        /// </summary>
-        [Fact]
-        public void ReadSystemGenerateRootAttemptTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemGenerateRootAttempt();
-        }
-
-        /// <summary>
-        /// Test ReadSystemHaStatus
-        /// </summary>
-        [Fact]
-        public void ReadSystemHaStatusTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemHaStatus();
-        }
-
-        /// <summary>
-        /// Test ReadSystemHealth
-        /// </summary>
-        [Fact]
-        public void ReadSystemHealthTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemHealth();
-        }
-
-        /// <summary>
-        /// Test ReadSystemHostInfo
-        /// </summary>
-        [Fact]
-        public void ReadSystemHostInfoTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemHostInfo();
-        }
-
-        /// <summary>
-        /// Test ReadSystemInFlightReq
-        /// </summary>
-        [Fact]
-        public void ReadSystemInFlightReqTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemInFlightReq();
-        }
-
-        /// <summary>
-        /// Test ReadSystemInit
-        /// </summary>
-        [Fact]
-        public void ReadSystemInitTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemInit();
-        }
-
-        /// <summary>
-        /// Test ReadSystemInternalCountersActivity
-        /// </summary>
-        [Fact]
-        public void ReadSystemInternalCountersActivityTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemInternalCountersActivity();
-        }
-
-        /// <summary>
-        /// Test ReadSystemInternalCountersActivityExport
-        /// </summary>
-        [Fact]
-        public void ReadSystemInternalCountersActivityExportTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemInternalCountersActivityExport();
-        }
-
-        /// <summary>
-        /// Test ReadSystemInternalCountersActivityMonthly
-        /// </summary>
-        [Fact]
-        public void ReadSystemInternalCountersActivityMonthlyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemInternalCountersActivityMonthly();
-        }
-
-        /// <summary>
-        /// Test ReadSystemInternalCountersConfig
-        /// </summary>
-        [Fact]
-        public void ReadSystemInternalCountersConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemInternalCountersConfig();
-        }
-
-        /// <summary>
-        /// Test ReadSystemInternalCountersEntities
-        /// </summary>
-        [Fact]
-        public void ReadSystemInternalCountersEntitiesTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemInternalCountersEntities();
-        }
-
-        /// <summary>
-        /// Test ReadSystemInternalCountersRequests
-        /// </summary>
-        [Fact]
-        public void ReadSystemInternalCountersRequestsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemInternalCountersRequests();
-        }
-
-        /// <summary>
-        /// Test ReadSystemInternalCountersTokens
-        /// </summary>
-        [Fact]
-        public void ReadSystemInternalCountersTokensTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemInternalCountersTokens();
-        }
-
-        /// <summary>
-        /// Test ReadSystemInternalSpecsOpenapi
-        /// </summary>
-        [Fact]
-        public void ReadSystemInternalSpecsOpenapiTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemInternalSpecsOpenapi();
-        }
-
-        /// <summary>
-        /// Test ReadSystemInternalUiFeatureFlags
-        /// </summary>
-        [Fact]
-        public void ReadSystemInternalUiFeatureFlagsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemInternalUiFeatureFlags();
-        }
-
-        /// <summary>
-        /// Test ReadSystemInternalUiMounts
-        /// </summary>
-        [Fact]
-        public void ReadSystemInternalUiMountsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemInternalUiMounts();
-        }
-
-        /// <summary>
-        /// Test ReadSystemInternalUiMountsPath
-        /// </summary>
-        [Fact]
-        public void ReadSystemInternalUiMountsPathTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //instance.ReadSystemInternalUiMountsPath(path);
-        }
-
-        /// <summary>
-        /// Test ReadSystemInternalUiNamespaces
-        /// </summary>
-        [Fact]
-        public void ReadSystemInternalUiNamespacesTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemInternalUiNamespaces();
-        }
-
-        /// <summary>
-        /// Test ReadSystemInternalUiResultantAcl
-        /// </summary>
-        [Fact]
-        public void ReadSystemInternalUiResultantAclTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemInternalUiResultantAcl();
-        }
-
-        /// <summary>
-        /// Test ReadSystemKeyStatus
-        /// </summary>
-        [Fact]
-        public void ReadSystemKeyStatusTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemKeyStatus();
-        }
-
-        /// <summary>
-        /// Test ReadSystemLeader
-        /// </summary>
-        [Fact]
-        public void ReadSystemLeaderTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemLeader();
-        }
-
-        /// <summary>
-        /// Test ReadSystemLeases
-        /// </summary>
-        [Fact]
-        public void ReadSystemLeasesTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemLeases();
-        }
-
-        /// <summary>
-        /// Test ReadSystemLeasesCount
-        /// </summary>
-        [Fact]
-        public void ReadSystemLeasesCountTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemLeasesCount();
-        }
-
-        /// <summary>
-        /// Test ReadSystemMetrics
-        /// </summary>
-        [Fact]
-        public void ReadSystemMetricsTest()
+        public void GetSysMetricsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string format = null;
-            //instance.ReadSystemMetrics(format);
+            //instance.GetSysMetrics(format);
         }
 
         /// <summary>
-        /// Test ReadSystemMonitor
+        /// Test GetSysMonitor
         /// </summary>
         [Fact]
-        public void ReadSystemMonitorTest()
+        public void GetSysMonitorTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string logFormat = null;
             //string logLevel = null;
-            //instance.ReadSystemMonitor(logFormat, logLevel);
+            //instance.GetSysMonitor(logFormat, logLevel);
         }
 
         /// <summary>
-        /// Test ReadSystemMounts
+        /// Test GetSysMounts
         /// </summary>
         [Fact]
-        public void ReadSystemMountsTest()
+        public void GetSysMountsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemMounts();
+            //instance.GetSysMounts();
         }
 
         /// <summary>
-        /// Test ReadSystemMountsPath
+        /// Test GetSysMountsPath
         /// </summary>
         [Fact]
-        public void ReadSystemMountsPathTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //instance.ReadSystemMountsPath(path);
-        }
-
-        /// <summary>
-        /// Test ReadSystemMountsPathTune
-        /// </summary>
-        [Fact]
-        public void ReadSystemMountsPathTuneTest()
+        public void GetSysMountsPathTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string path = null;
-            //instance.ReadSystemMountsPathTune(path);
+            //instance.GetSysMountsPath(path);
         }
 
         /// <summary>
-        /// Test ReadSystemPluginsCatalog
+        /// Test GetSysMountsPathTune
         /// </summary>
         [Fact]
-        public void ReadSystemPluginsCatalogTest()
+        public void GetSysMountsPathTuneTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemPluginsCatalog();
+            //string path = null;
+            //instance.GetSysMountsPathTune(path);
         }
 
         /// <summary>
-        /// Test ReadSystemPluginsCatalogName
+        /// Test GetSysPluginsCatalog
         /// </summary>
         [Fact]
-        public void ReadSystemPluginsCatalogNameTest()
+        public void GetSysPluginsCatalogTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysPluginsCatalog();
+        }
+
+        /// <summary>
+        /// Test GetSysPluginsCatalogName
+        /// </summary>
+        [Fact]
+        public void GetSysPluginsCatalogNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //instance.ReadSystemPluginsCatalogName(name);
+            //instance.GetSysPluginsCatalogName(name);
         }
 
         /// <summary>
-        /// Test ReadSystemPluginsCatalogTypeName
+        /// Test GetSysPluginsCatalogType
         /// </summary>
         [Fact]
-        public void ReadSystemPluginsCatalogTypeNameTest()
+        public void GetSysPluginsCatalogTypeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string type = null;
+            //string list = null;
+            //instance.GetSysPluginsCatalogType(type, list);
+        }
+
+        /// <summary>
+        /// Test GetSysPluginsCatalogTypeName
+        /// </summary>
+        [Fact]
+        public void GetSysPluginsCatalogTypeNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string type = null;
-            //instance.ReadSystemPluginsCatalogTypeName(name, type);
+            //instance.GetSysPluginsCatalogTypeName(name, type);
         }
 
         /// <summary>
-        /// Test ReadSystemPoliciesAclName
+        /// Test GetSysPoliciesAcl
         /// </summary>
         [Fact]
-        public void ReadSystemPoliciesAclNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //instance.ReadSystemPoliciesAclName(name);
-        }
-
-        /// <summary>
-        /// Test ReadSystemPoliciesPasswordName
-        /// </summary>
-        [Fact]
-        public void ReadSystemPoliciesPasswordNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //instance.ReadSystemPoliciesPasswordName(name);
-        }
-
-        /// <summary>
-        /// Test ReadSystemPoliciesPasswordNameGenerate
-        /// </summary>
-        [Fact]
-        public void ReadSystemPoliciesPasswordNameGenerateTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //instance.ReadSystemPoliciesPasswordNameGenerate(name);
-        }
-
-        /// <summary>
-        /// Test ReadSystemPolicy
-        /// </summary>
-        [Fact]
-        public void ReadSystemPolicyTest()
+        public void GetSysPoliciesAclTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
-            //instance.ReadSystemPolicy(list);
+            //instance.GetSysPoliciesAcl(list);
         }
 
         /// <summary>
-        /// Test ReadSystemPolicyName
+        /// Test GetSysPoliciesAclName
         /// </summary>
         [Fact]
-        public void ReadSystemPolicyNameTest()
+        public void GetSysPoliciesAclNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //instance.ReadSystemPolicyName(name);
+            //instance.GetSysPoliciesAclName(name);
         }
 
         /// <summary>
-        /// Test ReadSystemPprof
+        /// Test GetSysPoliciesPassword
         /// </summary>
         [Fact]
-        public void ReadSystemPprofTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemPprof();
-        }
-
-        /// <summary>
-        /// Test ReadSystemPprofAllocs
-        /// </summary>
-        [Fact]
-        public void ReadSystemPprofAllocsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemPprofAllocs();
-        }
-
-        /// <summary>
-        /// Test ReadSystemPprofBlock
-        /// </summary>
-        [Fact]
-        public void ReadSystemPprofBlockTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemPprofBlock();
-        }
-
-        /// <summary>
-        /// Test ReadSystemPprofCmdline
-        /// </summary>
-        [Fact]
-        public void ReadSystemPprofCmdlineTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemPprofCmdline();
-        }
-
-        /// <summary>
-        /// Test ReadSystemPprofGoroutine
-        /// </summary>
-        [Fact]
-        public void ReadSystemPprofGoroutineTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemPprofGoroutine();
-        }
-
-        /// <summary>
-        /// Test ReadSystemPprofHeap
-        /// </summary>
-        [Fact]
-        public void ReadSystemPprofHeapTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemPprofHeap();
-        }
-
-        /// <summary>
-        /// Test ReadSystemPprofMutex
-        /// </summary>
-        [Fact]
-        public void ReadSystemPprofMutexTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemPprofMutex();
-        }
-
-        /// <summary>
-        /// Test ReadSystemPprofProfile
-        /// </summary>
-        [Fact]
-        public void ReadSystemPprofProfileTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemPprofProfile();
-        }
-
-        /// <summary>
-        /// Test ReadSystemPprofSymbol
-        /// </summary>
-        [Fact]
-        public void ReadSystemPprofSymbolTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemPprofSymbol();
-        }
-
-        /// <summary>
-        /// Test ReadSystemPprofThreadcreate
-        /// </summary>
-        [Fact]
-        public void ReadSystemPprofThreadcreateTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemPprofThreadcreate();
-        }
-
-        /// <summary>
-        /// Test ReadSystemPprofTrace
-        /// </summary>
-        [Fact]
-        public void ReadSystemPprofTraceTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemPprofTrace();
-        }
-
-        /// <summary>
-        /// Test ReadSystemQuotasConfig
-        /// </summary>
-        [Fact]
-        public void ReadSystemQuotasConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemQuotasConfig();
-        }
-
-        /// <summary>
-        /// Test ReadSystemQuotasRateLimitName
-        /// </summary>
-        [Fact]
-        public void ReadSystemQuotasRateLimitNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //instance.ReadSystemQuotasRateLimitName(name);
-        }
-
-        /// <summary>
-        /// Test ReadSystemRaw
-        /// </summary>
-        [Fact]
-        public void ReadSystemRawTest()
+        public void GetSysPoliciesPasswordTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
-            //instance.ReadSystemRaw(list);
+            //instance.GetSysPoliciesPassword(list);
         }
 
         /// <summary>
-        /// Test ReadSystemRawPath
+        /// Test GetSysPoliciesPasswordName
         /// </summary>
         [Fact]
-        public void ReadSystemRawPathTest()
+        public void GetSysPoliciesPasswordNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //instance.GetSysPoliciesPasswordName(name);
+        }
+
+        /// <summary>
+        /// Test GetSysPoliciesPasswordNameGenerate
+        /// </summary>
+        [Fact]
+        public void GetSysPoliciesPasswordNameGenerateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //instance.GetSysPoliciesPasswordNameGenerate(name);
+        }
+
+        /// <summary>
+        /// Test GetSysPolicy
+        /// </summary>
+        [Fact]
+        public void GetSysPolicyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //instance.GetSysPolicy(list);
+        }
+
+        /// <summary>
+        /// Test GetSysPolicyName
+        /// </summary>
+        [Fact]
+        public void GetSysPolicyNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //instance.GetSysPolicyName(name);
+        }
+
+        /// <summary>
+        /// Test GetSysPprof
+        /// </summary>
+        [Fact]
+        public void GetSysPprofTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysPprof();
+        }
+
+        /// <summary>
+        /// Test GetSysPprofAllocs
+        /// </summary>
+        [Fact]
+        public void GetSysPprofAllocsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysPprofAllocs();
+        }
+
+        /// <summary>
+        /// Test GetSysPprofBlock
+        /// </summary>
+        [Fact]
+        public void GetSysPprofBlockTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysPprofBlock();
+        }
+
+        /// <summary>
+        /// Test GetSysPprofCmdline
+        /// </summary>
+        [Fact]
+        public void GetSysPprofCmdlineTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysPprofCmdline();
+        }
+
+        /// <summary>
+        /// Test GetSysPprofGoroutine
+        /// </summary>
+        [Fact]
+        public void GetSysPprofGoroutineTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysPprofGoroutine();
+        }
+
+        /// <summary>
+        /// Test GetSysPprofHeap
+        /// </summary>
+        [Fact]
+        public void GetSysPprofHeapTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysPprofHeap();
+        }
+
+        /// <summary>
+        /// Test GetSysPprofMutex
+        /// </summary>
+        [Fact]
+        public void GetSysPprofMutexTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysPprofMutex();
+        }
+
+        /// <summary>
+        /// Test GetSysPprofProfile
+        /// </summary>
+        [Fact]
+        public void GetSysPprofProfileTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysPprofProfile();
+        }
+
+        /// <summary>
+        /// Test GetSysPprofSymbol
+        /// </summary>
+        [Fact]
+        public void GetSysPprofSymbolTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysPprofSymbol();
+        }
+
+        /// <summary>
+        /// Test GetSysPprofThreadcreate
+        /// </summary>
+        [Fact]
+        public void GetSysPprofThreadcreateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysPprofThreadcreate();
+        }
+
+        /// <summary>
+        /// Test GetSysPprofTrace
+        /// </summary>
+        [Fact]
+        public void GetSysPprofTraceTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysPprofTrace();
+        }
+
+        /// <summary>
+        /// Test GetSysQuotasConfig
+        /// </summary>
+        [Fact]
+        public void GetSysQuotasConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysQuotasConfig();
+        }
+
+        /// <summary>
+        /// Test GetSysQuotasRateLimit
+        /// </summary>
+        [Fact]
+        public void GetSysQuotasRateLimitTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //instance.GetSysQuotasRateLimit(list);
+        }
+
+        /// <summary>
+        /// Test GetSysQuotasRateLimitName
+        /// </summary>
+        [Fact]
+        public void GetSysQuotasRateLimitNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //instance.GetSysQuotasRateLimitName(name);
+        }
+
+        /// <summary>
+        /// Test GetSysRaw
+        /// </summary>
+        [Fact]
+        public void GetSysRawTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //instance.GetSysRaw(list);
+        }
+
+        /// <summary>
+        /// Test GetSysRawPath
+        /// </summary>
+        [Fact]
+        public void GetSysRawPathTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string path = null;
             //string list = null;
-            //instance.ReadSystemRawPath(path, list);
+            //instance.GetSysRawPath(path, list);
         }
 
         /// <summary>
-        /// Test ReadSystemRekeyBackup
+        /// Test GetSysRekeyBackup
         /// </summary>
         [Fact]
-        public void ReadSystemRekeyBackupTest()
+        public void GetSysRekeyBackupTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemRekeyBackup();
+            //instance.GetSysRekeyBackup();
         }
 
         /// <summary>
-        /// Test ReadSystemRekeyInit
+        /// Test GetSysRekeyInit
         /// </summary>
         [Fact]
-        public void ReadSystemRekeyInitTest()
+        public void GetSysRekeyInitTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemRekeyInit();
+            //instance.GetSysRekeyInit();
         }
 
         /// <summary>
-        /// Test ReadSystemRekeyRecoveryKeyBackup
+        /// Test GetSysRekeyRecoveryKeyBackup
         /// </summary>
         [Fact]
-        public void ReadSystemRekeyRecoveryKeyBackupTest()
+        public void GetSysRekeyRecoveryKeyBackupTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemRekeyRecoveryKeyBackup();
+            //instance.GetSysRekeyRecoveryKeyBackup();
         }
 
         /// <summary>
-        /// Test ReadSystemRekeyVerify
+        /// Test GetSysRekeyVerify
         /// </summary>
         [Fact]
-        public void ReadSystemRekeyVerifyTest()
+        public void GetSysRekeyVerifyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemRekeyVerify();
+            //instance.GetSysRekeyVerify();
         }
 
         /// <summary>
-        /// Test ReadSystemRemountStatusMigrationId
+        /// Test GetSysRemountStatusMigrationId
         /// </summary>
         [Fact]
-        public void ReadSystemRemountStatusMigrationIdTest()
+        public void GetSysRemountStatusMigrationIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string migrationId = null;
-            //instance.ReadSystemRemountStatusMigrationId(migrationId);
+            //instance.GetSysRemountStatusMigrationId(migrationId);
         }
 
         /// <summary>
-        /// Test ReadSystemReplicationStatus
+        /// Test GetSysReplicationStatus
         /// </summary>
         [Fact]
-        public void ReadSystemReplicationStatusTest()
+        public void GetSysReplicationStatusTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemReplicationStatus();
+            //instance.GetSysReplicationStatus();
         }
 
         /// <summary>
-        /// Test ReadSystemRotateConfig
+        /// Test GetSysRotateConfig
         /// </summary>
         [Fact]
-        public void ReadSystemRotateConfigTest()
+        public void GetSysRotateConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemRotateConfig();
+            //instance.GetSysRotateConfig();
         }
 
         /// <summary>
-        /// Test ReadSystemSealStatus
+        /// Test GetSysSealStatus
         /// </summary>
         [Fact]
-        public void ReadSystemSealStatusTest()
+        public void GetSysSealStatusTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemSealStatus();
+            //instance.GetSysSealStatus();
         }
 
         /// <summary>
-        /// Test ReadSystemWrappingLookup
+        /// Test GetSysVersionHistory
         /// </summary>
         [Fact]
-        public void ReadSystemWrappingLookupTest()
+        public void GetSysVersionHistoryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.ReadSystemWrappingLookup();
+            //string list = null;
+            //instance.GetSysVersionHistory(list);
         }
 
         /// <summary>
-        /// Test UpdateSystemAuditHashPath
+        /// Test GetSysWrappingLookup
         /// </summary>
         [Fact]
-        public void UpdateSystemAuditHashPathTest()
+        public void GetSysWrappingLookupTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysWrappingLookup();
+        }
+
+        /// <summary>
+        /// Test PostSysAuditHashPath
+        /// </summary>
+        [Fact]
+        public void PostSysAuditHashPathTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string path = null;
             //SystemAuditHashRequest systemAuditHashRequest = null;
-            //instance.UpdateSystemAuditHashPath(path, systemAuditHashRequest);
+            //instance.PostSysAuditHashPath(path, systemAuditHashRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemAuditPath
+        /// Test PostSysAuditPath
         /// </summary>
         [Fact]
-        public void UpdateSystemAuditPathTest()
+        public void PostSysAuditPathTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string path = null;
             //SystemAuditRequest systemAuditRequest = null;
-            //instance.UpdateSystemAuditPath(path, systemAuditRequest);
+            //instance.PostSysAuditPath(path, systemAuditRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemAuthPath
+        /// Test PostSysAuthPath
         /// </summary>
         [Fact]
-        public void UpdateSystemAuthPathTest()
+        public void PostSysAuthPathTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string path = null;
             //SystemAuthRequest systemAuthRequest = null;
-            //instance.UpdateSystemAuthPath(path, systemAuthRequest);
+            //instance.PostSysAuthPath(path, systemAuthRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemAuthPathTune
+        /// Test PostSysAuthPathTune
         /// </summary>
         [Fact]
-        public void UpdateSystemAuthPathTuneTest()
+        public void PostSysAuthPathTuneTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string path = null;
             //SystemAuthTuneRequest systemAuthTuneRequest = null;
-            //instance.UpdateSystemAuthPathTune(path, systemAuthTuneRequest);
+            //instance.PostSysAuthPathTune(path, systemAuthTuneRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemCapabilities
+        /// Test PostSysCapabilities
         /// </summary>
         [Fact]
-        public void UpdateSystemCapabilitiesTest()
+        public void PostSysCapabilitiesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemCapabilitiesRequest systemCapabilitiesRequest = null;
-            //instance.UpdateSystemCapabilities(systemCapabilitiesRequest);
+            //instance.PostSysCapabilities(systemCapabilitiesRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemCapabilitiesAccessor
+        /// Test PostSysCapabilitiesAccessor
         /// </summary>
         [Fact]
-        public void UpdateSystemCapabilitiesAccessorTest()
+        public void PostSysCapabilitiesAccessorTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = null;
-            //instance.UpdateSystemCapabilitiesAccessor(systemCapabilitiesAccessorRequest);
+            //instance.PostSysCapabilitiesAccessor(systemCapabilitiesAccessorRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemCapabilitiesSelf
+        /// Test PostSysCapabilitiesSelf
         /// </summary>
         [Fact]
-        public void UpdateSystemCapabilitiesSelfTest()
+        public void PostSysCapabilitiesSelfTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = null;
-            //instance.UpdateSystemCapabilitiesSelf(systemCapabilitiesSelfRequest);
+            //instance.PostSysCapabilitiesSelf(systemCapabilitiesSelfRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemConfigAuditingRequestHeadersHeader
+        /// Test PostSysConfigAuditingRequestHeadersHeader
         /// </summary>
         [Fact]
-        public void UpdateSystemConfigAuditingRequestHeadersHeaderTest()
+        public void PostSysConfigAuditingRequestHeadersHeaderTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string header = null;
             //SystemConfigAuditingRequestHeadersRequest systemConfigAuditingRequestHeadersRequest = null;
-            //instance.UpdateSystemConfigAuditingRequestHeadersHeader(header, systemConfigAuditingRequestHeadersRequest);
+            //instance.PostSysConfigAuditingRequestHeadersHeader(header, systemConfigAuditingRequestHeadersRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemConfigCors
+        /// Test PostSysConfigCors
         /// </summary>
         [Fact]
-        public void UpdateSystemConfigCorsTest()
+        public void PostSysConfigCorsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemConfigCorsRequest systemConfigCorsRequest = null;
-            //instance.UpdateSystemConfigCors(systemConfigCorsRequest);
+            //instance.PostSysConfigCors(systemConfigCorsRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemConfigReloadSubsystem
+        /// Test PostSysConfigReloadSubsystem
         /// </summary>
         [Fact]
-        public void UpdateSystemConfigReloadSubsystemTest()
+        public void PostSysConfigReloadSubsystemTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string subsystem = null;
-            //instance.UpdateSystemConfigReloadSubsystem(subsystem);
+            //instance.PostSysConfigReloadSubsystem(subsystem);
         }
 
         /// <summary>
-        /// Test UpdateSystemConfigUiHeadersHeader
+        /// Test PostSysConfigUiHeadersHeader
         /// </summary>
         [Fact]
-        public void UpdateSystemConfigUiHeadersHeaderTest()
+        public void PostSysConfigUiHeadersHeaderTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string header = null;
             //SystemConfigUiHeadersRequest systemConfigUiHeadersRequest = null;
-            //instance.UpdateSystemConfigUiHeadersHeader(header, systemConfigUiHeadersRequest);
+            //instance.PostSysConfigUiHeadersHeader(header, systemConfigUiHeadersRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemGenerateRoot
+        /// Test PostSysGenerateRoot
         /// </summary>
         [Fact]
-        public void UpdateSystemGenerateRootTest()
+        public void PostSysGenerateRootTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemGenerateRootRequest systemGenerateRootRequest = null;
-            //instance.UpdateSystemGenerateRoot(systemGenerateRootRequest);
+            //instance.PostSysGenerateRoot(systemGenerateRootRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemGenerateRootAttempt
+        /// Test PostSysGenerateRootAttempt
         /// </summary>
         [Fact]
-        public void UpdateSystemGenerateRootAttemptTest()
+        public void PostSysGenerateRootAttemptTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = null;
-            //instance.UpdateSystemGenerateRootAttempt(systemGenerateRootAttemptRequest);
+            //instance.PostSysGenerateRootAttempt(systemGenerateRootAttemptRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemGenerateRootUpdate
+        /// Test PostSysGenerateRootUpdate
         /// </summary>
         [Fact]
-        public void UpdateSystemGenerateRootUpdateTest()
+        public void PostSysGenerateRootUpdateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = null;
-            //instance.UpdateSystemGenerateRootUpdate(systemGenerateRootUpdateRequest);
+            //instance.PostSysGenerateRootUpdate(systemGenerateRootUpdateRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemInit
+        /// Test PostSysInit
         /// </summary>
         [Fact]
-        public void UpdateSystemInitTest()
+        public void PostSysInitTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemInitRequest systemInitRequest = null;
-            //instance.UpdateSystemInit(systemInitRequest);
+            //instance.PostSysInit(systemInitRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemInternalCountersConfig
+        /// Test PostSysInternalCountersConfig
         /// </summary>
         [Fact]
-        public void UpdateSystemInternalCountersConfigTest()
+        public void PostSysInternalCountersConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = null;
-            //instance.UpdateSystemInternalCountersConfig(systemInternalCountersConfigRequest);
+            //instance.PostSysInternalCountersConfig(systemInternalCountersConfigRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemLeasesLookup
+        /// Test PostSysLeasesLookup
         /// </summary>
         [Fact]
-        public void UpdateSystemLeasesLookupTest()
+        public void PostSysLeasesLookupTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemLeasesLookupRequest systemLeasesLookupRequest = null;
-            //instance.UpdateSystemLeasesLookup(systemLeasesLookupRequest);
+            //instance.PostSysLeasesLookup(systemLeasesLookupRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemLeasesRenew
+        /// Test PostSysLeasesRenew
         /// </summary>
         [Fact]
-        public void UpdateSystemLeasesRenewTest()
+        public void PostSysLeasesRenewTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemLeasesRenewRequest systemLeasesRenewRequest = null;
-            //instance.UpdateSystemLeasesRenew(systemLeasesRenewRequest);
+            //instance.PostSysLeasesRenew(systemLeasesRenewRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemLeasesRenewUrlLeaseId
+        /// Test PostSysLeasesRenewUrlLeaseId
         /// </summary>
         [Fact]
-        public void UpdateSystemLeasesRenewUrlLeaseIdTest()
+        public void PostSysLeasesRenewUrlLeaseIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string urlLeaseId = null;
             //SystemLeasesRenewLeaseRequest systemLeasesRenewLeaseRequest = null;
-            //instance.UpdateSystemLeasesRenewUrlLeaseId(urlLeaseId, systemLeasesRenewLeaseRequest);
+            //instance.PostSysLeasesRenewUrlLeaseId(urlLeaseId, systemLeasesRenewLeaseRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemLeasesRevoke
+        /// Test PostSysLeasesRevoke
         /// </summary>
         [Fact]
-        public void UpdateSystemLeasesRevokeTest()
+        public void PostSysLeasesRevokeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemLeasesRevokeRequest systemLeasesRevokeRequest = null;
-            //instance.UpdateSystemLeasesRevoke(systemLeasesRevokeRequest);
+            //instance.PostSysLeasesRevoke(systemLeasesRevokeRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemLeasesRevokeForcePrefix
+        /// Test PostSysLeasesRevokeForcePrefix
         /// </summary>
         [Fact]
-        public void UpdateSystemLeasesRevokeForcePrefixTest()
+        public void PostSysLeasesRevokeForcePrefixTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string prefix = null;
-            //instance.UpdateSystemLeasesRevokeForcePrefix(prefix);
+            //instance.PostSysLeasesRevokeForcePrefix(prefix);
         }
 
         /// <summary>
-        /// Test UpdateSystemLeasesRevokePrefixPrefix
+        /// Test PostSysLeasesRevokePrefixPrefix
         /// </summary>
         [Fact]
-        public void UpdateSystemLeasesRevokePrefixPrefixTest()
+        public void PostSysLeasesRevokePrefixPrefixTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string prefix = null;
             //SystemLeasesRevokePrefixRequest systemLeasesRevokePrefixRequest = null;
-            //instance.UpdateSystemLeasesRevokePrefixPrefix(prefix, systemLeasesRevokePrefixRequest);
+            //instance.PostSysLeasesRevokePrefixPrefix(prefix, systemLeasesRevokePrefixRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemLeasesRevokeUrlLeaseId
+        /// Test PostSysLeasesRevokeUrlLeaseId
         /// </summary>
         [Fact]
-        public void UpdateSystemLeasesRevokeUrlLeaseIdTest()
+        public void PostSysLeasesRevokeUrlLeaseIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string urlLeaseId = null;
             //SystemLeasesRevokeLeaseRequest systemLeasesRevokeLeaseRequest = null;
-            //instance.UpdateSystemLeasesRevokeUrlLeaseId(urlLeaseId, systemLeasesRevokeLeaseRequest);
+            //instance.PostSysLeasesRevokeUrlLeaseId(urlLeaseId, systemLeasesRevokeLeaseRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemLeasesTidy
+        /// Test PostSysLeasesTidy
         /// </summary>
         [Fact]
-        public void UpdateSystemLeasesTidyTest()
+        public void PostSysLeasesTidyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.UpdateSystemLeasesTidy();
+            //instance.PostSysLeasesTidy();
         }
 
         /// <summary>
-        /// Test UpdateSystemLoggers
+        /// Test PostSysLoggers
         /// </summary>
         [Fact]
-        public void UpdateSystemLoggersTest()
+        public void PostSysLoggersTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemLoggersRequest systemLoggersRequest = null;
-            //instance.UpdateSystemLoggers(systemLoggersRequest);
+            //instance.PostSysLoggers(systemLoggersRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemLoggersName
+        /// Test PostSysLoggersName
         /// </summary>
         [Fact]
-        public void UpdateSystemLoggersNameTest()
+        public void PostSysLoggersNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //SystemLoggersRequest systemLoggersRequest = null;
-            //instance.UpdateSystemLoggersName(name, systemLoggersRequest);
+            //instance.PostSysLoggersName(name, systemLoggersRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemMfaValidate
+        /// Test PostSysMfaValidate
         /// </summary>
         [Fact]
-        public void UpdateSystemMfaValidateTest()
+        public void PostSysMfaValidateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemMfaValidateRequest systemMfaValidateRequest = null;
-            //instance.UpdateSystemMfaValidate(systemMfaValidateRequest);
+            //instance.PostSysMfaValidate(systemMfaValidateRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemMountsPath
+        /// Test PostSysMountsPath
         /// </summary>
         [Fact]
-        public void UpdateSystemMountsPathTest()
+        public void PostSysMountsPathTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string path = null;
             //SystemMountsRequest systemMountsRequest = null;
-            //instance.UpdateSystemMountsPath(path, systemMountsRequest);
+            //instance.PostSysMountsPath(path, systemMountsRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemMountsPathTune
+        /// Test PostSysMountsPathTune
         /// </summary>
         [Fact]
-        public void UpdateSystemMountsPathTuneTest()
+        public void PostSysMountsPathTuneTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string path = null;
             //SystemMountsTuneRequest systemMountsTuneRequest = null;
-            //instance.UpdateSystemMountsPathTune(path, systemMountsTuneRequest);
+            //instance.PostSysMountsPathTune(path, systemMountsTuneRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemPluginsCatalogName
+        /// Test PostSysPluginsCatalogName
         /// </summary>
         [Fact]
-        public void UpdateSystemPluginsCatalogNameTest()
+        public void PostSysPluginsCatalogNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //SystemPluginsCatalogRequest systemPluginsCatalogRequest = null;
-            //instance.UpdateSystemPluginsCatalogName(name, systemPluginsCatalogRequest);
+            //instance.PostSysPluginsCatalogName(name, systemPluginsCatalogRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemPluginsCatalogTypeName
+        /// Test PostSysPluginsCatalogTypeName
         /// </summary>
         [Fact]
-        public void UpdateSystemPluginsCatalogTypeNameTest()
+        public void PostSysPluginsCatalogTypeNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string type = null;
             //SystemPluginsCatalogRequest systemPluginsCatalogRequest = null;
-            //instance.UpdateSystemPluginsCatalogTypeName(name, type, systemPluginsCatalogRequest);
+            //instance.PostSysPluginsCatalogTypeName(name, type, systemPluginsCatalogRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemPluginsReloadBackend
+        /// Test PostSysPluginsReloadBackend
         /// </summary>
         [Fact]
-        public void UpdateSystemPluginsReloadBackendTest()
+        public void PostSysPluginsReloadBackendTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = null;
-            //instance.UpdateSystemPluginsReloadBackend(systemPluginsReloadBackendRequest);
+            //instance.PostSysPluginsReloadBackend(systemPluginsReloadBackendRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemPoliciesAclName
+        /// Test PostSysPoliciesAclName
         /// </summary>
         [Fact]
-        public void UpdateSystemPoliciesAclNameTest()
+        public void PostSysPoliciesAclNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //SystemPoliciesAclRequest systemPoliciesAclRequest = null;
-            //instance.UpdateSystemPoliciesAclName(name, systemPoliciesAclRequest);
+            //instance.PostSysPoliciesAclName(name, systemPoliciesAclRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemPoliciesPasswordName
+        /// Test PostSysPoliciesPasswordName
         /// </summary>
         [Fact]
-        public void UpdateSystemPoliciesPasswordNameTest()
+        public void PostSysPoliciesPasswordNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //SystemPoliciesPasswordRequest systemPoliciesPasswordRequest = null;
-            //instance.UpdateSystemPoliciesPasswordName(name, systemPoliciesPasswordRequest);
+            //instance.PostSysPoliciesPasswordName(name, systemPoliciesPasswordRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemPolicyName
+        /// Test PostSysPolicyName
         /// </summary>
         [Fact]
-        public void UpdateSystemPolicyNameTest()
+        public void PostSysPolicyNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //SystemPolicyRequest systemPolicyRequest = null;
-            //instance.UpdateSystemPolicyName(name, systemPolicyRequest);
+            //instance.PostSysPolicyName(name, systemPolicyRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemQuotasConfig
+        /// Test PostSysQuotasConfig
         /// </summary>
         [Fact]
-        public void UpdateSystemQuotasConfigTest()
+        public void PostSysQuotasConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemQuotasConfigRequest systemQuotasConfigRequest = null;
-            //instance.UpdateSystemQuotasConfig(systemQuotasConfigRequest);
+            //instance.PostSysQuotasConfig(systemQuotasConfigRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemQuotasRateLimitName
+        /// Test PostSysQuotasRateLimitName
         /// </summary>
         [Fact]
-        public void UpdateSystemQuotasRateLimitNameTest()
+        public void PostSysQuotasRateLimitNameTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //SystemQuotasRateLimitRequest systemQuotasRateLimitRequest = null;
-            //instance.UpdateSystemQuotasRateLimitName(name, systemQuotasRateLimitRequest);
+            //instance.PostSysQuotasRateLimitName(name, systemQuotasRateLimitRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemRaw
+        /// Test PostSysRaw
         /// </summary>
         [Fact]
-        public void UpdateSystemRawTest()
+        public void PostSysRawTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemRawRequest systemRawRequest = null;
-            //instance.UpdateSystemRaw(systemRawRequest);
+            //instance.PostSysRaw(systemRawRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemRawPath
+        /// Test PostSysRawPath
         /// </summary>
         [Fact]
-        public void UpdateSystemRawPathTest()
+        public void PostSysRawPathTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string path = null;
             //SystemRawRequest systemRawRequest = null;
-            //instance.UpdateSystemRawPath(path, systemRawRequest);
+            //instance.PostSysRawPath(path, systemRawRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemRekeyInit
+        /// Test PostSysRekeyInit
         /// </summary>
         [Fact]
-        public void UpdateSystemRekeyInitTest()
+        public void PostSysRekeyInitTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemRekeyInitRequest systemRekeyInitRequest = null;
-            //instance.UpdateSystemRekeyInit(systemRekeyInitRequest);
+            //instance.PostSysRekeyInit(systemRekeyInitRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemRekeyUpdate
+        /// Test PostSysRekeyUpdate
         /// </summary>
         [Fact]
-        public void UpdateSystemRekeyUpdateTest()
+        public void PostSysRekeyUpdateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemRekeyUpdateRequest systemRekeyUpdateRequest = null;
-            //instance.UpdateSystemRekeyUpdate(systemRekeyUpdateRequest);
+            //instance.PostSysRekeyUpdate(systemRekeyUpdateRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemRekeyVerify
+        /// Test PostSysRekeyVerify
         /// </summary>
         [Fact]
-        public void UpdateSystemRekeyVerifyTest()
+        public void PostSysRekeyVerifyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemRekeyVerifyRequest systemRekeyVerifyRequest = null;
-            //instance.UpdateSystemRekeyVerify(systemRekeyVerifyRequest);
+            //instance.PostSysRekeyVerify(systemRekeyVerifyRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemRemount
+        /// Test PostSysRemount
         /// </summary>
         [Fact]
-        public void UpdateSystemRemountTest()
+        public void PostSysRemountTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemRemountRequest systemRemountRequest = null;
-            //instance.UpdateSystemRemount(systemRemountRequest);
+            //instance.PostSysRemount(systemRemountRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemRenew
+        /// Test PostSysRenew
         /// </summary>
         [Fact]
-        public void UpdateSystemRenewTest()
+        public void PostSysRenewTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemRenewRequest systemRenewRequest = null;
-            //instance.UpdateSystemRenew(systemRenewRequest);
+            //instance.PostSysRenew(systemRenewRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemRenewUrlLeaseId
+        /// Test PostSysRenewUrlLeaseId
         /// </summary>
         [Fact]
-        public void UpdateSystemRenewUrlLeaseIdTest()
+        public void PostSysRenewUrlLeaseIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string urlLeaseId = null;
             //SystemRenewLeaseRequest systemRenewLeaseRequest = null;
-            //instance.UpdateSystemRenewUrlLeaseId(urlLeaseId, systemRenewLeaseRequest);
+            //instance.PostSysRenewUrlLeaseId(urlLeaseId, systemRenewLeaseRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemRevoke
+        /// Test PostSysRevoke
         /// </summary>
         [Fact]
-        public void UpdateSystemRevokeTest()
+        public void PostSysRevokeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemRevokeRequest systemRevokeRequest = null;
-            //instance.UpdateSystemRevoke(systemRevokeRequest);
+            //instance.PostSysRevoke(systemRevokeRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemRevokeForcePrefix
+        /// Test PostSysRevokeForcePrefix
         /// </summary>
         [Fact]
-        public void UpdateSystemRevokeForcePrefixTest()
+        public void PostSysRevokeForcePrefixTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string prefix = null;
-            //instance.UpdateSystemRevokeForcePrefix(prefix);
+            //instance.PostSysRevokeForcePrefix(prefix);
         }
 
         /// <summary>
-        /// Test UpdateSystemRevokePrefixPrefix
+        /// Test PostSysRevokePrefixPrefix
         /// </summary>
         [Fact]
-        public void UpdateSystemRevokePrefixPrefixTest()
+        public void PostSysRevokePrefixPrefixTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string prefix = null;
             //SystemRevokePrefixRequest systemRevokePrefixRequest = null;
-            //instance.UpdateSystemRevokePrefixPrefix(prefix, systemRevokePrefixRequest);
+            //instance.PostSysRevokePrefixPrefix(prefix, systemRevokePrefixRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemRevokeUrlLeaseId
+        /// Test PostSysRevokeUrlLeaseId
         /// </summary>
         [Fact]
-        public void UpdateSystemRevokeUrlLeaseIdTest()
+        public void PostSysRevokeUrlLeaseIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string urlLeaseId = null;
             //SystemRevokeLeaseRequest systemRevokeLeaseRequest = null;
-            //instance.UpdateSystemRevokeUrlLeaseId(urlLeaseId, systemRevokeLeaseRequest);
+            //instance.PostSysRevokeUrlLeaseId(urlLeaseId, systemRevokeLeaseRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemRotate
+        /// Test PostSysRotate
         /// </summary>
         [Fact]
-        public void UpdateSystemRotateTest()
+        public void PostSysRotateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.UpdateSystemRotate();
+            //instance.PostSysRotate();
         }
 
         /// <summary>
-        /// Test UpdateSystemRotateConfig
+        /// Test PostSysRotateConfig
         /// </summary>
         [Fact]
-        public void UpdateSystemRotateConfigTest()
+        public void PostSysRotateConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemRotateConfigRequest systemRotateConfigRequest = null;
-            //instance.UpdateSystemRotateConfig(systemRotateConfigRequest);
+            //instance.PostSysRotateConfig(systemRotateConfigRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemSeal
+        /// Test PostSysSeal
         /// </summary>
         [Fact]
-        public void UpdateSystemSealTest()
+        public void PostSysSealTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.UpdateSystemSeal();
+            //instance.PostSysSeal();
         }
 
         /// <summary>
-        /// Test UpdateSystemStepDown
+        /// Test PostSysStepDown
         /// </summary>
         [Fact]
-        public void UpdateSystemStepDownTest()
+        public void PostSysStepDownTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.UpdateSystemStepDown();
+            //instance.PostSysStepDown();
         }
 
         /// <summary>
-        /// Test UpdateSystemToolsHash
+        /// Test PostSysToolsHash
         /// </summary>
         [Fact]
-        public void UpdateSystemToolsHashTest()
+        public void PostSysToolsHashTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemToolsHashRequest systemToolsHashRequest = null;
-            //instance.UpdateSystemToolsHash(systemToolsHashRequest);
+            //instance.PostSysToolsHash(systemToolsHashRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemToolsHashUrlalgorithm
+        /// Test PostSysToolsHashUrlalgorithm
         /// </summary>
         [Fact]
-        public void UpdateSystemToolsHashUrlalgorithmTest()
+        public void PostSysToolsHashUrlalgorithmTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string urlalgorithm = null;
             //SystemToolsHashRequest systemToolsHashRequest = null;
-            //instance.UpdateSystemToolsHashUrlalgorithm(urlalgorithm, systemToolsHashRequest);
+            //instance.PostSysToolsHashUrlalgorithm(urlalgorithm, systemToolsHashRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemToolsRandom
+        /// Test PostSysToolsRandom
         /// </summary>
         [Fact]
-        public void UpdateSystemToolsRandomTest()
+        public void PostSysToolsRandomTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemToolsRandomRequest systemToolsRandomRequest = null;
-            //instance.UpdateSystemToolsRandom(systemToolsRandomRequest);
+            //instance.PostSysToolsRandom(systemToolsRandomRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemToolsRandomSource
+        /// Test PostSysToolsRandomSource
         /// </summary>
         [Fact]
-        public void UpdateSystemToolsRandomSourceTest()
+        public void PostSysToolsRandomSourceTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string source = null;
             //SystemToolsRandomRequest systemToolsRandomRequest = null;
-            //instance.UpdateSystemToolsRandomSource(source, systemToolsRandomRequest);
+            //instance.PostSysToolsRandomSource(source, systemToolsRandomRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemToolsRandomSourceUrlbytes
+        /// Test PostSysToolsRandomSourceUrlbytes
         /// </summary>
         [Fact]
-        public void UpdateSystemToolsRandomSourceUrlbytesTest()
+        public void PostSysToolsRandomSourceUrlbytesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string source = null;
             //string urlbytes = null;
             //SystemToolsRandomRequest systemToolsRandomRequest = null;
-            //instance.UpdateSystemToolsRandomSourceUrlbytes(source, urlbytes, systemToolsRandomRequest);
+            //instance.PostSysToolsRandomSourceUrlbytes(source, urlbytes, systemToolsRandomRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemToolsRandomUrlbytes
+        /// Test PostSysToolsRandomUrlbytes
         /// </summary>
         [Fact]
-        public void UpdateSystemToolsRandomUrlbytesTest()
+        public void PostSysToolsRandomUrlbytesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string urlbytes = null;
             //SystemToolsRandomRequest systemToolsRandomRequest = null;
-            //instance.UpdateSystemToolsRandomUrlbytes(urlbytes, systemToolsRandomRequest);
+            //instance.PostSysToolsRandomUrlbytes(urlbytes, systemToolsRandomRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemUnseal
+        /// Test PostSysUnseal
         /// </summary>
         [Fact]
-        public void UpdateSystemUnsealTest()
+        public void PostSysUnsealTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemUnsealRequest systemUnsealRequest = null;
-            //instance.UpdateSystemUnseal(systemUnsealRequest);
+            //instance.PostSysUnseal(systemUnsealRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemWrappingLookup
+        /// Test PostSysWrappingLookup
         /// </summary>
         [Fact]
-        public void UpdateSystemWrappingLookupTest()
+        public void PostSysWrappingLookupTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemWrappingLookupRequest systemWrappingLookupRequest = null;
-            //instance.UpdateSystemWrappingLookup(systemWrappingLookupRequest);
+            //instance.PostSysWrappingLookup(systemWrappingLookupRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemWrappingRewrap
+        /// Test PostSysWrappingRewrap
         /// </summary>
         [Fact]
-        public void UpdateSystemWrappingRewrapTest()
+        public void PostSysWrappingRewrapTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemWrappingRewrapRequest systemWrappingRewrapRequest = null;
-            //instance.UpdateSystemWrappingRewrap(systemWrappingRewrapRequest);
+            //instance.PostSysWrappingRewrap(systemWrappingRewrapRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemWrappingUnwrap
+        /// Test PostSysWrappingUnwrap
         /// </summary>
         [Fact]
-        public void UpdateSystemWrappingUnwrapTest()
+        public void PostSysWrappingUnwrapTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = null;
-            //instance.UpdateSystemWrappingUnwrap(systemWrappingUnwrapRequest);
+            //instance.PostSysWrappingUnwrap(systemWrappingUnwrapRequest);
         }
 
         /// <summary>
-        /// Test UpdateSystemWrappingWrap
+        /// Test PostSysWrappingWrap
         /// </summary>
         [Fact]
-        public void UpdateSystemWrappingWrapTest()
+        public void PostSysWrappingWrapTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //instance.UpdateSystemWrappingWrap();
+            //instance.PostSysWrappingWrap();
         }
     }
 }

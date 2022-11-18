@@ -32,6 +32,46 @@ namespace Vault.Model
     public partial class SshRolesRequest : IEquatable<SshRolesRequest>, IValidatableObject
     {
         /// <summary>
+        /// When supplied, this value specifies a signing algorithm for the key. Possible values: ssh-rsa, rsa-sha2-256, rsa-sha2-512, default, or the empty string.
+        /// </summary>
+        /// <value>When supplied, this value specifies a signing algorithm for the key. Possible values: ssh-rsa, rsa-sha2-256, rsa-sha2-512, default, or the empty string.</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum AlgorithmSignerEnum
+        {
+            /// <summary>
+            /// Enum Empty for value: 
+            /// </summary>
+            [EnumMember(Value = "")]
+            Empty = 1,
+
+            /// <summary>
+            /// Enum SshRsa for value: ssh-rsa
+            /// </summary>
+            [EnumMember(Value = "ssh-rsa")]
+            SshRsa = 2,
+
+            /// <summary>
+            /// Enum RsaSha2256 for value: rsa-sha2-256
+            /// </summary>
+            [EnumMember(Value = "rsa-sha2-256")]
+            RsaSha2256 = 3,
+
+            /// <summary>
+            /// Enum RsaSha2512 for value: rsa-sha2-512
+            /// </summary>
+            [EnumMember(Value = "rsa-sha2-512")]
+            RsaSha2512 = 4
+
+        }
+
+
+        /// <summary>
+        /// When supplied, this value specifies a signing algorithm for the key. Possible values: ssh-rsa, rsa-sha2-256, rsa-sha2-512, default, or the empty string.
+        /// </summary>
+        /// <value>When supplied, this value specifies a signing algorithm for the key. Possible values: ssh-rsa, rsa-sha2-256, rsa-sha2-512, default, or the empty string.</value>
+        [DataMember(Name = "algorithm_signer", EmitDefaultValue = false)]
+        public AlgorithmSignerEnum? AlgorithmSigner { get; set; }
+        /// <summary>
         /// [Required for all types] Type of key used to login to hosts. It can be either &#39;otp&#39;, &#39;dynamic&#39; or &#39;ca&#39;. &#39;otp&#39; type requires agent to be installed in remote hosts.
         /// </summary>
         /// <value>[Required for all types] Type of key used to login to hosts. It can be either &#39;otp&#39;, &#39;dynamic&#39; or &#39;ca&#39;. &#39;otp&#39; type requires agent to be installed in remote hosts.</value>
@@ -99,7 +139,7 @@ namespace Vault.Model
         /// <param name="notBeforeDuration">The duration that the SSH certificate should be backdated by at issuance. (default to 30).</param>
         /// <param name="port">[Optional for Dynamic type] [Optional for OTP type] [Not applicable for CA type] Port number for SSH connection. Default is &#39;22&#39;. Port number does not play any role in creation of OTP. For &#39;otp&#39; type, this is just a way to inform client about the port number to use. Port number will be returned to client by Vault server along with OTP..</param>
         /// <param name="ttl">[Not applicable for Dynamic type] [Not applicable for OTP type] [Optional for CA type] The lease duration if no specific lease duration is requested. The lease duration controls the expiration of certificates issued by this backend. Defaults to the value of max_ttl..</param>
-        public SshRolesRequest(string adminUser = default(string), string algorithmSigner = default(string), bool allowBareDomains = default(bool), bool allowHostCertificates = false, bool allowSubdomains = default(bool), bool allowUserCertificates = false, bool allowUserKeyIds = default(bool), string allowedCriticalOptions = default(string), string allowedDomains = default(string), bool allowedDomainsTemplate = false, string allowedExtensions = default(string), Object allowedUserKeyLengths = default(Object), string allowedUsers = default(string), bool allowedUsersTemplate = false, string cidrList = default(string), Object defaultCriticalOptions = default(Object), Object defaultExtensions = default(Object), bool defaultExtensionsTemplate = false, string defaultUser = default(string), bool defaultUserTemplate = false, string excludeCidrList = default(string), string installScript = default(string), string key = default(string), int keyBits = default(int), string keyIdFormat = default(string), string keyOptionSpecs = default(string), KeyTypeEnum? keyType = default(KeyTypeEnum?), int maxTtl = default(int), int notBeforeDuration = 30, int port = default(int), int ttl = default(int))
+        public SshRolesRequest(string adminUser = default(string), AlgorithmSignerEnum? algorithmSigner = default(AlgorithmSignerEnum?), bool allowBareDomains = default(bool), bool allowHostCertificates = false, bool allowSubdomains = default(bool), bool allowUserCertificates = false, bool allowUserKeyIds = default(bool), string allowedCriticalOptions = default(string), string allowedDomains = default(string), bool allowedDomainsTemplate = false, string allowedExtensions = default(string), Object allowedUserKeyLengths = default(Object), string allowedUsers = default(string), bool allowedUsersTemplate = false, string cidrList = default(string), Object defaultCriticalOptions = default(Object), Object defaultExtensions = default(Object), bool defaultExtensionsTemplate = false, string defaultUser = default(string), bool defaultUserTemplate = false, string excludeCidrList = default(string), string installScript = default(string), string key = default(string), int keyBits = default(int), string keyIdFormat = default(string), string keyOptionSpecs = default(string), KeyTypeEnum? keyType = default(KeyTypeEnum?), int maxTtl = default(int), int notBeforeDuration = 30, int port = default(int), int ttl = default(int))
         {
             this.AdminUser = adminUser;
             this.AlgorithmSigner = algorithmSigner;
@@ -140,13 +180,6 @@ namespace Vault.Model
         /// <value>[Required for Dynamic type] [Not applicable for OTP type] [Not applicable for CA type] Admin user at remote host. The shared key being registered should be for this user and should have root privileges. Everytime a dynamic credential is being generated for other users, Vault uses this admin username to login to remote host and install the generated credential for the other user.</value>
         [DataMember(Name = "admin_user", EmitDefaultValue = false)]
         public string AdminUser { get; set; }
-
-        /// <summary>
-        /// When supplied, this value specifies a signing algorithm for the key. Possible values: ssh-rsa, rsa-sha2-256, rsa-sha2-512, default, or the empty string.
-        /// </summary>
-        /// <value>When supplied, this value specifies a signing algorithm for the key. Possible values: ssh-rsa, rsa-sha2-256, rsa-sha2-512, default, or the empty string.</value>
-        [DataMember(Name = "algorithm_signer", EmitDefaultValue = false)]
-        public string AlgorithmSigner { get; set; }
 
         /// <summary>
         /// [Not applicable for Dynamic type] [Not applicable for OTP type] [Optional for CA type] If set, host certificates that are requested are allowed to use the base domains listed in \&quot;allowed_domains\&quot;, e.g. \&quot;example.com\&quot;. This is a separate option as in some cases this can be considered a security threat.
@@ -425,8 +458,7 @@ namespace Vault.Model
                 ) && 
                 (
                     this.AlgorithmSigner == input.AlgorithmSigner ||
-                    (this.AlgorithmSigner != null &&
-                    this.AlgorithmSigner.Equals(input.AlgorithmSigner))
+                    this.AlgorithmSigner.Equals(input.AlgorithmSigner)
                 ) && 
                 (
                     this.AllowBareDomains == input.AllowBareDomains ||
@@ -573,10 +605,7 @@ namespace Vault.Model
                 {
                     hashCode = (hashCode * 59) + this.AdminUser.GetHashCode();
                 }
-                if (this.AlgorithmSigner != null)
-                {
-                    hashCode = (hashCode * 59) + this.AlgorithmSigner.GetHashCode();
-                }
+                hashCode = (hashCode * 59) + this.AlgorithmSigner.GetHashCode();
                 hashCode = (hashCode * 59) + this.AllowBareDomains.GetHashCode();
                 hashCode = (hashCode * 59) + this.AllowHostCertificates.GetHashCode();
                 hashCode = (hashCode * 59) + this.AllowSubdomains.GetHashCode();
