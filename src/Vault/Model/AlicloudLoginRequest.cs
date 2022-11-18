@@ -34,14 +34,23 @@ namespace Vault.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AlicloudLoginRequest" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected AlicloudLoginRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AlicloudLoginRequest" /> class.
+        /// </summary>
         /// <param name="identityRequestHeaders">The request headers. This must include the headers over which AliCloud has included a signature..</param>
         /// <param name="identityRequestUrl">Base64-encoded full URL against which to make the AliCloud request..</param>
-        /// <param name="role">Name of the role against which the login is being attempted. If &#39;role&#39; is not specified, then the login endpoint looks for a role name in the ARN returned by the GetCallerIdentity request. If a matching role is not found, login fails..</param>
+        /// <param name="role">Name of the role against which the login is being attempted. If &#39;role&#39; is not specified, then the login endpoint looks for a role name in the ARN returned by the GetCallerIdentity request. If a matching role is not found, login fails. (required).</param>
         public AlicloudLoginRequest(string identityRequestHeaders = default(string), string identityRequestUrl = default(string), string role = default(string))
         {
+            // to ensure "role" is required (not null)
+            if (role == null) {
+                throw new ArgumentNullException("role is a required property for AlicloudLoginRequest and cannot be null");
+            }
+            this.Role = role;
             this.IdentityRequestHeaders = identityRequestHeaders;
             this.IdentityRequestUrl = identityRequestUrl;
-            this.Role = role;
         }
 
         /// <summary>
@@ -62,7 +71,7 @@ namespace Vault.Model
         /// Name of the role against which the login is being attempted. If &#39;role&#39; is not specified, then the login endpoint looks for a role name in the ARN returned by the GetCallerIdentity request. If a matching role is not found, login fails.
         /// </summary>
         /// <value>Name of the role against which the login is being attempted. If &#39;role&#39; is not specified, then the login endpoint looks for a role name in the ARN returned by the GetCallerIdentity request. If a matching role is not found, login fails.</value>
-        [DataMember(Name = "role", EmitDefaultValue = false)]
+        [DataMember(Name = "role", IsRequired = true, EmitDefaultValue = false)]
         public string Role { get; set; }
 
         /// <summary>

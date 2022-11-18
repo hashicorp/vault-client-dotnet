@@ -4,175 +4,176 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DeleteSystemAuditPath**](System.md#deletesystemauditpath) | **DELETE** /sys/audit/{path} | Disable the audit device at the given path.
-[**DeleteSystemAuthPath**](System.md#deletesystemauthpath) | **DELETE** /sys/auth/{path} | Disable the auth method at the given auth path
-[**DeleteSystemConfigAuditingRequestHeadersHeader**](System.md#deletesystemconfigauditingrequestheadersheader) | **DELETE** /sys/config/auditing/request-headers/{header} | Disable auditing of the given request header.
-[**DeleteSystemConfigCors**](System.md#deletesystemconfigcors) | **DELETE** /sys/config/cors | Remove any CORS settings.
-[**DeleteSystemConfigUiHeadersHeader**](System.md#deletesystemconfiguiheadersheader) | **DELETE** /sys/config/ui/headers/{header} | Remove a UI header.
-[**DeleteSystemGenerateRoot**](System.md#deletesystemgenerateroot) | **DELETE** /sys/generate-root | Cancels any in-progress root generation attempt.
-[**DeleteSystemGenerateRootAttempt**](System.md#deletesystemgeneraterootattempt) | **DELETE** /sys/generate-root/attempt | Cancels any in-progress root generation attempt.
-[**DeleteSystemLoggers**](System.md#deletesystemloggers) | **DELETE** /sys/loggers | Revert the all loggers to use log level provided in config.
-[**DeleteSystemLoggersName**](System.md#deletesystemloggersname) | **DELETE** /sys/loggers/{name} | Revert a single logger to use log level provided in config.
-[**DeleteSystemMountsPath**](System.md#deletesystemmountspath) | **DELETE** /sys/mounts/{path} | Disable the mount point specified at the given path.
-[**DeleteSystemPluginsCatalogName**](System.md#deletesystempluginscatalogname) | **DELETE** /sys/plugins/catalog/{name} | Remove the plugin with the given name.
-[**DeleteSystemPluginsCatalogTypeName**](System.md#deletesystempluginscatalogtypename) | **DELETE** /sys/plugins/catalog/{type}/{name} | Remove the plugin with the given name.
-[**DeleteSystemPoliciesAclName**](System.md#deletesystempoliciesaclname) | **DELETE** /sys/policies/acl/{name} | Delete the ACL policy with the given name.
-[**DeleteSystemPoliciesPasswordName**](System.md#deletesystempoliciespasswordname) | **DELETE** /sys/policies/password/{name} | Delete a password policy.
-[**DeleteSystemPolicyName**](System.md#deletesystempolicyname) | **DELETE** /sys/policy/{name} | Delete the policy with the given name.
-[**DeleteSystemQuotasRateLimitName**](System.md#deletesystemquotasratelimitname) | **DELETE** /sys/quotas/rate-limit/{name} | 
-[**DeleteSystemRaw**](System.md#deletesystemraw) | **DELETE** /sys/raw | Delete the key with given path.
-[**DeleteSystemRawPath**](System.md#deletesystemrawpath) | **DELETE** /sys/raw/{path} | Delete the key with given path.
-[**DeleteSystemRekeyBackup**](System.md#deletesystemrekeybackup) | **DELETE** /sys/rekey/backup | Delete the backup copy of PGP-encrypted unseal keys.
-[**DeleteSystemRekeyInit**](System.md#deletesystemrekeyinit) | **DELETE** /sys/rekey/init | Cancels any in-progress rekey.
-[**DeleteSystemRekeyRecoveryKeyBackup**](System.md#deletesystemrekeyrecoverykeybackup) | **DELETE** /sys/rekey/recovery-key-backup | Allows fetching or deleting the backup of the rotated unseal keys.
-[**DeleteSystemRekeyVerify**](System.md#deletesystemrekeyverify) | **DELETE** /sys/rekey/verify | Cancel any in-progress rekey verification operation.
-[**ListSystemConfigUiHeaders**](System.md#listsystemconfiguiheaders) | **GET** /sys/config/ui/headers/ | Return a list of configured UI headers.
-[**ListSystemLeasesLookup**](System.md#listsystemleaseslookup) | **GET** /sys/leases/lookup/ | Returns a list of lease ids.
-[**ListSystemLeasesLookupPrefix**](System.md#listsystemleaseslookupprefix) | **GET** /sys/leases/lookup/{prefix} | Returns a list of lease ids.
-[**ListSystemPluginsCatalogType**](System.md#listsystempluginscatalogtype) | **GET** /sys/plugins/catalog/{type} | List the plugins in the catalog.
-[**ListSystemPoliciesAcl**](System.md#listsystempoliciesacl) | **GET** /sys/policies/acl | List the configured access control policies.
-[**ListSystemPoliciesPassword**](System.md#listsystempoliciespassword) | **GET** /sys/policies/password | List the existing password policies.
-[**ListSystemQuotasRateLimit**](System.md#listsystemquotasratelimit) | **GET** /sys/quotas/rate-limit | 
-[**ListSystemVersionHistory**](System.md#listsystemversionhistory) | **GET** /sys/version-history/ | Returns map of historical version change entries
-[**ReadSystemAudit**](System.md#readsystemaudit) | **GET** /sys/audit | List the enabled audit devices.
-[**ReadSystemAuth**](System.md#readsystemauth) | **GET** /sys/auth | List the currently enabled credential backends.
-[**ReadSystemAuthPath**](System.md#readsystemauthpath) | **GET** /sys/auth/{path} | Read the configuration of the auth engine at the given path.
-[**ReadSystemAuthPathTune**](System.md#readsystemauthpathtune) | **GET** /sys/auth/{path}/tune | Reads the given auth path&#39;s configuration.
-[**ReadSystemConfigAuditingRequestHeaders**](System.md#readsystemconfigauditingrequestheaders) | **GET** /sys/config/auditing/request-headers | List the request headers that are configured to be audited.
-[**ReadSystemConfigAuditingRequestHeadersHeader**](System.md#readsystemconfigauditingrequestheadersheader) | **GET** /sys/config/auditing/request-headers/{header} | List the information for the given request header.
-[**ReadSystemConfigCors**](System.md#readsystemconfigcors) | **GET** /sys/config/cors | Return the current CORS settings.
-[**ReadSystemConfigStateSanitized**](System.md#readsystemconfigstatesanitized) | **GET** /sys/config/state/sanitized | Return a sanitized version of the Vault server configuration.
-[**ReadSystemConfigUiHeadersHeader**](System.md#readsystemconfiguiheadersheader) | **GET** /sys/config/ui/headers/{header} | Return the given UI header&#39;s configuration
-[**ReadSystemGenerateRoot**](System.md#readsystemgenerateroot) | **GET** /sys/generate-root | Read the configuration and progress of the current root generation attempt.
-[**ReadSystemGenerateRootAttempt**](System.md#readsystemgeneraterootattempt) | **GET** /sys/generate-root/attempt | Read the configuration and progress of the current root generation attempt.
-[**ReadSystemHaStatus**](System.md#readsystemhastatus) | **GET** /sys/ha-status | Check the HA status of a Vault cluster
-[**ReadSystemHealth**](System.md#readsystemhealth) | **GET** /sys/health | Returns the health status of Vault.
-[**ReadSystemHostInfo**](System.md#readsystemhostinfo) | **GET** /sys/host-info | Information about the host instance that this Vault server is running on.
-[**ReadSystemInFlightReq**](System.md#readsysteminflightreq) | **GET** /sys/in-flight-req | reports in-flight requests
-[**ReadSystemInit**](System.md#readsysteminit) | **GET** /sys/init | Returns the initialization status of Vault.
-[**ReadSystemInternalCountersActivity**](System.md#readsysteminternalcountersactivity) | **GET** /sys/internal/counters/activity | Report the client count metrics, for this namespace and all child namespaces.
-[**ReadSystemInternalCountersActivityExport**](System.md#readsysteminternalcountersactivityexport) | **GET** /sys/internal/counters/activity/export | Report the client count metrics, for this namespace and all child namespaces.
-[**ReadSystemInternalCountersActivityMonthly**](System.md#readsysteminternalcountersactivitymonthly) | **GET** /sys/internal/counters/activity/monthly | Report the number of clients for this month, for this namespace and all child namespaces.
-[**ReadSystemInternalCountersConfig**](System.md#readsysteminternalcountersconfig) | **GET** /sys/internal/counters/config | Read the client count tracking configuration.
-[**ReadSystemInternalCountersEntities**](System.md#readsysteminternalcountersentities) | **GET** /sys/internal/counters/entities | Backwards compatibility is not guaranteed for this API
-[**ReadSystemInternalCountersRequests**](System.md#readsysteminternalcountersrequests) | **GET** /sys/internal/counters/requests | Backwards compatibility is not guaranteed for this API
-[**ReadSystemInternalCountersTokens**](System.md#readsysteminternalcounterstokens) | **GET** /sys/internal/counters/tokens | Backwards compatibility is not guaranteed for this API
-[**ReadSystemInternalSpecsOpenapi**](System.md#readsysteminternalspecsopenapi) | **GET** /sys/internal/specs/openapi | Generate an OpenAPI 3 document of all mounted paths.
-[**ReadSystemInternalUiFeatureFlags**](System.md#readsysteminternaluifeatureflags) | **GET** /sys/internal/ui/feature-flags | Lists enabled feature flags.
-[**ReadSystemInternalUiMounts**](System.md#readsysteminternaluimounts) | **GET** /sys/internal/ui/mounts | Lists all enabled and visible auth and secrets mounts.
-[**ReadSystemInternalUiMountsPath**](System.md#readsysteminternaluimountspath) | **GET** /sys/internal/ui/mounts/{path} | Return information about the given mount.
-[**ReadSystemInternalUiNamespaces**](System.md#readsysteminternaluinamespaces) | **GET** /sys/internal/ui/namespaces | Backwards compatibility is not guaranteed for this API
-[**ReadSystemInternalUiResultantAcl**](System.md#readsysteminternaluiresultantacl) | **GET** /sys/internal/ui/resultant-acl | Backwards compatibility is not guaranteed for this API
-[**ReadSystemKeyStatus**](System.md#readsystemkeystatus) | **GET** /sys/key-status | Provides information about the backend encryption key.
-[**ReadSystemLeader**](System.md#readsystemleader) | **GET** /sys/leader | Returns the high availability status and current leader instance of Vault.
-[**ReadSystemLeases**](System.md#readsystemleases) | **GET** /sys/leases | List leases associated with this Vault cluster
-[**ReadSystemLeasesCount**](System.md#readsystemleasescount) | **GET** /sys/leases/count | Count of leases associated with this Vault cluster
-[**ReadSystemMetrics**](System.md#readsystemmetrics) | **GET** /sys/metrics | Export the metrics aggregated for telemetry purpose.
-[**ReadSystemMonitor**](System.md#readsystemmonitor) | **GET** /sys/monitor | 
-[**ReadSystemMounts**](System.md#readsystemmounts) | **GET** /sys/mounts | List the currently mounted backends.
-[**ReadSystemMountsPath**](System.md#readsystemmountspath) | **GET** /sys/mounts/{path} | Read the configuration of the secret engine at the given path.
-[**ReadSystemMountsPathTune**](System.md#readsystemmountspathtune) | **GET** /sys/mounts/{path}/tune | Tune backend configuration parameters for this mount.
-[**ReadSystemPluginsCatalog**](System.md#readsystempluginscatalog) | **GET** /sys/plugins/catalog | Lists all the plugins known to Vault
-[**ReadSystemPluginsCatalogName**](System.md#readsystempluginscatalogname) | **GET** /sys/plugins/catalog/{name} | Return the configuration data for the plugin with the given name.
-[**ReadSystemPluginsCatalogTypeName**](System.md#readsystempluginscatalogtypename) | **GET** /sys/plugins/catalog/{type}/{name} | Return the configuration data for the plugin with the given name.
-[**ReadSystemPoliciesAclName**](System.md#readsystempoliciesaclname) | **GET** /sys/policies/acl/{name} | Retrieve information about the named ACL policy.
-[**ReadSystemPoliciesPasswordName**](System.md#readsystempoliciespasswordname) | **GET** /sys/policies/password/{name} | Retrieve an existing password policy.
-[**ReadSystemPoliciesPasswordNameGenerate**](System.md#readsystempoliciespasswordnamegenerate) | **GET** /sys/policies/password/{name}/generate | Generate a password from an existing password policy.
-[**ReadSystemPolicy**](System.md#readsystempolicy) | **GET** /sys/policy | List the configured access control policies.
-[**ReadSystemPolicyName**](System.md#readsystempolicyname) | **GET** /sys/policy/{name} | Retrieve the policy body for the named policy.
-[**ReadSystemPprof**](System.md#readsystempprof) | **GET** /sys/pprof/ | Returns an HTML page listing the available profiles.
-[**ReadSystemPprofAllocs**](System.md#readsystempprofallocs) | **GET** /sys/pprof/allocs | Returns a sampling of all past memory allocations.
-[**ReadSystemPprofBlock**](System.md#readsystempprofblock) | **GET** /sys/pprof/block | Returns stack traces that led to blocking on synchronization primitives
-[**ReadSystemPprofCmdline**](System.md#readsystempprofcmdline) | **GET** /sys/pprof/cmdline | Returns the running program&#39;s command line.
-[**ReadSystemPprofGoroutine**](System.md#readsystempprofgoroutine) | **GET** /sys/pprof/goroutine | Returns stack traces of all current goroutines.
-[**ReadSystemPprofHeap**](System.md#readsystempprofheap) | **GET** /sys/pprof/heap | Returns a sampling of memory allocations of live object.
-[**ReadSystemPprofMutex**](System.md#readsystempprofmutex) | **GET** /sys/pprof/mutex | Returns stack traces of holders of contended mutexes
-[**ReadSystemPprofProfile**](System.md#readsystempprofprofile) | **GET** /sys/pprof/profile | Returns a pprof-formatted cpu profile payload.
-[**ReadSystemPprofSymbol**](System.md#readsystempprofsymbol) | **GET** /sys/pprof/symbol | Returns the program counters listed in the request.
-[**ReadSystemPprofThreadcreate**](System.md#readsystempprofthreadcreate) | **GET** /sys/pprof/threadcreate | Returns stack traces that led to the creation of new OS threads
-[**ReadSystemPprofTrace**](System.md#readsystempproftrace) | **GET** /sys/pprof/trace | Returns the execution trace in binary form.
-[**ReadSystemQuotasConfig**](System.md#readsystemquotasconfig) | **GET** /sys/quotas/config | 
-[**ReadSystemQuotasRateLimitName**](System.md#readsystemquotasratelimitname) | **GET** /sys/quotas/rate-limit/{name} | 
-[**ReadSystemRaw**](System.md#readsystemraw) | **GET** /sys/raw | Read the value of the key at the given path.
-[**ReadSystemRawPath**](System.md#readsystemrawpath) | **GET** /sys/raw/{path} | Read the value of the key at the given path.
-[**ReadSystemRekeyBackup**](System.md#readsystemrekeybackup) | **GET** /sys/rekey/backup | Return the backup copy of PGP-encrypted unseal keys.
-[**ReadSystemRekeyInit**](System.md#readsystemrekeyinit) | **GET** /sys/rekey/init | Reads the configuration and progress of the current rekey attempt.
-[**ReadSystemRekeyRecoveryKeyBackup**](System.md#readsystemrekeyrecoverykeybackup) | **GET** /sys/rekey/recovery-key-backup | Allows fetching or deleting the backup of the rotated unseal keys.
-[**ReadSystemRekeyVerify**](System.md#readsystemrekeyverify) | **GET** /sys/rekey/verify | Read the configuration and progress of the current rekey verification attempt.
-[**ReadSystemRemountStatusMigrationId**](System.md#readsystemremountstatusmigrationid) | **GET** /sys/remount/status/{migration_id} | Check status of a mount migration
-[**ReadSystemReplicationStatus**](System.md#readsystemreplicationstatus) | **GET** /sys/replication/status | 
-[**ReadSystemRotateConfig**](System.md#readsystemrotateconfig) | **GET** /sys/rotate/config | 
-[**ReadSystemSealStatus**](System.md#readsystemsealstatus) | **GET** /sys/seal-status | Check the seal status of a Vault.
-[**ReadSystemWrappingLookup**](System.md#readsystemwrappinglookup) | **GET** /sys/wrapping/lookup | Look up wrapping properties for the requester&#39;s token.
-[**UpdateSystemAuditHashPath**](System.md#updatesystemaudithashpath) | **POST** /sys/audit-hash/{path} | The hash of the given string via the given audit backend
-[**UpdateSystemAuditPath**](System.md#updatesystemauditpath) | **POST** /sys/audit/{path} | Enable a new audit device at the supplied path.
-[**UpdateSystemAuthPath**](System.md#updatesystemauthpath) | **POST** /sys/auth/{path} | Enables a new auth method.
-[**UpdateSystemAuthPathTune**](System.md#updatesystemauthpathtune) | **POST** /sys/auth/{path}/tune | Tune configuration parameters for a given auth path.
-[**UpdateSystemCapabilities**](System.md#updatesystemcapabilities) | **POST** /sys/capabilities | Fetches the capabilities of the given token on the given path.
-[**UpdateSystemCapabilitiesAccessor**](System.md#updatesystemcapabilitiesaccessor) | **POST** /sys/capabilities-accessor | Fetches the capabilities of the token associated with the given token, on the given path.
-[**UpdateSystemCapabilitiesSelf**](System.md#updatesystemcapabilitiesself) | **POST** /sys/capabilities-self | Fetches the capabilities of the given token on the given path.
-[**UpdateSystemConfigAuditingRequestHeadersHeader**](System.md#updatesystemconfigauditingrequestheadersheader) | **POST** /sys/config/auditing/request-headers/{header} | Enable auditing of a header.
-[**UpdateSystemConfigCors**](System.md#updatesystemconfigcors) | **POST** /sys/config/cors | Configure the CORS settings.
-[**UpdateSystemConfigReloadSubsystem**](System.md#updatesystemconfigreloadsubsystem) | **POST** /sys/config/reload/{subsystem} | Reload the given subsystem
-[**UpdateSystemConfigUiHeadersHeader**](System.md#updatesystemconfiguiheadersheader) | **POST** /sys/config/ui/headers/{header} | Configure the values to be returned for the UI header.
-[**UpdateSystemGenerateRoot**](System.md#updatesystemgenerateroot) | **POST** /sys/generate-root | Initializes a new root generation attempt.
-[**UpdateSystemGenerateRootAttempt**](System.md#updatesystemgeneraterootattempt) | **POST** /sys/generate-root/attempt | Initializes a new root generation attempt.
-[**UpdateSystemGenerateRootUpdate**](System.md#updatesystemgeneraterootupdate) | **POST** /sys/generate-root/update | Enter a single unseal key share to progress the root generation attempt.
-[**UpdateSystemInit**](System.md#updatesysteminit) | **POST** /sys/init | Initialize a new Vault.
-[**UpdateSystemInternalCountersConfig**](System.md#updatesysteminternalcountersconfig) | **POST** /sys/internal/counters/config | Enable or disable collection of client count, set retention period, or set default reporting period.
-[**UpdateSystemLeasesLookup**](System.md#updatesystemleaseslookup) | **POST** /sys/leases/lookup | Retrieve lease metadata.
-[**UpdateSystemLeasesRenew**](System.md#updatesystemleasesrenew) | **POST** /sys/leases/renew | Renews a lease, requesting to extend the lease.
-[**UpdateSystemLeasesRenewUrlLeaseId**](System.md#updatesystemleasesrenewurlleaseid) | **POST** /sys/leases/renew/{url_lease_id} | Renews a lease, requesting to extend the lease.
-[**UpdateSystemLeasesRevoke**](System.md#updatesystemleasesrevoke) | **POST** /sys/leases/revoke | Revokes a lease immediately.
-[**UpdateSystemLeasesRevokeForcePrefix**](System.md#updatesystemleasesrevokeforceprefix) | **POST** /sys/leases/revoke-force/{prefix} | Revokes all secrets or tokens generated under a given prefix immediately
-[**UpdateSystemLeasesRevokePrefixPrefix**](System.md#updatesystemleasesrevokeprefixprefix) | **POST** /sys/leases/revoke-prefix/{prefix} | Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
-[**UpdateSystemLeasesRevokeUrlLeaseId**](System.md#updatesystemleasesrevokeurlleaseid) | **POST** /sys/leases/revoke/{url_lease_id} | Revokes a lease immediately.
-[**UpdateSystemLeasesTidy**](System.md#updatesystemleasestidy) | **POST** /sys/leases/tidy | This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
-[**UpdateSystemLoggers**](System.md#updatesystemloggers) | **POST** /sys/loggers | Modify the log level for all existing loggers.
-[**UpdateSystemLoggersName**](System.md#updatesystemloggersname) | **POST** /sys/loggers/{name} | Modify the log level of a single logger.
-[**UpdateSystemMfaValidate**](System.md#updatesystemmfavalidate) | **POST** /sys/mfa/validate | Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token
-[**UpdateSystemMountsPath**](System.md#updatesystemmountspath) | **POST** /sys/mounts/{path} | Enable a new secrets engine at the given path.
-[**UpdateSystemMountsPathTune**](System.md#updatesystemmountspathtune) | **POST** /sys/mounts/{path}/tune | Tune backend configuration parameters for this mount.
-[**UpdateSystemPluginsCatalogName**](System.md#updatesystempluginscatalogname) | **POST** /sys/plugins/catalog/{name} | Register a new plugin, or updates an existing one with the supplied name.
-[**UpdateSystemPluginsCatalogTypeName**](System.md#updatesystempluginscatalogtypename) | **POST** /sys/plugins/catalog/{type}/{name} | Register a new plugin, or updates an existing one with the supplied name.
-[**UpdateSystemPluginsReloadBackend**](System.md#updatesystempluginsreloadbackend) | **POST** /sys/plugins/reload/backend | Reload mounted plugin backends.
-[**UpdateSystemPoliciesAclName**](System.md#updatesystempoliciesaclname) | **POST** /sys/policies/acl/{name} | Add a new or update an existing ACL policy.
-[**UpdateSystemPoliciesPasswordName**](System.md#updatesystempoliciespasswordname) | **POST** /sys/policies/password/{name} | Add a new or update an existing password policy.
-[**UpdateSystemPolicyName**](System.md#updatesystempolicyname) | **POST** /sys/policy/{name} | Add a new or update an existing policy.
-[**UpdateSystemQuotasConfig**](System.md#updatesystemquotasconfig) | **POST** /sys/quotas/config | 
-[**UpdateSystemQuotasRateLimitName**](System.md#updatesystemquotasratelimitname) | **POST** /sys/quotas/rate-limit/{name} | 
-[**UpdateSystemRaw**](System.md#updatesystemraw) | **POST** /sys/raw | Update the value of the key at the given path.
-[**UpdateSystemRawPath**](System.md#updatesystemrawpath) | **POST** /sys/raw/{path} | Update the value of the key at the given path.
-[**UpdateSystemRekeyInit**](System.md#updatesystemrekeyinit) | **POST** /sys/rekey/init | Initializes a new rekey attempt.
-[**UpdateSystemRekeyUpdate**](System.md#updatesystemrekeyupdate) | **POST** /sys/rekey/update | Enter a single unseal key share to progress the rekey of the Vault.
-[**UpdateSystemRekeyVerify**](System.md#updatesystemrekeyverify) | **POST** /sys/rekey/verify | Enter a single new key share to progress the rekey verification operation.
-[**UpdateSystemRemount**](System.md#updatesystemremount) | **POST** /sys/remount | Initiate a mount migration
-[**UpdateSystemRenew**](System.md#updatesystemrenew) | **POST** /sys/renew | Renews a lease, requesting to extend the lease.
-[**UpdateSystemRenewUrlLeaseId**](System.md#updatesystemrenewurlleaseid) | **POST** /sys/renew/{url_lease_id} | Renews a lease, requesting to extend the lease.
-[**UpdateSystemRevoke**](System.md#updatesystemrevoke) | **POST** /sys/revoke | Revokes a lease immediately.
-[**UpdateSystemRevokeForcePrefix**](System.md#updatesystemrevokeforceprefix) | **POST** /sys/revoke-force/{prefix} | Revokes all secrets or tokens generated under a given prefix immediately
-[**UpdateSystemRevokePrefixPrefix**](System.md#updatesystemrevokeprefixprefix) | **POST** /sys/revoke-prefix/{prefix} | Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
-[**UpdateSystemRevokeUrlLeaseId**](System.md#updatesystemrevokeurlleaseid) | **POST** /sys/revoke/{url_lease_id} | Revokes a lease immediately.
-[**UpdateSystemRotate**](System.md#updatesystemrotate) | **POST** /sys/rotate | Rotates the backend encryption key used to persist data.
-[**UpdateSystemRotateConfig**](System.md#updatesystemrotateconfig) | **POST** /sys/rotate/config | 
-[**UpdateSystemSeal**](System.md#updatesystemseal) | **POST** /sys/seal | Seal the Vault.
-[**UpdateSystemStepDown**](System.md#updatesystemstepdown) | **POST** /sys/step-down | Cause the node to give up active status.
-[**UpdateSystemToolsHash**](System.md#updatesystemtoolshash) | **POST** /sys/tools/hash | Generate a hash sum for input data
-[**UpdateSystemToolsHashUrlalgorithm**](System.md#updatesystemtoolshashurlalgorithm) | **POST** /sys/tools/hash/{urlalgorithm} | Generate a hash sum for input data
-[**UpdateSystemToolsRandom**](System.md#updatesystemtoolsrandom) | **POST** /sys/tools/random | Generate random bytes
-[**UpdateSystemToolsRandomSource**](System.md#updatesystemtoolsrandomsource) | **POST** /sys/tools/random/{source} | Generate random bytes
-[**UpdateSystemToolsRandomSourceUrlbytes**](System.md#updatesystemtoolsrandomsourceurlbytes) | **POST** /sys/tools/random/{source}/{urlbytes} | Generate random bytes
-[**UpdateSystemToolsRandomUrlbytes**](System.md#updatesystemtoolsrandomurlbytes) | **POST** /sys/tools/random/{urlbytes} | Generate random bytes
-[**UpdateSystemUnseal**](System.md#updatesystemunseal) | **POST** /sys/unseal | Unseal the Vault.
-[**UpdateSystemWrappingLookup**](System.md#updatesystemwrappinglookup) | **POST** /sys/wrapping/lookup | Look up wrapping properties for the given token.
-[**UpdateSystemWrappingRewrap**](System.md#updatesystemwrappingrewrap) | **POST** /sys/wrapping/rewrap | Rotates a response-wrapped token.
-[**UpdateSystemWrappingUnwrap**](System.md#updatesystemwrappingunwrap) | **POST** /sys/wrapping/unwrap | Unwraps a response-wrapped token.
-[**UpdateSystemWrappingWrap**](System.md#updatesystemwrappingwrap) | **POST** /sys/wrapping/wrap | Response-wraps an arbitrary JSON object.
+[**DeleteSysAuditPath**](System.md#deletesysauditpath) | **DELETE** /sys/audit/{path} | Disable the audit device at the given path.
+[**DeleteSysAuthPath**](System.md#deletesysauthpath) | **DELETE** /sys/auth/{path} | Disable the auth method at the given auth path
+[**DeleteSysConfigAuditingRequestHeadersHeader**](System.md#deletesysconfigauditingrequestheadersheader) | **DELETE** /sys/config/auditing/request-headers/{header} | Disable auditing of the given request header.
+[**DeleteSysConfigCors**](System.md#deletesysconfigcors) | **DELETE** /sys/config/cors | Remove any CORS settings.
+[**DeleteSysConfigUiHeadersHeader**](System.md#deletesysconfiguiheadersheader) | **DELETE** /sys/config/ui/headers/{header} | Remove a UI header.
+[**DeleteSysGenerateRoot**](System.md#deletesysgenerateroot) | **DELETE** /sys/generate-root | Cancels any in-progress root generation attempt.
+[**DeleteSysGenerateRootAttempt**](System.md#deletesysgeneraterootattempt) | **DELETE** /sys/generate-root/attempt | Cancels any in-progress root generation attempt.
+[**DeleteSysLoggers**](System.md#deletesysloggers) | **DELETE** /sys/loggers | Revert the all loggers to use log level provided in config.
+[**DeleteSysLoggersName**](System.md#deletesysloggersname) | **DELETE** /sys/loggers/{name} | Revert a single logger to use log level provided in config.
+[**DeleteSysMountsPath**](System.md#deletesysmountspath) | **DELETE** /sys/mounts/{path} | Disable the mount point specified at the given path.
+[**DeleteSysPluginsCatalogName**](System.md#deletesyspluginscatalogname) | **DELETE** /sys/plugins/catalog/{name} | Remove the plugin with the given name.
+[**DeleteSysPluginsCatalogTypeName**](System.md#deletesyspluginscatalogtypename) | **DELETE** /sys/plugins/catalog/{type}/{name} | Remove the plugin with the given name.
+[**DeleteSysPoliciesAclName**](System.md#deletesyspoliciesaclname) | **DELETE** /sys/policies/acl/{name} | Delete the ACL policy with the given name.
+[**DeleteSysPoliciesPasswordName**](System.md#deletesyspoliciespasswordname) | **DELETE** /sys/policies/password/{name} | Delete a password policy.
+[**DeleteSysPolicyName**](System.md#deletesyspolicyname) | **DELETE** /sys/policy/{name} | Delete the policy with the given name.
+[**DeleteSysQuotasRateLimitName**](System.md#deletesysquotasratelimitname) | **DELETE** /sys/quotas/rate-limit/{name} | 
+[**DeleteSysRaw**](System.md#deletesysraw) | **DELETE** /sys/raw | Delete the key with given path.
+[**DeleteSysRawPath**](System.md#deletesysrawpath) | **DELETE** /sys/raw/{path} | Delete the key with given path.
+[**DeleteSysRekeyBackup**](System.md#deletesysrekeybackup) | **DELETE** /sys/rekey/backup | Delete the backup copy of PGP-encrypted unseal keys.
+[**DeleteSysRekeyInit**](System.md#deletesysrekeyinit) | **DELETE** /sys/rekey/init | Cancels any in-progress rekey.
+[**DeleteSysRekeyRecoveryKeyBackup**](System.md#deletesysrekeyrecoverykeybackup) | **DELETE** /sys/rekey/recovery-key-backup | Allows fetching or deleting the backup of the rotated unseal keys.
+[**DeleteSysRekeyVerify**](System.md#deletesysrekeyverify) | **DELETE** /sys/rekey/verify | Cancel any in-progress rekey verification operation.
+[**GetSysAudit**](System.md#getsysaudit) | **GET** /sys/audit | List the enabled audit devices.
+[**GetSysAuth**](System.md#getsysauth) | **GET** /sys/auth | List the currently enabled credential backends.
+[**GetSysAuthPath**](System.md#getsysauthpath) | **GET** /sys/auth/{path} | Read the configuration of the auth engine at the given path.
+[**GetSysAuthPathTune**](System.md#getsysauthpathtune) | **GET** /sys/auth/{path}/tune | Reads the given auth path&#39;s configuration.
+[**GetSysConfigAuditingRequestHeaders**](System.md#getsysconfigauditingrequestheaders) | **GET** /sys/config/auditing/request-headers | List the request headers that are configured to be audited.
+[**GetSysConfigAuditingRequestHeadersHeader**](System.md#getsysconfigauditingrequestheadersheader) | **GET** /sys/config/auditing/request-headers/{header} | List the information for the given request header.
+[**GetSysConfigCors**](System.md#getsysconfigcors) | **GET** /sys/config/cors | Return the current CORS settings.
+[**GetSysConfigStateSanitized**](System.md#getsysconfigstatesanitized) | **GET** /sys/config/state/sanitized | Return a sanitized version of the Vault server configuration.
+[**GetSysConfigUiHeaders**](System.md#getsysconfiguiheaders) | **GET** /sys/config/ui/headers/ | Return a list of configured UI headers.
+[**GetSysConfigUiHeadersHeader**](System.md#getsysconfiguiheadersheader) | **GET** /sys/config/ui/headers/{header} | Return the given UI header&#39;s configuration
+[**GetSysGenerateRoot**](System.md#getsysgenerateroot) | **GET** /sys/generate-root | Read the configuration and progress of the current root generation attempt.
+[**GetSysGenerateRootAttempt**](System.md#getsysgeneraterootattempt) | **GET** /sys/generate-root/attempt | Read the configuration and progress of the current root generation attempt.
+[**GetSysHaStatus**](System.md#getsyshastatus) | **GET** /sys/ha-status | Check the HA status of a Vault cluster
+[**GetSysHealth**](System.md#getsyshealth) | **GET** /sys/health | Returns the health status of Vault.
+[**GetSysHostInfo**](System.md#getsyshostinfo) | **GET** /sys/host-info | Information about the host instance that this Vault server is running on.
+[**GetSysInFlightReq**](System.md#getsysinflightreq) | **GET** /sys/in-flight-req | reports in-flight requests
+[**GetSysInit**](System.md#getsysinit) | **GET** /sys/init | Returns the initialization status of Vault.
+[**GetSysInternalCountersActivity**](System.md#getsysinternalcountersactivity) | **GET** /sys/internal/counters/activity | Report the client count metrics, for this namespace and all child namespaces.
+[**GetSysInternalCountersActivityExport**](System.md#getsysinternalcountersactivityexport) | **GET** /sys/internal/counters/activity/export | Report the client count metrics, for this namespace and all child namespaces.
+[**GetSysInternalCountersActivityMonthly**](System.md#getsysinternalcountersactivitymonthly) | **GET** /sys/internal/counters/activity/monthly | Report the number of clients for this month, for this namespace and all child namespaces.
+[**GetSysInternalCountersConfig**](System.md#getsysinternalcountersconfig) | **GET** /sys/internal/counters/config | Read the client count tracking configuration.
+[**GetSysInternalCountersEntities**](System.md#getsysinternalcountersentities) | **GET** /sys/internal/counters/entities | Backwards compatibility is not guaranteed for this API
+[**GetSysInternalCountersRequests**](System.md#getsysinternalcountersrequests) | **GET** /sys/internal/counters/requests | Backwards compatibility is not guaranteed for this API
+[**GetSysInternalCountersTokens**](System.md#getsysinternalcounterstokens) | **GET** /sys/internal/counters/tokens | Backwards compatibility is not guaranteed for this API
+[**GetSysInternalInspectRouterTag**](System.md#getsysinternalinspectroutertag) | **GET** /sys/internal/inspect/router/{tag} | Expose the route entry and mount entry tables present in the router
+[**GetSysInternalSpecsOpenapi**](System.md#getsysinternalspecsopenapi) | **GET** /sys/internal/specs/openapi | Generate an OpenAPI 3 document of all mounted paths.
+[**GetSysInternalUiFeatureFlags**](System.md#getsysinternaluifeatureflags) | **GET** /sys/internal/ui/feature-flags | Lists enabled feature flags.
+[**GetSysInternalUiMounts**](System.md#getsysinternaluimounts) | **GET** /sys/internal/ui/mounts | Lists all enabled and visible auth and secrets mounts.
+[**GetSysInternalUiMountsPath**](System.md#getsysinternaluimountspath) | **GET** /sys/internal/ui/mounts/{path} | Return information about the given mount.
+[**GetSysInternalUiNamespaces**](System.md#getsysinternaluinamespaces) | **GET** /sys/internal/ui/namespaces | Backwards compatibility is not guaranteed for this API
+[**GetSysInternalUiResultantAcl**](System.md#getsysinternaluiresultantacl) | **GET** /sys/internal/ui/resultant-acl | Backwards compatibility is not guaranteed for this API
+[**GetSysKeyStatus**](System.md#getsyskeystatus) | **GET** /sys/key-status | Provides information about the backend encryption key.
+[**GetSysLeader**](System.md#getsysleader) | **GET** /sys/leader | Returns the high availability status and current leader instance of Vault.
+[**GetSysLeases**](System.md#getsysleases) | **GET** /sys/leases | List leases associated with this Vault cluster
+[**GetSysLeasesCount**](System.md#getsysleasescount) | **GET** /sys/leases/count | Count of leases associated with this Vault cluster
+[**GetSysLeasesLookup**](System.md#getsysleaseslookup) | **GET** /sys/leases/lookup/ | Returns a list of lease ids.
+[**GetSysLeasesLookupPrefix**](System.md#getsysleaseslookupprefix) | **GET** /sys/leases/lookup/{prefix} | Returns a list of lease ids.
+[**GetSysMetrics**](System.md#getsysmetrics) | **GET** /sys/metrics | Export the metrics aggregated for telemetry purpose.
+[**GetSysMonitor**](System.md#getsysmonitor) | **GET** /sys/monitor | 
+[**GetSysMounts**](System.md#getsysmounts) | **GET** /sys/mounts | List the currently mounted backends.
+[**GetSysMountsPath**](System.md#getsysmountspath) | **GET** /sys/mounts/{path} | Read the configuration of the secret engine at the given path.
+[**GetSysMountsPathTune**](System.md#getsysmountspathtune) | **GET** /sys/mounts/{path}/tune | Tune backend configuration parameters for this mount.
+[**GetSysPluginsCatalog**](System.md#getsyspluginscatalog) | **GET** /sys/plugins/catalog | Lists all the plugins known to Vault
+[**GetSysPluginsCatalogName**](System.md#getsyspluginscatalogname) | **GET** /sys/plugins/catalog/{name} | Return the configuration data for the plugin with the given name.
+[**GetSysPluginsCatalogType**](System.md#getsyspluginscatalogtype) | **GET** /sys/plugins/catalog/{type} | List the plugins in the catalog.
+[**GetSysPluginsCatalogTypeName**](System.md#getsyspluginscatalogtypename) | **GET** /sys/plugins/catalog/{type}/{name} | Return the configuration data for the plugin with the given name.
+[**GetSysPoliciesAcl**](System.md#getsyspoliciesacl) | **GET** /sys/policies/acl | List the configured access control policies.
+[**GetSysPoliciesAclName**](System.md#getsyspoliciesaclname) | **GET** /sys/policies/acl/{name} | Retrieve information about the named ACL policy.
+[**GetSysPoliciesPassword**](System.md#getsyspoliciespassword) | **GET** /sys/policies/password | List the existing password policies.
+[**GetSysPoliciesPasswordName**](System.md#getsyspoliciespasswordname) | **GET** /sys/policies/password/{name} | Retrieve an existing password policy.
+[**GetSysPoliciesPasswordNameGenerate**](System.md#getsyspoliciespasswordnamegenerate) | **GET** /sys/policies/password/{name}/generate | Generate a password from an existing password policy.
+[**GetSysPolicy**](System.md#getsyspolicy) | **GET** /sys/policy | List the configured access control policies.
+[**GetSysPolicyName**](System.md#getsyspolicyname) | **GET** /sys/policy/{name} | Retrieve the policy body for the named policy.
+[**GetSysPprof**](System.md#getsyspprof) | **GET** /sys/pprof/ | Returns an HTML page listing the available profiles.
+[**GetSysPprofAllocs**](System.md#getsyspprofallocs) | **GET** /sys/pprof/allocs | Returns a sampling of all past memory allocations.
+[**GetSysPprofBlock**](System.md#getsyspprofblock) | **GET** /sys/pprof/block | Returns stack traces that led to blocking on synchronization primitives
+[**GetSysPprofCmdline**](System.md#getsyspprofcmdline) | **GET** /sys/pprof/cmdline | Returns the running program&#39;s command line.
+[**GetSysPprofGoroutine**](System.md#getsyspprofgoroutine) | **GET** /sys/pprof/goroutine | Returns stack traces of all current goroutines.
+[**GetSysPprofHeap**](System.md#getsyspprofheap) | **GET** /sys/pprof/heap | Returns a sampling of memory allocations of live object.
+[**GetSysPprofMutex**](System.md#getsyspprofmutex) | **GET** /sys/pprof/mutex | Returns stack traces of holders of contended mutexes
+[**GetSysPprofProfile**](System.md#getsyspprofprofile) | **GET** /sys/pprof/profile | Returns a pprof-formatted cpu profile payload.
+[**GetSysPprofSymbol**](System.md#getsyspprofsymbol) | **GET** /sys/pprof/symbol | Returns the program counters listed in the request.
+[**GetSysPprofThreadcreate**](System.md#getsyspprofthreadcreate) | **GET** /sys/pprof/threadcreate | Returns stack traces that led to the creation of new OS threads
+[**GetSysPprofTrace**](System.md#getsyspproftrace) | **GET** /sys/pprof/trace | Returns the execution trace in binary form.
+[**GetSysQuotasConfig**](System.md#getsysquotasconfig) | **GET** /sys/quotas/config | 
+[**GetSysQuotasRateLimit**](System.md#getsysquotasratelimit) | **GET** /sys/quotas/rate-limit | 
+[**GetSysQuotasRateLimitName**](System.md#getsysquotasratelimitname) | **GET** /sys/quotas/rate-limit/{name} | 
+[**GetSysRaw**](System.md#getsysraw) | **GET** /sys/raw | Read the value of the key at the given path.
+[**GetSysRawPath**](System.md#getsysrawpath) | **GET** /sys/raw/{path} | Read the value of the key at the given path.
+[**GetSysRekeyBackup**](System.md#getsysrekeybackup) | **GET** /sys/rekey/backup | Return the backup copy of PGP-encrypted unseal keys.
+[**GetSysRekeyInit**](System.md#getsysrekeyinit) | **GET** /sys/rekey/init | Reads the configuration and progress of the current rekey attempt.
+[**GetSysRekeyRecoveryKeyBackup**](System.md#getsysrekeyrecoverykeybackup) | **GET** /sys/rekey/recovery-key-backup | Allows fetching or deleting the backup of the rotated unseal keys.
+[**GetSysRekeyVerify**](System.md#getsysrekeyverify) | **GET** /sys/rekey/verify | Read the configuration and progress of the current rekey verification attempt.
+[**GetSysRemountStatusMigrationId**](System.md#getsysremountstatusmigrationid) | **GET** /sys/remount/status/{migration_id} | Check status of a mount migration
+[**GetSysReplicationStatus**](System.md#getsysreplicationstatus) | **GET** /sys/replication/status | 
+[**GetSysRotateConfig**](System.md#getsysrotateconfig) | **GET** /sys/rotate/config | 
+[**GetSysSealStatus**](System.md#getsyssealstatus) | **GET** /sys/seal-status | Check the seal status of a Vault.
+[**GetSysVersionHistory**](System.md#getsysversionhistory) | **GET** /sys/version-history/ | Returns map of historical version change entries
+[**GetSysWrappingLookup**](System.md#getsyswrappinglookup) | **GET** /sys/wrapping/lookup | Look up wrapping properties for the requester&#39;s token.
+[**PostSysAuditHashPath**](System.md#postsysaudithashpath) | **POST** /sys/audit-hash/{path} | The hash of the given string via the given audit backend
+[**PostSysAuditPath**](System.md#postsysauditpath) | **POST** /sys/audit/{path} | Enable a new audit device at the supplied path.
+[**PostSysAuthPath**](System.md#postsysauthpath) | **POST** /sys/auth/{path} | Enables a new auth method.
+[**PostSysAuthPathTune**](System.md#postsysauthpathtune) | **POST** /sys/auth/{path}/tune | Tune configuration parameters for a given auth path.
+[**PostSysCapabilities**](System.md#postsyscapabilities) | **POST** /sys/capabilities | Fetches the capabilities of the given token on the given path.
+[**PostSysCapabilitiesAccessor**](System.md#postsyscapabilitiesaccessor) | **POST** /sys/capabilities-accessor | Fetches the capabilities of the token associated with the given token, on the given path.
+[**PostSysCapabilitiesSelf**](System.md#postsyscapabilitiesself) | **POST** /sys/capabilities-self | Fetches the capabilities of the given token on the given path.
+[**PostSysConfigAuditingRequestHeadersHeader**](System.md#postsysconfigauditingrequestheadersheader) | **POST** /sys/config/auditing/request-headers/{header} | Enable auditing of a header.
+[**PostSysConfigCors**](System.md#postsysconfigcors) | **POST** /sys/config/cors | Configure the CORS settings.
+[**PostSysConfigReloadSubsystem**](System.md#postsysconfigreloadsubsystem) | **POST** /sys/config/reload/{subsystem} | Reload the given subsystem
+[**PostSysConfigUiHeadersHeader**](System.md#postsysconfiguiheadersheader) | **POST** /sys/config/ui/headers/{header} | Configure the values to be returned for the UI header.
+[**PostSysGenerateRoot**](System.md#postsysgenerateroot) | **POST** /sys/generate-root | Initializes a new root generation attempt.
+[**PostSysGenerateRootAttempt**](System.md#postsysgeneraterootattempt) | **POST** /sys/generate-root/attempt | Initializes a new root generation attempt.
+[**PostSysGenerateRootUpdate**](System.md#postsysgeneraterootupdate) | **POST** /sys/generate-root/update | Enter a single unseal key share to progress the root generation attempt.
+[**PostSysInit**](System.md#postsysinit) | **POST** /sys/init | Initialize a new Vault.
+[**PostSysInternalCountersConfig**](System.md#postsysinternalcountersconfig) | **POST** /sys/internal/counters/config | Enable or disable collection of client count, set retention period, or set default reporting period.
+[**PostSysLeasesLookup**](System.md#postsysleaseslookup) | **POST** /sys/leases/lookup | Retrieve lease metadata.
+[**PostSysLeasesRenew**](System.md#postsysleasesrenew) | **POST** /sys/leases/renew | Renews a lease, requesting to extend the lease.
+[**PostSysLeasesRenewUrlLeaseId**](System.md#postsysleasesrenewurlleaseid) | **POST** /sys/leases/renew/{url_lease_id} | Renews a lease, requesting to extend the lease.
+[**PostSysLeasesRevoke**](System.md#postsysleasesrevoke) | **POST** /sys/leases/revoke | Revokes a lease immediately.
+[**PostSysLeasesRevokeForcePrefix**](System.md#postsysleasesrevokeforceprefix) | **POST** /sys/leases/revoke-force/{prefix} | Revokes all secrets or tokens generated under a given prefix immediately
+[**PostSysLeasesRevokePrefixPrefix**](System.md#postsysleasesrevokeprefixprefix) | **POST** /sys/leases/revoke-prefix/{prefix} | Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
+[**PostSysLeasesRevokeUrlLeaseId**](System.md#postsysleasesrevokeurlleaseid) | **POST** /sys/leases/revoke/{url_lease_id} | Revokes a lease immediately.
+[**PostSysLeasesTidy**](System.md#postsysleasestidy) | **POST** /sys/leases/tidy | This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
+[**PostSysLoggers**](System.md#postsysloggers) | **POST** /sys/loggers | Modify the log level for all existing loggers.
+[**PostSysLoggersName**](System.md#postsysloggersname) | **POST** /sys/loggers/{name} | Modify the log level of a single logger.
+[**PostSysMfaValidate**](System.md#postsysmfavalidate) | **POST** /sys/mfa/validate | Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token
+[**PostSysMountsPath**](System.md#postsysmountspath) | **POST** /sys/mounts/{path} | Enable a new secrets engine at the given path.
+[**PostSysMountsPathTune**](System.md#postsysmountspathtune) | **POST** /sys/mounts/{path}/tune | Tune backend configuration parameters for this mount.
+[**PostSysPluginsCatalogName**](System.md#postsyspluginscatalogname) | **POST** /sys/plugins/catalog/{name} | Register a new plugin, or updates an existing one with the supplied name.
+[**PostSysPluginsCatalogTypeName**](System.md#postsyspluginscatalogtypename) | **POST** /sys/plugins/catalog/{type}/{name} | Register a new plugin, or updates an existing one with the supplied name.
+[**PostSysPluginsReloadBackend**](System.md#postsyspluginsreloadbackend) | **POST** /sys/plugins/reload/backend | Reload mounted plugin backends.
+[**PostSysPoliciesAclName**](System.md#postsyspoliciesaclname) | **POST** /sys/policies/acl/{name} | Add a new or update an existing ACL policy.
+[**PostSysPoliciesPasswordName**](System.md#postsyspoliciespasswordname) | **POST** /sys/policies/password/{name} | Add a new or update an existing password policy.
+[**PostSysPolicyName**](System.md#postsyspolicyname) | **POST** /sys/policy/{name} | Add a new or update an existing policy.
+[**PostSysQuotasConfig**](System.md#postsysquotasconfig) | **POST** /sys/quotas/config | 
+[**PostSysQuotasRateLimitName**](System.md#postsysquotasratelimitname) | **POST** /sys/quotas/rate-limit/{name} | 
+[**PostSysRaw**](System.md#postsysraw) | **POST** /sys/raw | Update the value of the key at the given path.
+[**PostSysRawPath**](System.md#postsysrawpath) | **POST** /sys/raw/{path} | Update the value of the key at the given path.
+[**PostSysRekeyInit**](System.md#postsysrekeyinit) | **POST** /sys/rekey/init | Initializes a new rekey attempt.
+[**PostSysRekeyUpdate**](System.md#postsysrekeyupdate) | **POST** /sys/rekey/update | Enter a single unseal key share to progress the rekey of the Vault.
+[**PostSysRekeyVerify**](System.md#postsysrekeyverify) | **POST** /sys/rekey/verify | Enter a single new key share to progress the rekey verification operation.
+[**PostSysRemount**](System.md#postsysremount) | **POST** /sys/remount | Initiate a mount migration
+[**PostSysRenew**](System.md#postsysrenew) | **POST** /sys/renew | Renews a lease, requesting to extend the lease.
+[**PostSysRenewUrlLeaseId**](System.md#postsysrenewurlleaseid) | **POST** /sys/renew/{url_lease_id} | Renews a lease, requesting to extend the lease.
+[**PostSysRevoke**](System.md#postsysrevoke) | **POST** /sys/revoke | Revokes a lease immediately.
+[**PostSysRevokeForcePrefix**](System.md#postsysrevokeforceprefix) | **POST** /sys/revoke-force/{prefix} | Revokes all secrets or tokens generated under a given prefix immediately
+[**PostSysRevokePrefixPrefix**](System.md#postsysrevokeprefixprefix) | **POST** /sys/revoke-prefix/{prefix} | Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
+[**PostSysRevokeUrlLeaseId**](System.md#postsysrevokeurlleaseid) | **POST** /sys/revoke/{url_lease_id} | Revokes a lease immediately.
+[**PostSysRotate**](System.md#postsysrotate) | **POST** /sys/rotate | Rotates the backend encryption key used to persist data.
+[**PostSysRotateConfig**](System.md#postsysrotateconfig) | **POST** /sys/rotate/config | 
+[**PostSysSeal**](System.md#postsysseal) | **POST** /sys/seal | Seal the Vault.
+[**PostSysStepDown**](System.md#postsysstepdown) | **POST** /sys/step-down | Cause the node to give up active status.
+[**PostSysToolsHash**](System.md#postsystoolshash) | **POST** /sys/tools/hash | Generate a hash sum for input data
+[**PostSysToolsHashUrlalgorithm**](System.md#postsystoolshashurlalgorithm) | **POST** /sys/tools/hash/{urlalgorithm} | Generate a hash sum for input data
+[**PostSysToolsRandom**](System.md#postsystoolsrandom) | **POST** /sys/tools/random | Generate random bytes
+[**PostSysToolsRandomSource**](System.md#postsystoolsrandomsource) | **POST** /sys/tools/random/{source} | Generate random bytes
+[**PostSysToolsRandomSourceUrlbytes**](System.md#postsystoolsrandomsourceurlbytes) | **POST** /sys/tools/random/{source}/{urlbytes} | Generate random bytes
+[**PostSysToolsRandomUrlbytes**](System.md#postsystoolsrandomurlbytes) | **POST** /sys/tools/random/{urlbytes} | Generate random bytes
+[**PostSysUnseal**](System.md#postsysunseal) | **POST** /sys/unseal | Unseal the Vault.
+[**PostSysWrappingLookup**](System.md#postsyswrappinglookup) | **POST** /sys/wrapping/lookup | Look up wrapping properties for the given token.
+[**PostSysWrappingRewrap**](System.md#postsyswrappingrewrap) | **POST** /sys/wrapping/rewrap | Rotates a response-wrapped token.
+[**PostSysWrappingUnwrap**](System.md#postsyswrappingunwrap) | **POST** /sys/wrapping/unwrap | Unwraps a response-wrapped token.
+[**PostSysWrappingWrap**](System.md#postsyswrappingwrap) | **POST** /sys/wrapping/wrap | Response-wraps an arbitrary JSON object.
 
 
-<a name="deletesystemauditpath"></a>
-# **DeleteSystemAuditPath**
-> void DeleteSystemAuditPath (string path)
+<a name="deletesysauditpath"></a>
+# **DeleteSysAuditPath**
+> void DeleteSysAuditPath (string path)
 
 Disable the audit device at the given path.
 
@@ -187,7 +188,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteSystemAuditPathExample
+    public class DeleteSysAuditPathExample
     {
         public static void Main()
         {
@@ -202,11 +203,11 @@ namespace Example
             try
             {
                 // Disable the audit device at the given path.
-                apiInstance.DeleteSystemAuditPath(path);
+                apiInstance.DeleteSysAuditPath(path);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.DeleteSystemAuditPath: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysAuditPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -242,9 +243,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletesystemauthpath"></a>
-# **DeleteSystemAuthPath**
-> void DeleteSystemAuthPath (string path)
+<a name="deletesysauthpath"></a>
+# **DeleteSysAuthPath**
+> void DeleteSysAuthPath (string path)
 
 Disable the auth method at the given auth path
 
@@ -259,7 +260,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteSystemAuthPathExample
+    public class DeleteSysAuthPathExample
     {
         public static void Main()
         {
@@ -274,11 +275,11 @@ namespace Example
             try
             {
                 // Disable the auth method at the given auth path
-                apiInstance.DeleteSystemAuthPath(path);
+                apiInstance.DeleteSysAuthPath(path);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.DeleteSystemAuthPath: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysAuthPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -314,9 +315,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletesystemconfigauditingrequestheadersheader"></a>
-# **DeleteSystemConfigAuditingRequestHeadersHeader**
-> void DeleteSystemConfigAuditingRequestHeadersHeader (string header)
+<a name="deletesysconfigauditingrequestheadersheader"></a>
+# **DeleteSysConfigAuditingRequestHeadersHeader**
+> void DeleteSysConfigAuditingRequestHeadersHeader (string header)
 
 Disable auditing of the given request header.
 
@@ -331,7 +332,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteSystemConfigAuditingRequestHeadersHeaderExample
+    public class DeleteSysConfigAuditingRequestHeadersHeaderExample
     {
         public static void Main()
         {
@@ -346,11 +347,11 @@ namespace Example
             try
             {
                 // Disable auditing of the given request header.
-                apiInstance.DeleteSystemConfigAuditingRequestHeadersHeader(header);
+                apiInstance.DeleteSysConfigAuditingRequestHeadersHeader(header);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.DeleteSystemConfigAuditingRequestHeadersHeader: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysConfigAuditingRequestHeadersHeader: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -386,9 +387,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletesystemconfigcors"></a>
-# **DeleteSystemConfigCors**
-> void DeleteSystemConfigCors ()
+<a name="deletesysconfigcors"></a>
+# **DeleteSysConfigCors**
+> void DeleteSysConfigCors ()
 
 Remove any CORS settings.
 
@@ -403,7 +404,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteSystemConfigCorsExample
+    public class DeleteSysConfigCorsExample
     {
         public static void Main()
         {
@@ -417,11 +418,11 @@ namespace Example
             try
             {
                 // Remove any CORS settings.
-                apiInstance.DeleteSystemConfigCors();
+                apiInstance.DeleteSysConfigCors();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.DeleteSystemConfigCors: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysConfigCors: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -454,9 +455,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletesystemconfiguiheadersheader"></a>
-# **DeleteSystemConfigUiHeadersHeader**
-> void DeleteSystemConfigUiHeadersHeader (string header)
+<a name="deletesysconfiguiheadersheader"></a>
+# **DeleteSysConfigUiHeadersHeader**
+> void DeleteSysConfigUiHeadersHeader (string header)
 
 Remove a UI header.
 
@@ -471,7 +472,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteSystemConfigUiHeadersHeaderExample
+    public class DeleteSysConfigUiHeadersHeaderExample
     {
         public static void Main()
         {
@@ -486,11 +487,11 @@ namespace Example
             try
             {
                 // Remove a UI header.
-                apiInstance.DeleteSystemConfigUiHeadersHeader(header);
+                apiInstance.DeleteSysConfigUiHeadersHeader(header);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.DeleteSystemConfigUiHeadersHeader: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysConfigUiHeadersHeader: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -526,9 +527,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletesystemgenerateroot"></a>
-# **DeleteSystemGenerateRoot**
-> void DeleteSystemGenerateRoot ()
+<a name="deletesysgenerateroot"></a>
+# **DeleteSysGenerateRoot**
+> void DeleteSysGenerateRoot ()
 
 Cancels any in-progress root generation attempt.
 
@@ -543,7 +544,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteSystemGenerateRootExample
+    public class DeleteSysGenerateRootExample
     {
         public static void Main()
         {
@@ -557,11 +558,11 @@ namespace Example
             try
             {
                 // Cancels any in-progress root generation attempt.
-                apiInstance.DeleteSystemGenerateRoot();
+                apiInstance.DeleteSysGenerateRoot();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.DeleteSystemGenerateRoot: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysGenerateRoot: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -594,9 +595,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletesystemgeneraterootattempt"></a>
-# **DeleteSystemGenerateRootAttempt**
-> void DeleteSystemGenerateRootAttempt ()
+<a name="deletesysgeneraterootattempt"></a>
+# **DeleteSysGenerateRootAttempt**
+> void DeleteSysGenerateRootAttempt ()
 
 Cancels any in-progress root generation attempt.
 
@@ -611,7 +612,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteSystemGenerateRootAttemptExample
+    public class DeleteSysGenerateRootAttemptExample
     {
         public static void Main()
         {
@@ -625,11 +626,11 @@ namespace Example
             try
             {
                 // Cancels any in-progress root generation attempt.
-                apiInstance.DeleteSystemGenerateRootAttempt();
+                apiInstance.DeleteSysGenerateRootAttempt();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.DeleteSystemGenerateRootAttempt: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysGenerateRootAttempt: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -662,9 +663,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletesystemloggers"></a>
-# **DeleteSystemLoggers**
-> void DeleteSystemLoggers ()
+<a name="deletesysloggers"></a>
+# **DeleteSysLoggers**
+> void DeleteSysLoggers ()
 
 Revert the all loggers to use log level provided in config.
 
@@ -679,7 +680,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteSystemLoggersExample
+    public class DeleteSysLoggersExample
     {
         public static void Main()
         {
@@ -693,11 +694,11 @@ namespace Example
             try
             {
                 // Revert the all loggers to use log level provided in config.
-                apiInstance.DeleteSystemLoggers();
+                apiInstance.DeleteSysLoggers();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.DeleteSystemLoggers: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysLoggers: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -730,9 +731,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletesystemloggersname"></a>
-# **DeleteSystemLoggersName**
-> void DeleteSystemLoggersName (string name)
+<a name="deletesysloggersname"></a>
+# **DeleteSysLoggersName**
+> void DeleteSysLoggersName (string name)
 
 Revert a single logger to use log level provided in config.
 
@@ -747,7 +748,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteSystemLoggersNameExample
+    public class DeleteSysLoggersNameExample
     {
         public static void Main()
         {
@@ -762,11 +763,11 @@ namespace Example
             try
             {
                 // Revert a single logger to use log level provided in config.
-                apiInstance.DeleteSystemLoggersName(name);
+                apiInstance.DeleteSysLoggersName(name);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.DeleteSystemLoggersName: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysLoggersName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -802,9 +803,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletesystemmountspath"></a>
-# **DeleteSystemMountsPath**
-> void DeleteSystemMountsPath (string path)
+<a name="deletesysmountspath"></a>
+# **DeleteSysMountsPath**
+> void DeleteSysMountsPath (string path)
 
 Disable the mount point specified at the given path.
 
@@ -819,7 +820,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteSystemMountsPathExample
+    public class DeleteSysMountsPathExample
     {
         public static void Main()
         {
@@ -834,11 +835,11 @@ namespace Example
             try
             {
                 // Disable the mount point specified at the given path.
-                apiInstance.DeleteSystemMountsPath(path);
+                apiInstance.DeleteSysMountsPath(path);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.DeleteSystemMountsPath: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysMountsPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -874,9 +875,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletesystempluginscatalogname"></a>
-# **DeleteSystemPluginsCatalogName**
-> void DeleteSystemPluginsCatalogName (string name)
+<a name="deletesyspluginscatalogname"></a>
+# **DeleteSysPluginsCatalogName**
+> void DeleteSysPluginsCatalogName (string name)
 
 Remove the plugin with the given name.
 
@@ -891,7 +892,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteSystemPluginsCatalogNameExample
+    public class DeleteSysPluginsCatalogNameExample
     {
         public static void Main()
         {
@@ -906,11 +907,11 @@ namespace Example
             try
             {
                 // Remove the plugin with the given name.
-                apiInstance.DeleteSystemPluginsCatalogName(name);
+                apiInstance.DeleteSysPluginsCatalogName(name);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.DeleteSystemPluginsCatalogName: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysPluginsCatalogName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -946,9 +947,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletesystempluginscatalogtypename"></a>
-# **DeleteSystemPluginsCatalogTypeName**
-> void DeleteSystemPluginsCatalogTypeName (string name, string type)
+<a name="deletesyspluginscatalogtypename"></a>
+# **DeleteSysPluginsCatalogTypeName**
+> void DeleteSysPluginsCatalogTypeName (string name, string type)
 
 Remove the plugin with the given name.
 
@@ -963,7 +964,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteSystemPluginsCatalogTypeNameExample
+    public class DeleteSysPluginsCatalogTypeNameExample
     {
         public static void Main()
         {
@@ -979,11 +980,11 @@ namespace Example
             try
             {
                 // Remove the plugin with the given name.
-                apiInstance.DeleteSystemPluginsCatalogTypeName(name, type);
+                apiInstance.DeleteSysPluginsCatalogTypeName(name, type);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.DeleteSystemPluginsCatalogTypeName: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysPluginsCatalogTypeName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1020,9 +1021,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletesystempoliciesaclname"></a>
-# **DeleteSystemPoliciesAclName**
-> void DeleteSystemPoliciesAclName (string name)
+<a name="deletesyspoliciesaclname"></a>
+# **DeleteSysPoliciesAclName**
+> void DeleteSysPoliciesAclName (string name)
 
 Delete the ACL policy with the given name.
 
@@ -1037,7 +1038,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteSystemPoliciesAclNameExample
+    public class DeleteSysPoliciesAclNameExample
     {
         public static void Main()
         {
@@ -1052,11 +1053,11 @@ namespace Example
             try
             {
                 // Delete the ACL policy with the given name.
-                apiInstance.DeleteSystemPoliciesAclName(name);
+                apiInstance.DeleteSysPoliciesAclName(name);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.DeleteSystemPoliciesAclName: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysPoliciesAclName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1092,9 +1093,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletesystempoliciespasswordname"></a>
-# **DeleteSystemPoliciesPasswordName**
-> void DeleteSystemPoliciesPasswordName (string name)
+<a name="deletesyspoliciespasswordname"></a>
+# **DeleteSysPoliciesPasswordName**
+> void DeleteSysPoliciesPasswordName (string name)
 
 Delete a password policy.
 
@@ -1109,7 +1110,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteSystemPoliciesPasswordNameExample
+    public class DeleteSysPoliciesPasswordNameExample
     {
         public static void Main()
         {
@@ -1124,11 +1125,11 @@ namespace Example
             try
             {
                 // Delete a password policy.
-                apiInstance.DeleteSystemPoliciesPasswordName(name);
+                apiInstance.DeleteSysPoliciesPasswordName(name);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.DeleteSystemPoliciesPasswordName: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysPoliciesPasswordName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1164,9 +1165,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletesystempolicyname"></a>
-# **DeleteSystemPolicyName**
-> void DeleteSystemPolicyName (string name)
+<a name="deletesyspolicyname"></a>
+# **DeleteSysPolicyName**
+> void DeleteSysPolicyName (string name)
 
 Delete the policy with the given name.
 
@@ -1181,7 +1182,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteSystemPolicyNameExample
+    public class DeleteSysPolicyNameExample
     {
         public static void Main()
         {
@@ -1196,11 +1197,11 @@ namespace Example
             try
             {
                 // Delete the policy with the given name.
-                apiInstance.DeleteSystemPolicyName(name);
+                apiInstance.DeleteSysPolicyName(name);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.DeleteSystemPolicyName: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysPolicyName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1236,9 +1237,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletesystemquotasratelimitname"></a>
-# **DeleteSystemQuotasRateLimitName**
-> void DeleteSystemQuotasRateLimitName (string name)
+<a name="deletesysquotasratelimitname"></a>
+# **DeleteSysQuotasRateLimitName**
+> void DeleteSysQuotasRateLimitName (string name)
 
 
 
@@ -1253,7 +1254,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteSystemQuotasRateLimitNameExample
+    public class DeleteSysQuotasRateLimitNameExample
     {
         public static void Main()
         {
@@ -1267,11 +1268,11 @@ namespace Example
 
             try
             {
-                apiInstance.DeleteSystemQuotasRateLimitName(name);
+                apiInstance.DeleteSysQuotasRateLimitName(name);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.DeleteSystemQuotasRateLimitName: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysQuotasRateLimitName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1307,9 +1308,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletesystemraw"></a>
-# **DeleteSystemRaw**
-> void DeleteSystemRaw ()
+<a name="deletesysraw"></a>
+# **DeleteSysRaw**
+> void DeleteSysRaw ()
 
 Delete the key with given path.
 
@@ -1324,7 +1325,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteSystemRawExample
+    public class DeleteSysRawExample
     {
         public static void Main()
         {
@@ -1338,11 +1339,11 @@ namespace Example
             try
             {
                 // Delete the key with given path.
-                apiInstance.DeleteSystemRaw();
+                apiInstance.DeleteSysRaw();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.DeleteSystemRaw: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysRaw: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1375,9 +1376,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletesystemrawpath"></a>
-# **DeleteSystemRawPath**
-> void DeleteSystemRawPath (string path)
+<a name="deletesysrawpath"></a>
+# **DeleteSysRawPath**
+> void DeleteSysRawPath (string path)
 
 Delete the key with given path.
 
@@ -1392,7 +1393,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteSystemRawPathExample
+    public class DeleteSysRawPathExample
     {
         public static void Main()
         {
@@ -1407,11 +1408,11 @@ namespace Example
             try
             {
                 // Delete the key with given path.
-                apiInstance.DeleteSystemRawPath(path);
+                apiInstance.DeleteSysRawPath(path);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.DeleteSystemRawPath: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysRawPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1447,9 +1448,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletesystemrekeybackup"></a>
-# **DeleteSystemRekeyBackup**
-> void DeleteSystemRekeyBackup ()
+<a name="deletesysrekeybackup"></a>
+# **DeleteSysRekeyBackup**
+> void DeleteSysRekeyBackup ()
 
 Delete the backup copy of PGP-encrypted unseal keys.
 
@@ -1464,7 +1465,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteSystemRekeyBackupExample
+    public class DeleteSysRekeyBackupExample
     {
         public static void Main()
         {
@@ -1478,11 +1479,11 @@ namespace Example
             try
             {
                 // Delete the backup copy of PGP-encrypted unseal keys.
-                apiInstance.DeleteSystemRekeyBackup();
+                apiInstance.DeleteSysRekeyBackup();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.DeleteSystemRekeyBackup: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysRekeyBackup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1515,9 +1516,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletesystemrekeyinit"></a>
-# **DeleteSystemRekeyInit**
-> void DeleteSystemRekeyInit ()
+<a name="deletesysrekeyinit"></a>
+# **DeleteSysRekeyInit**
+> void DeleteSysRekeyInit ()
 
 Cancels any in-progress rekey.
 
@@ -1534,7 +1535,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteSystemRekeyInitExample
+    public class DeleteSysRekeyInitExample
     {
         public static void Main()
         {
@@ -1548,11 +1549,11 @@ namespace Example
             try
             {
                 // Cancels any in-progress rekey.
-                apiInstance.DeleteSystemRekeyInit();
+                apiInstance.DeleteSysRekeyInit();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.DeleteSystemRekeyInit: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysRekeyInit: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1585,9 +1586,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletesystemrekeyrecoverykeybackup"></a>
-# **DeleteSystemRekeyRecoveryKeyBackup**
-> void DeleteSystemRekeyRecoveryKeyBackup ()
+<a name="deletesysrekeyrecoverykeybackup"></a>
+# **DeleteSysRekeyRecoveryKeyBackup**
+> void DeleteSysRekeyRecoveryKeyBackup ()
 
 Allows fetching or deleting the backup of the rotated unseal keys.
 
@@ -1602,7 +1603,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteSystemRekeyRecoveryKeyBackupExample
+    public class DeleteSysRekeyRecoveryKeyBackupExample
     {
         public static void Main()
         {
@@ -1616,11 +1617,11 @@ namespace Example
             try
             {
                 // Allows fetching or deleting the backup of the rotated unseal keys.
-                apiInstance.DeleteSystemRekeyRecoveryKeyBackup();
+                apiInstance.DeleteSysRekeyRecoveryKeyBackup();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.DeleteSystemRekeyRecoveryKeyBackup: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysRekeyRecoveryKeyBackup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1653,9 +1654,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletesystemrekeyverify"></a>
-# **DeleteSystemRekeyVerify**
-> void DeleteSystemRekeyVerify ()
+<a name="deletesysrekeyverify"></a>
+# **DeleteSysRekeyVerify**
+> void DeleteSysRekeyVerify ()
 
 Cancel any in-progress rekey verification operation.
 
@@ -1672,7 +1673,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class DeleteSystemRekeyVerifyExample
+    public class DeleteSysRekeyVerifyExample
     {
         public static void Main()
         {
@@ -1686,11 +1687,11 @@ namespace Example
             try
             {
                 // Cancel any in-progress rekey verification operation.
-                apiInstance.DeleteSystemRekeyVerify();
+                apiInstance.DeleteSysRekeyVerify();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.DeleteSystemRekeyVerify: " + e.Message );
+                Debug.Print("Exception when calling System.DeleteSysRekeyVerify: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1723,588 +1724,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listsystemconfiguiheaders"></a>
-# **ListSystemConfigUiHeaders**
-> void ListSystemConfigUiHeaders (string list)
-
-Return a list of configured UI headers.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ListSystemConfigUiHeadersExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new System(httpClient, config, httpClientHandler);
-            var list = "true";  // string | Must be set to `true`
-
-            try
-            {
-                // Return a list of configured UI headers.
-                apiInstance.ListSystemConfigUiHeaders(list);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling System.ListSystemConfigUiHeaders: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **list** | **string**| Must be set to &#x60;true&#x60; | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="listsystemleaseslookup"></a>
-# **ListSystemLeasesLookup**
-> void ListSystemLeasesLookup (string list)
-
-Returns a list of lease ids.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ListSystemLeasesLookupExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new System(httpClient, config, httpClientHandler);
-            var list = "true";  // string | Must be set to `true`
-
-            try
-            {
-                // Returns a list of lease ids.
-                apiInstance.ListSystemLeasesLookup(list);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling System.ListSystemLeasesLookup: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **list** | **string**| Must be set to &#x60;true&#x60; | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="listsystemleaseslookupprefix"></a>
-# **ListSystemLeasesLookupPrefix**
-> void ListSystemLeasesLookupPrefix (string prefix, string list)
-
-Returns a list of lease ids.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ListSystemLeasesLookupPrefixExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new System(httpClient, config, httpClientHandler);
-            var prefix = "prefix_example";  // string | The path to list leases under. Example: \"aws/creds/deploy\"
-            var list = "true";  // string | Must be set to `true`
-
-            try
-            {
-                // Returns a list of lease ids.
-                apiInstance.ListSystemLeasesLookupPrefix(prefix, list);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling System.ListSystemLeasesLookupPrefix: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **prefix** | **string**| The path to list leases under. Example: \&quot;aws/creds/deploy\&quot; | 
- **list** | **string**| Must be set to &#x60;true&#x60; | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="listsystempluginscatalogtype"></a>
-# **ListSystemPluginsCatalogType**
-> void ListSystemPluginsCatalogType (string type, string list)
-
-List the plugins in the catalog.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ListSystemPluginsCatalogTypeExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new System(httpClient, config, httpClientHandler);
-            var type = "type_example";  // string | The type of the plugin, may be auth, secret, or database
-            var list = "true";  // string | Must be set to `true`
-
-            try
-            {
-                // List the plugins in the catalog.
-                apiInstance.ListSystemPluginsCatalogType(type, list);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling System.ListSystemPluginsCatalogType: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **type** | **string**| The type of the plugin, may be auth, secret, or database | 
- **list** | **string**| Must be set to &#x60;true&#x60; | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="listsystempoliciesacl"></a>
-# **ListSystemPoliciesAcl**
-> void ListSystemPoliciesAcl (string list)
-
-List the configured access control policies.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ListSystemPoliciesAclExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new System(httpClient, config, httpClientHandler);
-            var list = "true";  // string | Must be set to `true`
-
-            try
-            {
-                // List the configured access control policies.
-                apiInstance.ListSystemPoliciesAcl(list);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling System.ListSystemPoliciesAcl: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **list** | **string**| Must be set to &#x60;true&#x60; | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="listsystempoliciespassword"></a>
-# **ListSystemPoliciesPassword**
-> void ListSystemPoliciesPassword (string list)
-
-List the existing password policies.
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ListSystemPoliciesPasswordExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new System(httpClient, config, httpClientHandler);
-            var list = "true";  // string | Must be set to `true`
-
-            try
-            {
-                // List the existing password policies.
-                apiInstance.ListSystemPoliciesPassword(list);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling System.ListSystemPoliciesPassword: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **list** | **string**| Must be set to &#x60;true&#x60; | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="listsystemquotasratelimit"></a>
-# **ListSystemQuotasRateLimit**
-> void ListSystemQuotasRateLimit (string list)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ListSystemQuotasRateLimitExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new System(httpClient, config, httpClientHandler);
-            var list = "true";  // string | Must be set to `true`
-
-            try
-            {
-                apiInstance.ListSystemQuotasRateLimit(list);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling System.ListSystemQuotasRateLimit: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **list** | **string**| Must be set to &#x60;true&#x60; | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="listsystemversionhistory"></a>
-# **ListSystemVersionHistory**
-> void ListSystemVersionHistory (string list)
-
-Returns map of historical version change entries
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class ListSystemVersionHistoryExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new System(httpClient, config, httpClientHandler);
-            var list = "true";  // string | Must be set to `true`
-
-            try
-            {
-                // Returns map of historical version change entries
-                apiInstance.ListSystemVersionHistory(list);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling System.ListSystemVersionHistory: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **list** | **string**| Must be set to &#x60;true&#x60; | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="readsystemaudit"></a>
-# **ReadSystemAudit**
-> void ReadSystemAudit ()
+<a name="getsysaudit"></a>
+# **GetSysAudit**
+> void GetSysAudit ()
 
 List the enabled audit devices.
 
@@ -2319,7 +1741,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemAuditExample
+    public class GetSysAuditExample
     {
         public static void Main()
         {
@@ -2333,11 +1755,11 @@ namespace Example
             try
             {
                 // List the enabled audit devices.
-                apiInstance.ReadSystemAudit();
+                apiInstance.GetSysAudit();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemAudit: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysAudit: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2370,9 +1792,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemauth"></a>
-# **ReadSystemAuth**
-> void ReadSystemAuth ()
+<a name="getsysauth"></a>
+# **GetSysAuth**
+> void GetSysAuth ()
 
 List the currently enabled credential backends.
 
@@ -2387,7 +1809,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemAuthExample
+    public class GetSysAuthExample
     {
         public static void Main()
         {
@@ -2401,11 +1823,11 @@ namespace Example
             try
             {
                 // List the currently enabled credential backends.
-                apiInstance.ReadSystemAuth();
+                apiInstance.GetSysAuth();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemAuth: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysAuth: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2438,9 +1860,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemauthpath"></a>
-# **ReadSystemAuthPath**
-> void ReadSystemAuthPath (string path)
+<a name="getsysauthpath"></a>
+# **GetSysAuthPath**
+> void GetSysAuthPath (string path)
 
 Read the configuration of the auth engine at the given path.
 
@@ -2455,7 +1877,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemAuthPathExample
+    public class GetSysAuthPathExample
     {
         public static void Main()
         {
@@ -2470,11 +1892,11 @@ namespace Example
             try
             {
                 // Read the configuration of the auth engine at the given path.
-                apiInstance.ReadSystemAuthPath(path);
+                apiInstance.GetSysAuthPath(path);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemAuthPath: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysAuthPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2510,9 +1932,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemauthpathtune"></a>
-# **ReadSystemAuthPathTune**
-> void ReadSystemAuthPathTune (string path)
+<a name="getsysauthpathtune"></a>
+# **GetSysAuthPathTune**
+> void GetSysAuthPathTune (string path)
 
 Reads the given auth path's configuration.
 
@@ -2529,7 +1951,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemAuthPathTuneExample
+    public class GetSysAuthPathTuneExample
     {
         public static void Main()
         {
@@ -2544,11 +1966,11 @@ namespace Example
             try
             {
                 // Reads the given auth path's configuration.
-                apiInstance.ReadSystemAuthPathTune(path);
+                apiInstance.GetSysAuthPathTune(path);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemAuthPathTune: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysAuthPathTune: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2584,9 +2006,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemconfigauditingrequestheaders"></a>
-# **ReadSystemConfigAuditingRequestHeaders**
-> void ReadSystemConfigAuditingRequestHeaders ()
+<a name="getsysconfigauditingrequestheaders"></a>
+# **GetSysConfigAuditingRequestHeaders**
+> void GetSysConfigAuditingRequestHeaders ()
 
 List the request headers that are configured to be audited.
 
@@ -2601,7 +2023,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemConfigAuditingRequestHeadersExample
+    public class GetSysConfigAuditingRequestHeadersExample
     {
         public static void Main()
         {
@@ -2615,11 +2037,11 @@ namespace Example
             try
             {
                 // List the request headers that are configured to be audited.
-                apiInstance.ReadSystemConfigAuditingRequestHeaders();
+                apiInstance.GetSysConfigAuditingRequestHeaders();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemConfigAuditingRequestHeaders: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysConfigAuditingRequestHeaders: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2652,9 +2074,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemconfigauditingrequestheadersheader"></a>
-# **ReadSystemConfigAuditingRequestHeadersHeader**
-> void ReadSystemConfigAuditingRequestHeadersHeader (string header)
+<a name="getsysconfigauditingrequestheadersheader"></a>
+# **GetSysConfigAuditingRequestHeadersHeader**
+> void GetSysConfigAuditingRequestHeadersHeader (string header)
 
 List the information for the given request header.
 
@@ -2669,7 +2091,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemConfigAuditingRequestHeadersHeaderExample
+    public class GetSysConfigAuditingRequestHeadersHeaderExample
     {
         public static void Main()
         {
@@ -2684,11 +2106,11 @@ namespace Example
             try
             {
                 // List the information for the given request header.
-                apiInstance.ReadSystemConfigAuditingRequestHeadersHeader(header);
+                apiInstance.GetSysConfigAuditingRequestHeadersHeader(header);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemConfigAuditingRequestHeadersHeader: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysConfigAuditingRequestHeadersHeader: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2724,9 +2146,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemconfigcors"></a>
-# **ReadSystemConfigCors**
-> void ReadSystemConfigCors ()
+<a name="getsysconfigcors"></a>
+# **GetSysConfigCors**
+> void GetSysConfigCors ()
 
 Return the current CORS settings.
 
@@ -2741,7 +2163,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemConfigCorsExample
+    public class GetSysConfigCorsExample
     {
         public static void Main()
         {
@@ -2755,11 +2177,11 @@ namespace Example
             try
             {
                 // Return the current CORS settings.
-                apiInstance.ReadSystemConfigCors();
+                apiInstance.GetSysConfigCors();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemConfigCors: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysConfigCors: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2792,9 +2214,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemconfigstatesanitized"></a>
-# **ReadSystemConfigStateSanitized**
-> void ReadSystemConfigStateSanitized ()
+<a name="getsysconfigstatesanitized"></a>
+# **GetSysConfigStateSanitized**
+> void GetSysConfigStateSanitized ()
 
 Return a sanitized version of the Vault server configuration.
 
@@ -2811,7 +2233,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemConfigStateSanitizedExample
+    public class GetSysConfigStateSanitizedExample
     {
         public static void Main()
         {
@@ -2825,11 +2247,11 @@ namespace Example
             try
             {
                 // Return a sanitized version of the Vault server configuration.
-                apiInstance.ReadSystemConfigStateSanitized();
+                apiInstance.GetSysConfigStateSanitized();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemConfigStateSanitized: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysConfigStateSanitized: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2862,9 +2284,81 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemconfiguiheadersheader"></a>
-# **ReadSystemConfigUiHeadersHeader**
-> void ReadSystemConfigUiHeadersHeader (string header)
+<a name="getsysconfiguiheaders"></a>
+# **GetSysConfigUiHeaders**
+> void GetSysConfigUiHeaders (string list)
+
+Return a list of configured UI headers.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetSysConfigUiHeadersExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new System(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+
+            try
+            {
+                // Return a list of configured UI headers.
+                apiInstance.GetSysConfigUiHeaders(list);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling System.GetSysConfigUiHeaders: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getsysconfiguiheadersheader"></a>
+# **GetSysConfigUiHeadersHeader**
+> void GetSysConfigUiHeadersHeader (string header)
 
 Return the given UI header's configuration
 
@@ -2879,7 +2373,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemConfigUiHeadersHeaderExample
+    public class GetSysConfigUiHeadersHeaderExample
     {
         public static void Main()
         {
@@ -2894,11 +2388,11 @@ namespace Example
             try
             {
                 // Return the given UI header's configuration
-                apiInstance.ReadSystemConfigUiHeadersHeader(header);
+                apiInstance.GetSysConfigUiHeadersHeader(header);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemConfigUiHeadersHeader: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysConfigUiHeadersHeader: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2934,9 +2428,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemgenerateroot"></a>
-# **ReadSystemGenerateRoot**
-> void ReadSystemGenerateRoot ()
+<a name="getsysgenerateroot"></a>
+# **GetSysGenerateRoot**
+> void GetSysGenerateRoot ()
 
 Read the configuration and progress of the current root generation attempt.
 
@@ -2951,7 +2445,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemGenerateRootExample
+    public class GetSysGenerateRootExample
     {
         public static void Main()
         {
@@ -2965,11 +2459,11 @@ namespace Example
             try
             {
                 // Read the configuration and progress of the current root generation attempt.
-                apiInstance.ReadSystemGenerateRoot();
+                apiInstance.GetSysGenerateRoot();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemGenerateRoot: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysGenerateRoot: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3002,9 +2496,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemgeneraterootattempt"></a>
-# **ReadSystemGenerateRootAttempt**
-> void ReadSystemGenerateRootAttempt ()
+<a name="getsysgeneraterootattempt"></a>
+# **GetSysGenerateRootAttempt**
+> void GetSysGenerateRootAttempt ()
 
 Read the configuration and progress of the current root generation attempt.
 
@@ -3019,7 +2513,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemGenerateRootAttemptExample
+    public class GetSysGenerateRootAttemptExample
     {
         public static void Main()
         {
@@ -3033,11 +2527,11 @@ namespace Example
             try
             {
                 // Read the configuration and progress of the current root generation attempt.
-                apiInstance.ReadSystemGenerateRootAttempt();
+                apiInstance.GetSysGenerateRootAttempt();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemGenerateRootAttempt: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysGenerateRootAttempt: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3070,9 +2564,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemhastatus"></a>
-# **ReadSystemHaStatus**
-> void ReadSystemHaStatus ()
+<a name="getsyshastatus"></a>
+# **GetSysHaStatus**
+> void GetSysHaStatus ()
 
 Check the HA status of a Vault cluster
 
@@ -3087,7 +2581,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemHaStatusExample
+    public class GetSysHaStatusExample
     {
         public static void Main()
         {
@@ -3101,11 +2595,11 @@ namespace Example
             try
             {
                 // Check the HA status of a Vault cluster
-                apiInstance.ReadSystemHaStatus();
+                apiInstance.GetSysHaStatus();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemHaStatus: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysHaStatus: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3138,9 +2632,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemhealth"></a>
-# **ReadSystemHealth**
-> void ReadSystemHealth ()
+<a name="getsyshealth"></a>
+# **GetSysHealth**
+> void GetSysHealth ()
 
 Returns the health status of Vault.
 
@@ -3155,7 +2649,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemHealthExample
+    public class GetSysHealthExample
     {
         public static void Main()
         {
@@ -3169,11 +2663,11 @@ namespace Example
             try
             {
                 // Returns the health status of Vault.
-                apiInstance.ReadSystemHealth();
+                apiInstance.GetSysHealth();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemHealth: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysHealth: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3210,9 +2704,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemhostinfo"></a>
-# **ReadSystemHostInfo**
-> void ReadSystemHostInfo ()
+<a name="getsyshostinfo"></a>
+# **GetSysHostInfo**
+> void GetSysHostInfo ()
 
 Information about the host instance that this Vault server is running on.
 
@@ -3229,7 +2723,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemHostInfoExample
+    public class GetSysHostInfoExample
     {
         public static void Main()
         {
@@ -3243,11 +2737,11 @@ namespace Example
             try
             {
                 // Information about the host instance that this Vault server is running on.
-                apiInstance.ReadSystemHostInfo();
+                apiInstance.GetSysHostInfo();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemHostInfo: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysHostInfo: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3280,9 +2774,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsysteminflightreq"></a>
-# **ReadSystemInFlightReq**
-> void ReadSystemInFlightReq ()
+<a name="getsysinflightreq"></a>
+# **GetSysInFlightReq**
+> void GetSysInFlightReq ()
 
 reports in-flight requests
 
@@ -3299,7 +2793,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemInFlightReqExample
+    public class GetSysInFlightReqExample
     {
         public static void Main()
         {
@@ -3313,11 +2807,11 @@ namespace Example
             try
             {
                 // reports in-flight requests
-                apiInstance.ReadSystemInFlightReq();
+                apiInstance.GetSysInFlightReq();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemInFlightReq: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInFlightReq: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3350,9 +2844,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsysteminit"></a>
-# **ReadSystemInit**
-> void ReadSystemInit ()
+<a name="getsysinit"></a>
+# **GetSysInit**
+> void GetSysInit ()
 
 Returns the initialization status of Vault.
 
@@ -3367,7 +2861,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemInitExample
+    public class GetSysInitExample
     {
         public static void Main()
         {
@@ -3381,11 +2875,11 @@ namespace Example
             try
             {
                 // Returns the initialization status of Vault.
-                apiInstance.ReadSystemInit();
+                apiInstance.GetSysInit();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemInit: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInit: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3418,9 +2912,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsysteminternalcountersactivity"></a>
-# **ReadSystemInternalCountersActivity**
-> void ReadSystemInternalCountersActivity ()
+<a name="getsysinternalcountersactivity"></a>
+# **GetSysInternalCountersActivity**
+> void GetSysInternalCountersActivity ()
 
 Report the client count metrics, for this namespace and all child namespaces.
 
@@ -3435,7 +2929,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemInternalCountersActivityExample
+    public class GetSysInternalCountersActivityExample
     {
         public static void Main()
         {
@@ -3449,11 +2943,11 @@ namespace Example
             try
             {
                 // Report the client count metrics, for this namespace and all child namespaces.
-                apiInstance.ReadSystemInternalCountersActivity();
+                apiInstance.GetSysInternalCountersActivity();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemInternalCountersActivity: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalCountersActivity: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3486,9 +2980,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsysteminternalcountersactivityexport"></a>
-# **ReadSystemInternalCountersActivityExport**
-> void ReadSystemInternalCountersActivityExport ()
+<a name="getsysinternalcountersactivityexport"></a>
+# **GetSysInternalCountersActivityExport**
+> void GetSysInternalCountersActivityExport ()
 
 Report the client count metrics, for this namespace and all child namespaces.
 
@@ -3503,7 +2997,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemInternalCountersActivityExportExample
+    public class GetSysInternalCountersActivityExportExample
     {
         public static void Main()
         {
@@ -3517,11 +3011,11 @@ namespace Example
             try
             {
                 // Report the client count metrics, for this namespace and all child namespaces.
-                apiInstance.ReadSystemInternalCountersActivityExport();
+                apiInstance.GetSysInternalCountersActivityExport();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemInternalCountersActivityExport: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalCountersActivityExport: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3554,9 +3048,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsysteminternalcountersactivitymonthly"></a>
-# **ReadSystemInternalCountersActivityMonthly**
-> void ReadSystemInternalCountersActivityMonthly ()
+<a name="getsysinternalcountersactivitymonthly"></a>
+# **GetSysInternalCountersActivityMonthly**
+> void GetSysInternalCountersActivityMonthly ()
 
 Report the number of clients for this month, for this namespace and all child namespaces.
 
@@ -3571,7 +3065,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemInternalCountersActivityMonthlyExample
+    public class GetSysInternalCountersActivityMonthlyExample
     {
         public static void Main()
         {
@@ -3585,11 +3079,11 @@ namespace Example
             try
             {
                 // Report the number of clients for this month, for this namespace and all child namespaces.
-                apiInstance.ReadSystemInternalCountersActivityMonthly();
+                apiInstance.GetSysInternalCountersActivityMonthly();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemInternalCountersActivityMonthly: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalCountersActivityMonthly: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3622,9 +3116,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsysteminternalcountersconfig"></a>
-# **ReadSystemInternalCountersConfig**
-> void ReadSystemInternalCountersConfig ()
+<a name="getsysinternalcountersconfig"></a>
+# **GetSysInternalCountersConfig**
+> void GetSysInternalCountersConfig ()
 
 Read the client count tracking configuration.
 
@@ -3639,7 +3133,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemInternalCountersConfigExample
+    public class GetSysInternalCountersConfigExample
     {
         public static void Main()
         {
@@ -3653,11 +3147,11 @@ namespace Example
             try
             {
                 // Read the client count tracking configuration.
-                apiInstance.ReadSystemInternalCountersConfig();
+                apiInstance.GetSysInternalCountersConfig();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemInternalCountersConfig: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalCountersConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3690,9 +3184,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsysteminternalcountersentities"></a>
-# **ReadSystemInternalCountersEntities**
-> void ReadSystemInternalCountersEntities ()
+<a name="getsysinternalcountersentities"></a>
+# **GetSysInternalCountersEntities**
+> void GetSysInternalCountersEntities ()
 
 Backwards compatibility is not guaranteed for this API
 
@@ -3707,7 +3201,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemInternalCountersEntitiesExample
+    public class GetSysInternalCountersEntitiesExample
     {
         public static void Main()
         {
@@ -3721,11 +3215,11 @@ namespace Example
             try
             {
                 // Backwards compatibility is not guaranteed for this API
-                apiInstance.ReadSystemInternalCountersEntities();
+                apiInstance.GetSysInternalCountersEntities();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemInternalCountersEntities: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalCountersEntities: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3758,9 +3252,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsysteminternalcountersrequests"></a>
-# **ReadSystemInternalCountersRequests**
-> void ReadSystemInternalCountersRequests ()
+<a name="getsysinternalcountersrequests"></a>
+# **GetSysInternalCountersRequests**
+> void GetSysInternalCountersRequests ()
 
 Backwards compatibility is not guaranteed for this API
 
@@ -3775,7 +3269,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemInternalCountersRequestsExample
+    public class GetSysInternalCountersRequestsExample
     {
         public static void Main()
         {
@@ -3789,11 +3283,11 @@ namespace Example
             try
             {
                 // Backwards compatibility is not guaranteed for this API
-                apiInstance.ReadSystemInternalCountersRequests();
+                apiInstance.GetSysInternalCountersRequests();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemInternalCountersRequests: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalCountersRequests: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3826,9 +3320,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsysteminternalcounterstokens"></a>
-# **ReadSystemInternalCountersTokens**
-> void ReadSystemInternalCountersTokens ()
+<a name="getsysinternalcounterstokens"></a>
+# **GetSysInternalCountersTokens**
+> void GetSysInternalCountersTokens ()
 
 Backwards compatibility is not guaranteed for this API
 
@@ -3843,7 +3337,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemInternalCountersTokensExample
+    public class GetSysInternalCountersTokensExample
     {
         public static void Main()
         {
@@ -3857,11 +3351,11 @@ namespace Example
             try
             {
                 // Backwards compatibility is not guaranteed for this API
-                apiInstance.ReadSystemInternalCountersTokens();
+                apiInstance.GetSysInternalCountersTokens();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemInternalCountersTokens: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalCountersTokens: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3894,9 +3388,81 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsysteminternalspecsopenapi"></a>
-# **ReadSystemInternalSpecsOpenapi**
-> void ReadSystemInternalSpecsOpenapi ()
+<a name="getsysinternalinspectroutertag"></a>
+# **GetSysInternalInspectRouterTag**
+> void GetSysInternalInspectRouterTag (string tag)
+
+Expose the route entry and mount entry tables present in the router
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetSysInternalInspectRouterTagExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new System(httpClient, config, httpClientHandler);
+            var tag = "tag_example";  // string | Name of subtree being observed
+
+            try
+            {
+                // Expose the route entry and mount entry tables present in the router
+                apiInstance.GetSysInternalInspectRouterTag(tag);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling System.GetSysInternalInspectRouterTag: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tag** | **string**| Name of subtree being observed | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getsysinternalspecsopenapi"></a>
+# **GetSysInternalSpecsOpenapi**
+> void GetSysInternalSpecsOpenapi ()
 
 Generate an OpenAPI 3 document of all mounted paths.
 
@@ -3911,7 +3477,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemInternalSpecsOpenapiExample
+    public class GetSysInternalSpecsOpenapiExample
     {
         public static void Main()
         {
@@ -3925,11 +3491,11 @@ namespace Example
             try
             {
                 // Generate an OpenAPI 3 document of all mounted paths.
-                apiInstance.ReadSystemInternalSpecsOpenapi();
+                apiInstance.GetSysInternalSpecsOpenapi();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemInternalSpecsOpenapi: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalSpecsOpenapi: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -3962,9 +3528,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsysteminternaluifeatureflags"></a>
-# **ReadSystemInternalUiFeatureFlags**
-> void ReadSystemInternalUiFeatureFlags ()
+<a name="getsysinternaluifeatureflags"></a>
+# **GetSysInternalUiFeatureFlags**
+> void GetSysInternalUiFeatureFlags ()
 
 Lists enabled feature flags.
 
@@ -3979,7 +3545,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemInternalUiFeatureFlagsExample
+    public class GetSysInternalUiFeatureFlagsExample
     {
         public static void Main()
         {
@@ -3993,11 +3559,11 @@ namespace Example
             try
             {
                 // Lists enabled feature flags.
-                apiInstance.ReadSystemInternalUiFeatureFlags();
+                apiInstance.GetSysInternalUiFeatureFlags();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemInternalUiFeatureFlags: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalUiFeatureFlags: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4030,9 +3596,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsysteminternaluimounts"></a>
-# **ReadSystemInternalUiMounts**
-> void ReadSystemInternalUiMounts ()
+<a name="getsysinternaluimounts"></a>
+# **GetSysInternalUiMounts**
+> void GetSysInternalUiMounts ()
 
 Lists all enabled and visible auth and secrets mounts.
 
@@ -4047,7 +3613,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemInternalUiMountsExample
+    public class GetSysInternalUiMountsExample
     {
         public static void Main()
         {
@@ -4061,11 +3627,11 @@ namespace Example
             try
             {
                 // Lists all enabled and visible auth and secrets mounts.
-                apiInstance.ReadSystemInternalUiMounts();
+                apiInstance.GetSysInternalUiMounts();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemInternalUiMounts: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalUiMounts: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4098,9 +3664,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsysteminternaluimountspath"></a>
-# **ReadSystemInternalUiMountsPath**
-> void ReadSystemInternalUiMountsPath (string path)
+<a name="getsysinternaluimountspath"></a>
+# **GetSysInternalUiMountsPath**
+> void GetSysInternalUiMountsPath (string path)
 
 Return information about the given mount.
 
@@ -4115,7 +3681,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemInternalUiMountsPathExample
+    public class GetSysInternalUiMountsPathExample
     {
         public static void Main()
         {
@@ -4130,11 +3696,11 @@ namespace Example
             try
             {
                 // Return information about the given mount.
-                apiInstance.ReadSystemInternalUiMountsPath(path);
+                apiInstance.GetSysInternalUiMountsPath(path);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemInternalUiMountsPath: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalUiMountsPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4170,9 +3736,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsysteminternaluinamespaces"></a>
-# **ReadSystemInternalUiNamespaces**
-> void ReadSystemInternalUiNamespaces ()
+<a name="getsysinternaluinamespaces"></a>
+# **GetSysInternalUiNamespaces**
+> void GetSysInternalUiNamespaces ()
 
 Backwards compatibility is not guaranteed for this API
 
@@ -4187,7 +3753,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemInternalUiNamespacesExample
+    public class GetSysInternalUiNamespacesExample
     {
         public static void Main()
         {
@@ -4201,11 +3767,11 @@ namespace Example
             try
             {
                 // Backwards compatibility is not guaranteed for this API
-                apiInstance.ReadSystemInternalUiNamespaces();
+                apiInstance.GetSysInternalUiNamespaces();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemInternalUiNamespaces: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalUiNamespaces: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4238,9 +3804,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsysteminternaluiresultantacl"></a>
-# **ReadSystemInternalUiResultantAcl**
-> void ReadSystemInternalUiResultantAcl ()
+<a name="getsysinternaluiresultantacl"></a>
+# **GetSysInternalUiResultantAcl**
+> void GetSysInternalUiResultantAcl ()
 
 Backwards compatibility is not guaranteed for this API
 
@@ -4255,7 +3821,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemInternalUiResultantAclExample
+    public class GetSysInternalUiResultantAclExample
     {
         public static void Main()
         {
@@ -4269,11 +3835,11 @@ namespace Example
             try
             {
                 // Backwards compatibility is not guaranteed for this API
-                apiInstance.ReadSystemInternalUiResultantAcl();
+                apiInstance.GetSysInternalUiResultantAcl();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemInternalUiResultantAcl: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysInternalUiResultantAcl: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4306,9 +3872,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemkeystatus"></a>
-# **ReadSystemKeyStatus**
-> void ReadSystemKeyStatus ()
+<a name="getsyskeystatus"></a>
+# **GetSysKeyStatus**
+> void GetSysKeyStatus ()
 
 Provides information about the backend encryption key.
 
@@ -4323,7 +3889,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemKeyStatusExample
+    public class GetSysKeyStatusExample
     {
         public static void Main()
         {
@@ -4337,11 +3903,11 @@ namespace Example
             try
             {
                 // Provides information about the backend encryption key.
-                apiInstance.ReadSystemKeyStatus();
+                apiInstance.GetSysKeyStatus();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemKeyStatus: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysKeyStatus: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4374,9 +3940,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemleader"></a>
-# **ReadSystemLeader**
-> void ReadSystemLeader ()
+<a name="getsysleader"></a>
+# **GetSysLeader**
+> void GetSysLeader ()
 
 Returns the high availability status and current leader instance of Vault.
 
@@ -4391,7 +3957,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemLeaderExample
+    public class GetSysLeaderExample
     {
         public static void Main()
         {
@@ -4405,11 +3971,11 @@ namespace Example
             try
             {
                 // Returns the high availability status and current leader instance of Vault.
-                apiInstance.ReadSystemLeader();
+                apiInstance.GetSysLeader();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemLeader: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysLeader: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4442,9 +4008,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemleases"></a>
-# **ReadSystemLeases**
-> void ReadSystemLeases ()
+<a name="getsysleases"></a>
+# **GetSysLeases**
+> void GetSysLeases ()
 
 List leases associated with this Vault cluster
 
@@ -4459,7 +4025,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemLeasesExample
+    public class GetSysLeasesExample
     {
         public static void Main()
         {
@@ -4473,11 +4039,11 @@ namespace Example
             try
             {
                 // List leases associated with this Vault cluster
-                apiInstance.ReadSystemLeases();
+                apiInstance.GetSysLeases();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemLeases: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysLeases: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4510,9 +4076,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemleasescount"></a>
-# **ReadSystemLeasesCount**
-> void ReadSystemLeasesCount ()
+<a name="getsysleasescount"></a>
+# **GetSysLeasesCount**
+> void GetSysLeasesCount ()
 
 Count of leases associated with this Vault cluster
 
@@ -4527,7 +4093,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemLeasesCountExample
+    public class GetSysLeasesCountExample
     {
         public static void Main()
         {
@@ -4541,11 +4107,11 @@ namespace Example
             try
             {
                 // Count of leases associated with this Vault cluster
-                apiInstance.ReadSystemLeasesCount();
+                apiInstance.GetSysLeasesCount();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemLeasesCount: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysLeasesCount: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4578,9 +4144,155 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemmetrics"></a>
-# **ReadSystemMetrics**
-> void ReadSystemMetrics (string format = null)
+<a name="getsysleaseslookup"></a>
+# **GetSysLeasesLookup**
+> void GetSysLeasesLookup (string list)
+
+Returns a list of lease ids.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetSysLeasesLookupExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new System(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+
+            try
+            {
+                // Returns a list of lease ids.
+                apiInstance.GetSysLeasesLookup(list);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling System.GetSysLeasesLookup: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getsysleaseslookupprefix"></a>
+# **GetSysLeasesLookupPrefix**
+> void GetSysLeasesLookupPrefix (string prefix, string list)
+
+Returns a list of lease ids.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetSysLeasesLookupPrefixExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new System(httpClient, config, httpClientHandler);
+            var prefix = "prefix_example";  // string | The path to list leases under. Example: \"aws/creds/deploy\"
+            var list = "true";  // string | Must be set to `true`
+
+            try
+            {
+                // Returns a list of lease ids.
+                apiInstance.GetSysLeasesLookupPrefix(prefix, list);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling System.GetSysLeasesLookupPrefix: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **prefix** | **string**| The path to list leases under. Example: \&quot;aws/creds/deploy\&quot; | 
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getsysmetrics"></a>
+# **GetSysMetrics**
+> void GetSysMetrics (string format = null)
 
 Export the metrics aggregated for telemetry purpose.
 
@@ -4595,7 +4307,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemMetricsExample
+    public class GetSysMetricsExample
     {
         public static void Main()
         {
@@ -4610,11 +4322,11 @@ namespace Example
             try
             {
                 // Export the metrics aggregated for telemetry purpose.
-                apiInstance.ReadSystemMetrics(format);
+                apiInstance.GetSysMetrics(format);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemMetrics: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysMetrics: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4650,9 +4362,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemmonitor"></a>
-# **ReadSystemMonitor**
-> void ReadSystemMonitor (string logFormat = null, string logLevel = null)
+<a name="getsysmonitor"></a>
+# **GetSysMonitor**
+> void GetSysMonitor (string logFormat = null, string logLevel = null)
 
 
 
@@ -4667,7 +4379,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemMonitorExample
+    public class GetSysMonitorExample
     {
         public static void Main()
         {
@@ -4682,11 +4394,11 @@ namespace Example
 
             try
             {
-                apiInstance.ReadSystemMonitor(logFormat, logLevel);
+                apiInstance.GetSysMonitor(logFormat, logLevel);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemMonitor: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysMonitor: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4723,9 +4435,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemmounts"></a>
-# **ReadSystemMounts**
-> void ReadSystemMounts ()
+<a name="getsysmounts"></a>
+# **GetSysMounts**
+> void GetSysMounts ()
 
 List the currently mounted backends.
 
@@ -4740,7 +4452,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemMountsExample
+    public class GetSysMountsExample
     {
         public static void Main()
         {
@@ -4754,11 +4466,11 @@ namespace Example
             try
             {
                 // List the currently mounted backends.
-                apiInstance.ReadSystemMounts();
+                apiInstance.GetSysMounts();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemMounts: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysMounts: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4791,9 +4503,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemmountspath"></a>
-# **ReadSystemMountsPath**
-> void ReadSystemMountsPath (string path)
+<a name="getsysmountspath"></a>
+# **GetSysMountsPath**
+> void GetSysMountsPath (string path)
 
 Read the configuration of the secret engine at the given path.
 
@@ -4808,7 +4520,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemMountsPathExample
+    public class GetSysMountsPathExample
     {
         public static void Main()
         {
@@ -4823,11 +4535,11 @@ namespace Example
             try
             {
                 // Read the configuration of the secret engine at the given path.
-                apiInstance.ReadSystemMountsPath(path);
+                apiInstance.GetSysMountsPath(path);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemMountsPath: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysMountsPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4863,9 +4575,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemmountspathtune"></a>
-# **ReadSystemMountsPathTune**
-> void ReadSystemMountsPathTune (string path)
+<a name="getsysmountspathtune"></a>
+# **GetSysMountsPathTune**
+> void GetSysMountsPathTune (string path)
 
 Tune backend configuration parameters for this mount.
 
@@ -4880,7 +4592,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemMountsPathTuneExample
+    public class GetSysMountsPathTuneExample
     {
         public static void Main()
         {
@@ -4895,11 +4607,11 @@ namespace Example
             try
             {
                 // Tune backend configuration parameters for this mount.
-                apiInstance.ReadSystemMountsPathTune(path);
+                apiInstance.GetSysMountsPathTune(path);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemMountsPathTune: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysMountsPathTune: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4935,9 +4647,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystempluginscatalog"></a>
-# **ReadSystemPluginsCatalog**
-> void ReadSystemPluginsCatalog ()
+<a name="getsyspluginscatalog"></a>
+# **GetSysPluginsCatalog**
+> void GetSysPluginsCatalog ()
 
 Lists all the plugins known to Vault
 
@@ -4952,7 +4664,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemPluginsCatalogExample
+    public class GetSysPluginsCatalogExample
     {
         public static void Main()
         {
@@ -4966,11 +4678,11 @@ namespace Example
             try
             {
                 // Lists all the plugins known to Vault
-                apiInstance.ReadSystemPluginsCatalog();
+                apiInstance.GetSysPluginsCatalog();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemPluginsCatalog: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPluginsCatalog: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5003,9 +4715,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystempluginscatalogname"></a>
-# **ReadSystemPluginsCatalogName**
-> void ReadSystemPluginsCatalogName (string name)
+<a name="getsyspluginscatalogname"></a>
+# **GetSysPluginsCatalogName**
+> void GetSysPluginsCatalogName (string name)
 
 Return the configuration data for the plugin with the given name.
 
@@ -5020,7 +4732,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemPluginsCatalogNameExample
+    public class GetSysPluginsCatalogNameExample
     {
         public static void Main()
         {
@@ -5035,11 +4747,11 @@ namespace Example
             try
             {
                 // Return the configuration data for the plugin with the given name.
-                apiInstance.ReadSystemPluginsCatalogName(name);
+                apiInstance.GetSysPluginsCatalogName(name);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemPluginsCatalogName: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPluginsCatalogName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5075,9 +4787,83 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystempluginscatalogtypename"></a>
-# **ReadSystemPluginsCatalogTypeName**
-> void ReadSystemPluginsCatalogTypeName (string name, string type)
+<a name="getsyspluginscatalogtype"></a>
+# **GetSysPluginsCatalogType**
+> void GetSysPluginsCatalogType (string type, string list)
+
+List the plugins in the catalog.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetSysPluginsCatalogTypeExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new System(httpClient, config, httpClientHandler);
+            var type = "type_example";  // string | The type of the plugin, may be auth, secret, or database
+            var list = "true";  // string | Must be set to `true`
+
+            try
+            {
+                // List the plugins in the catalog.
+                apiInstance.GetSysPluginsCatalogType(type, list);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling System.GetSysPluginsCatalogType: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **type** | **string**| The type of the plugin, may be auth, secret, or database | 
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getsyspluginscatalogtypename"></a>
+# **GetSysPluginsCatalogTypeName**
+> void GetSysPluginsCatalogTypeName (string name, string type)
 
 Return the configuration data for the plugin with the given name.
 
@@ -5092,7 +4878,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemPluginsCatalogTypeNameExample
+    public class GetSysPluginsCatalogTypeNameExample
     {
         public static void Main()
         {
@@ -5108,11 +4894,11 @@ namespace Example
             try
             {
                 // Return the configuration data for the plugin with the given name.
-                apiInstance.ReadSystemPluginsCatalogTypeName(name, type);
+                apiInstance.GetSysPluginsCatalogTypeName(name, type);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemPluginsCatalogTypeName: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPluginsCatalogTypeName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5149,9 +4935,81 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystempoliciesaclname"></a>
-# **ReadSystemPoliciesAclName**
-> void ReadSystemPoliciesAclName (string name)
+<a name="getsyspoliciesacl"></a>
+# **GetSysPoliciesAcl**
+> void GetSysPoliciesAcl (string list)
+
+List the configured access control policies.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetSysPoliciesAclExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new System(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+
+            try
+            {
+                // List the configured access control policies.
+                apiInstance.GetSysPoliciesAcl(list);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling System.GetSysPoliciesAcl: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getsyspoliciesaclname"></a>
+# **GetSysPoliciesAclName**
+> void GetSysPoliciesAclName (string name)
 
 Retrieve information about the named ACL policy.
 
@@ -5166,7 +5024,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemPoliciesAclNameExample
+    public class GetSysPoliciesAclNameExample
     {
         public static void Main()
         {
@@ -5181,11 +5039,11 @@ namespace Example
             try
             {
                 // Retrieve information about the named ACL policy.
-                apiInstance.ReadSystemPoliciesAclName(name);
+                apiInstance.GetSysPoliciesAclName(name);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemPoliciesAclName: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPoliciesAclName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5221,9 +5079,81 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystempoliciespasswordname"></a>
-# **ReadSystemPoliciesPasswordName**
-> void ReadSystemPoliciesPasswordName (string name)
+<a name="getsyspoliciespassword"></a>
+# **GetSysPoliciesPassword**
+> void GetSysPoliciesPassword (string list)
+
+List the existing password policies.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetSysPoliciesPasswordExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new System(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+
+            try
+            {
+                // List the existing password policies.
+                apiInstance.GetSysPoliciesPassword(list);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling System.GetSysPoliciesPassword: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getsyspoliciespasswordname"></a>
+# **GetSysPoliciesPasswordName**
+> void GetSysPoliciesPasswordName (string name)
 
 Retrieve an existing password policy.
 
@@ -5238,7 +5168,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemPoliciesPasswordNameExample
+    public class GetSysPoliciesPasswordNameExample
     {
         public static void Main()
         {
@@ -5253,11 +5183,11 @@ namespace Example
             try
             {
                 // Retrieve an existing password policy.
-                apiInstance.ReadSystemPoliciesPasswordName(name);
+                apiInstance.GetSysPoliciesPasswordName(name);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemPoliciesPasswordName: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPoliciesPasswordName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5293,9 +5223,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystempoliciespasswordnamegenerate"></a>
-# **ReadSystemPoliciesPasswordNameGenerate**
-> void ReadSystemPoliciesPasswordNameGenerate (string name)
+<a name="getsyspoliciespasswordnamegenerate"></a>
+# **GetSysPoliciesPasswordNameGenerate**
+> void GetSysPoliciesPasswordNameGenerate (string name)
 
 Generate a password from an existing password policy.
 
@@ -5310,7 +5240,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemPoliciesPasswordNameGenerateExample
+    public class GetSysPoliciesPasswordNameGenerateExample
     {
         public static void Main()
         {
@@ -5325,11 +5255,11 @@ namespace Example
             try
             {
                 // Generate a password from an existing password policy.
-                apiInstance.ReadSystemPoliciesPasswordNameGenerate(name);
+                apiInstance.GetSysPoliciesPasswordNameGenerate(name);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemPoliciesPasswordNameGenerate: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPoliciesPasswordNameGenerate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5365,9 +5295,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystempolicy"></a>
-# **ReadSystemPolicy**
-> void ReadSystemPolicy (string list = null)
+<a name="getsyspolicy"></a>
+# **GetSysPolicy**
+> void GetSysPolicy (string list = null)
 
 List the configured access control policies.
 
@@ -5382,7 +5312,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemPolicyExample
+    public class GetSysPolicyExample
     {
         public static void Main()
         {
@@ -5397,11 +5327,11 @@ namespace Example
             try
             {
                 // List the configured access control policies.
-                apiInstance.ReadSystemPolicy(list);
+                apiInstance.GetSysPolicy(list);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemPolicy: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPolicy: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5437,9 +5367,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystempolicyname"></a>
-# **ReadSystemPolicyName**
-> void ReadSystemPolicyName (string name)
+<a name="getsyspolicyname"></a>
+# **GetSysPolicyName**
+> void GetSysPolicyName (string name)
 
 Retrieve the policy body for the named policy.
 
@@ -5454,7 +5384,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemPolicyNameExample
+    public class GetSysPolicyNameExample
     {
         public static void Main()
         {
@@ -5469,11 +5399,11 @@ namespace Example
             try
             {
                 // Retrieve the policy body for the named policy.
-                apiInstance.ReadSystemPolicyName(name);
+                apiInstance.GetSysPolicyName(name);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemPolicyName: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPolicyName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5509,9 +5439,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystempprof"></a>
-# **ReadSystemPprof**
-> void ReadSystemPprof ()
+<a name="getsyspprof"></a>
+# **GetSysPprof**
+> void GetSysPprof ()
 
 Returns an HTML page listing the available profiles.
 
@@ -5528,7 +5458,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemPprofExample
+    public class GetSysPprofExample
     {
         public static void Main()
         {
@@ -5542,11 +5472,11 @@ namespace Example
             try
             {
                 // Returns an HTML page listing the available profiles.
-                apiInstance.ReadSystemPprof();
+                apiInstance.GetSysPprof();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemPprof: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPprof: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5579,9 +5509,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystempprofallocs"></a>
-# **ReadSystemPprofAllocs**
-> void ReadSystemPprofAllocs ()
+<a name="getsyspprofallocs"></a>
+# **GetSysPprofAllocs**
+> void GetSysPprofAllocs ()
 
 Returns a sampling of all past memory allocations.
 
@@ -5598,7 +5528,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemPprofAllocsExample
+    public class GetSysPprofAllocsExample
     {
         public static void Main()
         {
@@ -5612,11 +5542,11 @@ namespace Example
             try
             {
                 // Returns a sampling of all past memory allocations.
-                apiInstance.ReadSystemPprofAllocs();
+                apiInstance.GetSysPprofAllocs();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemPprofAllocs: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPprofAllocs: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5649,9 +5579,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystempprofblock"></a>
-# **ReadSystemPprofBlock**
-> void ReadSystemPprofBlock ()
+<a name="getsyspprofblock"></a>
+# **GetSysPprofBlock**
+> void GetSysPprofBlock ()
 
 Returns stack traces that led to blocking on synchronization primitives
 
@@ -5668,7 +5598,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemPprofBlockExample
+    public class GetSysPprofBlockExample
     {
         public static void Main()
         {
@@ -5682,11 +5612,11 @@ namespace Example
             try
             {
                 // Returns stack traces that led to blocking on synchronization primitives
-                apiInstance.ReadSystemPprofBlock();
+                apiInstance.GetSysPprofBlock();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemPprofBlock: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPprofBlock: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5719,9 +5649,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystempprofcmdline"></a>
-# **ReadSystemPprofCmdline**
-> void ReadSystemPprofCmdline ()
+<a name="getsyspprofcmdline"></a>
+# **GetSysPprofCmdline**
+> void GetSysPprofCmdline ()
 
 Returns the running program's command line.
 
@@ -5738,7 +5668,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemPprofCmdlineExample
+    public class GetSysPprofCmdlineExample
     {
         public static void Main()
         {
@@ -5752,11 +5682,11 @@ namespace Example
             try
             {
                 // Returns the running program's command line.
-                apiInstance.ReadSystemPprofCmdline();
+                apiInstance.GetSysPprofCmdline();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemPprofCmdline: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPprofCmdline: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5789,9 +5719,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystempprofgoroutine"></a>
-# **ReadSystemPprofGoroutine**
-> void ReadSystemPprofGoroutine ()
+<a name="getsyspprofgoroutine"></a>
+# **GetSysPprofGoroutine**
+> void GetSysPprofGoroutine ()
 
 Returns stack traces of all current goroutines.
 
@@ -5808,7 +5738,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemPprofGoroutineExample
+    public class GetSysPprofGoroutineExample
     {
         public static void Main()
         {
@@ -5822,11 +5752,11 @@ namespace Example
             try
             {
                 // Returns stack traces of all current goroutines.
-                apiInstance.ReadSystemPprofGoroutine();
+                apiInstance.GetSysPprofGoroutine();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemPprofGoroutine: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPprofGoroutine: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5859,9 +5789,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystempprofheap"></a>
-# **ReadSystemPprofHeap**
-> void ReadSystemPprofHeap ()
+<a name="getsyspprofheap"></a>
+# **GetSysPprofHeap**
+> void GetSysPprofHeap ()
 
 Returns a sampling of memory allocations of live object.
 
@@ -5878,7 +5808,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemPprofHeapExample
+    public class GetSysPprofHeapExample
     {
         public static void Main()
         {
@@ -5892,11 +5822,11 @@ namespace Example
             try
             {
                 // Returns a sampling of memory allocations of live object.
-                apiInstance.ReadSystemPprofHeap();
+                apiInstance.GetSysPprofHeap();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemPprofHeap: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPprofHeap: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5929,9 +5859,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystempprofmutex"></a>
-# **ReadSystemPprofMutex**
-> void ReadSystemPprofMutex ()
+<a name="getsyspprofmutex"></a>
+# **GetSysPprofMutex**
+> void GetSysPprofMutex ()
 
 Returns stack traces of holders of contended mutexes
 
@@ -5948,7 +5878,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemPprofMutexExample
+    public class GetSysPprofMutexExample
     {
         public static void Main()
         {
@@ -5962,11 +5892,11 @@ namespace Example
             try
             {
                 // Returns stack traces of holders of contended mutexes
-                apiInstance.ReadSystemPprofMutex();
+                apiInstance.GetSysPprofMutex();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemPprofMutex: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPprofMutex: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -5999,9 +5929,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystempprofprofile"></a>
-# **ReadSystemPprofProfile**
-> void ReadSystemPprofProfile ()
+<a name="getsyspprofprofile"></a>
+# **GetSysPprofProfile**
+> void GetSysPprofProfile ()
 
 Returns a pprof-formatted cpu profile payload.
 
@@ -6018,7 +5948,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemPprofProfileExample
+    public class GetSysPprofProfileExample
     {
         public static void Main()
         {
@@ -6032,11 +5962,11 @@ namespace Example
             try
             {
                 // Returns a pprof-formatted cpu profile payload.
-                apiInstance.ReadSystemPprofProfile();
+                apiInstance.GetSysPprofProfile();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemPprofProfile: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPprofProfile: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6069,9 +5999,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystempprofsymbol"></a>
-# **ReadSystemPprofSymbol**
-> void ReadSystemPprofSymbol ()
+<a name="getsyspprofsymbol"></a>
+# **GetSysPprofSymbol**
+> void GetSysPprofSymbol ()
 
 Returns the program counters listed in the request.
 
@@ -6088,7 +6018,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemPprofSymbolExample
+    public class GetSysPprofSymbolExample
     {
         public static void Main()
         {
@@ -6102,11 +6032,11 @@ namespace Example
             try
             {
                 // Returns the program counters listed in the request.
-                apiInstance.ReadSystemPprofSymbol();
+                apiInstance.GetSysPprofSymbol();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemPprofSymbol: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPprofSymbol: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6139,9 +6069,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystempprofthreadcreate"></a>
-# **ReadSystemPprofThreadcreate**
-> void ReadSystemPprofThreadcreate ()
+<a name="getsyspprofthreadcreate"></a>
+# **GetSysPprofThreadcreate**
+> void GetSysPprofThreadcreate ()
 
 Returns stack traces that led to the creation of new OS threads
 
@@ -6158,7 +6088,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemPprofThreadcreateExample
+    public class GetSysPprofThreadcreateExample
     {
         public static void Main()
         {
@@ -6172,11 +6102,11 @@ namespace Example
             try
             {
                 // Returns stack traces that led to the creation of new OS threads
-                apiInstance.ReadSystemPprofThreadcreate();
+                apiInstance.GetSysPprofThreadcreate();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemPprofThreadcreate: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPprofThreadcreate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6209,9 +6139,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystempproftrace"></a>
-# **ReadSystemPprofTrace**
-> void ReadSystemPprofTrace ()
+<a name="getsyspproftrace"></a>
+# **GetSysPprofTrace**
+> void GetSysPprofTrace ()
 
 Returns the execution trace in binary form.
 
@@ -6228,7 +6158,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemPprofTraceExample
+    public class GetSysPprofTraceExample
     {
         public static void Main()
         {
@@ -6242,11 +6172,11 @@ namespace Example
             try
             {
                 // Returns the execution trace in binary form.
-                apiInstance.ReadSystemPprofTrace();
+                apiInstance.GetSysPprofTrace();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemPprofTrace: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysPprofTrace: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6279,9 +6209,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemquotasconfig"></a>
-# **ReadSystemQuotasConfig**
-> void ReadSystemQuotasConfig ()
+<a name="getsysquotasconfig"></a>
+# **GetSysQuotasConfig**
+> void GetSysQuotasConfig ()
 
 
 
@@ -6296,7 +6226,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemQuotasConfigExample
+    public class GetSysQuotasConfigExample
     {
         public static void Main()
         {
@@ -6309,11 +6239,11 @@ namespace Example
 
             try
             {
-                apiInstance.ReadSystemQuotasConfig();
+                apiInstance.GetSysQuotasConfig();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemQuotasConfig: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysQuotasConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6346,9 +6276,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemquotasratelimitname"></a>
-# **ReadSystemQuotasRateLimitName**
-> void ReadSystemQuotasRateLimitName (string name)
+<a name="getsysquotasratelimit"></a>
+# **GetSysQuotasRateLimit**
+> void GetSysQuotasRateLimit (string list)
 
 
 
@@ -6363,7 +6293,78 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemQuotasRateLimitNameExample
+    public class GetSysQuotasRateLimitExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new System(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+
+            try
+            {
+                apiInstance.GetSysQuotasRateLimit(list);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling System.GetSysQuotasRateLimit: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getsysquotasratelimitname"></a>
+# **GetSysQuotasRateLimitName**
+> void GetSysQuotasRateLimitName (string name)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetSysQuotasRateLimitNameExample
     {
         public static void Main()
         {
@@ -6377,11 +6378,11 @@ namespace Example
 
             try
             {
-                apiInstance.ReadSystemQuotasRateLimitName(name);
+                apiInstance.GetSysQuotasRateLimitName(name);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemQuotasRateLimitName: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysQuotasRateLimitName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6417,9 +6418,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemraw"></a>
-# **ReadSystemRaw**
-> void ReadSystemRaw (string list = null)
+<a name="getsysraw"></a>
+# **GetSysRaw**
+> void GetSysRaw (string list = null)
 
 Read the value of the key at the given path.
 
@@ -6434,7 +6435,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemRawExample
+    public class GetSysRawExample
     {
         public static void Main()
         {
@@ -6449,11 +6450,11 @@ namespace Example
             try
             {
                 // Read the value of the key at the given path.
-                apiInstance.ReadSystemRaw(list);
+                apiInstance.GetSysRaw(list);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemRaw: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysRaw: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6489,9 +6490,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemrawpath"></a>
-# **ReadSystemRawPath**
-> void ReadSystemRawPath (string path, string list = null)
+<a name="getsysrawpath"></a>
+# **GetSysRawPath**
+> void GetSysRawPath (string path, string list = null)
 
 Read the value of the key at the given path.
 
@@ -6506,7 +6507,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemRawPathExample
+    public class GetSysRawPathExample
     {
         public static void Main()
         {
@@ -6522,11 +6523,11 @@ namespace Example
             try
             {
                 // Read the value of the key at the given path.
-                apiInstance.ReadSystemRawPath(path, list);
+                apiInstance.GetSysRawPath(path, list);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemRawPath: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysRawPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6563,9 +6564,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemrekeybackup"></a>
-# **ReadSystemRekeyBackup**
-> void ReadSystemRekeyBackup ()
+<a name="getsysrekeybackup"></a>
+# **GetSysRekeyBackup**
+> void GetSysRekeyBackup ()
 
 Return the backup copy of PGP-encrypted unseal keys.
 
@@ -6580,7 +6581,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemRekeyBackupExample
+    public class GetSysRekeyBackupExample
     {
         public static void Main()
         {
@@ -6594,11 +6595,11 @@ namespace Example
             try
             {
                 // Return the backup copy of PGP-encrypted unseal keys.
-                apiInstance.ReadSystemRekeyBackup();
+                apiInstance.GetSysRekeyBackup();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemRekeyBackup: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysRekeyBackup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6631,9 +6632,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemrekeyinit"></a>
-# **ReadSystemRekeyInit**
-> void ReadSystemRekeyInit ()
+<a name="getsysrekeyinit"></a>
+# **GetSysRekeyInit**
+> void GetSysRekeyInit ()
 
 Reads the configuration and progress of the current rekey attempt.
 
@@ -6648,7 +6649,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemRekeyInitExample
+    public class GetSysRekeyInitExample
     {
         public static void Main()
         {
@@ -6662,11 +6663,11 @@ namespace Example
             try
             {
                 // Reads the configuration and progress of the current rekey attempt.
-                apiInstance.ReadSystemRekeyInit();
+                apiInstance.GetSysRekeyInit();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemRekeyInit: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysRekeyInit: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6699,9 +6700,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemrekeyrecoverykeybackup"></a>
-# **ReadSystemRekeyRecoveryKeyBackup**
-> void ReadSystemRekeyRecoveryKeyBackup ()
+<a name="getsysrekeyrecoverykeybackup"></a>
+# **GetSysRekeyRecoveryKeyBackup**
+> void GetSysRekeyRecoveryKeyBackup ()
 
 Allows fetching or deleting the backup of the rotated unseal keys.
 
@@ -6716,7 +6717,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemRekeyRecoveryKeyBackupExample
+    public class GetSysRekeyRecoveryKeyBackupExample
     {
         public static void Main()
         {
@@ -6730,11 +6731,11 @@ namespace Example
             try
             {
                 // Allows fetching or deleting the backup of the rotated unseal keys.
-                apiInstance.ReadSystemRekeyRecoveryKeyBackup();
+                apiInstance.GetSysRekeyRecoveryKeyBackup();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemRekeyRecoveryKeyBackup: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysRekeyRecoveryKeyBackup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6767,9 +6768,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemrekeyverify"></a>
-# **ReadSystemRekeyVerify**
-> void ReadSystemRekeyVerify ()
+<a name="getsysrekeyverify"></a>
+# **GetSysRekeyVerify**
+> void GetSysRekeyVerify ()
 
 Read the configuration and progress of the current rekey verification attempt.
 
@@ -6784,7 +6785,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemRekeyVerifyExample
+    public class GetSysRekeyVerifyExample
     {
         public static void Main()
         {
@@ -6798,11 +6799,11 @@ namespace Example
             try
             {
                 // Read the configuration and progress of the current rekey verification attempt.
-                apiInstance.ReadSystemRekeyVerify();
+                apiInstance.GetSysRekeyVerify();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemRekeyVerify: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysRekeyVerify: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6835,9 +6836,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemremountstatusmigrationid"></a>
-# **ReadSystemRemountStatusMigrationId**
-> void ReadSystemRemountStatusMigrationId (string migrationId)
+<a name="getsysremountstatusmigrationid"></a>
+# **GetSysRemountStatusMigrationId**
+> void GetSysRemountStatusMigrationId (string migrationId)
 
 Check status of a mount migration
 
@@ -6852,7 +6853,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemRemountStatusMigrationIdExample
+    public class GetSysRemountStatusMigrationIdExample
     {
         public static void Main()
         {
@@ -6867,11 +6868,11 @@ namespace Example
             try
             {
                 // Check status of a mount migration
-                apiInstance.ReadSystemRemountStatusMigrationId(migrationId);
+                apiInstance.GetSysRemountStatusMigrationId(migrationId);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemRemountStatusMigrationId: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysRemountStatusMigrationId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6907,9 +6908,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemreplicationstatus"></a>
-# **ReadSystemReplicationStatus**
-> void ReadSystemReplicationStatus ()
+<a name="getsysreplicationstatus"></a>
+# **GetSysReplicationStatus**
+> void GetSysReplicationStatus ()
 
 
 
@@ -6924,7 +6925,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemReplicationStatusExample
+    public class GetSysReplicationStatusExample
     {
         public static void Main()
         {
@@ -6937,11 +6938,11 @@ namespace Example
 
             try
             {
-                apiInstance.ReadSystemReplicationStatus();
+                apiInstance.GetSysReplicationStatus();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemReplicationStatus: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysReplicationStatus: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6974,9 +6975,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemrotateconfig"></a>
-# **ReadSystemRotateConfig**
-> void ReadSystemRotateConfig ()
+<a name="getsysrotateconfig"></a>
+# **GetSysRotateConfig**
+> void GetSysRotateConfig ()
 
 
 
@@ -6991,7 +6992,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemRotateConfigExample
+    public class GetSysRotateConfigExample
     {
         public static void Main()
         {
@@ -7004,11 +7005,11 @@ namespace Example
 
             try
             {
-                apiInstance.ReadSystemRotateConfig();
+                apiInstance.GetSysRotateConfig();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemRotateConfig: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysRotateConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7041,9 +7042,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemsealstatus"></a>
-# **ReadSystemSealStatus**
-> void ReadSystemSealStatus ()
+<a name="getsyssealstatus"></a>
+# **GetSysSealStatus**
+> void GetSysSealStatus ()
 
 Check the seal status of a Vault.
 
@@ -7058,7 +7059,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemSealStatusExample
+    public class GetSysSealStatusExample
     {
         public static void Main()
         {
@@ -7072,11 +7073,11 @@ namespace Example
             try
             {
                 // Check the seal status of a Vault.
-                apiInstance.ReadSystemSealStatus();
+                apiInstance.GetSysSealStatus();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemSealStatus: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysSealStatus: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7109,9 +7110,81 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readsystemwrappinglookup"></a>
-# **ReadSystemWrappingLookup**
-> void ReadSystemWrappingLookup ()
+<a name="getsysversionhistory"></a>
+# **GetSysVersionHistory**
+> void GetSysVersionHistory (string list)
+
+Returns map of historical version change entries
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetSysVersionHistoryExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new System(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+
+            try
+            {
+                // Returns map of historical version change entries
+                apiInstance.GetSysVersionHistory(list);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling System.GetSysVersionHistory: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getsyswrappinglookup"></a>
+# **GetSysWrappingLookup**
+> void GetSysWrappingLookup ()
 
 Look up wrapping properties for the requester's token.
 
@@ -7126,7 +7199,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class ReadSystemWrappingLookupExample
+    public class GetSysWrappingLookupExample
     {
         public static void Main()
         {
@@ -7140,11 +7213,11 @@ namespace Example
             try
             {
                 // Look up wrapping properties for the requester's token.
-                apiInstance.ReadSystemWrappingLookup();
+                apiInstance.GetSysWrappingLookup();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.ReadSystemWrappingLookup: " + e.Message );
+                Debug.Print("Exception when calling System.GetSysWrappingLookup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7177,9 +7250,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemaudithashpath"></a>
-# **UpdateSystemAuditHashPath**
-> void UpdateSystemAuditHashPath (string path, SystemAuditHashRequest systemAuditHashRequest = null)
+<a name="postsysaudithashpath"></a>
+# **PostSysAuditHashPath**
+> void PostSysAuditHashPath (string path, SystemAuditHashRequest systemAuditHashRequest)
 
 The hash of the given string via the given audit backend
 
@@ -7194,7 +7267,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemAuditHashPathExample
+    public class PostSysAuditHashPathExample
     {
         public static void Main()
         {
@@ -7205,16 +7278,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | The name of the backend. Cannot be delimited. Example: \"mysql\"
-            var systemAuditHashRequest = new SystemAuditHashRequest(); // SystemAuditHashRequest |  (optional) 
+            var systemAuditHashRequest = new SystemAuditHashRequest(); // SystemAuditHashRequest | 
 
             try
             {
                 // The hash of the given string via the given audit backend
-                apiInstance.UpdateSystemAuditHashPath(path, systemAuditHashRequest);
+                apiInstance.PostSysAuditHashPath(path, systemAuditHashRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemAuditHashPath: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysAuditHashPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7228,7 +7301,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **string**| The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot; | 
- **systemAuditHashRequest** | [**SystemAuditHashRequest**](SystemAuditHashRequest.md)|  | [optional] 
+ **systemAuditHashRequest** | [**SystemAuditHashRequest**](SystemAuditHashRequest.md)|  | 
 
 ### Return type
 
@@ -7251,9 +7324,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemauditpath"></a>
-# **UpdateSystemAuditPath**
-> void UpdateSystemAuditPath (string path, SystemAuditRequest systemAuditRequest = null)
+<a name="postsysauditpath"></a>
+# **PostSysAuditPath**
+> void PostSysAuditPath (string path, SystemAuditRequest systemAuditRequest)
 
 Enable a new audit device at the supplied path.
 
@@ -7268,7 +7341,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemAuditPathExample
+    public class PostSysAuditPathExample
     {
         public static void Main()
         {
@@ -7279,16 +7352,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | The name of the backend. Cannot be delimited. Example: \"mysql\"
-            var systemAuditRequest = new SystemAuditRequest(); // SystemAuditRequest |  (optional) 
+            var systemAuditRequest = new SystemAuditRequest(); // SystemAuditRequest | 
 
             try
             {
                 // Enable a new audit device at the supplied path.
-                apiInstance.UpdateSystemAuditPath(path, systemAuditRequest);
+                apiInstance.PostSysAuditPath(path, systemAuditRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemAuditPath: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysAuditPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7302,7 +7375,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **string**| The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot; | 
- **systemAuditRequest** | [**SystemAuditRequest**](SystemAuditRequest.md)|  | [optional] 
+ **systemAuditRequest** | [**SystemAuditRequest**](SystemAuditRequest.md)|  | 
 
 ### Return type
 
@@ -7325,9 +7398,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemauthpath"></a>
-# **UpdateSystemAuthPath**
-> void UpdateSystemAuthPath (string path, SystemAuthRequest systemAuthRequest = null)
+<a name="postsysauthpath"></a>
+# **PostSysAuthPath**
+> void PostSysAuthPath (string path, SystemAuthRequest systemAuthRequest)
 
 Enables a new auth method.
 
@@ -7344,7 +7417,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemAuthPathExample
+    public class PostSysAuthPathExample
     {
         public static void Main()
         {
@@ -7355,16 +7428,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | The path to mount to. Cannot be delimited. Example: \"user\"
-            var systemAuthRequest = new SystemAuthRequest(); // SystemAuthRequest |  (optional) 
+            var systemAuthRequest = new SystemAuthRequest(); // SystemAuthRequest | 
 
             try
             {
                 // Enables a new auth method.
-                apiInstance.UpdateSystemAuthPath(path, systemAuthRequest);
+                apiInstance.PostSysAuthPath(path, systemAuthRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemAuthPath: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysAuthPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7378,7 +7451,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **string**| The path to mount to. Cannot be delimited. Example: \&quot;user\&quot; | 
- **systemAuthRequest** | [**SystemAuthRequest**](SystemAuthRequest.md)|  | [optional] 
+ **systemAuthRequest** | [**SystemAuthRequest**](SystemAuthRequest.md)|  | 
 
 ### Return type
 
@@ -7401,9 +7474,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemauthpathtune"></a>
-# **UpdateSystemAuthPathTune**
-> void UpdateSystemAuthPathTune (string path, SystemAuthTuneRequest systemAuthTuneRequest = null)
+<a name="postsysauthpathtune"></a>
+# **PostSysAuthPathTune**
+> void PostSysAuthPathTune (string path, SystemAuthTuneRequest systemAuthTuneRequest)
 
 Tune configuration parameters for a given auth path.
 
@@ -7420,7 +7493,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemAuthPathTuneExample
+    public class PostSysAuthPathTuneExample
     {
         public static void Main()
         {
@@ -7431,16 +7504,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Tune the configuration parameters for an auth path.
-            var systemAuthTuneRequest = new SystemAuthTuneRequest(); // SystemAuthTuneRequest |  (optional) 
+            var systemAuthTuneRequest = new SystemAuthTuneRequest(); // SystemAuthTuneRequest | 
 
             try
             {
                 // Tune configuration parameters for a given auth path.
-                apiInstance.UpdateSystemAuthPathTune(path, systemAuthTuneRequest);
+                apiInstance.PostSysAuthPathTune(path, systemAuthTuneRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemAuthPathTune: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysAuthPathTune: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7454,7 +7527,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **string**| Tune the configuration parameters for an auth path. | 
- **systemAuthTuneRequest** | [**SystemAuthTuneRequest**](SystemAuthTuneRequest.md)|  | [optional] 
+ **systemAuthTuneRequest** | [**SystemAuthTuneRequest**](SystemAuthTuneRequest.md)|  | 
 
 ### Return type
 
@@ -7477,9 +7550,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemcapabilities"></a>
-# **UpdateSystemCapabilities**
-> void UpdateSystemCapabilities (SystemCapabilitiesRequest systemCapabilitiesRequest = null)
+<a name="postsyscapabilities"></a>
+# **PostSysCapabilities**
+> void PostSysCapabilities (SystemCapabilitiesRequest systemCapabilitiesRequest)
 
 Fetches the capabilities of the given token on the given path.
 
@@ -7494,7 +7567,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemCapabilitiesExample
+    public class PostSysCapabilitiesExample
     {
         public static void Main()
         {
@@ -7504,16 +7577,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemCapabilitiesRequest = new SystemCapabilitiesRequest(); // SystemCapabilitiesRequest |  (optional) 
+            var systemCapabilitiesRequest = new SystemCapabilitiesRequest(); // SystemCapabilitiesRequest | 
 
             try
             {
                 // Fetches the capabilities of the given token on the given path.
-                apiInstance.UpdateSystemCapabilities(systemCapabilitiesRequest);
+                apiInstance.PostSysCapabilities(systemCapabilitiesRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemCapabilities: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysCapabilities: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7526,7 +7599,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemCapabilitiesRequest** | [**SystemCapabilitiesRequest**](SystemCapabilitiesRequest.md)|  | [optional] 
+ **systemCapabilitiesRequest** | [**SystemCapabilitiesRequest**](SystemCapabilitiesRequest.md)|  | 
 
 ### Return type
 
@@ -7549,9 +7622,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemcapabilitiesaccessor"></a>
-# **UpdateSystemCapabilitiesAccessor**
-> void UpdateSystemCapabilitiesAccessor (SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest = null)
+<a name="postsyscapabilitiesaccessor"></a>
+# **PostSysCapabilitiesAccessor**
+> void PostSysCapabilitiesAccessor (SystemCapabilitiesAccessorRequest systemCapabilitiesAccessorRequest)
 
 Fetches the capabilities of the token associated with the given token, on the given path.
 
@@ -7566,7 +7639,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemCapabilitiesAccessorExample
+    public class PostSysCapabilitiesAccessorExample
     {
         public static void Main()
         {
@@ -7576,16 +7649,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemCapabilitiesAccessorRequest = new SystemCapabilitiesAccessorRequest(); // SystemCapabilitiesAccessorRequest |  (optional) 
+            var systemCapabilitiesAccessorRequest = new SystemCapabilitiesAccessorRequest(); // SystemCapabilitiesAccessorRequest | 
 
             try
             {
                 // Fetches the capabilities of the token associated with the given token, on the given path.
-                apiInstance.UpdateSystemCapabilitiesAccessor(systemCapabilitiesAccessorRequest);
+                apiInstance.PostSysCapabilitiesAccessor(systemCapabilitiesAccessorRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemCapabilitiesAccessor: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysCapabilitiesAccessor: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7598,7 +7671,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemCapabilitiesAccessorRequest** | [**SystemCapabilitiesAccessorRequest**](SystemCapabilitiesAccessorRequest.md)|  | [optional] 
+ **systemCapabilitiesAccessorRequest** | [**SystemCapabilitiesAccessorRequest**](SystemCapabilitiesAccessorRequest.md)|  | 
 
 ### Return type
 
@@ -7621,9 +7694,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemcapabilitiesself"></a>
-# **UpdateSystemCapabilitiesSelf**
-> void UpdateSystemCapabilitiesSelf (SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest = null)
+<a name="postsyscapabilitiesself"></a>
+# **PostSysCapabilitiesSelf**
+> void PostSysCapabilitiesSelf (SystemCapabilitiesSelfRequest systemCapabilitiesSelfRequest)
 
 Fetches the capabilities of the given token on the given path.
 
@@ -7638,7 +7711,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemCapabilitiesSelfExample
+    public class PostSysCapabilitiesSelfExample
     {
         public static void Main()
         {
@@ -7648,16 +7721,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemCapabilitiesSelfRequest = new SystemCapabilitiesSelfRequest(); // SystemCapabilitiesSelfRequest |  (optional) 
+            var systemCapabilitiesSelfRequest = new SystemCapabilitiesSelfRequest(); // SystemCapabilitiesSelfRequest | 
 
             try
             {
                 // Fetches the capabilities of the given token on the given path.
-                apiInstance.UpdateSystemCapabilitiesSelf(systemCapabilitiesSelfRequest);
+                apiInstance.PostSysCapabilitiesSelf(systemCapabilitiesSelfRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemCapabilitiesSelf: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysCapabilitiesSelf: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7670,7 +7743,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemCapabilitiesSelfRequest** | [**SystemCapabilitiesSelfRequest**](SystemCapabilitiesSelfRequest.md)|  | [optional] 
+ **systemCapabilitiesSelfRequest** | [**SystemCapabilitiesSelfRequest**](SystemCapabilitiesSelfRequest.md)|  | 
 
 ### Return type
 
@@ -7693,9 +7766,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemconfigauditingrequestheadersheader"></a>
-# **UpdateSystemConfigAuditingRequestHeadersHeader**
-> void UpdateSystemConfigAuditingRequestHeadersHeader (string header, SystemConfigAuditingRequestHeadersRequest systemConfigAuditingRequestHeadersRequest = null)
+<a name="postsysconfigauditingrequestheadersheader"></a>
+# **PostSysConfigAuditingRequestHeadersHeader**
+> void PostSysConfigAuditingRequestHeadersHeader (string header, SystemConfigAuditingRequestHeadersRequest systemConfigAuditingRequestHeadersRequest)
 
 Enable auditing of a header.
 
@@ -7710,7 +7783,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemConfigAuditingRequestHeadersHeaderExample
+    public class PostSysConfigAuditingRequestHeadersHeaderExample
     {
         public static void Main()
         {
@@ -7721,16 +7794,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var header = "header_example";  // string | 
-            var systemConfigAuditingRequestHeadersRequest = new SystemConfigAuditingRequestHeadersRequest(); // SystemConfigAuditingRequestHeadersRequest |  (optional) 
+            var systemConfigAuditingRequestHeadersRequest = new SystemConfigAuditingRequestHeadersRequest(); // SystemConfigAuditingRequestHeadersRequest | 
 
             try
             {
                 // Enable auditing of a header.
-                apiInstance.UpdateSystemConfigAuditingRequestHeadersHeader(header, systemConfigAuditingRequestHeadersRequest);
+                apiInstance.PostSysConfigAuditingRequestHeadersHeader(header, systemConfigAuditingRequestHeadersRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemConfigAuditingRequestHeadersHeader: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysConfigAuditingRequestHeadersHeader: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7744,7 +7817,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **header** | **string**|  | 
- **systemConfigAuditingRequestHeadersRequest** | [**SystemConfigAuditingRequestHeadersRequest**](SystemConfigAuditingRequestHeadersRequest.md)|  | [optional] 
+ **systemConfigAuditingRequestHeadersRequest** | [**SystemConfigAuditingRequestHeadersRequest**](SystemConfigAuditingRequestHeadersRequest.md)|  | 
 
 ### Return type
 
@@ -7767,9 +7840,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemconfigcors"></a>
-# **UpdateSystemConfigCors**
-> void UpdateSystemConfigCors (SystemConfigCorsRequest systemConfigCorsRequest = null)
+<a name="postsysconfigcors"></a>
+# **PostSysConfigCors**
+> void PostSysConfigCors (SystemConfigCorsRequest systemConfigCorsRequest)
 
 Configure the CORS settings.
 
@@ -7784,7 +7857,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemConfigCorsExample
+    public class PostSysConfigCorsExample
     {
         public static void Main()
         {
@@ -7794,16 +7867,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemConfigCorsRequest = new SystemConfigCorsRequest(); // SystemConfigCorsRequest |  (optional) 
+            var systemConfigCorsRequest = new SystemConfigCorsRequest(); // SystemConfigCorsRequest | 
 
             try
             {
                 // Configure the CORS settings.
-                apiInstance.UpdateSystemConfigCors(systemConfigCorsRequest);
+                apiInstance.PostSysConfigCors(systemConfigCorsRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemConfigCors: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysConfigCors: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7816,7 +7889,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemConfigCorsRequest** | [**SystemConfigCorsRequest**](SystemConfigCorsRequest.md)|  | [optional] 
+ **systemConfigCorsRequest** | [**SystemConfigCorsRequest**](SystemConfigCorsRequest.md)|  | 
 
 ### Return type
 
@@ -7839,9 +7912,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemconfigreloadsubsystem"></a>
-# **UpdateSystemConfigReloadSubsystem**
-> void UpdateSystemConfigReloadSubsystem (string subsystem)
+<a name="postsysconfigreloadsubsystem"></a>
+# **PostSysConfigReloadSubsystem**
+> void PostSysConfigReloadSubsystem (string subsystem)
 
 Reload the given subsystem
 
@@ -7856,7 +7929,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemConfigReloadSubsystemExample
+    public class PostSysConfigReloadSubsystemExample
     {
         public static void Main()
         {
@@ -7871,11 +7944,11 @@ namespace Example
             try
             {
                 // Reload the given subsystem
-                apiInstance.UpdateSystemConfigReloadSubsystem(subsystem);
+                apiInstance.PostSysConfigReloadSubsystem(subsystem);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemConfigReloadSubsystem: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysConfigReloadSubsystem: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7911,9 +7984,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemconfiguiheadersheader"></a>
-# **UpdateSystemConfigUiHeadersHeader**
-> void UpdateSystemConfigUiHeadersHeader (string header, SystemConfigUiHeadersRequest systemConfigUiHeadersRequest = null)
+<a name="postsysconfiguiheadersheader"></a>
+# **PostSysConfigUiHeadersHeader**
+> void PostSysConfigUiHeadersHeader (string header, SystemConfigUiHeadersRequest systemConfigUiHeadersRequest)
 
 Configure the values to be returned for the UI header.
 
@@ -7928,7 +8001,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemConfigUiHeadersHeaderExample
+    public class PostSysConfigUiHeadersHeaderExample
     {
         public static void Main()
         {
@@ -7939,16 +8012,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var header = "header_example";  // string | The name of the header.
-            var systemConfigUiHeadersRequest = new SystemConfigUiHeadersRequest(); // SystemConfigUiHeadersRequest |  (optional) 
+            var systemConfigUiHeadersRequest = new SystemConfigUiHeadersRequest(); // SystemConfigUiHeadersRequest | 
 
             try
             {
                 // Configure the values to be returned for the UI header.
-                apiInstance.UpdateSystemConfigUiHeadersHeader(header, systemConfigUiHeadersRequest);
+                apiInstance.PostSysConfigUiHeadersHeader(header, systemConfigUiHeadersRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemConfigUiHeadersHeader: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysConfigUiHeadersHeader: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -7962,7 +8035,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **header** | **string**| The name of the header. | 
- **systemConfigUiHeadersRequest** | [**SystemConfigUiHeadersRequest**](SystemConfigUiHeadersRequest.md)|  | [optional] 
+ **systemConfigUiHeadersRequest** | [**SystemConfigUiHeadersRequest**](SystemConfigUiHeadersRequest.md)|  | 
 
 ### Return type
 
@@ -7985,9 +8058,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemgenerateroot"></a>
-# **UpdateSystemGenerateRoot**
-> void UpdateSystemGenerateRoot (SystemGenerateRootRequest systemGenerateRootRequest = null)
+<a name="postsysgenerateroot"></a>
+# **PostSysGenerateRoot**
+> void PostSysGenerateRoot (SystemGenerateRootRequest systemGenerateRootRequest)
 
 Initializes a new root generation attempt.
 
@@ -8004,7 +8077,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemGenerateRootExample
+    public class PostSysGenerateRootExample
     {
         public static void Main()
         {
@@ -8014,16 +8087,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemGenerateRootRequest = new SystemGenerateRootRequest(); // SystemGenerateRootRequest |  (optional) 
+            var systemGenerateRootRequest = new SystemGenerateRootRequest(); // SystemGenerateRootRequest | 
 
             try
             {
                 // Initializes a new root generation attempt.
-                apiInstance.UpdateSystemGenerateRoot(systemGenerateRootRequest);
+                apiInstance.PostSysGenerateRoot(systemGenerateRootRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemGenerateRoot: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysGenerateRoot: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8036,7 +8109,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemGenerateRootRequest** | [**SystemGenerateRootRequest**](SystemGenerateRootRequest.md)|  | [optional] 
+ **systemGenerateRootRequest** | [**SystemGenerateRootRequest**](SystemGenerateRootRequest.md)|  | 
 
 ### Return type
 
@@ -8059,9 +8132,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemgeneraterootattempt"></a>
-# **UpdateSystemGenerateRootAttempt**
-> void UpdateSystemGenerateRootAttempt (SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest = null)
+<a name="postsysgeneraterootattempt"></a>
+# **PostSysGenerateRootAttempt**
+> void PostSysGenerateRootAttempt (SystemGenerateRootAttemptRequest systemGenerateRootAttemptRequest)
 
 Initializes a new root generation attempt.
 
@@ -8078,7 +8151,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemGenerateRootAttemptExample
+    public class PostSysGenerateRootAttemptExample
     {
         public static void Main()
         {
@@ -8088,16 +8161,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemGenerateRootAttemptRequest = new SystemGenerateRootAttemptRequest(); // SystemGenerateRootAttemptRequest |  (optional) 
+            var systemGenerateRootAttemptRequest = new SystemGenerateRootAttemptRequest(); // SystemGenerateRootAttemptRequest | 
 
             try
             {
                 // Initializes a new root generation attempt.
-                apiInstance.UpdateSystemGenerateRootAttempt(systemGenerateRootAttemptRequest);
+                apiInstance.PostSysGenerateRootAttempt(systemGenerateRootAttemptRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemGenerateRootAttempt: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysGenerateRootAttempt: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8110,7 +8183,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemGenerateRootAttemptRequest** | [**SystemGenerateRootAttemptRequest**](SystemGenerateRootAttemptRequest.md)|  | [optional] 
+ **systemGenerateRootAttemptRequest** | [**SystemGenerateRootAttemptRequest**](SystemGenerateRootAttemptRequest.md)|  | 
 
 ### Return type
 
@@ -8133,9 +8206,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemgeneraterootupdate"></a>
-# **UpdateSystemGenerateRootUpdate**
-> void UpdateSystemGenerateRootUpdate (SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest = null)
+<a name="postsysgeneraterootupdate"></a>
+# **PostSysGenerateRootUpdate**
+> void PostSysGenerateRootUpdate (SystemGenerateRootUpdateRequest systemGenerateRootUpdateRequest)
 
 Enter a single unseal key share to progress the root generation attempt.
 
@@ -8152,7 +8225,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemGenerateRootUpdateExample
+    public class PostSysGenerateRootUpdateExample
     {
         public static void Main()
         {
@@ -8162,16 +8235,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemGenerateRootUpdateRequest = new SystemGenerateRootUpdateRequest(); // SystemGenerateRootUpdateRequest |  (optional) 
+            var systemGenerateRootUpdateRequest = new SystemGenerateRootUpdateRequest(); // SystemGenerateRootUpdateRequest | 
 
             try
             {
                 // Enter a single unseal key share to progress the root generation attempt.
-                apiInstance.UpdateSystemGenerateRootUpdate(systemGenerateRootUpdateRequest);
+                apiInstance.PostSysGenerateRootUpdate(systemGenerateRootUpdateRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemGenerateRootUpdate: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysGenerateRootUpdate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8184,7 +8257,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemGenerateRootUpdateRequest** | [**SystemGenerateRootUpdateRequest**](SystemGenerateRootUpdateRequest.md)|  | [optional] 
+ **systemGenerateRootUpdateRequest** | [**SystemGenerateRootUpdateRequest**](SystemGenerateRootUpdateRequest.md)|  | 
 
 ### Return type
 
@@ -8207,9 +8280,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesysteminit"></a>
-# **UpdateSystemInit**
-> void UpdateSystemInit (SystemInitRequest systemInitRequest = null)
+<a name="postsysinit"></a>
+# **PostSysInit**
+> void PostSysInit (SystemInitRequest systemInitRequest)
 
 Initialize a new Vault.
 
@@ -8226,7 +8299,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemInitExample
+    public class PostSysInitExample
     {
         public static void Main()
         {
@@ -8236,16 +8309,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemInitRequest = new SystemInitRequest(); // SystemInitRequest |  (optional) 
+            var systemInitRequest = new SystemInitRequest(); // SystemInitRequest | 
 
             try
             {
                 // Initialize a new Vault.
-                apiInstance.UpdateSystemInit(systemInitRequest);
+                apiInstance.PostSysInit(systemInitRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemInit: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysInit: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8258,7 +8331,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemInitRequest** | [**SystemInitRequest**](SystemInitRequest.md)|  | [optional] 
+ **systemInitRequest** | [**SystemInitRequest**](SystemInitRequest.md)|  | 
 
 ### Return type
 
@@ -8281,9 +8354,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesysteminternalcountersconfig"></a>
-# **UpdateSystemInternalCountersConfig**
-> void UpdateSystemInternalCountersConfig (SystemInternalCountersConfigRequest systemInternalCountersConfigRequest = null)
+<a name="postsysinternalcountersconfig"></a>
+# **PostSysInternalCountersConfig**
+> void PostSysInternalCountersConfig (SystemInternalCountersConfigRequest systemInternalCountersConfigRequest)
 
 Enable or disable collection of client count, set retention period, or set default reporting period.
 
@@ -8298,7 +8371,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemInternalCountersConfigExample
+    public class PostSysInternalCountersConfigExample
     {
         public static void Main()
         {
@@ -8308,16 +8381,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemInternalCountersConfigRequest = new SystemInternalCountersConfigRequest(); // SystemInternalCountersConfigRequest |  (optional) 
+            var systemInternalCountersConfigRequest = new SystemInternalCountersConfigRequest(); // SystemInternalCountersConfigRequest | 
 
             try
             {
                 // Enable or disable collection of client count, set retention period, or set default reporting period.
-                apiInstance.UpdateSystemInternalCountersConfig(systemInternalCountersConfigRequest);
+                apiInstance.PostSysInternalCountersConfig(systemInternalCountersConfigRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemInternalCountersConfig: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysInternalCountersConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8330,7 +8403,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemInternalCountersConfigRequest** | [**SystemInternalCountersConfigRequest**](SystemInternalCountersConfigRequest.md)|  | [optional] 
+ **systemInternalCountersConfigRequest** | [**SystemInternalCountersConfigRequest**](SystemInternalCountersConfigRequest.md)|  | 
 
 ### Return type
 
@@ -8353,9 +8426,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemleaseslookup"></a>
-# **UpdateSystemLeasesLookup**
-> void UpdateSystemLeasesLookup (SystemLeasesLookupRequest systemLeasesLookupRequest = null)
+<a name="postsysleaseslookup"></a>
+# **PostSysLeasesLookup**
+> void PostSysLeasesLookup (SystemLeasesLookupRequest systemLeasesLookupRequest)
 
 Retrieve lease metadata.
 
@@ -8370,7 +8443,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemLeasesLookupExample
+    public class PostSysLeasesLookupExample
     {
         public static void Main()
         {
@@ -8380,16 +8453,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemLeasesLookupRequest = new SystemLeasesLookupRequest(); // SystemLeasesLookupRequest |  (optional) 
+            var systemLeasesLookupRequest = new SystemLeasesLookupRequest(); // SystemLeasesLookupRequest | 
 
             try
             {
                 // Retrieve lease metadata.
-                apiInstance.UpdateSystemLeasesLookup(systemLeasesLookupRequest);
+                apiInstance.PostSysLeasesLookup(systemLeasesLookupRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemLeasesLookup: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysLeasesLookup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8402,7 +8475,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemLeasesLookupRequest** | [**SystemLeasesLookupRequest**](SystemLeasesLookupRequest.md)|  | [optional] 
+ **systemLeasesLookupRequest** | [**SystemLeasesLookupRequest**](SystemLeasesLookupRequest.md)|  | 
 
 ### Return type
 
@@ -8425,9 +8498,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemleasesrenew"></a>
-# **UpdateSystemLeasesRenew**
-> void UpdateSystemLeasesRenew (SystemLeasesRenewRequest systemLeasesRenewRequest = null)
+<a name="postsysleasesrenew"></a>
+# **PostSysLeasesRenew**
+> void PostSysLeasesRenew (SystemLeasesRenewRequest systemLeasesRenewRequest)
 
 Renews a lease, requesting to extend the lease.
 
@@ -8442,7 +8515,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemLeasesRenewExample
+    public class PostSysLeasesRenewExample
     {
         public static void Main()
         {
@@ -8452,16 +8525,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemLeasesRenewRequest = new SystemLeasesRenewRequest(); // SystemLeasesRenewRequest |  (optional) 
+            var systemLeasesRenewRequest = new SystemLeasesRenewRequest(); // SystemLeasesRenewRequest | 
 
             try
             {
                 // Renews a lease, requesting to extend the lease.
-                apiInstance.UpdateSystemLeasesRenew(systemLeasesRenewRequest);
+                apiInstance.PostSysLeasesRenew(systemLeasesRenewRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemLeasesRenew: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysLeasesRenew: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8474,7 +8547,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemLeasesRenewRequest** | [**SystemLeasesRenewRequest**](SystemLeasesRenewRequest.md)|  | [optional] 
+ **systemLeasesRenewRequest** | [**SystemLeasesRenewRequest**](SystemLeasesRenewRequest.md)|  | 
 
 ### Return type
 
@@ -8497,9 +8570,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemleasesrenewurlleaseid"></a>
-# **UpdateSystemLeasesRenewUrlLeaseId**
-> void UpdateSystemLeasesRenewUrlLeaseId (string urlLeaseId, SystemLeasesRenewLeaseRequest systemLeasesRenewLeaseRequest = null)
+<a name="postsysleasesrenewurlleaseid"></a>
+# **PostSysLeasesRenewUrlLeaseId**
+> void PostSysLeasesRenewUrlLeaseId (string urlLeaseId, SystemLeasesRenewLeaseRequest systemLeasesRenewLeaseRequest)
 
 Renews a lease, requesting to extend the lease.
 
@@ -8514,7 +8587,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemLeasesRenewUrlLeaseIdExample
+    public class PostSysLeasesRenewUrlLeaseIdExample
     {
         public static void Main()
         {
@@ -8525,16 +8598,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var urlLeaseId = "urlLeaseId_example";  // string | The lease identifier to renew. This is included with a lease.
-            var systemLeasesRenewLeaseRequest = new SystemLeasesRenewLeaseRequest(); // SystemLeasesRenewLeaseRequest |  (optional) 
+            var systemLeasesRenewLeaseRequest = new SystemLeasesRenewLeaseRequest(); // SystemLeasesRenewLeaseRequest | 
 
             try
             {
                 // Renews a lease, requesting to extend the lease.
-                apiInstance.UpdateSystemLeasesRenewUrlLeaseId(urlLeaseId, systemLeasesRenewLeaseRequest);
+                apiInstance.PostSysLeasesRenewUrlLeaseId(urlLeaseId, systemLeasesRenewLeaseRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemLeasesRenewUrlLeaseId: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysLeasesRenewUrlLeaseId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8548,7 +8621,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **urlLeaseId** | **string**| The lease identifier to renew. This is included with a lease. | 
- **systemLeasesRenewLeaseRequest** | [**SystemLeasesRenewLeaseRequest**](SystemLeasesRenewLeaseRequest.md)|  | [optional] 
+ **systemLeasesRenewLeaseRequest** | [**SystemLeasesRenewLeaseRequest**](SystemLeasesRenewLeaseRequest.md)|  | 
 
 ### Return type
 
@@ -8571,9 +8644,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemleasesrevoke"></a>
-# **UpdateSystemLeasesRevoke**
-> void UpdateSystemLeasesRevoke (SystemLeasesRevokeRequest systemLeasesRevokeRequest = null)
+<a name="postsysleasesrevoke"></a>
+# **PostSysLeasesRevoke**
+> void PostSysLeasesRevoke (SystemLeasesRevokeRequest systemLeasesRevokeRequest)
 
 Revokes a lease immediately.
 
@@ -8588,7 +8661,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemLeasesRevokeExample
+    public class PostSysLeasesRevokeExample
     {
         public static void Main()
         {
@@ -8598,16 +8671,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemLeasesRevokeRequest = new SystemLeasesRevokeRequest(); // SystemLeasesRevokeRequest |  (optional) 
+            var systemLeasesRevokeRequest = new SystemLeasesRevokeRequest(); // SystemLeasesRevokeRequest | 
 
             try
             {
                 // Revokes a lease immediately.
-                apiInstance.UpdateSystemLeasesRevoke(systemLeasesRevokeRequest);
+                apiInstance.PostSysLeasesRevoke(systemLeasesRevokeRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemLeasesRevoke: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysLeasesRevoke: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8620,7 +8693,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemLeasesRevokeRequest** | [**SystemLeasesRevokeRequest**](SystemLeasesRevokeRequest.md)|  | [optional] 
+ **systemLeasesRevokeRequest** | [**SystemLeasesRevokeRequest**](SystemLeasesRevokeRequest.md)|  | 
 
 ### Return type
 
@@ -8643,9 +8716,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemleasesrevokeforceprefix"></a>
-# **UpdateSystemLeasesRevokeForcePrefix**
-> void UpdateSystemLeasesRevokeForcePrefix (string prefix)
+<a name="postsysleasesrevokeforceprefix"></a>
+# **PostSysLeasesRevokeForcePrefix**
+> void PostSysLeasesRevokeForcePrefix (string prefix)
 
 Revokes all secrets or tokens generated under a given prefix immediately
 
@@ -8662,7 +8735,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemLeasesRevokeForcePrefixExample
+    public class PostSysLeasesRevokeForcePrefixExample
     {
         public static void Main()
         {
@@ -8677,11 +8750,11 @@ namespace Example
             try
             {
                 // Revokes all secrets or tokens generated under a given prefix immediately
-                apiInstance.UpdateSystemLeasesRevokeForcePrefix(prefix);
+                apiInstance.PostSysLeasesRevokeForcePrefix(prefix);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemLeasesRevokeForcePrefix: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysLeasesRevokeForcePrefix: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8717,9 +8790,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemleasesrevokeprefixprefix"></a>
-# **UpdateSystemLeasesRevokePrefixPrefix**
-> void UpdateSystemLeasesRevokePrefixPrefix (string prefix, SystemLeasesRevokePrefixRequest systemLeasesRevokePrefixRequest = null)
+<a name="postsysleasesrevokeprefixprefix"></a>
+# **PostSysLeasesRevokePrefixPrefix**
+> void PostSysLeasesRevokePrefixPrefix (string prefix, SystemLeasesRevokePrefixRequest systemLeasesRevokePrefixRequest)
 
 Revokes all secrets (via a lease ID prefix) or tokens (via the tokens' path property) generated under a given prefix immediately.
 
@@ -8734,7 +8807,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemLeasesRevokePrefixPrefixExample
+    public class PostSysLeasesRevokePrefixPrefixExample
     {
         public static void Main()
         {
@@ -8745,16 +8818,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var prefix = "prefix_example";  // string | The path to revoke keys under. Example: \"prod/aws/ops\"
-            var systemLeasesRevokePrefixRequest = new SystemLeasesRevokePrefixRequest(); // SystemLeasesRevokePrefixRequest |  (optional) 
+            var systemLeasesRevokePrefixRequest = new SystemLeasesRevokePrefixRequest(); // SystemLeasesRevokePrefixRequest | 
 
             try
             {
                 // Revokes all secrets (via a lease ID prefix) or tokens (via the tokens' path property) generated under a given prefix immediately.
-                apiInstance.UpdateSystemLeasesRevokePrefixPrefix(prefix, systemLeasesRevokePrefixRequest);
+                apiInstance.PostSysLeasesRevokePrefixPrefix(prefix, systemLeasesRevokePrefixRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemLeasesRevokePrefixPrefix: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysLeasesRevokePrefixPrefix: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8768,7 +8841,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **prefix** | **string**| The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot; | 
- **systemLeasesRevokePrefixRequest** | [**SystemLeasesRevokePrefixRequest**](SystemLeasesRevokePrefixRequest.md)|  | [optional] 
+ **systemLeasesRevokePrefixRequest** | [**SystemLeasesRevokePrefixRequest**](SystemLeasesRevokePrefixRequest.md)|  | 
 
 ### Return type
 
@@ -8791,9 +8864,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemleasesrevokeurlleaseid"></a>
-# **UpdateSystemLeasesRevokeUrlLeaseId**
-> void UpdateSystemLeasesRevokeUrlLeaseId (string urlLeaseId, SystemLeasesRevokeLeaseRequest systemLeasesRevokeLeaseRequest = null)
+<a name="postsysleasesrevokeurlleaseid"></a>
+# **PostSysLeasesRevokeUrlLeaseId**
+> void PostSysLeasesRevokeUrlLeaseId (string urlLeaseId, SystemLeasesRevokeLeaseRequest systemLeasesRevokeLeaseRequest)
 
 Revokes a lease immediately.
 
@@ -8808,7 +8881,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemLeasesRevokeUrlLeaseIdExample
+    public class PostSysLeasesRevokeUrlLeaseIdExample
     {
         public static void Main()
         {
@@ -8819,16 +8892,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var urlLeaseId = "urlLeaseId_example";  // string | The lease identifier to renew. This is included with a lease.
-            var systemLeasesRevokeLeaseRequest = new SystemLeasesRevokeLeaseRequest(); // SystemLeasesRevokeLeaseRequest |  (optional) 
+            var systemLeasesRevokeLeaseRequest = new SystemLeasesRevokeLeaseRequest(); // SystemLeasesRevokeLeaseRequest | 
 
             try
             {
                 // Revokes a lease immediately.
-                apiInstance.UpdateSystemLeasesRevokeUrlLeaseId(urlLeaseId, systemLeasesRevokeLeaseRequest);
+                apiInstance.PostSysLeasesRevokeUrlLeaseId(urlLeaseId, systemLeasesRevokeLeaseRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemLeasesRevokeUrlLeaseId: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysLeasesRevokeUrlLeaseId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8842,7 +8915,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **urlLeaseId** | **string**| The lease identifier to renew. This is included with a lease. | 
- **systemLeasesRevokeLeaseRequest** | [**SystemLeasesRevokeLeaseRequest**](SystemLeasesRevokeLeaseRequest.md)|  | [optional] 
+ **systemLeasesRevokeLeaseRequest** | [**SystemLeasesRevokeLeaseRequest**](SystemLeasesRevokeLeaseRequest.md)|  | 
 
 ### Return type
 
@@ -8865,9 +8938,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemleasestidy"></a>
-# **UpdateSystemLeasesTidy**
-> void UpdateSystemLeasesTidy ()
+<a name="postsysleasestidy"></a>
+# **PostSysLeasesTidy**
+> void PostSysLeasesTidy ()
 
 This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
 
@@ -8882,7 +8955,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemLeasesTidyExample
+    public class PostSysLeasesTidyExample
     {
         public static void Main()
         {
@@ -8896,11 +8969,11 @@ namespace Example
             try
             {
                 // This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
-                apiInstance.UpdateSystemLeasesTidy();
+                apiInstance.PostSysLeasesTidy();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemLeasesTidy: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysLeasesTidy: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8933,9 +9006,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemloggers"></a>
-# **UpdateSystemLoggers**
-> void UpdateSystemLoggers (SystemLoggersRequest systemLoggersRequest = null)
+<a name="postsysloggers"></a>
+# **PostSysLoggers**
+> void PostSysLoggers (SystemLoggersRequest systemLoggersRequest)
 
 Modify the log level for all existing loggers.
 
@@ -8950,7 +9023,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemLoggersExample
+    public class PostSysLoggersExample
     {
         public static void Main()
         {
@@ -8960,16 +9033,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemLoggersRequest = new SystemLoggersRequest(); // SystemLoggersRequest |  (optional) 
+            var systemLoggersRequest = new SystemLoggersRequest(); // SystemLoggersRequest | 
 
             try
             {
                 // Modify the log level for all existing loggers.
-                apiInstance.UpdateSystemLoggers(systemLoggersRequest);
+                apiInstance.PostSysLoggers(systemLoggersRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemLoggers: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysLoggers: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -8982,7 +9055,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemLoggersRequest** | [**SystemLoggersRequest**](SystemLoggersRequest.md)|  | [optional] 
+ **systemLoggersRequest** | [**SystemLoggersRequest**](SystemLoggersRequest.md)|  | 
 
 ### Return type
 
@@ -9005,9 +9078,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemloggersname"></a>
-# **UpdateSystemLoggersName**
-> void UpdateSystemLoggersName (string name, SystemLoggersRequest systemLoggersRequest = null)
+<a name="postsysloggersname"></a>
+# **PostSysLoggersName**
+> void PostSysLoggersName (string name, SystemLoggersRequest systemLoggersRequest)
 
 Modify the log level of a single logger.
 
@@ -9022,7 +9095,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemLoggersNameExample
+    public class PostSysLoggersNameExample
     {
         public static void Main()
         {
@@ -9033,16 +9106,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the logger to be modified.
-            var systemLoggersRequest = new SystemLoggersRequest(); // SystemLoggersRequest |  (optional) 
+            var systemLoggersRequest = new SystemLoggersRequest(); // SystemLoggersRequest | 
 
             try
             {
                 // Modify the log level of a single logger.
-                apiInstance.UpdateSystemLoggersName(name, systemLoggersRequest);
+                apiInstance.PostSysLoggersName(name, systemLoggersRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemLoggersName: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysLoggersName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9056,7 +9129,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The name of the logger to be modified. | 
- **systemLoggersRequest** | [**SystemLoggersRequest**](SystemLoggersRequest.md)|  | [optional] 
+ **systemLoggersRequest** | [**SystemLoggersRequest**](SystemLoggersRequest.md)|  | 
 
 ### Return type
 
@@ -9079,9 +9152,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemmfavalidate"></a>
-# **UpdateSystemMfaValidate**
-> void UpdateSystemMfaValidate (SystemMfaValidateRequest systemMfaValidateRequest = null)
+<a name="postsysmfavalidate"></a>
+# **PostSysMfaValidate**
+> void PostSysMfaValidate (SystemMfaValidateRequest systemMfaValidateRequest)
 
 Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token
 
@@ -9096,7 +9169,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemMfaValidateExample
+    public class PostSysMfaValidateExample
     {
         public static void Main()
         {
@@ -9106,16 +9179,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemMfaValidateRequest = new SystemMfaValidateRequest(); // SystemMfaValidateRequest |  (optional) 
+            var systemMfaValidateRequest = new SystemMfaValidateRequest(); // SystemMfaValidateRequest | 
 
             try
             {
                 // Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token
-                apiInstance.UpdateSystemMfaValidate(systemMfaValidateRequest);
+                apiInstance.PostSysMfaValidate(systemMfaValidateRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemMfaValidate: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysMfaValidate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9128,7 +9201,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemMfaValidateRequest** | [**SystemMfaValidateRequest**](SystemMfaValidateRequest.md)|  | [optional] 
+ **systemMfaValidateRequest** | [**SystemMfaValidateRequest**](SystemMfaValidateRequest.md)|  | 
 
 ### Return type
 
@@ -9151,9 +9224,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemmountspath"></a>
-# **UpdateSystemMountsPath**
-> void UpdateSystemMountsPath (string path, SystemMountsRequest systemMountsRequest = null)
+<a name="postsysmountspath"></a>
+# **PostSysMountsPath**
+> void PostSysMountsPath (string path, SystemMountsRequest systemMountsRequest)
 
 Enable a new secrets engine at the given path.
 
@@ -9168,7 +9241,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemMountsPathExample
+    public class PostSysMountsPathExample
     {
         public static void Main()
         {
@@ -9179,16 +9252,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | The path to mount to. Example: \"aws/east\"
-            var systemMountsRequest = new SystemMountsRequest(); // SystemMountsRequest |  (optional) 
+            var systemMountsRequest = new SystemMountsRequest(); // SystemMountsRequest | 
 
             try
             {
                 // Enable a new secrets engine at the given path.
-                apiInstance.UpdateSystemMountsPath(path, systemMountsRequest);
+                apiInstance.PostSysMountsPath(path, systemMountsRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemMountsPath: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysMountsPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9202,7 +9275,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **string**| The path to mount to. Example: \&quot;aws/east\&quot; | 
- **systemMountsRequest** | [**SystemMountsRequest**](SystemMountsRequest.md)|  | [optional] 
+ **systemMountsRequest** | [**SystemMountsRequest**](SystemMountsRequest.md)|  | 
 
 ### Return type
 
@@ -9225,9 +9298,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemmountspathtune"></a>
-# **UpdateSystemMountsPathTune**
-> void UpdateSystemMountsPathTune (string path, SystemMountsTuneRequest systemMountsTuneRequest = null)
+<a name="postsysmountspathtune"></a>
+# **PostSysMountsPathTune**
+> void PostSysMountsPathTune (string path, SystemMountsTuneRequest systemMountsTuneRequest)
 
 Tune backend configuration parameters for this mount.
 
@@ -9242,7 +9315,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemMountsPathTuneExample
+    public class PostSysMountsPathTuneExample
     {
         public static void Main()
         {
@@ -9253,16 +9326,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | The path to mount to. Example: \"aws/east\"
-            var systemMountsTuneRequest = new SystemMountsTuneRequest(); // SystemMountsTuneRequest |  (optional) 
+            var systemMountsTuneRequest = new SystemMountsTuneRequest(); // SystemMountsTuneRequest | 
 
             try
             {
                 // Tune backend configuration parameters for this mount.
-                apiInstance.UpdateSystemMountsPathTune(path, systemMountsTuneRequest);
+                apiInstance.PostSysMountsPathTune(path, systemMountsTuneRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemMountsPathTune: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysMountsPathTune: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9276,7 +9349,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **string**| The path to mount to. Example: \&quot;aws/east\&quot; | 
- **systemMountsTuneRequest** | [**SystemMountsTuneRequest**](SystemMountsTuneRequest.md)|  | [optional] 
+ **systemMountsTuneRequest** | [**SystemMountsTuneRequest**](SystemMountsTuneRequest.md)|  | 
 
 ### Return type
 
@@ -9299,9 +9372,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystempluginscatalogname"></a>
-# **UpdateSystemPluginsCatalogName**
-> void UpdateSystemPluginsCatalogName (string name, SystemPluginsCatalogRequest systemPluginsCatalogRequest = null)
+<a name="postsyspluginscatalogname"></a>
+# **PostSysPluginsCatalogName**
+> void PostSysPluginsCatalogName (string name, SystemPluginsCatalogRequest systemPluginsCatalogRequest)
 
 Register a new plugin, or updates an existing one with the supplied name.
 
@@ -9316,7 +9389,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemPluginsCatalogNameExample
+    public class PostSysPluginsCatalogNameExample
     {
         public static void Main()
         {
@@ -9327,16 +9400,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the plugin
-            var systemPluginsCatalogRequest = new SystemPluginsCatalogRequest(); // SystemPluginsCatalogRequest |  (optional) 
+            var systemPluginsCatalogRequest = new SystemPluginsCatalogRequest(); // SystemPluginsCatalogRequest | 
 
             try
             {
                 // Register a new plugin, or updates an existing one with the supplied name.
-                apiInstance.UpdateSystemPluginsCatalogName(name, systemPluginsCatalogRequest);
+                apiInstance.PostSysPluginsCatalogName(name, systemPluginsCatalogRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemPluginsCatalogName: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysPluginsCatalogName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9350,7 +9423,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The name of the plugin | 
- **systemPluginsCatalogRequest** | [**SystemPluginsCatalogRequest**](SystemPluginsCatalogRequest.md)|  | [optional] 
+ **systemPluginsCatalogRequest** | [**SystemPluginsCatalogRequest**](SystemPluginsCatalogRequest.md)|  | 
 
 ### Return type
 
@@ -9373,9 +9446,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystempluginscatalogtypename"></a>
-# **UpdateSystemPluginsCatalogTypeName**
-> void UpdateSystemPluginsCatalogTypeName (string name, string type, SystemPluginsCatalogRequest systemPluginsCatalogRequest = null)
+<a name="postsyspluginscatalogtypename"></a>
+# **PostSysPluginsCatalogTypeName**
+> void PostSysPluginsCatalogTypeName (string name, string type, SystemPluginsCatalogRequest systemPluginsCatalogRequest)
 
 Register a new plugin, or updates an existing one with the supplied name.
 
@@ -9390,7 +9463,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemPluginsCatalogTypeNameExample
+    public class PostSysPluginsCatalogTypeNameExample
     {
         public static void Main()
         {
@@ -9402,16 +9475,16 @@ namespace Example
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the plugin
             var type = "type_example";  // string | The type of the plugin, may be auth, secret, or database
-            var systemPluginsCatalogRequest = new SystemPluginsCatalogRequest(); // SystemPluginsCatalogRequest |  (optional) 
+            var systemPluginsCatalogRequest = new SystemPluginsCatalogRequest(); // SystemPluginsCatalogRequest | 
 
             try
             {
                 // Register a new plugin, or updates an existing one with the supplied name.
-                apiInstance.UpdateSystemPluginsCatalogTypeName(name, type, systemPluginsCatalogRequest);
+                apiInstance.PostSysPluginsCatalogTypeName(name, type, systemPluginsCatalogRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemPluginsCatalogTypeName: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysPluginsCatalogTypeName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9426,7 +9499,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The name of the plugin | 
  **type** | **string**| The type of the plugin, may be auth, secret, or database | 
- **systemPluginsCatalogRequest** | [**SystemPluginsCatalogRequest**](SystemPluginsCatalogRequest.md)|  | [optional] 
+ **systemPluginsCatalogRequest** | [**SystemPluginsCatalogRequest**](SystemPluginsCatalogRequest.md)|  | 
 
 ### Return type
 
@@ -9449,9 +9522,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystempluginsreloadbackend"></a>
-# **UpdateSystemPluginsReloadBackend**
-> void UpdateSystemPluginsReloadBackend (SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest = null)
+<a name="postsyspluginsreloadbackend"></a>
+# **PostSysPluginsReloadBackend**
+> void PostSysPluginsReloadBackend (SystemPluginsReloadBackendRequest systemPluginsReloadBackendRequest)
 
 Reload mounted plugin backends.
 
@@ -9468,7 +9541,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemPluginsReloadBackendExample
+    public class PostSysPluginsReloadBackendExample
     {
         public static void Main()
         {
@@ -9478,16 +9551,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemPluginsReloadBackendRequest = new SystemPluginsReloadBackendRequest(); // SystemPluginsReloadBackendRequest |  (optional) 
+            var systemPluginsReloadBackendRequest = new SystemPluginsReloadBackendRequest(); // SystemPluginsReloadBackendRequest | 
 
             try
             {
                 // Reload mounted plugin backends.
-                apiInstance.UpdateSystemPluginsReloadBackend(systemPluginsReloadBackendRequest);
+                apiInstance.PostSysPluginsReloadBackend(systemPluginsReloadBackendRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemPluginsReloadBackend: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysPluginsReloadBackend: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9500,7 +9573,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemPluginsReloadBackendRequest** | [**SystemPluginsReloadBackendRequest**](SystemPluginsReloadBackendRequest.md)|  | [optional] 
+ **systemPluginsReloadBackendRequest** | [**SystemPluginsReloadBackendRequest**](SystemPluginsReloadBackendRequest.md)|  | 
 
 ### Return type
 
@@ -9523,9 +9596,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystempoliciesaclname"></a>
-# **UpdateSystemPoliciesAclName**
-> void UpdateSystemPoliciesAclName (string name, SystemPoliciesAclRequest systemPoliciesAclRequest = null)
+<a name="postsyspoliciesaclname"></a>
+# **PostSysPoliciesAclName**
+> void PostSysPoliciesAclName (string name, SystemPoliciesAclRequest systemPoliciesAclRequest)
 
 Add a new or update an existing ACL policy.
 
@@ -9540,7 +9613,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemPoliciesAclNameExample
+    public class PostSysPoliciesAclNameExample
     {
         public static void Main()
         {
@@ -9551,16 +9624,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the policy. Example: \"ops\"
-            var systemPoliciesAclRequest = new SystemPoliciesAclRequest(); // SystemPoliciesAclRequest |  (optional) 
+            var systemPoliciesAclRequest = new SystemPoliciesAclRequest(); // SystemPoliciesAclRequest | 
 
             try
             {
                 // Add a new or update an existing ACL policy.
-                apiInstance.UpdateSystemPoliciesAclName(name, systemPoliciesAclRequest);
+                apiInstance.PostSysPoliciesAclName(name, systemPoliciesAclRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemPoliciesAclName: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysPoliciesAclName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9574,7 +9647,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The name of the policy. Example: \&quot;ops\&quot; | 
- **systemPoliciesAclRequest** | [**SystemPoliciesAclRequest**](SystemPoliciesAclRequest.md)|  | [optional] 
+ **systemPoliciesAclRequest** | [**SystemPoliciesAclRequest**](SystemPoliciesAclRequest.md)|  | 
 
 ### Return type
 
@@ -9597,9 +9670,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystempoliciespasswordname"></a>
-# **UpdateSystemPoliciesPasswordName**
-> void UpdateSystemPoliciesPasswordName (string name, SystemPoliciesPasswordRequest systemPoliciesPasswordRequest = null)
+<a name="postsyspoliciespasswordname"></a>
+# **PostSysPoliciesPasswordName**
+> void PostSysPoliciesPasswordName (string name, SystemPoliciesPasswordRequest systemPoliciesPasswordRequest)
 
 Add a new or update an existing password policy.
 
@@ -9614,7 +9687,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemPoliciesPasswordNameExample
+    public class PostSysPoliciesPasswordNameExample
     {
         public static void Main()
         {
@@ -9625,16 +9698,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the password policy.
-            var systemPoliciesPasswordRequest = new SystemPoliciesPasswordRequest(); // SystemPoliciesPasswordRequest |  (optional) 
+            var systemPoliciesPasswordRequest = new SystemPoliciesPasswordRequest(); // SystemPoliciesPasswordRequest | 
 
             try
             {
                 // Add a new or update an existing password policy.
-                apiInstance.UpdateSystemPoliciesPasswordName(name, systemPoliciesPasswordRequest);
+                apiInstance.PostSysPoliciesPasswordName(name, systemPoliciesPasswordRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemPoliciesPasswordName: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysPoliciesPasswordName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9648,7 +9721,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The name of the password policy. | 
- **systemPoliciesPasswordRequest** | [**SystemPoliciesPasswordRequest**](SystemPoliciesPasswordRequest.md)|  | [optional] 
+ **systemPoliciesPasswordRequest** | [**SystemPoliciesPasswordRequest**](SystemPoliciesPasswordRequest.md)|  | 
 
 ### Return type
 
@@ -9671,9 +9744,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystempolicyname"></a>
-# **UpdateSystemPolicyName**
-> void UpdateSystemPolicyName (string name, SystemPolicyRequest systemPolicyRequest = null)
+<a name="postsyspolicyname"></a>
+# **PostSysPolicyName**
+> void PostSysPolicyName (string name, SystemPolicyRequest systemPolicyRequest)
 
 Add a new or update an existing policy.
 
@@ -9688,7 +9761,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemPolicyNameExample
+    public class PostSysPolicyNameExample
     {
         public static void Main()
         {
@@ -9699,16 +9772,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | The name of the policy. Example: \"ops\"
-            var systemPolicyRequest = new SystemPolicyRequest(); // SystemPolicyRequest |  (optional) 
+            var systemPolicyRequest = new SystemPolicyRequest(); // SystemPolicyRequest | 
 
             try
             {
                 // Add a new or update an existing policy.
-                apiInstance.UpdateSystemPolicyName(name, systemPolicyRequest);
+                apiInstance.PostSysPolicyName(name, systemPolicyRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemPolicyName: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysPolicyName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9722,7 +9795,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The name of the policy. Example: \&quot;ops\&quot; | 
- **systemPolicyRequest** | [**SystemPolicyRequest**](SystemPolicyRequest.md)|  | [optional] 
+ **systemPolicyRequest** | [**SystemPolicyRequest**](SystemPolicyRequest.md)|  | 
 
 ### Return type
 
@@ -9745,9 +9818,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemquotasconfig"></a>
-# **UpdateSystemQuotasConfig**
-> void UpdateSystemQuotasConfig (SystemQuotasConfigRequest systemQuotasConfigRequest = null)
+<a name="postsysquotasconfig"></a>
+# **PostSysQuotasConfig**
+> void PostSysQuotasConfig (SystemQuotasConfigRequest systemQuotasConfigRequest)
 
 
 
@@ -9762,7 +9835,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemQuotasConfigExample
+    public class PostSysQuotasConfigExample
     {
         public static void Main()
         {
@@ -9772,15 +9845,15 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemQuotasConfigRequest = new SystemQuotasConfigRequest(); // SystemQuotasConfigRequest |  (optional) 
+            var systemQuotasConfigRequest = new SystemQuotasConfigRequest(); // SystemQuotasConfigRequest | 
 
             try
             {
-                apiInstance.UpdateSystemQuotasConfig(systemQuotasConfigRequest);
+                apiInstance.PostSysQuotasConfig(systemQuotasConfigRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemQuotasConfig: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysQuotasConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9793,7 +9866,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemQuotasConfigRequest** | [**SystemQuotasConfigRequest**](SystemQuotasConfigRequest.md)|  | [optional] 
+ **systemQuotasConfigRequest** | [**SystemQuotasConfigRequest**](SystemQuotasConfigRequest.md)|  | 
 
 ### Return type
 
@@ -9816,9 +9889,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemquotasratelimitname"></a>
-# **UpdateSystemQuotasRateLimitName**
-> void UpdateSystemQuotasRateLimitName (string name, SystemQuotasRateLimitRequest systemQuotasRateLimitRequest = null)
+<a name="postsysquotasratelimitname"></a>
+# **PostSysQuotasRateLimitName**
+> void PostSysQuotasRateLimitName (string name, SystemQuotasRateLimitRequest systemQuotasRateLimitRequest)
 
 
 
@@ -9833,7 +9906,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemQuotasRateLimitNameExample
+    public class PostSysQuotasRateLimitNameExample
     {
         public static void Main()
         {
@@ -9844,15 +9917,15 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var name = "name_example";  // string | Name of the quota rule.
-            var systemQuotasRateLimitRequest = new SystemQuotasRateLimitRequest(); // SystemQuotasRateLimitRequest |  (optional) 
+            var systemQuotasRateLimitRequest = new SystemQuotasRateLimitRequest(); // SystemQuotasRateLimitRequest | 
 
             try
             {
-                apiInstance.UpdateSystemQuotasRateLimitName(name, systemQuotasRateLimitRequest);
+                apiInstance.PostSysQuotasRateLimitName(name, systemQuotasRateLimitRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemQuotasRateLimitName: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysQuotasRateLimitName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9866,7 +9939,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the quota rule. | 
- **systemQuotasRateLimitRequest** | [**SystemQuotasRateLimitRequest**](SystemQuotasRateLimitRequest.md)|  | [optional] 
+ **systemQuotasRateLimitRequest** | [**SystemQuotasRateLimitRequest**](SystemQuotasRateLimitRequest.md)|  | 
 
 ### Return type
 
@@ -9889,9 +9962,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemraw"></a>
-# **UpdateSystemRaw**
-> void UpdateSystemRaw (SystemRawRequest systemRawRequest = null)
+<a name="postsysraw"></a>
+# **PostSysRaw**
+> void PostSysRaw (SystemRawRequest systemRawRequest)
 
 Update the value of the key at the given path.
 
@@ -9906,7 +9979,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemRawExample
+    public class PostSysRawExample
     {
         public static void Main()
         {
@@ -9916,16 +9989,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemRawRequest = new SystemRawRequest(); // SystemRawRequest |  (optional) 
+            var systemRawRequest = new SystemRawRequest(); // SystemRawRequest | 
 
             try
             {
                 // Update the value of the key at the given path.
-                apiInstance.UpdateSystemRaw(systemRawRequest);
+                apiInstance.PostSysRaw(systemRawRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemRaw: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRaw: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -9938,7 +10011,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemRawRequest** | [**SystemRawRequest**](SystemRawRequest.md)|  | [optional] 
+ **systemRawRequest** | [**SystemRawRequest**](SystemRawRequest.md)|  | 
 
 ### Return type
 
@@ -9961,9 +10034,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemrawpath"></a>
-# **UpdateSystemRawPath**
-> void UpdateSystemRawPath (string path, SystemRawRequest systemRawRequest = null)
+<a name="postsysrawpath"></a>
+# **PostSysRawPath**
+> void PostSysRawPath (string path, SystemRawRequest systemRawRequest)
 
 Update the value of the key at the given path.
 
@@ -9978,7 +10051,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemRawPathExample
+    public class PostSysRawPathExample
     {
         public static void Main()
         {
@@ -9989,16 +10062,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | 
-            var systemRawRequest = new SystemRawRequest(); // SystemRawRequest |  (optional) 
+            var systemRawRequest = new SystemRawRequest(); // SystemRawRequest | 
 
             try
             {
                 // Update the value of the key at the given path.
-                apiInstance.UpdateSystemRawPath(path, systemRawRequest);
+                apiInstance.PostSysRawPath(path, systemRawRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemRawPath: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRawPath: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10012,7 +10085,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **string**|  | 
- **systemRawRequest** | [**SystemRawRequest**](SystemRawRequest.md)|  | [optional] 
+ **systemRawRequest** | [**SystemRawRequest**](SystemRawRequest.md)|  | 
 
 ### Return type
 
@@ -10035,9 +10108,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemrekeyinit"></a>
-# **UpdateSystemRekeyInit**
-> void UpdateSystemRekeyInit (SystemRekeyInitRequest systemRekeyInitRequest = null)
+<a name="postsysrekeyinit"></a>
+# **PostSysRekeyInit**
+> void PostSysRekeyInit (SystemRekeyInitRequest systemRekeyInitRequest)
 
 Initializes a new rekey attempt.
 
@@ -10054,7 +10127,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemRekeyInitExample
+    public class PostSysRekeyInitExample
     {
         public static void Main()
         {
@@ -10064,16 +10137,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemRekeyInitRequest = new SystemRekeyInitRequest(); // SystemRekeyInitRequest |  (optional) 
+            var systemRekeyInitRequest = new SystemRekeyInitRequest(); // SystemRekeyInitRequest | 
 
             try
             {
                 // Initializes a new rekey attempt.
-                apiInstance.UpdateSystemRekeyInit(systemRekeyInitRequest);
+                apiInstance.PostSysRekeyInit(systemRekeyInitRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemRekeyInit: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRekeyInit: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10086,7 +10159,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemRekeyInitRequest** | [**SystemRekeyInitRequest**](SystemRekeyInitRequest.md)|  | [optional] 
+ **systemRekeyInitRequest** | [**SystemRekeyInitRequest**](SystemRekeyInitRequest.md)|  | 
 
 ### Return type
 
@@ -10109,9 +10182,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemrekeyupdate"></a>
-# **UpdateSystemRekeyUpdate**
-> void UpdateSystemRekeyUpdate (SystemRekeyUpdateRequest systemRekeyUpdateRequest = null)
+<a name="postsysrekeyupdate"></a>
+# **PostSysRekeyUpdate**
+> void PostSysRekeyUpdate (SystemRekeyUpdateRequest systemRekeyUpdateRequest)
 
 Enter a single unseal key share to progress the rekey of the Vault.
 
@@ -10126,7 +10199,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemRekeyUpdateExample
+    public class PostSysRekeyUpdateExample
     {
         public static void Main()
         {
@@ -10136,16 +10209,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemRekeyUpdateRequest = new SystemRekeyUpdateRequest(); // SystemRekeyUpdateRequest |  (optional) 
+            var systemRekeyUpdateRequest = new SystemRekeyUpdateRequest(); // SystemRekeyUpdateRequest | 
 
             try
             {
                 // Enter a single unseal key share to progress the rekey of the Vault.
-                apiInstance.UpdateSystemRekeyUpdate(systemRekeyUpdateRequest);
+                apiInstance.PostSysRekeyUpdate(systemRekeyUpdateRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemRekeyUpdate: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRekeyUpdate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10158,7 +10231,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemRekeyUpdateRequest** | [**SystemRekeyUpdateRequest**](SystemRekeyUpdateRequest.md)|  | [optional] 
+ **systemRekeyUpdateRequest** | [**SystemRekeyUpdateRequest**](SystemRekeyUpdateRequest.md)|  | 
 
 ### Return type
 
@@ -10181,9 +10254,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemrekeyverify"></a>
-# **UpdateSystemRekeyVerify**
-> void UpdateSystemRekeyVerify (SystemRekeyVerifyRequest systemRekeyVerifyRequest = null)
+<a name="postsysrekeyverify"></a>
+# **PostSysRekeyVerify**
+> void PostSysRekeyVerify (SystemRekeyVerifyRequest systemRekeyVerifyRequest)
 
 Enter a single new key share to progress the rekey verification operation.
 
@@ -10198,7 +10271,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemRekeyVerifyExample
+    public class PostSysRekeyVerifyExample
     {
         public static void Main()
         {
@@ -10208,16 +10281,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemRekeyVerifyRequest = new SystemRekeyVerifyRequest(); // SystemRekeyVerifyRequest |  (optional) 
+            var systemRekeyVerifyRequest = new SystemRekeyVerifyRequest(); // SystemRekeyVerifyRequest | 
 
             try
             {
                 // Enter a single new key share to progress the rekey verification operation.
-                apiInstance.UpdateSystemRekeyVerify(systemRekeyVerifyRequest);
+                apiInstance.PostSysRekeyVerify(systemRekeyVerifyRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemRekeyVerify: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRekeyVerify: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10230,7 +10303,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemRekeyVerifyRequest** | [**SystemRekeyVerifyRequest**](SystemRekeyVerifyRequest.md)|  | [optional] 
+ **systemRekeyVerifyRequest** | [**SystemRekeyVerifyRequest**](SystemRekeyVerifyRequest.md)|  | 
 
 ### Return type
 
@@ -10253,9 +10326,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemremount"></a>
-# **UpdateSystemRemount**
-> void UpdateSystemRemount (SystemRemountRequest systemRemountRequest = null)
+<a name="postsysremount"></a>
+# **PostSysRemount**
+> void PostSysRemount (SystemRemountRequest systemRemountRequest)
 
 Initiate a mount migration
 
@@ -10270,7 +10343,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemRemountExample
+    public class PostSysRemountExample
     {
         public static void Main()
         {
@@ -10280,16 +10353,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemRemountRequest = new SystemRemountRequest(); // SystemRemountRequest |  (optional) 
+            var systemRemountRequest = new SystemRemountRequest(); // SystemRemountRequest | 
 
             try
             {
                 // Initiate a mount migration
-                apiInstance.UpdateSystemRemount(systemRemountRequest);
+                apiInstance.PostSysRemount(systemRemountRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemRemount: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRemount: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10302,7 +10375,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemRemountRequest** | [**SystemRemountRequest**](SystemRemountRequest.md)|  | [optional] 
+ **systemRemountRequest** | [**SystemRemountRequest**](SystemRemountRequest.md)|  | 
 
 ### Return type
 
@@ -10325,9 +10398,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemrenew"></a>
-# **UpdateSystemRenew**
-> void UpdateSystemRenew (SystemRenewRequest systemRenewRequest = null)
+<a name="postsysrenew"></a>
+# **PostSysRenew**
+> void PostSysRenew (SystemRenewRequest systemRenewRequest)
 
 Renews a lease, requesting to extend the lease.
 
@@ -10342,7 +10415,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemRenewExample
+    public class PostSysRenewExample
     {
         public static void Main()
         {
@@ -10352,16 +10425,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemRenewRequest = new SystemRenewRequest(); // SystemRenewRequest |  (optional) 
+            var systemRenewRequest = new SystemRenewRequest(); // SystemRenewRequest | 
 
             try
             {
                 // Renews a lease, requesting to extend the lease.
-                apiInstance.UpdateSystemRenew(systemRenewRequest);
+                apiInstance.PostSysRenew(systemRenewRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemRenew: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRenew: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10374,7 +10447,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemRenewRequest** | [**SystemRenewRequest**](SystemRenewRequest.md)|  | [optional] 
+ **systemRenewRequest** | [**SystemRenewRequest**](SystemRenewRequest.md)|  | 
 
 ### Return type
 
@@ -10397,9 +10470,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemrenewurlleaseid"></a>
-# **UpdateSystemRenewUrlLeaseId**
-> void UpdateSystemRenewUrlLeaseId (string urlLeaseId, SystemRenewLeaseRequest systemRenewLeaseRequest = null)
+<a name="postsysrenewurlleaseid"></a>
+# **PostSysRenewUrlLeaseId**
+> void PostSysRenewUrlLeaseId (string urlLeaseId, SystemRenewLeaseRequest systemRenewLeaseRequest)
 
 Renews a lease, requesting to extend the lease.
 
@@ -10414,7 +10487,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemRenewUrlLeaseIdExample
+    public class PostSysRenewUrlLeaseIdExample
     {
         public static void Main()
         {
@@ -10425,16 +10498,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var urlLeaseId = "urlLeaseId_example";  // string | The lease identifier to renew. This is included with a lease.
-            var systemRenewLeaseRequest = new SystemRenewLeaseRequest(); // SystemRenewLeaseRequest |  (optional) 
+            var systemRenewLeaseRequest = new SystemRenewLeaseRequest(); // SystemRenewLeaseRequest | 
 
             try
             {
                 // Renews a lease, requesting to extend the lease.
-                apiInstance.UpdateSystemRenewUrlLeaseId(urlLeaseId, systemRenewLeaseRequest);
+                apiInstance.PostSysRenewUrlLeaseId(urlLeaseId, systemRenewLeaseRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemRenewUrlLeaseId: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRenewUrlLeaseId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10448,7 +10521,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **urlLeaseId** | **string**| The lease identifier to renew. This is included with a lease. | 
- **systemRenewLeaseRequest** | [**SystemRenewLeaseRequest**](SystemRenewLeaseRequest.md)|  | [optional] 
+ **systemRenewLeaseRequest** | [**SystemRenewLeaseRequest**](SystemRenewLeaseRequest.md)|  | 
 
 ### Return type
 
@@ -10471,9 +10544,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemrevoke"></a>
-# **UpdateSystemRevoke**
-> void UpdateSystemRevoke (SystemRevokeRequest systemRevokeRequest = null)
+<a name="postsysrevoke"></a>
+# **PostSysRevoke**
+> void PostSysRevoke (SystemRevokeRequest systemRevokeRequest)
 
 Revokes a lease immediately.
 
@@ -10488,7 +10561,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemRevokeExample
+    public class PostSysRevokeExample
     {
         public static void Main()
         {
@@ -10498,16 +10571,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemRevokeRequest = new SystemRevokeRequest(); // SystemRevokeRequest |  (optional) 
+            var systemRevokeRequest = new SystemRevokeRequest(); // SystemRevokeRequest | 
 
             try
             {
                 // Revokes a lease immediately.
-                apiInstance.UpdateSystemRevoke(systemRevokeRequest);
+                apiInstance.PostSysRevoke(systemRevokeRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemRevoke: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRevoke: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10520,7 +10593,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemRevokeRequest** | [**SystemRevokeRequest**](SystemRevokeRequest.md)|  | [optional] 
+ **systemRevokeRequest** | [**SystemRevokeRequest**](SystemRevokeRequest.md)|  | 
 
 ### Return type
 
@@ -10543,9 +10616,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemrevokeforceprefix"></a>
-# **UpdateSystemRevokeForcePrefix**
-> void UpdateSystemRevokeForcePrefix (string prefix)
+<a name="postsysrevokeforceprefix"></a>
+# **PostSysRevokeForcePrefix**
+> void PostSysRevokeForcePrefix (string prefix)
 
 Revokes all secrets or tokens generated under a given prefix immediately
 
@@ -10562,7 +10635,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemRevokeForcePrefixExample
+    public class PostSysRevokeForcePrefixExample
     {
         public static void Main()
         {
@@ -10577,11 +10650,11 @@ namespace Example
             try
             {
                 // Revokes all secrets or tokens generated under a given prefix immediately
-                apiInstance.UpdateSystemRevokeForcePrefix(prefix);
+                apiInstance.PostSysRevokeForcePrefix(prefix);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemRevokeForcePrefix: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRevokeForcePrefix: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10617,9 +10690,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemrevokeprefixprefix"></a>
-# **UpdateSystemRevokePrefixPrefix**
-> void UpdateSystemRevokePrefixPrefix (string prefix, SystemRevokePrefixRequest systemRevokePrefixRequest = null)
+<a name="postsysrevokeprefixprefix"></a>
+# **PostSysRevokePrefixPrefix**
+> void PostSysRevokePrefixPrefix (string prefix, SystemRevokePrefixRequest systemRevokePrefixRequest)
 
 Revokes all secrets (via a lease ID prefix) or tokens (via the tokens' path property) generated under a given prefix immediately.
 
@@ -10634,7 +10707,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemRevokePrefixPrefixExample
+    public class PostSysRevokePrefixPrefixExample
     {
         public static void Main()
         {
@@ -10645,16 +10718,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var prefix = "prefix_example";  // string | The path to revoke keys under. Example: \"prod/aws/ops\"
-            var systemRevokePrefixRequest = new SystemRevokePrefixRequest(); // SystemRevokePrefixRequest |  (optional) 
+            var systemRevokePrefixRequest = new SystemRevokePrefixRequest(); // SystemRevokePrefixRequest | 
 
             try
             {
                 // Revokes all secrets (via a lease ID prefix) or tokens (via the tokens' path property) generated under a given prefix immediately.
-                apiInstance.UpdateSystemRevokePrefixPrefix(prefix, systemRevokePrefixRequest);
+                apiInstance.PostSysRevokePrefixPrefix(prefix, systemRevokePrefixRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemRevokePrefixPrefix: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRevokePrefixPrefix: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10668,7 +10741,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **prefix** | **string**| The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot; | 
- **systemRevokePrefixRequest** | [**SystemRevokePrefixRequest**](SystemRevokePrefixRequest.md)|  | [optional] 
+ **systemRevokePrefixRequest** | [**SystemRevokePrefixRequest**](SystemRevokePrefixRequest.md)|  | 
 
 ### Return type
 
@@ -10691,9 +10764,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemrevokeurlleaseid"></a>
-# **UpdateSystemRevokeUrlLeaseId**
-> void UpdateSystemRevokeUrlLeaseId (string urlLeaseId, SystemRevokeLeaseRequest systemRevokeLeaseRequest = null)
+<a name="postsysrevokeurlleaseid"></a>
+# **PostSysRevokeUrlLeaseId**
+> void PostSysRevokeUrlLeaseId (string urlLeaseId, SystemRevokeLeaseRequest systemRevokeLeaseRequest)
 
 Revokes a lease immediately.
 
@@ -10708,7 +10781,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemRevokeUrlLeaseIdExample
+    public class PostSysRevokeUrlLeaseIdExample
     {
         public static void Main()
         {
@@ -10719,16 +10792,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var urlLeaseId = "urlLeaseId_example";  // string | The lease identifier to renew. This is included with a lease.
-            var systemRevokeLeaseRequest = new SystemRevokeLeaseRequest(); // SystemRevokeLeaseRequest |  (optional) 
+            var systemRevokeLeaseRequest = new SystemRevokeLeaseRequest(); // SystemRevokeLeaseRequest | 
 
             try
             {
                 // Revokes a lease immediately.
-                apiInstance.UpdateSystemRevokeUrlLeaseId(urlLeaseId, systemRevokeLeaseRequest);
+                apiInstance.PostSysRevokeUrlLeaseId(urlLeaseId, systemRevokeLeaseRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemRevokeUrlLeaseId: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRevokeUrlLeaseId: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10742,7 +10815,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **urlLeaseId** | **string**| The lease identifier to renew. This is included with a lease. | 
- **systemRevokeLeaseRequest** | [**SystemRevokeLeaseRequest**](SystemRevokeLeaseRequest.md)|  | [optional] 
+ **systemRevokeLeaseRequest** | [**SystemRevokeLeaseRequest**](SystemRevokeLeaseRequest.md)|  | 
 
 ### Return type
 
@@ -10765,9 +10838,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemrotate"></a>
-# **UpdateSystemRotate**
-> void UpdateSystemRotate ()
+<a name="postsysrotate"></a>
+# **PostSysRotate**
+> void PostSysRotate ()
 
 Rotates the backend encryption key used to persist data.
 
@@ -10782,7 +10855,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemRotateExample
+    public class PostSysRotateExample
     {
         public static void Main()
         {
@@ -10796,11 +10869,11 @@ namespace Example
             try
             {
                 // Rotates the backend encryption key used to persist data.
-                apiInstance.UpdateSystemRotate();
+                apiInstance.PostSysRotate();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemRotate: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRotate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10833,9 +10906,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemrotateconfig"></a>
-# **UpdateSystemRotateConfig**
-> void UpdateSystemRotateConfig (SystemRotateConfigRequest systemRotateConfigRequest = null)
+<a name="postsysrotateconfig"></a>
+# **PostSysRotateConfig**
+> void PostSysRotateConfig (SystemRotateConfigRequest systemRotateConfigRequest)
 
 
 
@@ -10850,7 +10923,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemRotateConfigExample
+    public class PostSysRotateConfigExample
     {
         public static void Main()
         {
@@ -10860,15 +10933,15 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemRotateConfigRequest = new SystemRotateConfigRequest(); // SystemRotateConfigRequest |  (optional) 
+            var systemRotateConfigRequest = new SystemRotateConfigRequest(); // SystemRotateConfigRequest | 
 
             try
             {
-                apiInstance.UpdateSystemRotateConfig(systemRotateConfigRequest);
+                apiInstance.PostSysRotateConfig(systemRotateConfigRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemRotateConfig: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysRotateConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10881,7 +10954,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemRotateConfigRequest** | [**SystemRotateConfigRequest**](SystemRotateConfigRequest.md)|  | [optional] 
+ **systemRotateConfigRequest** | [**SystemRotateConfigRequest**](SystemRotateConfigRequest.md)|  | 
 
 ### Return type
 
@@ -10904,9 +10977,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemseal"></a>
-# **UpdateSystemSeal**
-> void UpdateSystemSeal ()
+<a name="postsysseal"></a>
+# **PostSysSeal**
+> void PostSysSeal ()
 
 Seal the Vault.
 
@@ -10921,7 +10994,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemSealExample
+    public class PostSysSealExample
     {
         public static void Main()
         {
@@ -10935,11 +11008,11 @@ namespace Example
             try
             {
                 // Seal the Vault.
-                apiInstance.UpdateSystemSeal();
+                apiInstance.PostSysSeal();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemSeal: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysSeal: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -10972,9 +11045,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemstepdown"></a>
-# **UpdateSystemStepDown**
-> void UpdateSystemStepDown ()
+<a name="postsysstepdown"></a>
+# **PostSysStepDown**
+> void PostSysStepDown ()
 
 Cause the node to give up active status.
 
@@ -10991,7 +11064,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemStepDownExample
+    public class PostSysStepDownExample
     {
         public static void Main()
         {
@@ -11005,11 +11078,11 @@ namespace Example
             try
             {
                 // Cause the node to give up active status.
-                apiInstance.UpdateSystemStepDown();
+                apiInstance.PostSysStepDown();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemStepDown: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysStepDown: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11042,9 +11115,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemtoolshash"></a>
-# **UpdateSystemToolsHash**
-> void UpdateSystemToolsHash (SystemToolsHashRequest systemToolsHashRequest = null)
+<a name="postsystoolshash"></a>
+# **PostSysToolsHash**
+> void PostSysToolsHash (SystemToolsHashRequest systemToolsHashRequest)
 
 Generate a hash sum for input data
 
@@ -11059,7 +11132,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemToolsHashExample
+    public class PostSysToolsHashExample
     {
         public static void Main()
         {
@@ -11069,16 +11142,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemToolsHashRequest = new SystemToolsHashRequest(); // SystemToolsHashRequest |  (optional) 
+            var systemToolsHashRequest = new SystemToolsHashRequest(); // SystemToolsHashRequest | 
 
             try
             {
                 // Generate a hash sum for input data
-                apiInstance.UpdateSystemToolsHash(systemToolsHashRequest);
+                apiInstance.PostSysToolsHash(systemToolsHashRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemToolsHash: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysToolsHash: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11091,7 +11164,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemToolsHashRequest** | [**SystemToolsHashRequest**](SystemToolsHashRequest.md)|  | [optional] 
+ **systemToolsHashRequest** | [**SystemToolsHashRequest**](SystemToolsHashRequest.md)|  | 
 
 ### Return type
 
@@ -11114,9 +11187,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemtoolshashurlalgorithm"></a>
-# **UpdateSystemToolsHashUrlalgorithm**
-> void UpdateSystemToolsHashUrlalgorithm (string urlalgorithm, SystemToolsHashRequest systemToolsHashRequest = null)
+<a name="postsystoolshashurlalgorithm"></a>
+# **PostSysToolsHashUrlalgorithm**
+> void PostSysToolsHashUrlalgorithm (string urlalgorithm, SystemToolsHashRequest systemToolsHashRequest)
 
 Generate a hash sum for input data
 
@@ -11131,7 +11204,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemToolsHashUrlalgorithmExample
+    public class PostSysToolsHashUrlalgorithmExample
     {
         public static void Main()
         {
@@ -11142,16 +11215,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var urlalgorithm = "urlalgorithm_example";  // string | Algorithm to use (POST URL parameter)
-            var systemToolsHashRequest = new SystemToolsHashRequest(); // SystemToolsHashRequest |  (optional) 
+            var systemToolsHashRequest = new SystemToolsHashRequest(); // SystemToolsHashRequest | 
 
             try
             {
                 // Generate a hash sum for input data
-                apiInstance.UpdateSystemToolsHashUrlalgorithm(urlalgorithm, systemToolsHashRequest);
+                apiInstance.PostSysToolsHashUrlalgorithm(urlalgorithm, systemToolsHashRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemToolsHashUrlalgorithm: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysToolsHashUrlalgorithm: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11165,7 +11238,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **urlalgorithm** | **string**| Algorithm to use (POST URL parameter) | 
- **systemToolsHashRequest** | [**SystemToolsHashRequest**](SystemToolsHashRequest.md)|  | [optional] 
+ **systemToolsHashRequest** | [**SystemToolsHashRequest**](SystemToolsHashRequest.md)|  | 
 
 ### Return type
 
@@ -11188,9 +11261,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemtoolsrandom"></a>
-# **UpdateSystemToolsRandom**
-> void UpdateSystemToolsRandom (SystemToolsRandomRequest systemToolsRandomRequest = null)
+<a name="postsystoolsrandom"></a>
+# **PostSysToolsRandom**
+> void PostSysToolsRandom (SystemToolsRandomRequest systemToolsRandomRequest)
 
 Generate random bytes
 
@@ -11205,7 +11278,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemToolsRandomExample
+    public class PostSysToolsRandomExample
     {
         public static void Main()
         {
@@ -11215,16 +11288,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemToolsRandomRequest = new SystemToolsRandomRequest(); // SystemToolsRandomRequest |  (optional) 
+            var systemToolsRandomRequest = new SystemToolsRandomRequest(); // SystemToolsRandomRequest | 
 
             try
             {
                 // Generate random bytes
-                apiInstance.UpdateSystemToolsRandom(systemToolsRandomRequest);
+                apiInstance.PostSysToolsRandom(systemToolsRandomRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemToolsRandom: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysToolsRandom: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11237,7 +11310,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemToolsRandomRequest** | [**SystemToolsRandomRequest**](SystemToolsRandomRequest.md)|  | [optional] 
+ **systemToolsRandomRequest** | [**SystemToolsRandomRequest**](SystemToolsRandomRequest.md)|  | 
 
 ### Return type
 
@@ -11260,9 +11333,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemtoolsrandomsource"></a>
-# **UpdateSystemToolsRandomSource**
-> void UpdateSystemToolsRandomSource (string source, SystemToolsRandomRequest systemToolsRandomRequest = null)
+<a name="postsystoolsrandomsource"></a>
+# **PostSysToolsRandomSource**
+> void PostSysToolsRandomSource (string source, SystemToolsRandomRequest systemToolsRandomRequest)
 
 Generate random bytes
 
@@ -11277,7 +11350,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemToolsRandomSourceExample
+    public class PostSysToolsRandomSourceExample
     {
         public static void Main()
         {
@@ -11288,16 +11361,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var source = "\"platform\"";  // string | Which system to source random data from, ether \"platform\", \"seal\", or \"all\". (default to "platform")
-            var systemToolsRandomRequest = new SystemToolsRandomRequest(); // SystemToolsRandomRequest |  (optional) 
+            var systemToolsRandomRequest = new SystemToolsRandomRequest(); // SystemToolsRandomRequest | 
 
             try
             {
                 // Generate random bytes
-                apiInstance.UpdateSystemToolsRandomSource(source, systemToolsRandomRequest);
+                apiInstance.PostSysToolsRandomSource(source, systemToolsRandomRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemToolsRandomSource: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysToolsRandomSource: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11311,7 +11384,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **source** | **string**| Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;. | [default to &quot;platform&quot;]
- **systemToolsRandomRequest** | [**SystemToolsRandomRequest**](SystemToolsRandomRequest.md)|  | [optional] 
+ **systemToolsRandomRequest** | [**SystemToolsRandomRequest**](SystemToolsRandomRequest.md)|  | 
 
 ### Return type
 
@@ -11334,9 +11407,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemtoolsrandomsourceurlbytes"></a>
-# **UpdateSystemToolsRandomSourceUrlbytes**
-> void UpdateSystemToolsRandomSourceUrlbytes (string source, string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = null)
+<a name="postsystoolsrandomsourceurlbytes"></a>
+# **PostSysToolsRandomSourceUrlbytes**
+> void PostSysToolsRandomSourceUrlbytes (string source, string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest)
 
 Generate random bytes
 
@@ -11351,7 +11424,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemToolsRandomSourceUrlbytesExample
+    public class PostSysToolsRandomSourceUrlbytesExample
     {
         public static void Main()
         {
@@ -11363,16 +11436,16 @@ namespace Example
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var source = "\"platform\"";  // string | Which system to source random data from, ether \"platform\", \"seal\", or \"all\". (default to "platform")
             var urlbytes = "urlbytes_example";  // string | The number of bytes to generate (POST URL parameter)
-            var systemToolsRandomRequest = new SystemToolsRandomRequest(); // SystemToolsRandomRequest |  (optional) 
+            var systemToolsRandomRequest = new SystemToolsRandomRequest(); // SystemToolsRandomRequest | 
 
             try
             {
                 // Generate random bytes
-                apiInstance.UpdateSystemToolsRandomSourceUrlbytes(source, urlbytes, systemToolsRandomRequest);
+                apiInstance.PostSysToolsRandomSourceUrlbytes(source, urlbytes, systemToolsRandomRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemToolsRandomSourceUrlbytes: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysToolsRandomSourceUrlbytes: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11387,7 +11460,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **source** | **string**| Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;. | [default to &quot;platform&quot;]
  **urlbytes** | **string**| The number of bytes to generate (POST URL parameter) | 
- **systemToolsRandomRequest** | [**SystemToolsRandomRequest**](SystemToolsRandomRequest.md)|  | [optional] 
+ **systemToolsRandomRequest** | [**SystemToolsRandomRequest**](SystemToolsRandomRequest.md)|  | 
 
 ### Return type
 
@@ -11410,9 +11483,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemtoolsrandomurlbytes"></a>
-# **UpdateSystemToolsRandomUrlbytes**
-> void UpdateSystemToolsRandomUrlbytes (string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest = null)
+<a name="postsystoolsrandomurlbytes"></a>
+# **PostSysToolsRandomUrlbytes**
+> void PostSysToolsRandomUrlbytes (string urlbytes, SystemToolsRandomRequest systemToolsRandomRequest)
 
 Generate random bytes
 
@@ -11427,7 +11500,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemToolsRandomUrlbytesExample
+    public class PostSysToolsRandomUrlbytesExample
     {
         public static void Main()
         {
@@ -11438,16 +11511,16 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var urlbytes = "urlbytes_example";  // string | The number of bytes to generate (POST URL parameter)
-            var systemToolsRandomRequest = new SystemToolsRandomRequest(); // SystemToolsRandomRequest |  (optional) 
+            var systemToolsRandomRequest = new SystemToolsRandomRequest(); // SystemToolsRandomRequest | 
 
             try
             {
                 // Generate random bytes
-                apiInstance.UpdateSystemToolsRandomUrlbytes(urlbytes, systemToolsRandomRequest);
+                apiInstance.PostSysToolsRandomUrlbytes(urlbytes, systemToolsRandomRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemToolsRandomUrlbytes: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysToolsRandomUrlbytes: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11461,7 +11534,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **urlbytes** | **string**| The number of bytes to generate (POST URL parameter) | 
- **systemToolsRandomRequest** | [**SystemToolsRandomRequest**](SystemToolsRandomRequest.md)|  | [optional] 
+ **systemToolsRandomRequest** | [**SystemToolsRandomRequest**](SystemToolsRandomRequest.md)|  | 
 
 ### Return type
 
@@ -11484,9 +11557,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemunseal"></a>
-# **UpdateSystemUnseal**
-> void UpdateSystemUnseal (SystemUnsealRequest systemUnsealRequest = null)
+<a name="postsysunseal"></a>
+# **PostSysUnseal**
+> void PostSysUnseal (SystemUnsealRequest systemUnsealRequest)
 
 Unseal the Vault.
 
@@ -11501,7 +11574,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemUnsealExample
+    public class PostSysUnsealExample
     {
         public static void Main()
         {
@@ -11511,16 +11584,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemUnsealRequest = new SystemUnsealRequest(); // SystemUnsealRequest |  (optional) 
+            var systemUnsealRequest = new SystemUnsealRequest(); // SystemUnsealRequest | 
 
             try
             {
                 // Unseal the Vault.
-                apiInstance.UpdateSystemUnseal(systemUnsealRequest);
+                apiInstance.PostSysUnseal(systemUnsealRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemUnseal: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysUnseal: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11533,7 +11606,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemUnsealRequest** | [**SystemUnsealRequest**](SystemUnsealRequest.md)|  | [optional] 
+ **systemUnsealRequest** | [**SystemUnsealRequest**](SystemUnsealRequest.md)|  | 
 
 ### Return type
 
@@ -11556,9 +11629,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemwrappinglookup"></a>
-# **UpdateSystemWrappingLookup**
-> void UpdateSystemWrappingLookup (SystemWrappingLookupRequest systemWrappingLookupRequest = null)
+<a name="postsyswrappinglookup"></a>
+# **PostSysWrappingLookup**
+> void PostSysWrappingLookup (SystemWrappingLookupRequest systemWrappingLookupRequest)
 
 Look up wrapping properties for the given token.
 
@@ -11573,7 +11646,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemWrappingLookupExample
+    public class PostSysWrappingLookupExample
     {
         public static void Main()
         {
@@ -11583,16 +11656,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemWrappingLookupRequest = new SystemWrappingLookupRequest(); // SystemWrappingLookupRequest |  (optional) 
+            var systemWrappingLookupRequest = new SystemWrappingLookupRequest(); // SystemWrappingLookupRequest | 
 
             try
             {
                 // Look up wrapping properties for the given token.
-                apiInstance.UpdateSystemWrappingLookup(systemWrappingLookupRequest);
+                apiInstance.PostSysWrappingLookup(systemWrappingLookupRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemWrappingLookup: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysWrappingLookup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11605,7 +11678,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemWrappingLookupRequest** | [**SystemWrappingLookupRequest**](SystemWrappingLookupRequest.md)|  | [optional] 
+ **systemWrappingLookupRequest** | [**SystemWrappingLookupRequest**](SystemWrappingLookupRequest.md)|  | 
 
 ### Return type
 
@@ -11628,9 +11701,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemwrappingrewrap"></a>
-# **UpdateSystemWrappingRewrap**
-> void UpdateSystemWrappingRewrap (SystemWrappingRewrapRequest systemWrappingRewrapRequest = null)
+<a name="postsyswrappingrewrap"></a>
+# **PostSysWrappingRewrap**
+> void PostSysWrappingRewrap (SystemWrappingRewrapRequest systemWrappingRewrapRequest)
 
 Rotates a response-wrapped token.
 
@@ -11645,7 +11718,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemWrappingRewrapExample
+    public class PostSysWrappingRewrapExample
     {
         public static void Main()
         {
@@ -11655,16 +11728,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemWrappingRewrapRequest = new SystemWrappingRewrapRequest(); // SystemWrappingRewrapRequest |  (optional) 
+            var systemWrappingRewrapRequest = new SystemWrappingRewrapRequest(); // SystemWrappingRewrapRequest | 
 
             try
             {
                 // Rotates a response-wrapped token.
-                apiInstance.UpdateSystemWrappingRewrap(systemWrappingRewrapRequest);
+                apiInstance.PostSysWrappingRewrap(systemWrappingRewrapRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemWrappingRewrap: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysWrappingRewrap: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11677,7 +11750,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemWrappingRewrapRequest** | [**SystemWrappingRewrapRequest**](SystemWrappingRewrapRequest.md)|  | [optional] 
+ **systemWrappingRewrapRequest** | [**SystemWrappingRewrapRequest**](SystemWrappingRewrapRequest.md)|  | 
 
 ### Return type
 
@@ -11700,9 +11773,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemwrappingunwrap"></a>
-# **UpdateSystemWrappingUnwrap**
-> void UpdateSystemWrappingUnwrap (SystemWrappingUnwrapRequest systemWrappingUnwrapRequest = null)
+<a name="postsyswrappingunwrap"></a>
+# **PostSysWrappingUnwrap**
+> void PostSysWrappingUnwrap (SystemWrappingUnwrapRequest systemWrappingUnwrapRequest)
 
 Unwraps a response-wrapped token.
 
@@ -11717,7 +11790,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemWrappingUnwrapExample
+    public class PostSysWrappingUnwrapExample
     {
         public static void Main()
         {
@@ -11727,16 +11800,16 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var systemWrappingUnwrapRequest = new SystemWrappingUnwrapRequest(); // SystemWrappingUnwrapRequest |  (optional) 
+            var systemWrappingUnwrapRequest = new SystemWrappingUnwrapRequest(); // SystemWrappingUnwrapRequest | 
 
             try
             {
                 // Unwraps a response-wrapped token.
-                apiInstance.UpdateSystemWrappingUnwrap(systemWrappingUnwrapRequest);
+                apiInstance.PostSysWrappingUnwrap(systemWrappingUnwrapRequest);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemWrappingUnwrap: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysWrappingUnwrap: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -11749,7 +11822,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **systemWrappingUnwrapRequest** | [**SystemWrappingUnwrapRequest**](SystemWrappingUnwrapRequest.md)|  | [optional] 
+ **systemWrappingUnwrapRequest** | [**SystemWrappingUnwrapRequest**](SystemWrappingUnwrapRequest.md)|  | 
 
 ### Return type
 
@@ -11772,9 +11845,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesystemwrappingwrap"></a>
-# **UpdateSystemWrappingWrap**
-> void UpdateSystemWrappingWrap ()
+<a name="postsyswrappingwrap"></a>
+# **PostSysWrappingWrap**
+> void PostSysWrappingWrap ()
 
 Response-wraps an arbitrary JSON object.
 
@@ -11789,7 +11862,7 @@ using Vault.Model;
 
 namespace Example
 {
-    public class UpdateSystemWrappingWrapExample
+    public class PostSysWrappingWrapExample
     {
         public static void Main()
         {
@@ -11803,11 +11876,11 @@ namespace Example
             try
             {
                 // Response-wraps an arbitrary JSON object.
-                apiInstance.UpdateSystemWrappingWrap();
+                apiInstance.PostSysWrappingWrap();
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling System.UpdateSystemWrappingWrap: " + e.Message );
+                Debug.Print("Exception when calling System.PostSysWrappingWrap: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }

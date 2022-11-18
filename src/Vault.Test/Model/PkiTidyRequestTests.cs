@@ -57,6 +57,14 @@ namespace Vault.Test.Model
 
 
         /// <summary>
+        /// Test the property 'IssuerSafetyBuffer'
+        /// </summary>
+        [Fact]
+        public void IssuerSafetyBufferTest()
+        {
+            // TODO unit test for the property 'IssuerSafetyBuffer'
+        }
+        /// <summary>
         /// Test the property 'PauseDuration'
         /// </summary>
         [Fact]
@@ -79,6 +87,14 @@ namespace Vault.Test.Model
         public void TidyCertStoreTest()
         {
             // TODO unit test for the property 'TidyCertStore'
+        }
+        /// <summary>
+        /// Test the property 'TidyExpiredIssuers'
+        /// </summary>
+        [Fact]
+        public void TidyExpiredIssuersTest()
+        {
+            // TODO unit test for the property 'TidyExpiredIssuers'
         }
         /// <summary>
         /// Test the property 'TidyRevocationList'
