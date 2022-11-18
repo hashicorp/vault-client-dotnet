@@ -194,13 +194,13 @@ All secrets and auth calls have an optional mount path parameter that can be spe
 otherwise we will use a default mount path.
 
 ```csharp
-VaultResponse<Object> resp = await vaultClient.Secrets.GetSecretPathAsync("path",secretMountPath: "myCustomMountPath");
+VaultResponse<Object> resp = await vaultClient.Secrets.GetSecretPathAsync("path", secretMountPath: "myCustomMountPath");
 Console.WriteLine(resp.Data);
 ```
 
 All calls have both an async and synchronous implementation. E.g.
 
-```chsarp
+```csharp
 VaultResponse<Object> respAsync = await vaultClient.Secrets.GetSecretPathAsync("path");
 VaultResponse<Object> respSync = vaultClient.Secrets.GetSecretPath("path");
 ```
