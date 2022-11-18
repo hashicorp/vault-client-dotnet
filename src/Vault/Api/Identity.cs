@@ -552,7 +552,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="allowedClientId">Filters the list of OIDC providers to those that allow the given client ID in their set of allowed_client_ids. (optional, default to &quot;&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetIdentityOidcProvider(string list, string allowedClientId = default(string));
+        VaultResponse<Object> GetIdentityOidcProvider(string list, string allowedClientId = "");
         /// <summary>
         /// 
         /// </summary>
@@ -1737,7 +1737,7 @@ namespace Vault.Api
         /// <param name="allowedClientId">Filters the list of OIDC providers to those that allow the given client ID in their set of allowed_client_ids. (optional, default to &quot;&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetIdentityOidcProviderAsync(string list, string allowedClientId = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetIdentityOidcProviderAsync(string list, string allowedClientId = "", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -6922,7 +6922,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="allowedClientId">Filters the list of OIDC providers to those that allow the given client ID in their set of allowed_client_ids. (optional, default to &quot;&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetIdentityOidcProvider(string list, string allowedClientId = default(string))
+        public VaultResponse<Object> GetIdentityOidcProvider(string list, string allowedClientId = "")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -6970,7 +6970,7 @@ namespace Vault.Api
         /// <param name="allowedClientId">Filters the list of OIDC providers to those that allow the given client ID in their set of allowed_client_ids. (optional, default to &quot;&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetIdentityOidcProviderAsync(string list, string allowedClientId = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetIdentityOidcProviderAsync(string list, string allowedClientId = "", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)

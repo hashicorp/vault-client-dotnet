@@ -190,21 +190,19 @@ vaultClient.ClearCustomHeaders();
 ### Reading a KV Secret
 To call secrets endpoints, simply use the `VaultClient.Secrets` object, as shown below.
 
-```csharp
-// Read a secret
-VaultResponse<Object> resp = await vaultClient.Secrets.GetKvPathAsync("path");
+All secrets and auth calls have an optional mount path parameter that can be specified,
+otherwise we will use a default mount path.
 
-Console.Writeline(resp.Data);
+```csharp
+VaultResponse<Object> resp = await vaultClient.Secrets.GetSecretPathAsync("path", secretMountPath: "myCustomMountPath");
+Console.WriteLine(resp.Data);
 ```
 
-_**Note**_: we are using the generated endpoints for reading and writing `kv v2` secrets.
-These methods are hardcoded to use `/secret` as the mount path. In the future, we plan to 
-introduce overriding the default mountpath in each call.
-
 All calls have both an async and synchronous implementation. E.g.
-```chsarp
-VaultResponse<Object> respAsync = await vaultClient.Secrets.GetKvPathAsync("path");
-VaultResponse<Object> respSync = vaultClient.Secrets.GetKvPath("path");
+
+```csharp
+VaultResponse<Object> respAsync = await vaultClient.Secrets.GetSecretPathAsync("path");
+VaultResponse<Object> respSync = vaultClient.Secrets.GetSecretPath("path");
 ```
 
 <a name="documentation-for-api-endpoints"></a>

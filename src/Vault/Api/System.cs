@@ -585,9 +585,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
+        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional, default to &quot;json&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetSysMetrics(string format = default(string));
+        VaultResponse<Object> GetSysMetrics(string format = "json");
         /// <summary>
         /// 
         /// </summary>
@@ -596,9 +596,9 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
-        /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
+        /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional, default to &quot;info&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetSysMonitor(string logFormat = default(string), string logLevel = default(string));
+        VaultResponse<Object> GetSysMonitor(string logFormat = "standard", string logLevel = "info");
         /// <summary>
         /// List the currently mounted backends.
         /// </summary>
@@ -726,9 +726,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetSysPolicy(string list = default(string));
+        VaultResponse<Object> GetSysPolicy(string list = "false");
         /// <summary>
         /// Retrieve the policy body for the named policy.
         /// </summary>
@@ -874,9 +874,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetSysRaw(string list = default(string));
+        VaultResponse<Object> GetSysRaw(string list = "false");
         /// <summary>
         /// Read the value of the key at the given path.
         /// </summary>
@@ -885,9 +885,9 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path"></param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetSysRawPath(string path, string list = default(string));
+        VaultResponse<Object> GetSysRawPath(string path, string list = "false");
         /// <summary>
         /// Return the backup copy of PGP-encrypted unseal keys.
         /// </summary>
@@ -2333,10 +2333,10 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
+        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional, default to &quot;json&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetSysMetricsAsync(string format = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetSysMetricsAsync(string format = "json", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -2346,10 +2346,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
-        /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
+        /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional, default to &quot;info&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetSysMonitorAsync(string logFormat = default(string), string logLevel = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetSysMonitorAsync(string logFormat = "standard", string logLevel = "info", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// List the currently mounted backends.
@@ -2502,10 +2502,10 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetSysPolicyAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetSysPolicyAsync(string list = "false", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Retrieve the policy body for the named policy.
@@ -2682,10 +2682,10 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetSysRawAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetSysRawAsync(string list = "false", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Read the value of the key at the given path.
@@ -2695,10 +2695,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path"></param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetSysRawPathAsync(string path, string list = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetSysRawPathAsync(string path, string list = "false", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Return the backup copy of PGP-encrypted unseal keys.
@@ -8333,9 +8333,9 @@ namespace Vault.Api
         /// Export the metrics aggregated for telemetry purpose. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
+        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional, default to &quot;json&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetSysMetrics(string format = default(string))
+        public VaultResponse<Object> GetSysMetrics(string format = "json")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8374,10 +8374,10 @@ namespace Vault.Api
         /// Export the metrics aggregated for telemetry purpose. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
+        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional, default to &quot;json&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetSysMetricsAsync(string format = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetSysMetricsAsync(string format = "json", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8418,9 +8418,9 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
-        /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
+        /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional, default to &quot;info&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetSysMonitor(string logFormat = default(string), string logLevel = default(string))
+        public VaultResponse<Object> GetSysMonitor(string logFormat = "standard", string logLevel = "info")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8464,10 +8464,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
-        /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
+        /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional, default to &quot;info&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetSysMonitorAsync(string logFormat = default(string), string logLevel = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetSysMonitorAsync(string logFormat = "standard", string logLevel = "info", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9543,9 +9543,9 @@ namespace Vault.Api
         /// List the configured access control policies. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetSysPolicy(string list = default(string))
+        public VaultResponse<Object> GetSysPolicy(string list = "false")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9584,10 +9584,10 @@ namespace Vault.Api
         /// List the configured access control policies. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetSysPolicyAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetSysPolicyAsync(string list = "false", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10773,9 +10773,9 @@ namespace Vault.Api
         /// Read the value of the key at the given path. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetSysRaw(string list = default(string))
+        public VaultResponse<Object> GetSysRaw(string list = "false")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10814,10 +10814,10 @@ namespace Vault.Api
         /// Read the value of the key at the given path. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetSysRawAsync(string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetSysRawAsync(string list = "false", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10858,9 +10858,9 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path"></param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetSysRawPath(string path, string list = default(string))
+        public VaultResponse<Object> GetSysRawPath(string path, string list = "false")
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -10905,10 +10905,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path"></param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetSysRawPathAsync(string path, string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetSysRawPathAsync(string path, string list = "false", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)

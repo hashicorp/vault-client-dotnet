@@ -4317,7 +4317,7 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var format = "format_example";  // string | Format to export metrics into. Currently accepts only \"prometheus\". (optional) 
+            var format = "\"json\"";  // string | Format to export metrics into. Currently accepts only \"prometheus\". (optional)  (default to "json")
 
             try
             {
@@ -4339,7 +4339,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **string**| Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. | [optional] 
+ **format** | **string**| Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. | [optional] [default to &quot;json&quot;]
 
 ### Return type
 
@@ -4390,7 +4390,7 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var logFormat = "\"standard\"";  // string | Output format of logs. Supported values are \"standard\" and \"json\". The default is \"standard\". (optional)  (default to "standard")
-            var logLevel = "logLevel_example";  // string | Log level to view system logs at. Currently supported values are \"trace\", \"debug\", \"info\", \"warn\", \"error\". (optional) 
+            var logLevel = "\"info\"";  // string | Log level to view system logs at. Currently supported values are \"trace\", \"debug\", \"info\", \"warn\", \"error\". (optional)  (default to "info")
 
             try
             {
@@ -4412,7 +4412,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **logFormat** | **string**| Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. | [optional] [default to &quot;standard&quot;]
- **logLevel** | **string**| Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. | [optional] 
+ **logLevel** | **string**| Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. | [optional] [default to &quot;info&quot;]
 
 ### Return type
 
@@ -5322,7 +5322,7 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var list = "list_example";  // string | Return a list if `true` (optional) 
+            var list = "\"false\"";  // string | Return a list if `true` (optional)  (default to "false")
 
             try
             {
@@ -5344,7 +5344,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
+ **list** | **string**| Return a list if &#x60;true&#x60; | [optional] [default to &quot;false&quot;]
 
 ### Return type
 
@@ -6445,7 +6445,7 @@ namespace Example
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
-            var list = "list_example";  // string | Return a list if `true` (optional) 
+            var list = "\"false\"";  // string | Return a list if `true` (optional)  (default to "false")
 
             try
             {
@@ -6467,7 +6467,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
+ **list** | **string**| Return a list if &#x60;true&#x60; | [optional] [default to &quot;false&quot;]
 
 ### Return type
 
@@ -6518,7 +6518,7 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new System(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | 
-            var list = "list_example";  // string | Return a list if `true` (optional) 
+            var list = "\"false\"";  // string | Return a list if `true` (optional)  (default to "false")
 
             try
             {
@@ -6541,7 +6541,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **string**|  | 
- **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
+ **list** | **string**| Return a list if &#x60;true&#x60; | [optional] [default to &quot;false&quot;]
 
 ### Return type
 

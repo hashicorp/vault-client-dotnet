@@ -33,7 +33,7 @@ namespace Vault.Api
         /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthAlicloudRoleRole(string role, string alicloudMountPath = default(string));
+        VaultResponse<Object> DeleteAuthAlicloudRoleRole(string role, string alicloudMountPath = "alicloud");
         /// <summary>
         /// Register an role with the backend.
         /// </summary>
@@ -44,7 +44,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthApproleRoleRoleName(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> DeleteAuthApproleRoleRoleName(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Impose secret_id to be presented during login using this role.
         /// </summary>
@@ -55,7 +55,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthApproleRoleRoleNameBindSecretId(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> DeleteAuthApproleRoleRoleNameBindSecretId(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
         /// </summary>
@@ -66,7 +66,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthApproleRoleRoleNameBoundCidrList(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> DeleteAuthApproleRoleRoleNameBoundCidrList(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Updates the value of &#39;period&#39; on the role
         /// </summary>
@@ -77,7 +77,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthApproleRoleRoleNamePeriod(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> DeleteAuthApproleRoleRoleNamePeriod(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Policies of the role.
         /// </summary>
@@ -88,7 +88,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthApproleRoleRoleNamePolicies(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> DeleteAuthApproleRoleRoleNamePolicies(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// 
         /// </summary>
@@ -99,7 +99,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroy(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroy(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
         /// </summary>
@@ -110,7 +110,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Invalidate an issued secret_id
         /// </summary>
@@ -121,7 +121,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdDestroy(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdDestroy(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Use limit of the SecretID generated against the role.
         /// </summary>
@@ -132,7 +132,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdNumUses(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdNumUses(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Duration in seconds of the SecretID generated against the role.
         /// </summary>
@@ -143,7 +143,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdTtl(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdTtl(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
         /// </summary>
@@ -154,7 +154,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthApproleRoleRoleNameTokenBoundCidrs(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> DeleteAuthApproleRoleRoleNameTokenBoundCidrs(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
         /// </summary>
@@ -165,7 +165,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthApproleRoleRoleNameTokenMaxTtl(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> DeleteAuthApproleRoleRoleNameTokenMaxTtl(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Number of times issued tokens can be used
         /// </summary>
@@ -176,7 +176,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthApproleRoleRoleNameTokenNumUses(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> DeleteAuthApproleRoleRoleNameTokenNumUses(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
         /// </summary>
@@ -187,7 +187,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthApproleRoleRoleNameTokenTtl(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> DeleteAuthApproleRoleRoleNameTokenTtl(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// 
         /// </summary>
@@ -198,7 +198,7 @@ namespace Vault.Api
         /// <param name="certName">Name of the certificate.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthAwsConfigCertificateCertName(string certName, string awsMountPath = default(string));
+        VaultResponse<Object> DeleteAuthAwsConfigCertificateCertName(string certName, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -208,7 +208,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthAwsConfigClient(string awsMountPath = default(string));
+        VaultResponse<Object> DeleteAuthAwsConfigClient(string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -219,7 +219,7 @@ namespace Vault.Api
         /// <param name="accountId">AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthAwsConfigStsAccountId(string accountId, string awsMountPath = default(string));
+        VaultResponse<Object> DeleteAuthAwsConfigStsAccountId(string accountId, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -229,7 +229,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthAwsConfigTidyIdentityAccesslist(string awsMountPath = default(string));
+        VaultResponse<Object> DeleteAuthAwsConfigTidyIdentityAccesslist(string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -239,7 +239,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthAwsConfigTidyIdentityWhitelist(string awsMountPath = default(string));
+        VaultResponse<Object> DeleteAuthAwsConfigTidyIdentityWhitelist(string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -249,7 +249,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthAwsConfigTidyRoletagBlacklist(string awsMountPath = default(string));
+        VaultResponse<Object> DeleteAuthAwsConfigTidyRoletagBlacklist(string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -259,18 +259,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthAwsConfigTidyRoletagDenylist(string awsMountPath = default(string));
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
-        /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthAwsIdentityAccesslistInstanceId(string instanceId, string awsMountPath = default(string));
+        VaultResponse<Object> DeleteAuthAwsConfigTidyRoletagDenylist(string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -281,7 +270,18 @@ namespace Vault.Api
         /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthAwsIdentityWhitelistInstanceId(string instanceId, string awsMountPath = default(string));
+        VaultResponse<Object> DeleteAuthAwsIdentityAccesslistInstanceId(string instanceId, string awsMountPath = "aws");
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
+        /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        VaultResponse<Object> DeleteAuthAwsIdentityWhitelistInstanceId(string instanceId, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -292,7 +292,7 @@ namespace Vault.Api
         /// <param name="role">Name of the role.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthAwsRoleRole(string role, string awsMountPath = default(string));
+        VaultResponse<Object> DeleteAuthAwsRoleRole(string role, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -303,7 +303,7 @@ namespace Vault.Api
         /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthAwsRoletagBlacklistRoleTag(string roleTag, string awsMountPath = default(string));
+        VaultResponse<Object> DeleteAuthAwsRoletagBlacklistRoleTag(string roleTag, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -314,7 +314,7 @@ namespace Vault.Api
         /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthAwsRoletagDenylistRoleTag(string roleTag, string awsMountPath = default(string));
+        VaultResponse<Object> DeleteAuthAwsRoletagDenylistRoleTag(string roleTag, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -324,7 +324,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthAzureConfig(string azureMountPath = default(string));
+        VaultResponse<Object> DeleteAuthAzureConfig(string azureMountPath = "azure");
         /// <summary>
         /// 
         /// </summary>
@@ -335,7 +335,7 @@ namespace Vault.Api
         /// <param name="name">Name of the role.</param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthAzureRoleName(string name, string azureMountPath = default(string));
+        VaultResponse<Object> DeleteAuthAzureRoleName(string name, string azureMountPath = "azure");
         /// <summary>
         /// Manage trusted certificates used for authentication.
         /// </summary>
@@ -346,7 +346,7 @@ namespace Vault.Api
         /// <param name="name">The name of the certificate</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthCertCertsName(string name, string certMountPath = default(string));
+        VaultResponse<Object> DeleteAuthCertCertsName(string name, string certMountPath = "cert");
         /// <summary>
         /// Manage Certificate Revocation Lists checked during authentication.
         /// </summary>
@@ -357,7 +357,7 @@ namespace Vault.Api
         /// <param name="name">The name of the certificate</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthCertCrlsName(string name, string certMountPath = default(string));
+        VaultResponse<Object> DeleteAuthCertCrlsName(string name, string certMountPath = "cert");
         /// <summary>
         /// 
         /// </summary>
@@ -367,7 +367,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthCfConfig(string cfMountPath = default(string));
+        VaultResponse<Object> DeleteAuthCfConfig(string cfMountPath = "cf");
         /// <summary>
         /// 
         /// </summary>
@@ -378,7 +378,7 @@ namespace Vault.Api
         /// <param name="role">The name of the role.</param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthCfRolesRole(string role, string cfMountPath = default(string));
+        VaultResponse<Object> DeleteAuthCfRolesRole(string role, string cfMountPath = "cf");
         /// <summary>
         /// Create a GCP role with associated policies and required attributes.
         /// </summary>
@@ -389,7 +389,7 @@ namespace Vault.Api
         /// <param name="name">Name of the role.</param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthGcpRoleName(string name, string gcpMountPath = default(string));
+        VaultResponse<Object> DeleteAuthGcpRoleName(string name, string gcpMountPath = "gcp");
         /// <summary>
         /// Read/write/delete a single teams mapping
         /// </summary>
@@ -400,7 +400,7 @@ namespace Vault.Api
         /// <param name="key">Key for the teams mapping</param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthGithubMapTeamsKey(string key, string githubMountPath = default(string));
+        VaultResponse<Object> DeleteAuthGithubMapTeamsKey(string key, string githubMountPath = "github");
         /// <summary>
         /// Read/write/delete a single users mapping
         /// </summary>
@@ -411,7 +411,7 @@ namespace Vault.Api
         /// <param name="key">Key for the users mapping</param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthGithubMapUsersKey(string key, string githubMountPath = default(string));
+        VaultResponse<Object> DeleteAuthGithubMapUsersKey(string key, string githubMountPath = "github");
         /// <summary>
         /// Delete an existing role.
         /// </summary>
@@ -422,7 +422,7 @@ namespace Vault.Api
         /// <param name="name">Name of the role.</param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthJwtRoleName(string name, string jwtMountPath = default(string));
+        VaultResponse<Object> DeleteAuthJwtRoleName(string name, string jwtMountPath = "jwt");
         /// <summary>
         /// 
         /// </summary>
@@ -433,7 +433,7 @@ namespace Vault.Api
         /// <param name="name">Name of the LDAP group.</param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthKerberosGroupsName(string name, string kerberosMountPath = default(string));
+        VaultResponse<Object> DeleteAuthKerberosGroupsName(string name, string kerberosMountPath = "kerberos");
         /// <summary>
         /// Register an role with the backend.
         /// </summary>
@@ -444,7 +444,7 @@ namespace Vault.Api
         /// <param name="name">Name of the role.</param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthKubernetesRoleName(string name, string kubernetesMountPath = default(string));
+        VaultResponse<Object> DeleteAuthKubernetesRoleName(string name, string kubernetesMountPath = "kubernetes");
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
         /// </summary>
@@ -455,7 +455,7 @@ namespace Vault.Api
         /// <param name="name">Name of the LDAP group.</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthLdapGroupsName(string name, string ldapMountPath = default(string));
+        VaultResponse<Object> DeleteAuthLdapGroupsName(string name, string ldapMountPath = "ldap");
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -466,7 +466,7 @@ namespace Vault.Api
         /// <param name="name">Name of the LDAP user.</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthLdapUsersName(string name, string ldapMountPath = default(string));
+        VaultResponse<Object> DeleteAuthLdapUsersName(string name, string ldapMountPath = "ldap");
         /// <summary>
         /// Manages the configuration for the Vault Auth Plugin.
         /// </summary>
@@ -476,7 +476,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthOciConfig(string ociMountPath = default(string));
+        VaultResponse<Object> DeleteAuthOciConfig(string ociMountPath = "oci");
         /// <summary>
         /// Create a role and associate policies to it.
         /// </summary>
@@ -487,7 +487,7 @@ namespace Vault.Api
         /// <param name="role">Name of the role.</param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthOciRoleRole(string role, string ociMountPath = default(string));
+        VaultResponse<Object> DeleteAuthOciRoleRole(string role, string ociMountPath = "oci");
         /// <summary>
         /// Delete an existing role.
         /// </summary>
@@ -498,7 +498,7 @@ namespace Vault.Api
         /// <param name="name">Name of the role.</param>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthOidcRoleName(string name, string oidcMountPath = default(string));
+        VaultResponse<Object> DeleteAuthOidcRoleName(string name, string oidcMountPath = "oidc");
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -509,7 +509,7 @@ namespace Vault.Api
         /// <param name="name">Name of the Okta group.</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthOktaGroupsName(string name, string oktaMountPath = default(string));
+        VaultResponse<Object> DeleteAuthOktaGroupsName(string name, string oktaMountPath = "okta");
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
         /// </summary>
@@ -520,7 +520,7 @@ namespace Vault.Api
         /// <param name="name">Name of the user.</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthOktaUsersName(string name, string oktaMountPath = default(string));
+        VaultResponse<Object> DeleteAuthOktaUsersName(string name, string oktaMountPath = "okta");
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -531,7 +531,7 @@ namespace Vault.Api
         /// <param name="name">Name of the RADIUS user.</param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthRadiusUsersName(string name, string radiusMountPath = default(string));
+        VaultResponse<Object> DeleteAuthRadiusUsersName(string name, string radiusMountPath = "radius");
         /// <summary>
         /// 
         /// </summary>
@@ -542,7 +542,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthTokenRolesRoleName(string roleName, string tokenMountPath = default(string));
+        VaultResponse<Object> DeleteAuthTokenRolesRoleName(string roleName, string tokenMountPath = "token");
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -553,7 +553,7 @@ namespace Vault.Api
         /// <param name="username">Username for this user.</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> DeleteAuthUserpassUsersUsername(string username, string userpassMountPath = default(string));
+        VaultResponse<Object> DeleteAuthUserpassUsersUsername(string username, string userpassMountPath = "userpass");
         /// <summary>
         /// Lists all the roles that are registered with Vault.
         /// </summary>
@@ -564,7 +564,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAlicloudRole(string list, string alicloudMountPath = default(string));
+        VaultResponse<Object> GetAuthAlicloudRole(string list, string alicloudMountPath = "alicloud");
         /// <summary>
         /// Create a role and associate policies to it.
         /// </summary>
@@ -575,7 +575,7 @@ namespace Vault.Api
         /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAlicloudRoleRole(string role, string alicloudMountPath = default(string));
+        VaultResponse<Object> GetAuthAlicloudRoleRole(string role, string alicloudMountPath = "alicloud");
         /// <summary>
         /// Lists all the roles that are registered with Vault.
         /// </summary>
@@ -586,7 +586,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAlicloudRoles(string list, string alicloudMountPath = default(string));
+        VaultResponse<Object> GetAuthAlicloudRoles(string list, string alicloudMountPath = "alicloud");
         /// <summary>
         /// Lists all the roles registered with the backend.
         /// </summary>
@@ -597,7 +597,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthApproleRole(string list, string approleMountPath = default(string));
+        VaultResponse<Object> GetAuthApproleRole(string list, string approleMountPath = "approle");
         /// <summary>
         /// Register an role with the backend.
         /// </summary>
@@ -608,7 +608,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthApproleRoleRoleName(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> GetAuthApproleRoleRoleName(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Impose secret_id to be presented during login using this role.
         /// </summary>
@@ -619,7 +619,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthApproleRoleRoleNameBindSecretId(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> GetAuthApproleRoleRoleNameBindSecretId(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
         /// </summary>
@@ -630,7 +630,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthApproleRoleRoleNameBoundCidrList(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> GetAuthApproleRoleRoleNameBoundCidrList(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Enables cluster local secret IDs
         /// </summary>
@@ -641,7 +641,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthApproleRoleRoleNameLocalSecretIds(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> GetAuthApproleRoleRoleNameLocalSecretIds(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Updates the value of &#39;period&#39; on the role
         /// </summary>
@@ -652,7 +652,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthApproleRoleRoleNamePeriod(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> GetAuthApproleRoleRoleNamePeriod(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Policies of the role.
         /// </summary>
@@ -663,7 +663,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthApproleRoleRoleNamePolicies(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> GetAuthApproleRoleRoleNamePolicies(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Returns the &#39;role_id&#39; of the role.
         /// </summary>
@@ -674,7 +674,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthApproleRoleRoleNameRoleId(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> GetAuthApproleRoleRoleNameRoleId(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Generate a SecretID against this role.
         /// </summary>
@@ -686,7 +686,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthApproleRoleRoleNameSecretId(string roleName, string list, string approleMountPath = default(string));
+        VaultResponse<Object> GetAuthApproleRoleRoleNameSecretId(string roleName, string list, string approleMountPath = "approle");
         /// <summary>
         /// Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
         /// </summary>
@@ -697,7 +697,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthApproleRoleRoleNameSecretIdBoundCidrs(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> GetAuthApproleRoleRoleNameSecretIdBoundCidrs(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Use limit of the SecretID generated against the role.
         /// </summary>
@@ -708,7 +708,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthApproleRoleRoleNameSecretIdNumUses(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> GetAuthApproleRoleRoleNameSecretIdNumUses(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Duration in seconds of the SecretID generated against the role.
         /// </summary>
@@ -719,7 +719,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthApproleRoleRoleNameSecretIdTtl(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> GetAuthApproleRoleRoleNameSecretIdTtl(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
         /// </summary>
@@ -730,7 +730,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthApproleRoleRoleNameTokenBoundCidrs(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> GetAuthApproleRoleRoleNameTokenBoundCidrs(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
         /// </summary>
@@ -741,7 +741,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthApproleRoleRoleNameTokenMaxTtl(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> GetAuthApproleRoleRoleNameTokenMaxTtl(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Number of times issued tokens can be used
         /// </summary>
@@ -752,7 +752,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthApproleRoleRoleNameTokenNumUses(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> GetAuthApproleRoleRoleNameTokenNumUses(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
         /// </summary>
@@ -763,7 +763,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthApproleRoleRoleNameTokenTtl(string roleName, string approleMountPath = default(string));
+        VaultResponse<Object> GetAuthApproleRoleRoleNameTokenTtl(string roleName, string approleMountPath = "approle");
         /// <summary>
         /// 
         /// </summary>
@@ -774,7 +774,7 @@ namespace Vault.Api
         /// <param name="certName">Name of the certificate.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAwsConfigCertificateCertName(string certName, string awsMountPath = default(string));
+        VaultResponse<Object> GetAuthAwsConfigCertificateCertName(string certName, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -785,7 +785,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAwsConfigCertificates(string list, string awsMountPath = default(string));
+        VaultResponse<Object> GetAuthAwsConfigCertificates(string list, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -795,7 +795,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAwsConfigClient(string awsMountPath = default(string));
+        VaultResponse<Object> GetAuthAwsConfigClient(string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -805,7 +805,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAwsConfigIdentity(string awsMountPath = default(string));
+        VaultResponse<Object> GetAuthAwsConfigIdentity(string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -816,7 +816,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAwsConfigSts(string list, string awsMountPath = default(string));
+        VaultResponse<Object> GetAuthAwsConfigSts(string list, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -827,7 +827,7 @@ namespace Vault.Api
         /// <param name="accountId">AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAwsConfigStsAccountId(string accountId, string awsMountPath = default(string));
+        VaultResponse<Object> GetAuthAwsConfigStsAccountId(string accountId, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -837,7 +837,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAwsConfigTidyIdentityAccesslist(string awsMountPath = default(string));
+        VaultResponse<Object> GetAuthAwsConfigTidyIdentityAccesslist(string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -847,7 +847,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAwsConfigTidyIdentityWhitelist(string awsMountPath = default(string));
+        VaultResponse<Object> GetAuthAwsConfigTidyIdentityWhitelist(string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -857,7 +857,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAwsConfigTidyRoletagBlacklist(string awsMountPath = default(string));
+        VaultResponse<Object> GetAuthAwsConfigTidyRoletagBlacklist(string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -867,7 +867,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAwsConfigTidyRoletagDenylist(string awsMountPath = default(string));
+        VaultResponse<Object> GetAuthAwsConfigTidyRoletagDenylist(string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -878,7 +878,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAwsIdentityAccesslist(string list, string awsMountPath = default(string));
+        VaultResponse<Object> GetAuthAwsIdentityAccesslist(string list, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -889,7 +889,7 @@ namespace Vault.Api
         /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAwsIdentityAccesslistInstanceId(string instanceId, string awsMountPath = default(string));
+        VaultResponse<Object> GetAuthAwsIdentityAccesslistInstanceId(string instanceId, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -900,7 +900,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAwsIdentityWhitelist(string list, string awsMountPath = default(string));
+        VaultResponse<Object> GetAuthAwsIdentityWhitelist(string list, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -911,7 +911,7 @@ namespace Vault.Api
         /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAwsIdentityWhitelistInstanceId(string instanceId, string awsMountPath = default(string));
+        VaultResponse<Object> GetAuthAwsIdentityWhitelistInstanceId(string instanceId, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -922,7 +922,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAwsRole(string list, string awsMountPath = default(string));
+        VaultResponse<Object> GetAuthAwsRole(string list, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -933,7 +933,7 @@ namespace Vault.Api
         /// <param name="role">Name of the role.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAwsRoleRole(string role, string awsMountPath = default(string));
+        VaultResponse<Object> GetAuthAwsRoleRole(string role, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -944,7 +944,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAwsRoles(string list, string awsMountPath = default(string));
+        VaultResponse<Object> GetAuthAwsRoles(string list, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -955,7 +955,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAwsRoletagBlacklist(string list, string awsMountPath = default(string));
+        VaultResponse<Object> GetAuthAwsRoletagBlacklist(string list, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -966,7 +966,7 @@ namespace Vault.Api
         /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAwsRoletagBlacklistRoleTag(string roleTag, string awsMountPath = default(string));
+        VaultResponse<Object> GetAuthAwsRoletagBlacklistRoleTag(string roleTag, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -977,7 +977,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAwsRoletagDenylist(string list, string awsMountPath = default(string));
+        VaultResponse<Object> GetAuthAwsRoletagDenylist(string list, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -988,7 +988,7 @@ namespace Vault.Api
         /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAwsRoletagDenylistRoleTag(string roleTag, string awsMountPath = default(string));
+        VaultResponse<Object> GetAuthAwsRoletagDenylistRoleTag(string roleTag, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -998,7 +998,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAzureConfig(string azureMountPath = default(string));
+        VaultResponse<Object> GetAuthAzureConfig(string azureMountPath = "azure");
         /// <summary>
         /// 
         /// </summary>
@@ -1009,7 +1009,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAzureRole(string list, string azureMountPath = default(string));
+        VaultResponse<Object> GetAuthAzureRole(string list, string azureMountPath = "azure");
         /// <summary>
         /// 
         /// </summary>
@@ -1020,7 +1020,7 @@ namespace Vault.Api
         /// <param name="name">Name of the role.</param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthAzureRoleName(string name, string azureMountPath = default(string));
+        VaultResponse<Object> GetAuthAzureRoleName(string name, string azureMountPath = "azure");
         /// <summary>
         /// This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
         /// </summary>
@@ -1030,7 +1030,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="centrifyMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;centrify&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthCentrifyConfig(string centrifyMountPath = default(string));
+        VaultResponse<Object> GetAuthCentrifyConfig(string centrifyMountPath = "centrify");
         /// <summary>
         /// Manage trusted certificates used for authentication.
         /// </summary>
@@ -1041,7 +1041,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthCertCerts(string list, string certMountPath = default(string));
+        VaultResponse<Object> GetAuthCertCerts(string list, string certMountPath = "cert");
         /// <summary>
         /// Manage trusted certificates used for authentication.
         /// </summary>
@@ -1052,7 +1052,7 @@ namespace Vault.Api
         /// <param name="name">The name of the certificate</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthCertCertsName(string name, string certMountPath = default(string));
+        VaultResponse<Object> GetAuthCertCertsName(string name, string certMountPath = "cert");
         /// <summary>
         /// 
         /// </summary>
@@ -1062,7 +1062,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthCertConfig(string certMountPath = default(string));
+        VaultResponse<Object> GetAuthCertConfig(string certMountPath = "cert");
         /// <summary>
         /// Manage Certificate Revocation Lists checked during authentication.
         /// </summary>
@@ -1073,7 +1073,7 @@ namespace Vault.Api
         /// <param name="name">The name of the certificate</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthCertCrlsName(string name, string certMountPath = default(string));
+        VaultResponse<Object> GetAuthCertCrlsName(string name, string certMountPath = "cert");
         /// <summary>
         /// 
         /// </summary>
@@ -1083,7 +1083,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthCfConfig(string cfMountPath = default(string));
+        VaultResponse<Object> GetAuthCfConfig(string cfMountPath = "cf");
         /// <summary>
         /// 
         /// </summary>
@@ -1094,7 +1094,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthCfRoles(string list, string cfMountPath = default(string));
+        VaultResponse<Object> GetAuthCfRoles(string list, string cfMountPath = "cf");
         /// <summary>
         /// 
         /// </summary>
@@ -1105,7 +1105,7 @@ namespace Vault.Api
         /// <param name="role">The name of the role.</param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthCfRolesRole(string role, string cfMountPath = default(string));
+        VaultResponse<Object> GetAuthCfRolesRole(string role, string cfMountPath = "cf");
         /// <summary>
         /// Configure credentials used to query the GCP IAM API to verify authenticating service accounts
         /// </summary>
@@ -1115,7 +1115,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthGcpConfig(string gcpMountPath = default(string));
+        VaultResponse<Object> GetAuthGcpConfig(string gcpMountPath = "gcp");
         /// <summary>
         /// Lists all the roles that are registered with Vault.
         /// </summary>
@@ -1126,7 +1126,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthGcpRole(string list, string gcpMountPath = default(string));
+        VaultResponse<Object> GetAuthGcpRole(string list, string gcpMountPath = "gcp");
         /// <summary>
         /// Create a GCP role with associated policies and required attributes.
         /// </summary>
@@ -1137,7 +1137,7 @@ namespace Vault.Api
         /// <param name="name">Name of the role.</param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthGcpRoleName(string name, string gcpMountPath = default(string));
+        VaultResponse<Object> GetAuthGcpRoleName(string name, string gcpMountPath = "gcp");
         /// <summary>
         /// Lists all the roles that are registered with Vault.
         /// </summary>
@@ -1148,7 +1148,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthGcpRoles(string list, string gcpMountPath = default(string));
+        VaultResponse<Object> GetAuthGcpRoles(string list, string gcpMountPath = "gcp");
         /// <summary>
         /// 
         /// </summary>
@@ -1158,7 +1158,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthGithubConfig(string githubMountPath = default(string));
+        VaultResponse<Object> GetAuthGithubConfig(string githubMountPath = "github");
         /// <summary>
         /// Read mappings for teams
         /// </summary>
@@ -1167,9 +1167,9 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthGithubMapTeams(string githubMountPath = default(string), string list = default(string));
+        VaultResponse<Object> GetAuthGithubMapTeams(string githubMountPath = "github", string list = "false");
         /// <summary>
         /// Read/write/delete a single teams mapping
         /// </summary>
@@ -1180,7 +1180,7 @@ namespace Vault.Api
         /// <param name="key">Key for the teams mapping</param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthGithubMapTeamsKey(string key, string githubMountPath = default(string));
+        VaultResponse<Object> GetAuthGithubMapTeamsKey(string key, string githubMountPath = "github");
         /// <summary>
         /// Read mappings for users
         /// </summary>
@@ -1189,9 +1189,9 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthGithubMapUsers(string githubMountPath = default(string), string list = default(string));
+        VaultResponse<Object> GetAuthGithubMapUsers(string githubMountPath = "github", string list = "false");
         /// <summary>
         /// Read/write/delete a single users mapping
         /// </summary>
@@ -1202,7 +1202,7 @@ namespace Vault.Api
         /// <param name="key">Key for the users mapping</param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthGithubMapUsersKey(string key, string githubMountPath = default(string));
+        VaultResponse<Object> GetAuthGithubMapUsersKey(string key, string githubMountPath = "github");
         /// <summary>
         /// Read the current JWT authentication backend configuration.
         /// </summary>
@@ -1212,7 +1212,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthJwtConfig(string jwtMountPath = default(string));
+        VaultResponse<Object> GetAuthJwtConfig(string jwtMountPath = "jwt");
         /// <summary>
         /// Callback endpoint to complete an OIDC login.
         /// </summary>
@@ -1222,7 +1222,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthJwtOidcCallback(string jwtMountPath = default(string));
+        VaultResponse<Object> GetAuthJwtOidcCallback(string jwtMountPath = "jwt");
         /// <summary>
         /// Lists all the roles registered with the backend.
         /// </summary>
@@ -1233,7 +1233,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthJwtRole(string list, string jwtMountPath = default(string));
+        VaultResponse<Object> GetAuthJwtRole(string list, string jwtMountPath = "jwt");
         /// <summary>
         /// Read an existing role.
         /// </summary>
@@ -1244,7 +1244,7 @@ namespace Vault.Api
         /// <param name="name">Name of the role.</param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthJwtRoleName(string name, string jwtMountPath = default(string));
+        VaultResponse<Object> GetAuthJwtRoleName(string name, string jwtMountPath = "jwt");
         /// <summary>
         /// 
         /// </summary>
@@ -1254,7 +1254,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthKerberosConfig(string kerberosMountPath = default(string));
+        VaultResponse<Object> GetAuthKerberosConfig(string kerberosMountPath = "kerberos");
         /// <summary>
         /// 
         /// </summary>
@@ -1264,7 +1264,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthKerberosConfigLdap(string kerberosMountPath = default(string));
+        VaultResponse<Object> GetAuthKerberosConfigLdap(string kerberosMountPath = "kerberos");
         /// <summary>
         /// 
         /// </summary>
@@ -1275,7 +1275,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthKerberosGroups(string list, string kerberosMountPath = default(string));
+        VaultResponse<Object> GetAuthKerberosGroups(string list, string kerberosMountPath = "kerberos");
         /// <summary>
         /// 
         /// </summary>
@@ -1286,7 +1286,7 @@ namespace Vault.Api
         /// <param name="name">Name of the LDAP group.</param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthKerberosGroupsName(string name, string kerberosMountPath = default(string));
+        VaultResponse<Object> GetAuthKerberosGroupsName(string name, string kerberosMountPath = "kerberos");
         /// <summary>
         /// 
         /// </summary>
@@ -1296,7 +1296,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthKerberosLogin(string kerberosMountPath = default(string));
+        VaultResponse<Object> GetAuthKerberosLogin(string kerberosMountPath = "kerberos");
         /// <summary>
         /// Configures the JWT Public Key and Kubernetes API information.
         /// </summary>
@@ -1306,7 +1306,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthKubernetesConfig(string kubernetesMountPath = default(string));
+        VaultResponse<Object> GetAuthKubernetesConfig(string kubernetesMountPath = "kubernetes");
         /// <summary>
         /// Lists all the roles registered with the backend.
         /// </summary>
@@ -1317,7 +1317,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthKubernetesRole(string list, string kubernetesMountPath = default(string));
+        VaultResponse<Object> GetAuthKubernetesRole(string list, string kubernetesMountPath = "kubernetes");
         /// <summary>
         /// Register an role with the backend.
         /// </summary>
@@ -1328,7 +1328,7 @@ namespace Vault.Api
         /// <param name="name">Name of the role.</param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthKubernetesRoleName(string name, string kubernetesMountPath = default(string));
+        VaultResponse<Object> GetAuthKubernetesRoleName(string name, string kubernetesMountPath = "kubernetes");
         /// <summary>
         /// Configure the LDAP server to connect to, along with its options.
         /// </summary>
@@ -1338,7 +1338,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthLdapConfig(string ldapMountPath = default(string));
+        VaultResponse<Object> GetAuthLdapConfig(string ldapMountPath = "ldap");
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
         /// </summary>
@@ -1349,7 +1349,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthLdapGroups(string list, string ldapMountPath = default(string));
+        VaultResponse<Object> GetAuthLdapGroups(string list, string ldapMountPath = "ldap");
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
         /// </summary>
@@ -1360,7 +1360,7 @@ namespace Vault.Api
         /// <param name="name">Name of the LDAP group.</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthLdapGroupsName(string name, string ldapMountPath = default(string));
+        VaultResponse<Object> GetAuthLdapGroupsName(string name, string ldapMountPath = "ldap");
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -1371,7 +1371,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthLdapUsers(string list, string ldapMountPath = default(string));
+        VaultResponse<Object> GetAuthLdapUsers(string list, string ldapMountPath = "ldap");
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -1382,7 +1382,7 @@ namespace Vault.Api
         /// <param name="name">Name of the LDAP user.</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthLdapUsersName(string name, string ldapMountPath = default(string));
+        VaultResponse<Object> GetAuthLdapUsersName(string name, string ldapMountPath = "ldap");
         /// <summary>
         /// Manages the configuration for the Vault Auth Plugin.
         /// </summary>
@@ -1392,7 +1392,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthOciConfig(string ociMountPath = default(string));
+        VaultResponse<Object> GetAuthOciConfig(string ociMountPath = "oci");
         /// <summary>
         /// Lists all the roles that are registered with Vault.
         /// </summary>
@@ -1403,7 +1403,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthOciRole(string list, string ociMountPath = default(string));
+        VaultResponse<Object> GetAuthOciRole(string list, string ociMountPath = "oci");
         /// <summary>
         /// Create a role and associate policies to it.
         /// </summary>
@@ -1414,7 +1414,7 @@ namespace Vault.Api
         /// <param name="role">Name of the role.</param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthOciRoleRole(string role, string ociMountPath = default(string));
+        VaultResponse<Object> GetAuthOciRoleRole(string role, string ociMountPath = "oci");
         /// <summary>
         /// Read the current JWT authentication backend configuration.
         /// </summary>
@@ -1424,7 +1424,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthOidcConfig(string oidcMountPath = default(string));
+        VaultResponse<Object> GetAuthOidcConfig(string oidcMountPath = "oidc");
         /// <summary>
         /// Callback endpoint to complete an OIDC login.
         /// </summary>
@@ -1434,7 +1434,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthOidcOidcCallback(string oidcMountPath = default(string));
+        VaultResponse<Object> GetAuthOidcOidcCallback(string oidcMountPath = "oidc");
         /// <summary>
         /// Lists all the roles registered with the backend.
         /// </summary>
@@ -1445,7 +1445,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthOidcRole(string list, string oidcMountPath = default(string));
+        VaultResponse<Object> GetAuthOidcRole(string list, string oidcMountPath = "oidc");
         /// <summary>
         /// Read an existing role.
         /// </summary>
@@ -1456,7 +1456,7 @@ namespace Vault.Api
         /// <param name="name">Name of the role.</param>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthOidcRoleName(string name, string oidcMountPath = default(string));
+        VaultResponse<Object> GetAuthOidcRoleName(string name, string oidcMountPath = "oidc");
         /// <summary>
         /// This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
         /// </summary>
@@ -1466,7 +1466,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthOktaConfig(string oktaMountPath = default(string));
+        VaultResponse<Object> GetAuthOktaConfig(string oktaMountPath = "okta");
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -1477,7 +1477,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthOktaGroups(string list, string oktaMountPath = default(string));
+        VaultResponse<Object> GetAuthOktaGroups(string list, string oktaMountPath = "okta");
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -1488,7 +1488,7 @@ namespace Vault.Api
         /// <param name="name">Name of the Okta group.</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthOktaGroupsName(string name, string oktaMountPath = default(string));
+        VaultResponse<Object> GetAuthOktaGroupsName(string name, string oktaMountPath = "okta");
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
         /// </summary>
@@ -1499,7 +1499,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthOktaUsers(string list, string oktaMountPath = default(string));
+        VaultResponse<Object> GetAuthOktaUsers(string list, string oktaMountPath = "okta");
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
         /// </summary>
@@ -1510,7 +1510,7 @@ namespace Vault.Api
         /// <param name="name">Name of the user.</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthOktaUsersName(string name, string oktaMountPath = default(string));
+        VaultResponse<Object> GetAuthOktaUsersName(string name, string oktaMountPath = "okta");
         /// <summary>
         /// 
         /// </summary>
@@ -1521,7 +1521,7 @@ namespace Vault.Api
         /// <param name="nonce">Nonce provided during a login request to retrieve the number verification challenge for the matching request.</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthOktaVerifyNonce(string nonce, string oktaMountPath = default(string));
+        VaultResponse<Object> GetAuthOktaVerifyNonce(string nonce, string oktaMountPath = "okta");
         /// <summary>
         /// Configure the RADIUS server to connect to, along with its options.
         /// </summary>
@@ -1531,7 +1531,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthRadiusConfig(string radiusMountPath = default(string));
+        VaultResponse<Object> GetAuthRadiusConfig(string radiusMountPath = "radius");
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -1542,7 +1542,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthRadiusUsers(string list, string radiusMountPath = default(string));
+        VaultResponse<Object> GetAuthRadiusUsers(string list, string radiusMountPath = "radius");
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -1553,7 +1553,7 @@ namespace Vault.Api
         /// <param name="name">Name of the RADIUS user.</param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthRadiusUsersName(string name, string radiusMountPath = default(string));
+        VaultResponse<Object> GetAuthRadiusUsersName(string name, string radiusMountPath = "radius");
         /// <summary>
         /// List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires &#39;sudo&#39; capability in addition to &#39;list&#39;.
         /// </summary>
@@ -1564,7 +1564,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthTokenAccessors(string list, string tokenMountPath = default(string));
+        VaultResponse<Object> GetAuthTokenAccessors(string list, string tokenMountPath = "token");
         /// <summary>
         /// This endpoint will lookup a token and its properties.
         /// </summary>
@@ -1574,7 +1574,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthTokenLookup(string tokenMountPath = default(string));
+        VaultResponse<Object> GetAuthTokenLookup(string tokenMountPath = "token");
         /// <summary>
         /// This endpoint will lookup a token and its properties.
         /// </summary>
@@ -1584,7 +1584,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthTokenLookupSelf(string tokenMountPath = default(string));
+        VaultResponse<Object> GetAuthTokenLookupSelf(string tokenMountPath = "token");
         /// <summary>
         /// This endpoint lists configured roles.
         /// </summary>
@@ -1595,7 +1595,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthTokenRoles(string list, string tokenMountPath = default(string));
+        VaultResponse<Object> GetAuthTokenRoles(string list, string tokenMountPath = "token");
         /// <summary>
         /// 
         /// </summary>
@@ -1606,7 +1606,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthTokenRolesRoleName(string roleName, string tokenMountPath = default(string));
+        VaultResponse<Object> GetAuthTokenRolesRoleName(string roleName, string tokenMountPath = "token");
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -1617,7 +1617,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthUserpassUsers(string list, string userpassMountPath = default(string));
+        VaultResponse<Object> GetAuthUserpassUsers(string list, string userpassMountPath = "userpass");
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -1628,7 +1628,7 @@ namespace Vault.Api
         /// <param name="username">Username for this user.</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> GetAuthUserpassUsersUsername(string username, string userpassMountPath = default(string));
+        VaultResponse<Object> GetAuthUserpassUsersUsername(string username, string userpassMountPath = "userpass");
         /// <summary>
         /// Authenticates an RAM entity with Vault.
         /// </summary>
@@ -1639,7 +1639,7 @@ namespace Vault.Api
         /// <param name="alicloudLoginRequest"></param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthAlicloudLogin(AlicloudLoginRequest alicloudLoginRequest, string alicloudMountPath = default(string));
+        VaultResponse<Object> PostAuthAlicloudLogin(AlicloudLoginRequest alicloudLoginRequest, string alicloudMountPath = "alicloud");
         /// <summary>
         /// Create a role and associate policies to it.
         /// </summary>
@@ -1651,7 +1651,7 @@ namespace Vault.Api
         /// <param name="alicloudRoleRequest"></param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthAlicloudRoleRole(string role, AlicloudRoleRequest alicloudRoleRequest, string alicloudMountPath = default(string));
+        VaultResponse<Object> PostAuthAlicloudRoleRole(string role, AlicloudRoleRequest alicloudRoleRequest, string alicloudMountPath = "alicloud");
         /// <summary>
         /// 
         /// </summary>
@@ -1662,7 +1662,7 @@ namespace Vault.Api
         /// <param name="approleLoginRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthApproleLogin(ApproleLoginRequest approleLoginRequest, string approleMountPath = default(string));
+        VaultResponse<Object> PostAuthApproleLogin(ApproleLoginRequest approleLoginRequest, string approleMountPath = "approle");
         /// <summary>
         /// Register an role with the backend.
         /// </summary>
@@ -1674,7 +1674,7 @@ namespace Vault.Api
         /// <param name="approleRoleRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthApproleRoleRoleName(string roleName, ApproleRoleRequest approleRoleRequest, string approleMountPath = default(string));
+        VaultResponse<Object> PostAuthApproleRoleRoleName(string roleName, ApproleRoleRequest approleRoleRequest, string approleMountPath = "approle");
         /// <summary>
         /// Impose secret_id to be presented during login using this role.
         /// </summary>
@@ -1686,7 +1686,7 @@ namespace Vault.Api
         /// <param name="approleRoleBindSecretIdRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthApproleRoleRoleNameBindSecretId(string roleName, ApproleRoleBindSecretIdRequest approleRoleBindSecretIdRequest, string approleMountPath = default(string));
+        VaultResponse<Object> PostAuthApproleRoleRoleNameBindSecretId(string roleName, ApproleRoleBindSecretIdRequest approleRoleBindSecretIdRequest, string approleMountPath = "approle");
         /// <summary>
         /// Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
         /// </summary>
@@ -1698,7 +1698,7 @@ namespace Vault.Api
         /// <param name="approleRoleBoundCidrListRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthApproleRoleRoleNameBoundCidrList(string roleName, ApproleRoleBoundCidrListRequest approleRoleBoundCidrListRequest, string approleMountPath = default(string));
+        VaultResponse<Object> PostAuthApproleRoleRoleNameBoundCidrList(string roleName, ApproleRoleBoundCidrListRequest approleRoleBoundCidrListRequest, string approleMountPath = "approle");
         /// <summary>
         /// Assign a SecretID of choice against the role.
         /// </summary>
@@ -1710,7 +1710,7 @@ namespace Vault.Api
         /// <param name="approleRoleCustomSecretIdRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthApproleRoleRoleNameCustomSecretId(string roleName, ApproleRoleCustomSecretIdRequest approleRoleCustomSecretIdRequest, string approleMountPath = default(string));
+        VaultResponse<Object> PostAuthApproleRoleRoleNameCustomSecretId(string roleName, ApproleRoleCustomSecretIdRequest approleRoleCustomSecretIdRequest, string approleMountPath = "approle");
         /// <summary>
         /// Updates the value of &#39;period&#39; on the role
         /// </summary>
@@ -1722,7 +1722,7 @@ namespace Vault.Api
         /// <param name="approleRolePeriodRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthApproleRoleRoleNamePeriod(string roleName, ApproleRolePeriodRequest approleRolePeriodRequest, string approleMountPath = default(string));
+        VaultResponse<Object> PostAuthApproleRoleRoleNamePeriod(string roleName, ApproleRolePeriodRequest approleRolePeriodRequest, string approleMountPath = "approle");
         /// <summary>
         /// Policies of the role.
         /// </summary>
@@ -1734,7 +1734,7 @@ namespace Vault.Api
         /// <param name="approleRolePoliciesRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthApproleRoleRoleNamePolicies(string roleName, ApproleRolePoliciesRequest approleRolePoliciesRequest, string approleMountPath = default(string));
+        VaultResponse<Object> PostAuthApproleRoleRoleNamePolicies(string roleName, ApproleRolePoliciesRequest approleRolePoliciesRequest, string approleMountPath = "approle");
         /// <summary>
         /// Returns the &#39;role_id&#39; of the role.
         /// </summary>
@@ -1746,7 +1746,7 @@ namespace Vault.Api
         /// <param name="approleRoleRoleIdRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthApproleRoleRoleNameRoleId(string roleName, ApproleRoleRoleIdRequest approleRoleRoleIdRequest, string approleMountPath = default(string));
+        VaultResponse<Object> PostAuthApproleRoleRoleNameRoleId(string roleName, ApproleRoleRoleIdRequest approleRoleRoleIdRequest, string approleMountPath = "approle");
         /// <summary>
         /// Generate a SecretID against this role.
         /// </summary>
@@ -1758,7 +1758,7 @@ namespace Vault.Api
         /// <param name="approleRoleSecretIdRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthApproleRoleRoleNameSecretId(string roleName, ApproleRoleSecretIdRequest approleRoleSecretIdRequest, string approleMountPath = default(string));
+        VaultResponse<Object> PostAuthApproleRoleRoleNameSecretId(string roleName, ApproleRoleSecretIdRequest approleRoleSecretIdRequest, string approleMountPath = "approle");
         /// <summary>
         /// 
         /// </summary>
@@ -1770,7 +1770,7 @@ namespace Vault.Api
         /// <param name="approleRoleSecretIdAccessorDestroyRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdAccessorDestroy(string roleName, ApproleRoleSecretIdAccessorDestroyRequest approleRoleSecretIdAccessorDestroyRequest, string approleMountPath = default(string));
+        VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdAccessorDestroy(string roleName, ApproleRoleSecretIdAccessorDestroyRequest approleRoleSecretIdAccessorDestroyRequest, string approleMountPath = "approle");
         /// <summary>
         /// 
         /// </summary>
@@ -1782,7 +1782,7 @@ namespace Vault.Api
         /// <param name="approleRoleSecretIdAccessorLookupRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdAccessorLookup(string roleName, ApproleRoleSecretIdAccessorLookupRequest approleRoleSecretIdAccessorLookupRequest, string approleMountPath = default(string));
+        VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdAccessorLookup(string roleName, ApproleRoleSecretIdAccessorLookupRequest approleRoleSecretIdAccessorLookupRequest, string approleMountPath = "approle");
         /// <summary>
         /// Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
         /// </summary>
@@ -1794,7 +1794,7 @@ namespace Vault.Api
         /// <param name="approleRoleSecretIdBoundCidrsRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdBoundCidrs(string roleName, ApproleRoleSecretIdBoundCidrsRequest approleRoleSecretIdBoundCidrsRequest, string approleMountPath = default(string));
+        VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdBoundCidrs(string roleName, ApproleRoleSecretIdBoundCidrsRequest approleRoleSecretIdBoundCidrsRequest, string approleMountPath = "approle");
         /// <summary>
         /// Invalidate an issued secret_id
         /// </summary>
@@ -1806,7 +1806,7 @@ namespace Vault.Api
         /// <param name="approleRoleSecretIdDestroyRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdDestroy(string roleName, ApproleRoleSecretIdDestroyRequest approleRoleSecretIdDestroyRequest, string approleMountPath = default(string));
+        VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdDestroy(string roleName, ApproleRoleSecretIdDestroyRequest approleRoleSecretIdDestroyRequest, string approleMountPath = "approle");
         /// <summary>
         /// Read the properties of an issued secret_id
         /// </summary>
@@ -1818,7 +1818,7 @@ namespace Vault.Api
         /// <param name="approleRoleSecretIdLookupRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdLookup(string roleName, ApproleRoleSecretIdLookupRequest approleRoleSecretIdLookupRequest, string approleMountPath = default(string));
+        VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdLookup(string roleName, ApproleRoleSecretIdLookupRequest approleRoleSecretIdLookupRequest, string approleMountPath = "approle");
         /// <summary>
         /// Use limit of the SecretID generated against the role.
         /// </summary>
@@ -1830,7 +1830,7 @@ namespace Vault.Api
         /// <param name="approleRoleSecretIdNumUsesRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdNumUses(string roleName, ApproleRoleSecretIdNumUsesRequest approleRoleSecretIdNumUsesRequest, string approleMountPath = default(string));
+        VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdNumUses(string roleName, ApproleRoleSecretIdNumUsesRequest approleRoleSecretIdNumUsesRequest, string approleMountPath = "approle");
         /// <summary>
         /// Duration in seconds of the SecretID generated against the role.
         /// </summary>
@@ -1842,7 +1842,7 @@ namespace Vault.Api
         /// <param name="approleRoleSecretIdTtlRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdTtl(string roleName, ApproleRoleSecretIdTtlRequest approleRoleSecretIdTtlRequest, string approleMountPath = default(string));
+        VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdTtl(string roleName, ApproleRoleSecretIdTtlRequest approleRoleSecretIdTtlRequest, string approleMountPath = "approle");
         /// <summary>
         /// Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
         /// </summary>
@@ -1854,7 +1854,7 @@ namespace Vault.Api
         /// <param name="approleRoleTokenBoundCidrsRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthApproleRoleRoleNameTokenBoundCidrs(string roleName, ApproleRoleTokenBoundCidrsRequest approleRoleTokenBoundCidrsRequest, string approleMountPath = default(string));
+        VaultResponse<Object> PostAuthApproleRoleRoleNameTokenBoundCidrs(string roleName, ApproleRoleTokenBoundCidrsRequest approleRoleTokenBoundCidrsRequest, string approleMountPath = "approle");
         /// <summary>
         /// Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
         /// </summary>
@@ -1866,7 +1866,7 @@ namespace Vault.Api
         /// <param name="approleRoleTokenMaxTtlRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthApproleRoleRoleNameTokenMaxTtl(string roleName, ApproleRoleTokenMaxTtlRequest approleRoleTokenMaxTtlRequest, string approleMountPath = default(string));
+        VaultResponse<Object> PostAuthApproleRoleRoleNameTokenMaxTtl(string roleName, ApproleRoleTokenMaxTtlRequest approleRoleTokenMaxTtlRequest, string approleMountPath = "approle");
         /// <summary>
         /// Number of times issued tokens can be used
         /// </summary>
@@ -1878,7 +1878,7 @@ namespace Vault.Api
         /// <param name="approleRoleTokenNumUsesRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthApproleRoleRoleNameTokenNumUses(string roleName, ApproleRoleTokenNumUsesRequest approleRoleTokenNumUsesRequest, string approleMountPath = default(string));
+        VaultResponse<Object> PostAuthApproleRoleRoleNameTokenNumUses(string roleName, ApproleRoleTokenNumUsesRequest approleRoleTokenNumUsesRequest, string approleMountPath = "approle");
         /// <summary>
         /// Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
         /// </summary>
@@ -1890,7 +1890,7 @@ namespace Vault.Api
         /// <param name="approleRoleTokenTtlRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthApproleRoleRoleNameTokenTtl(string roleName, ApproleRoleTokenTtlRequest approleRoleTokenTtlRequest, string approleMountPath = default(string));
+        VaultResponse<Object> PostAuthApproleRoleRoleNameTokenTtl(string roleName, ApproleRoleTokenTtlRequest approleRoleTokenTtlRequest, string approleMountPath = "approle");
         /// <summary>
         /// Trigger the clean-up of expired SecretID entries.
         /// </summary>
@@ -1900,7 +1900,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthApproleTidySecretId(string approleMountPath = default(string));
+        VaultResponse<Object> PostAuthApproleTidySecretId(string approleMountPath = "approle");
         /// <summary>
         /// 
         /// </summary>
@@ -1912,7 +1912,7 @@ namespace Vault.Api
         /// <param name="awsConfigCertificateRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthAwsConfigCertificateCertName(string certName, AwsConfigCertificateRequest awsConfigCertificateRequest, string awsMountPath = default(string));
+        VaultResponse<Object> PostAuthAwsConfigCertificateCertName(string certName, AwsConfigCertificateRequest awsConfigCertificateRequest, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -1923,7 +1923,7 @@ namespace Vault.Api
         /// <param name="awsConfigClientRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthAwsConfigClient(AwsConfigClientRequest awsConfigClientRequest, string awsMountPath = default(string));
+        VaultResponse<Object> PostAuthAwsConfigClient(AwsConfigClientRequest awsConfigClientRequest, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -1934,7 +1934,7 @@ namespace Vault.Api
         /// <param name="awsConfigIdentityRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthAwsConfigIdentity(AwsConfigIdentityRequest awsConfigIdentityRequest, string awsMountPath = default(string));
+        VaultResponse<Object> PostAuthAwsConfigIdentity(AwsConfigIdentityRequest awsConfigIdentityRequest, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -1944,7 +1944,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthAwsConfigRotateRoot(string awsMountPath = default(string));
+        VaultResponse<Object> PostAuthAwsConfigRotateRoot(string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -1956,7 +1956,7 @@ namespace Vault.Api
         /// <param name="awsConfigStsRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthAwsConfigStsAccountId(string accountId, AwsConfigStsRequest awsConfigStsRequest, string awsMountPath = default(string));
+        VaultResponse<Object> PostAuthAwsConfigStsAccountId(string accountId, AwsConfigStsRequest awsConfigStsRequest, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -1967,7 +1967,7 @@ namespace Vault.Api
         /// <param name="awsConfigTidyIdentityAccesslistRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthAwsConfigTidyIdentityAccesslist(AwsConfigTidyIdentityAccesslistRequest awsConfigTidyIdentityAccesslistRequest, string awsMountPath = default(string));
+        VaultResponse<Object> PostAuthAwsConfigTidyIdentityAccesslist(AwsConfigTidyIdentityAccesslistRequest awsConfigTidyIdentityAccesslistRequest, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -1978,7 +1978,7 @@ namespace Vault.Api
         /// <param name="awsConfigTidyIdentityWhitelistRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthAwsConfigTidyIdentityWhitelist(AwsConfigTidyIdentityWhitelistRequest awsConfigTidyIdentityWhitelistRequest, string awsMountPath = default(string));
+        VaultResponse<Object> PostAuthAwsConfigTidyIdentityWhitelist(AwsConfigTidyIdentityWhitelistRequest awsConfigTidyIdentityWhitelistRequest, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -1989,7 +1989,7 @@ namespace Vault.Api
         /// <param name="awsConfigTidyRoletagBlacklistRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthAwsConfigTidyRoletagBlacklist(AwsConfigTidyRoletagBlacklistRequest awsConfigTidyRoletagBlacklistRequest, string awsMountPath = default(string));
+        VaultResponse<Object> PostAuthAwsConfigTidyRoletagBlacklist(AwsConfigTidyRoletagBlacklistRequest awsConfigTidyRoletagBlacklistRequest, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -2000,7 +2000,7 @@ namespace Vault.Api
         /// <param name="awsConfigTidyRoletagDenylistRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthAwsConfigTidyRoletagDenylist(AwsConfigTidyRoletagDenylistRequest awsConfigTidyRoletagDenylistRequest, string awsMountPath = default(string));
+        VaultResponse<Object> PostAuthAwsConfigTidyRoletagDenylist(AwsConfigTidyRoletagDenylistRequest awsConfigTidyRoletagDenylistRequest, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -2011,7 +2011,7 @@ namespace Vault.Api
         /// <param name="awsLoginRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthAwsLogin(AwsLoginRequest awsLoginRequest, string awsMountPath = default(string));
+        VaultResponse<Object> PostAuthAwsLogin(AwsLoginRequest awsLoginRequest, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -2023,7 +2023,7 @@ namespace Vault.Api
         /// <param name="awsRoleRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthAwsRoleRole(string role, AwsRoleRequest awsRoleRequest, string awsMountPath = default(string));
+        VaultResponse<Object> PostAuthAwsRoleRole(string role, AwsRoleRequest awsRoleRequest, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -2035,7 +2035,7 @@ namespace Vault.Api
         /// <param name="awsRoleTagRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthAwsRoleRoleTag(string role, AwsRoleTagRequest awsRoleTagRequest, string awsMountPath = default(string));
+        VaultResponse<Object> PostAuthAwsRoleRoleTag(string role, AwsRoleTagRequest awsRoleTagRequest, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -2046,7 +2046,7 @@ namespace Vault.Api
         /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthAwsRoletagBlacklistRoleTag(string roleTag, string awsMountPath = default(string));
+        VaultResponse<Object> PostAuthAwsRoletagBlacklistRoleTag(string roleTag, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -2057,7 +2057,7 @@ namespace Vault.Api
         /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthAwsRoletagDenylistRoleTag(string roleTag, string awsMountPath = default(string));
+        VaultResponse<Object> PostAuthAwsRoletagDenylistRoleTag(string roleTag, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -2068,7 +2068,7 @@ namespace Vault.Api
         /// <param name="awsTidyIdentityAccesslistRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthAwsTidyIdentityAccesslist(AwsTidyIdentityAccesslistRequest awsTidyIdentityAccesslistRequest, string awsMountPath = default(string));
+        VaultResponse<Object> PostAuthAwsTidyIdentityAccesslist(AwsTidyIdentityAccesslistRequest awsTidyIdentityAccesslistRequest, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -2079,7 +2079,7 @@ namespace Vault.Api
         /// <param name="awsTidyIdentityWhitelistRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthAwsTidyIdentityWhitelist(AwsTidyIdentityWhitelistRequest awsTidyIdentityWhitelistRequest, string awsMountPath = default(string));
+        VaultResponse<Object> PostAuthAwsTidyIdentityWhitelist(AwsTidyIdentityWhitelistRequest awsTidyIdentityWhitelistRequest, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -2090,7 +2090,7 @@ namespace Vault.Api
         /// <param name="awsTidyRoletagBlacklistRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthAwsTidyRoletagBlacklist(AwsTidyRoletagBlacklistRequest awsTidyRoletagBlacklistRequest, string awsMountPath = default(string));
+        VaultResponse<Object> PostAuthAwsTidyRoletagBlacklist(AwsTidyRoletagBlacklistRequest awsTidyRoletagBlacklistRequest, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -2101,7 +2101,7 @@ namespace Vault.Api
         /// <param name="awsTidyRoletagDenylistRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthAwsTidyRoletagDenylist(AwsTidyRoletagDenylistRequest awsTidyRoletagDenylistRequest, string awsMountPath = default(string));
+        VaultResponse<Object> PostAuthAwsTidyRoletagDenylist(AwsTidyRoletagDenylistRequest awsTidyRoletagDenylistRequest, string awsMountPath = "aws");
         /// <summary>
         /// 
         /// </summary>
@@ -2112,7 +2112,7 @@ namespace Vault.Api
         /// <param name="azureConfigRequest"></param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthAzureConfig(AzureConfigRequest azureConfigRequest, string azureMountPath = default(string));
+        VaultResponse<Object> PostAuthAzureConfig(AzureConfigRequest azureConfigRequest, string azureMountPath = "azure");
         /// <summary>
         /// 
         /// </summary>
@@ -2123,7 +2123,7 @@ namespace Vault.Api
         /// <param name="azureLoginRequest"></param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthAzureLogin(AzureLoginRequest azureLoginRequest, string azureMountPath = default(string));
+        VaultResponse<Object> PostAuthAzureLogin(AzureLoginRequest azureLoginRequest, string azureMountPath = "azure");
         /// <summary>
         /// 
         /// </summary>
@@ -2135,7 +2135,7 @@ namespace Vault.Api
         /// <param name="azureRoleRequest"></param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthAzureRoleName(string name, AzureRoleRequest azureRoleRequest, string azureMountPath = default(string));
+        VaultResponse<Object> PostAuthAzureRoleName(string name, AzureRoleRequest azureRoleRequest, string azureMountPath = "azure");
         /// <summary>
         /// This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
         /// </summary>
@@ -2146,7 +2146,7 @@ namespace Vault.Api
         /// <param name="centrifyConfigRequest"></param>
         /// <param name="centrifyMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;centrify&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthCentrifyConfig(CentrifyConfigRequest centrifyConfigRequest, string centrifyMountPath = default(string));
+        VaultResponse<Object> PostAuthCentrifyConfig(CentrifyConfigRequest centrifyConfigRequest, string centrifyMountPath = "centrify");
         /// <summary>
         /// Log in with a username and password.
         /// </summary>
@@ -2157,7 +2157,7 @@ namespace Vault.Api
         /// <param name="centrifyLoginRequest"></param>
         /// <param name="centrifyMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;centrify&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthCentrifyLogin(CentrifyLoginRequest centrifyLoginRequest, string centrifyMountPath = default(string));
+        VaultResponse<Object> PostAuthCentrifyLogin(CentrifyLoginRequest centrifyLoginRequest, string centrifyMountPath = "centrify");
         /// <summary>
         /// Manage trusted certificates used for authentication.
         /// </summary>
@@ -2169,7 +2169,7 @@ namespace Vault.Api
         /// <param name="certCertsRequest"></param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthCertCertsName(string name, CertCertsRequest certCertsRequest, string certMountPath = default(string));
+        VaultResponse<Object> PostAuthCertCertsName(string name, CertCertsRequest certCertsRequest, string certMountPath = "cert");
         /// <summary>
         /// 
         /// </summary>
@@ -2180,7 +2180,7 @@ namespace Vault.Api
         /// <param name="certConfigRequest"></param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthCertConfig(CertConfigRequest certConfigRequest, string certMountPath = default(string));
+        VaultResponse<Object> PostAuthCertConfig(CertConfigRequest certConfigRequest, string certMountPath = "cert");
         /// <summary>
         /// Manage Certificate Revocation Lists checked during authentication.
         /// </summary>
@@ -2192,7 +2192,7 @@ namespace Vault.Api
         /// <param name="certCrlsRequest"></param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthCertCrlsName(string name, CertCrlsRequest certCrlsRequest, string certMountPath = default(string));
+        VaultResponse<Object> PostAuthCertCrlsName(string name, CertCrlsRequest certCrlsRequest, string certMountPath = "cert");
         /// <summary>
         /// 
         /// </summary>
@@ -2203,7 +2203,7 @@ namespace Vault.Api
         /// <param name="certLoginRequest"></param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthCertLogin(CertLoginRequest certLoginRequest, string certMountPath = default(string));
+        VaultResponse<Object> PostAuthCertLogin(CertLoginRequest certLoginRequest, string certMountPath = "cert");
         /// <summary>
         /// 
         /// </summary>
@@ -2214,7 +2214,7 @@ namespace Vault.Api
         /// <param name="cfConfigRequest"></param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthCfConfig(CfConfigRequest cfConfigRequest, string cfMountPath = default(string));
+        VaultResponse<Object> PostAuthCfConfig(CfConfigRequest cfConfigRequest, string cfMountPath = "cf");
         /// <summary>
         /// 
         /// </summary>
@@ -2225,7 +2225,7 @@ namespace Vault.Api
         /// <param name="cfLoginRequest"></param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthCfLogin(CfLoginRequest cfLoginRequest, string cfMountPath = default(string));
+        VaultResponse<Object> PostAuthCfLogin(CfLoginRequest cfLoginRequest, string cfMountPath = "cf");
         /// <summary>
         /// 
         /// </summary>
@@ -2237,7 +2237,7 @@ namespace Vault.Api
         /// <param name="cfRolesRequest"></param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthCfRolesRole(string role, CfRolesRequest cfRolesRequest, string cfMountPath = default(string));
+        VaultResponse<Object> PostAuthCfRolesRole(string role, CfRolesRequest cfRolesRequest, string cfMountPath = "cf");
         /// <summary>
         /// Configure credentials used to query the GCP IAM API to verify authenticating service accounts
         /// </summary>
@@ -2248,7 +2248,7 @@ namespace Vault.Api
         /// <param name="gcpConfigRequest"></param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthGcpConfig(GcpConfigRequest gcpConfigRequest, string gcpMountPath = default(string));
+        VaultResponse<Object> PostAuthGcpConfig(GcpConfigRequest gcpConfigRequest, string gcpMountPath = "gcp");
         /// <summary>
         /// 
         /// </summary>
@@ -2259,7 +2259,7 @@ namespace Vault.Api
         /// <param name="gcpLoginRequest"></param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthGcpLogin(GcpLoginRequest gcpLoginRequest, string gcpMountPath = default(string));
+        VaultResponse<Object> PostAuthGcpLogin(GcpLoginRequest gcpLoginRequest, string gcpMountPath = "gcp");
         /// <summary>
         /// Create a GCP role with associated policies and required attributes.
         /// </summary>
@@ -2271,7 +2271,7 @@ namespace Vault.Api
         /// <param name="gcpRoleRequest"></param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthGcpRoleName(string name, GcpRoleRequest gcpRoleRequest, string gcpMountPath = default(string));
+        VaultResponse<Object> PostAuthGcpRoleName(string name, GcpRoleRequest gcpRoleRequest, string gcpMountPath = "gcp");
         /// <summary>
         /// Add or remove labels for an existing &#39;gce&#39; role
         /// </summary>
@@ -2283,7 +2283,7 @@ namespace Vault.Api
         /// <param name="gcpRoleLabelsRequest"></param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthGcpRoleNameLabels(string name, GcpRoleLabelsRequest gcpRoleLabelsRequest, string gcpMountPath = default(string));
+        VaultResponse<Object> PostAuthGcpRoleNameLabels(string name, GcpRoleLabelsRequest gcpRoleLabelsRequest, string gcpMountPath = "gcp");
         /// <summary>
         /// Add or remove service accounts for an existing &#x60;iam&#x60; role
         /// </summary>
@@ -2295,7 +2295,7 @@ namespace Vault.Api
         /// <param name="gcpRoleServiceAccountsRequest"></param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthGcpRoleNameServiceAccounts(string name, GcpRoleServiceAccountsRequest gcpRoleServiceAccountsRequest, string gcpMountPath = default(string));
+        VaultResponse<Object> PostAuthGcpRoleNameServiceAccounts(string name, GcpRoleServiceAccountsRequest gcpRoleServiceAccountsRequest, string gcpMountPath = "gcp");
         /// <summary>
         /// 
         /// </summary>
@@ -2306,7 +2306,7 @@ namespace Vault.Api
         /// <param name="githubConfigRequest"></param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthGithubConfig(GithubConfigRequest githubConfigRequest, string githubMountPath = default(string));
+        VaultResponse<Object> PostAuthGithubConfig(GithubConfigRequest githubConfigRequest, string githubMountPath = "github");
         /// <summary>
         /// 
         /// </summary>
@@ -2317,7 +2317,7 @@ namespace Vault.Api
         /// <param name="githubLoginRequest"></param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthGithubLogin(GithubLoginRequest githubLoginRequest, string githubMountPath = default(string));
+        VaultResponse<Object> PostAuthGithubLogin(GithubLoginRequest githubLoginRequest, string githubMountPath = "github");
         /// <summary>
         /// Read/write/delete a single teams mapping
         /// </summary>
@@ -2329,7 +2329,7 @@ namespace Vault.Api
         /// <param name="githubMapTeamsRequest"></param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthGithubMapTeamsKey(string key, GithubMapTeamsRequest githubMapTeamsRequest, string githubMountPath = default(string));
+        VaultResponse<Object> PostAuthGithubMapTeamsKey(string key, GithubMapTeamsRequest githubMapTeamsRequest, string githubMountPath = "github");
         /// <summary>
         /// Read/write/delete a single users mapping
         /// </summary>
@@ -2341,7 +2341,7 @@ namespace Vault.Api
         /// <param name="githubMapUsersRequest"></param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthGithubMapUsersKey(string key, GithubMapUsersRequest githubMapUsersRequest, string githubMountPath = default(string));
+        VaultResponse<Object> PostAuthGithubMapUsersKey(string key, GithubMapUsersRequest githubMapUsersRequest, string githubMountPath = "github");
         /// <summary>
         /// Configure the JWT authentication backend.
         /// </summary>
@@ -2352,7 +2352,7 @@ namespace Vault.Api
         /// <param name="jwtConfigRequest"></param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthJwtConfig(JwtConfigRequest jwtConfigRequest, string jwtMountPath = default(string));
+        VaultResponse<Object> PostAuthJwtConfig(JwtConfigRequest jwtConfigRequest, string jwtMountPath = "jwt");
         /// <summary>
         /// Authenticates to Vault using a JWT (or OIDC) token.
         /// </summary>
@@ -2363,7 +2363,7 @@ namespace Vault.Api
         /// <param name="jwtLoginRequest"></param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthJwtLogin(JwtLoginRequest jwtLoginRequest, string jwtMountPath = default(string));
+        VaultResponse<Object> PostAuthJwtLogin(JwtLoginRequest jwtLoginRequest, string jwtMountPath = "jwt");
         /// <summary>
         /// Request an authorization URL to start an OIDC login flow.
         /// </summary>
@@ -2374,7 +2374,7 @@ namespace Vault.Api
         /// <param name="jwtOidcAuthUrlRequest"></param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthJwtOidcAuthUrl(JwtOidcAuthUrlRequest jwtOidcAuthUrlRequest, string jwtMountPath = default(string));
+        VaultResponse<Object> PostAuthJwtOidcAuthUrl(JwtOidcAuthUrlRequest jwtOidcAuthUrlRequest, string jwtMountPath = "jwt");
         /// <summary>
         /// Callback endpoint to handle form_posts.
         /// </summary>
@@ -2385,7 +2385,7 @@ namespace Vault.Api
         /// <param name="jwtOidcCallbackRequest"></param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthJwtOidcCallback(JwtOidcCallbackRequest jwtOidcCallbackRequest, string jwtMountPath = default(string));
+        VaultResponse<Object> PostAuthJwtOidcCallback(JwtOidcCallbackRequest jwtOidcCallbackRequest, string jwtMountPath = "jwt");
         /// <summary>
         /// Register an role with the backend.
         /// </summary>
@@ -2397,7 +2397,7 @@ namespace Vault.Api
         /// <param name="jwtRoleRequest"></param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthJwtRoleName(string name, JwtRoleRequest jwtRoleRequest, string jwtMountPath = default(string));
+        VaultResponse<Object> PostAuthJwtRoleName(string name, JwtRoleRequest jwtRoleRequest, string jwtMountPath = "jwt");
         /// <summary>
         /// 
         /// </summary>
@@ -2408,7 +2408,7 @@ namespace Vault.Api
         /// <param name="kerberosConfigRequest"></param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthKerberosConfig(KerberosConfigRequest kerberosConfigRequest, string kerberosMountPath = default(string));
+        VaultResponse<Object> PostAuthKerberosConfig(KerberosConfigRequest kerberosConfigRequest, string kerberosMountPath = "kerberos");
         /// <summary>
         /// 
         /// </summary>
@@ -2419,7 +2419,7 @@ namespace Vault.Api
         /// <param name="kerberosConfigLdapRequest"></param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthKerberosConfigLdap(KerberosConfigLdapRequest kerberosConfigLdapRequest, string kerberosMountPath = default(string));
+        VaultResponse<Object> PostAuthKerberosConfigLdap(KerberosConfigLdapRequest kerberosConfigLdapRequest, string kerberosMountPath = "kerberos");
         /// <summary>
         /// 
         /// </summary>
@@ -2431,7 +2431,7 @@ namespace Vault.Api
         /// <param name="kerberosGroupsRequest"></param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthKerberosGroupsName(string name, KerberosGroupsRequest kerberosGroupsRequest, string kerberosMountPath = default(string));
+        VaultResponse<Object> PostAuthKerberosGroupsName(string name, KerberosGroupsRequest kerberosGroupsRequest, string kerberosMountPath = "kerberos");
         /// <summary>
         /// 
         /// </summary>
@@ -2442,7 +2442,7 @@ namespace Vault.Api
         /// <param name="kerberosLoginRequest"></param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthKerberosLogin(KerberosLoginRequest kerberosLoginRequest, string kerberosMountPath = default(string));
+        VaultResponse<Object> PostAuthKerberosLogin(KerberosLoginRequest kerberosLoginRequest, string kerberosMountPath = "kerberos");
         /// <summary>
         /// Configures the JWT Public Key and Kubernetes API information.
         /// </summary>
@@ -2453,7 +2453,7 @@ namespace Vault.Api
         /// <param name="kubernetesConfigRequest"></param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthKubernetesConfig(KubernetesConfigRequest kubernetesConfigRequest, string kubernetesMountPath = default(string));
+        VaultResponse<Object> PostAuthKubernetesConfig(KubernetesConfigRequest kubernetesConfigRequest, string kubernetesMountPath = "kubernetes");
         /// <summary>
         /// Authenticates Kubernetes service accounts with Vault.
         /// </summary>
@@ -2464,7 +2464,7 @@ namespace Vault.Api
         /// <param name="kubernetesLoginRequest"></param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthKubernetesLogin(KubernetesLoginRequest kubernetesLoginRequest, string kubernetesMountPath = default(string));
+        VaultResponse<Object> PostAuthKubernetesLogin(KubernetesLoginRequest kubernetesLoginRequest, string kubernetesMountPath = "kubernetes");
         /// <summary>
         /// Register an role with the backend.
         /// </summary>
@@ -2476,7 +2476,7 @@ namespace Vault.Api
         /// <param name="kubernetesRoleRequest"></param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthKubernetesRoleName(string name, KubernetesRoleRequest kubernetesRoleRequest, string kubernetesMountPath = default(string));
+        VaultResponse<Object> PostAuthKubernetesRoleName(string name, KubernetesRoleRequest kubernetesRoleRequest, string kubernetesMountPath = "kubernetes");
         /// <summary>
         /// Configure the LDAP server to connect to, along with its options.
         /// </summary>
@@ -2487,7 +2487,7 @@ namespace Vault.Api
         /// <param name="ldapConfigRequest"></param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthLdapConfig(LdapConfigRequest ldapConfigRequest, string ldapMountPath = default(string));
+        VaultResponse<Object> PostAuthLdapConfig(LdapConfigRequest ldapConfigRequest, string ldapMountPath = "ldap");
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
         /// </summary>
@@ -2499,7 +2499,7 @@ namespace Vault.Api
         /// <param name="ldapGroupsRequest"></param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthLdapGroupsName(string name, LdapGroupsRequest ldapGroupsRequest, string ldapMountPath = default(string));
+        VaultResponse<Object> PostAuthLdapGroupsName(string name, LdapGroupsRequest ldapGroupsRequest, string ldapMountPath = "ldap");
         /// <summary>
         /// Log in with a username and password.
         /// </summary>
@@ -2511,7 +2511,7 @@ namespace Vault.Api
         /// <param name="ldapLoginRequest"></param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthLdapLoginUsername(string username, LdapLoginRequest ldapLoginRequest, string ldapMountPath = default(string));
+        VaultResponse<Object> PostAuthLdapLoginUsername(string username, LdapLoginRequest ldapLoginRequest, string ldapMountPath = "ldap");
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -2523,7 +2523,7 @@ namespace Vault.Api
         /// <param name="ldapUsersRequest"></param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthLdapUsersName(string name, LdapUsersRequest ldapUsersRequest, string ldapMountPath = default(string));
+        VaultResponse<Object> PostAuthLdapUsersName(string name, LdapUsersRequest ldapUsersRequest, string ldapMountPath = "ldap");
         /// <summary>
         /// Manages the configuration for the Vault Auth Plugin.
         /// </summary>
@@ -2534,7 +2534,7 @@ namespace Vault.Api
         /// <param name="ociConfigRequest"></param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthOciConfig(OciConfigRequest ociConfigRequest, string ociMountPath = default(string));
+        VaultResponse<Object> PostAuthOciConfig(OciConfigRequest ociConfigRequest, string ociMountPath = "oci");
         /// <summary>
         /// Authenticates to Vault using OCI credentials
         /// </summary>
@@ -2546,7 +2546,7 @@ namespace Vault.Api
         /// <param name="ociLoginRequest"></param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthOciLoginRole(string role, OciLoginRequest ociLoginRequest, string ociMountPath = default(string));
+        VaultResponse<Object> PostAuthOciLoginRole(string role, OciLoginRequest ociLoginRequest, string ociMountPath = "oci");
         /// <summary>
         /// Create a role and associate policies to it.
         /// </summary>
@@ -2558,7 +2558,7 @@ namespace Vault.Api
         /// <param name="ociRoleRequest"></param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthOciRoleRole(string role, OciRoleRequest ociRoleRequest, string ociMountPath = default(string));
+        VaultResponse<Object> PostAuthOciRoleRole(string role, OciRoleRequest ociRoleRequest, string ociMountPath = "oci");
         /// <summary>
         /// Configure the JWT authentication backend.
         /// </summary>
@@ -2569,7 +2569,7 @@ namespace Vault.Api
         /// <param name="oidcConfigRequest"></param>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthOidcConfig(OidcConfigRequest oidcConfigRequest, string oidcMountPath = default(string));
+        VaultResponse<Object> PostAuthOidcConfig(OidcConfigRequest oidcConfigRequest, string oidcMountPath = "oidc");
         /// <summary>
         /// Authenticates to Vault using a JWT (or OIDC) token.
         /// </summary>
@@ -2580,7 +2580,7 @@ namespace Vault.Api
         /// <param name="oidcLoginRequest"></param>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthOidcLogin(OidcLoginRequest oidcLoginRequest, string oidcMountPath = default(string));
+        VaultResponse<Object> PostAuthOidcLogin(OidcLoginRequest oidcLoginRequest, string oidcMountPath = "oidc");
         /// <summary>
         /// Request an authorization URL to start an OIDC login flow.
         /// </summary>
@@ -2591,7 +2591,7 @@ namespace Vault.Api
         /// <param name="oidcOidcAuthUrlRequest"></param>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthOidcOidcAuthUrl(OidcOidcAuthUrlRequest oidcOidcAuthUrlRequest, string oidcMountPath = default(string));
+        VaultResponse<Object> PostAuthOidcOidcAuthUrl(OidcOidcAuthUrlRequest oidcOidcAuthUrlRequest, string oidcMountPath = "oidc");
         /// <summary>
         /// Callback endpoint to handle form_posts.
         /// </summary>
@@ -2602,7 +2602,7 @@ namespace Vault.Api
         /// <param name="oidcOidcCallbackRequest"></param>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthOidcOidcCallback(OidcOidcCallbackRequest oidcOidcCallbackRequest, string oidcMountPath = default(string));
+        VaultResponse<Object> PostAuthOidcOidcCallback(OidcOidcCallbackRequest oidcOidcCallbackRequest, string oidcMountPath = "oidc");
         /// <summary>
         /// Register an role with the backend.
         /// </summary>
@@ -2614,7 +2614,7 @@ namespace Vault.Api
         /// <param name="oidcRoleRequest"></param>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthOidcRoleName(string name, OidcRoleRequest oidcRoleRequest, string oidcMountPath = default(string));
+        VaultResponse<Object> PostAuthOidcRoleName(string name, OidcRoleRequest oidcRoleRequest, string oidcMountPath = "oidc");
         /// <summary>
         /// This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
         /// </summary>
@@ -2625,7 +2625,7 @@ namespace Vault.Api
         /// <param name="oktaConfigRequest"></param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthOktaConfig(OktaConfigRequest oktaConfigRequest, string oktaMountPath = default(string));
+        VaultResponse<Object> PostAuthOktaConfig(OktaConfigRequest oktaConfigRequest, string oktaMountPath = "okta");
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -2637,7 +2637,7 @@ namespace Vault.Api
         /// <param name="oktaGroupsRequest"></param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthOktaGroupsName(string name, OktaGroupsRequest oktaGroupsRequest, string oktaMountPath = default(string));
+        VaultResponse<Object> PostAuthOktaGroupsName(string name, OktaGroupsRequest oktaGroupsRequest, string oktaMountPath = "okta");
         /// <summary>
         /// Log in with a username and password.
         /// </summary>
@@ -2649,7 +2649,7 @@ namespace Vault.Api
         /// <param name="oktaLoginRequest"></param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthOktaLoginUsername(string username, OktaLoginRequest oktaLoginRequest, string oktaMountPath = default(string));
+        VaultResponse<Object> PostAuthOktaLoginUsername(string username, OktaLoginRequest oktaLoginRequest, string oktaMountPath = "okta");
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
         /// </summary>
@@ -2661,7 +2661,7 @@ namespace Vault.Api
         /// <param name="oktaUsersRequest"></param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthOktaUsersName(string name, OktaUsersRequest oktaUsersRequest, string oktaMountPath = default(string));
+        VaultResponse<Object> PostAuthOktaUsersName(string name, OktaUsersRequest oktaUsersRequest, string oktaMountPath = "okta");
         /// <summary>
         /// Configure the RADIUS server to connect to, along with its options.
         /// </summary>
@@ -2672,7 +2672,7 @@ namespace Vault.Api
         /// <param name="radiusConfigRequest"></param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthRadiusConfig(RadiusConfigRequest radiusConfigRequest, string radiusMountPath = default(string));
+        VaultResponse<Object> PostAuthRadiusConfig(RadiusConfigRequest radiusConfigRequest, string radiusMountPath = "radius");
         /// <summary>
         /// Log in with a username and password.
         /// </summary>
@@ -2683,7 +2683,7 @@ namespace Vault.Api
         /// <param name="radiusLoginRequest"></param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthRadiusLogin(RadiusLoginRequest radiusLoginRequest, string radiusMountPath = default(string));
+        VaultResponse<Object> PostAuthRadiusLogin(RadiusLoginRequest radiusLoginRequest, string radiusMountPath = "radius");
         /// <summary>
         /// Log in with a username and password.
         /// </summary>
@@ -2695,7 +2695,7 @@ namespace Vault.Api
         /// <param name="radiusLoginRequest"></param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthRadiusLoginUrlusername(string urlusername, RadiusLoginRequest radiusLoginRequest, string radiusMountPath = default(string));
+        VaultResponse<Object> PostAuthRadiusLoginUrlusername(string urlusername, RadiusLoginRequest radiusLoginRequest, string radiusMountPath = "radius");
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -2707,7 +2707,7 @@ namespace Vault.Api
         /// <param name="radiusUsersRequest"></param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthRadiusUsersName(string name, RadiusUsersRequest radiusUsersRequest, string radiusMountPath = default(string));
+        VaultResponse<Object> PostAuthRadiusUsersName(string name, RadiusUsersRequest radiusUsersRequest, string radiusMountPath = "radius");
         /// <summary>
         /// The token create path is used to create new tokens.
         /// </summary>
@@ -2716,10 +2716,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateRequest"></param>
-        /// <param name="format">Return json formatted output (optional)</param>
+        /// <param name="format">Return json formatted output (optional, default to &quot;json&quot;)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthTokenCreate(TokenCreateRequest tokenCreateRequest, string format = default(string), string tokenMountPath = default(string));
+        VaultResponse<Object> PostAuthTokenCreate(TokenCreateRequest tokenCreateRequest, string format = "json", string tokenMountPath = "token");
         /// <summary>
         /// The token create path is used to create new orphan tokens.
         /// </summary>
@@ -2728,10 +2728,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateOrphanRequest"></param>
-        /// <param name="format">Return json formatted output (optional)</param>
+        /// <param name="format">Return json formatted output (optional, default to &quot;json&quot;)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthTokenCreateOrphan(TokenCreateOrphanRequest tokenCreateOrphanRequest, string format = default(string), string tokenMountPath = default(string));
+        VaultResponse<Object> PostAuthTokenCreateOrphan(TokenCreateOrphanRequest tokenCreateOrphanRequest, string format = "json", string tokenMountPath = "token");
         /// <summary>
         /// This token create path is used to create new tokens adhering to the given role.
         /// </summary>
@@ -2741,10 +2741,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role</param>
         /// <param name="tokenCreateRequest"></param>
-        /// <param name="format">Return json formatted output (optional)</param>
+        /// <param name="format">Return json formatted output (optional, default to &quot;json&quot;)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthTokenCreateRoleName(string roleName, TokenCreateRequest tokenCreateRequest, string format = default(string), string tokenMountPath = default(string));
+        VaultResponse<Object> PostAuthTokenCreateRoleName(string roleName, TokenCreateRequest tokenCreateRequest, string format = "json", string tokenMountPath = "token");
         /// <summary>
         /// This endpoint will lookup a token and its properties.
         /// </summary>
@@ -2755,7 +2755,7 @@ namespace Vault.Api
         /// <param name="tokenLookupRequest"></param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthTokenLookup(TokenLookupRequest tokenLookupRequest, string tokenMountPath = default(string));
+        VaultResponse<Object> PostAuthTokenLookup(TokenLookupRequest tokenLookupRequest, string tokenMountPath = "token");
         /// <summary>
         /// This endpoint will lookup a token associated with the given accessor and its properties. Response will not contain the token ID.
         /// </summary>
@@ -2766,7 +2766,7 @@ namespace Vault.Api
         /// <param name="tokenLookupAccessorRequest"></param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthTokenLookupAccessor(TokenLookupAccessorRequest tokenLookupAccessorRequest, string tokenMountPath = default(string));
+        VaultResponse<Object> PostAuthTokenLookupAccessor(TokenLookupAccessorRequest tokenLookupAccessorRequest, string tokenMountPath = "token");
         /// <summary>
         /// This endpoint will lookup a token and its properties.
         /// </summary>
@@ -2777,7 +2777,7 @@ namespace Vault.Api
         /// <param name="tokenLookupSelfRequest"></param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthTokenLookupSelf(TokenLookupSelfRequest tokenLookupSelfRequest, string tokenMountPath = default(string));
+        VaultResponse<Object> PostAuthTokenLookupSelf(TokenLookupSelfRequest tokenLookupSelfRequest, string tokenMountPath = "token");
         /// <summary>
         /// This endpoint will renew the given token and prevent expiration.
         /// </summary>
@@ -2788,7 +2788,7 @@ namespace Vault.Api
         /// <param name="tokenRenewRequest"></param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthTokenRenew(TokenRenewRequest tokenRenewRequest, string tokenMountPath = default(string));
+        VaultResponse<Object> PostAuthTokenRenew(TokenRenewRequest tokenRenewRequest, string tokenMountPath = "token");
         /// <summary>
         /// This endpoint will renew a token associated with the given accessor and its properties. Response will not contain the token ID.
         /// </summary>
@@ -2799,7 +2799,7 @@ namespace Vault.Api
         /// <param name="tokenRenewAccessorRequest"></param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthTokenRenewAccessor(TokenRenewAccessorRequest tokenRenewAccessorRequest, string tokenMountPath = default(string));
+        VaultResponse<Object> PostAuthTokenRenewAccessor(TokenRenewAccessorRequest tokenRenewAccessorRequest, string tokenMountPath = "token");
         /// <summary>
         /// This endpoint will renew the token used to call it and prevent expiration.
         /// </summary>
@@ -2810,7 +2810,7 @@ namespace Vault.Api
         /// <param name="tokenRenewSelfRequest"></param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthTokenRenewSelf(TokenRenewSelfRequest tokenRenewSelfRequest, string tokenMountPath = default(string));
+        VaultResponse<Object> PostAuthTokenRenewSelf(TokenRenewSelfRequest tokenRenewSelfRequest, string tokenMountPath = "token");
         /// <summary>
         /// This endpoint will delete the given token and all of its child tokens.
         /// </summary>
@@ -2821,7 +2821,7 @@ namespace Vault.Api
         /// <param name="tokenRevokeRequest"></param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthTokenRevoke(TokenRevokeRequest tokenRevokeRequest, string tokenMountPath = default(string));
+        VaultResponse<Object> PostAuthTokenRevoke(TokenRevokeRequest tokenRevokeRequest, string tokenMountPath = "token");
         /// <summary>
         /// This endpoint will delete the token associated with the accessor and all of its child tokens.
         /// </summary>
@@ -2832,7 +2832,7 @@ namespace Vault.Api
         /// <param name="tokenRevokeAccessorRequest"></param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthTokenRevokeAccessor(TokenRevokeAccessorRequest tokenRevokeAccessorRequest, string tokenMountPath = default(string));
+        VaultResponse<Object> PostAuthTokenRevokeAccessor(TokenRevokeAccessorRequest tokenRevokeAccessorRequest, string tokenMountPath = "token");
         /// <summary>
         /// This endpoint will delete the token and orphan its child tokens.
         /// </summary>
@@ -2843,7 +2843,7 @@ namespace Vault.Api
         /// <param name="tokenRevokeOrphanRequest"></param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthTokenRevokeOrphan(TokenRevokeOrphanRequest tokenRevokeOrphanRequest, string tokenMountPath = default(string));
+        VaultResponse<Object> PostAuthTokenRevokeOrphan(TokenRevokeOrphanRequest tokenRevokeOrphanRequest, string tokenMountPath = "token");
         /// <summary>
         /// This endpoint will delete the token used to call it and all of its child tokens.
         /// </summary>
@@ -2853,7 +2853,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthTokenRevokeSelf(string tokenMountPath = default(string));
+        VaultResponse<Object> PostAuthTokenRevokeSelf(string tokenMountPath = "token");
         /// <summary>
         /// 
         /// </summary>
@@ -2865,7 +2865,7 @@ namespace Vault.Api
         /// <param name="tokenRolesRequest"></param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthTokenRolesRoleName(string roleName, TokenRolesRequest tokenRolesRequest, string tokenMountPath = default(string));
+        VaultResponse<Object> PostAuthTokenRolesRoleName(string roleName, TokenRolesRequest tokenRolesRequest, string tokenMountPath = "token");
         /// <summary>
         /// This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
         /// </summary>
@@ -2875,7 +2875,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthTokenTidy(string tokenMountPath = default(string));
+        VaultResponse<Object> PostAuthTokenTidy(string tokenMountPath = "token");
         /// <summary>
         /// Log in with a username and password.
         /// </summary>
@@ -2887,7 +2887,7 @@ namespace Vault.Api
         /// <param name="userpassLoginRequest"></param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthUserpassLoginUsername(string username, UserpassLoginRequest userpassLoginRequest, string userpassMountPath = default(string));
+        VaultResponse<Object> PostAuthUserpassLoginUsername(string username, UserpassLoginRequest userpassLoginRequest, string userpassMountPath = "userpass");
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -2899,7 +2899,7 @@ namespace Vault.Api
         /// <param name="userpassUsersRequest"></param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthUserpassUsersUsername(string username, UserpassUsersRequest userpassUsersRequest, string userpassMountPath = default(string));
+        VaultResponse<Object> PostAuthUserpassUsersUsername(string username, UserpassUsersRequest userpassUsersRequest, string userpassMountPath = "userpass");
         /// <summary>
         /// Reset user&#39;s password.
         /// </summary>
@@ -2911,7 +2911,7 @@ namespace Vault.Api
         /// <param name="userpassUsersPasswordRequest"></param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthUserpassUsersUsernamePassword(string username, UserpassUsersPasswordRequest userpassUsersPasswordRequest, string userpassMountPath = default(string));
+        VaultResponse<Object> PostAuthUserpassUsersUsernamePassword(string username, UserpassUsersPasswordRequest userpassUsersPasswordRequest, string userpassMountPath = "userpass");
         /// <summary>
         /// Update the policies associated with the username.
         /// </summary>
@@ -2923,7 +2923,7 @@ namespace Vault.Api
         /// <param name="userpassUsersPoliciesRequest"></param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        VaultResponse<Object> PostAuthUserpassUsersUsernamePolicies(string username, UserpassUsersPoliciesRequest userpassUsersPoliciesRequest, string userpassMountPath = default(string));
+        VaultResponse<Object> PostAuthUserpassUsersUsernamePolicies(string username, UserpassUsersPoliciesRequest userpassUsersPoliciesRequest, string userpassMountPath = "userpass");
         #endregion Synchronous Operations
     }
 
@@ -2945,7 +2945,7 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthAlicloudRoleRoleAsync(string role, string alicloudMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthAlicloudRoleRoleAsync(string role, string alicloudMountPath = "alicloud", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Register an role with the backend.
@@ -2958,7 +2958,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Impose secret_id to be presented during login using this role.
@@ -2971,7 +2971,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameBindSecretIdAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameBindSecretIdAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
@@ -2984,7 +2984,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameBoundCidrListAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameBoundCidrListAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Updates the value of &#39;period&#39; on the role
@@ -2997,7 +2997,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNamePeriodAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNamePeriodAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Policies of the role.
@@ -3010,7 +3010,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNamePoliciesAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNamePoliciesAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3023,7 +3023,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroyAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroyAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
@@ -3036,7 +3036,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdBoundCidrsAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdBoundCidrsAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Invalidate an issued secret_id
@@ -3049,7 +3049,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdDestroyAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdDestroyAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Use limit of the SecretID generated against the role.
@@ -3062,7 +3062,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdNumUsesAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdNumUsesAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Duration in seconds of the SecretID generated against the role.
@@ -3075,7 +3075,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdTtlAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdTtlAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
@@ -3088,7 +3088,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameTokenBoundCidrsAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameTokenBoundCidrsAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
@@ -3101,7 +3101,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameTokenMaxTtlAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameTokenMaxTtlAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Number of times issued tokens can be used
@@ -3114,7 +3114,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameTokenNumUsesAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameTokenNumUsesAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
@@ -3127,7 +3127,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameTokenTtlAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameTokenTtlAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3140,7 +3140,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthAwsConfigCertificateCertNameAsync(string certName, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthAwsConfigCertificateCertNameAsync(string certName, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3152,7 +3152,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthAwsConfigClientAsync(string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthAwsConfigClientAsync(string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3165,7 +3165,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthAwsConfigStsAccountIdAsync(string accountId, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthAwsConfigStsAccountIdAsync(string accountId, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3177,7 +3177,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthAwsConfigTidyIdentityAccesslistAsync(string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthAwsConfigTidyIdentityAccesslistAsync(string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3189,7 +3189,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthAwsConfigTidyIdentityWhitelistAsync(string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthAwsConfigTidyIdentityWhitelistAsync(string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3201,7 +3201,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthAwsConfigTidyRoletagBlacklistAsync(string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthAwsConfigTidyRoletagBlacklistAsync(string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3213,20 +3213,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthAwsConfigTidyRoletagDenylistAsync(string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
-   
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
-        /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthAwsIdentityAccesslistInstanceIdAsync(string instanceId, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthAwsConfigTidyRoletagDenylistAsync(string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3239,7 +3226,20 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthAwsIdentityWhitelistInstanceIdAsync(string instanceId, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthAwsIdentityAccesslistInstanceIdAsync(string instanceId, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
+        /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> DeleteAuthAwsIdentityWhitelistInstanceIdAsync(string instanceId, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3252,7 +3252,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthAwsRoleRoleAsync(string role, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthAwsRoleRoleAsync(string role, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3265,7 +3265,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthAwsRoletagBlacklistRoleTagAsync(string roleTag, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthAwsRoletagBlacklistRoleTagAsync(string roleTag, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3278,7 +3278,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthAwsRoletagDenylistRoleTagAsync(string roleTag, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthAwsRoletagDenylistRoleTagAsync(string roleTag, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3290,7 +3290,7 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthAzureConfigAsync(string azureMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthAzureConfigAsync(string azureMountPath = "azure", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3303,7 +3303,7 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthAzureRoleNameAsync(string name, string azureMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthAzureRoleNameAsync(string name, string azureMountPath = "azure", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage trusted certificates used for authentication.
@@ -3316,7 +3316,7 @@ namespace Vault.Api
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthCertCertsNameAsync(string name, string certMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthCertCertsNameAsync(string name, string certMountPath = "cert", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage Certificate Revocation Lists checked during authentication.
@@ -3329,7 +3329,7 @@ namespace Vault.Api
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthCertCrlsNameAsync(string name, string certMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthCertCrlsNameAsync(string name, string certMountPath = "cert", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3341,7 +3341,7 @@ namespace Vault.Api
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthCfConfigAsync(string cfMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthCfConfigAsync(string cfMountPath = "cf", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3354,7 +3354,7 @@ namespace Vault.Api
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthCfRolesRoleAsync(string role, string cfMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthCfRolesRoleAsync(string role, string cfMountPath = "cf", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Create a GCP role with associated policies and required attributes.
@@ -3367,7 +3367,7 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthGcpRoleNameAsync(string name, string gcpMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthGcpRoleNameAsync(string name, string gcpMountPath = "gcp", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Read/write/delete a single teams mapping
@@ -3380,7 +3380,7 @@ namespace Vault.Api
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthGithubMapTeamsKeyAsync(string key, string githubMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthGithubMapTeamsKeyAsync(string key, string githubMountPath = "github", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Read/write/delete a single users mapping
@@ -3393,7 +3393,7 @@ namespace Vault.Api
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthGithubMapUsersKeyAsync(string key, string githubMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthGithubMapUsersKeyAsync(string key, string githubMountPath = "github", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Delete an existing role.
@@ -3406,7 +3406,7 @@ namespace Vault.Api
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthJwtRoleNameAsync(string name, string jwtMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthJwtRoleNameAsync(string name, string jwtMountPath = "jwt", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3419,7 +3419,7 @@ namespace Vault.Api
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthKerberosGroupsNameAsync(string name, string kerberosMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthKerberosGroupsNameAsync(string name, string kerberosMountPath = "kerberos", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Register an role with the backend.
@@ -3432,7 +3432,7 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthKubernetesRoleNameAsync(string name, string kubernetesMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthKubernetesRoleNameAsync(string name, string kubernetesMountPath = "kubernetes", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
@@ -3445,7 +3445,7 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthLdapGroupsNameAsync(string name, string ldapMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthLdapGroupsNameAsync(string name, string ldapMountPath = "ldap", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage users allowed to authenticate.
@@ -3458,7 +3458,7 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthLdapUsersNameAsync(string name, string ldapMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthLdapUsersNameAsync(string name, string ldapMountPath = "ldap", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manages the configuration for the Vault Auth Plugin.
@@ -3470,7 +3470,7 @@ namespace Vault.Api
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthOciConfigAsync(string ociMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthOciConfigAsync(string ociMountPath = "oci", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Create a role and associate policies to it.
@@ -3483,7 +3483,7 @@ namespace Vault.Api
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthOciRoleRoleAsync(string role, string ociMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthOciRoleRoleAsync(string role, string ociMountPath = "oci", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Delete an existing role.
@@ -3496,7 +3496,7 @@ namespace Vault.Api
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthOidcRoleNameAsync(string name, string oidcMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthOidcRoleNameAsync(string name, string oidcMountPath = "oidc", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage users allowed to authenticate.
@@ -3509,7 +3509,7 @@ namespace Vault.Api
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthOktaGroupsNameAsync(string name, string oktaMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthOktaGroupsNameAsync(string name, string oktaMountPath = "okta", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
@@ -3522,7 +3522,7 @@ namespace Vault.Api
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthOktaUsersNameAsync(string name, string oktaMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthOktaUsersNameAsync(string name, string oktaMountPath = "okta", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage users allowed to authenticate.
@@ -3535,7 +3535,7 @@ namespace Vault.Api
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthRadiusUsersNameAsync(string name, string radiusMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthRadiusUsersNameAsync(string name, string radiusMountPath = "radius", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3548,7 +3548,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthTokenRolesRoleNameAsync(string roleName, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthTokenRolesRoleNameAsync(string roleName, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage users allowed to authenticate.
@@ -3561,7 +3561,7 @@ namespace Vault.Api
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> DeleteAuthUserpassUsersUsernameAsync(string username, string userpassMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> DeleteAuthUserpassUsersUsernameAsync(string username, string userpassMountPath = "userpass", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Lists all the roles that are registered with Vault.
@@ -3574,7 +3574,7 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAlicloudRoleAsync(string list, string alicloudMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAlicloudRoleAsync(string list, string alicloudMountPath = "alicloud", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Create a role and associate policies to it.
@@ -3587,7 +3587,7 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAlicloudRoleRoleAsync(string role, string alicloudMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAlicloudRoleRoleAsync(string role, string alicloudMountPath = "alicloud", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Lists all the roles that are registered with Vault.
@@ -3600,7 +3600,7 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAlicloudRolesAsync(string list, string alicloudMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAlicloudRolesAsync(string list, string alicloudMountPath = "alicloud", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Lists all the roles registered with the backend.
@@ -3613,7 +3613,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleAsync(string list, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthApproleRoleAsync(string list, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Register an role with the backend.
@@ -3626,7 +3626,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Impose secret_id to be presented during login using this role.
@@ -3639,7 +3639,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameBindSecretIdAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameBindSecretIdAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
@@ -3652,7 +3652,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameBoundCidrListAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameBoundCidrListAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Enables cluster local secret IDs
@@ -3665,7 +3665,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameLocalSecretIdsAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameLocalSecretIdsAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Updates the value of &#39;period&#39; on the role
@@ -3678,7 +3678,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNamePeriodAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNamePeriodAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Policies of the role.
@@ -3691,7 +3691,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNamePoliciesAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNamePoliciesAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Returns the &#39;role_id&#39; of the role.
@@ -3704,7 +3704,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameRoleIdAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameRoleIdAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Generate a SecretID against this role.
@@ -3718,7 +3718,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameSecretIdAsync(string roleName, string list, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameSecretIdAsync(string roleName, string list, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
@@ -3731,7 +3731,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameSecretIdBoundCidrsAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameSecretIdBoundCidrsAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Use limit of the SecretID generated against the role.
@@ -3744,7 +3744,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameSecretIdNumUsesAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameSecretIdNumUsesAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Duration in seconds of the SecretID generated against the role.
@@ -3757,7 +3757,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameSecretIdTtlAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameSecretIdTtlAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
@@ -3770,7 +3770,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameTokenBoundCidrsAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameTokenBoundCidrsAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
@@ -3783,7 +3783,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameTokenMaxTtlAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameTokenMaxTtlAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Number of times issued tokens can be used
@@ -3796,7 +3796,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameTokenNumUsesAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameTokenNumUsesAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
@@ -3809,7 +3809,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameTokenTtlAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameTokenTtlAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3822,7 +3822,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAwsConfigCertificateCertNameAsync(string certName, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAwsConfigCertificateCertNameAsync(string certName, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3835,7 +3835,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAwsConfigCertificatesAsync(string list, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAwsConfigCertificatesAsync(string list, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3847,7 +3847,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAwsConfigClientAsync(string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAwsConfigClientAsync(string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3859,7 +3859,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAwsConfigIdentityAsync(string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAwsConfigIdentityAsync(string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3872,7 +3872,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAwsConfigStsAsync(string list, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAwsConfigStsAsync(string list, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3885,7 +3885,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAwsConfigStsAccountIdAsync(string accountId, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAwsConfigStsAccountIdAsync(string accountId, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3897,7 +3897,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAwsConfigTidyIdentityAccesslistAsync(string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAwsConfigTidyIdentityAccesslistAsync(string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3909,7 +3909,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAwsConfigTidyIdentityWhitelistAsync(string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAwsConfigTidyIdentityWhitelistAsync(string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3921,7 +3921,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAwsConfigTidyRoletagBlacklistAsync(string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAwsConfigTidyRoletagBlacklistAsync(string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3933,7 +3933,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAwsConfigTidyRoletagDenylistAsync(string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAwsConfigTidyRoletagDenylistAsync(string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3946,7 +3946,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAwsIdentityAccesslistAsync(string list, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAwsIdentityAccesslistAsync(string list, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3959,7 +3959,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAwsIdentityAccesslistInstanceIdAsync(string instanceId, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAwsIdentityAccesslistInstanceIdAsync(string instanceId, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3972,7 +3972,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAwsIdentityWhitelistAsync(string list, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAwsIdentityWhitelistAsync(string list, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3985,7 +3985,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAwsIdentityWhitelistInstanceIdAsync(string instanceId, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAwsIdentityWhitelistInstanceIdAsync(string instanceId, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3998,7 +3998,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAwsRoleAsync(string list, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAwsRoleAsync(string list, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -4011,7 +4011,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAwsRoleRoleAsync(string role, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAwsRoleRoleAsync(string role, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -4024,7 +4024,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAwsRolesAsync(string list, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAwsRolesAsync(string list, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -4037,7 +4037,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAwsRoletagBlacklistAsync(string list, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAwsRoletagBlacklistAsync(string list, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -4050,7 +4050,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAwsRoletagBlacklistRoleTagAsync(string roleTag, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAwsRoletagBlacklistRoleTagAsync(string roleTag, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -4063,7 +4063,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAwsRoletagDenylistAsync(string list, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAwsRoletagDenylistAsync(string list, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -4076,7 +4076,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAwsRoletagDenylistRoleTagAsync(string roleTag, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAwsRoletagDenylistRoleTagAsync(string roleTag, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -4088,7 +4088,7 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAzureConfigAsync(string azureMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAzureConfigAsync(string azureMountPath = "azure", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -4101,7 +4101,7 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAzureRoleAsync(string list, string azureMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAzureRoleAsync(string list, string azureMountPath = "azure", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -4114,7 +4114,7 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthAzureRoleNameAsync(string name, string azureMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthAzureRoleNameAsync(string name, string azureMountPath = "azure", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
@@ -4126,7 +4126,7 @@ namespace Vault.Api
         /// <param name="centrifyMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;centrify&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthCentrifyConfigAsync(string centrifyMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthCentrifyConfigAsync(string centrifyMountPath = "centrify", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage trusted certificates used for authentication.
@@ -4139,7 +4139,7 @@ namespace Vault.Api
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthCertCertsAsync(string list, string certMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthCertCertsAsync(string list, string certMountPath = "cert", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage trusted certificates used for authentication.
@@ -4152,7 +4152,7 @@ namespace Vault.Api
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthCertCertsNameAsync(string name, string certMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthCertCertsNameAsync(string name, string certMountPath = "cert", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -4164,7 +4164,7 @@ namespace Vault.Api
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthCertConfigAsync(string certMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthCertConfigAsync(string certMountPath = "cert", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage Certificate Revocation Lists checked during authentication.
@@ -4177,7 +4177,7 @@ namespace Vault.Api
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthCertCrlsNameAsync(string name, string certMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthCertCrlsNameAsync(string name, string certMountPath = "cert", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -4189,7 +4189,7 @@ namespace Vault.Api
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthCfConfigAsync(string cfMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthCfConfigAsync(string cfMountPath = "cf", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -4202,7 +4202,7 @@ namespace Vault.Api
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthCfRolesAsync(string list, string cfMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthCfRolesAsync(string list, string cfMountPath = "cf", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -4215,7 +4215,7 @@ namespace Vault.Api
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthCfRolesRoleAsync(string role, string cfMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthCfRolesRoleAsync(string role, string cfMountPath = "cf", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Configure credentials used to query the GCP IAM API to verify authenticating service accounts
@@ -4227,7 +4227,7 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthGcpConfigAsync(string gcpMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthGcpConfigAsync(string gcpMountPath = "gcp", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Lists all the roles that are registered with Vault.
@@ -4240,7 +4240,7 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthGcpRoleAsync(string list, string gcpMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthGcpRoleAsync(string list, string gcpMountPath = "gcp", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Create a GCP role with associated policies and required attributes.
@@ -4253,7 +4253,7 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthGcpRoleNameAsync(string name, string gcpMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthGcpRoleNameAsync(string name, string gcpMountPath = "gcp", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Lists all the roles that are registered with Vault.
@@ -4266,7 +4266,7 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthGcpRolesAsync(string list, string gcpMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthGcpRolesAsync(string list, string gcpMountPath = "gcp", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -4278,7 +4278,7 @@ namespace Vault.Api
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthGithubConfigAsync(string githubMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthGithubConfigAsync(string githubMountPath = "github", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Read mappings for teams
@@ -4288,10 +4288,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthGithubMapTeamsAsync(string githubMountPath = default(string), string list = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthGithubMapTeamsAsync(string githubMountPath = "github", string list = "false", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Read/write/delete a single teams mapping
@@ -4304,7 +4304,7 @@ namespace Vault.Api
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthGithubMapTeamsKeyAsync(string key, string githubMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthGithubMapTeamsKeyAsync(string key, string githubMountPath = "github", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Read mappings for users
@@ -4314,10 +4314,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthGithubMapUsersAsync(string githubMountPath = default(string), string list = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthGithubMapUsersAsync(string githubMountPath = "github", string list = "false", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Read/write/delete a single users mapping
@@ -4330,7 +4330,7 @@ namespace Vault.Api
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthGithubMapUsersKeyAsync(string key, string githubMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthGithubMapUsersKeyAsync(string key, string githubMountPath = "github", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Read the current JWT authentication backend configuration.
@@ -4342,7 +4342,7 @@ namespace Vault.Api
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthJwtConfigAsync(string jwtMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthJwtConfigAsync(string jwtMountPath = "jwt", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Callback endpoint to complete an OIDC login.
@@ -4354,7 +4354,7 @@ namespace Vault.Api
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthJwtOidcCallbackAsync(string jwtMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthJwtOidcCallbackAsync(string jwtMountPath = "jwt", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Lists all the roles registered with the backend.
@@ -4367,7 +4367,7 @@ namespace Vault.Api
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthJwtRoleAsync(string list, string jwtMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthJwtRoleAsync(string list, string jwtMountPath = "jwt", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Read an existing role.
@@ -4380,7 +4380,7 @@ namespace Vault.Api
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthJwtRoleNameAsync(string name, string jwtMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthJwtRoleNameAsync(string name, string jwtMountPath = "jwt", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -4392,7 +4392,7 @@ namespace Vault.Api
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthKerberosConfigAsync(string kerberosMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthKerberosConfigAsync(string kerberosMountPath = "kerberos", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -4404,7 +4404,7 @@ namespace Vault.Api
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthKerberosConfigLdapAsync(string kerberosMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthKerberosConfigLdapAsync(string kerberosMountPath = "kerberos", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -4417,7 +4417,7 @@ namespace Vault.Api
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthKerberosGroupsAsync(string list, string kerberosMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthKerberosGroupsAsync(string list, string kerberosMountPath = "kerberos", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -4430,7 +4430,7 @@ namespace Vault.Api
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthKerberosGroupsNameAsync(string name, string kerberosMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthKerberosGroupsNameAsync(string name, string kerberosMountPath = "kerberos", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -4442,7 +4442,7 @@ namespace Vault.Api
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthKerberosLoginAsync(string kerberosMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthKerberosLoginAsync(string kerberosMountPath = "kerberos", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Configures the JWT Public Key and Kubernetes API information.
@@ -4454,7 +4454,7 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthKubernetesConfigAsync(string kubernetesMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthKubernetesConfigAsync(string kubernetesMountPath = "kubernetes", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Lists all the roles registered with the backend.
@@ -4467,7 +4467,7 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthKubernetesRoleAsync(string list, string kubernetesMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthKubernetesRoleAsync(string list, string kubernetesMountPath = "kubernetes", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Register an role with the backend.
@@ -4480,7 +4480,7 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthKubernetesRoleNameAsync(string name, string kubernetesMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthKubernetesRoleNameAsync(string name, string kubernetesMountPath = "kubernetes", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Configure the LDAP server to connect to, along with its options.
@@ -4492,7 +4492,7 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthLdapConfigAsync(string ldapMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthLdapConfigAsync(string ldapMountPath = "ldap", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
@@ -4505,7 +4505,7 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthLdapGroupsAsync(string list, string ldapMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthLdapGroupsAsync(string list, string ldapMountPath = "ldap", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
@@ -4518,7 +4518,7 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthLdapGroupsNameAsync(string name, string ldapMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthLdapGroupsNameAsync(string name, string ldapMountPath = "ldap", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage users allowed to authenticate.
@@ -4531,7 +4531,7 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthLdapUsersAsync(string list, string ldapMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthLdapUsersAsync(string list, string ldapMountPath = "ldap", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage users allowed to authenticate.
@@ -4544,7 +4544,7 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthLdapUsersNameAsync(string name, string ldapMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthLdapUsersNameAsync(string name, string ldapMountPath = "ldap", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manages the configuration for the Vault Auth Plugin.
@@ -4556,7 +4556,7 @@ namespace Vault.Api
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthOciConfigAsync(string ociMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthOciConfigAsync(string ociMountPath = "oci", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Lists all the roles that are registered with Vault.
@@ -4569,7 +4569,7 @@ namespace Vault.Api
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthOciRoleAsync(string list, string ociMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthOciRoleAsync(string list, string ociMountPath = "oci", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Create a role and associate policies to it.
@@ -4582,7 +4582,7 @@ namespace Vault.Api
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthOciRoleRoleAsync(string role, string ociMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthOciRoleRoleAsync(string role, string ociMountPath = "oci", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Read the current JWT authentication backend configuration.
@@ -4594,7 +4594,7 @@ namespace Vault.Api
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthOidcConfigAsync(string oidcMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthOidcConfigAsync(string oidcMountPath = "oidc", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Callback endpoint to complete an OIDC login.
@@ -4606,7 +4606,7 @@ namespace Vault.Api
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthOidcOidcCallbackAsync(string oidcMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthOidcOidcCallbackAsync(string oidcMountPath = "oidc", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Lists all the roles registered with the backend.
@@ -4619,7 +4619,7 @@ namespace Vault.Api
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthOidcRoleAsync(string list, string oidcMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthOidcRoleAsync(string list, string oidcMountPath = "oidc", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Read an existing role.
@@ -4632,7 +4632,7 @@ namespace Vault.Api
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthOidcRoleNameAsync(string name, string oidcMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthOidcRoleNameAsync(string name, string oidcMountPath = "oidc", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
@@ -4644,7 +4644,7 @@ namespace Vault.Api
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthOktaConfigAsync(string oktaMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthOktaConfigAsync(string oktaMountPath = "okta", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage users allowed to authenticate.
@@ -4657,7 +4657,7 @@ namespace Vault.Api
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthOktaGroupsAsync(string list, string oktaMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthOktaGroupsAsync(string list, string oktaMountPath = "okta", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage users allowed to authenticate.
@@ -4670,7 +4670,7 @@ namespace Vault.Api
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthOktaGroupsNameAsync(string name, string oktaMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthOktaGroupsNameAsync(string name, string oktaMountPath = "okta", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
@@ -4683,7 +4683,7 @@ namespace Vault.Api
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthOktaUsersAsync(string list, string oktaMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthOktaUsersAsync(string list, string oktaMountPath = "okta", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
@@ -4696,7 +4696,7 @@ namespace Vault.Api
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthOktaUsersNameAsync(string name, string oktaMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthOktaUsersNameAsync(string name, string oktaMountPath = "okta", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -4709,7 +4709,7 @@ namespace Vault.Api
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthOktaVerifyNonceAsync(string nonce, string oktaMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthOktaVerifyNonceAsync(string nonce, string oktaMountPath = "okta", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Configure the RADIUS server to connect to, along with its options.
@@ -4721,7 +4721,7 @@ namespace Vault.Api
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthRadiusConfigAsync(string radiusMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthRadiusConfigAsync(string radiusMountPath = "radius", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage users allowed to authenticate.
@@ -4734,7 +4734,7 @@ namespace Vault.Api
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthRadiusUsersAsync(string list, string radiusMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthRadiusUsersAsync(string list, string radiusMountPath = "radius", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage users allowed to authenticate.
@@ -4747,7 +4747,7 @@ namespace Vault.Api
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthRadiusUsersNameAsync(string name, string radiusMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthRadiusUsersNameAsync(string name, string radiusMountPath = "radius", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires &#39;sudo&#39; capability in addition to &#39;list&#39;.
@@ -4760,7 +4760,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthTokenAccessorsAsync(string list, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthTokenAccessorsAsync(string list, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This endpoint will lookup a token and its properties.
@@ -4772,7 +4772,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthTokenLookupAsync(string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthTokenLookupAsync(string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This endpoint will lookup a token and its properties.
@@ -4784,7 +4784,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthTokenLookupSelfAsync(string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthTokenLookupSelfAsync(string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This endpoint lists configured roles.
@@ -4797,7 +4797,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthTokenRolesAsync(string list, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthTokenRolesAsync(string list, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -4810,7 +4810,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthTokenRolesRoleNameAsync(string roleName, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthTokenRolesRoleNameAsync(string roleName, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage users allowed to authenticate.
@@ -4823,7 +4823,7 @@ namespace Vault.Api
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthUserpassUsersAsync(string list, string userpassMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthUserpassUsersAsync(string list, string userpassMountPath = "userpass", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage users allowed to authenticate.
@@ -4836,7 +4836,7 @@ namespace Vault.Api
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthUserpassUsersUsernameAsync(string username, string userpassMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetAuthUserpassUsersUsernameAsync(string username, string userpassMountPath = "userpass", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Authenticates an RAM entity with Vault.
@@ -4849,7 +4849,7 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthAlicloudLoginAsync(AlicloudLoginRequest alicloudLoginRequest, string alicloudMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthAlicloudLoginAsync(AlicloudLoginRequest alicloudLoginRequest, string alicloudMountPath = "alicloud", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Create a role and associate policies to it.
@@ -4863,7 +4863,7 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthAlicloudRoleRoleAsync(string role, AlicloudRoleRequest alicloudRoleRequest, string alicloudMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthAlicloudRoleRoleAsync(string role, AlicloudRoleRequest alicloudRoleRequest, string alicloudMountPath = "alicloud", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -4876,7 +4876,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleLoginAsync(ApproleLoginRequest approleLoginRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthApproleLoginAsync(ApproleLoginRequest approleLoginRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Register an role with the backend.
@@ -4890,7 +4890,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameAsync(string roleName, ApproleRoleRequest approleRoleRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameAsync(string roleName, ApproleRoleRequest approleRoleRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Impose secret_id to be presented during login using this role.
@@ -4904,7 +4904,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameBindSecretIdAsync(string roleName, ApproleRoleBindSecretIdRequest approleRoleBindSecretIdRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameBindSecretIdAsync(string roleName, ApproleRoleBindSecretIdRequest approleRoleBindSecretIdRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
@@ -4918,7 +4918,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameBoundCidrListAsync(string roleName, ApproleRoleBoundCidrListRequest approleRoleBoundCidrListRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameBoundCidrListAsync(string roleName, ApproleRoleBoundCidrListRequest approleRoleBoundCidrListRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Assign a SecretID of choice against the role.
@@ -4932,7 +4932,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameCustomSecretIdAsync(string roleName, ApproleRoleCustomSecretIdRequest approleRoleCustomSecretIdRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameCustomSecretIdAsync(string roleName, ApproleRoleCustomSecretIdRequest approleRoleCustomSecretIdRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Updates the value of &#39;period&#39; on the role
@@ -4946,7 +4946,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNamePeriodAsync(string roleName, ApproleRolePeriodRequest approleRolePeriodRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNamePeriodAsync(string roleName, ApproleRolePeriodRequest approleRolePeriodRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Policies of the role.
@@ -4960,7 +4960,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNamePoliciesAsync(string roleName, ApproleRolePoliciesRequest approleRolePoliciesRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNamePoliciesAsync(string roleName, ApproleRolePoliciesRequest approleRolePoliciesRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Returns the &#39;role_id&#39; of the role.
@@ -4974,7 +4974,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameRoleIdAsync(string roleName, ApproleRoleRoleIdRequest approleRoleRoleIdRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameRoleIdAsync(string roleName, ApproleRoleRoleIdRequest approleRoleRoleIdRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Generate a SecretID against this role.
@@ -4988,7 +4988,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdAsync(string roleName, ApproleRoleSecretIdRequest approleRoleSecretIdRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdAsync(string roleName, ApproleRoleSecretIdRequest approleRoleSecretIdRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5002,7 +5002,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdAccessorDestroyAsync(string roleName, ApproleRoleSecretIdAccessorDestroyRequest approleRoleSecretIdAccessorDestroyRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdAccessorDestroyAsync(string roleName, ApproleRoleSecretIdAccessorDestroyRequest approleRoleSecretIdAccessorDestroyRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5016,7 +5016,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdAccessorLookupAsync(string roleName, ApproleRoleSecretIdAccessorLookupRequest approleRoleSecretIdAccessorLookupRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdAccessorLookupAsync(string roleName, ApproleRoleSecretIdAccessorLookupRequest approleRoleSecretIdAccessorLookupRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
@@ -5030,7 +5030,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdBoundCidrsAsync(string roleName, ApproleRoleSecretIdBoundCidrsRequest approleRoleSecretIdBoundCidrsRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdBoundCidrsAsync(string roleName, ApproleRoleSecretIdBoundCidrsRequest approleRoleSecretIdBoundCidrsRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Invalidate an issued secret_id
@@ -5044,7 +5044,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdDestroyAsync(string roleName, ApproleRoleSecretIdDestroyRequest approleRoleSecretIdDestroyRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdDestroyAsync(string roleName, ApproleRoleSecretIdDestroyRequest approleRoleSecretIdDestroyRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Read the properties of an issued secret_id
@@ -5058,7 +5058,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdLookupAsync(string roleName, ApproleRoleSecretIdLookupRequest approleRoleSecretIdLookupRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdLookupAsync(string roleName, ApproleRoleSecretIdLookupRequest approleRoleSecretIdLookupRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Use limit of the SecretID generated against the role.
@@ -5072,7 +5072,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdNumUsesAsync(string roleName, ApproleRoleSecretIdNumUsesRequest approleRoleSecretIdNumUsesRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdNumUsesAsync(string roleName, ApproleRoleSecretIdNumUsesRequest approleRoleSecretIdNumUsesRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Duration in seconds of the SecretID generated against the role.
@@ -5086,7 +5086,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdTtlAsync(string roleName, ApproleRoleSecretIdTtlRequest approleRoleSecretIdTtlRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdTtlAsync(string roleName, ApproleRoleSecretIdTtlRequest approleRoleSecretIdTtlRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
@@ -5100,7 +5100,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameTokenBoundCidrsAsync(string roleName, ApproleRoleTokenBoundCidrsRequest approleRoleTokenBoundCidrsRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameTokenBoundCidrsAsync(string roleName, ApproleRoleTokenBoundCidrsRequest approleRoleTokenBoundCidrsRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
@@ -5114,7 +5114,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameTokenMaxTtlAsync(string roleName, ApproleRoleTokenMaxTtlRequest approleRoleTokenMaxTtlRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameTokenMaxTtlAsync(string roleName, ApproleRoleTokenMaxTtlRequest approleRoleTokenMaxTtlRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Number of times issued tokens can be used
@@ -5128,7 +5128,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameTokenNumUsesAsync(string roleName, ApproleRoleTokenNumUsesRequest approleRoleTokenNumUsesRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameTokenNumUsesAsync(string roleName, ApproleRoleTokenNumUsesRequest approleRoleTokenNumUsesRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
@@ -5142,7 +5142,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameTokenTtlAsync(string roleName, ApproleRoleTokenTtlRequest approleRoleTokenTtlRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameTokenTtlAsync(string roleName, ApproleRoleTokenTtlRequest approleRoleTokenTtlRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Trigger the clean-up of expired SecretID entries.
@@ -5154,7 +5154,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleTidySecretIdAsync(string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthApproleTidySecretIdAsync(string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5168,7 +5168,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthAwsConfigCertificateCertNameAsync(string certName, AwsConfigCertificateRequest awsConfigCertificateRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthAwsConfigCertificateCertNameAsync(string certName, AwsConfigCertificateRequest awsConfigCertificateRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5181,7 +5181,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthAwsConfigClientAsync(AwsConfigClientRequest awsConfigClientRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthAwsConfigClientAsync(AwsConfigClientRequest awsConfigClientRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5194,7 +5194,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthAwsConfigIdentityAsync(AwsConfigIdentityRequest awsConfigIdentityRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthAwsConfigIdentityAsync(AwsConfigIdentityRequest awsConfigIdentityRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5206,7 +5206,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthAwsConfigRotateRootAsync(string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthAwsConfigRotateRootAsync(string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5220,7 +5220,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthAwsConfigStsAccountIdAsync(string accountId, AwsConfigStsRequest awsConfigStsRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthAwsConfigStsAccountIdAsync(string accountId, AwsConfigStsRequest awsConfigStsRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5233,7 +5233,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthAwsConfigTidyIdentityAccesslistAsync(AwsConfigTidyIdentityAccesslistRequest awsConfigTidyIdentityAccesslistRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthAwsConfigTidyIdentityAccesslistAsync(AwsConfigTidyIdentityAccesslistRequest awsConfigTidyIdentityAccesslistRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5246,7 +5246,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthAwsConfigTidyIdentityWhitelistAsync(AwsConfigTidyIdentityWhitelistRequest awsConfigTidyIdentityWhitelistRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthAwsConfigTidyIdentityWhitelistAsync(AwsConfigTidyIdentityWhitelistRequest awsConfigTidyIdentityWhitelistRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5259,7 +5259,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthAwsConfigTidyRoletagBlacklistAsync(AwsConfigTidyRoletagBlacklistRequest awsConfigTidyRoletagBlacklistRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthAwsConfigTidyRoletagBlacklistAsync(AwsConfigTidyRoletagBlacklistRequest awsConfigTidyRoletagBlacklistRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5272,7 +5272,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthAwsConfigTidyRoletagDenylistAsync(AwsConfigTidyRoletagDenylistRequest awsConfigTidyRoletagDenylistRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthAwsConfigTidyRoletagDenylistAsync(AwsConfigTidyRoletagDenylistRequest awsConfigTidyRoletagDenylistRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5285,7 +5285,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthAwsLoginAsync(AwsLoginRequest awsLoginRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthAwsLoginAsync(AwsLoginRequest awsLoginRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5299,7 +5299,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthAwsRoleRoleAsync(string role, AwsRoleRequest awsRoleRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthAwsRoleRoleAsync(string role, AwsRoleRequest awsRoleRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5313,7 +5313,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthAwsRoleRoleTagAsync(string role, AwsRoleTagRequest awsRoleTagRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthAwsRoleRoleTagAsync(string role, AwsRoleTagRequest awsRoleTagRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5326,7 +5326,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthAwsRoletagBlacklistRoleTagAsync(string roleTag, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthAwsRoletagBlacklistRoleTagAsync(string roleTag, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5339,7 +5339,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthAwsRoletagDenylistRoleTagAsync(string roleTag, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthAwsRoletagDenylistRoleTagAsync(string roleTag, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5352,7 +5352,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthAwsTidyIdentityAccesslistAsync(AwsTidyIdentityAccesslistRequest awsTidyIdentityAccesslistRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthAwsTidyIdentityAccesslistAsync(AwsTidyIdentityAccesslistRequest awsTidyIdentityAccesslistRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5365,7 +5365,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthAwsTidyIdentityWhitelistAsync(AwsTidyIdentityWhitelistRequest awsTidyIdentityWhitelistRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthAwsTidyIdentityWhitelistAsync(AwsTidyIdentityWhitelistRequest awsTidyIdentityWhitelistRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5378,7 +5378,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthAwsTidyRoletagBlacklistAsync(AwsTidyRoletagBlacklistRequest awsTidyRoletagBlacklistRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthAwsTidyRoletagBlacklistAsync(AwsTidyRoletagBlacklistRequest awsTidyRoletagBlacklistRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5391,7 +5391,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthAwsTidyRoletagDenylistAsync(AwsTidyRoletagDenylistRequest awsTidyRoletagDenylistRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthAwsTidyRoletagDenylistAsync(AwsTidyRoletagDenylistRequest awsTidyRoletagDenylistRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5404,7 +5404,7 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthAzureConfigAsync(AzureConfigRequest azureConfigRequest, string azureMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthAzureConfigAsync(AzureConfigRequest azureConfigRequest, string azureMountPath = "azure", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5417,7 +5417,7 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthAzureLoginAsync(AzureLoginRequest azureLoginRequest, string azureMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthAzureLoginAsync(AzureLoginRequest azureLoginRequest, string azureMountPath = "azure", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5431,7 +5431,7 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthAzureRoleNameAsync(string name, AzureRoleRequest azureRoleRequest, string azureMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthAzureRoleNameAsync(string name, AzureRoleRequest azureRoleRequest, string azureMountPath = "azure", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
@@ -5444,7 +5444,7 @@ namespace Vault.Api
         /// <param name="centrifyMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;centrify&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthCentrifyConfigAsync(CentrifyConfigRequest centrifyConfigRequest, string centrifyMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthCentrifyConfigAsync(CentrifyConfigRequest centrifyConfigRequest, string centrifyMountPath = "centrify", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Log in with a username and password.
@@ -5457,7 +5457,7 @@ namespace Vault.Api
         /// <param name="centrifyMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;centrify&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthCentrifyLoginAsync(CentrifyLoginRequest centrifyLoginRequest, string centrifyMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthCentrifyLoginAsync(CentrifyLoginRequest centrifyLoginRequest, string centrifyMountPath = "centrify", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage trusted certificates used for authentication.
@@ -5471,7 +5471,7 @@ namespace Vault.Api
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthCertCertsNameAsync(string name, CertCertsRequest certCertsRequest, string certMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthCertCertsNameAsync(string name, CertCertsRequest certCertsRequest, string certMountPath = "cert", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5484,7 +5484,7 @@ namespace Vault.Api
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthCertConfigAsync(CertConfigRequest certConfigRequest, string certMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthCertConfigAsync(CertConfigRequest certConfigRequest, string certMountPath = "cert", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage Certificate Revocation Lists checked during authentication.
@@ -5498,7 +5498,7 @@ namespace Vault.Api
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthCertCrlsNameAsync(string name, CertCrlsRequest certCrlsRequest, string certMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthCertCrlsNameAsync(string name, CertCrlsRequest certCrlsRequest, string certMountPath = "cert", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5511,7 +5511,7 @@ namespace Vault.Api
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthCertLoginAsync(CertLoginRequest certLoginRequest, string certMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthCertLoginAsync(CertLoginRequest certLoginRequest, string certMountPath = "cert", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5524,7 +5524,7 @@ namespace Vault.Api
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthCfConfigAsync(CfConfigRequest cfConfigRequest, string cfMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthCfConfigAsync(CfConfigRequest cfConfigRequest, string cfMountPath = "cf", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5537,7 +5537,7 @@ namespace Vault.Api
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthCfLoginAsync(CfLoginRequest cfLoginRequest, string cfMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthCfLoginAsync(CfLoginRequest cfLoginRequest, string cfMountPath = "cf", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5551,7 +5551,7 @@ namespace Vault.Api
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthCfRolesRoleAsync(string role, CfRolesRequest cfRolesRequest, string cfMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthCfRolesRoleAsync(string role, CfRolesRequest cfRolesRequest, string cfMountPath = "cf", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Configure credentials used to query the GCP IAM API to verify authenticating service accounts
@@ -5564,7 +5564,7 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthGcpConfigAsync(GcpConfigRequest gcpConfigRequest, string gcpMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthGcpConfigAsync(GcpConfigRequest gcpConfigRequest, string gcpMountPath = "gcp", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5577,7 +5577,7 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthGcpLoginAsync(GcpLoginRequest gcpLoginRequest, string gcpMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthGcpLoginAsync(GcpLoginRequest gcpLoginRequest, string gcpMountPath = "gcp", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Create a GCP role with associated policies and required attributes.
@@ -5591,7 +5591,7 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthGcpRoleNameAsync(string name, GcpRoleRequest gcpRoleRequest, string gcpMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthGcpRoleNameAsync(string name, GcpRoleRequest gcpRoleRequest, string gcpMountPath = "gcp", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Add or remove labels for an existing &#39;gce&#39; role
@@ -5605,7 +5605,7 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthGcpRoleNameLabelsAsync(string name, GcpRoleLabelsRequest gcpRoleLabelsRequest, string gcpMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthGcpRoleNameLabelsAsync(string name, GcpRoleLabelsRequest gcpRoleLabelsRequest, string gcpMountPath = "gcp", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Add or remove service accounts for an existing &#x60;iam&#x60; role
@@ -5619,7 +5619,7 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthGcpRoleNameServiceAccountsAsync(string name, GcpRoleServiceAccountsRequest gcpRoleServiceAccountsRequest, string gcpMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthGcpRoleNameServiceAccountsAsync(string name, GcpRoleServiceAccountsRequest gcpRoleServiceAccountsRequest, string gcpMountPath = "gcp", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5632,7 +5632,7 @@ namespace Vault.Api
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthGithubConfigAsync(GithubConfigRequest githubConfigRequest, string githubMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthGithubConfigAsync(GithubConfigRequest githubConfigRequest, string githubMountPath = "github", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5645,7 +5645,7 @@ namespace Vault.Api
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthGithubLoginAsync(GithubLoginRequest githubLoginRequest, string githubMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthGithubLoginAsync(GithubLoginRequest githubLoginRequest, string githubMountPath = "github", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Read/write/delete a single teams mapping
@@ -5659,7 +5659,7 @@ namespace Vault.Api
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthGithubMapTeamsKeyAsync(string key, GithubMapTeamsRequest githubMapTeamsRequest, string githubMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthGithubMapTeamsKeyAsync(string key, GithubMapTeamsRequest githubMapTeamsRequest, string githubMountPath = "github", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Read/write/delete a single users mapping
@@ -5673,7 +5673,7 @@ namespace Vault.Api
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthGithubMapUsersKeyAsync(string key, GithubMapUsersRequest githubMapUsersRequest, string githubMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthGithubMapUsersKeyAsync(string key, GithubMapUsersRequest githubMapUsersRequest, string githubMountPath = "github", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Configure the JWT authentication backend.
@@ -5686,7 +5686,7 @@ namespace Vault.Api
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthJwtConfigAsync(JwtConfigRequest jwtConfigRequest, string jwtMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthJwtConfigAsync(JwtConfigRequest jwtConfigRequest, string jwtMountPath = "jwt", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Authenticates to Vault using a JWT (or OIDC) token.
@@ -5699,7 +5699,7 @@ namespace Vault.Api
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthJwtLoginAsync(JwtLoginRequest jwtLoginRequest, string jwtMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthJwtLoginAsync(JwtLoginRequest jwtLoginRequest, string jwtMountPath = "jwt", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Request an authorization URL to start an OIDC login flow.
@@ -5712,7 +5712,7 @@ namespace Vault.Api
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthJwtOidcAuthUrlAsync(JwtOidcAuthUrlRequest jwtOidcAuthUrlRequest, string jwtMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthJwtOidcAuthUrlAsync(JwtOidcAuthUrlRequest jwtOidcAuthUrlRequest, string jwtMountPath = "jwt", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Callback endpoint to handle form_posts.
@@ -5725,7 +5725,7 @@ namespace Vault.Api
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthJwtOidcCallbackAsync(JwtOidcCallbackRequest jwtOidcCallbackRequest, string jwtMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthJwtOidcCallbackAsync(JwtOidcCallbackRequest jwtOidcCallbackRequest, string jwtMountPath = "jwt", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Register an role with the backend.
@@ -5739,7 +5739,7 @@ namespace Vault.Api
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthJwtRoleNameAsync(string name, JwtRoleRequest jwtRoleRequest, string jwtMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthJwtRoleNameAsync(string name, JwtRoleRequest jwtRoleRequest, string jwtMountPath = "jwt", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5752,7 +5752,7 @@ namespace Vault.Api
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthKerberosConfigAsync(KerberosConfigRequest kerberosConfigRequest, string kerberosMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthKerberosConfigAsync(KerberosConfigRequest kerberosConfigRequest, string kerberosMountPath = "kerberos", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5765,7 +5765,7 @@ namespace Vault.Api
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthKerberosConfigLdapAsync(KerberosConfigLdapRequest kerberosConfigLdapRequest, string kerberosMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthKerberosConfigLdapAsync(KerberosConfigLdapRequest kerberosConfigLdapRequest, string kerberosMountPath = "kerberos", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5779,7 +5779,7 @@ namespace Vault.Api
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthKerberosGroupsNameAsync(string name, KerberosGroupsRequest kerberosGroupsRequest, string kerberosMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthKerberosGroupsNameAsync(string name, KerberosGroupsRequest kerberosGroupsRequest, string kerberosMountPath = "kerberos", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5792,7 +5792,7 @@ namespace Vault.Api
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthKerberosLoginAsync(KerberosLoginRequest kerberosLoginRequest, string kerberosMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthKerberosLoginAsync(KerberosLoginRequest kerberosLoginRequest, string kerberosMountPath = "kerberos", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Configures the JWT Public Key and Kubernetes API information.
@@ -5805,7 +5805,7 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthKubernetesConfigAsync(KubernetesConfigRequest kubernetesConfigRequest, string kubernetesMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthKubernetesConfigAsync(KubernetesConfigRequest kubernetesConfigRequest, string kubernetesMountPath = "kubernetes", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Authenticates Kubernetes service accounts with Vault.
@@ -5818,7 +5818,7 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthKubernetesLoginAsync(KubernetesLoginRequest kubernetesLoginRequest, string kubernetesMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthKubernetesLoginAsync(KubernetesLoginRequest kubernetesLoginRequest, string kubernetesMountPath = "kubernetes", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Register an role with the backend.
@@ -5832,7 +5832,7 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthKubernetesRoleNameAsync(string name, KubernetesRoleRequest kubernetesRoleRequest, string kubernetesMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthKubernetesRoleNameAsync(string name, KubernetesRoleRequest kubernetesRoleRequest, string kubernetesMountPath = "kubernetes", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Configure the LDAP server to connect to, along with its options.
@@ -5845,7 +5845,7 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthLdapConfigAsync(LdapConfigRequest ldapConfigRequest, string ldapMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthLdapConfigAsync(LdapConfigRequest ldapConfigRequest, string ldapMountPath = "ldap", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
@@ -5859,7 +5859,7 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthLdapGroupsNameAsync(string name, LdapGroupsRequest ldapGroupsRequest, string ldapMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthLdapGroupsNameAsync(string name, LdapGroupsRequest ldapGroupsRequest, string ldapMountPath = "ldap", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Log in with a username and password.
@@ -5873,7 +5873,7 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthLdapLoginUsernameAsync(string username, LdapLoginRequest ldapLoginRequest, string ldapMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthLdapLoginUsernameAsync(string username, LdapLoginRequest ldapLoginRequest, string ldapMountPath = "ldap", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage users allowed to authenticate.
@@ -5887,7 +5887,7 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthLdapUsersNameAsync(string name, LdapUsersRequest ldapUsersRequest, string ldapMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthLdapUsersNameAsync(string name, LdapUsersRequest ldapUsersRequest, string ldapMountPath = "ldap", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manages the configuration for the Vault Auth Plugin.
@@ -5900,7 +5900,7 @@ namespace Vault.Api
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthOciConfigAsync(OciConfigRequest ociConfigRequest, string ociMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthOciConfigAsync(OciConfigRequest ociConfigRequest, string ociMountPath = "oci", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Authenticates to Vault using OCI credentials
@@ -5914,7 +5914,7 @@ namespace Vault.Api
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthOciLoginRoleAsync(string role, OciLoginRequest ociLoginRequest, string ociMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthOciLoginRoleAsync(string role, OciLoginRequest ociLoginRequest, string ociMountPath = "oci", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Create a role and associate policies to it.
@@ -5928,7 +5928,7 @@ namespace Vault.Api
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthOciRoleRoleAsync(string role, OciRoleRequest ociRoleRequest, string ociMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthOciRoleRoleAsync(string role, OciRoleRequest ociRoleRequest, string ociMountPath = "oci", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Configure the JWT authentication backend.
@@ -5941,7 +5941,7 @@ namespace Vault.Api
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthOidcConfigAsync(OidcConfigRequest oidcConfigRequest, string oidcMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthOidcConfigAsync(OidcConfigRequest oidcConfigRequest, string oidcMountPath = "oidc", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Authenticates to Vault using a JWT (or OIDC) token.
@@ -5954,7 +5954,7 @@ namespace Vault.Api
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthOidcLoginAsync(OidcLoginRequest oidcLoginRequest, string oidcMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthOidcLoginAsync(OidcLoginRequest oidcLoginRequest, string oidcMountPath = "oidc", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Request an authorization URL to start an OIDC login flow.
@@ -5967,7 +5967,7 @@ namespace Vault.Api
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthOidcOidcAuthUrlAsync(OidcOidcAuthUrlRequest oidcOidcAuthUrlRequest, string oidcMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthOidcOidcAuthUrlAsync(OidcOidcAuthUrlRequest oidcOidcAuthUrlRequest, string oidcMountPath = "oidc", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Callback endpoint to handle form_posts.
@@ -5980,7 +5980,7 @@ namespace Vault.Api
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthOidcOidcCallbackAsync(OidcOidcCallbackRequest oidcOidcCallbackRequest, string oidcMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthOidcOidcCallbackAsync(OidcOidcCallbackRequest oidcOidcCallbackRequest, string oidcMountPath = "oidc", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Register an role with the backend.
@@ -5994,7 +5994,7 @@ namespace Vault.Api
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthOidcRoleNameAsync(string name, OidcRoleRequest oidcRoleRequest, string oidcMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthOidcRoleNameAsync(string name, OidcRoleRequest oidcRoleRequest, string oidcMountPath = "oidc", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
@@ -6007,7 +6007,7 @@ namespace Vault.Api
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthOktaConfigAsync(OktaConfigRequest oktaConfigRequest, string oktaMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthOktaConfigAsync(OktaConfigRequest oktaConfigRequest, string oktaMountPath = "okta", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage users allowed to authenticate.
@@ -6021,7 +6021,7 @@ namespace Vault.Api
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthOktaGroupsNameAsync(string name, OktaGroupsRequest oktaGroupsRequest, string oktaMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthOktaGroupsNameAsync(string name, OktaGroupsRequest oktaGroupsRequest, string oktaMountPath = "okta", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Log in with a username and password.
@@ -6035,7 +6035,7 @@ namespace Vault.Api
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthOktaLoginUsernameAsync(string username, OktaLoginRequest oktaLoginRequest, string oktaMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthOktaLoginUsernameAsync(string username, OktaLoginRequest oktaLoginRequest, string oktaMountPath = "okta", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
@@ -6049,7 +6049,7 @@ namespace Vault.Api
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthOktaUsersNameAsync(string name, OktaUsersRequest oktaUsersRequest, string oktaMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthOktaUsersNameAsync(string name, OktaUsersRequest oktaUsersRequest, string oktaMountPath = "okta", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Configure the RADIUS server to connect to, along with its options.
@@ -6062,7 +6062,7 @@ namespace Vault.Api
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthRadiusConfigAsync(RadiusConfigRequest radiusConfigRequest, string radiusMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthRadiusConfigAsync(RadiusConfigRequest radiusConfigRequest, string radiusMountPath = "radius", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Log in with a username and password.
@@ -6075,7 +6075,7 @@ namespace Vault.Api
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthRadiusLoginAsync(RadiusLoginRequest radiusLoginRequest, string radiusMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthRadiusLoginAsync(RadiusLoginRequest radiusLoginRequest, string radiusMountPath = "radius", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Log in with a username and password.
@@ -6089,7 +6089,7 @@ namespace Vault.Api
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthRadiusLoginUrlusernameAsync(string urlusername, RadiusLoginRequest radiusLoginRequest, string radiusMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthRadiusLoginUrlusernameAsync(string urlusername, RadiusLoginRequest radiusLoginRequest, string radiusMountPath = "radius", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage users allowed to authenticate.
@@ -6103,7 +6103,7 @@ namespace Vault.Api
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthRadiusUsersNameAsync(string name, RadiusUsersRequest radiusUsersRequest, string radiusMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthRadiusUsersNameAsync(string name, RadiusUsersRequest radiusUsersRequest, string radiusMountPath = "radius", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// The token create path is used to create new tokens.
@@ -6113,11 +6113,11 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateRequest"></param>
-        /// <param name="format">Return json formatted output (optional)</param>
+        /// <param name="format">Return json formatted output (optional, default to &quot;json&quot;)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthTokenCreateAsync(TokenCreateRequest tokenCreateRequest, string format = default(string), string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthTokenCreateAsync(TokenCreateRequest tokenCreateRequest, string format = "json", string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// The token create path is used to create new orphan tokens.
@@ -6127,11 +6127,11 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateOrphanRequest"></param>
-        /// <param name="format">Return json formatted output (optional)</param>
+        /// <param name="format">Return json formatted output (optional, default to &quot;json&quot;)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthTokenCreateOrphanAsync(TokenCreateOrphanRequest tokenCreateOrphanRequest, string format = default(string), string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthTokenCreateOrphanAsync(TokenCreateOrphanRequest tokenCreateOrphanRequest, string format = "json", string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This token create path is used to create new tokens adhering to the given role.
@@ -6142,11 +6142,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role</param>
         /// <param name="tokenCreateRequest"></param>
-        /// <param name="format">Return json formatted output (optional)</param>
+        /// <param name="format">Return json formatted output (optional, default to &quot;json&quot;)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthTokenCreateRoleNameAsync(string roleName, TokenCreateRequest tokenCreateRequest, string format = default(string), string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthTokenCreateRoleNameAsync(string roleName, TokenCreateRequest tokenCreateRequest, string format = "json", string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This endpoint will lookup a token and its properties.
@@ -6159,7 +6159,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthTokenLookupAsync(TokenLookupRequest tokenLookupRequest, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthTokenLookupAsync(TokenLookupRequest tokenLookupRequest, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This endpoint will lookup a token associated with the given accessor and its properties. Response will not contain the token ID.
@@ -6172,7 +6172,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthTokenLookupAccessorAsync(TokenLookupAccessorRequest tokenLookupAccessorRequest, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthTokenLookupAccessorAsync(TokenLookupAccessorRequest tokenLookupAccessorRequest, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This endpoint will lookup a token and its properties.
@@ -6185,7 +6185,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthTokenLookupSelfAsync(TokenLookupSelfRequest tokenLookupSelfRequest, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthTokenLookupSelfAsync(TokenLookupSelfRequest tokenLookupSelfRequest, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This endpoint will renew the given token and prevent expiration.
@@ -6198,7 +6198,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthTokenRenewAsync(TokenRenewRequest tokenRenewRequest, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthTokenRenewAsync(TokenRenewRequest tokenRenewRequest, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This endpoint will renew a token associated with the given accessor and its properties. Response will not contain the token ID.
@@ -6211,7 +6211,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthTokenRenewAccessorAsync(TokenRenewAccessorRequest tokenRenewAccessorRequest, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthTokenRenewAccessorAsync(TokenRenewAccessorRequest tokenRenewAccessorRequest, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This endpoint will renew the token used to call it and prevent expiration.
@@ -6224,7 +6224,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthTokenRenewSelfAsync(TokenRenewSelfRequest tokenRenewSelfRequest, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthTokenRenewSelfAsync(TokenRenewSelfRequest tokenRenewSelfRequest, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This endpoint will delete the given token and all of its child tokens.
@@ -6237,7 +6237,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthTokenRevokeAsync(TokenRevokeRequest tokenRevokeRequest, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthTokenRevokeAsync(TokenRevokeRequest tokenRevokeRequest, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This endpoint will delete the token associated with the accessor and all of its child tokens.
@@ -6250,7 +6250,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthTokenRevokeAccessorAsync(TokenRevokeAccessorRequest tokenRevokeAccessorRequest, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthTokenRevokeAccessorAsync(TokenRevokeAccessorRequest tokenRevokeAccessorRequest, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This endpoint will delete the token and orphan its child tokens.
@@ -6263,7 +6263,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthTokenRevokeOrphanAsync(TokenRevokeOrphanRequest tokenRevokeOrphanRequest, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthTokenRevokeOrphanAsync(TokenRevokeOrphanRequest tokenRevokeOrphanRequest, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This endpoint will delete the token used to call it and all of its child tokens.
@@ -6275,7 +6275,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthTokenRevokeSelfAsync(string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthTokenRevokeSelfAsync(string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -6289,7 +6289,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthTokenRolesRoleNameAsync(string roleName, TokenRolesRequest tokenRolesRequest, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthTokenRolesRoleNameAsync(string roleName, TokenRolesRequest tokenRolesRequest, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
@@ -6301,7 +6301,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthTokenTidyAsync(string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthTokenTidyAsync(string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Log in with a username and password.
@@ -6315,7 +6315,7 @@ namespace Vault.Api
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthUserpassLoginUsernameAsync(string username, UserpassLoginRequest userpassLoginRequest, string userpassMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthUserpassLoginUsernameAsync(string username, UserpassLoginRequest userpassLoginRequest, string userpassMountPath = "userpass", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage users allowed to authenticate.
@@ -6329,7 +6329,7 @@ namespace Vault.Api
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthUserpassUsersUsernameAsync(string username, UserpassUsersRequest userpassUsersRequest, string userpassMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthUserpassUsersUsernameAsync(string username, UserpassUsersRequest userpassUsersRequest, string userpassMountPath = "userpass", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Reset user&#39;s password.
@@ -6343,7 +6343,7 @@ namespace Vault.Api
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthUserpassUsersUsernamePasswordAsync(string username, UserpassUsersPasswordRequest userpassUsersPasswordRequest, string userpassMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthUserpassUsersUsernamePasswordAsync(string username, UserpassUsersPasswordRequest userpassUsersPasswordRequest, string userpassMountPath = "userpass", CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Update the policies associated with the username.
@@ -6357,7 +6357,7 @@ namespace Vault.Api
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthUserpassUsersUsernamePoliciesAsync(string username, UserpassUsersPoliciesRequest userpassUsersPoliciesRequest, string userpassMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthUserpassUsersUsernamePoliciesAsync(string username, UserpassUsersPoliciesRequest userpassUsersPoliciesRequest, string userpassMountPath = "userpass", CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -6438,7 +6438,7 @@ namespace Vault.Api
         /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthAlicloudRoleRole(string role, string alicloudMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthAlicloudRoleRole(string role, string alicloudMountPath = "alicloud")
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -6486,7 +6486,7 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthAlicloudRoleRoleAsync(string role, string alicloudMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthAlicloudRoleRoleAsync(string role, string alicloudMountPath = "alicloud", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -6534,7 +6534,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthApproleRoleRoleName(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthApproleRoleRoleName(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -6582,7 +6582,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -6630,7 +6630,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthApproleRoleRoleNameBindSecretId(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthApproleRoleRoleNameBindSecretId(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -6678,7 +6678,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameBindSecretIdAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameBindSecretIdAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -6726,7 +6726,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthApproleRoleRoleNameBoundCidrList(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthApproleRoleRoleNameBoundCidrList(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -6774,7 +6774,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameBoundCidrListAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameBoundCidrListAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -6822,7 +6822,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthApproleRoleRoleNamePeriod(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthApproleRoleRoleNamePeriod(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -6870,7 +6870,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNamePeriodAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNamePeriodAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -6918,7 +6918,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthApproleRoleRoleNamePolicies(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthApproleRoleRoleNamePolicies(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -6966,7 +6966,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNamePoliciesAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNamePoliciesAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -7014,7 +7014,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroy(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroy(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -7062,7 +7062,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroyAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroyAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -7110,7 +7110,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -7158,7 +7158,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdBoundCidrsAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdBoundCidrsAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -7206,7 +7206,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdDestroy(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdDestroy(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -7254,7 +7254,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdDestroyAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdDestroyAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -7302,7 +7302,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdNumUses(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdNumUses(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -7350,7 +7350,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdNumUsesAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdNumUsesAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -7398,7 +7398,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdTtl(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdTtl(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -7446,7 +7446,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdTtlAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdTtlAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -7494,7 +7494,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthApproleRoleRoleNameTokenBoundCidrs(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthApproleRoleRoleNameTokenBoundCidrs(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -7542,7 +7542,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameTokenBoundCidrsAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameTokenBoundCidrsAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -7590,7 +7590,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthApproleRoleRoleNameTokenMaxTtl(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthApproleRoleRoleNameTokenMaxTtl(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -7638,7 +7638,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameTokenMaxTtlAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameTokenMaxTtlAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -7686,7 +7686,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthApproleRoleRoleNameTokenNumUses(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthApproleRoleRoleNameTokenNumUses(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -7734,7 +7734,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameTokenNumUsesAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameTokenNumUsesAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -7782,7 +7782,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthApproleRoleRoleNameTokenTtl(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthApproleRoleRoleNameTokenTtl(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -7830,7 +7830,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameTokenTtlAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameTokenTtlAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -7878,7 +7878,7 @@ namespace Vault.Api
         /// <param name="certName">Name of the certificate.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthAwsConfigCertificateCertName(string certName, string awsMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthAwsConfigCertificateCertName(string certName, string awsMountPath = "aws")
         {
             // verify the required parameter 'certName' is set
             if (certName == null)
@@ -7926,7 +7926,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthAwsConfigCertificateCertNameAsync(string certName, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthAwsConfigCertificateCertNameAsync(string certName, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'certName' is set
             if (certName == null)
@@ -7973,7 +7973,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthAwsConfigClient(string awsMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthAwsConfigClient(string awsMountPath = "aws")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8015,7 +8015,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthAwsConfigClientAsync(string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthAwsConfigClientAsync(string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8058,7 +8058,7 @@ namespace Vault.Api
         /// <param name="accountId">AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthAwsConfigStsAccountId(string accountId, string awsMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthAwsConfigStsAccountId(string accountId, string awsMountPath = "aws")
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
@@ -8106,7 +8106,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthAwsConfigStsAccountIdAsync(string accountId, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthAwsConfigStsAccountIdAsync(string accountId, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
@@ -8153,7 +8153,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthAwsConfigTidyIdentityAccesslist(string awsMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthAwsConfigTidyIdentityAccesslist(string awsMountPath = "aws")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8195,7 +8195,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthAwsConfigTidyIdentityAccesslistAsync(string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthAwsConfigTidyIdentityAccesslistAsync(string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8237,7 +8237,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthAwsConfigTidyIdentityWhitelist(string awsMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthAwsConfigTidyIdentityWhitelist(string awsMountPath = "aws")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8279,7 +8279,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthAwsConfigTidyIdentityWhitelistAsync(string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthAwsConfigTidyIdentityWhitelistAsync(string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8321,7 +8321,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthAwsConfigTidyRoletagBlacklist(string awsMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthAwsConfigTidyRoletagBlacklist(string awsMountPath = "aws")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8363,7 +8363,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthAwsConfigTidyRoletagBlacklistAsync(string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthAwsConfigTidyRoletagBlacklistAsync(string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8405,7 +8405,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthAwsConfigTidyRoletagDenylist(string awsMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthAwsConfigTidyRoletagDenylist(string awsMountPath = "aws")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8447,7 +8447,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthAwsConfigTidyRoletagDenylistAsync(string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthAwsConfigTidyRoletagDenylistAsync(string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8490,7 +8490,7 @@ namespace Vault.Api
         /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthAwsIdentityAccesslistInstanceId(string instanceId, string awsMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthAwsIdentityAccesslistInstanceId(string instanceId, string awsMountPath = "aws")
         {
             // verify the required parameter 'instanceId' is set
             if (instanceId == null)
@@ -8538,7 +8538,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthAwsIdentityAccesslistInstanceIdAsync(string instanceId, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthAwsIdentityAccesslistInstanceIdAsync(string instanceId, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceId' is set
             if (instanceId == null)
@@ -8586,7 +8586,7 @@ namespace Vault.Api
         /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthAwsIdentityWhitelistInstanceId(string instanceId, string awsMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthAwsIdentityWhitelistInstanceId(string instanceId, string awsMountPath = "aws")
         {
             // verify the required parameter 'instanceId' is set
             if (instanceId == null)
@@ -8634,7 +8634,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthAwsIdentityWhitelistInstanceIdAsync(string instanceId, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthAwsIdentityWhitelistInstanceIdAsync(string instanceId, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceId' is set
             if (instanceId == null)
@@ -8682,7 +8682,7 @@ namespace Vault.Api
         /// <param name="role">Name of the role.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthAwsRoleRole(string role, string awsMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthAwsRoleRole(string role, string awsMountPath = "aws")
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -8730,7 +8730,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthAwsRoleRoleAsync(string role, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthAwsRoleRoleAsync(string role, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -8778,7 +8778,7 @@ namespace Vault.Api
         /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthAwsRoletagBlacklistRoleTag(string roleTag, string awsMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthAwsRoletagBlacklistRoleTag(string roleTag, string awsMountPath = "aws")
         {
             // verify the required parameter 'roleTag' is set
             if (roleTag == null)
@@ -8826,7 +8826,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthAwsRoletagBlacklistRoleTagAsync(string roleTag, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthAwsRoletagBlacklistRoleTagAsync(string roleTag, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleTag' is set
             if (roleTag == null)
@@ -8874,7 +8874,7 @@ namespace Vault.Api
         /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthAwsRoletagDenylistRoleTag(string roleTag, string awsMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthAwsRoletagDenylistRoleTag(string roleTag, string awsMountPath = "aws")
         {
             // verify the required parameter 'roleTag' is set
             if (roleTag == null)
@@ -8922,7 +8922,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthAwsRoletagDenylistRoleTagAsync(string roleTag, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthAwsRoletagDenylistRoleTagAsync(string roleTag, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleTag' is set
             if (roleTag == null)
@@ -8969,7 +8969,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthAzureConfig(string azureMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthAzureConfig(string azureMountPath = "azure")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9011,7 +9011,7 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthAzureConfigAsync(string azureMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthAzureConfigAsync(string azureMountPath = "azure", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9054,7 +9054,7 @@ namespace Vault.Api
         /// <param name="name">Name of the role.</param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthAzureRoleName(string name, string azureMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthAzureRoleName(string name, string azureMountPath = "azure")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -9102,7 +9102,7 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthAzureRoleNameAsync(string name, string azureMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthAzureRoleNameAsync(string name, string azureMountPath = "azure", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -9150,7 +9150,7 @@ namespace Vault.Api
         /// <param name="name">The name of the certificate</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthCertCertsName(string name, string certMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthCertCertsName(string name, string certMountPath = "cert")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -9198,7 +9198,7 @@ namespace Vault.Api
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthCertCertsNameAsync(string name, string certMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthCertCertsNameAsync(string name, string certMountPath = "cert", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -9246,7 +9246,7 @@ namespace Vault.Api
         /// <param name="name">The name of the certificate</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthCertCrlsName(string name, string certMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthCertCrlsName(string name, string certMountPath = "cert")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -9294,7 +9294,7 @@ namespace Vault.Api
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthCertCrlsNameAsync(string name, string certMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthCertCrlsNameAsync(string name, string certMountPath = "cert", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -9341,7 +9341,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthCfConfig(string cfMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthCfConfig(string cfMountPath = "cf")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9383,7 +9383,7 @@ namespace Vault.Api
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthCfConfigAsync(string cfMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthCfConfigAsync(string cfMountPath = "cf", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -9426,7 +9426,7 @@ namespace Vault.Api
         /// <param name="role">The name of the role.</param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthCfRolesRole(string role, string cfMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthCfRolesRole(string role, string cfMountPath = "cf")
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -9474,7 +9474,7 @@ namespace Vault.Api
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthCfRolesRoleAsync(string role, string cfMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthCfRolesRoleAsync(string role, string cfMountPath = "cf", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -9522,7 +9522,7 @@ namespace Vault.Api
         /// <param name="name">Name of the role.</param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthGcpRoleName(string name, string gcpMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthGcpRoleName(string name, string gcpMountPath = "gcp")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -9570,7 +9570,7 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthGcpRoleNameAsync(string name, string gcpMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthGcpRoleNameAsync(string name, string gcpMountPath = "gcp", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -9618,7 +9618,7 @@ namespace Vault.Api
         /// <param name="key">Key for the teams mapping</param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthGithubMapTeamsKey(string key, string githubMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthGithubMapTeamsKey(string key, string githubMountPath = "github")
         {
             // verify the required parameter 'key' is set
             if (key == null)
@@ -9666,7 +9666,7 @@ namespace Vault.Api
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthGithubMapTeamsKeyAsync(string key, string githubMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthGithubMapTeamsKeyAsync(string key, string githubMountPath = "github", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'key' is set
             if (key == null)
@@ -9714,7 +9714,7 @@ namespace Vault.Api
         /// <param name="key">Key for the users mapping</param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthGithubMapUsersKey(string key, string githubMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthGithubMapUsersKey(string key, string githubMountPath = "github")
         {
             // verify the required parameter 'key' is set
             if (key == null)
@@ -9762,7 +9762,7 @@ namespace Vault.Api
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthGithubMapUsersKeyAsync(string key, string githubMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthGithubMapUsersKeyAsync(string key, string githubMountPath = "github", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'key' is set
             if (key == null)
@@ -9810,7 +9810,7 @@ namespace Vault.Api
         /// <param name="name">Name of the role.</param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthJwtRoleName(string name, string jwtMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthJwtRoleName(string name, string jwtMountPath = "jwt")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -9858,7 +9858,7 @@ namespace Vault.Api
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthJwtRoleNameAsync(string name, string jwtMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthJwtRoleNameAsync(string name, string jwtMountPath = "jwt", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -9906,7 +9906,7 @@ namespace Vault.Api
         /// <param name="name">Name of the LDAP group.</param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthKerberosGroupsName(string name, string kerberosMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthKerberosGroupsName(string name, string kerberosMountPath = "kerberos")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -9954,7 +9954,7 @@ namespace Vault.Api
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthKerberosGroupsNameAsync(string name, string kerberosMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthKerberosGroupsNameAsync(string name, string kerberosMountPath = "kerberos", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10002,7 +10002,7 @@ namespace Vault.Api
         /// <param name="name">Name of the role.</param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthKubernetesRoleName(string name, string kubernetesMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthKubernetesRoleName(string name, string kubernetesMountPath = "kubernetes")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10050,7 +10050,7 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthKubernetesRoleNameAsync(string name, string kubernetesMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthKubernetesRoleNameAsync(string name, string kubernetesMountPath = "kubernetes", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10098,7 +10098,7 @@ namespace Vault.Api
         /// <param name="name">Name of the LDAP group.</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthLdapGroupsName(string name, string ldapMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthLdapGroupsName(string name, string ldapMountPath = "ldap")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10146,7 +10146,7 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthLdapGroupsNameAsync(string name, string ldapMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthLdapGroupsNameAsync(string name, string ldapMountPath = "ldap", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10194,7 +10194,7 @@ namespace Vault.Api
         /// <param name="name">Name of the LDAP user.</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthLdapUsersName(string name, string ldapMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthLdapUsersName(string name, string ldapMountPath = "ldap")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10242,7 +10242,7 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthLdapUsersNameAsync(string name, string ldapMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthLdapUsersNameAsync(string name, string ldapMountPath = "ldap", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10289,7 +10289,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthOciConfig(string ociMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthOciConfig(string ociMountPath = "oci")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10331,7 +10331,7 @@ namespace Vault.Api
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthOciConfigAsync(string ociMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthOciConfigAsync(string ociMountPath = "oci", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -10374,7 +10374,7 @@ namespace Vault.Api
         /// <param name="role">Name of the role.</param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthOciRoleRole(string role, string ociMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthOciRoleRole(string role, string ociMountPath = "oci")
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -10422,7 +10422,7 @@ namespace Vault.Api
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthOciRoleRoleAsync(string role, string ociMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthOciRoleRoleAsync(string role, string ociMountPath = "oci", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -10470,7 +10470,7 @@ namespace Vault.Api
         /// <param name="name">Name of the role.</param>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthOidcRoleName(string name, string oidcMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthOidcRoleName(string name, string oidcMountPath = "oidc")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10518,7 +10518,7 @@ namespace Vault.Api
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthOidcRoleNameAsync(string name, string oidcMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthOidcRoleNameAsync(string name, string oidcMountPath = "oidc", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10566,7 +10566,7 @@ namespace Vault.Api
         /// <param name="name">Name of the Okta group.</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthOktaGroupsName(string name, string oktaMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthOktaGroupsName(string name, string oktaMountPath = "okta")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10614,7 +10614,7 @@ namespace Vault.Api
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthOktaGroupsNameAsync(string name, string oktaMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthOktaGroupsNameAsync(string name, string oktaMountPath = "okta", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10662,7 +10662,7 @@ namespace Vault.Api
         /// <param name="name">Name of the user.</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthOktaUsersName(string name, string oktaMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthOktaUsersName(string name, string oktaMountPath = "okta")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10710,7 +10710,7 @@ namespace Vault.Api
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthOktaUsersNameAsync(string name, string oktaMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthOktaUsersNameAsync(string name, string oktaMountPath = "okta", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10758,7 +10758,7 @@ namespace Vault.Api
         /// <param name="name">Name of the RADIUS user.</param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthRadiusUsersName(string name, string radiusMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthRadiusUsersName(string name, string radiusMountPath = "radius")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10806,7 +10806,7 @@ namespace Vault.Api
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthRadiusUsersNameAsync(string name, string radiusMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthRadiusUsersNameAsync(string name, string radiusMountPath = "radius", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10854,7 +10854,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthTokenRolesRoleName(string roleName, string tokenMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthTokenRolesRoleName(string roleName, string tokenMountPath = "token")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -10902,7 +10902,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthTokenRolesRoleNameAsync(string roleName, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthTokenRolesRoleNameAsync(string roleName, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -10950,7 +10950,7 @@ namespace Vault.Api
         /// <param name="username">Username for this user.</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> DeleteAuthUserpassUsersUsername(string username, string userpassMountPath = default(string))
+        public VaultResponse<Object> DeleteAuthUserpassUsersUsername(string username, string userpassMountPath = "userpass")
         {
             // verify the required parameter 'username' is set
             if (username == null)
@@ -10998,7 +10998,7 @@ namespace Vault.Api
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> DeleteAuthUserpassUsersUsernameAsync(string username, string userpassMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> DeleteAuthUserpassUsersUsernameAsync(string username, string userpassMountPath = "userpass", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'username' is set
             if (username == null)
@@ -11046,7 +11046,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAlicloudRole(string list, string alicloudMountPath = default(string))
+        public VaultResponse<Object> GetAuthAlicloudRole(string list, string alicloudMountPath = "alicloud")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -11094,7 +11094,7 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAlicloudRoleAsync(string list, string alicloudMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAlicloudRoleAsync(string list, string alicloudMountPath = "alicloud", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -11142,7 +11142,7 @@ namespace Vault.Api
         /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAlicloudRoleRole(string role, string alicloudMountPath = default(string))
+        public VaultResponse<Object> GetAuthAlicloudRoleRole(string role, string alicloudMountPath = "alicloud")
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -11190,7 +11190,7 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAlicloudRoleRoleAsync(string role, string alicloudMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAlicloudRoleRoleAsync(string role, string alicloudMountPath = "alicloud", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -11238,7 +11238,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAlicloudRoles(string list, string alicloudMountPath = default(string))
+        public VaultResponse<Object> GetAuthAlicloudRoles(string list, string alicloudMountPath = "alicloud")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -11286,7 +11286,7 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAlicloudRolesAsync(string list, string alicloudMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAlicloudRolesAsync(string list, string alicloudMountPath = "alicloud", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -11334,7 +11334,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthApproleRole(string list, string approleMountPath = default(string))
+        public VaultResponse<Object> GetAuthApproleRole(string list, string approleMountPath = "approle")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -11382,7 +11382,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleAsync(string list, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthApproleRoleAsync(string list, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -11430,7 +11430,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthApproleRoleRoleName(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> GetAuthApproleRoleRoleName(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -11478,7 +11478,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -11526,7 +11526,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNameBindSecretId(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> GetAuthApproleRoleRoleNameBindSecretId(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -11574,7 +11574,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameBindSecretIdAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameBindSecretIdAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -11622,7 +11622,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNameBoundCidrList(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> GetAuthApproleRoleRoleNameBoundCidrList(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -11670,7 +11670,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameBoundCidrListAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameBoundCidrListAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -11718,7 +11718,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNameLocalSecretIds(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> GetAuthApproleRoleRoleNameLocalSecretIds(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -11766,7 +11766,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameLocalSecretIdsAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameLocalSecretIdsAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -11814,7 +11814,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNamePeriod(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> GetAuthApproleRoleRoleNamePeriod(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -11862,7 +11862,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNamePeriodAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNamePeriodAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -11910,7 +11910,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNamePolicies(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> GetAuthApproleRoleRoleNamePolicies(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -11958,7 +11958,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNamePoliciesAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNamePoliciesAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -12006,7 +12006,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNameRoleId(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> GetAuthApproleRoleRoleNameRoleId(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -12054,7 +12054,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameRoleIdAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameRoleIdAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -12103,7 +12103,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNameSecretId(string roleName, string list, string approleMountPath = default(string))
+        public VaultResponse<Object> GetAuthApproleRoleRoleNameSecretId(string roleName, string list, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -12157,7 +12157,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameSecretIdAsync(string roleName, string list, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameSecretIdAsync(string roleName, string list, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -12210,7 +12210,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNameSecretIdBoundCidrs(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> GetAuthApproleRoleRoleNameSecretIdBoundCidrs(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -12258,7 +12258,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameSecretIdBoundCidrsAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameSecretIdBoundCidrsAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -12306,7 +12306,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNameSecretIdNumUses(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> GetAuthApproleRoleRoleNameSecretIdNumUses(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -12354,7 +12354,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameSecretIdNumUsesAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameSecretIdNumUsesAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -12402,7 +12402,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNameSecretIdTtl(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> GetAuthApproleRoleRoleNameSecretIdTtl(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -12450,7 +12450,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameSecretIdTtlAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameSecretIdTtlAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -12498,7 +12498,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNameTokenBoundCidrs(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> GetAuthApproleRoleRoleNameTokenBoundCidrs(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -12546,7 +12546,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameTokenBoundCidrsAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameTokenBoundCidrsAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -12594,7 +12594,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNameTokenMaxTtl(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> GetAuthApproleRoleRoleNameTokenMaxTtl(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -12642,7 +12642,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameTokenMaxTtlAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameTokenMaxTtlAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -12690,7 +12690,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNameTokenNumUses(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> GetAuthApproleRoleRoleNameTokenNumUses(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -12738,7 +12738,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameTokenNumUsesAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameTokenNumUsesAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -12786,7 +12786,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNameTokenTtl(string roleName, string approleMountPath = default(string))
+        public VaultResponse<Object> GetAuthApproleRoleRoleNameTokenTtl(string roleName, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -12834,7 +12834,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameTokenTtlAsync(string roleName, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameTokenTtlAsync(string roleName, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -12882,7 +12882,7 @@ namespace Vault.Api
         /// <param name="certName">Name of the certificate.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAwsConfigCertificateCertName(string certName, string awsMountPath = default(string))
+        public VaultResponse<Object> GetAuthAwsConfigCertificateCertName(string certName, string awsMountPath = "aws")
         {
             // verify the required parameter 'certName' is set
             if (certName == null)
@@ -12930,7 +12930,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAwsConfigCertificateCertNameAsync(string certName, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAwsConfigCertificateCertNameAsync(string certName, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'certName' is set
             if (certName == null)
@@ -12978,7 +12978,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAwsConfigCertificates(string list, string awsMountPath = default(string))
+        public VaultResponse<Object> GetAuthAwsConfigCertificates(string list, string awsMountPath = "aws")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -13026,7 +13026,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAwsConfigCertificatesAsync(string list, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAwsConfigCertificatesAsync(string list, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -13073,7 +13073,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAwsConfigClient(string awsMountPath = default(string))
+        public VaultResponse<Object> GetAuthAwsConfigClient(string awsMountPath = "aws")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13115,7 +13115,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAwsConfigClientAsync(string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAwsConfigClientAsync(string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13157,7 +13157,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAwsConfigIdentity(string awsMountPath = default(string))
+        public VaultResponse<Object> GetAuthAwsConfigIdentity(string awsMountPath = "aws")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13199,7 +13199,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAwsConfigIdentityAsync(string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAwsConfigIdentityAsync(string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13242,7 +13242,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAwsConfigSts(string list, string awsMountPath = default(string))
+        public VaultResponse<Object> GetAuthAwsConfigSts(string list, string awsMountPath = "aws")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -13290,7 +13290,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAwsConfigStsAsync(string list, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAwsConfigStsAsync(string list, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -13338,7 +13338,7 @@ namespace Vault.Api
         /// <param name="accountId">AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAwsConfigStsAccountId(string accountId, string awsMountPath = default(string))
+        public VaultResponse<Object> GetAuthAwsConfigStsAccountId(string accountId, string awsMountPath = "aws")
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
@@ -13386,7 +13386,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAwsConfigStsAccountIdAsync(string accountId, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAwsConfigStsAccountIdAsync(string accountId, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
@@ -13433,7 +13433,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAwsConfigTidyIdentityAccesslist(string awsMountPath = default(string))
+        public VaultResponse<Object> GetAuthAwsConfigTidyIdentityAccesslist(string awsMountPath = "aws")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13475,7 +13475,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAwsConfigTidyIdentityAccesslistAsync(string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAwsConfigTidyIdentityAccesslistAsync(string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13517,7 +13517,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAwsConfigTidyIdentityWhitelist(string awsMountPath = default(string))
+        public VaultResponse<Object> GetAuthAwsConfigTidyIdentityWhitelist(string awsMountPath = "aws")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13559,7 +13559,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAwsConfigTidyIdentityWhitelistAsync(string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAwsConfigTidyIdentityWhitelistAsync(string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13601,7 +13601,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAwsConfigTidyRoletagBlacklist(string awsMountPath = default(string))
+        public VaultResponse<Object> GetAuthAwsConfigTidyRoletagBlacklist(string awsMountPath = "aws")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13643,7 +13643,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAwsConfigTidyRoletagBlacklistAsync(string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAwsConfigTidyRoletagBlacklistAsync(string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13685,7 +13685,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAwsConfigTidyRoletagDenylist(string awsMountPath = default(string))
+        public VaultResponse<Object> GetAuthAwsConfigTidyRoletagDenylist(string awsMountPath = "aws")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13727,7 +13727,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAwsConfigTidyRoletagDenylistAsync(string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAwsConfigTidyRoletagDenylistAsync(string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -13770,7 +13770,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAwsIdentityAccesslist(string list, string awsMountPath = default(string))
+        public VaultResponse<Object> GetAuthAwsIdentityAccesslist(string list, string awsMountPath = "aws")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -13818,7 +13818,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAwsIdentityAccesslistAsync(string list, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAwsIdentityAccesslistAsync(string list, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -13866,7 +13866,7 @@ namespace Vault.Api
         /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAwsIdentityAccesslistInstanceId(string instanceId, string awsMountPath = default(string))
+        public VaultResponse<Object> GetAuthAwsIdentityAccesslistInstanceId(string instanceId, string awsMountPath = "aws")
         {
             // verify the required parameter 'instanceId' is set
             if (instanceId == null)
@@ -13914,7 +13914,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAwsIdentityAccesslistInstanceIdAsync(string instanceId, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAwsIdentityAccesslistInstanceIdAsync(string instanceId, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceId' is set
             if (instanceId == null)
@@ -13962,7 +13962,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAwsIdentityWhitelist(string list, string awsMountPath = default(string))
+        public VaultResponse<Object> GetAuthAwsIdentityWhitelist(string list, string awsMountPath = "aws")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -14010,7 +14010,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAwsIdentityWhitelistAsync(string list, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAwsIdentityWhitelistAsync(string list, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -14058,7 +14058,7 @@ namespace Vault.Api
         /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAwsIdentityWhitelistInstanceId(string instanceId, string awsMountPath = default(string))
+        public VaultResponse<Object> GetAuthAwsIdentityWhitelistInstanceId(string instanceId, string awsMountPath = "aws")
         {
             // verify the required parameter 'instanceId' is set
             if (instanceId == null)
@@ -14106,7 +14106,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAwsIdentityWhitelistInstanceIdAsync(string instanceId, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAwsIdentityWhitelistInstanceIdAsync(string instanceId, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceId' is set
             if (instanceId == null)
@@ -14154,7 +14154,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAwsRole(string list, string awsMountPath = default(string))
+        public VaultResponse<Object> GetAuthAwsRole(string list, string awsMountPath = "aws")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -14202,7 +14202,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAwsRoleAsync(string list, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAwsRoleAsync(string list, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -14250,7 +14250,7 @@ namespace Vault.Api
         /// <param name="role">Name of the role.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAwsRoleRole(string role, string awsMountPath = default(string))
+        public VaultResponse<Object> GetAuthAwsRoleRole(string role, string awsMountPath = "aws")
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -14298,7 +14298,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAwsRoleRoleAsync(string role, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAwsRoleRoleAsync(string role, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -14346,7 +14346,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAwsRoles(string list, string awsMountPath = default(string))
+        public VaultResponse<Object> GetAuthAwsRoles(string list, string awsMountPath = "aws")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -14394,7 +14394,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAwsRolesAsync(string list, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAwsRolesAsync(string list, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -14442,7 +14442,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAwsRoletagBlacklist(string list, string awsMountPath = default(string))
+        public VaultResponse<Object> GetAuthAwsRoletagBlacklist(string list, string awsMountPath = "aws")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -14490,7 +14490,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAwsRoletagBlacklistAsync(string list, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAwsRoletagBlacklistAsync(string list, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -14538,7 +14538,7 @@ namespace Vault.Api
         /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAwsRoletagBlacklistRoleTag(string roleTag, string awsMountPath = default(string))
+        public VaultResponse<Object> GetAuthAwsRoletagBlacklistRoleTag(string roleTag, string awsMountPath = "aws")
         {
             // verify the required parameter 'roleTag' is set
             if (roleTag == null)
@@ -14586,7 +14586,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAwsRoletagBlacklistRoleTagAsync(string roleTag, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAwsRoletagBlacklistRoleTagAsync(string roleTag, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleTag' is set
             if (roleTag == null)
@@ -14634,7 +14634,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAwsRoletagDenylist(string list, string awsMountPath = default(string))
+        public VaultResponse<Object> GetAuthAwsRoletagDenylist(string list, string awsMountPath = "aws")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -14682,7 +14682,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAwsRoletagDenylistAsync(string list, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAwsRoletagDenylistAsync(string list, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -14730,7 +14730,7 @@ namespace Vault.Api
         /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAwsRoletagDenylistRoleTag(string roleTag, string awsMountPath = default(string))
+        public VaultResponse<Object> GetAuthAwsRoletagDenylistRoleTag(string roleTag, string awsMountPath = "aws")
         {
             // verify the required parameter 'roleTag' is set
             if (roleTag == null)
@@ -14778,7 +14778,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAwsRoletagDenylistRoleTagAsync(string roleTag, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAwsRoletagDenylistRoleTagAsync(string roleTag, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleTag' is set
             if (roleTag == null)
@@ -14825,7 +14825,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAzureConfig(string azureMountPath = default(string))
+        public VaultResponse<Object> GetAuthAzureConfig(string azureMountPath = "azure")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14867,7 +14867,7 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAzureConfigAsync(string azureMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAzureConfigAsync(string azureMountPath = "azure", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14910,7 +14910,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAzureRole(string list, string azureMountPath = default(string))
+        public VaultResponse<Object> GetAuthAzureRole(string list, string azureMountPath = "azure")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -14958,7 +14958,7 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAzureRoleAsync(string list, string azureMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAzureRoleAsync(string list, string azureMountPath = "azure", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -15006,7 +15006,7 @@ namespace Vault.Api
         /// <param name="name">Name of the role.</param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthAzureRoleName(string name, string azureMountPath = default(string))
+        public VaultResponse<Object> GetAuthAzureRoleName(string name, string azureMountPath = "azure")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -15054,7 +15054,7 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthAzureRoleNameAsync(string name, string azureMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthAzureRoleNameAsync(string name, string azureMountPath = "azure", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -15101,7 +15101,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="centrifyMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;centrify&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthCentrifyConfig(string centrifyMountPath = default(string))
+        public VaultResponse<Object> GetAuthCentrifyConfig(string centrifyMountPath = "centrify")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15143,7 +15143,7 @@ namespace Vault.Api
         /// <param name="centrifyMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;centrify&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthCentrifyConfigAsync(string centrifyMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthCentrifyConfigAsync(string centrifyMountPath = "centrify", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15186,7 +15186,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthCertCerts(string list, string certMountPath = default(string))
+        public VaultResponse<Object> GetAuthCertCerts(string list, string certMountPath = "cert")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -15234,7 +15234,7 @@ namespace Vault.Api
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthCertCertsAsync(string list, string certMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthCertCertsAsync(string list, string certMountPath = "cert", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -15282,7 +15282,7 @@ namespace Vault.Api
         /// <param name="name">The name of the certificate</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthCertCertsName(string name, string certMountPath = default(string))
+        public VaultResponse<Object> GetAuthCertCertsName(string name, string certMountPath = "cert")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -15330,7 +15330,7 @@ namespace Vault.Api
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthCertCertsNameAsync(string name, string certMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthCertCertsNameAsync(string name, string certMountPath = "cert", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -15377,7 +15377,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthCertConfig(string certMountPath = default(string))
+        public VaultResponse<Object> GetAuthCertConfig(string certMountPath = "cert")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15419,7 +15419,7 @@ namespace Vault.Api
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthCertConfigAsync(string certMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthCertConfigAsync(string certMountPath = "cert", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15462,7 +15462,7 @@ namespace Vault.Api
         /// <param name="name">The name of the certificate</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthCertCrlsName(string name, string certMountPath = default(string))
+        public VaultResponse<Object> GetAuthCertCrlsName(string name, string certMountPath = "cert")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -15510,7 +15510,7 @@ namespace Vault.Api
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthCertCrlsNameAsync(string name, string certMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthCertCrlsNameAsync(string name, string certMountPath = "cert", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -15557,7 +15557,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthCfConfig(string cfMountPath = default(string))
+        public VaultResponse<Object> GetAuthCfConfig(string cfMountPath = "cf")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15599,7 +15599,7 @@ namespace Vault.Api
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthCfConfigAsync(string cfMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthCfConfigAsync(string cfMountPath = "cf", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15642,7 +15642,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthCfRoles(string list, string cfMountPath = default(string))
+        public VaultResponse<Object> GetAuthCfRoles(string list, string cfMountPath = "cf")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -15690,7 +15690,7 @@ namespace Vault.Api
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthCfRolesAsync(string list, string cfMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthCfRolesAsync(string list, string cfMountPath = "cf", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -15738,7 +15738,7 @@ namespace Vault.Api
         /// <param name="role">The name of the role.</param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthCfRolesRole(string role, string cfMountPath = default(string))
+        public VaultResponse<Object> GetAuthCfRolesRole(string role, string cfMountPath = "cf")
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -15786,7 +15786,7 @@ namespace Vault.Api
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthCfRolesRoleAsync(string role, string cfMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthCfRolesRoleAsync(string role, string cfMountPath = "cf", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -15833,7 +15833,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthGcpConfig(string gcpMountPath = default(string))
+        public VaultResponse<Object> GetAuthGcpConfig(string gcpMountPath = "gcp")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15875,7 +15875,7 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthGcpConfigAsync(string gcpMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthGcpConfigAsync(string gcpMountPath = "gcp", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15918,7 +15918,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthGcpRole(string list, string gcpMountPath = default(string))
+        public VaultResponse<Object> GetAuthGcpRole(string list, string gcpMountPath = "gcp")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -15966,7 +15966,7 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthGcpRoleAsync(string list, string gcpMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthGcpRoleAsync(string list, string gcpMountPath = "gcp", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -16014,7 +16014,7 @@ namespace Vault.Api
         /// <param name="name">Name of the role.</param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthGcpRoleName(string name, string gcpMountPath = default(string))
+        public VaultResponse<Object> GetAuthGcpRoleName(string name, string gcpMountPath = "gcp")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -16062,7 +16062,7 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthGcpRoleNameAsync(string name, string gcpMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthGcpRoleNameAsync(string name, string gcpMountPath = "gcp", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -16110,7 +16110,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthGcpRoles(string list, string gcpMountPath = default(string))
+        public VaultResponse<Object> GetAuthGcpRoles(string list, string gcpMountPath = "gcp")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -16158,7 +16158,7 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthGcpRolesAsync(string list, string gcpMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthGcpRolesAsync(string list, string gcpMountPath = "gcp", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -16205,7 +16205,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthGithubConfig(string githubMountPath = default(string))
+        public VaultResponse<Object> GetAuthGithubConfig(string githubMountPath = "github")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -16247,7 +16247,7 @@ namespace Vault.Api
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthGithubConfigAsync(string githubMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthGithubConfigAsync(string githubMountPath = "github", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -16288,9 +16288,9 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthGithubMapTeams(string githubMountPath = default(string), string list = default(string))
+        public VaultResponse<Object> GetAuthGithubMapTeams(string githubMountPath = "github", string list = "false")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -16334,10 +16334,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthGithubMapTeamsAsync(string githubMountPath = default(string), string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthGithubMapTeamsAsync(string githubMountPath = "github", string list = "false", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -16384,7 +16384,7 @@ namespace Vault.Api
         /// <param name="key">Key for the teams mapping</param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthGithubMapTeamsKey(string key, string githubMountPath = default(string))
+        public VaultResponse<Object> GetAuthGithubMapTeamsKey(string key, string githubMountPath = "github")
         {
             // verify the required parameter 'key' is set
             if (key == null)
@@ -16432,7 +16432,7 @@ namespace Vault.Api
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthGithubMapTeamsKeyAsync(string key, string githubMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthGithubMapTeamsKeyAsync(string key, string githubMountPath = "github", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'key' is set
             if (key == null)
@@ -16478,9 +16478,9 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthGithubMapUsers(string githubMountPath = default(string), string list = default(string))
+        public VaultResponse<Object> GetAuthGithubMapUsers(string githubMountPath = "github", string list = "false")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -16524,10 +16524,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthGithubMapUsersAsync(string githubMountPath = default(string), string list = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthGithubMapUsersAsync(string githubMountPath = "github", string list = "false", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -16574,7 +16574,7 @@ namespace Vault.Api
         /// <param name="key">Key for the users mapping</param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthGithubMapUsersKey(string key, string githubMountPath = default(string))
+        public VaultResponse<Object> GetAuthGithubMapUsersKey(string key, string githubMountPath = "github")
         {
             // verify the required parameter 'key' is set
             if (key == null)
@@ -16622,7 +16622,7 @@ namespace Vault.Api
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthGithubMapUsersKeyAsync(string key, string githubMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthGithubMapUsersKeyAsync(string key, string githubMountPath = "github", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'key' is set
             if (key == null)
@@ -16669,7 +16669,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthJwtConfig(string jwtMountPath = default(string))
+        public VaultResponse<Object> GetAuthJwtConfig(string jwtMountPath = "jwt")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -16711,7 +16711,7 @@ namespace Vault.Api
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthJwtConfigAsync(string jwtMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthJwtConfigAsync(string jwtMountPath = "jwt", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -16753,7 +16753,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthJwtOidcCallback(string jwtMountPath = default(string))
+        public VaultResponse<Object> GetAuthJwtOidcCallback(string jwtMountPath = "jwt")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -16795,7 +16795,7 @@ namespace Vault.Api
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthJwtOidcCallbackAsync(string jwtMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthJwtOidcCallbackAsync(string jwtMountPath = "jwt", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -16838,7 +16838,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthJwtRole(string list, string jwtMountPath = default(string))
+        public VaultResponse<Object> GetAuthJwtRole(string list, string jwtMountPath = "jwt")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -16886,7 +16886,7 @@ namespace Vault.Api
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthJwtRoleAsync(string list, string jwtMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthJwtRoleAsync(string list, string jwtMountPath = "jwt", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -16934,7 +16934,7 @@ namespace Vault.Api
         /// <param name="name">Name of the role.</param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthJwtRoleName(string name, string jwtMountPath = default(string))
+        public VaultResponse<Object> GetAuthJwtRoleName(string name, string jwtMountPath = "jwt")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -16982,7 +16982,7 @@ namespace Vault.Api
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthJwtRoleNameAsync(string name, string jwtMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthJwtRoleNameAsync(string name, string jwtMountPath = "jwt", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -17029,7 +17029,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthKerberosConfig(string kerberosMountPath = default(string))
+        public VaultResponse<Object> GetAuthKerberosConfig(string kerberosMountPath = "kerberos")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -17071,7 +17071,7 @@ namespace Vault.Api
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthKerberosConfigAsync(string kerberosMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthKerberosConfigAsync(string kerberosMountPath = "kerberos", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -17113,7 +17113,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthKerberosConfigLdap(string kerberosMountPath = default(string))
+        public VaultResponse<Object> GetAuthKerberosConfigLdap(string kerberosMountPath = "kerberos")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -17155,7 +17155,7 @@ namespace Vault.Api
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthKerberosConfigLdapAsync(string kerberosMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthKerberosConfigLdapAsync(string kerberosMountPath = "kerberos", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -17198,7 +17198,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthKerberosGroups(string list, string kerberosMountPath = default(string))
+        public VaultResponse<Object> GetAuthKerberosGroups(string list, string kerberosMountPath = "kerberos")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -17246,7 +17246,7 @@ namespace Vault.Api
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthKerberosGroupsAsync(string list, string kerberosMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthKerberosGroupsAsync(string list, string kerberosMountPath = "kerberos", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -17294,7 +17294,7 @@ namespace Vault.Api
         /// <param name="name">Name of the LDAP group.</param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthKerberosGroupsName(string name, string kerberosMountPath = default(string))
+        public VaultResponse<Object> GetAuthKerberosGroupsName(string name, string kerberosMountPath = "kerberos")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -17342,7 +17342,7 @@ namespace Vault.Api
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthKerberosGroupsNameAsync(string name, string kerberosMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthKerberosGroupsNameAsync(string name, string kerberosMountPath = "kerberos", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -17389,7 +17389,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthKerberosLogin(string kerberosMountPath = default(string))
+        public VaultResponse<Object> GetAuthKerberosLogin(string kerberosMountPath = "kerberos")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -17431,7 +17431,7 @@ namespace Vault.Api
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthKerberosLoginAsync(string kerberosMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthKerberosLoginAsync(string kerberosMountPath = "kerberos", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -17473,7 +17473,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthKubernetesConfig(string kubernetesMountPath = default(string))
+        public VaultResponse<Object> GetAuthKubernetesConfig(string kubernetesMountPath = "kubernetes")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -17515,7 +17515,7 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthKubernetesConfigAsync(string kubernetesMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthKubernetesConfigAsync(string kubernetesMountPath = "kubernetes", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -17558,7 +17558,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthKubernetesRole(string list, string kubernetesMountPath = default(string))
+        public VaultResponse<Object> GetAuthKubernetesRole(string list, string kubernetesMountPath = "kubernetes")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -17606,7 +17606,7 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthKubernetesRoleAsync(string list, string kubernetesMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthKubernetesRoleAsync(string list, string kubernetesMountPath = "kubernetes", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -17654,7 +17654,7 @@ namespace Vault.Api
         /// <param name="name">Name of the role.</param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthKubernetesRoleName(string name, string kubernetesMountPath = default(string))
+        public VaultResponse<Object> GetAuthKubernetesRoleName(string name, string kubernetesMountPath = "kubernetes")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -17702,7 +17702,7 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthKubernetesRoleNameAsync(string name, string kubernetesMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthKubernetesRoleNameAsync(string name, string kubernetesMountPath = "kubernetes", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -17749,7 +17749,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthLdapConfig(string ldapMountPath = default(string))
+        public VaultResponse<Object> GetAuthLdapConfig(string ldapMountPath = "ldap")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -17791,7 +17791,7 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthLdapConfigAsync(string ldapMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthLdapConfigAsync(string ldapMountPath = "ldap", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -17834,7 +17834,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthLdapGroups(string list, string ldapMountPath = default(string))
+        public VaultResponse<Object> GetAuthLdapGroups(string list, string ldapMountPath = "ldap")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -17882,7 +17882,7 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthLdapGroupsAsync(string list, string ldapMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthLdapGroupsAsync(string list, string ldapMountPath = "ldap", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -17930,7 +17930,7 @@ namespace Vault.Api
         /// <param name="name">Name of the LDAP group.</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthLdapGroupsName(string name, string ldapMountPath = default(string))
+        public VaultResponse<Object> GetAuthLdapGroupsName(string name, string ldapMountPath = "ldap")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -17978,7 +17978,7 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthLdapGroupsNameAsync(string name, string ldapMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthLdapGroupsNameAsync(string name, string ldapMountPath = "ldap", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -18026,7 +18026,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthLdapUsers(string list, string ldapMountPath = default(string))
+        public VaultResponse<Object> GetAuthLdapUsers(string list, string ldapMountPath = "ldap")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -18074,7 +18074,7 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthLdapUsersAsync(string list, string ldapMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthLdapUsersAsync(string list, string ldapMountPath = "ldap", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -18122,7 +18122,7 @@ namespace Vault.Api
         /// <param name="name">Name of the LDAP user.</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthLdapUsersName(string name, string ldapMountPath = default(string))
+        public VaultResponse<Object> GetAuthLdapUsersName(string name, string ldapMountPath = "ldap")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -18170,7 +18170,7 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthLdapUsersNameAsync(string name, string ldapMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthLdapUsersNameAsync(string name, string ldapMountPath = "ldap", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -18217,7 +18217,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthOciConfig(string ociMountPath = default(string))
+        public VaultResponse<Object> GetAuthOciConfig(string ociMountPath = "oci")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -18259,7 +18259,7 @@ namespace Vault.Api
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthOciConfigAsync(string ociMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthOciConfigAsync(string ociMountPath = "oci", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -18302,7 +18302,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthOciRole(string list, string ociMountPath = default(string))
+        public VaultResponse<Object> GetAuthOciRole(string list, string ociMountPath = "oci")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -18350,7 +18350,7 @@ namespace Vault.Api
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthOciRoleAsync(string list, string ociMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthOciRoleAsync(string list, string ociMountPath = "oci", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -18398,7 +18398,7 @@ namespace Vault.Api
         /// <param name="role">Name of the role.</param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthOciRoleRole(string role, string ociMountPath = default(string))
+        public VaultResponse<Object> GetAuthOciRoleRole(string role, string ociMountPath = "oci")
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -18446,7 +18446,7 @@ namespace Vault.Api
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthOciRoleRoleAsync(string role, string ociMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthOciRoleRoleAsync(string role, string ociMountPath = "oci", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -18493,7 +18493,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthOidcConfig(string oidcMountPath = default(string))
+        public VaultResponse<Object> GetAuthOidcConfig(string oidcMountPath = "oidc")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -18535,7 +18535,7 @@ namespace Vault.Api
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthOidcConfigAsync(string oidcMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthOidcConfigAsync(string oidcMountPath = "oidc", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -18577,7 +18577,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthOidcOidcCallback(string oidcMountPath = default(string))
+        public VaultResponse<Object> GetAuthOidcOidcCallback(string oidcMountPath = "oidc")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -18619,7 +18619,7 @@ namespace Vault.Api
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthOidcOidcCallbackAsync(string oidcMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthOidcOidcCallbackAsync(string oidcMountPath = "oidc", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -18662,7 +18662,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthOidcRole(string list, string oidcMountPath = default(string))
+        public VaultResponse<Object> GetAuthOidcRole(string list, string oidcMountPath = "oidc")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -18710,7 +18710,7 @@ namespace Vault.Api
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthOidcRoleAsync(string list, string oidcMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthOidcRoleAsync(string list, string oidcMountPath = "oidc", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -18758,7 +18758,7 @@ namespace Vault.Api
         /// <param name="name">Name of the role.</param>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthOidcRoleName(string name, string oidcMountPath = default(string))
+        public VaultResponse<Object> GetAuthOidcRoleName(string name, string oidcMountPath = "oidc")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -18806,7 +18806,7 @@ namespace Vault.Api
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthOidcRoleNameAsync(string name, string oidcMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthOidcRoleNameAsync(string name, string oidcMountPath = "oidc", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -18853,7 +18853,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthOktaConfig(string oktaMountPath = default(string))
+        public VaultResponse<Object> GetAuthOktaConfig(string oktaMountPath = "okta")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -18895,7 +18895,7 @@ namespace Vault.Api
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthOktaConfigAsync(string oktaMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthOktaConfigAsync(string oktaMountPath = "okta", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -18938,7 +18938,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthOktaGroups(string list, string oktaMountPath = default(string))
+        public VaultResponse<Object> GetAuthOktaGroups(string list, string oktaMountPath = "okta")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -18986,7 +18986,7 @@ namespace Vault.Api
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthOktaGroupsAsync(string list, string oktaMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthOktaGroupsAsync(string list, string oktaMountPath = "okta", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -19034,7 +19034,7 @@ namespace Vault.Api
         /// <param name="name">Name of the Okta group.</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthOktaGroupsName(string name, string oktaMountPath = default(string))
+        public VaultResponse<Object> GetAuthOktaGroupsName(string name, string oktaMountPath = "okta")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -19082,7 +19082,7 @@ namespace Vault.Api
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthOktaGroupsNameAsync(string name, string oktaMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthOktaGroupsNameAsync(string name, string oktaMountPath = "okta", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -19130,7 +19130,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthOktaUsers(string list, string oktaMountPath = default(string))
+        public VaultResponse<Object> GetAuthOktaUsers(string list, string oktaMountPath = "okta")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -19178,7 +19178,7 @@ namespace Vault.Api
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthOktaUsersAsync(string list, string oktaMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthOktaUsersAsync(string list, string oktaMountPath = "okta", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -19226,7 +19226,7 @@ namespace Vault.Api
         /// <param name="name">Name of the user.</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthOktaUsersName(string name, string oktaMountPath = default(string))
+        public VaultResponse<Object> GetAuthOktaUsersName(string name, string oktaMountPath = "okta")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -19274,7 +19274,7 @@ namespace Vault.Api
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthOktaUsersNameAsync(string name, string oktaMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthOktaUsersNameAsync(string name, string oktaMountPath = "okta", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -19322,7 +19322,7 @@ namespace Vault.Api
         /// <param name="nonce">Nonce provided during a login request to retrieve the number verification challenge for the matching request.</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthOktaVerifyNonce(string nonce, string oktaMountPath = default(string))
+        public VaultResponse<Object> GetAuthOktaVerifyNonce(string nonce, string oktaMountPath = "okta")
         {
             // verify the required parameter 'nonce' is set
             if (nonce == null)
@@ -19370,7 +19370,7 @@ namespace Vault.Api
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthOktaVerifyNonceAsync(string nonce, string oktaMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthOktaVerifyNonceAsync(string nonce, string oktaMountPath = "okta", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'nonce' is set
             if (nonce == null)
@@ -19417,7 +19417,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthRadiusConfig(string radiusMountPath = default(string))
+        public VaultResponse<Object> GetAuthRadiusConfig(string radiusMountPath = "radius")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -19459,7 +19459,7 @@ namespace Vault.Api
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthRadiusConfigAsync(string radiusMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthRadiusConfigAsync(string radiusMountPath = "radius", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -19502,7 +19502,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthRadiusUsers(string list, string radiusMountPath = default(string))
+        public VaultResponse<Object> GetAuthRadiusUsers(string list, string radiusMountPath = "radius")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -19550,7 +19550,7 @@ namespace Vault.Api
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthRadiusUsersAsync(string list, string radiusMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthRadiusUsersAsync(string list, string radiusMountPath = "radius", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -19598,7 +19598,7 @@ namespace Vault.Api
         /// <param name="name">Name of the RADIUS user.</param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthRadiusUsersName(string name, string radiusMountPath = default(string))
+        public VaultResponse<Object> GetAuthRadiusUsersName(string name, string radiusMountPath = "radius")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -19646,7 +19646,7 @@ namespace Vault.Api
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthRadiusUsersNameAsync(string name, string radiusMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthRadiusUsersNameAsync(string name, string radiusMountPath = "radius", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -19694,7 +19694,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthTokenAccessors(string list, string tokenMountPath = default(string))
+        public VaultResponse<Object> GetAuthTokenAccessors(string list, string tokenMountPath = "token")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -19742,7 +19742,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthTokenAccessorsAsync(string list, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthTokenAccessorsAsync(string list, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -19789,7 +19789,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthTokenLookup(string tokenMountPath = default(string))
+        public VaultResponse<Object> GetAuthTokenLookup(string tokenMountPath = "token")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -19831,7 +19831,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthTokenLookupAsync(string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthTokenLookupAsync(string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -19873,7 +19873,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthTokenLookupSelf(string tokenMountPath = default(string))
+        public VaultResponse<Object> GetAuthTokenLookupSelf(string tokenMountPath = "token")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -19915,7 +19915,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthTokenLookupSelfAsync(string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthTokenLookupSelfAsync(string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -19958,7 +19958,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthTokenRoles(string list, string tokenMountPath = default(string))
+        public VaultResponse<Object> GetAuthTokenRoles(string list, string tokenMountPath = "token")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -20006,7 +20006,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthTokenRolesAsync(string list, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthTokenRolesAsync(string list, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -20054,7 +20054,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthTokenRolesRoleName(string roleName, string tokenMountPath = default(string))
+        public VaultResponse<Object> GetAuthTokenRolesRoleName(string roleName, string tokenMountPath = "token")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -20102,7 +20102,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthTokenRolesRoleNameAsync(string roleName, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthTokenRolesRoleNameAsync(string roleName, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -20150,7 +20150,7 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthUserpassUsers(string list, string userpassMountPath = default(string))
+        public VaultResponse<Object> GetAuthUserpassUsers(string list, string userpassMountPath = "userpass")
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -20198,7 +20198,7 @@ namespace Vault.Api
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthUserpassUsersAsync(string list, string userpassMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthUserpassUsersAsync(string list, string userpassMountPath = "userpass", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -20246,7 +20246,7 @@ namespace Vault.Api
         /// <param name="username">Username for this user.</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> GetAuthUserpassUsersUsername(string username, string userpassMountPath = default(string))
+        public VaultResponse<Object> GetAuthUserpassUsersUsername(string username, string userpassMountPath = "userpass")
         {
             // verify the required parameter 'username' is set
             if (username == null)
@@ -20294,7 +20294,7 @@ namespace Vault.Api
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthUserpassUsersUsernameAsync(string username, string userpassMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetAuthUserpassUsersUsernameAsync(string username, string userpassMountPath = "userpass", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'username' is set
             if (username == null)
@@ -20342,7 +20342,7 @@ namespace Vault.Api
         /// <param name="alicloudLoginRequest"></param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthAlicloudLogin(AlicloudLoginRequest alicloudLoginRequest, string alicloudMountPath = default(string))
+        public VaultResponse<Object> PostAuthAlicloudLogin(AlicloudLoginRequest alicloudLoginRequest, string alicloudMountPath = "alicloud")
         {
             // verify the required parameter 'alicloudLoginRequest' is set
             if (alicloudLoginRequest == null)
@@ -20391,7 +20391,7 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthAlicloudLoginAsync(AlicloudLoginRequest alicloudLoginRequest, string alicloudMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthAlicloudLoginAsync(AlicloudLoginRequest alicloudLoginRequest, string alicloudMountPath = "alicloud", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'alicloudLoginRequest' is set
             if (alicloudLoginRequest == null)
@@ -20441,7 +20441,7 @@ namespace Vault.Api
         /// <param name="alicloudRoleRequest"></param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthAlicloudRoleRole(string role, AlicloudRoleRequest alicloudRoleRequest, string alicloudMountPath = default(string))
+        public VaultResponse<Object> PostAuthAlicloudRoleRole(string role, AlicloudRoleRequest alicloudRoleRequest, string alicloudMountPath = "alicloud")
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -20496,7 +20496,7 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthAlicloudRoleRoleAsync(string role, AlicloudRoleRequest alicloudRoleRequest, string alicloudMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthAlicloudRoleRoleAsync(string role, AlicloudRoleRequest alicloudRoleRequest, string alicloudMountPath = "alicloud", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -20550,7 +20550,7 @@ namespace Vault.Api
         /// <param name="approleLoginRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthApproleLogin(ApproleLoginRequest approleLoginRequest, string approleMountPath = default(string))
+        public VaultResponse<Object> PostAuthApproleLogin(ApproleLoginRequest approleLoginRequest, string approleMountPath = "approle")
         {
             // verify the required parameter 'approleLoginRequest' is set
             if (approleLoginRequest == null)
@@ -20599,7 +20599,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleLoginAsync(ApproleLoginRequest approleLoginRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthApproleLoginAsync(ApproleLoginRequest approleLoginRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'approleLoginRequest' is set
             if (approleLoginRequest == null)
@@ -20649,7 +20649,7 @@ namespace Vault.Api
         /// <param name="approleRoleRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthApproleRoleRoleName(string roleName, ApproleRoleRequest approleRoleRequest, string approleMountPath = default(string))
+        public VaultResponse<Object> PostAuthApproleRoleRoleName(string roleName, ApproleRoleRequest approleRoleRequest, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -20704,7 +20704,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameAsync(string roleName, ApproleRoleRequest approleRoleRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameAsync(string roleName, ApproleRoleRequest approleRoleRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -20759,7 +20759,7 @@ namespace Vault.Api
         /// <param name="approleRoleBindSecretIdRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthApproleRoleRoleNameBindSecretId(string roleName, ApproleRoleBindSecretIdRequest approleRoleBindSecretIdRequest, string approleMountPath = default(string))
+        public VaultResponse<Object> PostAuthApproleRoleRoleNameBindSecretId(string roleName, ApproleRoleBindSecretIdRequest approleRoleBindSecretIdRequest, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -20814,7 +20814,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameBindSecretIdAsync(string roleName, ApproleRoleBindSecretIdRequest approleRoleBindSecretIdRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameBindSecretIdAsync(string roleName, ApproleRoleBindSecretIdRequest approleRoleBindSecretIdRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -20869,7 +20869,7 @@ namespace Vault.Api
         /// <param name="approleRoleBoundCidrListRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthApproleRoleRoleNameBoundCidrList(string roleName, ApproleRoleBoundCidrListRequest approleRoleBoundCidrListRequest, string approleMountPath = default(string))
+        public VaultResponse<Object> PostAuthApproleRoleRoleNameBoundCidrList(string roleName, ApproleRoleBoundCidrListRequest approleRoleBoundCidrListRequest, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -20924,7 +20924,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameBoundCidrListAsync(string roleName, ApproleRoleBoundCidrListRequest approleRoleBoundCidrListRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameBoundCidrListAsync(string roleName, ApproleRoleBoundCidrListRequest approleRoleBoundCidrListRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -20979,7 +20979,7 @@ namespace Vault.Api
         /// <param name="approleRoleCustomSecretIdRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthApproleRoleRoleNameCustomSecretId(string roleName, ApproleRoleCustomSecretIdRequest approleRoleCustomSecretIdRequest, string approleMountPath = default(string))
+        public VaultResponse<Object> PostAuthApproleRoleRoleNameCustomSecretId(string roleName, ApproleRoleCustomSecretIdRequest approleRoleCustomSecretIdRequest, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -21034,7 +21034,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameCustomSecretIdAsync(string roleName, ApproleRoleCustomSecretIdRequest approleRoleCustomSecretIdRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameCustomSecretIdAsync(string roleName, ApproleRoleCustomSecretIdRequest approleRoleCustomSecretIdRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -21089,7 +21089,7 @@ namespace Vault.Api
         /// <param name="approleRolePeriodRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthApproleRoleRoleNamePeriod(string roleName, ApproleRolePeriodRequest approleRolePeriodRequest, string approleMountPath = default(string))
+        public VaultResponse<Object> PostAuthApproleRoleRoleNamePeriod(string roleName, ApproleRolePeriodRequest approleRolePeriodRequest, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -21144,7 +21144,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNamePeriodAsync(string roleName, ApproleRolePeriodRequest approleRolePeriodRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNamePeriodAsync(string roleName, ApproleRolePeriodRequest approleRolePeriodRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -21199,7 +21199,7 @@ namespace Vault.Api
         /// <param name="approleRolePoliciesRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthApproleRoleRoleNamePolicies(string roleName, ApproleRolePoliciesRequest approleRolePoliciesRequest, string approleMountPath = default(string))
+        public VaultResponse<Object> PostAuthApproleRoleRoleNamePolicies(string roleName, ApproleRolePoliciesRequest approleRolePoliciesRequest, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -21254,7 +21254,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNamePoliciesAsync(string roleName, ApproleRolePoliciesRequest approleRolePoliciesRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNamePoliciesAsync(string roleName, ApproleRolePoliciesRequest approleRolePoliciesRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -21309,7 +21309,7 @@ namespace Vault.Api
         /// <param name="approleRoleRoleIdRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthApproleRoleRoleNameRoleId(string roleName, ApproleRoleRoleIdRequest approleRoleRoleIdRequest, string approleMountPath = default(string))
+        public VaultResponse<Object> PostAuthApproleRoleRoleNameRoleId(string roleName, ApproleRoleRoleIdRequest approleRoleRoleIdRequest, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -21364,7 +21364,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameRoleIdAsync(string roleName, ApproleRoleRoleIdRequest approleRoleRoleIdRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameRoleIdAsync(string roleName, ApproleRoleRoleIdRequest approleRoleRoleIdRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -21419,7 +21419,7 @@ namespace Vault.Api
         /// <param name="approleRoleSecretIdRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthApproleRoleRoleNameSecretId(string roleName, ApproleRoleSecretIdRequest approleRoleSecretIdRequest, string approleMountPath = default(string))
+        public VaultResponse<Object> PostAuthApproleRoleRoleNameSecretId(string roleName, ApproleRoleSecretIdRequest approleRoleSecretIdRequest, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -21474,7 +21474,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdAsync(string roleName, ApproleRoleSecretIdRequest approleRoleSecretIdRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdAsync(string roleName, ApproleRoleSecretIdRequest approleRoleSecretIdRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -21529,7 +21529,7 @@ namespace Vault.Api
         /// <param name="approleRoleSecretIdAccessorDestroyRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdAccessorDestroy(string roleName, ApproleRoleSecretIdAccessorDestroyRequest approleRoleSecretIdAccessorDestroyRequest, string approleMountPath = default(string))
+        public VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdAccessorDestroy(string roleName, ApproleRoleSecretIdAccessorDestroyRequest approleRoleSecretIdAccessorDestroyRequest, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -21584,7 +21584,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdAccessorDestroyAsync(string roleName, ApproleRoleSecretIdAccessorDestroyRequest approleRoleSecretIdAccessorDestroyRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdAccessorDestroyAsync(string roleName, ApproleRoleSecretIdAccessorDestroyRequest approleRoleSecretIdAccessorDestroyRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -21639,7 +21639,7 @@ namespace Vault.Api
         /// <param name="approleRoleSecretIdAccessorLookupRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdAccessorLookup(string roleName, ApproleRoleSecretIdAccessorLookupRequest approleRoleSecretIdAccessorLookupRequest, string approleMountPath = default(string))
+        public VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdAccessorLookup(string roleName, ApproleRoleSecretIdAccessorLookupRequest approleRoleSecretIdAccessorLookupRequest, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -21694,7 +21694,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdAccessorLookupAsync(string roleName, ApproleRoleSecretIdAccessorLookupRequest approleRoleSecretIdAccessorLookupRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdAccessorLookupAsync(string roleName, ApproleRoleSecretIdAccessorLookupRequest approleRoleSecretIdAccessorLookupRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -21749,7 +21749,7 @@ namespace Vault.Api
         /// <param name="approleRoleSecretIdBoundCidrsRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdBoundCidrs(string roleName, ApproleRoleSecretIdBoundCidrsRequest approleRoleSecretIdBoundCidrsRequest, string approleMountPath = default(string))
+        public VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdBoundCidrs(string roleName, ApproleRoleSecretIdBoundCidrsRequest approleRoleSecretIdBoundCidrsRequest, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -21804,7 +21804,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdBoundCidrsAsync(string roleName, ApproleRoleSecretIdBoundCidrsRequest approleRoleSecretIdBoundCidrsRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdBoundCidrsAsync(string roleName, ApproleRoleSecretIdBoundCidrsRequest approleRoleSecretIdBoundCidrsRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -21859,7 +21859,7 @@ namespace Vault.Api
         /// <param name="approleRoleSecretIdDestroyRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdDestroy(string roleName, ApproleRoleSecretIdDestroyRequest approleRoleSecretIdDestroyRequest, string approleMountPath = default(string))
+        public VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdDestroy(string roleName, ApproleRoleSecretIdDestroyRequest approleRoleSecretIdDestroyRequest, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -21914,7 +21914,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdDestroyAsync(string roleName, ApproleRoleSecretIdDestroyRequest approleRoleSecretIdDestroyRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdDestroyAsync(string roleName, ApproleRoleSecretIdDestroyRequest approleRoleSecretIdDestroyRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -21969,7 +21969,7 @@ namespace Vault.Api
         /// <param name="approleRoleSecretIdLookupRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdLookup(string roleName, ApproleRoleSecretIdLookupRequest approleRoleSecretIdLookupRequest, string approleMountPath = default(string))
+        public VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdLookup(string roleName, ApproleRoleSecretIdLookupRequest approleRoleSecretIdLookupRequest, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -22024,7 +22024,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdLookupAsync(string roleName, ApproleRoleSecretIdLookupRequest approleRoleSecretIdLookupRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdLookupAsync(string roleName, ApproleRoleSecretIdLookupRequest approleRoleSecretIdLookupRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -22079,7 +22079,7 @@ namespace Vault.Api
         /// <param name="approleRoleSecretIdNumUsesRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdNumUses(string roleName, ApproleRoleSecretIdNumUsesRequest approleRoleSecretIdNumUsesRequest, string approleMountPath = default(string))
+        public VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdNumUses(string roleName, ApproleRoleSecretIdNumUsesRequest approleRoleSecretIdNumUsesRequest, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -22134,7 +22134,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdNumUsesAsync(string roleName, ApproleRoleSecretIdNumUsesRequest approleRoleSecretIdNumUsesRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdNumUsesAsync(string roleName, ApproleRoleSecretIdNumUsesRequest approleRoleSecretIdNumUsesRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -22189,7 +22189,7 @@ namespace Vault.Api
         /// <param name="approleRoleSecretIdTtlRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdTtl(string roleName, ApproleRoleSecretIdTtlRequest approleRoleSecretIdTtlRequest, string approleMountPath = default(string))
+        public VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdTtl(string roleName, ApproleRoleSecretIdTtlRequest approleRoleSecretIdTtlRequest, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -22244,7 +22244,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdTtlAsync(string roleName, ApproleRoleSecretIdTtlRequest approleRoleSecretIdTtlRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdTtlAsync(string roleName, ApproleRoleSecretIdTtlRequest approleRoleSecretIdTtlRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -22299,7 +22299,7 @@ namespace Vault.Api
         /// <param name="approleRoleTokenBoundCidrsRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthApproleRoleRoleNameTokenBoundCidrs(string roleName, ApproleRoleTokenBoundCidrsRequest approleRoleTokenBoundCidrsRequest, string approleMountPath = default(string))
+        public VaultResponse<Object> PostAuthApproleRoleRoleNameTokenBoundCidrs(string roleName, ApproleRoleTokenBoundCidrsRequest approleRoleTokenBoundCidrsRequest, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -22354,7 +22354,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameTokenBoundCidrsAsync(string roleName, ApproleRoleTokenBoundCidrsRequest approleRoleTokenBoundCidrsRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameTokenBoundCidrsAsync(string roleName, ApproleRoleTokenBoundCidrsRequest approleRoleTokenBoundCidrsRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -22409,7 +22409,7 @@ namespace Vault.Api
         /// <param name="approleRoleTokenMaxTtlRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthApproleRoleRoleNameTokenMaxTtl(string roleName, ApproleRoleTokenMaxTtlRequest approleRoleTokenMaxTtlRequest, string approleMountPath = default(string))
+        public VaultResponse<Object> PostAuthApproleRoleRoleNameTokenMaxTtl(string roleName, ApproleRoleTokenMaxTtlRequest approleRoleTokenMaxTtlRequest, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -22464,7 +22464,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameTokenMaxTtlAsync(string roleName, ApproleRoleTokenMaxTtlRequest approleRoleTokenMaxTtlRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameTokenMaxTtlAsync(string roleName, ApproleRoleTokenMaxTtlRequest approleRoleTokenMaxTtlRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -22519,7 +22519,7 @@ namespace Vault.Api
         /// <param name="approleRoleTokenNumUsesRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthApproleRoleRoleNameTokenNumUses(string roleName, ApproleRoleTokenNumUsesRequest approleRoleTokenNumUsesRequest, string approleMountPath = default(string))
+        public VaultResponse<Object> PostAuthApproleRoleRoleNameTokenNumUses(string roleName, ApproleRoleTokenNumUsesRequest approleRoleTokenNumUsesRequest, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -22574,7 +22574,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameTokenNumUsesAsync(string roleName, ApproleRoleTokenNumUsesRequest approleRoleTokenNumUsesRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameTokenNumUsesAsync(string roleName, ApproleRoleTokenNumUsesRequest approleRoleTokenNumUsesRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -22629,7 +22629,7 @@ namespace Vault.Api
         /// <param name="approleRoleTokenTtlRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthApproleRoleRoleNameTokenTtl(string roleName, ApproleRoleTokenTtlRequest approleRoleTokenTtlRequest, string approleMountPath = default(string))
+        public VaultResponse<Object> PostAuthApproleRoleRoleNameTokenTtl(string roleName, ApproleRoleTokenTtlRequest approleRoleTokenTtlRequest, string approleMountPath = "approle")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -22684,7 +22684,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameTokenTtlAsync(string roleName, ApproleRoleTokenTtlRequest approleRoleTokenTtlRequest, string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameTokenTtlAsync(string roleName, ApproleRoleTokenTtlRequest approleRoleTokenTtlRequest, string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -22737,7 +22737,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthApproleTidySecretId(string approleMountPath = default(string))
+        public VaultResponse<Object> PostAuthApproleTidySecretId(string approleMountPath = "approle")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -22779,7 +22779,7 @@ namespace Vault.Api
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleTidySecretIdAsync(string approleMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthApproleTidySecretIdAsync(string approleMountPath = "approle", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -22823,7 +22823,7 @@ namespace Vault.Api
         /// <param name="awsConfigCertificateRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthAwsConfigCertificateCertName(string certName, AwsConfigCertificateRequest awsConfigCertificateRequest, string awsMountPath = default(string))
+        public VaultResponse<Object> PostAuthAwsConfigCertificateCertName(string certName, AwsConfigCertificateRequest awsConfigCertificateRequest, string awsMountPath = "aws")
         {
             // verify the required parameter 'certName' is set
             if (certName == null)
@@ -22878,7 +22878,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthAwsConfigCertificateCertNameAsync(string certName, AwsConfigCertificateRequest awsConfigCertificateRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthAwsConfigCertificateCertNameAsync(string certName, AwsConfigCertificateRequest awsConfigCertificateRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'certName' is set
             if (certName == null)
@@ -22932,7 +22932,7 @@ namespace Vault.Api
         /// <param name="awsConfigClientRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthAwsConfigClient(AwsConfigClientRequest awsConfigClientRequest, string awsMountPath = default(string))
+        public VaultResponse<Object> PostAuthAwsConfigClient(AwsConfigClientRequest awsConfigClientRequest, string awsMountPath = "aws")
         {
             // verify the required parameter 'awsConfigClientRequest' is set
             if (awsConfigClientRequest == null)
@@ -22981,7 +22981,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthAwsConfigClientAsync(AwsConfigClientRequest awsConfigClientRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthAwsConfigClientAsync(AwsConfigClientRequest awsConfigClientRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'awsConfigClientRequest' is set
             if (awsConfigClientRequest == null)
@@ -23030,7 +23030,7 @@ namespace Vault.Api
         /// <param name="awsConfigIdentityRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthAwsConfigIdentity(AwsConfigIdentityRequest awsConfigIdentityRequest, string awsMountPath = default(string))
+        public VaultResponse<Object> PostAuthAwsConfigIdentity(AwsConfigIdentityRequest awsConfigIdentityRequest, string awsMountPath = "aws")
         {
             // verify the required parameter 'awsConfigIdentityRequest' is set
             if (awsConfigIdentityRequest == null)
@@ -23079,7 +23079,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthAwsConfigIdentityAsync(AwsConfigIdentityRequest awsConfigIdentityRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthAwsConfigIdentityAsync(AwsConfigIdentityRequest awsConfigIdentityRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'awsConfigIdentityRequest' is set
             if (awsConfigIdentityRequest == null)
@@ -23127,7 +23127,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthAwsConfigRotateRoot(string awsMountPath = default(string))
+        public VaultResponse<Object> PostAuthAwsConfigRotateRoot(string awsMountPath = "aws")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -23169,7 +23169,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthAwsConfigRotateRootAsync(string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthAwsConfigRotateRootAsync(string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -23213,7 +23213,7 @@ namespace Vault.Api
         /// <param name="awsConfigStsRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthAwsConfigStsAccountId(string accountId, AwsConfigStsRequest awsConfigStsRequest, string awsMountPath = default(string))
+        public VaultResponse<Object> PostAuthAwsConfigStsAccountId(string accountId, AwsConfigStsRequest awsConfigStsRequest, string awsMountPath = "aws")
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
@@ -23268,7 +23268,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthAwsConfigStsAccountIdAsync(string accountId, AwsConfigStsRequest awsConfigStsRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthAwsConfigStsAccountIdAsync(string accountId, AwsConfigStsRequest awsConfigStsRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'accountId' is set
             if (accountId == null)
@@ -23322,7 +23322,7 @@ namespace Vault.Api
         /// <param name="awsConfigTidyIdentityAccesslistRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthAwsConfigTidyIdentityAccesslist(AwsConfigTidyIdentityAccesslistRequest awsConfigTidyIdentityAccesslistRequest, string awsMountPath = default(string))
+        public VaultResponse<Object> PostAuthAwsConfigTidyIdentityAccesslist(AwsConfigTidyIdentityAccesslistRequest awsConfigTidyIdentityAccesslistRequest, string awsMountPath = "aws")
         {
             // verify the required parameter 'awsConfigTidyIdentityAccesslistRequest' is set
             if (awsConfigTidyIdentityAccesslistRequest == null)
@@ -23371,7 +23371,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthAwsConfigTidyIdentityAccesslistAsync(AwsConfigTidyIdentityAccesslistRequest awsConfigTidyIdentityAccesslistRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthAwsConfigTidyIdentityAccesslistAsync(AwsConfigTidyIdentityAccesslistRequest awsConfigTidyIdentityAccesslistRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'awsConfigTidyIdentityAccesslistRequest' is set
             if (awsConfigTidyIdentityAccesslistRequest == null)
@@ -23420,7 +23420,7 @@ namespace Vault.Api
         /// <param name="awsConfigTidyIdentityWhitelistRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthAwsConfigTidyIdentityWhitelist(AwsConfigTidyIdentityWhitelistRequest awsConfigTidyIdentityWhitelistRequest, string awsMountPath = default(string))
+        public VaultResponse<Object> PostAuthAwsConfigTidyIdentityWhitelist(AwsConfigTidyIdentityWhitelistRequest awsConfigTidyIdentityWhitelistRequest, string awsMountPath = "aws")
         {
             // verify the required parameter 'awsConfigTidyIdentityWhitelistRequest' is set
             if (awsConfigTidyIdentityWhitelistRequest == null)
@@ -23469,7 +23469,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthAwsConfigTidyIdentityWhitelistAsync(AwsConfigTidyIdentityWhitelistRequest awsConfigTidyIdentityWhitelistRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthAwsConfigTidyIdentityWhitelistAsync(AwsConfigTidyIdentityWhitelistRequest awsConfigTidyIdentityWhitelistRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'awsConfigTidyIdentityWhitelistRequest' is set
             if (awsConfigTidyIdentityWhitelistRequest == null)
@@ -23518,7 +23518,7 @@ namespace Vault.Api
         /// <param name="awsConfigTidyRoletagBlacklistRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthAwsConfigTidyRoletagBlacklist(AwsConfigTidyRoletagBlacklistRequest awsConfigTidyRoletagBlacklistRequest, string awsMountPath = default(string))
+        public VaultResponse<Object> PostAuthAwsConfigTidyRoletagBlacklist(AwsConfigTidyRoletagBlacklistRequest awsConfigTidyRoletagBlacklistRequest, string awsMountPath = "aws")
         {
             // verify the required parameter 'awsConfigTidyRoletagBlacklistRequest' is set
             if (awsConfigTidyRoletagBlacklistRequest == null)
@@ -23567,7 +23567,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthAwsConfigTidyRoletagBlacklistAsync(AwsConfigTidyRoletagBlacklistRequest awsConfigTidyRoletagBlacklistRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthAwsConfigTidyRoletagBlacklistAsync(AwsConfigTidyRoletagBlacklistRequest awsConfigTidyRoletagBlacklistRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'awsConfigTidyRoletagBlacklistRequest' is set
             if (awsConfigTidyRoletagBlacklistRequest == null)
@@ -23616,7 +23616,7 @@ namespace Vault.Api
         /// <param name="awsConfigTidyRoletagDenylistRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthAwsConfigTidyRoletagDenylist(AwsConfigTidyRoletagDenylistRequest awsConfigTidyRoletagDenylistRequest, string awsMountPath = default(string))
+        public VaultResponse<Object> PostAuthAwsConfigTidyRoletagDenylist(AwsConfigTidyRoletagDenylistRequest awsConfigTidyRoletagDenylistRequest, string awsMountPath = "aws")
         {
             // verify the required parameter 'awsConfigTidyRoletagDenylistRequest' is set
             if (awsConfigTidyRoletagDenylistRequest == null)
@@ -23665,7 +23665,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthAwsConfigTidyRoletagDenylistAsync(AwsConfigTidyRoletagDenylistRequest awsConfigTidyRoletagDenylistRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthAwsConfigTidyRoletagDenylistAsync(AwsConfigTidyRoletagDenylistRequest awsConfigTidyRoletagDenylistRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'awsConfigTidyRoletagDenylistRequest' is set
             if (awsConfigTidyRoletagDenylistRequest == null)
@@ -23714,7 +23714,7 @@ namespace Vault.Api
         /// <param name="awsLoginRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthAwsLogin(AwsLoginRequest awsLoginRequest, string awsMountPath = default(string))
+        public VaultResponse<Object> PostAuthAwsLogin(AwsLoginRequest awsLoginRequest, string awsMountPath = "aws")
         {
             // verify the required parameter 'awsLoginRequest' is set
             if (awsLoginRequest == null)
@@ -23763,7 +23763,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthAwsLoginAsync(AwsLoginRequest awsLoginRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthAwsLoginAsync(AwsLoginRequest awsLoginRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'awsLoginRequest' is set
             if (awsLoginRequest == null)
@@ -23813,7 +23813,7 @@ namespace Vault.Api
         /// <param name="awsRoleRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthAwsRoleRole(string role, AwsRoleRequest awsRoleRequest, string awsMountPath = default(string))
+        public VaultResponse<Object> PostAuthAwsRoleRole(string role, AwsRoleRequest awsRoleRequest, string awsMountPath = "aws")
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -23868,7 +23868,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthAwsRoleRoleAsync(string role, AwsRoleRequest awsRoleRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthAwsRoleRoleAsync(string role, AwsRoleRequest awsRoleRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -23923,7 +23923,7 @@ namespace Vault.Api
         /// <param name="awsRoleTagRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthAwsRoleRoleTag(string role, AwsRoleTagRequest awsRoleTagRequest, string awsMountPath = default(string))
+        public VaultResponse<Object> PostAuthAwsRoleRoleTag(string role, AwsRoleTagRequest awsRoleTagRequest, string awsMountPath = "aws")
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -23978,7 +23978,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthAwsRoleRoleTagAsync(string role, AwsRoleTagRequest awsRoleTagRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthAwsRoleRoleTagAsync(string role, AwsRoleTagRequest awsRoleTagRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -24032,7 +24032,7 @@ namespace Vault.Api
         /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthAwsRoletagBlacklistRoleTag(string roleTag, string awsMountPath = default(string))
+        public VaultResponse<Object> PostAuthAwsRoletagBlacklistRoleTag(string roleTag, string awsMountPath = "aws")
         {
             // verify the required parameter 'roleTag' is set
             if (roleTag == null)
@@ -24080,7 +24080,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthAwsRoletagBlacklistRoleTagAsync(string roleTag, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthAwsRoletagBlacklistRoleTagAsync(string roleTag, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleTag' is set
             if (roleTag == null)
@@ -24128,7 +24128,7 @@ namespace Vault.Api
         /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthAwsRoletagDenylistRoleTag(string roleTag, string awsMountPath = default(string))
+        public VaultResponse<Object> PostAuthAwsRoletagDenylistRoleTag(string roleTag, string awsMountPath = "aws")
         {
             // verify the required parameter 'roleTag' is set
             if (roleTag == null)
@@ -24176,7 +24176,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthAwsRoletagDenylistRoleTagAsync(string roleTag, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthAwsRoletagDenylistRoleTagAsync(string roleTag, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleTag' is set
             if (roleTag == null)
@@ -24224,7 +24224,7 @@ namespace Vault.Api
         /// <param name="awsTidyIdentityAccesslistRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthAwsTidyIdentityAccesslist(AwsTidyIdentityAccesslistRequest awsTidyIdentityAccesslistRequest, string awsMountPath = default(string))
+        public VaultResponse<Object> PostAuthAwsTidyIdentityAccesslist(AwsTidyIdentityAccesslistRequest awsTidyIdentityAccesslistRequest, string awsMountPath = "aws")
         {
             // verify the required parameter 'awsTidyIdentityAccesslistRequest' is set
             if (awsTidyIdentityAccesslistRequest == null)
@@ -24273,7 +24273,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthAwsTidyIdentityAccesslistAsync(AwsTidyIdentityAccesslistRequest awsTidyIdentityAccesslistRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthAwsTidyIdentityAccesslistAsync(AwsTidyIdentityAccesslistRequest awsTidyIdentityAccesslistRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'awsTidyIdentityAccesslistRequest' is set
             if (awsTidyIdentityAccesslistRequest == null)
@@ -24322,7 +24322,7 @@ namespace Vault.Api
         /// <param name="awsTidyIdentityWhitelistRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthAwsTidyIdentityWhitelist(AwsTidyIdentityWhitelistRequest awsTidyIdentityWhitelistRequest, string awsMountPath = default(string))
+        public VaultResponse<Object> PostAuthAwsTidyIdentityWhitelist(AwsTidyIdentityWhitelistRequest awsTidyIdentityWhitelistRequest, string awsMountPath = "aws")
         {
             // verify the required parameter 'awsTidyIdentityWhitelistRequest' is set
             if (awsTidyIdentityWhitelistRequest == null)
@@ -24371,7 +24371,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthAwsTidyIdentityWhitelistAsync(AwsTidyIdentityWhitelistRequest awsTidyIdentityWhitelistRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthAwsTidyIdentityWhitelistAsync(AwsTidyIdentityWhitelistRequest awsTidyIdentityWhitelistRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'awsTidyIdentityWhitelistRequest' is set
             if (awsTidyIdentityWhitelistRequest == null)
@@ -24420,7 +24420,7 @@ namespace Vault.Api
         /// <param name="awsTidyRoletagBlacklistRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthAwsTidyRoletagBlacklist(AwsTidyRoletagBlacklistRequest awsTidyRoletagBlacklistRequest, string awsMountPath = default(string))
+        public VaultResponse<Object> PostAuthAwsTidyRoletagBlacklist(AwsTidyRoletagBlacklistRequest awsTidyRoletagBlacklistRequest, string awsMountPath = "aws")
         {
             // verify the required parameter 'awsTidyRoletagBlacklistRequest' is set
             if (awsTidyRoletagBlacklistRequest == null)
@@ -24469,7 +24469,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthAwsTidyRoletagBlacklistAsync(AwsTidyRoletagBlacklistRequest awsTidyRoletagBlacklistRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthAwsTidyRoletagBlacklistAsync(AwsTidyRoletagBlacklistRequest awsTidyRoletagBlacklistRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'awsTidyRoletagBlacklistRequest' is set
             if (awsTidyRoletagBlacklistRequest == null)
@@ -24518,7 +24518,7 @@ namespace Vault.Api
         /// <param name="awsTidyRoletagDenylistRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthAwsTidyRoletagDenylist(AwsTidyRoletagDenylistRequest awsTidyRoletagDenylistRequest, string awsMountPath = default(string))
+        public VaultResponse<Object> PostAuthAwsTidyRoletagDenylist(AwsTidyRoletagDenylistRequest awsTidyRoletagDenylistRequest, string awsMountPath = "aws")
         {
             // verify the required parameter 'awsTidyRoletagDenylistRequest' is set
             if (awsTidyRoletagDenylistRequest == null)
@@ -24567,7 +24567,7 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthAwsTidyRoletagDenylistAsync(AwsTidyRoletagDenylistRequest awsTidyRoletagDenylistRequest, string awsMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthAwsTidyRoletagDenylistAsync(AwsTidyRoletagDenylistRequest awsTidyRoletagDenylistRequest, string awsMountPath = "aws", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'awsTidyRoletagDenylistRequest' is set
             if (awsTidyRoletagDenylistRequest == null)
@@ -24616,7 +24616,7 @@ namespace Vault.Api
         /// <param name="azureConfigRequest"></param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthAzureConfig(AzureConfigRequest azureConfigRequest, string azureMountPath = default(string))
+        public VaultResponse<Object> PostAuthAzureConfig(AzureConfigRequest azureConfigRequest, string azureMountPath = "azure")
         {
             // verify the required parameter 'azureConfigRequest' is set
             if (azureConfigRequest == null)
@@ -24665,7 +24665,7 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthAzureConfigAsync(AzureConfigRequest azureConfigRequest, string azureMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthAzureConfigAsync(AzureConfigRequest azureConfigRequest, string azureMountPath = "azure", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'azureConfigRequest' is set
             if (azureConfigRequest == null)
@@ -24714,7 +24714,7 @@ namespace Vault.Api
         /// <param name="azureLoginRequest"></param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthAzureLogin(AzureLoginRequest azureLoginRequest, string azureMountPath = default(string))
+        public VaultResponse<Object> PostAuthAzureLogin(AzureLoginRequest azureLoginRequest, string azureMountPath = "azure")
         {
             // verify the required parameter 'azureLoginRequest' is set
             if (azureLoginRequest == null)
@@ -24763,7 +24763,7 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthAzureLoginAsync(AzureLoginRequest azureLoginRequest, string azureMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthAzureLoginAsync(AzureLoginRequest azureLoginRequest, string azureMountPath = "azure", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'azureLoginRequest' is set
             if (azureLoginRequest == null)
@@ -24813,7 +24813,7 @@ namespace Vault.Api
         /// <param name="azureRoleRequest"></param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthAzureRoleName(string name, AzureRoleRequest azureRoleRequest, string azureMountPath = default(string))
+        public VaultResponse<Object> PostAuthAzureRoleName(string name, AzureRoleRequest azureRoleRequest, string azureMountPath = "azure")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -24868,7 +24868,7 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthAzureRoleNameAsync(string name, AzureRoleRequest azureRoleRequest, string azureMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthAzureRoleNameAsync(string name, AzureRoleRequest azureRoleRequest, string azureMountPath = "azure", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -24922,7 +24922,7 @@ namespace Vault.Api
         /// <param name="centrifyConfigRequest"></param>
         /// <param name="centrifyMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;centrify&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthCentrifyConfig(CentrifyConfigRequest centrifyConfigRequest, string centrifyMountPath = default(string))
+        public VaultResponse<Object> PostAuthCentrifyConfig(CentrifyConfigRequest centrifyConfigRequest, string centrifyMountPath = "centrify")
         {
             // verify the required parameter 'centrifyConfigRequest' is set
             if (centrifyConfigRequest == null)
@@ -24971,7 +24971,7 @@ namespace Vault.Api
         /// <param name="centrifyMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;centrify&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthCentrifyConfigAsync(CentrifyConfigRequest centrifyConfigRequest, string centrifyMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthCentrifyConfigAsync(CentrifyConfigRequest centrifyConfigRequest, string centrifyMountPath = "centrify", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'centrifyConfigRequest' is set
             if (centrifyConfigRequest == null)
@@ -25020,7 +25020,7 @@ namespace Vault.Api
         /// <param name="centrifyLoginRequest"></param>
         /// <param name="centrifyMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;centrify&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthCentrifyLogin(CentrifyLoginRequest centrifyLoginRequest, string centrifyMountPath = default(string))
+        public VaultResponse<Object> PostAuthCentrifyLogin(CentrifyLoginRequest centrifyLoginRequest, string centrifyMountPath = "centrify")
         {
             // verify the required parameter 'centrifyLoginRequest' is set
             if (centrifyLoginRequest == null)
@@ -25069,7 +25069,7 @@ namespace Vault.Api
         /// <param name="centrifyMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;centrify&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthCentrifyLoginAsync(CentrifyLoginRequest centrifyLoginRequest, string centrifyMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthCentrifyLoginAsync(CentrifyLoginRequest centrifyLoginRequest, string centrifyMountPath = "centrify", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'centrifyLoginRequest' is set
             if (centrifyLoginRequest == null)
@@ -25119,7 +25119,7 @@ namespace Vault.Api
         /// <param name="certCertsRequest"></param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthCertCertsName(string name, CertCertsRequest certCertsRequest, string certMountPath = default(string))
+        public VaultResponse<Object> PostAuthCertCertsName(string name, CertCertsRequest certCertsRequest, string certMountPath = "cert")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -25174,7 +25174,7 @@ namespace Vault.Api
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthCertCertsNameAsync(string name, CertCertsRequest certCertsRequest, string certMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthCertCertsNameAsync(string name, CertCertsRequest certCertsRequest, string certMountPath = "cert", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -25228,7 +25228,7 @@ namespace Vault.Api
         /// <param name="certConfigRequest"></param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthCertConfig(CertConfigRequest certConfigRequest, string certMountPath = default(string))
+        public VaultResponse<Object> PostAuthCertConfig(CertConfigRequest certConfigRequest, string certMountPath = "cert")
         {
             // verify the required parameter 'certConfigRequest' is set
             if (certConfigRequest == null)
@@ -25277,7 +25277,7 @@ namespace Vault.Api
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthCertConfigAsync(CertConfigRequest certConfigRequest, string certMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthCertConfigAsync(CertConfigRequest certConfigRequest, string certMountPath = "cert", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'certConfigRequest' is set
             if (certConfigRequest == null)
@@ -25327,7 +25327,7 @@ namespace Vault.Api
         /// <param name="certCrlsRequest"></param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthCertCrlsName(string name, CertCrlsRequest certCrlsRequest, string certMountPath = default(string))
+        public VaultResponse<Object> PostAuthCertCrlsName(string name, CertCrlsRequest certCrlsRequest, string certMountPath = "cert")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -25382,7 +25382,7 @@ namespace Vault.Api
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthCertCrlsNameAsync(string name, CertCrlsRequest certCrlsRequest, string certMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthCertCrlsNameAsync(string name, CertCrlsRequest certCrlsRequest, string certMountPath = "cert", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -25436,7 +25436,7 @@ namespace Vault.Api
         /// <param name="certLoginRequest"></param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthCertLogin(CertLoginRequest certLoginRequest, string certMountPath = default(string))
+        public VaultResponse<Object> PostAuthCertLogin(CertLoginRequest certLoginRequest, string certMountPath = "cert")
         {
             // verify the required parameter 'certLoginRequest' is set
             if (certLoginRequest == null)
@@ -25485,7 +25485,7 @@ namespace Vault.Api
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthCertLoginAsync(CertLoginRequest certLoginRequest, string certMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthCertLoginAsync(CertLoginRequest certLoginRequest, string certMountPath = "cert", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'certLoginRequest' is set
             if (certLoginRequest == null)
@@ -25534,7 +25534,7 @@ namespace Vault.Api
         /// <param name="cfConfigRequest"></param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthCfConfig(CfConfigRequest cfConfigRequest, string cfMountPath = default(string))
+        public VaultResponse<Object> PostAuthCfConfig(CfConfigRequest cfConfigRequest, string cfMountPath = "cf")
         {
             // verify the required parameter 'cfConfigRequest' is set
             if (cfConfigRequest == null)
@@ -25583,7 +25583,7 @@ namespace Vault.Api
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthCfConfigAsync(CfConfigRequest cfConfigRequest, string cfMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthCfConfigAsync(CfConfigRequest cfConfigRequest, string cfMountPath = "cf", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'cfConfigRequest' is set
             if (cfConfigRequest == null)
@@ -25632,7 +25632,7 @@ namespace Vault.Api
         /// <param name="cfLoginRequest"></param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthCfLogin(CfLoginRequest cfLoginRequest, string cfMountPath = default(string))
+        public VaultResponse<Object> PostAuthCfLogin(CfLoginRequest cfLoginRequest, string cfMountPath = "cf")
         {
             // verify the required parameter 'cfLoginRequest' is set
             if (cfLoginRequest == null)
@@ -25681,7 +25681,7 @@ namespace Vault.Api
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthCfLoginAsync(CfLoginRequest cfLoginRequest, string cfMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthCfLoginAsync(CfLoginRequest cfLoginRequest, string cfMountPath = "cf", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'cfLoginRequest' is set
             if (cfLoginRequest == null)
@@ -25731,7 +25731,7 @@ namespace Vault.Api
         /// <param name="cfRolesRequest"></param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthCfRolesRole(string role, CfRolesRequest cfRolesRequest, string cfMountPath = default(string))
+        public VaultResponse<Object> PostAuthCfRolesRole(string role, CfRolesRequest cfRolesRequest, string cfMountPath = "cf")
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -25786,7 +25786,7 @@ namespace Vault.Api
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthCfRolesRoleAsync(string role, CfRolesRequest cfRolesRequest, string cfMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthCfRolesRoleAsync(string role, CfRolesRequest cfRolesRequest, string cfMountPath = "cf", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -25840,7 +25840,7 @@ namespace Vault.Api
         /// <param name="gcpConfigRequest"></param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthGcpConfig(GcpConfigRequest gcpConfigRequest, string gcpMountPath = default(string))
+        public VaultResponse<Object> PostAuthGcpConfig(GcpConfigRequest gcpConfigRequest, string gcpMountPath = "gcp")
         {
             // verify the required parameter 'gcpConfigRequest' is set
             if (gcpConfigRequest == null)
@@ -25889,7 +25889,7 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthGcpConfigAsync(GcpConfigRequest gcpConfigRequest, string gcpMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthGcpConfigAsync(GcpConfigRequest gcpConfigRequest, string gcpMountPath = "gcp", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'gcpConfigRequest' is set
             if (gcpConfigRequest == null)
@@ -25938,7 +25938,7 @@ namespace Vault.Api
         /// <param name="gcpLoginRequest"></param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthGcpLogin(GcpLoginRequest gcpLoginRequest, string gcpMountPath = default(string))
+        public VaultResponse<Object> PostAuthGcpLogin(GcpLoginRequest gcpLoginRequest, string gcpMountPath = "gcp")
         {
             // verify the required parameter 'gcpLoginRequest' is set
             if (gcpLoginRequest == null)
@@ -25987,7 +25987,7 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthGcpLoginAsync(GcpLoginRequest gcpLoginRequest, string gcpMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthGcpLoginAsync(GcpLoginRequest gcpLoginRequest, string gcpMountPath = "gcp", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'gcpLoginRequest' is set
             if (gcpLoginRequest == null)
@@ -26037,7 +26037,7 @@ namespace Vault.Api
         /// <param name="gcpRoleRequest"></param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthGcpRoleName(string name, GcpRoleRequest gcpRoleRequest, string gcpMountPath = default(string))
+        public VaultResponse<Object> PostAuthGcpRoleName(string name, GcpRoleRequest gcpRoleRequest, string gcpMountPath = "gcp")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -26092,7 +26092,7 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthGcpRoleNameAsync(string name, GcpRoleRequest gcpRoleRequest, string gcpMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthGcpRoleNameAsync(string name, GcpRoleRequest gcpRoleRequest, string gcpMountPath = "gcp", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -26147,7 +26147,7 @@ namespace Vault.Api
         /// <param name="gcpRoleLabelsRequest"></param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthGcpRoleNameLabels(string name, GcpRoleLabelsRequest gcpRoleLabelsRequest, string gcpMountPath = default(string))
+        public VaultResponse<Object> PostAuthGcpRoleNameLabels(string name, GcpRoleLabelsRequest gcpRoleLabelsRequest, string gcpMountPath = "gcp")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -26202,7 +26202,7 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthGcpRoleNameLabelsAsync(string name, GcpRoleLabelsRequest gcpRoleLabelsRequest, string gcpMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthGcpRoleNameLabelsAsync(string name, GcpRoleLabelsRequest gcpRoleLabelsRequest, string gcpMountPath = "gcp", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -26257,7 +26257,7 @@ namespace Vault.Api
         /// <param name="gcpRoleServiceAccountsRequest"></param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthGcpRoleNameServiceAccounts(string name, GcpRoleServiceAccountsRequest gcpRoleServiceAccountsRequest, string gcpMountPath = default(string))
+        public VaultResponse<Object> PostAuthGcpRoleNameServiceAccounts(string name, GcpRoleServiceAccountsRequest gcpRoleServiceAccountsRequest, string gcpMountPath = "gcp")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -26312,7 +26312,7 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthGcpRoleNameServiceAccountsAsync(string name, GcpRoleServiceAccountsRequest gcpRoleServiceAccountsRequest, string gcpMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthGcpRoleNameServiceAccountsAsync(string name, GcpRoleServiceAccountsRequest gcpRoleServiceAccountsRequest, string gcpMountPath = "gcp", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -26366,7 +26366,7 @@ namespace Vault.Api
         /// <param name="githubConfigRequest"></param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthGithubConfig(GithubConfigRequest githubConfigRequest, string githubMountPath = default(string))
+        public VaultResponse<Object> PostAuthGithubConfig(GithubConfigRequest githubConfigRequest, string githubMountPath = "github")
         {
             // verify the required parameter 'githubConfigRequest' is set
             if (githubConfigRequest == null)
@@ -26415,7 +26415,7 @@ namespace Vault.Api
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthGithubConfigAsync(GithubConfigRequest githubConfigRequest, string githubMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthGithubConfigAsync(GithubConfigRequest githubConfigRequest, string githubMountPath = "github", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'githubConfigRequest' is set
             if (githubConfigRequest == null)
@@ -26464,7 +26464,7 @@ namespace Vault.Api
         /// <param name="githubLoginRequest"></param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthGithubLogin(GithubLoginRequest githubLoginRequest, string githubMountPath = default(string))
+        public VaultResponse<Object> PostAuthGithubLogin(GithubLoginRequest githubLoginRequest, string githubMountPath = "github")
         {
             // verify the required parameter 'githubLoginRequest' is set
             if (githubLoginRequest == null)
@@ -26513,7 +26513,7 @@ namespace Vault.Api
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthGithubLoginAsync(GithubLoginRequest githubLoginRequest, string githubMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthGithubLoginAsync(GithubLoginRequest githubLoginRequest, string githubMountPath = "github", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'githubLoginRequest' is set
             if (githubLoginRequest == null)
@@ -26563,7 +26563,7 @@ namespace Vault.Api
         /// <param name="githubMapTeamsRequest"></param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthGithubMapTeamsKey(string key, GithubMapTeamsRequest githubMapTeamsRequest, string githubMountPath = default(string))
+        public VaultResponse<Object> PostAuthGithubMapTeamsKey(string key, GithubMapTeamsRequest githubMapTeamsRequest, string githubMountPath = "github")
         {
             // verify the required parameter 'key' is set
             if (key == null)
@@ -26618,7 +26618,7 @@ namespace Vault.Api
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthGithubMapTeamsKeyAsync(string key, GithubMapTeamsRequest githubMapTeamsRequest, string githubMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthGithubMapTeamsKeyAsync(string key, GithubMapTeamsRequest githubMapTeamsRequest, string githubMountPath = "github", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'key' is set
             if (key == null)
@@ -26673,7 +26673,7 @@ namespace Vault.Api
         /// <param name="githubMapUsersRequest"></param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthGithubMapUsersKey(string key, GithubMapUsersRequest githubMapUsersRequest, string githubMountPath = default(string))
+        public VaultResponse<Object> PostAuthGithubMapUsersKey(string key, GithubMapUsersRequest githubMapUsersRequest, string githubMountPath = "github")
         {
             // verify the required parameter 'key' is set
             if (key == null)
@@ -26728,7 +26728,7 @@ namespace Vault.Api
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthGithubMapUsersKeyAsync(string key, GithubMapUsersRequest githubMapUsersRequest, string githubMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthGithubMapUsersKeyAsync(string key, GithubMapUsersRequest githubMapUsersRequest, string githubMountPath = "github", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'key' is set
             if (key == null)
@@ -26782,7 +26782,7 @@ namespace Vault.Api
         /// <param name="jwtConfigRequest"></param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthJwtConfig(JwtConfigRequest jwtConfigRequest, string jwtMountPath = default(string))
+        public VaultResponse<Object> PostAuthJwtConfig(JwtConfigRequest jwtConfigRequest, string jwtMountPath = "jwt")
         {
             // verify the required parameter 'jwtConfigRequest' is set
             if (jwtConfigRequest == null)
@@ -26831,7 +26831,7 @@ namespace Vault.Api
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthJwtConfigAsync(JwtConfigRequest jwtConfigRequest, string jwtMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthJwtConfigAsync(JwtConfigRequest jwtConfigRequest, string jwtMountPath = "jwt", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'jwtConfigRequest' is set
             if (jwtConfigRequest == null)
@@ -26880,7 +26880,7 @@ namespace Vault.Api
         /// <param name="jwtLoginRequest"></param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthJwtLogin(JwtLoginRequest jwtLoginRequest, string jwtMountPath = default(string))
+        public VaultResponse<Object> PostAuthJwtLogin(JwtLoginRequest jwtLoginRequest, string jwtMountPath = "jwt")
         {
             // verify the required parameter 'jwtLoginRequest' is set
             if (jwtLoginRequest == null)
@@ -26929,7 +26929,7 @@ namespace Vault.Api
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthJwtLoginAsync(JwtLoginRequest jwtLoginRequest, string jwtMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthJwtLoginAsync(JwtLoginRequest jwtLoginRequest, string jwtMountPath = "jwt", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'jwtLoginRequest' is set
             if (jwtLoginRequest == null)
@@ -26978,7 +26978,7 @@ namespace Vault.Api
         /// <param name="jwtOidcAuthUrlRequest"></param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthJwtOidcAuthUrl(JwtOidcAuthUrlRequest jwtOidcAuthUrlRequest, string jwtMountPath = default(string))
+        public VaultResponse<Object> PostAuthJwtOidcAuthUrl(JwtOidcAuthUrlRequest jwtOidcAuthUrlRequest, string jwtMountPath = "jwt")
         {
             // verify the required parameter 'jwtOidcAuthUrlRequest' is set
             if (jwtOidcAuthUrlRequest == null)
@@ -27027,7 +27027,7 @@ namespace Vault.Api
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthJwtOidcAuthUrlAsync(JwtOidcAuthUrlRequest jwtOidcAuthUrlRequest, string jwtMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthJwtOidcAuthUrlAsync(JwtOidcAuthUrlRequest jwtOidcAuthUrlRequest, string jwtMountPath = "jwt", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'jwtOidcAuthUrlRequest' is set
             if (jwtOidcAuthUrlRequest == null)
@@ -27076,7 +27076,7 @@ namespace Vault.Api
         /// <param name="jwtOidcCallbackRequest"></param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthJwtOidcCallback(JwtOidcCallbackRequest jwtOidcCallbackRequest, string jwtMountPath = default(string))
+        public VaultResponse<Object> PostAuthJwtOidcCallback(JwtOidcCallbackRequest jwtOidcCallbackRequest, string jwtMountPath = "jwt")
         {
             // verify the required parameter 'jwtOidcCallbackRequest' is set
             if (jwtOidcCallbackRequest == null)
@@ -27125,7 +27125,7 @@ namespace Vault.Api
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthJwtOidcCallbackAsync(JwtOidcCallbackRequest jwtOidcCallbackRequest, string jwtMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthJwtOidcCallbackAsync(JwtOidcCallbackRequest jwtOidcCallbackRequest, string jwtMountPath = "jwt", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'jwtOidcCallbackRequest' is set
             if (jwtOidcCallbackRequest == null)
@@ -27175,7 +27175,7 @@ namespace Vault.Api
         /// <param name="jwtRoleRequest"></param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthJwtRoleName(string name, JwtRoleRequest jwtRoleRequest, string jwtMountPath = default(string))
+        public VaultResponse<Object> PostAuthJwtRoleName(string name, JwtRoleRequest jwtRoleRequest, string jwtMountPath = "jwt")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -27230,7 +27230,7 @@ namespace Vault.Api
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthJwtRoleNameAsync(string name, JwtRoleRequest jwtRoleRequest, string jwtMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthJwtRoleNameAsync(string name, JwtRoleRequest jwtRoleRequest, string jwtMountPath = "jwt", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -27284,7 +27284,7 @@ namespace Vault.Api
         /// <param name="kerberosConfigRequest"></param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthKerberosConfig(KerberosConfigRequest kerberosConfigRequest, string kerberosMountPath = default(string))
+        public VaultResponse<Object> PostAuthKerberosConfig(KerberosConfigRequest kerberosConfigRequest, string kerberosMountPath = "kerberos")
         {
             // verify the required parameter 'kerberosConfigRequest' is set
             if (kerberosConfigRequest == null)
@@ -27333,7 +27333,7 @@ namespace Vault.Api
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthKerberosConfigAsync(KerberosConfigRequest kerberosConfigRequest, string kerberosMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthKerberosConfigAsync(KerberosConfigRequest kerberosConfigRequest, string kerberosMountPath = "kerberos", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'kerberosConfigRequest' is set
             if (kerberosConfigRequest == null)
@@ -27382,7 +27382,7 @@ namespace Vault.Api
         /// <param name="kerberosConfigLdapRequest"></param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthKerberosConfigLdap(KerberosConfigLdapRequest kerberosConfigLdapRequest, string kerberosMountPath = default(string))
+        public VaultResponse<Object> PostAuthKerberosConfigLdap(KerberosConfigLdapRequest kerberosConfigLdapRequest, string kerberosMountPath = "kerberos")
         {
             // verify the required parameter 'kerberosConfigLdapRequest' is set
             if (kerberosConfigLdapRequest == null)
@@ -27431,7 +27431,7 @@ namespace Vault.Api
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthKerberosConfigLdapAsync(KerberosConfigLdapRequest kerberosConfigLdapRequest, string kerberosMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthKerberosConfigLdapAsync(KerberosConfigLdapRequest kerberosConfigLdapRequest, string kerberosMountPath = "kerberos", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'kerberosConfigLdapRequest' is set
             if (kerberosConfigLdapRequest == null)
@@ -27481,7 +27481,7 @@ namespace Vault.Api
         /// <param name="kerberosGroupsRequest"></param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthKerberosGroupsName(string name, KerberosGroupsRequest kerberosGroupsRequest, string kerberosMountPath = default(string))
+        public VaultResponse<Object> PostAuthKerberosGroupsName(string name, KerberosGroupsRequest kerberosGroupsRequest, string kerberosMountPath = "kerberos")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -27536,7 +27536,7 @@ namespace Vault.Api
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthKerberosGroupsNameAsync(string name, KerberosGroupsRequest kerberosGroupsRequest, string kerberosMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthKerberosGroupsNameAsync(string name, KerberosGroupsRequest kerberosGroupsRequest, string kerberosMountPath = "kerberos", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -27590,7 +27590,7 @@ namespace Vault.Api
         /// <param name="kerberosLoginRequest"></param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthKerberosLogin(KerberosLoginRequest kerberosLoginRequest, string kerberosMountPath = default(string))
+        public VaultResponse<Object> PostAuthKerberosLogin(KerberosLoginRequest kerberosLoginRequest, string kerberosMountPath = "kerberos")
         {
             // verify the required parameter 'kerberosLoginRequest' is set
             if (kerberosLoginRequest == null)
@@ -27639,7 +27639,7 @@ namespace Vault.Api
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthKerberosLoginAsync(KerberosLoginRequest kerberosLoginRequest, string kerberosMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthKerberosLoginAsync(KerberosLoginRequest kerberosLoginRequest, string kerberosMountPath = "kerberos", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'kerberosLoginRequest' is set
             if (kerberosLoginRequest == null)
@@ -27688,7 +27688,7 @@ namespace Vault.Api
         /// <param name="kubernetesConfigRequest"></param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthKubernetesConfig(KubernetesConfigRequest kubernetesConfigRequest, string kubernetesMountPath = default(string))
+        public VaultResponse<Object> PostAuthKubernetesConfig(KubernetesConfigRequest kubernetesConfigRequest, string kubernetesMountPath = "kubernetes")
         {
             // verify the required parameter 'kubernetesConfigRequest' is set
             if (kubernetesConfigRequest == null)
@@ -27737,7 +27737,7 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthKubernetesConfigAsync(KubernetesConfigRequest kubernetesConfigRequest, string kubernetesMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthKubernetesConfigAsync(KubernetesConfigRequest kubernetesConfigRequest, string kubernetesMountPath = "kubernetes", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'kubernetesConfigRequest' is set
             if (kubernetesConfigRequest == null)
@@ -27786,7 +27786,7 @@ namespace Vault.Api
         /// <param name="kubernetesLoginRequest"></param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthKubernetesLogin(KubernetesLoginRequest kubernetesLoginRequest, string kubernetesMountPath = default(string))
+        public VaultResponse<Object> PostAuthKubernetesLogin(KubernetesLoginRequest kubernetesLoginRequest, string kubernetesMountPath = "kubernetes")
         {
             // verify the required parameter 'kubernetesLoginRequest' is set
             if (kubernetesLoginRequest == null)
@@ -27835,7 +27835,7 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthKubernetesLoginAsync(KubernetesLoginRequest kubernetesLoginRequest, string kubernetesMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthKubernetesLoginAsync(KubernetesLoginRequest kubernetesLoginRequest, string kubernetesMountPath = "kubernetes", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'kubernetesLoginRequest' is set
             if (kubernetesLoginRequest == null)
@@ -27885,7 +27885,7 @@ namespace Vault.Api
         /// <param name="kubernetesRoleRequest"></param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthKubernetesRoleName(string name, KubernetesRoleRequest kubernetesRoleRequest, string kubernetesMountPath = default(string))
+        public VaultResponse<Object> PostAuthKubernetesRoleName(string name, KubernetesRoleRequest kubernetesRoleRequest, string kubernetesMountPath = "kubernetes")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -27940,7 +27940,7 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthKubernetesRoleNameAsync(string name, KubernetesRoleRequest kubernetesRoleRequest, string kubernetesMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthKubernetesRoleNameAsync(string name, KubernetesRoleRequest kubernetesRoleRequest, string kubernetesMountPath = "kubernetes", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -27994,7 +27994,7 @@ namespace Vault.Api
         /// <param name="ldapConfigRequest"></param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthLdapConfig(LdapConfigRequest ldapConfigRequest, string ldapMountPath = default(string))
+        public VaultResponse<Object> PostAuthLdapConfig(LdapConfigRequest ldapConfigRequest, string ldapMountPath = "ldap")
         {
             // verify the required parameter 'ldapConfigRequest' is set
             if (ldapConfigRequest == null)
@@ -28043,7 +28043,7 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthLdapConfigAsync(LdapConfigRequest ldapConfigRequest, string ldapMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthLdapConfigAsync(LdapConfigRequest ldapConfigRequest, string ldapMountPath = "ldap", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'ldapConfigRequest' is set
             if (ldapConfigRequest == null)
@@ -28093,7 +28093,7 @@ namespace Vault.Api
         /// <param name="ldapGroupsRequest"></param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthLdapGroupsName(string name, LdapGroupsRequest ldapGroupsRequest, string ldapMountPath = default(string))
+        public VaultResponse<Object> PostAuthLdapGroupsName(string name, LdapGroupsRequest ldapGroupsRequest, string ldapMountPath = "ldap")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -28148,7 +28148,7 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthLdapGroupsNameAsync(string name, LdapGroupsRequest ldapGroupsRequest, string ldapMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthLdapGroupsNameAsync(string name, LdapGroupsRequest ldapGroupsRequest, string ldapMountPath = "ldap", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -28203,7 +28203,7 @@ namespace Vault.Api
         /// <param name="ldapLoginRequest"></param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthLdapLoginUsername(string username, LdapLoginRequest ldapLoginRequest, string ldapMountPath = default(string))
+        public VaultResponse<Object> PostAuthLdapLoginUsername(string username, LdapLoginRequest ldapLoginRequest, string ldapMountPath = "ldap")
         {
             // verify the required parameter 'username' is set
             if (username == null)
@@ -28258,7 +28258,7 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthLdapLoginUsernameAsync(string username, LdapLoginRequest ldapLoginRequest, string ldapMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthLdapLoginUsernameAsync(string username, LdapLoginRequest ldapLoginRequest, string ldapMountPath = "ldap", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'username' is set
             if (username == null)
@@ -28313,7 +28313,7 @@ namespace Vault.Api
         /// <param name="ldapUsersRequest"></param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthLdapUsersName(string name, LdapUsersRequest ldapUsersRequest, string ldapMountPath = default(string))
+        public VaultResponse<Object> PostAuthLdapUsersName(string name, LdapUsersRequest ldapUsersRequest, string ldapMountPath = "ldap")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -28368,7 +28368,7 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthLdapUsersNameAsync(string name, LdapUsersRequest ldapUsersRequest, string ldapMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthLdapUsersNameAsync(string name, LdapUsersRequest ldapUsersRequest, string ldapMountPath = "ldap", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -28422,7 +28422,7 @@ namespace Vault.Api
         /// <param name="ociConfigRequest"></param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthOciConfig(OciConfigRequest ociConfigRequest, string ociMountPath = default(string))
+        public VaultResponse<Object> PostAuthOciConfig(OciConfigRequest ociConfigRequest, string ociMountPath = "oci")
         {
             // verify the required parameter 'ociConfigRequest' is set
             if (ociConfigRequest == null)
@@ -28471,7 +28471,7 @@ namespace Vault.Api
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthOciConfigAsync(OciConfigRequest ociConfigRequest, string ociMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthOciConfigAsync(OciConfigRequest ociConfigRequest, string ociMountPath = "oci", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'ociConfigRequest' is set
             if (ociConfigRequest == null)
@@ -28521,7 +28521,7 @@ namespace Vault.Api
         /// <param name="ociLoginRequest"></param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthOciLoginRole(string role, OciLoginRequest ociLoginRequest, string ociMountPath = default(string))
+        public VaultResponse<Object> PostAuthOciLoginRole(string role, OciLoginRequest ociLoginRequest, string ociMountPath = "oci")
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -28576,7 +28576,7 @@ namespace Vault.Api
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthOciLoginRoleAsync(string role, OciLoginRequest ociLoginRequest, string ociMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthOciLoginRoleAsync(string role, OciLoginRequest ociLoginRequest, string ociMountPath = "oci", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -28631,7 +28631,7 @@ namespace Vault.Api
         /// <param name="ociRoleRequest"></param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthOciRoleRole(string role, OciRoleRequest ociRoleRequest, string ociMountPath = default(string))
+        public VaultResponse<Object> PostAuthOciRoleRole(string role, OciRoleRequest ociRoleRequest, string ociMountPath = "oci")
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -28686,7 +28686,7 @@ namespace Vault.Api
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthOciRoleRoleAsync(string role, OciRoleRequest ociRoleRequest, string ociMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthOciRoleRoleAsync(string role, OciRoleRequest ociRoleRequest, string ociMountPath = "oci", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'role' is set
             if (role == null)
@@ -28740,7 +28740,7 @@ namespace Vault.Api
         /// <param name="oidcConfigRequest"></param>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthOidcConfig(OidcConfigRequest oidcConfigRequest, string oidcMountPath = default(string))
+        public VaultResponse<Object> PostAuthOidcConfig(OidcConfigRequest oidcConfigRequest, string oidcMountPath = "oidc")
         {
             // verify the required parameter 'oidcConfigRequest' is set
             if (oidcConfigRequest == null)
@@ -28789,7 +28789,7 @@ namespace Vault.Api
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthOidcConfigAsync(OidcConfigRequest oidcConfigRequest, string oidcMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthOidcConfigAsync(OidcConfigRequest oidcConfigRequest, string oidcMountPath = "oidc", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'oidcConfigRequest' is set
             if (oidcConfigRequest == null)
@@ -28838,7 +28838,7 @@ namespace Vault.Api
         /// <param name="oidcLoginRequest"></param>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthOidcLogin(OidcLoginRequest oidcLoginRequest, string oidcMountPath = default(string))
+        public VaultResponse<Object> PostAuthOidcLogin(OidcLoginRequest oidcLoginRequest, string oidcMountPath = "oidc")
         {
             // verify the required parameter 'oidcLoginRequest' is set
             if (oidcLoginRequest == null)
@@ -28887,7 +28887,7 @@ namespace Vault.Api
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthOidcLoginAsync(OidcLoginRequest oidcLoginRequest, string oidcMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthOidcLoginAsync(OidcLoginRequest oidcLoginRequest, string oidcMountPath = "oidc", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'oidcLoginRequest' is set
             if (oidcLoginRequest == null)
@@ -28936,7 +28936,7 @@ namespace Vault.Api
         /// <param name="oidcOidcAuthUrlRequest"></param>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthOidcOidcAuthUrl(OidcOidcAuthUrlRequest oidcOidcAuthUrlRequest, string oidcMountPath = default(string))
+        public VaultResponse<Object> PostAuthOidcOidcAuthUrl(OidcOidcAuthUrlRequest oidcOidcAuthUrlRequest, string oidcMountPath = "oidc")
         {
             // verify the required parameter 'oidcOidcAuthUrlRequest' is set
             if (oidcOidcAuthUrlRequest == null)
@@ -28985,7 +28985,7 @@ namespace Vault.Api
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthOidcOidcAuthUrlAsync(OidcOidcAuthUrlRequest oidcOidcAuthUrlRequest, string oidcMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthOidcOidcAuthUrlAsync(OidcOidcAuthUrlRequest oidcOidcAuthUrlRequest, string oidcMountPath = "oidc", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'oidcOidcAuthUrlRequest' is set
             if (oidcOidcAuthUrlRequest == null)
@@ -29034,7 +29034,7 @@ namespace Vault.Api
         /// <param name="oidcOidcCallbackRequest"></param>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthOidcOidcCallback(OidcOidcCallbackRequest oidcOidcCallbackRequest, string oidcMountPath = default(string))
+        public VaultResponse<Object> PostAuthOidcOidcCallback(OidcOidcCallbackRequest oidcOidcCallbackRequest, string oidcMountPath = "oidc")
         {
             // verify the required parameter 'oidcOidcCallbackRequest' is set
             if (oidcOidcCallbackRequest == null)
@@ -29083,7 +29083,7 @@ namespace Vault.Api
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthOidcOidcCallbackAsync(OidcOidcCallbackRequest oidcOidcCallbackRequest, string oidcMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthOidcOidcCallbackAsync(OidcOidcCallbackRequest oidcOidcCallbackRequest, string oidcMountPath = "oidc", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'oidcOidcCallbackRequest' is set
             if (oidcOidcCallbackRequest == null)
@@ -29133,7 +29133,7 @@ namespace Vault.Api
         /// <param name="oidcRoleRequest"></param>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthOidcRoleName(string name, OidcRoleRequest oidcRoleRequest, string oidcMountPath = default(string))
+        public VaultResponse<Object> PostAuthOidcRoleName(string name, OidcRoleRequest oidcRoleRequest, string oidcMountPath = "oidc")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -29188,7 +29188,7 @@ namespace Vault.Api
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthOidcRoleNameAsync(string name, OidcRoleRequest oidcRoleRequest, string oidcMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthOidcRoleNameAsync(string name, OidcRoleRequest oidcRoleRequest, string oidcMountPath = "oidc", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -29242,7 +29242,7 @@ namespace Vault.Api
         /// <param name="oktaConfigRequest"></param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthOktaConfig(OktaConfigRequest oktaConfigRequest, string oktaMountPath = default(string))
+        public VaultResponse<Object> PostAuthOktaConfig(OktaConfigRequest oktaConfigRequest, string oktaMountPath = "okta")
         {
             // verify the required parameter 'oktaConfigRequest' is set
             if (oktaConfigRequest == null)
@@ -29291,7 +29291,7 @@ namespace Vault.Api
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthOktaConfigAsync(OktaConfigRequest oktaConfigRequest, string oktaMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthOktaConfigAsync(OktaConfigRequest oktaConfigRequest, string oktaMountPath = "okta", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'oktaConfigRequest' is set
             if (oktaConfigRequest == null)
@@ -29341,7 +29341,7 @@ namespace Vault.Api
         /// <param name="oktaGroupsRequest"></param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthOktaGroupsName(string name, OktaGroupsRequest oktaGroupsRequest, string oktaMountPath = default(string))
+        public VaultResponse<Object> PostAuthOktaGroupsName(string name, OktaGroupsRequest oktaGroupsRequest, string oktaMountPath = "okta")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -29396,7 +29396,7 @@ namespace Vault.Api
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthOktaGroupsNameAsync(string name, OktaGroupsRequest oktaGroupsRequest, string oktaMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthOktaGroupsNameAsync(string name, OktaGroupsRequest oktaGroupsRequest, string oktaMountPath = "okta", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -29451,7 +29451,7 @@ namespace Vault.Api
         /// <param name="oktaLoginRequest"></param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthOktaLoginUsername(string username, OktaLoginRequest oktaLoginRequest, string oktaMountPath = default(string))
+        public VaultResponse<Object> PostAuthOktaLoginUsername(string username, OktaLoginRequest oktaLoginRequest, string oktaMountPath = "okta")
         {
             // verify the required parameter 'username' is set
             if (username == null)
@@ -29506,7 +29506,7 @@ namespace Vault.Api
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthOktaLoginUsernameAsync(string username, OktaLoginRequest oktaLoginRequest, string oktaMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthOktaLoginUsernameAsync(string username, OktaLoginRequest oktaLoginRequest, string oktaMountPath = "okta", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'username' is set
             if (username == null)
@@ -29561,7 +29561,7 @@ namespace Vault.Api
         /// <param name="oktaUsersRequest"></param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthOktaUsersName(string name, OktaUsersRequest oktaUsersRequest, string oktaMountPath = default(string))
+        public VaultResponse<Object> PostAuthOktaUsersName(string name, OktaUsersRequest oktaUsersRequest, string oktaMountPath = "okta")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -29616,7 +29616,7 @@ namespace Vault.Api
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthOktaUsersNameAsync(string name, OktaUsersRequest oktaUsersRequest, string oktaMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthOktaUsersNameAsync(string name, OktaUsersRequest oktaUsersRequest, string oktaMountPath = "okta", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -29670,7 +29670,7 @@ namespace Vault.Api
         /// <param name="radiusConfigRequest"></param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthRadiusConfig(RadiusConfigRequest radiusConfigRequest, string radiusMountPath = default(string))
+        public VaultResponse<Object> PostAuthRadiusConfig(RadiusConfigRequest radiusConfigRequest, string radiusMountPath = "radius")
         {
             // verify the required parameter 'radiusConfigRequest' is set
             if (radiusConfigRequest == null)
@@ -29719,7 +29719,7 @@ namespace Vault.Api
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthRadiusConfigAsync(RadiusConfigRequest radiusConfigRequest, string radiusMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthRadiusConfigAsync(RadiusConfigRequest radiusConfigRequest, string radiusMountPath = "radius", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'radiusConfigRequest' is set
             if (radiusConfigRequest == null)
@@ -29768,7 +29768,7 @@ namespace Vault.Api
         /// <param name="radiusLoginRequest"></param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthRadiusLogin(RadiusLoginRequest radiusLoginRequest, string radiusMountPath = default(string))
+        public VaultResponse<Object> PostAuthRadiusLogin(RadiusLoginRequest radiusLoginRequest, string radiusMountPath = "radius")
         {
             // verify the required parameter 'radiusLoginRequest' is set
             if (radiusLoginRequest == null)
@@ -29817,7 +29817,7 @@ namespace Vault.Api
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthRadiusLoginAsync(RadiusLoginRequest radiusLoginRequest, string radiusMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthRadiusLoginAsync(RadiusLoginRequest radiusLoginRequest, string radiusMountPath = "radius", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'radiusLoginRequest' is set
             if (radiusLoginRequest == null)
@@ -29867,7 +29867,7 @@ namespace Vault.Api
         /// <param name="radiusLoginRequest"></param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthRadiusLoginUrlusername(string urlusername, RadiusLoginRequest radiusLoginRequest, string radiusMountPath = default(string))
+        public VaultResponse<Object> PostAuthRadiusLoginUrlusername(string urlusername, RadiusLoginRequest radiusLoginRequest, string radiusMountPath = "radius")
         {
             // verify the required parameter 'urlusername' is set
             if (urlusername == null)
@@ -29922,7 +29922,7 @@ namespace Vault.Api
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthRadiusLoginUrlusernameAsync(string urlusername, RadiusLoginRequest radiusLoginRequest, string radiusMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthRadiusLoginUrlusernameAsync(string urlusername, RadiusLoginRequest radiusLoginRequest, string radiusMountPath = "radius", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'urlusername' is set
             if (urlusername == null)
@@ -29977,7 +29977,7 @@ namespace Vault.Api
         /// <param name="radiusUsersRequest"></param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthRadiusUsersName(string name, RadiusUsersRequest radiusUsersRequest, string radiusMountPath = default(string))
+        public VaultResponse<Object> PostAuthRadiusUsersName(string name, RadiusUsersRequest radiusUsersRequest, string radiusMountPath = "radius")
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -30032,7 +30032,7 @@ namespace Vault.Api
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthRadiusUsersNameAsync(string name, RadiusUsersRequest radiusUsersRequest, string radiusMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthRadiusUsersNameAsync(string name, RadiusUsersRequest radiusUsersRequest, string radiusMountPath = "radius", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -30084,10 +30084,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateRequest"></param>
-        /// <param name="format">Return json formatted output (optional)</param>
+        /// <param name="format">Return json formatted output (optional, default to &quot;json&quot;)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthTokenCreate(TokenCreateRequest tokenCreateRequest, string format = default(string), string tokenMountPath = default(string))
+        public VaultResponse<Object> PostAuthTokenCreate(TokenCreateRequest tokenCreateRequest, string format = "json", string tokenMountPath = "token")
         {
             // verify the required parameter 'tokenCreateRequest' is set
             if (tokenCreateRequest == null)
@@ -30137,11 +30137,11 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateRequest"></param>
-        /// <param name="format">Return json formatted output (optional)</param>
+        /// <param name="format">Return json formatted output (optional, default to &quot;json&quot;)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthTokenCreateAsync(TokenCreateRequest tokenCreateRequest, string format = default(string), string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthTokenCreateAsync(TokenCreateRequest tokenCreateRequest, string format = "json", string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'tokenCreateRequest' is set
             if (tokenCreateRequest == null)
@@ -30192,10 +30192,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateOrphanRequest"></param>
-        /// <param name="format">Return json formatted output (optional)</param>
+        /// <param name="format">Return json formatted output (optional, default to &quot;json&quot;)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthTokenCreateOrphan(TokenCreateOrphanRequest tokenCreateOrphanRequest, string format = default(string), string tokenMountPath = default(string))
+        public VaultResponse<Object> PostAuthTokenCreateOrphan(TokenCreateOrphanRequest tokenCreateOrphanRequest, string format = "json", string tokenMountPath = "token")
         {
             // verify the required parameter 'tokenCreateOrphanRequest' is set
             if (tokenCreateOrphanRequest == null)
@@ -30245,11 +30245,11 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateOrphanRequest"></param>
-        /// <param name="format">Return json formatted output (optional)</param>
+        /// <param name="format">Return json formatted output (optional, default to &quot;json&quot;)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthTokenCreateOrphanAsync(TokenCreateOrphanRequest tokenCreateOrphanRequest, string format = default(string), string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthTokenCreateOrphanAsync(TokenCreateOrphanRequest tokenCreateOrphanRequest, string format = "json", string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'tokenCreateOrphanRequest' is set
             if (tokenCreateOrphanRequest == null)
@@ -30301,10 +30301,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role</param>
         /// <param name="tokenCreateRequest"></param>
-        /// <param name="format">Return json formatted output (optional)</param>
+        /// <param name="format">Return json formatted output (optional, default to &quot;json&quot;)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthTokenCreateRoleName(string roleName, TokenCreateRequest tokenCreateRequest, string format = default(string), string tokenMountPath = default(string))
+        public VaultResponse<Object> PostAuthTokenCreateRoleName(string roleName, TokenCreateRequest tokenCreateRequest, string format = "json", string tokenMountPath = "token")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -30360,11 +30360,11 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role</param>
         /// <param name="tokenCreateRequest"></param>
-        /// <param name="format">Return json formatted output (optional)</param>
+        /// <param name="format">Return json formatted output (optional, default to &quot;json&quot;)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthTokenCreateRoleNameAsync(string roleName, TokenCreateRequest tokenCreateRequest, string format = default(string), string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthTokenCreateRoleNameAsync(string roleName, TokenCreateRequest tokenCreateRequest, string format = "json", string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -30422,7 +30422,7 @@ namespace Vault.Api
         /// <param name="tokenLookupRequest"></param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthTokenLookup(TokenLookupRequest tokenLookupRequest, string tokenMountPath = default(string))
+        public VaultResponse<Object> PostAuthTokenLookup(TokenLookupRequest tokenLookupRequest, string tokenMountPath = "token")
         {
             // verify the required parameter 'tokenLookupRequest' is set
             if (tokenLookupRequest == null)
@@ -30471,7 +30471,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthTokenLookupAsync(TokenLookupRequest tokenLookupRequest, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthTokenLookupAsync(TokenLookupRequest tokenLookupRequest, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'tokenLookupRequest' is set
             if (tokenLookupRequest == null)
@@ -30520,7 +30520,7 @@ namespace Vault.Api
         /// <param name="tokenLookupAccessorRequest"></param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthTokenLookupAccessor(TokenLookupAccessorRequest tokenLookupAccessorRequest, string tokenMountPath = default(string))
+        public VaultResponse<Object> PostAuthTokenLookupAccessor(TokenLookupAccessorRequest tokenLookupAccessorRequest, string tokenMountPath = "token")
         {
             // verify the required parameter 'tokenLookupAccessorRequest' is set
             if (tokenLookupAccessorRequest == null)
@@ -30569,7 +30569,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthTokenLookupAccessorAsync(TokenLookupAccessorRequest tokenLookupAccessorRequest, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthTokenLookupAccessorAsync(TokenLookupAccessorRequest tokenLookupAccessorRequest, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'tokenLookupAccessorRequest' is set
             if (tokenLookupAccessorRequest == null)
@@ -30618,7 +30618,7 @@ namespace Vault.Api
         /// <param name="tokenLookupSelfRequest"></param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthTokenLookupSelf(TokenLookupSelfRequest tokenLookupSelfRequest, string tokenMountPath = default(string))
+        public VaultResponse<Object> PostAuthTokenLookupSelf(TokenLookupSelfRequest tokenLookupSelfRequest, string tokenMountPath = "token")
         {
             // verify the required parameter 'tokenLookupSelfRequest' is set
             if (tokenLookupSelfRequest == null)
@@ -30667,7 +30667,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthTokenLookupSelfAsync(TokenLookupSelfRequest tokenLookupSelfRequest, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthTokenLookupSelfAsync(TokenLookupSelfRequest tokenLookupSelfRequest, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'tokenLookupSelfRequest' is set
             if (tokenLookupSelfRequest == null)
@@ -30716,7 +30716,7 @@ namespace Vault.Api
         /// <param name="tokenRenewRequest"></param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthTokenRenew(TokenRenewRequest tokenRenewRequest, string tokenMountPath = default(string))
+        public VaultResponse<Object> PostAuthTokenRenew(TokenRenewRequest tokenRenewRequest, string tokenMountPath = "token")
         {
             // verify the required parameter 'tokenRenewRequest' is set
             if (tokenRenewRequest == null)
@@ -30765,7 +30765,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthTokenRenewAsync(TokenRenewRequest tokenRenewRequest, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthTokenRenewAsync(TokenRenewRequest tokenRenewRequest, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'tokenRenewRequest' is set
             if (tokenRenewRequest == null)
@@ -30814,7 +30814,7 @@ namespace Vault.Api
         /// <param name="tokenRenewAccessorRequest"></param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthTokenRenewAccessor(TokenRenewAccessorRequest tokenRenewAccessorRequest, string tokenMountPath = default(string))
+        public VaultResponse<Object> PostAuthTokenRenewAccessor(TokenRenewAccessorRequest tokenRenewAccessorRequest, string tokenMountPath = "token")
         {
             // verify the required parameter 'tokenRenewAccessorRequest' is set
             if (tokenRenewAccessorRequest == null)
@@ -30863,7 +30863,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthTokenRenewAccessorAsync(TokenRenewAccessorRequest tokenRenewAccessorRequest, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthTokenRenewAccessorAsync(TokenRenewAccessorRequest tokenRenewAccessorRequest, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'tokenRenewAccessorRequest' is set
             if (tokenRenewAccessorRequest == null)
@@ -30912,7 +30912,7 @@ namespace Vault.Api
         /// <param name="tokenRenewSelfRequest"></param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthTokenRenewSelf(TokenRenewSelfRequest tokenRenewSelfRequest, string tokenMountPath = default(string))
+        public VaultResponse<Object> PostAuthTokenRenewSelf(TokenRenewSelfRequest tokenRenewSelfRequest, string tokenMountPath = "token")
         {
             // verify the required parameter 'tokenRenewSelfRequest' is set
             if (tokenRenewSelfRequest == null)
@@ -30961,7 +30961,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthTokenRenewSelfAsync(TokenRenewSelfRequest tokenRenewSelfRequest, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthTokenRenewSelfAsync(TokenRenewSelfRequest tokenRenewSelfRequest, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'tokenRenewSelfRequest' is set
             if (tokenRenewSelfRequest == null)
@@ -31010,7 +31010,7 @@ namespace Vault.Api
         /// <param name="tokenRevokeRequest"></param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthTokenRevoke(TokenRevokeRequest tokenRevokeRequest, string tokenMountPath = default(string))
+        public VaultResponse<Object> PostAuthTokenRevoke(TokenRevokeRequest tokenRevokeRequest, string tokenMountPath = "token")
         {
             // verify the required parameter 'tokenRevokeRequest' is set
             if (tokenRevokeRequest == null)
@@ -31059,7 +31059,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthTokenRevokeAsync(TokenRevokeRequest tokenRevokeRequest, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthTokenRevokeAsync(TokenRevokeRequest tokenRevokeRequest, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'tokenRevokeRequest' is set
             if (tokenRevokeRequest == null)
@@ -31108,7 +31108,7 @@ namespace Vault.Api
         /// <param name="tokenRevokeAccessorRequest"></param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthTokenRevokeAccessor(TokenRevokeAccessorRequest tokenRevokeAccessorRequest, string tokenMountPath = default(string))
+        public VaultResponse<Object> PostAuthTokenRevokeAccessor(TokenRevokeAccessorRequest tokenRevokeAccessorRequest, string tokenMountPath = "token")
         {
             // verify the required parameter 'tokenRevokeAccessorRequest' is set
             if (tokenRevokeAccessorRequest == null)
@@ -31157,7 +31157,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthTokenRevokeAccessorAsync(TokenRevokeAccessorRequest tokenRevokeAccessorRequest, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthTokenRevokeAccessorAsync(TokenRevokeAccessorRequest tokenRevokeAccessorRequest, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'tokenRevokeAccessorRequest' is set
             if (tokenRevokeAccessorRequest == null)
@@ -31206,7 +31206,7 @@ namespace Vault.Api
         /// <param name="tokenRevokeOrphanRequest"></param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthTokenRevokeOrphan(TokenRevokeOrphanRequest tokenRevokeOrphanRequest, string tokenMountPath = default(string))
+        public VaultResponse<Object> PostAuthTokenRevokeOrphan(TokenRevokeOrphanRequest tokenRevokeOrphanRequest, string tokenMountPath = "token")
         {
             // verify the required parameter 'tokenRevokeOrphanRequest' is set
             if (tokenRevokeOrphanRequest == null)
@@ -31255,7 +31255,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthTokenRevokeOrphanAsync(TokenRevokeOrphanRequest tokenRevokeOrphanRequest, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthTokenRevokeOrphanAsync(TokenRevokeOrphanRequest tokenRevokeOrphanRequest, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'tokenRevokeOrphanRequest' is set
             if (tokenRevokeOrphanRequest == null)
@@ -31303,7 +31303,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthTokenRevokeSelf(string tokenMountPath = default(string))
+        public VaultResponse<Object> PostAuthTokenRevokeSelf(string tokenMountPath = "token")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -31345,7 +31345,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthTokenRevokeSelfAsync(string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthTokenRevokeSelfAsync(string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -31389,7 +31389,7 @@ namespace Vault.Api
         /// <param name="tokenRolesRequest"></param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthTokenRolesRoleName(string roleName, TokenRolesRequest tokenRolesRequest, string tokenMountPath = default(string))
+        public VaultResponse<Object> PostAuthTokenRolesRoleName(string roleName, TokenRolesRequest tokenRolesRequest, string tokenMountPath = "token")
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -31444,7 +31444,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthTokenRolesRoleNameAsync(string roleName, TokenRolesRequest tokenRolesRequest, string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthTokenRolesRoleNameAsync(string roleName, TokenRolesRequest tokenRolesRequest, string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -31497,7 +31497,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthTokenTidy(string tokenMountPath = default(string))
+        public VaultResponse<Object> PostAuthTokenTidy(string tokenMountPath = "token")
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -31539,7 +31539,7 @@ namespace Vault.Api
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthTokenTidyAsync(string tokenMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthTokenTidyAsync(string tokenMountPath = "token", CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -31583,7 +31583,7 @@ namespace Vault.Api
         /// <param name="userpassLoginRequest"></param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthUserpassLoginUsername(string username, UserpassLoginRequest userpassLoginRequest, string userpassMountPath = default(string))
+        public VaultResponse<Object> PostAuthUserpassLoginUsername(string username, UserpassLoginRequest userpassLoginRequest, string userpassMountPath = "userpass")
         {
             // verify the required parameter 'username' is set
             if (username == null)
@@ -31638,7 +31638,7 @@ namespace Vault.Api
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthUserpassLoginUsernameAsync(string username, UserpassLoginRequest userpassLoginRequest, string userpassMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthUserpassLoginUsernameAsync(string username, UserpassLoginRequest userpassLoginRequest, string userpassMountPath = "userpass", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'username' is set
             if (username == null)
@@ -31693,7 +31693,7 @@ namespace Vault.Api
         /// <param name="userpassUsersRequest"></param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthUserpassUsersUsername(string username, UserpassUsersRequest userpassUsersRequest, string userpassMountPath = default(string))
+        public VaultResponse<Object> PostAuthUserpassUsersUsername(string username, UserpassUsersRequest userpassUsersRequest, string userpassMountPath = "userpass")
         {
             // verify the required parameter 'username' is set
             if (username == null)
@@ -31748,7 +31748,7 @@ namespace Vault.Api
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthUserpassUsersUsernameAsync(string username, UserpassUsersRequest userpassUsersRequest, string userpassMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthUserpassUsersUsernameAsync(string username, UserpassUsersRequest userpassUsersRequest, string userpassMountPath = "userpass", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'username' is set
             if (username == null)
@@ -31803,7 +31803,7 @@ namespace Vault.Api
         /// <param name="userpassUsersPasswordRequest"></param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthUserpassUsersUsernamePassword(string username, UserpassUsersPasswordRequest userpassUsersPasswordRequest, string userpassMountPath = default(string))
+        public VaultResponse<Object> PostAuthUserpassUsersUsernamePassword(string username, UserpassUsersPasswordRequest userpassUsersPasswordRequest, string userpassMountPath = "userpass")
         {
             // verify the required parameter 'username' is set
             if (username == null)
@@ -31858,7 +31858,7 @@ namespace Vault.Api
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthUserpassUsersUsernamePasswordAsync(string username, UserpassUsersPasswordRequest userpassUsersPasswordRequest, string userpassMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthUserpassUsersUsernamePasswordAsync(string username, UserpassUsersPasswordRequest userpassUsersPasswordRequest, string userpassMountPath = "userpass", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'username' is set
             if (username == null)
@@ -31913,7 +31913,7 @@ namespace Vault.Api
         /// <param name="userpassUsersPoliciesRequest"></param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
-        public VaultResponse<Object> PostAuthUserpassUsersUsernamePolicies(string username, UserpassUsersPoliciesRequest userpassUsersPoliciesRequest, string userpassMountPath = default(string))
+        public VaultResponse<Object> PostAuthUserpassUsersUsernamePolicies(string username, UserpassUsersPoliciesRequest userpassUsersPoliciesRequest, string userpassMountPath = "userpass")
         {
             // verify the required parameter 'username' is set
             if (username == null)
@@ -31968,7 +31968,7 @@ namespace Vault.Api
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthUserpassUsersUsernamePoliciesAsync(string username, UserpassUsersPoliciesRequest userpassUsersPoliciesRequest, string userpassMountPath = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthUserpassUsersUsernamePoliciesAsync(string username, UserpassUsersPoliciesRequest userpassUsersPoliciesRequest, string userpassMountPath = "userpass", CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'username' is set
             if (username == null)
