@@ -402,11 +402,6 @@ namespace Vault.Client
 
                 foreach (var header in _requestHeaders.CustomHeaders)
                 {
-                    request.Headers.TryAddWithoutValidation("X-Vault-Wrap-TTL", wrapttl.ToString());
-                }
-
-                foreach (var header in _requestHeaders.CustomHeaders)
-                {
                     request.Headers.TryAddWithoutValidation(header.Key, header.Value);
                 }
 
