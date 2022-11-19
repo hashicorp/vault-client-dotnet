@@ -6386,7 +6386,7 @@ namespace Vault.Api
             this.Configuration = apiClient.Configuration;
             this.Client = apiClient;
             this.AsynchronousClient = apiClient;
-            this.ExceptionFactory = Configuration.DefaultExceptionFactory;
+            this.ExceptionFactory = VaultConfiguration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -6412,7 +6412,7 @@ namespace Vault.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Vault.Client.Configuration Configuration { get; set; }
+        public VaultConfiguration Configuration { get; set; }
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.

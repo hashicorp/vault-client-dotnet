@@ -90,7 +90,7 @@ namespace {{packageName}}.{{apiPackage}}
             this.Configuration = apiClient.Configuration;
             this.Client = apiClient;
             this.AsynchronousClient = apiClient;
-            this.ExceptionFactory = Configuration.DefaultExceptionFactory;
+            this.ExceptionFactory = {{packageName}}Configuration.DefaultExceptionFactory;
         }
 
         {{#supportsAsync}}
@@ -118,7 +118,7 @@ namespace {{packageName}}.{{apiPackage}}
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public {{packageName}}.Client.Configuration Configuration { get; set; }
+        public {{packageName}}Configuration Configuration { get; set; }
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.

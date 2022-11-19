@@ -36,7 +36,7 @@ namespace Vault.Client
     /// </summary>
     internal class CustomJsonCodec
     {
-        private readonly Configuration _configuration;
+        private readonly VaultConfiguration _configuration;
         private static readonly string _contentType = "application/json";
         private readonly JsonSerializerSettings _serializerSettings = new JsonSerializerSettings
         {
@@ -51,12 +51,12 @@ namespace Vault.Client
             }
         };
 
-        public CustomJsonCodec(Configuration configuration)
+        public CustomJsonCodec(VaultConfiguration configuration)
         {
             _configuration = configuration;
         }
 
-        public CustomJsonCodec(JsonSerializerSettings serializerSettings, Configuration configuration)
+        public CustomJsonCodec(JsonSerializerSettings serializerSettings, VaultConfiguration configuration)
         {
             _serializerSettings = serializerSettings;
             _configuration = configuration;
@@ -179,9 +179,9 @@ namespace Vault.Client
     public partial class ApiClient : ISynchronousClient, IAsynchronousClient
     {
         /// <summary>
-        /// Configuration object for all requests
+        /// Vault configuration object for all requests
         /// </summary>
-        public readonly Configuration Configuration;
+        public readonly VaultConfiguration Configuration;
 
         private readonly object _requestHeaderLock = new object();
 
@@ -213,7 +213,7 @@ namespace Vault.Client
         /// Some configuration settings will not be applied without passing an HttpClientHandler.
         /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
         /// </remarks>
-        public ApiClient(Configuration configuration)
+        public ApiClient(VaultConfiguration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("client cannot be null");
 

@@ -80,9 +80,9 @@ namespace {{packageName}}.Client
     }
 
     /// <summary>
-    /// Represents a set of configuration settings
+    /// Represents a set of {{packageName}} configuration settings
     /// </summary>
-    {{>visibility}} class Configuration
+    {{>visibility}} class {{packageName}}Configuration
     {
         #region Constants
         /// <summary>
@@ -170,7 +170,7 @@ namespace {{packageName}}.Client
         /// <summary>
         /// Initializes a new instance of the <see cref="Configuration" /> class
         /// </summary>
-        public Configuration(string basePath,
+        public {{packageName}}Configuration(string basePath,
                             HttpClientHandler httpClientHandler = null,
                             TimeSpan? timeout = null,
                             RetryConfiguration retryConfiguration = null,
