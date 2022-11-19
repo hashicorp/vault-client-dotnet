@@ -78,6 +78,12 @@ namespace {{packageName}}
 
         /// <summary>
         /// Sets the X-Vault-Wrap-TTL header
+        /// <remarks>
+        /// Sets the response wrapping TTL to the given duration
+        /// for subsequent requests. Vault will then wrap responses 
+        /// and return a response-wrapping token instead.
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </summary>
         public void SetWrapTTL(int ttlSeconds)
         {
@@ -90,7 +96,7 @@ namespace {{packageName}}
         }
 
         /// <summary>
-        /// Clear current time to live 
+        /// Clears the current X-Vault-Wrap-TTL header
         /// </summary>
         public void ClearWrapTTL()
         {
