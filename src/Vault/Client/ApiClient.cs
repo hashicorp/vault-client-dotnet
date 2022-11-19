@@ -222,11 +222,11 @@ namespace Vault.Client
             Configuration = configuration;
         }
 
-        internal void SetWrapTTL(int ttl)
+        internal void SetWrapTTL(TimeSpan ttl)
         {
             lock (_requestHeaderLock)
             {
-                _requestHeaders.ResponseWrapTTL = ttl;
+                _requestHeaders.ResponseWrapTTL = (int)ttl.TotalSeconds;
             }
         }
 

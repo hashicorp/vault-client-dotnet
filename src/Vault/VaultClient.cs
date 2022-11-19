@@ -99,14 +99,14 @@ namespace Vault
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </summary>
-        public void SetWrapTTL(int ttlSeconds)
+        public void SetWrapTTL(TimeSpan ttlTimeSpan)
         {
-            if (ttlSeconds < 1)
+            if (ttlTimeSpan.TotalSeconds < 1)
             {
-                throw new ArgumentException("TTL should be greater than 0");
+                throw new ArgumentException("Time to live must be greater than 0");
             }
 
-            _apiClient.SetWrapTTL(ttlSeconds);
+            _apiClient.SetWrapTTL(ttlTimeSpan);
         }
 
         /// <summary>
@@ -114,7 +114,7 @@ namespace Vault
         /// </summary>
         public void ClearWrapTTL()
         {
-            _apiClient.SetWrapTTL(0);
+            _apiClient.SetWrapTTL(TimeSpan.Zero);
         }
 
         /// <summary>
