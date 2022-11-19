@@ -158,7 +158,7 @@ namespace Vault.Client
 
         #region Constructors
         /// <summary>
-        /// Initializes a new instance of the <see cref="Configuration" /> class
+        /// Initializes a new instance of the <see cref="VaultConfiguration" /> class
         /// </summary>
         public VaultConfiguration(string basePath,
                             HttpClientHandler httpClientHandler = null,
