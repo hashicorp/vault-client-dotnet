@@ -166,6 +166,8 @@ namespace Vault.Client
 
         public List<string> MFACredentials = new List<string>();
 
+        public int ResponseWrapTTL = 0;
+
         public Dictionary<string, string> CustomHeaders = new Dictionary<string, string> { };
     }
 
@@ -220,6 +222,17 @@ namespace Vault.Client
             Configuration = configuration;
         }
 
+        internal void SetWrapTTL(TimeSpan ttl)
+        {
+            lock (_requestHeaderLock)
+            {
+                _requestHeaders.ResponseWrapTTL = (int)ttl.TotalSeconds;
+            }
+        }
+
+        /// <summary>
+        /// Set Token Header Value
+        /// </summary>
         internal void SetToken(string token)
         {
             lock (_requestHeaderLock)
@@ -228,6 +241,9 @@ namespace Vault.Client
             }
         }
 
+        /// <summary>
+        /// Set Namespace Header Value
+        /// </summary>
         internal void SetNamespace(string Namespace)
         {
             lock (_requestHeaderLock)
@@ -376,6 +392,12 @@ namespace Vault.Client
                 if (!string.IsNullOrEmpty(ns))
                 {
                     request.Headers.TryAddWithoutValidation("X-Vault-Namespace", ns);
+                }
+
+                int wrapTTL = _requestHeaders.ResponseWrapTTL;
+                if (wrapTTL > 0)
+                {
+                    request.Headers.TryAddWithoutValidation("X-Vault-Wrap-TTL", wrapTTL.ToString());
                 }
 
                 foreach (var header in _requestHeaders.CustomHeaders)
