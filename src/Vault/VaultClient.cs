@@ -57,7 +57,7 @@ namespace Vault
         }
 
         /// <summary>
-        /// Sets the client token to inject as a header into Api calls
+        /// Sets the X-Vault-Token header
         /// </summary>
         public void SetToken(string token)
         {
@@ -70,7 +70,7 @@ namespace Vault
         }
 
         /// <summary>
-        /// Sets the Namespace value to be used as a header with api calls
+        /// Sets X-Vault-Namespace header
         /// </summary>
         public void SetNamespace(string Namespace)
         {
@@ -88,6 +88,33 @@ namespace Vault
         public void ClearNamespace()
         {
             _apiClient.SetNamespace(string.Empty);
+        }
+
+        /// <summary>
+        /// Sets the X-Vault-Wrap-TTL header
+        /// <remarks>
+        /// Sets the response wrapping TTL to the given duration
+        /// for subsequent requests. Vault will then wrap responses 
+        /// and return a response-wrapping token instead.
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </summary>
+        public void SetWrapTTL(TimeSpan ttl)
+        {
+            if (ttl.TotalSeconds < 1)
+            {
+                throw new ArgumentException("Time to live must be greater than 0");
+            }
+
+            _apiClient.SetWrapTTL(ttl);
+        }
+
+        /// <summary>
+        /// Clears the current X-Vault-Wrap-TTL header
+        /// </summary>
+        public void ClearWrapTTL()
+        {
+            _apiClient.SetWrapTTL(TimeSpan.Zero);
         }
 
         /// <summary>
@@ -113,7 +140,7 @@ namespace Vault
         {
             _apiClient.ClearCustomHeaders();
         }
-        
+
         /// <summary>
         /// Setting MFA Headers ("X-Vault-MFA") on subsequent requests
         /// See: https://learn.hashicorp.com/tutorials/vault/multi-factor-authentication
