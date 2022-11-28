@@ -85,14 +85,14 @@ namespace {{packageName}}
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </summary>
-        public void SetWrapTTL(TimeSpan ttlTimeSpan)
+        public void SetWrapTTL(TimeSpan ttl)
         {
-            if (ttlTimeSpan.TotalSeconds < 1)
+            if (ttl.TotalSeconds < 1)
             {
                 throw new ArgumentException("Time to live must be greater than 0");
             }
 
-            _apiClient.SetWrapTTL(ttlTimeSpan);
+            _apiClient.SetWrapTTL(ttl);
         }
 
         /// <summary>
