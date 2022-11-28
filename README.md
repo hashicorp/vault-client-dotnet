@@ -107,7 +107,7 @@ namespace Example
         public static void Main()
         {
             string address = "http://127.0.0.1:8200";
-            Configuration config = new Configuration(address);
+            VaultConfiguration config = new VaultConfiguration(address);
 
             VaultClient vaultClient = new VaultClient(config);
             vaultClient.SetToken("my-token");
@@ -134,10 +134,10 @@ coming soon!
 ## Examples
 
 ### Configuring a Vault Client
-The VaultClient requires you pass it a `Configuration` object. 
+The VaultClient requires you pass it a `VaultConfiguration` object. 
 
 ```csharp
-Configuration config = new Configuration("http:127.0.0.1:8200");
+VaultConfiguration config = new VaultConfiguration("http:127.0.0.1:8200");
 VaultClient vaultClient = new VaultClient(config);
 ```
 
@@ -149,14 +149,14 @@ This can be used to intercept requests and add custom logic before the base
 // Create a custom HttpClientHandler
 HttpClientHandler myClientHandler = new HttpClientHandler();
 
-Configuration config = new Configuration("http://127.0.0.1:8200",
+VaultConfiguration config = new VaultConfiguration("http://127.0.0.1:8200",
                                           myClientHandler);
 ```
 
 The VaultClient also allows you to set a custom Timeout for all API calls.
 
 ```csharp
-Configuration config = new Configuration(basePath: address, 
+VaultConfiguration config = new VaultConfiguration(basePath: address, 
                                         httpClientHandler: httpClientHandler, 
                                         timeout: TimeSpan.FromSeconds(15));
 ```

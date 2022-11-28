@@ -44,9 +44,9 @@ namespace Vault
         /// <summary>
         /// Initializes a new instance of the <see cref="VaultClient"/> class
         /// </summary>
-        public VaultClient(Configuration configuration)
+        public VaultClient(VaultConfiguration configuration)
         {
-            if (configuration == null) throw new ArgumentNullException(nameof(Configuration));
+            if (configuration == null) throw new ArgumentNullException(nameof(VaultConfiguration));
 
             _apiClient = new ApiClient(configuration);
 

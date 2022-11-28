@@ -86,9 +86,9 @@ namespace Vault.Client
     }
 
     /// <summary>
-    /// Represents a set of configuration settings
+    /// Represents a set of Vault configuration settings
     /// </summary>
-    public class Configuration
+    public class VaultConfiguration
     {
         #region Constants
         /// <summary>
@@ -158,9 +158,9 @@ namespace Vault.Client
 
         #region Constructors
         /// <summary>
-        /// Initializes a new instance of the <see cref="Configuration" /> class
+        /// Initializes a new instance of the <see cref="VaultConfiguration" /> class
         /// </summary>
-        public Configuration(string basePath,
+        public VaultConfiguration(string basePath,
                             HttpClientHandler httpClientHandler = null,
                             TimeSpan? timeout = null,
                             RetryConfiguration retryConfiguration = null,
