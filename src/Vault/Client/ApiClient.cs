@@ -394,10 +394,10 @@ namespace Vault.Client
                     request.Headers.TryAddWithoutValidation("X-Vault-Namespace", ns);
                 }
 
-                int wrapttl = _requestHeaders.ResponseWrapTTL;
-                if (wrapttl > 0)
+                int wrapTTL = _requestHeaders.ResponseWrapTTL;
+                if (wrapTTL > 0)
                 {
-                    request.Headers.TryAddWithoutValidation("X-Vault-Wrap-TTL", wrapttl.ToString());
+                    request.Headers.TryAddWithoutValidation("X-Vault-Wrap-TTL", wrapTTL.ToString());
                 }
 
                 foreach (var header in _requestHeaders.CustomHeaders)
