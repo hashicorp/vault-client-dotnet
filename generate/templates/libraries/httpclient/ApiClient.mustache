@@ -33,7 +33,7 @@ namespace {{packageName}}.Client
     /// </summary>
     internal class CustomJsonCodec
     {
-        private readonly Configuration _configuration;
+        private readonly {{packageName}}Configuration _configuration;
         private static readonly string _contentType = "application/json";
         private readonly JsonSerializerSettings _serializerSettings = new JsonSerializerSettings
         {
@@ -48,12 +48,12 @@ namespace {{packageName}}.Client
             }
         };
 
-        public CustomJsonCodec(Configuration configuration)
+        public CustomJsonCodec({{packageName}}Configuration configuration)
         {
             _configuration = configuration;
         }
 
-        public CustomJsonCodec(JsonSerializerSettings serializerSettings, Configuration configuration)
+        public CustomJsonCodec(JsonSerializerSettings serializerSettings, {{packageName}}Configuration configuration)
         {
             _serializerSettings = serializerSettings;
             _configuration = configuration;
@@ -176,9 +176,9 @@ namespace {{packageName}}.Client
     {{>visibility}} partial class ApiClient : ISynchronousClient{{#supportsAsync}}, IAsynchronousClient{{/supportsAsync}}
     {
         /// <summary>
-        /// Configuration object for all requests
+        /// {{packageName}} configuration object for all requests
         /// </summary>
-        public readonly Configuration Configuration;
+        public readonly {{packageName}}Configuration Configuration;
 
         private readonly object _requestHeaderLock = new object();
 
@@ -210,7 +210,7 @@ namespace {{packageName}}.Client
         /// Some configuration settings will not be applied without passing an HttpClientHandler.
         /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
         /// </remarks>
-        public ApiClient(Configuration configuration)
+        public ApiClient({{packageName}}Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("client cannot be null");
 
