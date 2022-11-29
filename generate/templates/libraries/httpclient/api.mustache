@@ -27,6 +27,10 @@ namespace {{packageName}}.{{apiPackage}}
         /// <exception cref="{{packageName}}ApiException">Thrown when fails to make API call</exception>
         {{#allParams}}/// <param name="{{paramName}}">{{description}}{{^required}} (optional{{#defaultValue}}, default to {{.}}{{/defaultValue}}){{/required}}{{#isDeprecated}} (deprecated){{/isDeprecated}}</param>
         {{/allParams}}/// <returns>VaultResponse of {{returnType}}{{^returnType}}Object(void){{/returnType}}</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         {{#isDeprecated}}
         [Obsolete]
         {{/isDeprecated}}
@@ -54,6 +58,10 @@ namespace {{packageName}}.{{apiPackage}}
         {{#allParams}}
         /// <param name="{{paramName}}">{{description}}{{^required}} (optional{{#defaultValue}}, default to {{.}}{{/defaultValue}}){{/required}}{{#isDeprecated}} (deprecated){{/isDeprecated}}</param>
         {{/allParams}}
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse{{#returnType}} ({{.}}){{/returnType}}</returns>
         {{#isDeprecated}}
@@ -144,6 +152,10 @@ namespace {{packageName}}.{{apiPackage}}
         /// <exception cref="{{packageName}}ApiException">Thrown when fails to make API call</exception>
         {{#allParams}}/// <param name="{{paramName}}">{{description}}{{^required}} (optional{{#defaultValue}}, default to {{.}}{{/defaultValue}}){{/required}}{{#isDeprecated}} (deprecated){{/isDeprecated}}</param>
         {{/allParams}}/// <returns>VaultResponse of {{returnType}}{{^returnType}}Object(void){{/returnType}}</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         {{#isDeprecated}}
         [Obsolete]
         {{/isDeprecated}}
@@ -163,8 +175,8 @@ namespace {{packageName}}.{{apiPackage}}
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -350,6 +362,10 @@ namespace {{packageName}}.{{apiPackage}}
         {{#allParams}}
         /// <param name="{{paramName}}">{{description}}{{^required}} (optional{{#defaultValue}}, default to {{.}}{{/defaultValue}}){{/required}}{{#isDeprecated}} (deprecated){{/isDeprecated}}</param>
         {{/allParams}}
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse{{#returnType}} ({{.}}){{/returnType}}</returns>
         {{#isDeprecated}}
@@ -372,8 +388,8 @@ namespace {{packageName}}.{{apiPackage}}
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {

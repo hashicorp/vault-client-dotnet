@@ -32,6 +32,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> DeleteIdentityAliasIdId(string id, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update, read or delete an alias ID.
@@ -42,6 +46,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> DeleteIdentityEntityAliasIdId(string id, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update, read or delete an entity using entity ID
@@ -52,6 +60,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> DeleteIdentityEntityIdId(string id, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update, read or delete an entity using entity name
@@ -62,6 +74,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> DeleteIdentityEntityNameName(string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -72,6 +88,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> DeleteIdentityGroupAliasIdId(string id, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update or delete an existing group using its ID.
@@ -82,6 +102,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> DeleteIdentityGroupIdId(string id, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -92,6 +116,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> DeleteIdentityGroupNameName(string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Delete a login enforcement
@@ -102,6 +130,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> DeleteIdentityMfaLoginEnforcementName(string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Delete a configuration for the given MFA method
@@ -112,6 +144,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> DeleteIdentityMfaMethodDuoMethodId(string methodId, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Delete a configuration for the given MFA method
@@ -122,6 +158,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> DeleteIdentityMfaMethodOktaMethodId(string methodId, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Delete a configuration for the given MFA method
@@ -132,6 +172,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> DeleteIdentityMfaMethodPingidMethodId(string methodId, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Delete a configuration for the given MFA method
@@ -142,6 +186,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> DeleteIdentityMfaMethodTotpMethodId(string methodId, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -152,6 +200,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> DeleteIdentityOidcAssignmentName(string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -162,6 +214,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> DeleteIdentityOidcClientName(string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// CRUD operations for OIDC keys.
@@ -172,6 +228,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> DeleteIdentityOidcKeyName(string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -182,6 +242,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> DeleteIdentityOidcProviderName(string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// CRUD operations on OIDC Roles
@@ -192,6 +256,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> DeleteIdentityOidcRoleName(string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -202,6 +270,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> DeleteIdentityOidcScopeName(string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update, read or delete an alias ID.
@@ -212,6 +284,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> DeleteIdentityPersonaIdId(string id, TimeSpan? wrapTTL = null);
         /// <summary>
         /// List all the alias IDs.
@@ -222,6 +298,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityAliasId(string list, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update, read or delete an alias ID.
@@ -232,6 +312,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityAliasIdId(string id, TimeSpan? wrapTTL = null);
         /// <summary>
         /// List all the alias IDs.
@@ -242,6 +326,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityEntityAliasId(string list, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update, read or delete an alias ID.
@@ -252,6 +340,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityEntityAliasIdId(string id, TimeSpan? wrapTTL = null);
         /// <summary>
         /// List all the entity IDs
@@ -262,6 +354,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityEntityId(string list, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update, read or delete an entity using entity ID
@@ -272,6 +368,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityEntityIdId(string id, TimeSpan? wrapTTL = null);
         /// <summary>
         /// List all the entity names
@@ -282,6 +382,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityEntityName(string list, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update, read or delete an entity using entity name
@@ -292,6 +396,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityEntityNameName(string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// List all the group alias IDs.
@@ -302,6 +410,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityGroupAliasId(string list, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -312,6 +424,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityGroupAliasIdId(string id, TimeSpan? wrapTTL = null);
         /// <summary>
         /// List all the group IDs.
@@ -322,6 +438,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityGroupId(string list, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update or delete an existing group using its ID.
@@ -332,6 +452,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityGroupIdId(string id, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -342,6 +466,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityGroupName(string list, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -352,6 +480,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityGroupNameName(string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// List login enforcements
@@ -362,6 +494,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityMfaLoginEnforcement(string list, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Read the current login enforcement
@@ -372,6 +508,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityMfaLoginEnforcementName(string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// List MFA method configurations for all MFA methods
@@ -382,6 +522,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityMfaMethod(string list, TimeSpan? wrapTTL = null);
         /// <summary>
         /// List MFA method configurations for the given MFA method
@@ -392,6 +536,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityMfaMethodDuo(string list, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Read the current configuration for the given MFA method
@@ -402,6 +550,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityMfaMethodDuoMethodId(string methodId, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Read the current configuration for the given ID regardless of the MFA method type
@@ -412,6 +564,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityMfaMethodMethodId(string methodId, TimeSpan? wrapTTL = null);
         /// <summary>
         /// List MFA method configurations for the given MFA method
@@ -422,6 +578,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityMfaMethodOkta(string list, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Read the current configuration for the given MFA method
@@ -432,6 +592,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityMfaMethodOktaMethodId(string methodId, TimeSpan? wrapTTL = null);
         /// <summary>
         /// List MFA method configurations for the given MFA method
@@ -442,6 +606,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityMfaMethodPingid(string list, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Read the current configuration for the given MFA method
@@ -452,6 +620,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityMfaMethodPingidMethodId(string methodId, TimeSpan? wrapTTL = null);
         /// <summary>
         /// List MFA method configurations for the given MFA method
@@ -462,6 +634,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityMfaMethodTotp(string list, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Read the current configuration for the given MFA method
@@ -472,6 +648,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityMfaMethodTotpMethodId(string methodId, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -482,6 +662,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityOidcAssignment(string list, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -492,6 +676,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityOidcAssignmentName(string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -502,6 +690,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityOidcClient(string list, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -512,6 +704,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityOidcClientName(string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// OIDC configuration
@@ -521,6 +717,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityOidcConfig(TimeSpan? wrapTTL = null);
         /// <summary>
         /// List OIDC keys
@@ -531,6 +731,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityOidcKey(string list, TimeSpan? wrapTTL = null);
         /// <summary>
         /// CRUD operations for OIDC keys.
@@ -541,6 +745,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityOidcKeyName(string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -552,6 +760,10 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="allowedClientId">Filters the list of OIDC providers to those that allow the given client ID in their set of allowed_client_ids. (optional, default to &quot;&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityOidcProvider(string list, string allowedClientId = "", TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -562,6 +774,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityOidcProviderName(string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -572,6 +788,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityOidcProviderNameAuthorize(string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -582,6 +802,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityOidcProviderNameUserinfo(string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -592,6 +816,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityOidcProviderNameWellKnownKeys(string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -602,6 +830,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityOidcProviderNameWellKnownOpenidConfiguration(string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// List configured OIDC roles
@@ -612,6 +844,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityOidcRole(string list, TimeSpan? wrapTTL = null);
         /// <summary>
         /// CRUD operations on OIDC Roles
@@ -622,6 +858,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityOidcRoleName(string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -632,6 +872,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityOidcScope(string list, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -642,6 +886,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityOidcScopeName(string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Generate an OIDC token
@@ -652,6 +900,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityOidcTokenName(string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Retrieve public keys
@@ -661,6 +913,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityOidcWellKnownKeys(TimeSpan? wrapTTL = null);
         /// <summary>
         /// Query OIDC configurations
@@ -670,6 +926,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityOidcWellKnownOpenidConfiguration(TimeSpan? wrapTTL = null);
         /// <summary>
         /// List all the alias IDs.
@@ -680,6 +940,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityPersonaId(string list, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update, read or delete an alias ID.
@@ -690,6 +954,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> GetIdentityPersonaIdId(string id, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Create a new alias.
@@ -700,6 +968,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityAliasRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityAlias(IdentityAliasRequest identityAliasRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update, read or delete an alias ID.
@@ -711,6 +983,10 @@ namespace Vault.Api
         /// <param name="id">ID of the alias</param>
         /// <param name="identityAliasIdRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityAliasIdId(string id, IdentityAliasIdRequest identityAliasIdRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Create a new entity
@@ -721,6 +997,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityEntity(IdentityEntityRequest identityEntityRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Create a new alias.
@@ -731,6 +1011,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityAliasRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityEntityAlias(IdentityEntityAliasRequest identityEntityAliasRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update, read or delete an alias ID.
@@ -742,6 +1026,10 @@ namespace Vault.Api
         /// <param name="id">ID of the alias</param>
         /// <param name="identityEntityAliasIdRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityEntityAliasIdId(string id, IdentityEntityAliasIdRequest identityEntityAliasIdRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Delete all of the entities provided
@@ -752,6 +1040,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityBatchDeleteRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityEntityBatchDelete(IdentityEntityBatchDeleteRequest identityEntityBatchDeleteRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update, read or delete an entity using entity ID
@@ -763,6 +1055,10 @@ namespace Vault.Api
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <param name="identityEntityIdRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityEntityIdId(string id, IdentityEntityIdRequest identityEntityIdRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Merge two or more entities together
@@ -773,6 +1069,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityMergeRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityEntityMerge(IdentityEntityMergeRequest identityEntityMergeRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update, read or delete an entity using entity name
@@ -784,6 +1084,10 @@ namespace Vault.Api
         /// <param name="name">Name of the entity</param>
         /// <param name="identityEntityNameRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityEntityNameName(string name, IdentityEntityNameRequest identityEntityNameRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Create a new group.
@@ -794,6 +1098,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityGroup(IdentityGroupRequest identityGroupRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Creates a new group alias, or updates an existing one.
@@ -804,6 +1112,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupAliasRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityGroupAlias(IdentityGroupAliasRequest identityGroupAliasRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -815,6 +1127,10 @@ namespace Vault.Api
         /// <param name="id">ID of the group alias.</param>
         /// <param name="identityGroupAliasIdRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityGroupAliasIdId(string id, IdentityGroupAliasIdRequest identityGroupAliasIdRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update or delete an existing group using its ID.
@@ -826,6 +1142,10 @@ namespace Vault.Api
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <param name="identityGroupIdRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityGroupIdId(string id, IdentityGroupIdRequest identityGroupIdRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -837,6 +1157,10 @@ namespace Vault.Api
         /// <param name="name">Name of the group.</param>
         /// <param name="identityGroupNameRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityGroupNameName(string name, IdentityGroupNameRequest identityGroupNameRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Query entities based on various properties.
@@ -847,6 +1171,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupEntityRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityLookupEntity(IdentityLookupEntityRequest identityLookupEntityRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Query groups based on various properties.
@@ -857,6 +1185,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupGroupRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityLookupGroup(IdentityLookupGroupRequest identityLookupGroupRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Create or update a login enforcement
@@ -868,6 +1200,10 @@ namespace Vault.Api
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <param name="identityMfaLoginEnforcementRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityMfaLoginEnforcementName(string name, IdentityMfaLoginEnforcementRequest identityMfaLoginEnforcementRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update or create a configuration for the given MFA method
@@ -879,6 +1215,10 @@ namespace Vault.Api
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodDuoRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityMfaMethodDuoMethodId(string methodId, IdentityMfaMethodDuoRequest identityMfaMethodDuoRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update or create a configuration for the given MFA method
@@ -890,6 +1230,10 @@ namespace Vault.Api
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodOktaRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityMfaMethodOktaMethodId(string methodId, IdentityMfaMethodOktaRequest identityMfaMethodOktaRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update or create a configuration for the given MFA method
@@ -901,6 +1245,10 @@ namespace Vault.Api
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodPingidRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityMfaMethodPingidMethodId(string methodId, IdentityMfaMethodPingidRequest identityMfaMethodPingidRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Destroys a TOTP secret for the given MFA method ID on the given entity
@@ -911,6 +1259,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminDestroyRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityMfaMethodTotpAdminDestroy(IdentityMfaMethodTotpAdminDestroyRequest identityMfaMethodTotpAdminDestroyRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update or create TOTP secret for the given method ID on the given entity.
@@ -921,6 +1273,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminGenerateRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityMfaMethodTotpAdminGenerate(IdentityMfaMethodTotpAdminGenerateRequest identityMfaMethodTotpAdminGenerateRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update or create TOTP secret for the given method ID on the given entity.
@@ -931,6 +1287,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpGenerateRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityMfaMethodTotpGenerate(IdentityMfaMethodTotpGenerateRequest identityMfaMethodTotpGenerateRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update or create a configuration for the given MFA method
@@ -942,6 +1302,10 @@ namespace Vault.Api
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodTotpRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityMfaMethodTotpMethodId(string methodId, IdentityMfaMethodTotpRequest identityMfaMethodTotpRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -953,6 +1317,10 @@ namespace Vault.Api
         /// <param name="name">Name of the assignment</param>
         /// <param name="identityOidcAssignmentRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityOidcAssignmentName(string name, IdentityOidcAssignmentRequest identityOidcAssignmentRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -964,6 +1332,10 @@ namespace Vault.Api
         /// <param name="name">Name of the client.</param>
         /// <param name="identityOidcClientRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityOidcClientName(string name, IdentityOidcClientRequest identityOidcClientRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// OIDC configuration
@@ -974,6 +1346,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcConfigRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityOidcConfig(IdentityOidcConfigRequest identityOidcConfigRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Verify the authenticity of an OIDC token
@@ -984,6 +1360,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcIntrospectRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityOidcIntrospect(IdentityOidcIntrospectRequest identityOidcIntrospectRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// CRUD operations for OIDC keys.
@@ -995,6 +1375,10 @@ namespace Vault.Api
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityOidcKeyName(string name, IdentityOidcKeyRequest identityOidcKeyRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Rotate a named OIDC key.
@@ -1006,6 +1390,10 @@ namespace Vault.Api
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRotateRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityOidcKeyNameRotate(string name, IdentityOidcKeyRotateRequest identityOidcKeyRotateRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -1017,6 +1405,10 @@ namespace Vault.Api
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityOidcProviderName(string name, IdentityOidcProviderRequest identityOidcProviderRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -1028,6 +1420,10 @@ namespace Vault.Api
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderAuthorizeRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityOidcProviderNameAuthorize(string name, IdentityOidcProviderAuthorizeRequest identityOidcProviderAuthorizeRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -1039,6 +1435,10 @@ namespace Vault.Api
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderTokenRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityOidcProviderNameToken(string name, IdentityOidcProviderTokenRequest identityOidcProviderTokenRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -1049,6 +1449,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityOidcProviderNameUserinfo(string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// CRUD operations on OIDC Roles
@@ -1060,6 +1464,10 @@ namespace Vault.Api
         /// <param name="name">Name of the role</param>
         /// <param name="identityOidcRoleRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityOidcRoleName(string name, IdentityOidcRoleRequest identityOidcRoleRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
@@ -1071,6 +1479,10 @@ namespace Vault.Api
         /// <param name="name">Name of the scope</param>
         /// <param name="identityOidcScopeRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityOidcScopeName(string name, IdentityOidcScopeRequest identityOidcScopeRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Create a new alias.
@@ -1081,6 +1493,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityPersonaRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityPersona(IdentityPersonaRequest identityPersonaRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update, read or delete an alias ID.
@@ -1092,6 +1508,10 @@ namespace Vault.Api
         /// <param name="id">ID of the persona</param>
         /// <param name="identityPersonaIdRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         VaultResponse<Object> PostIdentityPersonaIdId(string id, IdentityPersonaIdRequest identityPersonaIdRequest, TimeSpan? wrapTTL = null);
         #endregion Synchronous Operations
     }
@@ -1111,6 +1531,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> DeleteIdentityAliasIdIdAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1123,6 +1547,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> DeleteIdentityEntityAliasIdIdAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1135,6 +1563,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> DeleteIdentityEntityIdIdAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1147,6 +1579,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> DeleteIdentityEntityNameNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1159,6 +1595,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> DeleteIdentityGroupAliasIdIdAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1171,6 +1611,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> DeleteIdentityGroupIdIdAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1183,6 +1627,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> DeleteIdentityGroupNameNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1195,6 +1643,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> DeleteIdentityMfaLoginEnforcementNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1207,6 +1659,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> DeleteIdentityMfaMethodDuoMethodIdAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1219,6 +1675,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> DeleteIdentityMfaMethodOktaMethodIdAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1231,6 +1691,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> DeleteIdentityMfaMethodPingidMethodIdAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1243,6 +1707,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> DeleteIdentityMfaMethodTotpMethodIdAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1255,6 +1723,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> DeleteIdentityOidcAssignmentNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1267,6 +1739,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> DeleteIdentityOidcClientNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1279,6 +1755,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> DeleteIdentityOidcKeyNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1291,6 +1771,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> DeleteIdentityOidcProviderNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1303,6 +1787,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> DeleteIdentityOidcRoleNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1315,6 +1803,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> DeleteIdentityOidcScopeNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1327,6 +1819,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> DeleteIdentityPersonaIdIdAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1339,6 +1835,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityAliasIdAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1351,6 +1851,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityAliasIdIdAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1363,6 +1867,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityEntityAliasIdAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1375,6 +1883,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityEntityAliasIdIdAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1387,6 +1899,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityEntityIdAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1399,6 +1915,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityEntityIdIdAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1411,6 +1931,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityEntityNameAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1423,6 +1947,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityEntityNameNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1435,6 +1963,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityGroupAliasIdAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1447,6 +1979,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityGroupAliasIdIdAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1459,6 +1995,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityGroupIdAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1471,6 +2011,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityGroupIdIdAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1483,6 +2027,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityGroupNameAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1495,6 +2043,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityGroupNameNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1507,6 +2059,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityMfaLoginEnforcementAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1519,6 +2075,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityMfaLoginEnforcementNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1531,6 +2091,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityMfaMethodAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1543,6 +2107,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityMfaMethodDuoAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1555,6 +2123,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityMfaMethodDuoMethodIdAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1567,6 +2139,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityMfaMethodMethodIdAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1579,6 +2155,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityMfaMethodOktaAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1591,6 +2171,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityMfaMethodOktaMethodIdAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1603,6 +2187,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityMfaMethodPingidAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1615,6 +2203,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityMfaMethodPingidMethodIdAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1627,6 +2219,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityMfaMethodTotpAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1639,6 +2235,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityMfaMethodTotpMethodIdAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1651,6 +2251,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityOidcAssignmentAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1663,6 +2267,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityOidcAssignmentNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1675,6 +2283,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityOidcClientAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1687,6 +2299,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityOidcClientNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1698,6 +2314,10 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityOidcConfigAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1710,6 +2330,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityOidcKeyAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1722,6 +2346,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityOidcKeyNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1735,6 +2363,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="allowedClientId">Filters the list of OIDC providers to those that allow the given client ID in their set of allowed_client_ids. (optional, default to &quot;&quot;)</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityOidcProviderAsync(string list, string allowedClientId = "", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1747,6 +2379,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityOidcProviderNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1759,6 +2395,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityOidcProviderNameAuthorizeAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1771,6 +2411,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityOidcProviderNameUserinfoAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1783,6 +2427,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityOidcProviderNameWellKnownKeysAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1795,6 +2443,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityOidcProviderNameWellKnownOpenidConfigurationAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1807,6 +2459,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityOidcRoleAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1819,6 +2475,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityOidcRoleNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1831,6 +2491,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityOidcScopeAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1843,6 +2507,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityOidcScopeNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1855,6 +2523,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityOidcTokenNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1866,6 +2538,10 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityOidcWellKnownKeysAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1877,6 +2553,10 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityOidcWellKnownOpenidConfigurationAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1889,6 +2569,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityPersonaIdAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1901,6 +2585,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetIdentityPersonaIdIdAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1913,6 +2601,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityAliasRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityAliasAsync(IdentityAliasRequest identityAliasRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1926,6 +2618,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="identityAliasIdRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityAliasIdIdAsync(string id, IdentityAliasIdRequest identityAliasIdRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1938,6 +2634,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityEntityAsync(IdentityEntityRequest identityEntityRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1950,6 +2650,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityAliasRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityEntityAliasAsync(IdentityEntityAliasRequest identityEntityAliasRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1963,6 +2667,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="identityEntityAliasIdRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityEntityAliasIdIdAsync(string id, IdentityEntityAliasIdRequest identityEntityAliasIdRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1975,6 +2683,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityBatchDeleteRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityEntityBatchDeleteAsync(IdentityEntityBatchDeleteRequest identityEntityBatchDeleteRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -1988,6 +2700,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <param name="identityEntityIdRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityEntityIdIdAsync(string id, IdentityEntityIdRequest identityEntityIdRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2000,6 +2716,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityMergeRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityEntityMergeAsync(IdentityEntityMergeRequest identityEntityMergeRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2013,6 +2733,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <param name="identityEntityNameRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityEntityNameNameAsync(string name, IdentityEntityNameRequest identityEntityNameRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2025,6 +2749,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityGroupAsync(IdentityGroupRequest identityGroupRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2037,6 +2765,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupAliasRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityGroupAliasAsync(IdentityGroupAliasRequest identityGroupAliasRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2050,6 +2782,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <param name="identityGroupAliasIdRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityGroupAliasIdIdAsync(string id, IdentityGroupAliasIdRequest identityGroupAliasIdRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2063,6 +2799,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <param name="identityGroupIdRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityGroupIdIdAsync(string id, IdentityGroupIdRequest identityGroupIdRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2076,6 +2816,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <param name="identityGroupNameRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityGroupNameNameAsync(string name, IdentityGroupNameRequest identityGroupNameRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2088,6 +2832,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupEntityRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityLookupEntityAsync(IdentityLookupEntityRequest identityLookupEntityRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2100,6 +2848,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupGroupRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityLookupGroupAsync(IdentityLookupGroupRequest identityLookupGroupRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2113,6 +2865,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <param name="identityMfaLoginEnforcementRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityMfaLoginEnforcementNameAsync(string name, IdentityMfaLoginEnforcementRequest identityMfaLoginEnforcementRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2126,6 +2882,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodDuoRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityMfaMethodDuoMethodIdAsync(string methodId, IdentityMfaMethodDuoRequest identityMfaMethodDuoRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2139,6 +2899,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodOktaRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityMfaMethodOktaMethodIdAsync(string methodId, IdentityMfaMethodOktaRequest identityMfaMethodOktaRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2152,6 +2916,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodPingidRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityMfaMethodPingidMethodIdAsync(string methodId, IdentityMfaMethodPingidRequest identityMfaMethodPingidRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2164,6 +2932,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminDestroyRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityMfaMethodTotpAdminDestroyAsync(IdentityMfaMethodTotpAdminDestroyRequest identityMfaMethodTotpAdminDestroyRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2176,6 +2948,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminGenerateRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityMfaMethodTotpAdminGenerateAsync(IdentityMfaMethodTotpAdminGenerateRequest identityMfaMethodTotpAdminGenerateRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2188,6 +2964,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpGenerateRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityMfaMethodTotpGenerateAsync(IdentityMfaMethodTotpGenerateRequest identityMfaMethodTotpGenerateRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2201,6 +2981,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodTotpRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityMfaMethodTotpMethodIdAsync(string methodId, IdentityMfaMethodTotpRequest identityMfaMethodTotpRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2214,6 +2998,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <param name="identityOidcAssignmentRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityOidcAssignmentNameAsync(string name, IdentityOidcAssignmentRequest identityOidcAssignmentRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2227,6 +3015,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <param name="identityOidcClientRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityOidcClientNameAsync(string name, IdentityOidcClientRequest identityOidcClientRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2239,6 +3031,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcConfigRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityOidcConfigAsync(IdentityOidcConfigRequest identityOidcConfigRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2251,6 +3047,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcIntrospectRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityOidcIntrospectAsync(IdentityOidcIntrospectRequest identityOidcIntrospectRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2264,6 +3064,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityOidcKeyNameAsync(string name, IdentityOidcKeyRequest identityOidcKeyRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2277,6 +3081,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRotateRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityOidcKeyNameRotateAsync(string name, IdentityOidcKeyRotateRequest identityOidcKeyRotateRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2290,6 +3098,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityOidcProviderNameAsync(string name, IdentityOidcProviderRequest identityOidcProviderRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2303,6 +3115,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderAuthorizeRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityOidcProviderNameAuthorizeAsync(string name, IdentityOidcProviderAuthorizeRequest identityOidcProviderAuthorizeRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2316,6 +3132,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderTokenRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityOidcProviderNameTokenAsync(string name, IdentityOidcProviderTokenRequest identityOidcProviderTokenRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2328,6 +3148,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityOidcProviderNameUserinfoAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2341,6 +3165,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="identityOidcRoleRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityOidcRoleNameAsync(string name, IdentityOidcRoleRequest identityOidcRoleRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2354,6 +3182,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <param name="identityOidcScopeRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityOidcScopeNameAsync(string name, IdentityOidcScopeRequest identityOidcScopeRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2366,6 +3198,10 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityPersonaRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityPersonaAsync(IdentityPersonaRequest identityPersonaRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2379,6 +3215,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <param name="identityPersonaIdRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PostIdentityPersonaIdIdAsync(string id, IdentityPersonaIdRequest identityPersonaIdRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
@@ -2461,6 +3301,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> DeleteIdentityAliasIdId(string id, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'id' is set
@@ -2471,8 +3315,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -2508,6 +3352,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteIdentityAliasIdIdAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -2521,8 +3369,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -2559,6 +3407,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> DeleteIdentityEntityAliasIdId(string id, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'id' is set
@@ -2569,8 +3421,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -2606,6 +3458,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteIdentityEntityAliasIdIdAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -2619,8 +3475,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -2657,6 +3513,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> DeleteIdentityEntityIdId(string id, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'id' is set
@@ -2667,8 +3527,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -2704,6 +3564,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteIdentityEntityIdIdAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -2717,8 +3581,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -2755,6 +3619,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> DeleteIdentityEntityNameName(string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -2765,8 +3633,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -2802,6 +3670,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteIdentityEntityNameNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -2815,8 +3687,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -2853,6 +3725,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> DeleteIdentityGroupAliasIdId(string id, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'id' is set
@@ -2863,8 +3739,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -2900,6 +3776,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteIdentityGroupAliasIdIdAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -2913,8 +3793,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -2951,6 +3831,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> DeleteIdentityGroupIdId(string id, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'id' is set
@@ -2961,8 +3845,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -2998,6 +3882,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteIdentityGroupIdIdAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -3011,8 +3899,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -3049,6 +3937,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> DeleteIdentityGroupNameName(string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -3059,8 +3951,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -3096,6 +3988,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteIdentityGroupNameNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -3109,8 +4005,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -3147,6 +4043,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> DeleteIdentityMfaLoginEnforcementName(string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -3157,8 +4057,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -3194,6 +4094,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteIdentityMfaLoginEnforcementNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -3207,8 +4111,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -3245,6 +4149,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> DeleteIdentityMfaMethodDuoMethodId(string methodId, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'methodId' is set
@@ -3255,8 +4163,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -3292,6 +4200,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteIdentityMfaMethodDuoMethodIdAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -3305,8 +4217,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -3343,6 +4255,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> DeleteIdentityMfaMethodOktaMethodId(string methodId, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'methodId' is set
@@ -3353,8 +4269,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -3390,6 +4306,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteIdentityMfaMethodOktaMethodIdAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -3403,8 +4323,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -3441,6 +4361,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> DeleteIdentityMfaMethodPingidMethodId(string methodId, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'methodId' is set
@@ -3451,8 +4375,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -3488,6 +4412,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteIdentityMfaMethodPingidMethodIdAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -3501,8 +4429,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -3539,6 +4467,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> DeleteIdentityMfaMethodTotpMethodId(string methodId, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'methodId' is set
@@ -3549,8 +4481,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -3586,6 +4518,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteIdentityMfaMethodTotpMethodIdAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -3599,8 +4535,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -3637,6 +4573,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> DeleteIdentityOidcAssignmentName(string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -3647,8 +4587,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -3684,6 +4624,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteIdentityOidcAssignmentNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -3697,8 +4641,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -3735,6 +4679,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> DeleteIdentityOidcClientName(string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -3745,8 +4693,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -3782,6 +4730,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteIdentityOidcClientNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -3795,8 +4747,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -3833,6 +4785,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> DeleteIdentityOidcKeyName(string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -3843,8 +4799,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -3880,6 +4836,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteIdentityOidcKeyNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -3893,8 +4853,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -3931,6 +4891,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> DeleteIdentityOidcProviderName(string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -3941,8 +4905,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -3978,6 +4942,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteIdentityOidcProviderNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -3991,8 +4959,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -4029,6 +4997,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> DeleteIdentityOidcRoleName(string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -4039,8 +5011,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -4076,6 +5048,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteIdentityOidcRoleNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -4089,8 +5065,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -4127,6 +5103,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> DeleteIdentityOidcScopeName(string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -4137,8 +5117,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -4174,6 +5154,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteIdentityOidcScopeNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -4187,8 +5171,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -4225,6 +5209,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> DeleteIdentityPersonaIdId(string id, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'id' is set
@@ -4235,8 +5223,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -4272,6 +5260,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> DeleteIdentityPersonaIdIdAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -4285,8 +5277,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -4323,6 +5315,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityAliasId(string list, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'list' is set
@@ -4333,8 +5329,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -4370,6 +5366,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityAliasIdAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -4383,8 +5383,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -4421,6 +5421,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityAliasIdId(string id, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'id' is set
@@ -4431,8 +5435,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -4468,6 +5472,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityAliasIdIdAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -4481,8 +5489,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -4519,6 +5527,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityEntityAliasId(string list, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'list' is set
@@ -4529,8 +5541,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -4566,6 +5578,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityEntityAliasIdAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -4579,8 +5595,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -4617,6 +5633,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityEntityAliasIdId(string id, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'id' is set
@@ -4627,8 +5647,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -4664,6 +5684,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityEntityAliasIdIdAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -4677,8 +5701,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -4715,6 +5739,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityEntityId(string list, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'list' is set
@@ -4725,8 +5753,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -4762,6 +5790,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityEntityIdAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -4775,8 +5807,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -4813,6 +5845,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityEntityIdId(string id, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'id' is set
@@ -4823,8 +5859,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -4860,6 +5896,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityEntityIdIdAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -4873,8 +5913,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -4911,6 +5951,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityEntityName(string list, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'list' is set
@@ -4921,8 +5965,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -4958,6 +6002,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityEntityNameAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -4971,8 +6019,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -5009,6 +6057,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityEntityNameName(string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -5019,8 +6071,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -5056,6 +6108,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityEntityNameNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -5069,8 +6125,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -5107,6 +6163,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityGroupAliasId(string list, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'list' is set
@@ -5117,8 +6177,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -5154,6 +6214,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityGroupAliasIdAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -5167,8 +6231,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -5205,6 +6269,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityGroupAliasIdId(string id, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'id' is set
@@ -5215,8 +6283,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -5252,6 +6320,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityGroupAliasIdIdAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -5265,8 +6337,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -5303,6 +6375,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityGroupId(string list, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'list' is set
@@ -5313,8 +6389,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -5350,6 +6426,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityGroupIdAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -5363,8 +6443,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -5401,6 +6481,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityGroupIdId(string id, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'id' is set
@@ -5411,8 +6495,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -5448,6 +6532,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityGroupIdIdAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -5461,8 +6549,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -5499,6 +6587,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityGroupName(string list, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'list' is set
@@ -5509,8 +6601,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -5546,6 +6638,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityGroupNameAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -5559,8 +6655,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -5597,6 +6693,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityGroupNameName(string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -5607,8 +6707,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -5644,6 +6744,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityGroupNameNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -5657,8 +6761,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -5695,6 +6799,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityMfaLoginEnforcement(string list, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'list' is set
@@ -5705,8 +6813,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -5742,6 +6850,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityMfaLoginEnforcementAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -5755,8 +6867,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -5793,6 +6905,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityMfaLoginEnforcementName(string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -5803,8 +6919,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -5840,6 +6956,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityMfaLoginEnforcementNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -5853,8 +6973,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -5891,6 +7011,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityMfaMethod(string list, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'list' is set
@@ -5901,8 +7025,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -5938,6 +7062,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityMfaMethodAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -5951,8 +7079,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -5989,6 +7117,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityMfaMethodDuo(string list, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'list' is set
@@ -5999,8 +7131,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6036,6 +7168,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityMfaMethodDuoAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -6049,8 +7185,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6087,6 +7223,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityMfaMethodDuoMethodId(string methodId, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'methodId' is set
@@ -6097,8 +7237,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6134,6 +7274,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityMfaMethodDuoMethodIdAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -6147,8 +7291,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6185,6 +7329,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityMfaMethodMethodId(string methodId, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'methodId' is set
@@ -6195,8 +7343,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6232,6 +7380,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityMfaMethodMethodIdAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -6245,8 +7397,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6283,6 +7435,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityMfaMethodOkta(string list, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'list' is set
@@ -6293,8 +7449,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6330,6 +7486,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityMfaMethodOktaAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -6343,8 +7503,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6381,6 +7541,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityMfaMethodOktaMethodId(string methodId, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'methodId' is set
@@ -6391,8 +7555,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6428,6 +7592,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityMfaMethodOktaMethodIdAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -6441,8 +7609,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6479,6 +7647,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityMfaMethodPingid(string list, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'list' is set
@@ -6489,8 +7661,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6526,6 +7698,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityMfaMethodPingidAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -6539,8 +7715,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6577,6 +7753,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityMfaMethodPingidMethodId(string methodId, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'methodId' is set
@@ -6587,8 +7767,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6624,6 +7804,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityMfaMethodPingidMethodIdAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -6637,8 +7821,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6675,6 +7859,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityMfaMethodTotp(string list, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'list' is set
@@ -6685,8 +7873,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6722,6 +7910,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityMfaMethodTotpAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -6735,8 +7927,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6773,6 +7965,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityMfaMethodTotpMethodId(string methodId, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'methodId' is set
@@ -6783,8 +7979,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6820,6 +8016,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityMfaMethodTotpMethodIdAsync(string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -6833,8 +8033,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6871,6 +8071,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityOidcAssignment(string list, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'list' is set
@@ -6881,8 +8085,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6918,6 +8122,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityOidcAssignmentAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -6931,8 +8139,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6969,6 +8177,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityOidcAssignmentName(string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -6979,8 +8191,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7016,6 +8228,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityOidcAssignmentNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -7029,8 +8245,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7067,6 +8283,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityOidcClient(string list, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'list' is set
@@ -7077,8 +8297,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7114,6 +8334,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityOidcClientAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -7127,8 +8351,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7165,6 +8389,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityOidcClientName(string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -7175,8 +8403,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7212,6 +8440,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityOidcClientNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -7225,8 +8457,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7262,14 +8494,18 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityOidcConfig(TimeSpan? wrapTTL = null)
         {
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7303,6 +8539,10 @@ namespace Vault.Api
         /// OIDC configuration 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityOidcConfigAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -7312,8 +8552,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7349,6 +8589,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityOidcKey(string list, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'list' is set
@@ -7359,8 +8603,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7396,6 +8640,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityOidcKeyAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -7409,8 +8657,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7447,6 +8695,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityOidcKeyName(string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -7457,8 +8709,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7494,6 +8746,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityOidcKeyNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -7507,8 +8763,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7546,6 +8802,10 @@ namespace Vault.Api
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="allowedClientId">Filters the list of OIDC providers to those that allow the given client ID in their set of allowed_client_ids. (optional, default to &quot;&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityOidcProvider(string list, string allowedClientId = "", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'list' is set
@@ -7556,8 +8816,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7598,6 +8858,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="allowedClientId">Filters the list of OIDC providers to those that allow the given client ID in their set of allowed_client_ids. (optional, default to &quot;&quot;)</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityOidcProviderAsync(string list, string allowedClientId = "", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -7611,8 +8875,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7653,6 +8917,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityOidcProviderName(string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -7663,8 +8931,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7700,6 +8968,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityOidcProviderNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -7713,8 +8985,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7751,6 +9023,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityOidcProviderNameAuthorize(string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -7761,8 +9037,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7798,6 +9074,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityOidcProviderNameAuthorizeAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -7811,8 +9091,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7849,6 +9129,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityOidcProviderNameUserinfo(string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -7859,8 +9143,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7896,6 +9180,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityOidcProviderNameUserinfoAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -7909,8 +9197,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7947,6 +9235,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityOidcProviderNameWellKnownKeys(string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -7957,8 +9249,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7994,6 +9286,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityOidcProviderNameWellKnownKeysAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -8007,8 +9303,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8045,6 +9341,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityOidcProviderNameWellKnownOpenidConfiguration(string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -8055,8 +9355,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8092,6 +9392,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityOidcProviderNameWellKnownOpenidConfigurationAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -8105,8 +9409,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8143,6 +9447,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityOidcRole(string list, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'list' is set
@@ -8153,8 +9461,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8190,6 +9498,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityOidcRoleAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -8203,8 +9515,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8241,6 +9553,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityOidcRoleName(string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -8251,8 +9567,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8288,6 +9604,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityOidcRoleNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -8301,8 +9621,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8339,6 +9659,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityOidcScope(string list, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'list' is set
@@ -8349,8 +9673,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8386,6 +9710,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityOidcScopeAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -8399,8 +9727,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8437,6 +9765,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityOidcScopeName(string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -8447,8 +9779,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8484,6 +9816,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityOidcScopeNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -8497,8 +9833,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8535,6 +9871,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityOidcTokenName(string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -8545,8 +9885,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8582,6 +9922,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityOidcTokenNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -8595,8 +9939,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8632,14 +9976,18 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityOidcWellKnownKeys(TimeSpan? wrapTTL = null)
         {
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8673,6 +10021,10 @@ namespace Vault.Api
         /// Retrieve public keys 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityOidcWellKnownKeysAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -8682,8 +10034,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8718,14 +10070,18 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityOidcWellKnownOpenidConfiguration(TimeSpan? wrapTTL = null)
         {
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8759,6 +10115,10 @@ namespace Vault.Api
         /// Query OIDC configurations 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityOidcWellKnownOpenidConfigurationAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -8768,8 +10128,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8805,6 +10165,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityPersonaId(string list, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'list' is set
@@ -8815,8 +10179,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8852,6 +10216,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityPersonaIdAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -8865,8 +10233,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8903,6 +10271,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> GetIdentityPersonaIdId(string id, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'id' is set
@@ -8913,8 +10285,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8950,6 +10322,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> GetIdentityPersonaIdIdAsync(string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -8963,8 +10339,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9001,6 +10377,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityAliasRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityAlias(IdentityAliasRequest identityAliasRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'identityAliasRequest' is set
@@ -9011,8 +10391,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9049,6 +10429,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityAliasRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityAliasAsync(IdentityAliasRequest identityAliasRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -9062,8 +10446,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9102,6 +10486,10 @@ namespace Vault.Api
         /// <param name="id">ID of the alias</param>
         /// <param name="identityAliasIdRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityAliasIdId(string id, IdentityAliasIdRequest identityAliasIdRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'id' is set
@@ -9116,8 +10504,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9156,6 +10544,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="identityAliasIdRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityAliasIdIdAsync(string id, IdentityAliasIdRequest identityAliasIdRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -9173,8 +10565,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9213,6 +10605,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityEntity(IdentityEntityRequest identityEntityRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'identityEntityRequest' is set
@@ -9223,8 +10619,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9261,6 +10657,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityEntityAsync(IdentityEntityRequest identityEntityRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -9274,8 +10674,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9313,6 +10713,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityAliasRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityEntityAlias(IdentityEntityAliasRequest identityEntityAliasRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'identityEntityAliasRequest' is set
@@ -9323,8 +10727,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9361,6 +10765,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityAliasRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityEntityAliasAsync(IdentityEntityAliasRequest identityEntityAliasRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -9374,8 +10782,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9414,6 +10822,10 @@ namespace Vault.Api
         /// <param name="id">ID of the alias</param>
         /// <param name="identityEntityAliasIdRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityEntityAliasIdId(string id, IdentityEntityAliasIdRequest identityEntityAliasIdRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'id' is set
@@ -9428,8 +10840,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9468,6 +10880,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the alias</param>
         /// <param name="identityEntityAliasIdRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityEntityAliasIdIdAsync(string id, IdentityEntityAliasIdRequest identityEntityAliasIdRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -9485,8 +10901,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9525,6 +10941,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityBatchDeleteRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityEntityBatchDelete(IdentityEntityBatchDeleteRequest identityEntityBatchDeleteRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'identityEntityBatchDeleteRequest' is set
@@ -9535,8 +10955,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9573,6 +10993,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityBatchDeleteRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityEntityBatchDeleteAsync(IdentityEntityBatchDeleteRequest identityEntityBatchDeleteRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -9586,8 +11010,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9626,6 +11050,10 @@ namespace Vault.Api
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <param name="identityEntityIdRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityEntityIdId(string id, IdentityEntityIdRequest identityEntityIdRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'id' is set
@@ -9640,8 +11068,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9680,6 +11108,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the entity. If set, updates the corresponding existing entity.</param>
         /// <param name="identityEntityIdRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityEntityIdIdAsync(string id, IdentityEntityIdRequest identityEntityIdRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -9697,8 +11129,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9737,6 +11169,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityMergeRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityEntityMerge(IdentityEntityMergeRequest identityEntityMergeRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'identityEntityMergeRequest' is set
@@ -9747,8 +11183,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9785,6 +11221,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityEntityMergeRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityEntityMergeAsync(IdentityEntityMergeRequest identityEntityMergeRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -9798,8 +11238,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9838,6 +11278,10 @@ namespace Vault.Api
         /// <param name="name">Name of the entity</param>
         /// <param name="identityEntityNameRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityEntityNameName(string name, IdentityEntityNameRequest identityEntityNameRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -9852,8 +11296,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9892,6 +11336,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the entity</param>
         /// <param name="identityEntityNameRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityEntityNameNameAsync(string name, IdentityEntityNameRequest identityEntityNameRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -9909,8 +11357,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9949,6 +11397,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityGroup(IdentityGroupRequest identityGroupRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'identityGroupRequest' is set
@@ -9959,8 +11411,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9997,6 +11449,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityGroupAsync(IdentityGroupRequest identityGroupRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -10010,8 +11466,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10049,6 +11505,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupAliasRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityGroupAlias(IdentityGroupAliasRequest identityGroupAliasRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'identityGroupAliasRequest' is set
@@ -10059,8 +11519,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10097,6 +11557,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityGroupAliasRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityGroupAliasAsync(IdentityGroupAliasRequest identityGroupAliasRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -10110,8 +11574,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10150,6 +11614,10 @@ namespace Vault.Api
         /// <param name="id">ID of the group alias.</param>
         /// <param name="identityGroupAliasIdRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityGroupAliasIdId(string id, IdentityGroupAliasIdRequest identityGroupAliasIdRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'id' is set
@@ -10164,8 +11632,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10204,6 +11672,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group alias.</param>
         /// <param name="identityGroupAliasIdRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityGroupAliasIdIdAsync(string id, IdentityGroupAliasIdRequest identityGroupAliasIdRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -10221,8 +11693,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10262,6 +11734,10 @@ namespace Vault.Api
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <param name="identityGroupIdRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityGroupIdId(string id, IdentityGroupIdRequest identityGroupIdRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'id' is set
@@ -10276,8 +11752,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10316,6 +11792,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the group. If set, updates the corresponding existing group.</param>
         /// <param name="identityGroupIdRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityGroupIdIdAsync(string id, IdentityGroupIdRequest identityGroupIdRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -10333,8 +11813,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10374,6 +11854,10 @@ namespace Vault.Api
         /// <param name="name">Name of the group.</param>
         /// <param name="identityGroupNameRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityGroupNameName(string name, IdentityGroupNameRequest identityGroupNameRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -10388,8 +11872,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10428,6 +11912,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the group.</param>
         /// <param name="identityGroupNameRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityGroupNameNameAsync(string name, IdentityGroupNameRequest identityGroupNameRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -10445,8 +11933,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10485,6 +11973,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupEntityRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityLookupEntity(IdentityLookupEntityRequest identityLookupEntityRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'identityLookupEntityRequest' is set
@@ -10495,8 +11987,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10533,6 +12025,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupEntityRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityLookupEntityAsync(IdentityLookupEntityRequest identityLookupEntityRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -10546,8 +12042,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10585,6 +12081,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupGroupRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityLookupGroup(IdentityLookupGroupRequest identityLookupGroupRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'identityLookupGroupRequest' is set
@@ -10595,8 +12095,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10633,6 +12133,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityLookupGroupRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityLookupGroupAsync(IdentityLookupGroupRequest identityLookupGroupRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -10646,8 +12150,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10686,6 +12190,10 @@ namespace Vault.Api
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <param name="identityMfaLoginEnforcementRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityMfaLoginEnforcementName(string name, IdentityMfaLoginEnforcementRequest identityMfaLoginEnforcementRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -10700,8 +12208,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10740,6 +12248,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name for this login enforcement configuration</param>
         /// <param name="identityMfaLoginEnforcementRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityMfaLoginEnforcementNameAsync(string name, IdentityMfaLoginEnforcementRequest identityMfaLoginEnforcementRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -10757,8 +12269,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10798,6 +12310,10 @@ namespace Vault.Api
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodDuoRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityMfaMethodDuoMethodId(string methodId, IdentityMfaMethodDuoRequest identityMfaMethodDuoRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'methodId' is set
@@ -10812,8 +12328,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10852,6 +12368,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodDuoRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityMfaMethodDuoMethodIdAsync(string methodId, IdentityMfaMethodDuoRequest identityMfaMethodDuoRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -10869,8 +12389,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10910,6 +12430,10 @@ namespace Vault.Api
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodOktaRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityMfaMethodOktaMethodId(string methodId, IdentityMfaMethodOktaRequest identityMfaMethodOktaRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'methodId' is set
@@ -10924,8 +12448,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10964,6 +12488,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodOktaRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityMfaMethodOktaMethodIdAsync(string methodId, IdentityMfaMethodOktaRequest identityMfaMethodOktaRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -10981,8 +12509,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11022,6 +12550,10 @@ namespace Vault.Api
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodPingidRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityMfaMethodPingidMethodId(string methodId, IdentityMfaMethodPingidRequest identityMfaMethodPingidRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'methodId' is set
@@ -11036,8 +12568,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11076,6 +12608,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodPingidRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityMfaMethodPingidMethodIdAsync(string methodId, IdentityMfaMethodPingidRequest identityMfaMethodPingidRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -11093,8 +12629,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11133,6 +12669,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminDestroyRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityMfaMethodTotpAdminDestroy(IdentityMfaMethodTotpAdminDestroyRequest identityMfaMethodTotpAdminDestroyRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'identityMfaMethodTotpAdminDestroyRequest' is set
@@ -11143,8 +12683,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11181,6 +12721,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminDestroyRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityMfaMethodTotpAdminDestroyAsync(IdentityMfaMethodTotpAdminDestroyRequest identityMfaMethodTotpAdminDestroyRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -11194,8 +12738,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11233,6 +12777,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminGenerateRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityMfaMethodTotpAdminGenerate(IdentityMfaMethodTotpAdminGenerateRequest identityMfaMethodTotpAdminGenerateRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'identityMfaMethodTotpAdminGenerateRequest' is set
@@ -11243,8 +12791,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11281,6 +12829,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpAdminGenerateRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityMfaMethodTotpAdminGenerateAsync(IdentityMfaMethodTotpAdminGenerateRequest identityMfaMethodTotpAdminGenerateRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -11294,8 +12846,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11333,6 +12885,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpGenerateRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityMfaMethodTotpGenerate(IdentityMfaMethodTotpGenerateRequest identityMfaMethodTotpGenerateRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'identityMfaMethodTotpGenerateRequest' is set
@@ -11343,8 +12899,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11381,6 +12937,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityMfaMethodTotpGenerateRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityMfaMethodTotpGenerateAsync(IdentityMfaMethodTotpGenerateRequest identityMfaMethodTotpGenerateRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -11394,8 +12954,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11434,6 +12994,10 @@ namespace Vault.Api
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodTotpRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityMfaMethodTotpMethodId(string methodId, IdentityMfaMethodTotpRequest identityMfaMethodTotpRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'methodId' is set
@@ -11448,8 +13012,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11488,6 +13052,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="methodId">The unique identifier for this MFA method.</param>
         /// <param name="identityMfaMethodTotpRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityMfaMethodTotpMethodIdAsync(string methodId, IdentityMfaMethodTotpRequest identityMfaMethodTotpRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -11505,8 +13073,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11546,6 +13114,10 @@ namespace Vault.Api
         /// <param name="name">Name of the assignment</param>
         /// <param name="identityOidcAssignmentRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityOidcAssignmentName(string name, IdentityOidcAssignmentRequest identityOidcAssignmentRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -11560,8 +13132,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11600,6 +13172,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the assignment</param>
         /// <param name="identityOidcAssignmentRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityOidcAssignmentNameAsync(string name, IdentityOidcAssignmentRequest identityOidcAssignmentRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -11617,8 +13193,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11658,6 +13234,10 @@ namespace Vault.Api
         /// <param name="name">Name of the client.</param>
         /// <param name="identityOidcClientRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityOidcClientName(string name, IdentityOidcClientRequest identityOidcClientRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -11672,8 +13252,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11712,6 +13292,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the client.</param>
         /// <param name="identityOidcClientRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityOidcClientNameAsync(string name, IdentityOidcClientRequest identityOidcClientRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -11729,8 +13313,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11769,6 +13353,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcConfigRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityOidcConfig(IdentityOidcConfigRequest identityOidcConfigRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'identityOidcConfigRequest' is set
@@ -11779,8 +13367,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11817,6 +13405,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcConfigRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityOidcConfigAsync(IdentityOidcConfigRequest identityOidcConfigRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -11830,8 +13422,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11869,6 +13461,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcIntrospectRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityOidcIntrospect(IdentityOidcIntrospectRequest identityOidcIntrospectRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'identityOidcIntrospectRequest' is set
@@ -11879,8 +13475,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11917,6 +13513,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityOidcIntrospectRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityOidcIntrospectAsync(IdentityOidcIntrospectRequest identityOidcIntrospectRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -11930,8 +13530,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11970,6 +13570,10 @@ namespace Vault.Api
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityOidcKeyName(string name, IdentityOidcKeyRequest identityOidcKeyRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -11984,8 +13588,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12024,6 +13628,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityOidcKeyNameAsync(string name, IdentityOidcKeyRequest identityOidcKeyRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -12041,8 +13649,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12082,6 +13690,10 @@ namespace Vault.Api
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRotateRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityOidcKeyNameRotate(string name, IdentityOidcKeyRotateRequest identityOidcKeyRotateRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -12096,8 +13708,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12136,6 +13748,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the key</param>
         /// <param name="identityOidcKeyRotateRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityOidcKeyNameRotateAsync(string name, IdentityOidcKeyRotateRequest identityOidcKeyRotateRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -12153,8 +13769,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12194,6 +13810,10 @@ namespace Vault.Api
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityOidcProviderName(string name, IdentityOidcProviderRequest identityOidcProviderRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -12208,8 +13828,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12248,6 +13868,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityOidcProviderNameAsync(string name, IdentityOidcProviderRequest identityOidcProviderRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -12265,8 +13889,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12306,6 +13930,10 @@ namespace Vault.Api
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderAuthorizeRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityOidcProviderNameAuthorize(string name, IdentityOidcProviderAuthorizeRequest identityOidcProviderAuthorizeRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -12320,8 +13948,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12360,6 +13988,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderAuthorizeRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityOidcProviderNameAuthorizeAsync(string name, IdentityOidcProviderAuthorizeRequest identityOidcProviderAuthorizeRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -12377,8 +14009,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12418,6 +14050,10 @@ namespace Vault.Api
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderTokenRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityOidcProviderNameToken(string name, IdentityOidcProviderTokenRequest identityOidcProviderTokenRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -12432,8 +14068,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12472,6 +14108,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <param name="identityOidcProviderTokenRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityOidcProviderNameTokenAsync(string name, IdentityOidcProviderTokenRequest identityOidcProviderTokenRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -12489,8 +14129,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12529,6 +14169,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityOidcProviderNameUserinfo(string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -12539,8 +14183,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12576,6 +14220,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the provider</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityOidcProviderNameUserinfoAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -12589,8 +14237,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12628,6 +14276,10 @@ namespace Vault.Api
         /// <param name="name">Name of the role</param>
         /// <param name="identityOidcRoleRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityOidcRoleName(string name, IdentityOidcRoleRequest identityOidcRoleRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -12642,8 +14294,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12682,6 +14334,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the role</param>
         /// <param name="identityOidcRoleRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityOidcRoleNameAsync(string name, IdentityOidcRoleRequest identityOidcRoleRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -12699,8 +14355,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12740,6 +14396,10 @@ namespace Vault.Api
         /// <param name="name">Name of the scope</param>
         /// <param name="identityOidcScopeRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityOidcScopeName(string name, IdentityOidcScopeRequest identityOidcScopeRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
@@ -12754,8 +14414,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12794,6 +14454,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the scope</param>
         /// <param name="identityOidcScopeRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityOidcScopeNameAsync(string name, IdentityOidcScopeRequest identityOidcScopeRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -12811,8 +14475,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12851,6 +14515,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityPersonaRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityPersona(IdentityPersonaRequest identityPersonaRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'identityPersonaRequest' is set
@@ -12861,8 +14529,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12899,6 +14567,10 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="identityPersonaRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityPersonaAsync(IdentityPersonaRequest identityPersonaRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -12912,8 +14584,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12952,6 +14624,10 @@ namespace Vault.Api
         /// <param name="id">ID of the persona</param>
         /// <param name="identityPersonaIdRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         public VaultResponse<Object> PostIdentityPersonaIdId(string id, IdentityPersonaIdRequest identityPersonaIdRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'id' is set
@@ -12966,8 +14642,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -13006,6 +14682,10 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the persona</param>
         /// <param name="identityPersonaIdRequest"></param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         public async Task<VaultResponse<Object>> PostIdentityPersonaIdIdAsync(string id, IdentityPersonaIdRequest identityPersonaIdRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -13023,8 +14703,8 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var temp = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+                var transformedTTL = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
