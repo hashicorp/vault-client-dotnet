@@ -30,7 +30,7 @@ namespace {{packageName}}.{{apiPackage}}
         {{#isDeprecated}}
         [Obsolete]
         {{/isDeprecated}}
-        VaultResponse<{{{returnType}}}{{^returnType}}Object{{/returnType}}> {{operationId}}({{#allParams}}{{{dataType}}} {{paramName}}{{^required}}{{#optionalMethodArgument}} = {{#defaultValue}}{{{.}}}{{/defaultValue}}{{/optionalMethodArgument}}{{/required}}{{^-last}}, {{/-last}}{{/allParams}});
+        VaultResponse<{{{returnType}}}{{^returnType}}Object{{/returnType}}> {{operationId}}({{#allParams}}{{{dataType}}} {{paramName}}{{^required}}{{#optionalMethodArgument}} = {{#defaultValue}}{{{.}}}{{/defaultValue}}{{/optionalMethodArgument}}{{/required}}{{^-last}}, {{/-last}}{{/allParams}}{{#allParams.0}}, {{/allParams.0}}TimeSpan? wrapTTL = null);
         {{/operation}}
         #endregion Synchronous Operations
     }
@@ -59,7 +59,7 @@ namespace {{packageName}}.{{apiPackage}}
         {{#isDeprecated}}
         [Obsolete]
         {{/isDeprecated}}
-        Task<VaultResponse<{{{returnType}}}{{^returnType}}Object{{/returnType}}>> {{operationId}}Async({{#allParams}}{{{dataType}}} {{paramName}}{{^required}}{{#optionalMethodArgument}} = {{#defaultValue}}{{{.}}}{{/defaultValue}}{{/optionalMethodArgument}}{{/required}}{{^-last}}, {{/-last}}{{/allParams}}{{#allParams.0}}, {{/allParams.0}}CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<{{{returnType}}}{{^returnType}}Object{{/returnType}}>> {{operationId}}Async({{#allParams}}{{{dataType}}} {{paramName}}{{^required}}{{#optionalMethodArgument}} = {{#defaultValue}}{{{.}}}{{/defaultValue}}{{/optionalMethodArgument}}{{/required}}{{^-last}}, {{/-last}}{{/allParams}}{{#allParams.0}}, {{/allParams.0}}TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
         {{/operation}}
         #endregion Asynchronous Operations
     }
@@ -147,7 +147,7 @@ namespace {{packageName}}.{{apiPackage}}
         {{#isDeprecated}}
         [Obsolete]
         {{/isDeprecated}}
-        public VaultResponse<{{{returnType}}}{{^returnType}}Object{{/returnType}}> {{operationId}}({{#allParams}}{{{dataType}}} {{paramName}}{{^required}}{{#optionalMethodArgument}} = {{#defaultValue}}{{{.}}}{{/defaultValue}}{{/optionalMethodArgument}}{{/required}}{{^-last}}, {{/-last}}{{/allParams}})
+        public VaultResponse<{{{returnType}}}{{^returnType}}Object{{/returnType}}> {{operationId}}({{#allParams}}{{{dataType}}} {{paramName}}{{^required}}{{#optionalMethodArgument}} = {{#defaultValue}}{{{.}}}{{/defaultValue}}{{/optionalMethodArgument}}{{/required}}{{^-last}}, {{/-last}}{{/allParams}}{{#allParams.0}}, {{/allParams.0}}TimeSpan? wrapTTL = null)
         {
             {{#allParams}}
             {{#required}}
@@ -160,6 +160,12 @@ namespace {{packageName}}.{{apiPackage}}
             {{/required}}
             {{/allParams}}
             RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                var temp = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+            }
 
             string[] _contentTypes = new string[] {
                 {{#consumes}}
@@ -349,7 +355,7 @@ namespace {{packageName}}.{{apiPackage}}
         {{#isDeprecated}}
         [Obsolete]
         {{/isDeprecated}}
-        public async Task<VaultResponse<{{{returnType}}}{{^returnType}}Object{{/returnType}}>> {{operationId}}Async({{#allParams}}{{{dataType}}} {{paramName}}{{^required}}{{#optionalMethodArgument}} = {{#defaultValue}}{{{.}}}{{/defaultValue}}{{/optionalMethodArgument}}{{/required}}{{^-last}}, {{/-last}}{{/allParams}}{{#allParams.0}}, {{/allParams.0}}CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<{{{returnType}}}{{^returnType}}Object{{/returnType}}>> {{operationId}}Async({{#allParams}}{{{dataType}}} {{paramName}}{{^required}}{{#optionalMethodArgument}} = {{#defaultValue}}{{{.}}}{{/defaultValue}}{{/optionalMethodArgument}}{{/required}}{{^-last}}, {{/-last}}{{/allParams}}{{#allParams.0}}, {{/allParams.0}}TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             {{#allParams}}
             {{#required}}
@@ -363,6 +369,12 @@ namespace {{packageName}}.{{apiPackage}}
             {{/allParams}}
 
             RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                var temp = (TimeSpan)wrapTTL;
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", temp.TotalSeconds.ToString());
+            }
 
             string[] _contentTypes = new string[] {
                 {{#consumes}}

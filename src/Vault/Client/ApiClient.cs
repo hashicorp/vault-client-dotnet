@@ -395,7 +395,7 @@ namespace Vault.Client
                 }
 
                 int wrapTTL = _requestHeaders.ResponseWrapTTL;
-                if (wrapTTL > 0)
+                if (wrapTTL > 0 && !options.HeaderParameters.ContainsKey("X-Vault-Wrap-TTL"))
                 {
                     request.Headers.TryAddWithoutValidation("X-Vault-Wrap-TTL", wrapTTL.ToString());
                 }
