@@ -10,9 +10,9 @@
 
 using System;
 using System.Collections.Generic;
-using System.Net.Http;
-using Vault.Api;
+using System.Threading.Tasks;
 using Vault.Client;
+using Vault.Model;
 
 namespace Vault
 {
@@ -156,6 +156,54 @@ namespace Vault
         public void ClearMFACredentials()
         {
             _apiClient.ClearMFACredentials();
+        }
+
+        /// <summary>
+        /// Unwrap a response
+        /// <remarks>
+        /// Attempts to to unwrap the token provided
+        /// </remarks>
+        /// <see href="https://developer.hashicorp.com/vault/docs/concepts/response-wrapping"/>
+        /// </summary>
+        public VaultResponse<T> Unwrap<T>(string token)
+        {
+            RequestOptions requestOptions = new RequestOptions();
+            requestOptions.Data = new SystemWrappingUnwrapRequest(token);
+            var response = this._apiClient.Post<Object>("/sys/wrapping/unwrap", requestOptions);
+
+            var status = (int)response.StatusCode;
+            if (status >= 400)
+            {
+                throw new VaultApiException(status,
+                    string.Format("Error calling {0}: {1}", "SystemUnwrap", response.RawContent),
+                    response.RawContent, response.Headers);
+            }
+
+            return ClientUtils.ToVaultResponse<T>(response.RawContent);
+        }
+
+        /// <summary>
+        /// Async unwrap a response
+        /// <remarks>
+        /// Attempts to to unwrap the token provided
+        /// </remarks>
+        /// <see href="https://developer.hashicorp.com/vault/docs/concepts/response-wrapping"/>
+        /// </summary>
+        public async Task<VaultResponse<T>> UnwrapAsync<T>(string token)
+        {
+            RequestOptions requestOptions = new RequestOptions();
+            requestOptions.Data = new SystemWrappingUnwrapRequest(token);
+            var response = await this._apiClient.PostAsync<Object>("/sys/wrapping/unwrap", requestOptions);
+
+            var status = (int)response.StatusCode;
+            if (status >= 400)
+            {
+                throw new VaultApiException(status,
+                    string.Format("Error calling {0}: {1}", "SystemUnwrap", response.RawContent),
+                    response.RawContent, response.Headers);
+            }
+
+            return ClientUtils.ToVaultResponse<T>(response.RawContent);
         }
     }
 }

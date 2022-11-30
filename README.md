@@ -10,7 +10,8 @@
 1. [Examples](#exmples)
     - [Configuring a Vault Client](#configuring-a-vault-client)
     - [Reading secrets with `kv v2`](#secrets-engines)
-    - [Logging in with `AppRole` auth method](#auth-methods)
+    - [Reading a KV Secret](#reading-a-kv-secret)
+    - [Wrap and Unwrap Responses](#wrapping-and-unwrapping-responses)
 1. [Documentation for API Endpoints](#documentation-for-api-endpoints)
 
 ## Overview
@@ -203,6 +204,24 @@ All calls have both an async and synchronous implementation. E.g.
 ```csharp
 VaultResponse<Object> respAsync = await vaultClient.Secrets.GetSecretPathAsync("path");
 VaultResponse<Object> respSync = vaultClient.Secrets.GetSecretPath("path");
+```
+
+### Wrapping and Unwrapping Responses
+All functions accept an optional `TimeSpan? wrapTTL` function parameter. Vault will wrap the response and return a response-wrapping token instead. 
+More documentation on response wrapping can be found [here]([vault-response-wrapping]).
+
+```csharp
+// Get a wrapped response from Vault
+VaultResponse<Object> wrappedResp = vaultClient.System.GetSysMounts(wrapTTL: TimeSpan.FromSeconds(100));
+
+// Unwrap the given response object
+VaultResponse<Object> unwrappedResp = vaultClient.Unwrap<Object>(wrappedResp.ResponseWrapInfo.Token);
+```
+
+We also provide an async version.
+
+```csharp
+Task<VaultResponse<Object>> unwrappedResp = await vauClient.UnwrapAsync<Object>(wrappedResp.ResponseWrapInfo.Token);
 ```
 
 <a name="documentation-for-api-endpoints"></a>
