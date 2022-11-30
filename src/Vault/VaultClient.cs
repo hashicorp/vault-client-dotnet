@@ -160,6 +160,10 @@ namespace Vault
 
         /// <summary>
         /// Unwrap a response
+        /// <remarks>
+        /// Attempts to to unwrap the token provided
+        /// </remarks>
+        /// <see href="https://developer.hashicorp.com/vault/docs/concepts/response-wrapping"/>
         /// </summary>
         public VaultResponse<T> Unwrap<T>(string token)
         {
@@ -179,7 +183,11 @@ namespace Vault
         }
 
         /// <summary>
-        /// Unwrap a response async
+        /// Async unwrap a response
+        /// <remarks>
+        /// Attempts to to unwrap the token provided
+        /// </remarks>
+        /// <see href="https://developer.hashicorp.com/vault/docs/concepts/response-wrapping"/>
         /// </summary>
         public async Task<VaultResponse<T>> UnwrapAsync<T>(string token)
         {
