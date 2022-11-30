@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using Vault.Api;
 using Vault.Client;
+using Vault.Model;
 
 namespace Vault
 {
@@ -156,6 +157,21 @@ namespace Vault
         public void ClearMFACredentials()
         {
             _apiClient.ClearMFACredentials();
+        }
+
+        // To Do
+        // - async version 
+        // - make unwrap request for them
+        /// <summary>
+        /// Unwrap a response
+        /// </summary>
+        public VaultResponse<T> Unwrap<T>(string token)
+        {
+            RequestOptions requestOptions = new RequestOptions();
+            requestOptions.Data = new SystemWrappingUnwrapRequest(token);
+            var response = this._apiClient.Post<Object>("/sys/wrapping/unwrap", requestOptions);
+
+            return ClientUtils.ToVaultResponse<T>(response.RawContent);
         }
     }
 }
