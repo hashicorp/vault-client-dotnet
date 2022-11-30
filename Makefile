@@ -13,7 +13,6 @@ regen-bin: delete-generated generate clean build
 delete-generated:
 	rm -rf \
 		docs \
-		src \
 		build.bat \
 		build.sh \
 		git_push.sh \
