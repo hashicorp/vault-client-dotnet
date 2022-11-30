@@ -26,4 +26,5 @@ appveyor.yml
 src/Vault/Client/GlobalConfiguration.cs
 src/Vault/Client/IReadableConfiguration.cs
 src/Vault/Client/OpenAPIDateConverter.cs
-*.csproj
+src/Vault/Vault.csproj
+src/Vault.Test/Vault.Test.csproj
