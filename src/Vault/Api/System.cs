@@ -6008,8 +6008,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6065,8 +6064,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6120,8 +6118,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6177,8 +6174,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6232,8 +6228,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6289,8 +6284,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6339,8 +6333,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6390,8 +6383,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6444,8 +6436,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6501,8 +6492,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6551,8 +6541,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6602,8 +6591,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6651,8 +6639,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6702,8 +6689,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6751,8 +6737,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6802,8 +6787,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6856,8 +6840,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6913,8 +6896,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -6968,8 +6950,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7025,8 +7006,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7080,8 +7060,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7137,8 +7116,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7197,8 +7175,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7260,8 +7237,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7316,8 +7292,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7373,8 +7348,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7428,8 +7402,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7485,8 +7458,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7540,8 +7512,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7597,8 +7568,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7652,8 +7622,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7709,8 +7678,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7759,8 +7727,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7810,8 +7777,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7864,8 +7830,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7921,8 +7886,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -7971,8 +7935,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8022,8 +7985,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8071,8 +8033,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8122,8 +8083,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8171,8 +8131,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8222,8 +8181,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8271,8 +8229,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8322,8 +8279,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8371,8 +8327,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8422,8 +8377,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8471,8 +8425,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8522,8 +8475,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8576,8 +8528,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8633,8 +8584,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8688,8 +8638,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8745,8 +8694,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8795,8 +8743,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8846,8 +8793,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8900,8 +8846,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -8957,8 +8902,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9007,8 +8951,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9058,8 +9001,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9107,8 +9049,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9158,8 +9099,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9212,8 +9152,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9269,8 +9208,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9324,8 +9262,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9381,8 +9318,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9431,8 +9367,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9482,8 +9417,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9531,8 +9465,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9582,8 +9515,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9631,8 +9563,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9682,8 +9613,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9731,8 +9661,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9782,8 +9711,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9831,8 +9759,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9882,8 +9809,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9931,8 +9857,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -9982,8 +9907,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10031,8 +9955,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10082,8 +10005,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10131,8 +10053,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10182,8 +10103,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10231,8 +10151,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10282,8 +10201,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10331,8 +10249,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10382,8 +10299,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10431,8 +10347,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10482,8 +10397,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10531,8 +10445,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10582,8 +10495,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10631,8 +10543,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10682,8 +10593,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10731,8 +10641,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10782,8 +10691,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10836,8 +10744,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10893,8 +10800,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10943,8 +10849,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -10994,8 +10899,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11043,8 +10947,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11094,8 +10997,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11143,8 +11045,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11194,8 +11095,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11248,8 +11148,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11305,8 +11204,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11355,8 +11253,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11406,8 +11303,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11455,8 +11351,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11506,8 +11401,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11555,8 +11449,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11606,8 +11499,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11655,8 +11547,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11706,8 +11597,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11755,8 +11645,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11806,8 +11695,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11855,8 +11743,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11906,8 +11793,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -11960,8 +11846,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12017,8 +11902,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12077,8 +11961,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12140,8 +12023,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12192,8 +12074,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12248,8 +12129,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12303,8 +12183,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12364,8 +12243,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12421,8 +12299,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12472,8 +12349,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12526,8 +12402,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12583,8 +12458,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12638,8 +12512,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12695,8 +12568,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12745,8 +12617,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12796,8 +12667,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12850,8 +12720,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12907,8 +12776,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -12967,8 +12835,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -13030,8 +12897,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -13091,8 +12957,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -13154,8 +13019,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -13210,8 +13074,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -13267,8 +13130,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -13322,8 +13184,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -13379,8 +13240,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -13434,8 +13294,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -13491,8 +13350,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -13546,8 +13404,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -13603,8 +13460,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -13658,8 +13514,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -13715,8 +13570,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -13766,8 +13620,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -13822,8 +13675,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -13880,8 +13732,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -13937,8 +13788,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -13987,8 +13837,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -14038,8 +13887,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -14087,8 +13935,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -14138,8 +13985,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -14187,8 +14033,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -14238,8 +14083,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -14287,8 +14131,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -14338,8 +14181,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -14387,8 +14229,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -14438,8 +14279,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -14487,8 +14327,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -14538,8 +14377,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -14587,8 +14425,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -14638,8 +14475,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -14687,8 +14523,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -14738,8 +14573,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -14787,8 +14621,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -14838,8 +14671,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -14887,8 +14719,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -14938,8 +14769,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -14987,8 +14817,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -15038,8 +14867,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -15087,8 +14915,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -15138,8 +14965,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -15192,8 +15018,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -15249,8 +15074,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -15304,8 +15128,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -15361,8 +15184,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -15412,8 +15234,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -15468,8 +15289,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -15527,8 +15347,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -15589,8 +15408,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -15643,8 +15461,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -15694,8 +15511,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -15743,8 +15559,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -15794,8 +15609,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -15843,8 +15657,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -15894,8 +15707,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -15943,8 +15755,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -15994,8 +15805,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -16048,8 +15858,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -16105,8 +15914,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -16155,8 +15963,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -16206,8 +16013,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -16255,8 +16061,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -16306,8 +16111,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -16355,8 +16159,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -16406,8 +16209,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -16460,8 +16262,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -16517,8 +16318,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -16567,8 +16367,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -16618,8 +16417,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -16677,8 +16475,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -16741,8 +16538,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -16803,8 +16599,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -16867,8 +16662,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -16929,8 +16723,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -16993,8 +16786,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -17055,8 +16847,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -17119,8 +16910,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -17176,8 +16966,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -17234,8 +17023,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -17290,8 +17078,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -17348,8 +17135,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -17404,8 +17190,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -17462,8 +17247,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -17523,8 +17307,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -17587,8 +17370,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -17644,8 +17426,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -17702,8 +17483,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -17758,8 +17538,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -17815,8 +17594,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -17875,8 +17653,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -17939,8 +17716,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -17996,8 +17772,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -18054,8 +17829,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -18110,8 +17884,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -18168,8 +17941,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -18224,8 +17996,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -18282,8 +18053,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -18338,8 +18108,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -18396,8 +18165,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -18452,8 +18220,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -18510,8 +18277,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -18566,8 +18332,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -18624,8 +18389,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -18680,8 +18444,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -18738,8 +18501,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -18799,8 +18561,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -18863,8 +18624,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -18920,8 +18680,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -18978,8 +18737,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -19034,8 +18792,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -19091,8 +18848,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -19151,8 +18907,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -19215,8 +18970,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -19277,8 +19031,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -19341,8 +19094,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -19393,8 +19145,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -19444,8 +19195,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -19498,8 +19248,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -19556,8 +19305,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -19617,8 +19365,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -19681,8 +19428,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -19738,8 +19484,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -19796,8 +19541,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -19857,8 +19601,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -19921,8 +19664,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -19983,8 +19725,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -20047,8 +19788,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -20109,8 +19849,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -20173,8 +19912,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -20240,8 +19978,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -20310,8 +20047,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -20368,8 +20104,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -20426,8 +20161,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -20487,8 +20221,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -20551,8 +20284,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -20613,8 +20345,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -20677,8 +20408,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -20739,8 +20469,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -20803,8 +20532,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -20860,8 +20588,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -20918,8 +20645,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -20979,8 +20705,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -21043,8 +20768,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -21100,8 +20824,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -21158,8 +20881,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -21219,8 +20941,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -21283,8 +21004,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -21340,8 +21060,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -21398,8 +21117,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -21454,8 +21172,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -21512,8 +21229,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -21568,8 +21284,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -21626,8 +21341,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -21682,8 +21396,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -21740,8 +21453,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -21796,8 +21508,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -21854,8 +21565,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -21915,8 +21625,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -21979,8 +21688,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -22036,8 +21744,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -22094,8 +21801,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -22150,8 +21856,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -22207,8 +21912,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -22267,8 +21971,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -22331,8 +22034,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -22393,8 +22095,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -22457,8 +22158,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -22509,8 +22209,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -22560,8 +22259,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -22614,8 +22312,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -22672,8 +22369,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -22723,8 +22419,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -22774,8 +22469,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -22823,8 +22517,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -22874,8 +22567,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -22928,8 +22620,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -22986,8 +22677,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -23047,8 +22737,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -23111,8 +22800,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -23168,8 +22856,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -23226,8 +22913,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -23287,8 +22973,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -23351,8 +23036,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -23418,8 +23102,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -23488,8 +23171,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -23551,8 +23233,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -23615,8 +23296,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -23672,8 +23352,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -23730,8 +23409,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -23786,8 +23464,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -23844,8 +23521,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -23900,8 +23576,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -23958,8 +23633,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -24014,8 +23688,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -24072,8 +23745,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -24123,8 +23795,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -24174,8 +23845,7 @@ namespace Vault.Api
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {

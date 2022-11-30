@@ -184,8 +184,7 @@ namespace {{packageName}}.{{apiPackage}}
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
@@ -400,8 +399,7 @@ namespace {{packageName}}.{{apiPackage}}
 
             if (wrapTTL != null)
             {
-                var transformedTTL = (TimeSpan)wrapTTL;
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", transformedTTL.TotalSeconds.ToString());
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
             }
 
             string[] _contentTypes = new string[] {
