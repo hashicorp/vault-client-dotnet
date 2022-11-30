@@ -10,8 +10,7 @@
 
 using System;
 using System.Collections.Generic;
-using System.Net.Http;
-using Vault.Api;
+using System.Threading.Tasks;
 using Vault.Client;
 using Vault.Model;
 
@@ -159,9 +158,6 @@ namespace Vault
             _apiClient.ClearMFACredentials();
         }
 
-        // To Do
-        // - async version 
-        // - make unwrap request for them
         /// <summary>
         /// Unwrap a response
         /// </summary>
@@ -170,6 +166,34 @@ namespace Vault
             RequestOptions requestOptions = new RequestOptions();
             requestOptions.Data = new SystemWrappingUnwrapRequest(token);
             var response = this._apiClient.Post<Object>("/sys/wrapping/unwrap", requestOptions);
+
+            var status = (int)response.StatusCode;
+            if (status >= 400)
+            {
+                throw new VaultApiException(status,
+                    string.Format("Error calling {0}: {1}", "SystemUnwrap", response.RawContent),
+                    response.RawContent, response.Headers);
+            }
+
+            return ClientUtils.ToVaultResponse<T>(response.RawContent);
+        }
+
+        /// <summary>
+        /// Unwrap a response async
+        /// </summary>
+        public async Task<VaultResponse<T>> UnwrapAsync<T>(string token)
+        {
+            RequestOptions requestOptions = new RequestOptions();
+            requestOptions.Data = new SystemWrappingUnwrapRequest(token);
+            var response = await this._apiClient.PostAsync<Object>("/sys/wrapping/unwrap", requestOptions);
+
+            var status = (int)response.StatusCode;
+            if (status >= 400)
+            {
+                throw new VaultApiException(status,
+                    string.Format("Error calling {0}: {1}", "SystemUnwrap", response.RawContent),
+                    response.RawContent, response.Headers);
+            }
 
             return ClientUtils.ToVaultResponse<T>(response.RawContent);
         }
