@@ -229,7 +229,8 @@ VaultResponse<Object> respSync = vaultClient.Secrets.GetSecretPath("path");
 ```
 
 ### Wrapping and Unwrapping Responses
-All functions except an optional `wrapTTL` function parameter. It accepts a `TimeSpan` object. Vault will wrap the response and return a response-wrapping token instead. More documentation on response wrapping can be found [here]([vault-response-wrapping]).
+All functions accept an optional `TimeSpan? wrapTTL` function parameter. Vault will wrap the response and return a response-wrapping token instead. 
+More documentation on response wrapping can be found [here]([vault-response-wrapping]).
 
 ```csharp
 // Get a wrapped response from Vault
