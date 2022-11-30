@@ -34,6 +34,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteAdConfig(string adMountPath = "ad", TimeSpan? wrapTTL = null);
@@ -49,6 +52,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteAdLibraryName(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
@@ -64,6 +70,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteAdRolesName(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
@@ -78,6 +87,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteAlicloudConfig(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
@@ -93,6 +105,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteAlicloudRoleName(string name, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
@@ -108,6 +123,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteAwsRolesName(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
@@ -122,6 +140,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteAzureConfig(string azureMountPath = "azure", TimeSpan? wrapTTL = null);
@@ -137,6 +158,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteAzureRolesName(string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
@@ -152,6 +176,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteConsulRolesName(string name, string consulMountPath = "consul", TimeSpan? wrapTTL = null);
@@ -167,6 +194,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteCubbyholePath(string path, string cubbyholeMountPath = "cubbyhole", TimeSpan? wrapTTL = null);
@@ -182,6 +212,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteGcpRolesetName(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -197,6 +230,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteGcpStaticAccountName(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -211,6 +247,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteGcpkmsConfig(string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
@@ -226,6 +265,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteGcpkmsKeysDeregisterKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
@@ -241,6 +283,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteGcpkmsKeysKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
@@ -256,6 +301,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteGcpkmsKeysTrimKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
@@ -270,6 +318,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteKubernetesConfig(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
@@ -285,6 +336,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteKubernetesRolesName(string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
@@ -299,6 +353,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteLdapConfig(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
@@ -314,6 +371,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteLdapLibraryName(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
@@ -329,6 +389,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteLdapRoleName(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
@@ -344,6 +407,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteLdapStaticRoleName(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
@@ -359,6 +425,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteMongodbatlasRolesName(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
@@ -373,6 +442,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteNomadConfigAccess(string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
@@ -387,6 +459,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteNomadConfigLease(string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
@@ -402,6 +477,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteNomadRoleName(string name, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
@@ -416,6 +494,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteOpenldapConfig(string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
@@ -431,6 +512,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteOpenldapLibraryName(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
@@ -446,6 +530,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteOpenldapRoleName(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
@@ -461,6 +548,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteOpenldapStaticRoleName(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
@@ -476,6 +566,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeletePkiIssuerRefDerPem(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -490,6 +583,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeletePkiJson(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -505,6 +601,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeletePkiKeyKeyRef(string keyRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -520,6 +619,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeletePkiRolesName(string name, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -534,6 +636,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeletePkiRoot(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -549,6 +654,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteRabbitmqRolesName(string name, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null);
@@ -564,6 +672,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteSecretDataPath(string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
@@ -579,6 +690,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteSecretMetadataPath(string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
@@ -594,6 +708,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteSecretPath(string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
@@ -608,6 +725,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteSshConfigCa(string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
@@ -622,6 +742,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteSshConfigZeroaddress(string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
@@ -637,6 +760,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteSshKeysKeyName(string keyName, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
@@ -652,6 +778,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteSshRolesRole(string role, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
@@ -666,6 +795,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteTerraformConfig(string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
@@ -681,6 +813,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteTerraformRoleName(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
@@ -696,6 +831,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteTotpKeysName(string name, string totpMountPath = "totp", TimeSpan? wrapTTL = null);
@@ -711,6 +849,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> DeleteTransitKeysName(string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -725,6 +866,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetAdConfig(string adMountPath = "ad", TimeSpan? wrapTTL = null);
@@ -740,6 +884,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetAdCredsName(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
@@ -755,6 +902,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetAdLibrary(string list, string adMountPath = "ad", TimeSpan? wrapTTL = null);
@@ -770,6 +920,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetAdLibraryName(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
@@ -785,6 +938,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetAdLibraryNameStatus(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
@@ -800,6 +956,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetAdRoles(string list, string adMountPath = "ad", TimeSpan? wrapTTL = null);
@@ -815,6 +974,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetAdRolesName(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
@@ -829,6 +991,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetAdRotateRoot(string adMountPath = "ad", TimeSpan? wrapTTL = null);
@@ -843,6 +1008,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetAlicloudConfig(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
@@ -858,6 +1026,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetAlicloudCredsName(string name, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
@@ -873,6 +1044,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetAlicloudRole(string list, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
@@ -888,6 +1062,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetAlicloudRoleName(string name, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
@@ -902,6 +1079,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetAwsConfigLease(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
@@ -916,6 +1096,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetAwsConfigRoot(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
@@ -930,6 +1113,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetAwsCreds(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
@@ -945,6 +1131,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetAwsRoles(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
@@ -960,6 +1149,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetAwsRolesName(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
@@ -975,6 +1167,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetAwsStsName(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
@@ -989,6 +1184,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetAzureConfig(string azureMountPath = "azure", TimeSpan? wrapTTL = null);
@@ -1004,6 +1202,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetAzureCredsRole(string role, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
@@ -1019,6 +1220,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetAzureRoles(string list, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
@@ -1034,6 +1238,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetAzureRolesName(string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
@@ -1048,6 +1255,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetConsulConfigAccess(string consulMountPath = "consul", TimeSpan? wrapTTL = null);
@@ -1063,6 +1273,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetConsulCredsRole(string role, string consulMountPath = "consul", TimeSpan? wrapTTL = null);
@@ -1078,6 +1291,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetConsulRoles(string list, string consulMountPath = "consul", TimeSpan? wrapTTL = null);
@@ -1093,6 +1309,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetConsulRolesName(string name, string consulMountPath = "consul", TimeSpan? wrapTTL = null);
@@ -1109,6 +1328,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetCubbyholePath(string path, string cubbyholeMountPath = "cubbyhole", string list = "false", TimeSpan? wrapTTL = null);
@@ -1123,6 +1345,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetGcpConfig(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -1138,6 +1363,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetGcpKeyRoleset(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -1153,6 +1381,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetGcpRolesetName(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -1168,6 +1399,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetGcpRolesetRolesetKey(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -1183,6 +1417,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetGcpRolesetRolesetToken(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -1198,6 +1435,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetGcpRolesets(string list, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -1213,6 +1453,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetGcpStaticAccountName(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -1228,6 +1471,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetGcpStaticAccountNameKey(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -1243,6 +1489,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetGcpStaticAccountNameToken(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -1258,6 +1507,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetGcpStaticAccounts(string list, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -1273,6 +1525,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetGcpTokenRoleset(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -1287,6 +1542,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetGcpkmsConfig(string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
@@ -1302,6 +1560,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetGcpkmsKeys(string list, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
@@ -1317,6 +1578,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetGcpkmsKeysConfigKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
@@ -1332,6 +1596,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetGcpkmsKeysKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
@@ -1347,6 +1614,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetGcpkmsPubkeyKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
@@ -1361,6 +1631,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetKubernetesConfig(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
@@ -1376,6 +1649,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetKubernetesRoles(string list, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
@@ -1391,6 +1667,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetKubernetesRolesName(string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
@@ -1405,6 +1684,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetLdapConfig(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
@@ -1420,6 +1702,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetLdapCredsName(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
@@ -1435,6 +1720,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetLdapLibrary(string list, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
@@ -1450,6 +1738,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetLdapLibraryName(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
@@ -1465,6 +1756,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetLdapLibraryNameStatus(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
@@ -1480,6 +1774,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetLdapRole(string list, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
@@ -1495,6 +1792,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetLdapRoleName(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
@@ -1510,6 +1810,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetLdapStaticCredName(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
@@ -1525,6 +1828,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetLdapStaticRole(string list, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
@@ -1540,6 +1846,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetLdapStaticRoleName(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
@@ -1554,6 +1863,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetMongodbatlasConfig(string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
@@ -1569,6 +1881,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetMongodbatlasCredsName(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
@@ -1584,6 +1899,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetMongodbatlasRoles(string list, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
@@ -1599,6 +1917,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetMongodbatlasRolesName(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
@@ -1613,6 +1934,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetNomadConfigAccess(string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
@@ -1627,6 +1951,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetNomadConfigLease(string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
@@ -1642,6 +1969,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetNomadCredsName(string name, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
@@ -1657,6 +1987,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetNomadRole(string list, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
@@ -1672,6 +2005,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetNomadRoleName(string name, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
@@ -1686,6 +2022,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetOpenldapConfig(string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
@@ -1701,6 +2040,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetOpenldapCredsName(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
@@ -1716,6 +2058,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetOpenldapLibrary(string list, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
@@ -1731,6 +2076,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetOpenldapLibraryName(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
@@ -1746,6 +2094,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetOpenldapLibraryNameStatus(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
@@ -1761,6 +2112,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetOpenldapRole(string list, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
@@ -1776,6 +2130,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetOpenldapRoleName(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
@@ -1791,6 +2148,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetOpenldapStaticCredName(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
@@ -1806,6 +2166,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetOpenldapStaticRole(string list, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
@@ -1821,6 +2184,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetOpenldapStaticRoleName(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
@@ -1835,6 +2201,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiCa(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -1849,6 +2218,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiCaChain(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -1863,6 +2235,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiCaPem(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -1877,6 +2252,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiCertCaChain(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -1892,6 +2270,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiCertSerial(string serial, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -1907,6 +2288,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiCertSerialRaw(string serial, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -1922,6 +2306,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiCertSerialRawPem(string serial, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -1937,6 +2324,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiCerts(string list, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -1952,6 +2342,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiCertsRevoked(string list, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -1966,6 +2359,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiConfigAutoTidy(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -1980,6 +2376,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiConfigCrl(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -1994,6 +2393,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiConfigIssuers(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -2008,6 +2410,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiConfigKeys(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -2022,6 +2427,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiConfigUrls(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -2036,6 +2444,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiCrl(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -2050,6 +2461,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiCrlRotate(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -2064,6 +2478,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiCrlRotateDelta(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -2078,6 +2495,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiDelta(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -2092,6 +2512,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiDeltaCrl(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -2106,6 +2529,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiDeltaPem(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -2120,6 +2546,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiDer(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -2135,6 +2564,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiIssuerRefCrlPemDerDeltaPem(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -2150,6 +2582,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiIssuerRefDerPem(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -2165,6 +2600,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiIssuers(string list, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -2179,6 +2617,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiJson(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -2194,6 +2635,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiKeyKeyRef(string keyRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -2209,6 +2653,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiKeys(string list, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -2224,6 +2671,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiOcspReq(string req, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -2238,6 +2688,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiPem(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -2253,6 +2706,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiRoles(string list, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -2268,6 +2724,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiRolesName(string name, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -2282,6 +2741,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetPkiTidyStatus(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -2296,6 +2758,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetRabbitmqConfigLease(string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null);
@@ -2311,6 +2776,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetRabbitmqCredsName(string name, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null);
@@ -2326,6 +2794,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetRabbitmqRoles(string list, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null);
@@ -2341,6 +2812,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetRabbitmqRolesName(string name, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null);
@@ -2355,6 +2829,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetSecretConfig(string secretMountPath = "secret", TimeSpan? wrapTTL = null);
@@ -2370,6 +2847,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetSecretDataPath(string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
@@ -2386,6 +2866,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetSecretMetadataPath(string path, string secretMountPath = "secret", string list = "false", TimeSpan? wrapTTL = null);
@@ -2402,6 +2885,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetSecretPath(string path, string secretMountPath = "secret", string list = "false", TimeSpan? wrapTTL = null);
@@ -2417,6 +2903,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetSecretSubkeysPath(string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
@@ -2431,6 +2920,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetSshConfigCa(string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
@@ -2445,6 +2937,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetSshConfigZeroaddress(string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
@@ -2459,6 +2954,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetSshPublicKey(string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
@@ -2474,6 +2972,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetSshRoles(string list, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
@@ -2489,6 +2990,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetSshRolesRole(string role, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
@@ -2503,6 +3007,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetTerraformConfig(string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
@@ -2518,6 +3025,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetTerraformCredsName(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
@@ -2533,6 +3043,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetTerraformRole(string list, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
@@ -2548,6 +3061,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetTerraformRoleName(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
@@ -2563,6 +3079,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetTotpCodeName(string name, string totpMountPath = "totp", TimeSpan? wrapTTL = null);
@@ -2578,6 +3097,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetTotpKeys(string list, string totpMountPath = "totp", TimeSpan? wrapTTL = null);
@@ -2593,6 +3115,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetTotpKeysName(string name, string totpMountPath = "totp", TimeSpan? wrapTTL = null);
@@ -2608,6 +3133,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetTransitBackupName(string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -2622,6 +3150,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetTransitCacheConfig(string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -2638,6 +3169,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetTransitExportTypeName(string name, string type, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -2655,6 +3189,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetTransitExportTypeNameVersion(string name, string type, string version, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -2670,6 +3207,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetTransitKeys(string list, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -2685,6 +3225,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetTransitKeysName(string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -2699,6 +3242,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetTransitWrappingKey(string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -2714,6 +3260,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostAdConfig(AdConfigRequest adConfigRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null);
@@ -2730,6 +3279,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostAdLibraryManageNameCheckIn(string name, AdLibraryManageCheckInRequest adLibraryManageCheckInRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null);
@@ -2746,6 +3298,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostAdLibraryName(string name, AdLibraryRequest adLibraryRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null);
@@ -2762,6 +3317,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostAdLibraryNameCheckIn(string name, AdLibraryCheckInRequest adLibraryCheckInRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null);
@@ -2778,6 +3336,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostAdLibraryNameCheckOut(string name, AdLibraryCheckOutRequest adLibraryCheckOutRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null);
@@ -2794,6 +3355,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostAdRolesName(string name, AdRolesRequest adRolesRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null);
@@ -2809,6 +3373,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostAdRotateRoleName(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
@@ -2823,6 +3390,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostAdRotateRoot(string adMountPath = "ad", TimeSpan? wrapTTL = null);
@@ -2838,6 +3408,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostAlicloudConfig(AlicloudConfigRequest alicloudConfigRequest, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
@@ -2854,6 +3427,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostAlicloudRoleName(string name, AlicloudRoleRequest alicloudRoleRequest, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
@@ -2869,6 +3445,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostAwsConfigLease(AwsConfigLeaseRequest awsConfigLeaseRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
@@ -2884,6 +3463,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostAwsConfigRoot(AwsConfigRootRequest awsConfigRootRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
@@ -2898,6 +3480,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostAwsConfigRotateRoot(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
@@ -2913,6 +3498,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostAwsCreds(AwsCredsRequest awsCredsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
@@ -2929,6 +3517,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostAwsRolesName(string name, AwsRolesRequest awsRolesRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
@@ -2945,6 +3536,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostAwsStsName(string name, AwsStsRequest awsStsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
@@ -2960,6 +3554,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostAzureConfig(AzureConfigRequest azureConfigRequest, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
@@ -2976,6 +3573,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostAzureRolesName(string name, AzureRolesRequest azureRolesRequest, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
@@ -2990,6 +3590,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostAzureRotateRoot(string azureMountPath = "azure", TimeSpan? wrapTTL = null);
@@ -3005,6 +3608,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostConsulConfigAccess(ConsulConfigAccessRequest consulConfigAccessRequest, string consulMountPath = "consul", TimeSpan? wrapTTL = null);
@@ -3021,6 +3627,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostConsulRolesName(string name, ConsulRolesRequest consulRolesRequest, string consulMountPath = "consul", TimeSpan? wrapTTL = null);
@@ -3036,6 +3645,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostCubbyholePath(string path, string cubbyholeMountPath = "cubbyhole", TimeSpan? wrapTTL = null);
@@ -3051,6 +3663,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpConfig(GcpConfigRequest gcpConfigRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -3065,6 +3680,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpConfigRotateRoot(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -3081,6 +3699,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpKeyRoleset(string roleset, GcpKeyRequest gcpKeyRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -3097,6 +3718,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpRolesetName(string name, GcpRolesetRequest gcpRolesetRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -3112,6 +3736,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpRolesetNameRotate(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -3127,6 +3754,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpRolesetNameRotateKey(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -3143,6 +3773,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpRolesetRolesetKey(string roleset, GcpRolesetKeyRequest gcpRolesetKeyRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -3158,6 +3791,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpRolesetRolesetToken(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -3174,6 +3810,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpStaticAccountName(string name, GcpStaticAccountRequest gcpStaticAccountRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -3190,6 +3829,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpStaticAccountNameKey(string name, GcpStaticAccountKeyRequest gcpStaticAccountKeyRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -3205,6 +3847,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpStaticAccountNameRotateKey(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -3220,6 +3865,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpStaticAccountNameToken(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -3235,6 +3883,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpTokenRoleset(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
@@ -3250,6 +3901,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpkmsConfig(GcpkmsConfigRequest gcpkmsConfigRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
@@ -3266,6 +3920,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpkmsDecryptKey(string key, GcpkmsDecryptRequest gcpkmsDecryptRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
@@ -3282,6 +3939,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpkmsEncryptKey(string key, GcpkmsEncryptRequest gcpkmsEncryptRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
@@ -3298,6 +3958,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpkmsKeysConfigKey(string key, GcpkmsKeysConfigRequest gcpkmsKeysConfigRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
@@ -3313,6 +3976,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpkmsKeysDeregisterKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
@@ -3329,6 +3995,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpkmsKeysKey(string key, GcpkmsKeysRequest gcpkmsKeysRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
@@ -3345,6 +4014,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpkmsKeysRegisterKey(string key, GcpkmsKeysRegisterRequest gcpkmsKeysRegisterRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
@@ -3360,6 +4032,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpkmsKeysRotateKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
@@ -3375,6 +4050,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpkmsKeysTrimKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
@@ -3391,6 +4069,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpkmsReencryptKey(string key, GcpkmsReencryptRequest gcpkmsReencryptRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
@@ -3407,6 +4088,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpkmsSignKey(string key, GcpkmsSignRequest gcpkmsSignRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
@@ -3423,6 +4107,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostGcpkmsVerifyKey(string key, GcpkmsVerifyRequest gcpkmsVerifyRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
@@ -3438,6 +4125,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostKubernetesConfig(KubernetesConfigRequest kubernetesConfigRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
@@ -3454,6 +4144,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostKubernetesCredsName(string name, KubernetesCredsRequest kubernetesCredsRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
@@ -3470,6 +4163,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostKubernetesRolesName(string name, KubernetesRolesRequest kubernetesRolesRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
@@ -3485,6 +4181,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostLdapConfig(LdapConfigRequest ldapConfigRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
@@ -3501,6 +4200,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostLdapLibraryManageNameCheckIn(string name, LdapLibraryManageCheckInRequest ldapLibraryManageCheckInRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
@@ -3517,6 +4219,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostLdapLibraryName(string name, LdapLibraryRequest ldapLibraryRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
@@ -3533,6 +4238,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostLdapLibraryNameCheckIn(string name, LdapLibraryCheckInRequest ldapLibraryCheckInRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
@@ -3549,6 +4257,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostLdapLibraryNameCheckOut(string name, LdapLibraryCheckOutRequest ldapLibraryCheckOutRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
@@ -3565,6 +4276,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostLdapRoleName(string name, LdapRoleRequest ldapRoleRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
@@ -3580,6 +4294,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostLdapRotateRoleName(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
@@ -3594,6 +4311,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostLdapRotateRoot(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
@@ -3610,6 +4330,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostLdapStaticRoleName(string name, LdapStaticRoleRequest ldapStaticRoleRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
@@ -3625,6 +4348,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostMongodbatlasConfig(MongodbatlasConfigRequest mongodbatlasConfigRequest, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
@@ -3640,6 +4366,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostMongodbatlasCredsName(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
@@ -3656,6 +4385,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostMongodbatlasRolesName(string name, MongodbatlasRolesRequest mongodbatlasRolesRequest, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
@@ -3671,6 +4403,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostNomadConfigAccess(NomadConfigAccessRequest nomadConfigAccessRequest, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
@@ -3686,6 +4421,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostNomadConfigLease(NomadConfigLeaseRequest nomadConfigLeaseRequest, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
@@ -3702,6 +4440,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostNomadRoleName(string name, NomadRoleRequest nomadRoleRequest, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
@@ -3717,6 +4458,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostOpenldapConfig(OpenldapConfigRequest openldapConfigRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
@@ -3733,6 +4477,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostOpenldapLibraryManageNameCheckIn(string name, OpenldapLibraryManageCheckInRequest openldapLibraryManageCheckInRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
@@ -3749,6 +4496,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostOpenldapLibraryName(string name, OpenldapLibraryRequest openldapLibraryRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
@@ -3765,6 +4515,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostOpenldapLibraryNameCheckIn(string name, OpenldapLibraryCheckInRequest openldapLibraryCheckInRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
@@ -3781,6 +4534,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostOpenldapLibraryNameCheckOut(string name, OpenldapLibraryCheckOutRequest openldapLibraryCheckOutRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
@@ -3797,6 +4553,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostOpenldapRoleName(string name, OpenldapRoleRequest openldapRoleRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
@@ -3812,6 +4571,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostOpenldapRotateRoleName(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
@@ -3826,6 +4588,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostOpenldapRotateRoot(string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
@@ -3842,6 +4607,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostOpenldapStaticRoleName(string name, OpenldapStaticRoleRequest openldapStaticRoleRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
@@ -3857,6 +4625,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiBundle(PkiBundleRequest pkiBundleRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -3872,6 +4643,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiCert(PkiCertRequest pkiCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -3887,6 +4661,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiConfigAutoTidy(PkiConfigAutoTidyRequest pkiConfigAutoTidyRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -3902,6 +4679,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiConfigCa(PkiConfigCaRequest pkiConfigCaRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -3917,6 +4697,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiConfigCrl(PkiConfigCrlRequest pkiConfigCrlRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -3932,6 +4715,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiConfigIssuers(PkiConfigIssuersRequest pkiConfigIssuersRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -3947,6 +4733,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiConfigKeys(PkiConfigKeysRequest pkiConfigKeysRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -3962,6 +4751,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiConfigUrls(PkiConfigUrlsRequest pkiConfigUrlsRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -3977,6 +4769,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiIntermediateCrossSign(PkiIntermediateCrossSignRequest pkiIntermediateCrossSignRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -3993,6 +4788,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiIntermediateGenerateExported(string exported, PkiIntermediateGenerateRequest pkiIntermediateGenerateRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4008,6 +4806,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiIntermediateSetSigned(PkiIntermediateSetSignedRequest pkiIntermediateSetSignedRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4023,6 +4824,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiInternalExported(PkiInternalExportedRequest pkiInternalExportedRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4039,6 +4843,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiIssueRole(string role, PkiIssueRequest pkiIssueRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4056,6 +4863,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiIssuerIssuerRefIssueRole(string issuerRef, string role, PkiIssuerIssueRequest pkiIssuerIssueRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4071,6 +4881,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiIssuerIssuerRefRevoke(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4087,6 +4900,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiIssuerIssuerRefSignIntermediate(string issuerRef, PkiIssuerSignIntermediateRequest pkiIssuerSignIntermediateRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4104,6 +4920,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiIssuerIssuerRefSignRole(string issuerRef, string role, PkiIssuerSignRequest pkiIssuerSignRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4120,6 +4939,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiIssuerIssuerRefSignSelfIssued(string issuerRef, PkiIssuerSignSelfIssuedRequest pkiIssuerSignSelfIssuedRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4136,6 +4958,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiIssuerIssuerRefSignVerbatim(string issuerRef, PkiIssuerSignVerbatimRequest pkiIssuerSignVerbatimRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4153,6 +4978,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiIssuerIssuerRefSignVerbatimRole(string issuerRef, string role, PkiIssuerSignVerbatimRequest pkiIssuerSignVerbatimRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4169,6 +4997,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiIssuerRefDerPem(string issuerRef, PkiDerPemRequest pkiDerPemRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4185,6 +5016,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiIssuersGenerateIntermediateExported(string exported, PkiIssuersGenerateIntermediateRequest pkiIssuersGenerateIntermediateRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4201,6 +5035,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiIssuersGenerateRootExported(string exported, PkiIssuersGenerateRootRequest pkiIssuersGenerateRootRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4216,6 +5053,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiJson(PkiJsonRequest pkiJsonRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4232,6 +5072,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiKeyKeyRef(string keyRef, PkiKeyRequest pkiKeyRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4247,6 +5090,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiKeysImport(PkiKeysImportRequest pkiKeysImportRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4262,6 +5108,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiKms(PkiKmsRequest pkiKmsRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4276,6 +5125,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiOcsp(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4291,6 +5143,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiRevoke(PkiRevokeRequest pkiRevokeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4306,6 +5161,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiRevokeWithKey(PkiRevokeWithKeyRequest pkiRevokeWithKeyRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4322,6 +5180,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiRolesName(string name, PkiRolesRequest pkiRolesRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4338,6 +5199,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiRootGenerateExported(string exported, PkiRootGenerateRequest pkiRootGenerateRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4353,6 +5217,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiRootReplace(PkiRootReplaceRequest pkiRootReplaceRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4369,6 +5236,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiRootRotateExported(string exported, PkiRootRotateRequest pkiRootRotateRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4384,6 +5254,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiRootSignIntermediate(PkiRootSignIntermediateRequest pkiRootSignIntermediateRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4399,6 +5272,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiRootSignSelfIssued(PkiRootSignSelfIssuedRequest pkiRootSignSelfIssuedRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4415,6 +5291,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiSignRole(string role, PkiSignRequest pkiSignRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4430,6 +5309,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiSignVerbatim(PkiSignVerbatimRequest pkiSignVerbatimRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4446,6 +5328,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiSignVerbatimRole(string role, PkiSignVerbatimRequest pkiSignVerbatimRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4461,6 +5346,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiTidy(PkiTidyRequest pkiTidyRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4475,6 +5363,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostPkiTidyCancel(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
@@ -4490,6 +5381,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostRabbitmqConfigConnection(RabbitmqConfigConnectionRequest rabbitmqConfigConnectionRequest, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null);
@@ -4505,6 +5399,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostRabbitmqConfigLease(RabbitmqConfigLeaseRequest rabbitmqConfigLeaseRequest, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null);
@@ -4521,6 +5418,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostRabbitmqRolesName(string name, RabbitmqRolesRequest rabbitmqRolesRequest, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null);
@@ -4536,6 +5436,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostSecretConfig(KvConfigRequest kvConfigRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
@@ -4552,6 +5455,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostSecretDataPath(string path, KvDataRequest kvDataRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
@@ -4568,6 +5474,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostSecretDeletePath(string path, KvDeleteRequest kvDeleteRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
@@ -4584,6 +5493,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostSecretDestroyPath(string path, KvDestroyRequest kvDestroyRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
@@ -4600,6 +5512,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostSecretMetadataPath(string path, KvMetadataRequest kvMetadataRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
@@ -4615,6 +5530,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostSecretPath(string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
@@ -4631,6 +5549,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostSecretUndeletePath(string path, KvUndeleteRequest kvUndeleteRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
@@ -4646,6 +5567,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostSshConfigCa(SshConfigCaRequest sshConfigCaRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
@@ -4661,6 +5585,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostSshConfigZeroaddress(SshConfigZeroaddressRequest sshConfigZeroaddressRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
@@ -4677,6 +5604,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostSshCredsRole(string role, SshCredsRequest sshCredsRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
@@ -4693,6 +5623,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostSshIssueRole(string role, SshIssueRequest sshIssueRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
@@ -4709,6 +5642,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostSshKeysKeyName(string keyName, SshKeysRequest sshKeysRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
@@ -4724,6 +5660,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostSshLookup(SshLookupRequest sshLookupRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
@@ -4740,6 +5679,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostSshRolesRole(string role, SshRolesRequest sshRolesRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
@@ -4756,6 +5698,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostSshSignRole(string role, SshSignRequest sshSignRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
@@ -4771,6 +5716,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostSshVerify(SshVerifyRequest sshVerifyRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
@@ -4786,6 +5734,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTerraformConfig(TerraformConfigRequest terraformConfigRequest, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
@@ -4801,6 +5752,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTerraformCredsName(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
@@ -4817,6 +5771,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTerraformRoleName(string name, TerraformRoleRequest terraformRoleRequest, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
@@ -4832,6 +5789,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTerraformRotateRoleName(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
@@ -4848,6 +5808,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTotpCodeName(string name, TotpCodeRequest totpCodeRequest, string totpMountPath = "totp", TimeSpan? wrapTTL = null);
@@ -4864,6 +5827,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTotpKeysName(string name, TotpKeysRequest totpKeysRequest, string totpMountPath = "totp", TimeSpan? wrapTTL = null);
@@ -4879,6 +5845,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitCacheConfig(TransitCacheConfigRequest transitCacheConfigRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -4896,6 +5865,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitDatakeyPlaintextName(string name, string plaintext, TransitDatakeyRequest transitDatakeyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -4912,6 +5884,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitDecryptName(string name, TransitDecryptRequest transitDecryptRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -4928,6 +5903,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitEncryptName(string name, TransitEncryptRequest transitEncryptRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -4943,6 +5921,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitHash(TransitHashRequest transitHashRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -4959,6 +5940,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitHashUrlalgorithm(string urlalgorithm, TransitHashRequest transitHashRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -4975,6 +5959,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitHmacName(string name, TransitHmacRequest transitHmacRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -4992,6 +5979,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitHmacNameUrlalgorithm(string name, string urlalgorithm, TransitHmacRequest transitHmacRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -5008,6 +5998,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitKeysName(string name, TransitKeysRequest transitKeysRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -5024,6 +6017,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitKeysNameConfig(string name, TransitKeysConfigRequest transitKeysConfigRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -5040,6 +6036,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitKeysNameImport(string name, TransitKeysImportRequest transitKeysImportRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -5056,6 +6055,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitKeysNameImportVersion(string name, TransitKeysImportVersionRequest transitKeysImportVersionRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -5071,6 +6073,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitKeysNameRotate(string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -5087,6 +6092,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitKeysNameTrim(string name, TransitKeysTrimRequest transitKeysTrimRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -5102,6 +6110,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitRandom(TransitRandomRequest transitRandomRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -5118,6 +6129,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitRandomSource(string source, TransitRandomRequest transitRandomRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -5135,6 +6149,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitRandomSourceUrlbytes(string source, string urlbytes, TransitRandomRequest transitRandomRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -5151,6 +6168,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitRandomUrlbytes(string urlbytes, TransitRandomRequest transitRandomRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -5166,6 +6186,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitRestore(TransitRestoreRequest transitRestoreRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -5182,6 +6205,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitRestoreName(string name, TransitRestoreRequest transitRestoreRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -5198,6 +6224,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitRewrapName(string name, TransitRewrapRequest transitRewrapRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -5214,6 +6243,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitSignName(string name, TransitSignRequest transitSignRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -5231,6 +6263,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitSignNameUrlalgorithm(string name, string urlalgorithm, TransitSignRequest transitSignRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -5247,6 +6282,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitVerifyName(string name, TransitVerifyRequest transitVerifyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -5264,6 +6302,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PostTransitVerifyNameUrlalgorithm(string name, string urlalgorithm, TransitVerifyRequest transitVerifyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
@@ -5287,6 +6328,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5304,6 +6348,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5321,6 +6368,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5337,6 +6387,9 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5354,6 +6407,9 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5371,6 +6427,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5387,6 +6446,9 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5404,6 +6466,9 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5421,6 +6486,9 @@ namespace Vault.Api
         /// <param name="consulMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;consul&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5438,6 +6506,9 @@ namespace Vault.Api
         /// <param name="cubbyholeMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cubbyhole&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5455,6 +6526,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5472,6 +6546,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5488,6 +6565,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5505,6 +6585,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5522,6 +6605,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5539,6 +6625,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5555,6 +6644,9 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5572,6 +6664,9 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5588,6 +6683,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5605,6 +6703,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5622,6 +6723,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5639,6 +6743,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5656,6 +6763,9 @@ namespace Vault.Api
         /// <param name="mongodbatlasMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;mongodbatlas&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5672,6 +6782,9 @@ namespace Vault.Api
         /// <param name="nomadMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;nomad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5688,6 +6801,9 @@ namespace Vault.Api
         /// <param name="nomadMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;nomad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5705,6 +6821,9 @@ namespace Vault.Api
         /// <param name="nomadMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;nomad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5721,6 +6840,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5738,6 +6860,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5755,6 +6880,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5772,6 +6900,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5789,6 +6920,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5805,6 +6939,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5822,6 +6959,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5839,6 +6979,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5855,6 +6998,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5872,6 +7018,9 @@ namespace Vault.Api
         /// <param name="rabbitmqMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;rabbitmq&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5889,6 +7038,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5906,6 +7058,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5923,6 +7078,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5939,6 +7097,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5955,6 +7116,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5972,6 +7136,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -5989,6 +7156,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6005,6 +7175,9 @@ namespace Vault.Api
         /// <param name="terraformMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;terraform&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6022,6 +7195,9 @@ namespace Vault.Api
         /// <param name="terraformMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;terraform&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6039,6 +7215,9 @@ namespace Vault.Api
         /// <param name="totpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;totp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6056,6 +7235,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6072,6 +7254,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6089,6 +7274,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6106,6 +7294,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6123,6 +7314,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6140,6 +7334,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6157,6 +7354,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6174,6 +7374,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6190,6 +7393,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6206,6 +7412,9 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6223,6 +7432,9 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6240,6 +7452,9 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6257,6 +7472,9 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6273,6 +7491,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6289,6 +7510,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6305,6 +7529,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6322,6 +7549,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6339,6 +7569,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6356,6 +7589,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6372,6 +7608,9 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6389,6 +7628,9 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6406,6 +7648,9 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6423,6 +7668,9 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6439,6 +7687,9 @@ namespace Vault.Api
         /// <param name="consulMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;consul&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6456,6 +7707,9 @@ namespace Vault.Api
         /// <param name="consulMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;consul&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6473,6 +7727,9 @@ namespace Vault.Api
         /// <param name="consulMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;consul&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6490,6 +7747,9 @@ namespace Vault.Api
         /// <param name="consulMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;consul&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6508,6 +7768,9 @@ namespace Vault.Api
         /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6524,6 +7787,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6541,6 +7807,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6558,6 +7827,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6575,6 +7847,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6592,6 +7867,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6609,6 +7887,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6626,6 +7907,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6643,6 +7927,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6660,6 +7947,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6677,6 +7967,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6694,6 +7987,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6710,6 +8006,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6727,6 +8026,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6744,6 +8046,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6761,6 +8066,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6778,6 +8086,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6794,6 +8105,9 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6811,6 +8125,9 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6828,6 +8145,9 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6844,6 +8164,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6861,6 +8184,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6878,6 +8204,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6895,6 +8224,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6912,6 +8244,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6929,6 +8264,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6946,6 +8284,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6963,6 +8304,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6980,6 +8324,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -6997,6 +8344,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7013,6 +8363,9 @@ namespace Vault.Api
         /// <param name="mongodbatlasMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;mongodbatlas&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7030,6 +8383,9 @@ namespace Vault.Api
         /// <param name="mongodbatlasMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;mongodbatlas&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7047,6 +8403,9 @@ namespace Vault.Api
         /// <param name="mongodbatlasMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;mongodbatlas&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7064,6 +8423,9 @@ namespace Vault.Api
         /// <param name="mongodbatlasMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;mongodbatlas&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7080,6 +8442,9 @@ namespace Vault.Api
         /// <param name="nomadMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;nomad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7096,6 +8461,9 @@ namespace Vault.Api
         /// <param name="nomadMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;nomad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7113,6 +8481,9 @@ namespace Vault.Api
         /// <param name="nomadMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;nomad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7130,6 +8501,9 @@ namespace Vault.Api
         /// <param name="nomadMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;nomad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7147,6 +8521,9 @@ namespace Vault.Api
         /// <param name="nomadMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;nomad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7163,6 +8540,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7180,6 +8560,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7197,6 +8580,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7214,6 +8600,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7231,6 +8620,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7248,6 +8640,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7265,6 +8660,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7282,6 +8680,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7299,6 +8700,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7316,6 +8720,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7332,6 +8739,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7348,6 +8758,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7364,6 +8777,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7380,6 +8796,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7397,6 +8816,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7414,6 +8836,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7431,6 +8856,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7448,6 +8876,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7465,6 +8896,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7481,6 +8915,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7497,6 +8934,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7513,6 +8953,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7529,6 +8972,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7545,6 +8991,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7561,6 +9010,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7577,6 +9029,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7593,6 +9048,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7609,6 +9067,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7625,6 +9086,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7641,6 +9105,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7657,6 +9124,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7674,6 +9144,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7691,6 +9164,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7708,6 +9184,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7724,6 +9203,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7741,6 +9223,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7758,6 +9243,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7775,6 +9263,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7791,6 +9282,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7808,6 +9302,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7825,6 +9322,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7841,6 +9341,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7857,6 +9360,9 @@ namespace Vault.Api
         /// <param name="rabbitmqMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;rabbitmq&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7874,6 +9380,9 @@ namespace Vault.Api
         /// <param name="rabbitmqMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;rabbitmq&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7891,6 +9400,9 @@ namespace Vault.Api
         /// <param name="rabbitmqMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;rabbitmq&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7908,6 +9420,9 @@ namespace Vault.Api
         /// <param name="rabbitmqMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;rabbitmq&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7924,6 +9439,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7941,6 +9459,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7959,6 +9480,9 @@ namespace Vault.Api
         /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7977,6 +9501,9 @@ namespace Vault.Api
         /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -7994,6 +9521,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8010,6 +9540,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8026,6 +9559,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8042,6 +9578,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8059,6 +9598,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8076,6 +9618,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8092,6 +9637,9 @@ namespace Vault.Api
         /// <param name="terraformMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;terraform&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8109,6 +9657,9 @@ namespace Vault.Api
         /// <param name="terraformMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;terraform&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8126,6 +9677,9 @@ namespace Vault.Api
         /// <param name="terraformMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;terraform&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8143,6 +9697,9 @@ namespace Vault.Api
         /// <param name="terraformMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;terraform&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8160,6 +9717,9 @@ namespace Vault.Api
         /// <param name="totpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;totp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8177,6 +9737,9 @@ namespace Vault.Api
         /// <param name="totpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;totp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8194,6 +9757,9 @@ namespace Vault.Api
         /// <param name="totpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;totp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8211,6 +9777,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8227,6 +9796,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8245,6 +9817,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8264,6 +9839,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8281,6 +9859,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8298,6 +9879,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8314,6 +9898,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8331,6 +9918,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8349,6 +9939,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8367,6 +9960,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8385,6 +9981,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8403,6 +10002,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8421,6 +10023,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8438,6 +10043,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8454,6 +10062,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8471,6 +10082,9 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8489,6 +10103,9 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8506,6 +10123,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8523,6 +10143,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8539,6 +10162,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8556,6 +10182,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8574,6 +10203,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8592,6 +10224,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8609,6 +10244,9 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8627,6 +10265,9 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8643,6 +10284,9 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8660,6 +10304,9 @@ namespace Vault.Api
         /// <param name="consulMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;consul&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8678,6 +10325,9 @@ namespace Vault.Api
         /// <param name="consulMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;consul&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8695,6 +10345,9 @@ namespace Vault.Api
         /// <param name="cubbyholeMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cubbyhole&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8712,6 +10365,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8728,6 +10384,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8746,6 +10405,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8764,6 +10426,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8781,6 +10446,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8798,6 +10466,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8816,6 +10487,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8833,6 +10507,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8851,6 +10528,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8869,6 +10549,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8886,6 +10569,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8903,6 +10589,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8920,6 +10609,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8937,6 +10629,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8955,6 +10650,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8973,6 +10671,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -8991,6 +10692,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9008,6 +10712,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9026,6 +10733,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9044,6 +10754,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9061,6 +10774,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9078,6 +10794,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9096,6 +10815,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9114,6 +10836,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9132,6 +10857,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9149,6 +10877,9 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9167,6 +10898,9 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9185,6 +10919,9 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9202,6 +10939,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9220,6 +10960,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9238,6 +10981,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9256,6 +11002,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9274,6 +11023,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9292,6 +11044,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9309,6 +11064,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9325,6 +11083,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9343,6 +11104,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9360,6 +11124,9 @@ namespace Vault.Api
         /// <param name="mongodbatlasMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;mongodbatlas&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9377,6 +11144,9 @@ namespace Vault.Api
         /// <param name="mongodbatlasMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;mongodbatlas&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9395,6 +11165,9 @@ namespace Vault.Api
         /// <param name="mongodbatlasMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;mongodbatlas&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9412,6 +11185,9 @@ namespace Vault.Api
         /// <param name="nomadMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;nomad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9429,6 +11205,9 @@ namespace Vault.Api
         /// <param name="nomadMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;nomad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9447,6 +11226,9 @@ namespace Vault.Api
         /// <param name="nomadMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;nomad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9464,6 +11246,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9482,6 +11267,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9500,6 +11288,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9518,6 +11309,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9536,6 +11330,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9554,6 +11351,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9571,6 +11371,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9587,6 +11390,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9605,6 +11411,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9622,6 +11431,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9639,6 +11451,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9656,6 +11471,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9673,6 +11491,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9690,6 +11511,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9707,6 +11531,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9724,6 +11551,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9741,6 +11571,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9758,6 +11591,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9776,6 +11612,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9793,6 +11632,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9810,6 +11652,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9828,6 +11673,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9847,6 +11695,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9864,6 +11715,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9882,6 +11736,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9901,6 +11758,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9919,6 +11779,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9937,6 +11800,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9956,6 +11822,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9974,6 +11843,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -9992,6 +11864,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10010,6 +11885,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10027,6 +11905,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10045,6 +11926,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10062,6 +11946,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10079,6 +11966,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10095,6 +11985,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10112,6 +12005,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10129,6 +12025,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10147,6 +12046,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10165,6 +12067,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10182,6 +12087,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10200,6 +12108,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10217,6 +12128,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10234,6 +12148,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10252,6 +12169,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10269,6 +12189,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10287,6 +12210,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10304,6 +12230,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10320,6 +12249,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10337,6 +12269,9 @@ namespace Vault.Api
         /// <param name="rabbitmqMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;rabbitmq&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10354,6 +12289,9 @@ namespace Vault.Api
         /// <param name="rabbitmqMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;rabbitmq&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10372,6 +12310,9 @@ namespace Vault.Api
         /// <param name="rabbitmqMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;rabbitmq&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10389,6 +12330,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10407,6 +12351,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10425,6 +12372,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10443,6 +12393,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10461,6 +12414,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10478,6 +12434,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10496,6 +12455,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10513,6 +12475,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10530,6 +12495,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10548,6 +12516,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10566,6 +12537,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10584,6 +12558,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10601,6 +12578,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10619,6 +12599,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10637,6 +12620,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10654,6 +12640,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10671,6 +12660,9 @@ namespace Vault.Api
         /// <param name="terraformMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;terraform&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10688,6 +12680,9 @@ namespace Vault.Api
         /// <param name="terraformMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;terraform&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10706,6 +12701,9 @@ namespace Vault.Api
         /// <param name="terraformMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;terraform&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10723,6 +12721,9 @@ namespace Vault.Api
         /// <param name="terraformMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;terraform&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10741,6 +12742,9 @@ namespace Vault.Api
         /// <param name="totpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;totp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10759,6 +12763,9 @@ namespace Vault.Api
         /// <param name="totpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;totp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10776,6 +12783,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10795,6 +12805,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10813,6 +12826,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10831,6 +12847,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10848,6 +12867,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10866,6 +12888,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10884,6 +12909,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10903,6 +12931,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10921,6 +12952,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10939,6 +12973,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10957,6 +12994,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10975,6 +13015,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -10992,6 +13035,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -11010,6 +13056,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -11027,6 +13076,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -11045,6 +13097,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -11064,6 +13119,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -11082,6 +13140,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -11099,6 +13160,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -11117,6 +13181,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -11135,6 +13202,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -11153,6 +13223,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -11172,6 +13245,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -11190,6 +13266,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -11209,6 +13288,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -11295,6 +13377,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteAdConfig(string adMountPath = "ad", TimeSpan? wrapTTL = null)
@@ -11345,6 +13430,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -11400,6 +13488,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteAdLibraryName(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null)
@@ -11456,6 +13547,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -11516,6 +13610,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteAdRolesName(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null)
@@ -11572,6 +13669,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -11631,6 +13731,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteAlicloudConfig(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
@@ -11681,6 +13784,9 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -11736,6 +13842,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteAlicloudRoleName(string name, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
@@ -11792,6 +13901,9 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -11852,6 +13964,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteAwsRolesName(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
@@ -11908,6 +14023,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -11967,6 +14085,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteAzureConfig(string azureMountPath = "azure", TimeSpan? wrapTTL = null)
@@ -12017,6 +14138,9 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -12072,6 +14196,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteAzureRolesName(string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null)
@@ -12128,6 +14255,9 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -12188,6 +14318,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteConsulRolesName(string name, string consulMountPath = "consul", TimeSpan? wrapTTL = null)
@@ -12244,6 +14377,9 @@ namespace Vault.Api
         /// <param name="consulMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;consul&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -12304,6 +14440,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteCubbyholePath(string path, string cubbyholeMountPath = "cubbyhole", TimeSpan? wrapTTL = null)
@@ -12360,6 +14499,9 @@ namespace Vault.Api
         /// <param name="cubbyholeMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cubbyhole&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -12420,6 +14562,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteGcpRolesetName(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -12476,6 +14621,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -12536,6 +14684,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteGcpStaticAccountName(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -12592,6 +14743,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -12651,6 +14805,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteGcpkmsConfig(string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null)
@@ -12701,6 +14858,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -12756,6 +14916,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteGcpkmsKeysDeregisterKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null)
@@ -12812,6 +14975,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -12872,6 +15038,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteGcpkmsKeysKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null)
@@ -12928,6 +15097,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -12988,6 +15160,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteGcpkmsKeysTrimKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null)
@@ -13044,6 +15219,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -13103,6 +15281,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteKubernetesConfig(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
@@ -13153,6 +15334,9 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -13208,6 +15392,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteKubernetesRolesName(string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
@@ -13264,6 +15451,9 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -13323,6 +15513,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteLdapConfig(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
@@ -13373,6 +15566,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -13428,6 +15624,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteLdapLibraryName(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
@@ -13484,6 +15683,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -13544,6 +15746,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteLdapRoleName(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
@@ -13600,6 +15805,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -13660,6 +15868,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteLdapStaticRoleName(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
@@ -13716,6 +15927,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -13776,6 +15990,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteMongodbatlasRolesName(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null)
@@ -13832,6 +16049,9 @@ namespace Vault.Api
         /// <param name="mongodbatlasMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;mongodbatlas&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -13891,6 +16111,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteNomadConfigAccess(string nomadMountPath = "nomad", TimeSpan? wrapTTL = null)
@@ -13941,6 +16164,9 @@ namespace Vault.Api
         /// <param name="nomadMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;nomad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -13995,6 +16221,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteNomadConfigLease(string nomadMountPath = "nomad", TimeSpan? wrapTTL = null)
@@ -14045,6 +16274,9 @@ namespace Vault.Api
         /// <param name="nomadMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;nomad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -14100,6 +16332,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteNomadRoleName(string name, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null)
@@ -14156,6 +16391,9 @@ namespace Vault.Api
         /// <param name="nomadMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;nomad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -14215,6 +16453,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteOpenldapConfig(string openldapMountPath = "openldap", TimeSpan? wrapTTL = null)
@@ -14265,6 +16506,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -14320,6 +16564,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteOpenldapLibraryName(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null)
@@ -14376,6 +16623,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -14436,6 +16686,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteOpenldapRoleName(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null)
@@ -14492,6 +16745,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -14552,6 +16808,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteOpenldapStaticRoleName(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null)
@@ -14608,6 +16867,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -14668,6 +16930,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeletePkiIssuerRefDerPem(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -14724,6 +16989,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -14783,6 +17051,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeletePkiJson(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -14833,6 +17104,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -14888,6 +17162,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeletePkiKeyKeyRef(string keyRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -14944,6 +17221,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -15004,6 +17284,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeletePkiRolesName(string name, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -15060,6 +17343,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -15119,6 +17405,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeletePkiRoot(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -15169,6 +17458,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -15224,6 +17516,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteRabbitmqRolesName(string name, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null)
@@ -15280,6 +17575,9 @@ namespace Vault.Api
         /// <param name="rabbitmqMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;rabbitmq&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -15340,6 +17638,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteSecretDataPath(string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null)
@@ -15396,6 +17697,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -15456,6 +17760,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteSecretMetadataPath(string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null)
@@ -15512,6 +17819,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -15572,6 +17882,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteSecretPath(string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null)
@@ -15628,6 +17941,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -15687,6 +18003,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteSshConfigCa(string sshMountPath = "ssh", TimeSpan? wrapTTL = null)
@@ -15737,6 +18056,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -15791,6 +18113,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteSshConfigZeroaddress(string sshMountPath = "ssh", TimeSpan? wrapTTL = null)
@@ -15841,6 +18166,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -15896,6 +18224,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteSshKeysKeyName(string keyName, string sshMountPath = "ssh", TimeSpan? wrapTTL = null)
@@ -15952,6 +18283,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -16012,6 +18346,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteSshRolesRole(string role, string sshMountPath = "ssh", TimeSpan? wrapTTL = null)
@@ -16068,6 +18405,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -16127,6 +18467,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteTerraformConfig(string terraformMountPath = "terraform", TimeSpan? wrapTTL = null)
@@ -16177,6 +18520,9 @@ namespace Vault.Api
         /// <param name="terraformMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;terraform&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -16232,6 +18578,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteTerraformRoleName(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null)
@@ -16288,6 +18637,9 @@ namespace Vault.Api
         /// <param name="terraformMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;terraform&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -16348,6 +18700,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteTotpKeysName(string name, string totpMountPath = "totp", TimeSpan? wrapTTL = null)
@@ -16404,6 +18759,9 @@ namespace Vault.Api
         /// <param name="totpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;totp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -16464,6 +18822,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> DeleteTransitKeysName(string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -16520,6 +18881,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -16579,6 +18943,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetAdConfig(string adMountPath = "ad", TimeSpan? wrapTTL = null)
@@ -16629,6 +18996,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -16684,6 +19054,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetAdCredsName(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null)
@@ -16740,6 +19113,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -16800,6 +19176,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetAdLibrary(string list, string adMountPath = "ad", TimeSpan? wrapTTL = null)
@@ -16856,6 +19235,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -16916,6 +19298,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetAdLibraryName(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null)
@@ -16972,6 +19357,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -17032,6 +19420,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetAdLibraryNameStatus(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null)
@@ -17088,6 +19479,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -17148,6 +19542,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetAdRoles(string list, string adMountPath = "ad", TimeSpan? wrapTTL = null)
@@ -17204,6 +19601,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -17264,6 +19664,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetAdRolesName(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null)
@@ -17320,6 +19723,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -17379,6 +19785,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetAdRotateRoot(string adMountPath = "ad", TimeSpan? wrapTTL = null)
@@ -17429,6 +19838,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -17483,6 +19895,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetAlicloudConfig(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
@@ -17533,6 +19948,9 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -17588,6 +20006,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetAlicloudCredsName(string name, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
@@ -17644,6 +20065,9 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -17704,6 +20128,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetAlicloudRole(string list, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
@@ -17760,6 +20187,9 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -17820,6 +20250,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetAlicloudRoleName(string name, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
@@ -17876,6 +20309,9 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -17935,6 +20371,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetAwsConfigLease(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
@@ -17985,6 +20424,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -18039,6 +20481,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetAwsConfigRoot(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
@@ -18089,6 +20534,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -18143,6 +20591,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetAwsCreds(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
@@ -18193,6 +20644,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -18248,6 +20702,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetAwsRoles(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
@@ -18304,6 +20761,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -18364,6 +20824,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetAwsRolesName(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
@@ -18420,6 +20883,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -18480,6 +20946,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetAwsStsName(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
@@ -18536,6 +21005,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -18595,6 +21067,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetAzureConfig(string azureMountPath = "azure", TimeSpan? wrapTTL = null)
@@ -18645,6 +21120,9 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -18700,6 +21178,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetAzureCredsRole(string role, string azureMountPath = "azure", TimeSpan? wrapTTL = null)
@@ -18756,6 +21237,9 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -18816,6 +21300,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetAzureRoles(string list, string azureMountPath = "azure", TimeSpan? wrapTTL = null)
@@ -18872,6 +21359,9 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -18932,6 +21422,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetAzureRolesName(string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null)
@@ -18988,6 +21481,9 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -19047,6 +21543,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetConsulConfigAccess(string consulMountPath = "consul", TimeSpan? wrapTTL = null)
@@ -19097,6 +21596,9 @@ namespace Vault.Api
         /// <param name="consulMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;consul&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -19152,6 +21654,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetConsulCredsRole(string role, string consulMountPath = "consul", TimeSpan? wrapTTL = null)
@@ -19208,6 +21713,9 @@ namespace Vault.Api
         /// <param name="consulMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;consul&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -19268,6 +21776,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetConsulRoles(string list, string consulMountPath = "consul", TimeSpan? wrapTTL = null)
@@ -19324,6 +21835,9 @@ namespace Vault.Api
         /// <param name="consulMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;consul&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -19384,6 +21898,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetConsulRolesName(string name, string consulMountPath = "consul", TimeSpan? wrapTTL = null)
@@ -19440,6 +21957,9 @@ namespace Vault.Api
         /// <param name="consulMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;consul&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -19501,6 +22021,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetCubbyholePath(string path, string cubbyholeMountPath = "cubbyhole", string list = "false", TimeSpan? wrapTTL = null)
@@ -19562,6 +22085,9 @@ namespace Vault.Api
         /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -19625,6 +22151,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetGcpConfig(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -19675,6 +22204,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -19730,6 +22262,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetGcpKeyRoleset(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -19786,6 +22321,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -19846,6 +22384,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetGcpRolesetName(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -19902,6 +22443,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -19962,6 +22506,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetGcpRolesetRolesetKey(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -20018,6 +22565,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -20078,6 +22628,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetGcpRolesetRolesetToken(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -20134,6 +22687,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -20194,6 +22750,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetGcpRolesets(string list, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -20250,6 +22809,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -20310,6 +22872,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetGcpStaticAccountName(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -20366,6 +22931,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -20426,6 +22994,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetGcpStaticAccountNameKey(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -20482,6 +23053,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -20542,6 +23116,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetGcpStaticAccountNameToken(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -20598,6 +23175,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -20658,6 +23238,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetGcpStaticAccounts(string list, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -20714,6 +23297,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -20774,6 +23360,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetGcpTokenRoleset(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -20830,6 +23419,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -20889,6 +23481,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetGcpkmsConfig(string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null)
@@ -20939,6 +23534,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -20994,6 +23592,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetGcpkmsKeys(string list, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null)
@@ -21050,6 +23651,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -21110,6 +23714,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetGcpkmsKeysConfigKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null)
@@ -21166,6 +23773,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -21226,6 +23836,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetGcpkmsKeysKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null)
@@ -21282,6 +23895,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -21342,6 +23958,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetGcpkmsPubkeyKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null)
@@ -21398,6 +24017,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -21457,6 +24079,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetKubernetesConfig(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
@@ -21507,6 +24132,9 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -21562,6 +24190,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetKubernetesRoles(string list, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
@@ -21618,6 +24249,9 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -21678,6 +24312,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetKubernetesRolesName(string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
@@ -21734,6 +24371,9 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -21793,6 +24433,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetLdapConfig(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
@@ -21843,6 +24486,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -21898,6 +24544,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetLdapCredsName(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
@@ -21954,6 +24603,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -22014,6 +24666,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetLdapLibrary(string list, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
@@ -22070,6 +24725,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -22130,6 +24788,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetLdapLibraryName(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
@@ -22186,6 +24847,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -22246,6 +24910,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetLdapLibraryNameStatus(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
@@ -22302,6 +24969,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -22362,6 +25032,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetLdapRole(string list, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
@@ -22418,6 +25091,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -22478,6 +25154,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetLdapRoleName(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
@@ -22534,6 +25213,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -22594,6 +25276,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetLdapStaticCredName(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
@@ -22650,6 +25335,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -22710,6 +25398,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetLdapStaticRole(string list, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
@@ -22766,6 +25457,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -22826,6 +25520,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetLdapStaticRoleName(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
@@ -22882,6 +25579,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -22941,6 +25641,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetMongodbatlasConfig(string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null)
@@ -22991,6 +25694,9 @@ namespace Vault.Api
         /// <param name="mongodbatlasMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;mongodbatlas&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -23046,6 +25752,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetMongodbatlasCredsName(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null)
@@ -23102,6 +25811,9 @@ namespace Vault.Api
         /// <param name="mongodbatlasMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;mongodbatlas&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -23162,6 +25874,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetMongodbatlasRoles(string list, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null)
@@ -23218,6 +25933,9 @@ namespace Vault.Api
         /// <param name="mongodbatlasMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;mongodbatlas&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -23278,6 +25996,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetMongodbatlasRolesName(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null)
@@ -23334,6 +26055,9 @@ namespace Vault.Api
         /// <param name="mongodbatlasMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;mongodbatlas&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -23393,6 +26117,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetNomadConfigAccess(string nomadMountPath = "nomad", TimeSpan? wrapTTL = null)
@@ -23443,6 +26170,9 @@ namespace Vault.Api
         /// <param name="nomadMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;nomad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -23497,6 +26227,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetNomadConfigLease(string nomadMountPath = "nomad", TimeSpan? wrapTTL = null)
@@ -23547,6 +26280,9 @@ namespace Vault.Api
         /// <param name="nomadMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;nomad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -23602,6 +26338,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetNomadCredsName(string name, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null)
@@ -23658,6 +26397,9 @@ namespace Vault.Api
         /// <param name="nomadMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;nomad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -23718,6 +26460,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetNomadRole(string list, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null)
@@ -23774,6 +26519,9 @@ namespace Vault.Api
         /// <param name="nomadMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;nomad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -23834,6 +26582,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetNomadRoleName(string name, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null)
@@ -23890,6 +26641,9 @@ namespace Vault.Api
         /// <param name="nomadMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;nomad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -23949,6 +26703,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetOpenldapConfig(string openldapMountPath = "openldap", TimeSpan? wrapTTL = null)
@@ -23999,6 +26756,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -24054,6 +26814,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetOpenldapCredsName(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null)
@@ -24110,6 +26873,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -24170,6 +26936,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetOpenldapLibrary(string list, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null)
@@ -24226,6 +26995,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -24286,6 +27058,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetOpenldapLibraryName(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null)
@@ -24342,6 +27117,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -24402,6 +27180,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetOpenldapLibraryNameStatus(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null)
@@ -24458,6 +27239,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -24518,6 +27302,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetOpenldapRole(string list, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null)
@@ -24574,6 +27361,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -24634,6 +27424,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetOpenldapRoleName(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null)
@@ -24690,6 +27483,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -24750,6 +27546,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetOpenldapStaticCredName(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null)
@@ -24806,6 +27605,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -24866,6 +27668,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetOpenldapStaticRole(string list, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null)
@@ -24922,6 +27727,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -24982,6 +27790,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetOpenldapStaticRoleName(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null)
@@ -25038,6 +27849,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -25097,6 +27911,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiCa(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -25147,6 +27964,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -25201,6 +28021,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiCaChain(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -25251,6 +28074,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -25305,6 +28131,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiCaPem(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -25355,6 +28184,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -25409,6 +28241,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiCertCaChain(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -25459,6 +28294,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -25514,6 +28352,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiCertSerial(string serial, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -25570,6 +28411,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -25630,6 +28474,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiCertSerialRaw(string serial, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -25686,6 +28533,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -25746,6 +28596,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiCertSerialRawPem(string serial, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -25802,6 +28655,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -25862,6 +28718,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiCerts(string list, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -25918,6 +28777,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -25978,6 +28840,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiCertsRevoked(string list, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -26034,6 +28899,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -26093,6 +28961,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiConfigAutoTidy(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -26143,6 +29014,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -26197,6 +29071,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiConfigCrl(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -26247,6 +29124,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -26301,6 +29181,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiConfigIssuers(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -26351,6 +29234,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -26405,6 +29291,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiConfigKeys(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -26455,6 +29344,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -26509,6 +29401,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiConfigUrls(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -26559,6 +29454,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -26613,6 +29511,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiCrl(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -26663,6 +29564,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -26717,6 +29621,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiCrlRotate(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -26767,6 +29674,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -26821,6 +29731,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiCrlRotateDelta(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -26871,6 +29784,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -26925,6 +29841,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiDelta(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -26975,6 +29894,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -27029,6 +29951,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiDeltaCrl(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -27079,6 +30004,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -27133,6 +30061,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiDeltaPem(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -27183,6 +30114,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -27237,6 +30171,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiDer(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -27287,6 +30224,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -27342,6 +30282,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiIssuerRefCrlPemDerDeltaPem(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -27398,6 +30341,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -27458,6 +30404,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiIssuerRefDerPem(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -27514,6 +30463,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -27574,6 +30526,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiIssuers(string list, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -27630,6 +30585,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -27689,6 +30647,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiJson(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -27739,6 +30700,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -27794,6 +30758,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiKeyKeyRef(string keyRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -27850,6 +30817,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -27910,6 +30880,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiKeys(string list, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -27966,6 +30939,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -28026,6 +31002,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiOcspReq(string req, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -28082,6 +31061,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -28141,6 +31123,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiPem(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -28191,6 +31176,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -28246,6 +31234,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiRoles(string list, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -28302,6 +31293,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -28362,6 +31356,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiRolesName(string name, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -28418,6 +31415,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -28477,6 +31477,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetPkiTidyStatus(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -28527,6 +31530,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -28581,6 +31587,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetRabbitmqConfigLease(string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null)
@@ -28631,6 +31640,9 @@ namespace Vault.Api
         /// <param name="rabbitmqMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;rabbitmq&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -28686,6 +31698,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetRabbitmqCredsName(string name, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null)
@@ -28742,6 +31757,9 @@ namespace Vault.Api
         /// <param name="rabbitmqMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;rabbitmq&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -28802,6 +31820,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetRabbitmqRoles(string list, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null)
@@ -28858,6 +31879,9 @@ namespace Vault.Api
         /// <param name="rabbitmqMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;rabbitmq&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -28918,6 +31942,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetRabbitmqRolesName(string name, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null)
@@ -28974,6 +32001,9 @@ namespace Vault.Api
         /// <param name="rabbitmqMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;rabbitmq&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -29033,6 +32063,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetSecretConfig(string secretMountPath = "secret", TimeSpan? wrapTTL = null)
@@ -29083,6 +32116,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -29138,6 +32174,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetSecretDataPath(string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null)
@@ -29194,6 +32233,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -29255,6 +32297,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetSecretMetadataPath(string path, string secretMountPath = "secret", string list = "false", TimeSpan? wrapTTL = null)
@@ -29316,6 +32361,9 @@ namespace Vault.Api
         /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -29381,6 +32429,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetSecretPath(string path, string secretMountPath = "secret", string list = "false", TimeSpan? wrapTTL = null)
@@ -29442,6 +32493,9 @@ namespace Vault.Api
         /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -29506,6 +32560,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetSecretSubkeysPath(string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null)
@@ -29562,6 +32619,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -29621,6 +32681,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetSshConfigCa(string sshMountPath = "ssh", TimeSpan? wrapTTL = null)
@@ -29671,6 +32734,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -29725,6 +32791,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetSshConfigZeroaddress(string sshMountPath = "ssh", TimeSpan? wrapTTL = null)
@@ -29775,6 +32844,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -29829,6 +32901,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetSshPublicKey(string sshMountPath = "ssh", TimeSpan? wrapTTL = null)
@@ -29879,6 +32954,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -29934,6 +33012,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetSshRoles(string list, string sshMountPath = "ssh", TimeSpan? wrapTTL = null)
@@ -29990,6 +33071,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -30050,6 +33134,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetSshRolesRole(string role, string sshMountPath = "ssh", TimeSpan? wrapTTL = null)
@@ -30106,6 +33193,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -30165,6 +33255,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetTerraformConfig(string terraformMountPath = "terraform", TimeSpan? wrapTTL = null)
@@ -30215,6 +33308,9 @@ namespace Vault.Api
         /// <param name="terraformMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;terraform&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -30270,6 +33366,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetTerraformCredsName(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null)
@@ -30326,6 +33425,9 @@ namespace Vault.Api
         /// <param name="terraformMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;terraform&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -30386,6 +33488,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetTerraformRole(string list, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null)
@@ -30442,6 +33547,9 @@ namespace Vault.Api
         /// <param name="terraformMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;terraform&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -30502,6 +33610,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetTerraformRoleName(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null)
@@ -30558,6 +33669,9 @@ namespace Vault.Api
         /// <param name="terraformMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;terraform&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -30618,6 +33732,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetTotpCodeName(string name, string totpMountPath = "totp", TimeSpan? wrapTTL = null)
@@ -30674,6 +33791,9 @@ namespace Vault.Api
         /// <param name="totpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;totp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -30734,6 +33854,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetTotpKeys(string list, string totpMountPath = "totp", TimeSpan? wrapTTL = null)
@@ -30790,6 +33913,9 @@ namespace Vault.Api
         /// <param name="totpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;totp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -30850,6 +33976,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetTotpKeysName(string name, string totpMountPath = "totp", TimeSpan? wrapTTL = null)
@@ -30906,6 +34035,9 @@ namespace Vault.Api
         /// <param name="totpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;totp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -30966,6 +34098,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetTransitBackupName(string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -31022,6 +34157,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -31081,6 +34219,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetTransitCacheConfig(string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -31131,6 +34272,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -31187,6 +34331,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetTransitExportTypeName(string name, string type, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -31249,6 +34396,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -31316,6 +34466,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetTransitExportTypeNameVersion(string name, string type, string version, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -31384,6 +34537,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -31454,6 +34610,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetTransitKeys(string list, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -31510,6 +34669,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -31570,6 +34732,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetTransitKeysName(string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -31626,6 +34791,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -31685,6 +34853,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> GetTransitWrappingKey(string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -31735,6 +34906,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -31790,6 +34964,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostAdConfig(AdConfigRequest adConfigRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null)
@@ -31847,6 +35024,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -31909,6 +35089,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostAdLibraryManageNameCheckIn(string name, AdLibraryManageCheckInRequest adLibraryManageCheckInRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null)
@@ -31972,6 +35155,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -32039,6 +35225,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostAdLibraryName(string name, AdLibraryRequest adLibraryRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null)
@@ -32102,6 +35291,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -32169,6 +35361,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostAdLibraryNameCheckIn(string name, AdLibraryCheckInRequest adLibraryCheckInRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null)
@@ -32232,6 +35427,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -32299,6 +35497,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostAdLibraryNameCheckOut(string name, AdLibraryCheckOutRequest adLibraryCheckOutRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null)
@@ -32362,6 +35563,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -32429,6 +35633,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostAdRolesName(string name, AdRolesRequest adRolesRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null)
@@ -32492,6 +35699,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -32558,6 +35768,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostAdRotateRoleName(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null)
@@ -32614,6 +35827,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -32673,6 +35889,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostAdRotateRoot(string adMountPath = "ad", TimeSpan? wrapTTL = null)
@@ -32723,6 +35942,9 @@ namespace Vault.Api
         /// <param name="adMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -32778,6 +36000,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostAlicloudConfig(AlicloudConfigRequest alicloudConfigRequest, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
@@ -32835,6 +36060,9 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -32897,6 +36125,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostAlicloudRoleName(string name, AlicloudRoleRequest alicloudRoleRequest, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
@@ -32960,6 +36191,9 @@ namespace Vault.Api
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -33026,6 +36260,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostAwsConfigLease(AwsConfigLeaseRequest awsConfigLeaseRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
@@ -33083,6 +36320,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -33144,6 +36384,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostAwsConfigRoot(AwsConfigRootRequest awsConfigRootRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
@@ -33201,6 +36444,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -33261,6 +36507,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostAwsConfigRotateRoot(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
@@ -33311,6 +36560,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -33366,6 +36618,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostAwsCreds(AwsCredsRequest awsCredsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
@@ -33423,6 +36678,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -33485,6 +36743,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostAwsRolesName(string name, AwsRolesRequest awsRolesRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
@@ -33548,6 +36809,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -33615,6 +36879,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostAwsStsName(string name, AwsStsRequest awsStsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
@@ -33678,6 +36945,9 @@ namespace Vault.Api
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -33744,6 +37014,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostAzureConfig(AzureConfigRequest azureConfigRequest, string azureMountPath = "azure", TimeSpan? wrapTTL = null)
@@ -33801,6 +37074,9 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -33863,6 +37139,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostAzureRolesName(string name, AzureRolesRequest azureRolesRequest, string azureMountPath = "azure", TimeSpan? wrapTTL = null)
@@ -33926,6 +37205,9 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -33991,6 +37273,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostAzureRotateRoot(string azureMountPath = "azure", TimeSpan? wrapTTL = null)
@@ -34041,6 +37326,9 @@ namespace Vault.Api
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -34096,6 +37384,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostConsulConfigAccess(ConsulConfigAccessRequest consulConfigAccessRequest, string consulMountPath = "consul", TimeSpan? wrapTTL = null)
@@ -34153,6 +37444,9 @@ namespace Vault.Api
         /// <param name="consulMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;consul&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -34215,6 +37509,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostConsulRolesName(string name, ConsulRolesRequest consulRolesRequest, string consulMountPath = "consul", TimeSpan? wrapTTL = null)
@@ -34278,6 +37575,9 @@ namespace Vault.Api
         /// <param name="consulMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;consul&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -34344,6 +37644,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostCubbyholePath(string path, string cubbyholeMountPath = "cubbyhole", TimeSpan? wrapTTL = null)
@@ -34400,6 +37703,9 @@ namespace Vault.Api
         /// <param name="cubbyholeMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cubbyhole&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -34460,6 +37766,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpConfig(GcpConfigRequest gcpConfigRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -34517,6 +37826,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -34577,6 +37889,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpConfigRotateRoot(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -34627,6 +37942,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -34683,6 +38001,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpKeyRoleset(string roleset, GcpKeyRequest gcpKeyRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -34746,6 +38067,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -34813,6 +38137,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpRolesetName(string name, GcpRolesetRequest gcpRolesetRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -34876,6 +38203,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -34942,6 +38272,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpRolesetNameRotate(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -34998,6 +38331,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -35058,6 +38394,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpRolesetNameRotateKey(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -35114,6 +38453,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -35175,6 +38517,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpRolesetRolesetKey(string roleset, GcpRolesetKeyRequest gcpRolesetKeyRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -35238,6 +38583,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -35304,6 +38652,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpRolesetRolesetToken(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -35360,6 +38711,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -35421,6 +38775,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpStaticAccountName(string name, GcpStaticAccountRequest gcpStaticAccountRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -35484,6 +38841,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -35551,6 +38911,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpStaticAccountNameKey(string name, GcpStaticAccountKeyRequest gcpStaticAccountKeyRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -35614,6 +38977,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -35680,6 +39046,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpStaticAccountNameRotateKey(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -35736,6 +39105,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -35796,6 +39168,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpStaticAccountNameToken(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -35852,6 +39227,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -35912,6 +39290,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpTokenRoleset(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
@@ -35968,6 +39349,9 @@ namespace Vault.Api
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -36028,6 +39412,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpkmsConfig(GcpkmsConfigRequest gcpkmsConfigRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null)
@@ -36085,6 +39472,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -36147,6 +39537,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpkmsDecryptKey(string key, GcpkmsDecryptRequest gcpkmsDecryptRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null)
@@ -36210,6 +39603,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -36277,6 +39673,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpkmsEncryptKey(string key, GcpkmsEncryptRequest gcpkmsEncryptRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null)
@@ -36340,6 +39739,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -36407,6 +39809,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpkmsKeysConfigKey(string key, GcpkmsKeysConfigRequest gcpkmsKeysConfigRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null)
@@ -36470,6 +39875,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -36536,6 +39944,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpkmsKeysDeregisterKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null)
@@ -36592,6 +40003,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -36653,6 +40067,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpkmsKeysKey(string key, GcpkmsKeysRequest gcpkmsKeysRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null)
@@ -36716,6 +40133,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -36783,6 +40203,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpkmsKeysRegisterKey(string key, GcpkmsKeysRegisterRequest gcpkmsKeysRegisterRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null)
@@ -36846,6 +40269,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -36912,6 +40338,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpkmsKeysRotateKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null)
@@ -36968,6 +40397,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -37028,6 +40460,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpkmsKeysTrimKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null)
@@ -37084,6 +40519,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -37145,6 +40583,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpkmsReencryptKey(string key, GcpkmsReencryptRequest gcpkmsReencryptRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null)
@@ -37208,6 +40649,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -37275,6 +40719,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpkmsSignKey(string key, GcpkmsSignRequest gcpkmsSignRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null)
@@ -37338,6 +40785,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -37405,6 +40855,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostGcpkmsVerifyKey(string key, GcpkmsVerifyRequest gcpkmsVerifyRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null)
@@ -37468,6 +40921,9 @@ namespace Vault.Api
         /// <param name="gcpkmsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcpkms&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -37534,6 +40990,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostKubernetesConfig(KubernetesConfigRequest kubernetesConfigRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
@@ -37591,6 +41050,9 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -37653,6 +41115,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostKubernetesCredsName(string name, KubernetesCredsRequest kubernetesCredsRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
@@ -37716,6 +41181,9 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -37783,6 +41251,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostKubernetesRolesName(string name, KubernetesRolesRequest kubernetesRolesRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
@@ -37846,6 +41317,9 @@ namespace Vault.Api
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -37912,6 +41386,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostLdapConfig(LdapConfigRequest ldapConfigRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
@@ -37969,6 +41446,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -38031,6 +41511,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostLdapLibraryManageNameCheckIn(string name, LdapLibraryManageCheckInRequest ldapLibraryManageCheckInRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
@@ -38094,6 +41577,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -38161,6 +41647,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostLdapLibraryName(string name, LdapLibraryRequest ldapLibraryRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
@@ -38224,6 +41713,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -38291,6 +41783,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostLdapLibraryNameCheckIn(string name, LdapLibraryCheckInRequest ldapLibraryCheckInRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
@@ -38354,6 +41849,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -38421,6 +41919,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostLdapLibraryNameCheckOut(string name, LdapLibraryCheckOutRequest ldapLibraryCheckOutRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
@@ -38484,6 +41985,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -38551,6 +42055,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostLdapRoleName(string name, LdapRoleRequest ldapRoleRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
@@ -38614,6 +42121,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -38680,6 +42190,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostLdapRotateRoleName(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
@@ -38736,6 +42249,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -38795,6 +42311,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostLdapRotateRoot(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
@@ -38845,6 +42364,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -38901,6 +42423,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostLdapStaticRoleName(string name, LdapStaticRoleRequest ldapStaticRoleRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
@@ -38964,6 +42489,9 @@ namespace Vault.Api
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -39030,6 +42558,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostMongodbatlasConfig(MongodbatlasConfigRequest mongodbatlasConfigRequest, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null)
@@ -39087,6 +42618,9 @@ namespace Vault.Api
         /// <param name="mongodbatlasMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;mongodbatlas&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -39148,6 +42682,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostMongodbatlasCredsName(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null)
@@ -39204,6 +42741,9 @@ namespace Vault.Api
         /// <param name="mongodbatlasMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;mongodbatlas&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -39265,6 +42805,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostMongodbatlasRolesName(string name, MongodbatlasRolesRequest mongodbatlasRolesRequest, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null)
@@ -39328,6 +42871,9 @@ namespace Vault.Api
         /// <param name="mongodbatlasMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;mongodbatlas&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -39394,6 +42940,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostNomadConfigAccess(NomadConfigAccessRequest nomadConfigAccessRequest, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null)
@@ -39451,6 +43000,9 @@ namespace Vault.Api
         /// <param name="nomadMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;nomad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -39512,6 +43064,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostNomadConfigLease(NomadConfigLeaseRequest nomadConfigLeaseRequest, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null)
@@ -39569,6 +43124,9 @@ namespace Vault.Api
         /// <param name="nomadMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;nomad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -39631,6 +43189,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostNomadRoleName(string name, NomadRoleRequest nomadRoleRequest, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null)
@@ -39694,6 +43255,9 @@ namespace Vault.Api
         /// <param name="nomadMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;nomad&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -39760,6 +43324,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostOpenldapConfig(OpenldapConfigRequest openldapConfigRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null)
@@ -39817,6 +43384,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -39879,6 +43449,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostOpenldapLibraryManageNameCheckIn(string name, OpenldapLibraryManageCheckInRequest openldapLibraryManageCheckInRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null)
@@ -39942,6 +43515,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -40009,6 +43585,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostOpenldapLibraryName(string name, OpenldapLibraryRequest openldapLibraryRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null)
@@ -40072,6 +43651,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -40139,6 +43721,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostOpenldapLibraryNameCheckIn(string name, OpenldapLibraryCheckInRequest openldapLibraryCheckInRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null)
@@ -40202,6 +43787,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -40269,6 +43857,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostOpenldapLibraryNameCheckOut(string name, OpenldapLibraryCheckOutRequest openldapLibraryCheckOutRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null)
@@ -40332,6 +43923,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -40399,6 +43993,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostOpenldapRoleName(string name, OpenldapRoleRequest openldapRoleRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null)
@@ -40462,6 +44059,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -40528,6 +44128,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostOpenldapRotateRoleName(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null)
@@ -40584,6 +44187,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -40643,6 +44249,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostOpenldapRotateRoot(string openldapMountPath = "openldap", TimeSpan? wrapTTL = null)
@@ -40693,6 +44302,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -40749,6 +44361,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostOpenldapStaticRoleName(string name, OpenldapStaticRoleRequest openldapStaticRoleRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null)
@@ -40812,6 +44427,9 @@ namespace Vault.Api
         /// <param name="openldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;openldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -40878,6 +44496,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiBundle(PkiBundleRequest pkiBundleRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -40935,6 +44556,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -40996,6 +44620,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiCert(PkiCertRequest pkiCertRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -41053,6 +44680,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -41114,6 +44744,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiConfigAutoTidy(PkiConfigAutoTidyRequest pkiConfigAutoTidyRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -41171,6 +44804,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -41232,6 +44868,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiConfigCa(PkiConfigCaRequest pkiConfigCaRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -41289,6 +44928,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -41350,6 +44992,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiConfigCrl(PkiConfigCrlRequest pkiConfigCrlRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -41407,6 +45052,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -41468,6 +45116,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiConfigIssuers(PkiConfigIssuersRequest pkiConfigIssuersRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -41525,6 +45176,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -41586,6 +45240,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiConfigKeys(PkiConfigKeysRequest pkiConfigKeysRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -41643,6 +45300,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -41704,6 +45364,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiConfigUrls(PkiConfigUrlsRequest pkiConfigUrlsRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -41761,6 +45424,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -41822,6 +45488,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiIntermediateCrossSign(PkiIntermediateCrossSignRequest pkiIntermediateCrossSignRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -41879,6 +45548,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -41941,6 +45613,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiIntermediateGenerateExported(string exported, PkiIntermediateGenerateRequest pkiIntermediateGenerateRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -42004,6 +45679,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -42070,6 +45748,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiIntermediateSetSigned(PkiIntermediateSetSignedRequest pkiIntermediateSetSignedRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -42127,6 +45808,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -42188,6 +45872,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiInternalExported(PkiInternalExportedRequest pkiInternalExportedRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -42245,6 +45932,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -42307,6 +45997,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiIssueRole(string role, PkiIssueRequest pkiIssueRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -42370,6 +46063,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -42438,6 +46134,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiIssuerIssuerRefIssueRole(string issuerRef, string role, PkiIssuerIssueRequest pkiIssuerIssueRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -42507,6 +46206,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -42578,6 +46280,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiIssuerIssuerRefRevoke(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -42634,6 +46339,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -42695,6 +46403,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiIssuerIssuerRefSignIntermediate(string issuerRef, PkiIssuerSignIntermediateRequest pkiIssuerSignIntermediateRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -42758,6 +46469,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -42826,6 +46540,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiIssuerIssuerRefSignRole(string issuerRef, string role, PkiIssuerSignRequest pkiIssuerSignRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -42895,6 +46612,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -42967,6 +46687,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiIssuerIssuerRefSignSelfIssued(string issuerRef, PkiIssuerSignSelfIssuedRequest pkiIssuerSignSelfIssuedRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -43030,6 +46753,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -43097,6 +46823,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiIssuerIssuerRefSignVerbatim(string issuerRef, PkiIssuerSignVerbatimRequest pkiIssuerSignVerbatimRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -43160,6 +46889,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -43228,6 +46960,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiIssuerIssuerRefSignVerbatimRole(string issuerRef, string role, PkiIssuerSignVerbatimRequest pkiIssuerSignVerbatimRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -43297,6 +47032,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -43369,6 +47107,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiIssuerRefDerPem(string issuerRef, PkiDerPemRequest pkiDerPemRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -43432,6 +47173,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -43499,6 +47243,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiIssuersGenerateIntermediateExported(string exported, PkiIssuersGenerateIntermediateRequest pkiIssuersGenerateIntermediateRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -43562,6 +47309,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -43629,6 +47379,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiIssuersGenerateRootExported(string exported, PkiIssuersGenerateRootRequest pkiIssuersGenerateRootRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -43692,6 +47445,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -43758,6 +47514,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiJson(PkiJsonRequest pkiJsonRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -43815,6 +47574,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -43877,6 +47639,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiKeyKeyRef(string keyRef, PkiKeyRequest pkiKeyRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -43940,6 +47705,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -44006,6 +47774,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiKeysImport(PkiKeysImportRequest pkiKeysImportRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -44063,6 +47834,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -44124,6 +47898,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiKms(PkiKmsRequest pkiKmsRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -44181,6 +47958,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -44241,6 +48021,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiOcsp(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -44291,6 +48074,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -44346,6 +48132,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiRevoke(PkiRevokeRequest pkiRevokeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -44403,6 +48192,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -44464,6 +48256,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiRevokeWithKey(PkiRevokeWithKeyRequest pkiRevokeWithKeyRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -44521,6 +48316,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -44583,6 +48381,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiRolesName(string name, PkiRolesRequest pkiRolesRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -44646,6 +48447,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -44713,6 +48517,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiRootGenerateExported(string exported, PkiRootGenerateRequest pkiRootGenerateRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -44776,6 +48583,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -44842,6 +48652,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiRootReplace(PkiRootReplaceRequest pkiRootReplaceRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -44899,6 +48712,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -44961,6 +48777,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiRootRotateExported(string exported, PkiRootRotateRequest pkiRootRotateRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -45024,6 +48843,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -45090,6 +48912,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiRootSignIntermediate(PkiRootSignIntermediateRequest pkiRootSignIntermediateRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -45147,6 +48972,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -45208,6 +49036,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiRootSignSelfIssued(PkiRootSignSelfIssuedRequest pkiRootSignSelfIssuedRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -45265,6 +49096,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -45327,6 +49161,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiSignRole(string role, PkiSignRequest pkiSignRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -45390,6 +49227,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -45456,6 +49296,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiSignVerbatim(PkiSignVerbatimRequest pkiSignVerbatimRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -45513,6 +49356,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -45575,6 +49421,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiSignVerbatimRole(string role, PkiSignVerbatimRequest pkiSignVerbatimRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -45638,6 +49487,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -45704,6 +49556,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiTidy(PkiTidyRequest pkiTidyRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -45761,6 +49616,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -45821,6 +49679,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostPkiTidyCancel(string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
@@ -45871,6 +49732,9 @@ namespace Vault.Api
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -45926,6 +49790,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostRabbitmqConfigConnection(RabbitmqConfigConnectionRequest rabbitmqConfigConnectionRequest, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null)
@@ -45983,6 +49850,9 @@ namespace Vault.Api
         /// <param name="rabbitmqMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;rabbitmq&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -46044,6 +49914,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostRabbitmqConfigLease(RabbitmqConfigLeaseRequest rabbitmqConfigLeaseRequest, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null)
@@ -46101,6 +49974,9 @@ namespace Vault.Api
         /// <param name="rabbitmqMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;rabbitmq&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -46163,6 +50039,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostRabbitmqRolesName(string name, RabbitmqRolesRequest rabbitmqRolesRequest, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null)
@@ -46226,6 +50105,9 @@ namespace Vault.Api
         /// <param name="rabbitmqMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;rabbitmq&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -46292,6 +50174,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostSecretConfig(KvConfigRequest kvConfigRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null)
@@ -46349,6 +50234,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -46411,6 +50299,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostSecretDataPath(string path, KvDataRequest kvDataRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null)
@@ -46474,6 +50365,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -46541,6 +50435,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostSecretDeletePath(string path, KvDeleteRequest kvDeleteRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null)
@@ -46604,6 +50501,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -46671,6 +50571,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostSecretDestroyPath(string path, KvDestroyRequest kvDestroyRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null)
@@ -46734,6 +50637,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -46801,6 +50707,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostSecretMetadataPath(string path, KvMetadataRequest kvMetadataRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null)
@@ -46864,6 +50773,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -46930,6 +50842,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostSecretPath(string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null)
@@ -46986,6 +50901,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -47047,6 +50965,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostSecretUndeletePath(string path, KvUndeleteRequest kvUndeleteRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null)
@@ -47110,6 +51031,9 @@ namespace Vault.Api
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -47176,6 +51100,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostSshConfigCa(SshConfigCaRequest sshConfigCaRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null)
@@ -47233,6 +51160,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -47294,6 +51224,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostSshConfigZeroaddress(SshConfigZeroaddressRequest sshConfigZeroaddressRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null)
@@ -47351,6 +51284,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -47413,6 +51349,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostSshCredsRole(string role, SshCredsRequest sshCredsRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null)
@@ -47476,6 +51415,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -47543,6 +51485,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostSshIssueRole(string role, SshIssueRequest sshIssueRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null)
@@ -47606,6 +51551,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -47673,6 +51621,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostSshKeysKeyName(string keyName, SshKeysRequest sshKeysRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null)
@@ -47736,6 +51687,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -47802,6 +51756,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostSshLookup(SshLookupRequest sshLookupRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null)
@@ -47859,6 +51816,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -47921,6 +51881,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostSshRolesRole(string role, SshRolesRequest sshRolesRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null)
@@ -47984,6 +51947,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -48051,6 +52017,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostSshSignRole(string role, SshSignRequest sshSignRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null)
@@ -48114,6 +52083,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -48180,6 +52152,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostSshVerify(SshVerifyRequest sshVerifyRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null)
@@ -48237,6 +52212,9 @@ namespace Vault.Api
         /// <param name="sshMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ssh&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -48298,6 +52276,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTerraformConfig(TerraformConfigRequest terraformConfigRequest, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null)
@@ -48355,6 +52336,9 @@ namespace Vault.Api
         /// <param name="terraformMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;terraform&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -48416,6 +52400,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTerraformCredsName(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null)
@@ -48472,6 +52459,9 @@ namespace Vault.Api
         /// <param name="terraformMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;terraform&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -48533,6 +52523,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTerraformRoleName(string name, TerraformRoleRequest terraformRoleRequest, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null)
@@ -48596,6 +52589,9 @@ namespace Vault.Api
         /// <param name="terraformMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;terraform&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -48662,6 +52658,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTerraformRotateRoleName(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null)
@@ -48718,6 +52717,9 @@ namespace Vault.Api
         /// <param name="terraformMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;terraform&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -48779,6 +52781,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTotpCodeName(string name, TotpCodeRequest totpCodeRequest, string totpMountPath = "totp", TimeSpan? wrapTTL = null)
@@ -48842,6 +52847,9 @@ namespace Vault.Api
         /// <param name="totpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;totp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -48909,6 +52917,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTotpKeysName(string name, TotpKeysRequest totpKeysRequest, string totpMountPath = "totp", TimeSpan? wrapTTL = null)
@@ -48972,6 +52983,9 @@ namespace Vault.Api
         /// <param name="totpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;totp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -49038,6 +53052,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitCacheConfig(TransitCacheConfigRequest transitCacheConfigRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -49095,6 +53112,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -49158,6 +53178,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitDatakeyPlaintextName(string name, string plaintext, TransitDatakeyRequest transitDatakeyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -49227,6 +53250,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -49299,6 +53325,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitDecryptName(string name, TransitDecryptRequest transitDecryptRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -49362,6 +53391,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -49429,6 +53461,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitEncryptName(string name, TransitEncryptRequest transitEncryptRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -49492,6 +53527,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -49558,6 +53596,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitHash(TransitHashRequest transitHashRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -49615,6 +53656,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -49677,6 +53721,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitHashUrlalgorithm(string urlalgorithm, TransitHashRequest transitHashRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -49740,6 +53787,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -49807,6 +53857,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitHmacName(string name, TransitHmacRequest transitHmacRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -49870,6 +53923,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -49938,6 +53994,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitHmacNameUrlalgorithm(string name, string urlalgorithm, TransitHmacRequest transitHmacRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -50007,6 +54066,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -50079,6 +54141,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitKeysName(string name, TransitKeysRequest transitKeysRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -50142,6 +54207,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -50209,6 +54277,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitKeysNameConfig(string name, TransitKeysConfigRequest transitKeysConfigRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -50272,6 +54343,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -50339,6 +54413,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitKeysNameImport(string name, TransitKeysImportRequest transitKeysImportRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -50402,6 +54479,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -50469,6 +54549,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitKeysNameImportVersion(string name, TransitKeysImportVersionRequest transitKeysImportVersionRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -50532,6 +54615,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -50598,6 +54684,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitKeysNameRotate(string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -50654,6 +54743,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -50715,6 +54807,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitKeysNameTrim(string name, TransitKeysTrimRequest transitKeysTrimRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -50778,6 +54873,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -50844,6 +54942,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitRandom(TransitRandomRequest transitRandomRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -50901,6 +55002,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -50963,6 +55067,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitRandomSource(string source, TransitRandomRequest transitRandomRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -51026,6 +55133,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -51094,6 +55204,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitRandomSourceUrlbytes(string source, string urlbytes, TransitRandomRequest transitRandomRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -51163,6 +55276,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -51235,6 +55351,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitRandomUrlbytes(string urlbytes, TransitRandomRequest transitRandomRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -51298,6 +55417,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -51364,6 +55486,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitRestore(TransitRestoreRequest transitRestoreRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -51421,6 +55546,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -51483,6 +55611,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitRestoreName(string name, TransitRestoreRequest transitRestoreRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -51546,6 +55677,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -51613,6 +55747,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitRewrapName(string name, TransitRewrapRequest transitRewrapRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -51676,6 +55813,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -51743,6 +55883,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitSignName(string name, TransitSignRequest transitSignRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -51806,6 +55949,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -51874,6 +56020,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitSignNameUrlalgorithm(string name, string urlalgorithm, TransitSignRequest transitSignRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -51943,6 +56092,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -52015,6 +56167,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitVerifyName(string name, TransitVerifyRequest transitVerifyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -52078,6 +56233,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -52146,6 +56304,9 @@ namespace Vault.Api
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         public VaultResponse<Object> PostTransitVerifyNameUrlalgorithm(string name, string urlalgorithm, TransitVerifyRequest transitVerifyRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null)
@@ -52215,6 +56376,9 @@ namespace Vault.Api
         /// <param name="transitMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;transit&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>

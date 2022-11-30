@@ -29,6 +29,9 @@ namespace {{packageName}}.{{apiPackage}}
         {{/allParams}}/// <returns>VaultResponse of {{returnType}}{{^returnType}}Object(void){{/returnType}}</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         {{#isDeprecated}}
@@ -60,6 +63,9 @@ namespace {{packageName}}.{{apiPackage}}
         {{/allParams}}
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -154,6 +160,9 @@ namespace {{packageName}}.{{apiPackage}}
         {{/allParams}}/// <returns>VaultResponse of {{returnType}}{{^returnType}}Object(void){{/returnType}}</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         {{#isDeprecated}}
@@ -364,6 +373,9 @@ namespace {{packageName}}.{{apiPackage}}
         {{/allParams}}
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
