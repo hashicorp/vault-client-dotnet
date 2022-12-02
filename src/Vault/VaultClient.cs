@@ -161,7 +161,6 @@ namespace Vault
             _apiClient.ClearMFACredentials();
         }
 
-
         /// <summary>
         /// Generic Read
         /// </summary>
