@@ -41,6 +41,8 @@ namespace Vault
 
         private ApiClient _apiClient;
 
+        private ExceptionFactory _exceptionFactory;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="VaultClient"/> class
         /// </summary>
@@ -49,6 +51,7 @@ namespace Vault
             if (configuration == null) throw new ArgumentNullException(nameof(VaultConfiguration));
 
             _apiClient = new ApiClient(configuration);
+            _exceptionFactory = VaultConfiguration.DefaultExceptionFactory;
 
             this.Auth = new Vault.Api.Auth(_apiClient);
             this.Identity = new Vault.Api.Identity(_apiClient);
@@ -158,6 +161,102 @@ namespace Vault
             _apiClient.ClearMFACredentials();
         }
 
+
+        /// <summary>
+        /// Generic Read
+        /// </summary>
+        public VaultResponse<T> Read<T>(string path)
+        {
+            return ReadAsync<T>(path).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Generic Read Async
+        /// </summary>
+        public async Task<VaultResponse<T>> ReadAsync<T>(string path)
+        {
+            if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("path", "Cannot be null");
+
+            var apiResponse = await _apiClient.GetAsync<Object>(path, new RequestOptions());
+
+            Exception exception = this._exceptionFactory("GenericReadAsync", apiResponse);
+            if (exception != null) throw exception;
+
+            return ClientUtils.ToVaultResponse<T>(apiResponse.RawContent);
+        }
+
+        /// <summary>
+        /// Generic Write
+        /// </summary>
+        public VaultResponse<T> Write<T>(string path)
+        {
+            return WriteAsync<T>(path).GetAwaiter().GetResult(); ;
+        }
+
+        /// <summary>
+        /// Generic Write Async
+        /// </summary>
+        public async Task<VaultResponse<T>> WriteAsync<T>(string path)
+        {
+            if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("path", "Cannot be null");
+
+            var apiResponse = await _apiClient.GetAsync<Object>(path, new RequestOptions());
+
+            Exception exception = this._exceptionFactory("GenericWriteAsync", apiResponse);
+            if (exception != null) throw exception;
+
+            return ClientUtils.ToVaultResponse<T>(apiResponse.RawContent);
+        }
+
+        /// <summary>
+        /// Generic Delete
+        /// </summary>
+        public VaultResponse<T> Delete<T>(string path)
+        {
+            return DeleteAsync<T>(path).GetAwaiter().GetResult(); ;
+        }
+
+        /// <summary>
+        /// Generic Delete Async
+        /// </summary>
+        public async Task<VaultResponse<T>> DeleteAsync<T>(string path)
+        {
+            if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("path", "Cannot be null");
+
+            var apiResponse = await _apiClient.DeleteAsync<Object>(path, new RequestOptions());
+
+            Exception exception = this._exceptionFactory("GenericDeleteAsync", apiResponse);
+            if (exception != null) throw exception;
+
+            return ClientUtils.ToVaultResponse<T>(apiResponse.RawContent);
+        }
+
+        /// <summary>
+        /// Generic List
+        /// </summary>
+        public VaultResponse<T> List<T>(string path)
+        {
+            return ListAsync<T>(path).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Generic List Async
+        /// </summary>
+        public async Task<VaultResponse<T>> ListAsync<T>(string path)
+        {
+            if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("path", "Cannot be null");
+
+            RequestOptions requestOptions = new RequestOptions();
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+            var apiResponse = await _apiClient.GetAsync<Object>(path, requestOptions);
+
+            Exception exception = this._exceptionFactory("GenericListAsync", apiResponse);
+            if (exception != null) throw exception;
+
+            return ClientUtils.ToVaultResponse<T>(apiResponse.RawContent);
+        }
+
         /// <summary>
         /// Unwrap a response
         /// <remarks>
@@ -167,19 +266,7 @@ namespace Vault
         /// </summary>
         public VaultResponse<T> Unwrap<T>(string token)
         {
-            RequestOptions requestOptions = new RequestOptions();
-            requestOptions.Data = new SystemWrappingUnwrapRequest(token);
-            var response = this._apiClient.Post<Object>("/sys/wrapping/unwrap", requestOptions);
-
-            var status = (int)response.StatusCode;
-            if (status >= 400)
-            {
-                throw new VaultApiException(status,
-                    string.Format("Error calling {0}: {1}", "SystemUnwrap", response.RawContent),
-                    response.RawContent, response.Headers);
-            }
-
-            return ClientUtils.ToVaultResponse<T>(response.RawContent);
+            return UnwrapAsync<T>(token).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -191,17 +278,14 @@ namespace Vault
         /// </summary>
         public async Task<VaultResponse<T>> UnwrapAsync<T>(string token)
         {
+            if (string.IsNullOrEmpty(token)) throw new ArgumentNullException("Token", "Token cannot be empty");
+
             RequestOptions requestOptions = new RequestOptions();
             requestOptions.Data = new SystemWrappingUnwrapRequest(token);
             var response = await this._apiClient.PostAsync<Object>("/sys/wrapping/unwrap", requestOptions);
 
-            var status = (int)response.StatusCode;
-            if (status >= 400)
-            {
-                throw new VaultApiException(status,
-                    string.Format("Error calling {0}: {1}", "SystemUnwrap", response.RawContent),
-                    response.RawContent, response.Headers);
-            }
+            Exception exception = this._exceptionFactory("SystemUnwrapAsync", response);
+            if (exception != null) throw exception;
 
             return ClientUtils.ToVaultResponse<T>(response.RawContent);
         }
