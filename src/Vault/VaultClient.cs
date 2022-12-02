@@ -163,6 +163,7 @@ namespace Vault
 
         /// <summary>
         /// Generic Read
+        /// <param name="path">Path to read from</param>
         /// </summary>
         public VaultResponse<T> Read<T>(string path)
         {
@@ -171,6 +172,7 @@ namespace Vault
 
         /// <summary>
         /// Generic Read Async
+        /// <param name="path">Path to read from</param>
         /// </summary>
         public async Task<VaultResponse<T>> ReadAsync<T>(string path)
         {
@@ -178,7 +180,7 @@ namespace Vault
 
             var apiResponse = await _apiClient.GetAsync<Object>(path, new RequestOptions());
 
-            Exception exception = this._exceptionFactory("GenericReadAsync", apiResponse);
+            Exception exception = this._exceptionFactory("GenericRead", apiResponse);
             if (exception != null) throw exception;
 
             return ClientUtils.ToVaultResponse<T>(apiResponse.RawContent);
@@ -186,22 +188,28 @@ namespace Vault
 
         /// <summary>
         /// Generic Write
+        /// <param name="path">Path to write to</param>
+        /// <param name="data">Data to be written</param>
         /// </summary>
-        public VaultResponse<T> Write<T>(string path)
+        public VaultResponse<T> Write<T>(string path, Dictionary<string, object> data)
         {
-            return WriteAsync<T>(path).GetAwaiter().GetResult(); ;
+            return WriteAsync<T>(path, data).GetAwaiter().GetResult();
         }
 
         /// <summary>
         /// Generic Write Async
+        /// <param name="path">Path to write to</param>
+        /// <param name="data">Data to be written</param>
         /// </summary>
-        public async Task<VaultResponse<T>> WriteAsync<T>(string path)
+        public async Task<VaultResponse<T>> WriteAsync<T>(string path, Dictionary<string, object> data)
         {
             if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("path", "Cannot be null");
 
-            var apiResponse = await _apiClient.GetAsync<Object>(path, new RequestOptions());
+            RequestOptions requestOptions = new RequestOptions();
+            requestOptions.Data = data;
+            var apiResponse = await _apiClient.PostAsync<Object>(path, requestOptions);
 
-            Exception exception = this._exceptionFactory("GenericWriteAsync", apiResponse);
+            Exception exception = this._exceptionFactory("GenericWrite", apiResponse);
             if (exception != null) throw exception;
 
             return ClientUtils.ToVaultResponse<T>(apiResponse.RawContent);
@@ -209,14 +217,16 @@ namespace Vault
 
         /// <summary>
         /// Generic Delete
+        /// <param name="path">Path to delete at</param>
         /// </summary>
         public VaultResponse<T> Delete<T>(string path)
         {
-            return DeleteAsync<T>(path).GetAwaiter().GetResult(); ;
+            return DeleteAsync<T>(path).GetAwaiter().GetResult();
         }
 
         /// <summary>
         /// Generic Delete Async
+        /// <param name="path">Path to delete at</param>
         /// </summary>
         public async Task<VaultResponse<T>> DeleteAsync<T>(string path)
         {
@@ -224,7 +234,7 @@ namespace Vault
 
             var apiResponse = await _apiClient.DeleteAsync<Object>(path, new RequestOptions());
 
-            Exception exception = this._exceptionFactory("GenericDeleteAsync", apiResponse);
+            Exception exception = this._exceptionFactory("GenericDelete", apiResponse);
             if (exception != null) throw exception;
 
             return ClientUtils.ToVaultResponse<T>(apiResponse.RawContent);
@@ -232,6 +242,7 @@ namespace Vault
 
         /// <summary>
         /// Generic List
+        /// <param name="path">Path to list at</param>
         /// </summary>
         public VaultResponse<T> List<T>(string path)
         {
@@ -240,6 +251,7 @@ namespace Vault
 
         /// <summary>
         /// Generic List Async
+        /// <param name="path">Path to list at</param>
         /// </summary>
         public async Task<VaultResponse<T>> ListAsync<T>(string path)
         {
@@ -250,7 +262,7 @@ namespace Vault
 
             var apiResponse = await _apiClient.GetAsync<Object>(path, requestOptions);
 
-            Exception exception = this._exceptionFactory("GenericListAsync", apiResponse);
+            Exception exception = this._exceptionFactory("GenericList", apiResponse);
             if (exception != null) throw exception;
 
             return ClientUtils.ToVaultResponse<T>(apiResponse.RawContent);
