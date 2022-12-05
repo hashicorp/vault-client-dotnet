@@ -72,12 +72,22 @@ namespace Vault.Client
         /// <summary>
         /// Sanitize filename by removing the path
         /// </summary>
-        /// <param name="filename">Filename</param>
         /// <returns>Filename</returns>
         public static string SanitizeFilename(string filename)
         {
             Match match = Regex.Match(filename, @".*[/\\](.*)$");
             return match.Success ? match.Groups[1].Value : filename;
+        }
+        
+        /// <summary>
+        /// Sanitize a path
+        /// <param name="path">Path</param>
+        /// </summary>
+        public static string SanitizePath(string path)
+        {
+            if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("Path cannot be null");
+
+            return path.StartsWith("/") ? path : "/" + path;
         }
 
         /// <summary>

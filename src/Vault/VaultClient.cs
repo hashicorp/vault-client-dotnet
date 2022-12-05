@@ -186,7 +186,7 @@ namespace Vault
                 requestOptions.QueryParameters.Add(ClientUtils.DictionaryToMultimap(queryParameters));
             }
 
-            var apiResponse = await _apiClient.GetAsync<Object>(path, requestOptions);
+            var apiResponse = await _apiClient.GetAsync<Object>(ClientUtils.SanitizePath(path), requestOptions);
 
             Exception exception = this._exceptionFactory("GenericRead", apiResponse);
             if (exception != null) throw exception;
@@ -215,7 +215,7 @@ namespace Vault
 
             RequestOptions requestOptions = new RequestOptions();
             requestOptions.Data = data;
-            var apiResponse = await _apiClient.PostAsync<Object>(path, requestOptions);
+            var apiResponse = await _apiClient.PostAsync<Object>(ClientUtils.SanitizePath(path), requestOptions);
 
             Exception exception = this._exceptionFactory("GenericWrite", apiResponse);
             if (exception != null) throw exception;
@@ -248,7 +248,7 @@ namespace Vault
                 requestOptions.QueryParameters.Add(ClientUtils.DictionaryToMultimap(queryParameters));
             }
 
-            var apiResponse = await _apiClient.DeleteAsync<Object>(path, requestOptions);
+            var apiResponse = await _apiClient.DeleteAsync<Object>(ClientUtils.SanitizePath(path), requestOptions);
 
             Exception exception = this._exceptionFactory("GenericDelete", apiResponse);
             if (exception != null) throw exception;
@@ -276,7 +276,7 @@ namespace Vault
             RequestOptions requestOptions = new RequestOptions();
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
-            var apiResponse = await _apiClient.GetAsync<Object>(path, requestOptions);
+            var apiResponse = await _apiClient.GetAsync<Object>(ClientUtils.SanitizePath(path), requestOptions);
 
             Exception exception = this._exceptionFactory("GenericList", apiResponse);
             if (exception != null) throw exception;
