@@ -212,21 +212,29 @@ namespace {{packageName}}
         /// <summary>
         /// Generic Delete
         /// <param name="path">Path to delete at</param>
+        /// <param name="queryParameters">Optional dictionary of query parameters</param>
         /// </summary>
-        public VaultResponse<T> Delete<T>(string path)
+        public VaultResponse<T> Delete<T>(string path, Dictionary<string, object> queryParameters = null)
         {
-            return DeleteAsync<T>(path).GetAwaiter().GetResult();
+            return DeleteAsync<T>(path, queryParameters).GetAwaiter().GetResult();
         }
 
         /// <summary>
         /// Generic Delete Async
         /// <param name="path">Path to delete at</param>
+        /// <param name="queryParameters">Optional dictionary of query parameters</param>
         /// </summary>
-        public async Task<VaultResponse<T>> DeleteAsync<T>(string path)
+        public async Task<VaultResponse<T>> DeleteAsync<T>(string path, Dictionary<string, object> queryParameters = null)
         {
             if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("path", "Cannot be null");
 
-            var apiResponse = await _apiClient.DeleteAsync<Object>(path, new RequestOptions());
+            RequestOptions requestOptions = new RequestOptions();
+            if (queryParameters != null)
+            {
+                requestOptions.QueryParameters.Add(ClientUtils.DictionaryToMultimap(queryParameters));
+            }
+
+            var apiResponse = await _apiClient.DeleteAsync<Object>(path, requestOptions);
 
             Exception exception = this._exceptionFactory("GenericDelete", apiResponse);
             if (exception != null) throw exception;
