@@ -164,19 +164,32 @@ VaultConfiguration config = new VaultConfiguration("http:127.0.0.1:8200");
 VaultClient vaultClient = new VaultClient(config);
 ```
 
-You can also add custom configuration including a custom `HttpClientHandler`.
-This can be used to intercept requests and add custom logic before the base
-`SendAsync` is called by the HttpClient. See [HttpClientHandler docs][http-client-handler-docs] for more details.
+We also allow you to bring your own `HttpClient` through a delegate. This can work
+with any current factory pattern that you're using to create an `HttpClient`
+object, which is one of the recommended patterns for managing your `HttpClient` 
+lifecycle. More on the `IHttpClientFactory` can be found [here][[http-client-factory]]
 
 ```csharp
-// Create a custom HttpClientHandler
-HttpClientHandler myClientHandler = new HttpClientHandler();
+// Create a HttpClient Provider Function
+    public static HttpClient MyHttpClientProvider(HttpClientHandler handler)
+    {
+        // Configuring your own HttpClient
+        HttpClient httpClient = new HttpClient(handler);
+        httpClient.Timeout = TimeSpan.FromSeconds(60);
+        return httpClient;
+    }
+```
 
+```csharp
+// Configuring Vault with your custom HttpClient Provider
 VaultConfiguration config = new VaultConfiguration("http://127.0.0.1:8200",
-                                          myClientHandler);
+                                          httpClientProvider: MyHttpClientProvider);
 ```
 
 The VaultClient also allows you to set a custom Timeout for all API calls.
+
+_**Note**_: This timeout will override any timeout in a preconfigured `HttpClient`
+
 
 ```csharp
 VaultConfiguration config = new VaultConfiguration(basePath: address, 
