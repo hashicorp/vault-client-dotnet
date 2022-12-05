@@ -164,21 +164,29 @@ namespace Vault
         /// <summary>
         /// Generic Read
         /// <param name="path">Path to read from</param>
+        /// <param name="queryParameters">Optional dictionary of query parameters</param>
         /// </summary>
-        public VaultResponse<T> Read<T>(string path)
+        public VaultResponse<T> Read<T>(string path, Dictionary<string, object> queryParameters = null)
         {
-            return ReadAsync<T>(path).GetAwaiter().GetResult();
+            return ReadAsync<T>(path, queryParameters).GetAwaiter().GetResult();
         }
 
         /// <summary>
         /// Generic Read Async
         /// <param name="path">Path to read from</param>
+        /// <param name="queryParameters">Optional dictionary of query parameters</param>
         /// </summary>
-        public async Task<VaultResponse<T>> ReadAsync<T>(string path)
+        public async Task<VaultResponse<T>> ReadAsync<T>(string path, Dictionary<string, object> queryParameters = null)
         {
             if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("path", "Cannot be null");
 
-            var apiResponse = await _apiClient.GetAsync<Object>(path, new RequestOptions());
+            RequestOptions requestOptions = new RequestOptions();
+            if (queryParameters != null)
+            {
+                requestOptions.QueryParameters.Add(ClientUtils.DictionaryToMultimap(queryParameters));
+            }
+
+            var apiResponse = await _apiClient.GetAsync<Object>(path, requestOptions);
 
             Exception exception = this._exceptionFactory("GenericRead", apiResponse);
             if (exception != null) throw exception;
