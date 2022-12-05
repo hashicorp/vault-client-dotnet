@@ -21,7 +21,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace Vault.Client
-{    
+{
     /// <summary>
     /// Represents the TLS Configuration
     /// </summary>
@@ -161,14 +161,14 @@ namespace Vault.Client
         /// Initializes a new instance of the <see cref="VaultConfiguration" /> class
         /// </summary>
         public VaultConfiguration(string basePath,
-                            HttpClientHandler httpClientHandler = null,
+                            Func<HttpClientHandler, HttpClient> httpClientProvider = null,
                             TimeSpan? timeout = null,
                             RetryConfiguration retryConfiguration = null,
                             RateLimitConfiguration rateLimitConfiguration = null,
                             TLSConfiguration tlsConfiguration = null)
         {
             if (string.IsNullOrEmpty(basePath)) throw new ArgumentException("Cannot be empty", "BasePath");
-            HttpClientHandler = httpClientHandler ?? new HttpClientHandler();
+            HttpClientHandler = new HttpClientHandler();
 
             if (tlsConfiguration != null)
             {
@@ -179,7 +179,7 @@ namespace Vault.Client
                     {
                         throw new ArgumentException("Certificate does not contain a private key");
                     }
-                    httpClientHandler.ClientCertificates.Add(TLSConfiguration.ClientCertificate);
+                    HttpClientHandler.ClientCertificates.Add(TLSConfiguration.ClientCertificate);
                 }
                 else if (TLSConfiguration.ClientCertificateCollection != null)
                 {
@@ -191,7 +191,7 @@ namespace Vault.Client
                         }
                     }
 
-                    httpClientHandler.ClientCertificates.AddRange(TLSConfiguration.ClientCertificateCollection);
+                    HttpClientHandler.ClientCertificates.AddRange(TLSConfiguration.ClientCertificateCollection);
                 }
 
                 Func<object, X509Certificate, X509Chain, SslPolicyErrors, bool> ValidateServiceCertficate =
@@ -215,17 +215,17 @@ namespace Vault.Client
                     return true;
                 };
 
-                httpClientHandler.ClientCertificateOptions = ClientCertificateOption.Manual;
-                httpClientHandler.ServerCertificateCustomValidationCallback = ValidateServiceCertficate;
+                HttpClientHandler.ClientCertificateOptions = ClientCertificateOption.Manual;
+                HttpClientHandler.ServerCertificateCustomValidationCallback = ValidateServiceCertficate;
             }
 
-
-            timeout = timeout ?? TimeSpan.FromSeconds(100);
             RetryConfiguration = retryConfiguration ?? new RetryConfiguration(5, TimeSpan.FromMilliseconds(500));
             RateLimitConfiguration = rateLimitConfiguration ?? new RateLimitConfiguration(50, TimeSpan.FromSeconds(5));
 
             BasePath = basePath.EndsWith("/") ? basePath : basePath + "/";
-            HttpClient = new HttpClient(HttpClientHandler);
+
+            HttpClient = httpClientProvider == null ? new HttpClient(HttpClientHandler) : httpClientProvider(HttpClientHandler);
+            timeout = timeout ?? TimeSpan.FromSeconds(100);
             HttpClient.Timeout = (TimeSpan)timeout;
         }
 
@@ -236,7 +236,7 @@ namespace Vault.Client
         /// <summary>
         /// Gets or sets the base path for API access.
         /// </summary>
-        public virtual string BasePath 
+        public virtual string BasePath
         {
             get { return _basePath; }
             set { _basePath = value; }
@@ -334,7 +334,7 @@ namespace Vault.Client
 
             return apiKeyValue;
         }
- 
+
         /// <summary>
         /// Gets or sets the access token for OAuth2 authentication.
         ///
