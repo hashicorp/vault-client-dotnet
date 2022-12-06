@@ -248,57 +248,10 @@ Task<VaultResponse<Object>> unwrappedResp = await vauClient.UnwrapAsync<Object>(
 
 <a name="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
-
-All URIs are relative to *{{{basePath}}}*
-
-Class | Method | HTTP request | Description
------------- | ------------- | ------------- | -------------
-{{#apiInfo}}{{#apis}}{{#operations}}{{#operation}}*{{classname}}* | [**{{operationId}}**]({{apiDocPath}}{{classname}}.md#{{operationIdLowerCase}}) | **{{httpMethod}}** {{path}} | {{{summary}}}
-{{/operation}}{{/operations}}{{/apis}}{{/apiInfo}}
-
-<a name="documentation-for-models"></a>
-## Documentation for Models
-
-{{#modelPackage}}
-{{#models}}{{#model}} - [{{{modelPackage}}}.{{{classname}}}]({{modelDocPath}}{{{classname}}}.md)
-{{/model}}{{/models}}
-{{/modelPackage}}
-{{^modelPackage}}
-No model defined in this package
-{{/modelPackage}}
-
-<a name="documentation-for-authorization"></a>
-## Documentation for Authorization
-
-{{^authMethods}}
-All endpoints do not require authorization.
-{{/authMethods}}
-{{#authMethods}}
-{{#last}}
-Authentication schemes defined for the API:
-{{/last}}
-{{/authMethods}}
-{{#authMethods}}
-<a name="{{name}}"></a>
-### {{name}}
-
-{{#isApiKey}}- **Type**: API key
-- **API key parameter name**: {{keyParamName}}
-- **Location**: {{#isKeyInQuery}}URL query string{{/isKeyInQuery}}{{#isKeyInHeader}}HTTP header{{/isKeyInHeader}}
-{{/isApiKey}}
-{{#isBasicBasic}}- **Type**: HTTP basic authentication
-{{/isBasicBasic}}
-{{#isBasicBearer}}- **Type**: Bearer Authentication
-{{/isBasicBearer}}
-{{#isOAuth}}- **Type**: OAuth
-- **Flow**: {{flow}}
-- **Authorization URL**: {{authorizationUrl}}
-- **Scopes**: {{^scopes}}N/A{{/scopes}}
-{{#scopes}}  - {{scope}}: {{description}}
-{{/scopes}}
-{{/isOAuth}}
-
-{{/authMethods}}
+- [Auth](docs/Auth.md)
+- [Identity](docs/Identity.md)
+- [Secrets](docs/Secrets.md)
+- [System](docs/System.md)
 
 [access-token]:                 https://www.jfrog.com/confluence/display/JFROG/User+Profile#UserProfile-IdentityTokenidentitytoken
 [artifactory]:                  https://artifactory.hashicorp.engineering/ui/repos/tree/General/vault-devex-nuget-local
