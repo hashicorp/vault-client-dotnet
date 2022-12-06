@@ -15,17 +15,6 @@
     - [Performing Generic Operations](#performing-generic-operations)
 1. [Documentation for API Endpoints](#documentation-for-api-endpoints)
 
-## Overview
-
-A C# client library [generated][openapi-generator] from `OpenAPI` 
-[specification file][openapi-spec] to interact with [Hashicorp][hashicorp] [Vault][vault]. The library currently supports the following features:
-
-- Custom HttpClientHandler
-- Retry logic using [Polly][polly]
-- Vault token support
-- Vault namespace support
-- Thread-safe operations
-
 ## Installation
 
 The Nuget packages are hosted in an internal Nuget feed that can be found in [Artifactory][artifactory].
