@@ -186,7 +186,7 @@ namespace Vault
                 requestOptions.QueryParameters.Add(ClientUtils.DictionaryToMultimap(queryParameters));
             }
 
-            var apiResponse = await _apiClient.GetAsync<Object>(ClientUtils.SanitizePath(path), requestOptions);
+            var apiResponse = await _apiClient.GetAsync<T>(ClientUtils.SanitizePath(path), requestOptions);
 
             Exception exception = this._exceptionFactory("Read", apiResponse);
             if (exception != null) throw exception;
@@ -215,7 +215,7 @@ namespace Vault
 
             RequestOptions requestOptions = new RequestOptions();
             requestOptions.Data = data;
-            var apiResponse = await _apiClient.PostAsync<Object>(ClientUtils.SanitizePath(path), requestOptions);
+            var apiResponse = await _apiClient.PostAsync<T>(ClientUtils.SanitizePath(path), requestOptions);
 
             Exception exception = this._exceptionFactory("Write", apiResponse);
             if (exception != null) throw exception;
@@ -248,7 +248,7 @@ namespace Vault
                 requestOptions.QueryParameters.Add(ClientUtils.DictionaryToMultimap(queryParameters));
             }
 
-            var apiResponse = await _apiClient.DeleteAsync<Object>(ClientUtils.SanitizePath(path), requestOptions);
+            var apiResponse = await _apiClient.DeleteAsync<T>(ClientUtils.SanitizePath(path), requestOptions);
 
             Exception exception = this._exceptionFactory("Delete", apiResponse);
             if (exception != null) throw exception;
@@ -276,7 +276,7 @@ namespace Vault
             RequestOptions requestOptions = new RequestOptions();
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
-            var apiResponse = await _apiClient.GetAsync<Object>(ClientUtils.SanitizePath(path), requestOptions);
+            var apiResponse = await _apiClient.GetAsync<T>(ClientUtils.SanitizePath(path), requestOptions);
 
             Exception exception = this._exceptionFactory("List", apiResponse);
             if (exception != null) throw exception;
