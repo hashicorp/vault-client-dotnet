@@ -178,7 +178,7 @@ namespace Vault
         /// </summary>
         public async Task<VaultResponse<T>> ReadAsync<T>(string path, Dictionary<string, object> queryParameters = null)
         {
-            if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("path", "Cannot be null");
+            if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("path", "Cannot be null or empty");
 
             RequestOptions requestOptions = new RequestOptions();
             if (queryParameters != null)
@@ -211,7 +211,7 @@ namespace Vault
         /// </summary>
         public async Task<VaultResponse<T>> WriteAsync<T>(string path, Dictionary<string, object> data)
         {
-            if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("path", "Cannot be null");
+            if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("path", "Cannot be null or empty");
 
             RequestOptions requestOptions = new RequestOptions();
             requestOptions.Data = data;
@@ -240,7 +240,7 @@ namespace Vault
         /// </summary>
         public async Task<VaultResponse<T>> DeleteAsync<T>(string path, Dictionary<string, object> queryParameters = null)
         {
-            if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("path", "Cannot be null");
+            if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("path", "Cannot be null or empty");
 
             RequestOptions requestOptions = new RequestOptions();
             if (queryParameters != null)
@@ -271,7 +271,7 @@ namespace Vault
         /// </summary>
         public async Task<VaultResponse<T>> ListAsync<T>(string path)
         {
-            if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("path", "Cannot be null");
+            if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("path", "Cannot be null or empty");
 
             RequestOptions requestOptions = new RequestOptions();
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
@@ -305,7 +305,7 @@ namespace Vault
         /// </summary>
         public async Task<VaultResponse<T>> UnwrapAsync<T>(string token)
         {
-            if (string.IsNullOrEmpty(token)) throw new ArgumentNullException("Token", "Token cannot be empty");
+            if (string.IsNullOrEmpty(token)) throw new ArgumentNullException("Token", "Token cannot be null or empty");
 
             RequestOptions requestOptions = new RequestOptions();
             requestOptions.Data = new SystemWrappingUnwrapRequest(token);
