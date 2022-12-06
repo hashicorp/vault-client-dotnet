@@ -226,6 +226,7 @@ Task<VaultResponse<Object>> unwrappedResp = await vauClient.UnwrapAsync<Object>(
 ```
 
 ### Performing Generic Operations
+
 We provide generic accessors for `Read`, `Write`, `List` and `Delete`, should you need to access an endpoint that is not available in the library (e.g. a plugin that is not builtin
 to Vault). 
 
