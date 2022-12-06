@@ -12,6 +12,7 @@
     - [Reading secrets with `kv v2`](#secrets-engines)
     - [Reading a KV Secret](#reading-a-kv-secret)
     - [Wrap and Unwrap Responses](#wrapping-and-unwrapping-responses)
+    - [Performing Generic Operations](#performing-generic-operations)
 1. [Documentation for API Endpoints](#documentation-for-api-endpoints)
 
 ## Overview
@@ -222,6 +223,35 @@ We also provide an async version.
 
 ```csharp
 Task<VaultResponse<Object>> unwrappedResp = await vauClient.UnwrapAsync<Object>(wrappedResp.ResponseWrapInfo.Token);
+```
+
+### Performing Generic Operations
+
+We provide generic accessors for `Read`, `Write`, `List` and `Delete`, should you need to access an endpoint that is not available in the library (e.g. a plugin that is not builtin
+to Vault). 
+
+Each generic operation has a synchronous and asynchronous version.
+
+```csharp
+// Generic read from a path with query parameters
+var readPath = "/some/path"
+Dictionary<string, object> queryParams = new Dictionary<string, object>
+{
+    {"key", "value"}
+};
+
+VaultResponse<Object> resp = await vaultClient.ReadAsync<Object>(myPath, queryParams);
+
+// Generic write to a path
+var writePath  "/some/other/path";
+Dictionary<string, object>  secretData = new Dictionary<string, object>
+    {
+        {"1", "1"},
+        {"2", 2},
+        {"5", false},
+    };
+
+await vaultClient.WriteAsync<Object>(writePath, secretData);
 ```
 
 <a name="documentation-for-api-endpoints"></a>

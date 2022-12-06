@@ -72,12 +72,38 @@ namespace Vault.Client
         /// <summary>
         /// Sanitize filename by removing the path
         /// </summary>
-        /// <param name="filename">Filename</param>
         /// <returns>Filename</returns>
         public static string SanitizeFilename(string filename)
         {
             Match match = Regex.Match(filename, @".*[/\\](.*)$");
             return match.Success ? match.Groups[1].Value : filename;
+        }
+        
+        /// <summary>
+        /// Sanitize a path
+        /// <param name="path">Path</param>
+        /// </summary>
+        public static string SanitizePath(string path)
+        {
+            if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("Path cannot be null");
+
+            return path.StartsWith("/") ? path : "/" + path;
+        }
+
+        /// <summary>
+        /// Convert a dictionary 
+        /// Used to create a multimap of parameters
+        /// <param name="dictionary">Dictionary of parameters to convert to multimap</param>
+        /// </summary>
+        public static Multimap<string, string> DictionaryToMultimap(Dictionary<string, object> dictionary)
+        {
+            var parameters = new Multimap<string, string>();
+            foreach (KeyValuePair<string, object> entry in dictionary)
+            {
+                parameters.Add(entry.Key.ToString(), ParameterToString(entry.Value));
+            }
+
+            return parameters;
         }
 
         /// <summary>

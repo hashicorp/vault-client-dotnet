@@ -41,6 +41,8 @@ namespace Vault
 
         private ApiClient _apiClient;
 
+        private ExceptionFactory _exceptionFactory;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="VaultClient"/> class
         /// </summary>
@@ -49,6 +51,7 @@ namespace Vault
             if (configuration == null) throw new ArgumentNullException(nameof(VaultConfiguration));
 
             _apiClient = new ApiClient(configuration);
+            _exceptionFactory = VaultConfiguration.DefaultExceptionFactory;
 
             this.Auth = new Vault.Api.Auth(_apiClient);
             this.Identity = new Vault.Api.Identity(_apiClient);
@@ -159,6 +162,129 @@ namespace Vault
         }
 
         /// <summary>
+        /// Generic Read
+        /// <param name="path">Path to read from</param>
+        /// <param name="queryParameters">Optional dictionary of query parameters</param>
+        /// </summary>
+        public VaultResponse<T> Read<T>(string path, Dictionary<string, object> queryParameters = null)
+        {
+            return ReadAsync<T>(path, queryParameters).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Generic Read Async
+        /// <param name="path">Path to read from</param>
+        /// <param name="queryParameters">Optional dictionary of query parameters</param>
+        /// </summary>
+        public async Task<VaultResponse<T>> ReadAsync<T>(string path, Dictionary<string, object> queryParameters = null)
+        {
+            if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("path", "Cannot be null or empty");
+
+            RequestOptions requestOptions = new RequestOptions();
+            if (queryParameters != null)
+            {
+                requestOptions.QueryParameters.Add(ClientUtils.DictionaryToMultimap(queryParameters));
+            }
+
+            var apiResponse = await _apiClient.GetAsync<T>(ClientUtils.SanitizePath(path), requestOptions);
+
+            Exception exception = this._exceptionFactory("Read", apiResponse);
+            if (exception != null) throw exception;
+
+            return ClientUtils.ToVaultResponse<T>(apiResponse.RawContent);
+        }
+
+        /// <summary>
+        /// Generic Write
+        /// <param name="path">Path to write to</param>
+        /// <param name="data">Data to be written</param>
+        /// </summary>
+        public VaultResponse<T> Write<T>(string path, Dictionary<string, object> data)
+        {
+            return WriteAsync<T>(path, data).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Generic Write Async
+        /// <param name="path">Path to write to</param>
+        /// <param name="data">Data to be written</param>
+        /// </summary>
+        public async Task<VaultResponse<T>> WriteAsync<T>(string path, Dictionary<string, object> data)
+        {
+            if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("path", "Cannot be null or empty");
+
+            RequestOptions requestOptions = new RequestOptions();
+            requestOptions.Data = data;
+            var apiResponse = await _apiClient.PostAsync<T>(ClientUtils.SanitizePath(path), requestOptions);
+
+            Exception exception = this._exceptionFactory("Write", apiResponse);
+            if (exception != null) throw exception;
+
+            return ClientUtils.ToVaultResponse<T>(apiResponse.RawContent);
+        }
+
+        /// <summary>
+        /// Generic Delete
+        /// <param name="path">Path to delete at</param>
+        /// <param name="queryParameters">Optional dictionary of query parameters</param>
+        /// </summary>
+        public VaultResponse<T> Delete<T>(string path, Dictionary<string, object> queryParameters = null)
+        {
+            return DeleteAsync<T>(path, queryParameters).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Generic Delete Async
+        /// <param name="path">Path to delete at</param>
+        /// <param name="queryParameters">Optional dictionary of query parameters</param>
+        /// </summary>
+        public async Task<VaultResponse<T>> DeleteAsync<T>(string path, Dictionary<string, object> queryParameters = null)
+        {
+            if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("path", "Cannot be null or empty");
+
+            RequestOptions requestOptions = new RequestOptions();
+            if (queryParameters != null)
+            {
+                requestOptions.QueryParameters.Add(ClientUtils.DictionaryToMultimap(queryParameters));
+            }
+
+            var apiResponse = await _apiClient.DeleteAsync<T>(ClientUtils.SanitizePath(path), requestOptions);
+
+            Exception exception = this._exceptionFactory("Delete", apiResponse);
+            if (exception != null) throw exception;
+
+            return ClientUtils.ToVaultResponse<T>(apiResponse.RawContent);
+        }
+
+        /// <summary>
+        /// Generic List
+        /// <param name="path">Path to list at</param>
+        /// </summary>
+        public VaultResponse<T> List<T>(string path)
+        {
+            return ListAsync<T>(path).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Generic List Async
+        /// <param name="path">Path to list at</param>
+        /// </summary>
+        public async Task<VaultResponse<T>> ListAsync<T>(string path)
+        {
+            if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("path", "Cannot be null or empty");
+
+            RequestOptions requestOptions = new RequestOptions();
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
+
+            var apiResponse = await _apiClient.GetAsync<T>(ClientUtils.SanitizePath(path), requestOptions);
+
+            Exception exception = this._exceptionFactory("List", apiResponse);
+            if (exception != null) throw exception;
+
+            return ClientUtils.ToVaultResponse<T>(apiResponse.RawContent);
+        }
+
+        /// <summary>
         /// Unwrap a response
         /// <remarks>
         /// Attempts to to unwrap the token provided
@@ -167,19 +293,7 @@ namespace Vault
         /// </summary>
         public VaultResponse<T> Unwrap<T>(string token)
         {
-            RequestOptions requestOptions = new RequestOptions();
-            requestOptions.Data = new SystemWrappingUnwrapRequest(token);
-            var response = this._apiClient.Post<Object>("/sys/wrapping/unwrap", requestOptions);
-
-            var status = (int)response.StatusCode;
-            if (status >= 400)
-            {
-                throw new VaultApiException(status,
-                    string.Format("Error calling {0}: {1}", "SystemUnwrap", response.RawContent),
-                    response.RawContent, response.Headers);
-            }
-
-            return ClientUtils.ToVaultResponse<T>(response.RawContent);
+            return UnwrapAsync<T>(token).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -191,17 +305,14 @@ namespace Vault
         /// </summary>
         public async Task<VaultResponse<T>> UnwrapAsync<T>(string token)
         {
+            if (string.IsNullOrEmpty(token)) throw new ArgumentNullException("Token", "Token cannot be null or empty");
+
             RequestOptions requestOptions = new RequestOptions();
             requestOptions.Data = new SystemWrappingUnwrapRequest(token);
             var response = await this._apiClient.PostAsync<Object>("/sys/wrapping/unwrap", requestOptions);
 
-            var status = (int)response.StatusCode;
-            if (status >= 400)
-            {
-                throw new VaultApiException(status,
-                    string.Format("Error calling {0}: {1}", "SystemUnwrap", response.RawContent),
-                    response.RawContent, response.Headers);
-            }
+            Exception exception = this._exceptionFactory("SystemUnwrapAsync", response);
+            if (exception != null) throw exception;
 
             return ClientUtils.ToVaultResponse<T>(response.RawContent);
         }
