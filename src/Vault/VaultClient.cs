@@ -188,7 +188,7 @@ namespace Vault
 
             var apiResponse = await _apiClient.GetAsync<Object>(ClientUtils.SanitizePath(path), requestOptions);
 
-            Exception exception = this._exceptionFactory("GenericRead", apiResponse);
+            Exception exception = this._exceptionFactory("Read", apiResponse);
             if (exception != null) throw exception;
 
             return ClientUtils.ToVaultResponse<T>(apiResponse.RawContent);
@@ -217,7 +217,7 @@ namespace Vault
             requestOptions.Data = data;
             var apiResponse = await _apiClient.PostAsync<Object>(ClientUtils.SanitizePath(path), requestOptions);
 
-            Exception exception = this._exceptionFactory("GenericWrite", apiResponse);
+            Exception exception = this._exceptionFactory("Write", apiResponse);
             if (exception != null) throw exception;
 
             return ClientUtils.ToVaultResponse<T>(apiResponse.RawContent);
@@ -250,7 +250,7 @@ namespace Vault
 
             var apiResponse = await _apiClient.DeleteAsync<Object>(ClientUtils.SanitizePath(path), requestOptions);
 
-            Exception exception = this._exceptionFactory("GenericDelete", apiResponse);
+            Exception exception = this._exceptionFactory("Delete", apiResponse);
             if (exception != null) throw exception;
 
             return ClientUtils.ToVaultResponse<T>(apiResponse.RawContent);
@@ -278,7 +278,7 @@ namespace Vault
 
             var apiResponse = await _apiClient.GetAsync<Object>(ClientUtils.SanitizePath(path), requestOptions);
 
-            Exception exception = this._exceptionFactory("GenericList", apiResponse);
+            Exception exception = this._exceptionFactory("List", apiResponse);
             if (exception != null) throw exception;
 
             return ClientUtils.ToVaultResponse<T>(apiResponse.RawContent);
