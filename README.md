@@ -1,5 +1,7 @@
 # Vault - the C# library for the HashiCorp Vault API
 
+A C# client library [generated][openapi-generator] from `OpenAPI` [specification file][openapi-spec] to interact with [Hashicorp][hashicorp] [Vault][vault].
+
 ## :warning: _Stability Warning: Under Development!_ :warning:
 
 ## Contents
