@@ -1,30 +1,24 @@
 # Vault - the C# library for the HashiCorp Vault API
 
+A C# client library [generated][openapi-generator] from `OpenAPI` [specification file][openapi-spec] to interact with [Hashicorp][hashicorp] [Vault][vault].
+
 ## :warning: _Stability Warning: Under Development!_ :warning:
 
 ## Contents
 
-1. [Overview](#overview)
-1. [Installation](#installation)
-1. [Getting Started](#getting-started)
-1. [Examples](#exmples)
+  - [Installation](#installation)
+    - [Frameworks supported](#frameworks-supported)
+    - [Dependencies](#dependencies)
+    - [Local Development](#local-development)
+  - [Examples](#examples)
+    - [Getting Started](#getting-started)
     - [Configuring a Vault Client](#configuring-a-vault-client)
-    - [Reading secrets with `kv v2`](#secrets-engines)
+    - [Setting Headers](#setting-headers)
+    - [Authenticating with Vault](#authenticating-with-vault)
     - [Reading a KV Secret](#reading-a-kv-secret)
-    - [Wrap and Unwrap Responses](#wrapping-and-unwrapping-responses)
+    - [Wrapping and Unwrapping Responses](#wrapping-and-unwrapping-responses)
     - [Performing Generic Operations](#performing-generic-operations)
-1. [Documentation for API Endpoints](#documentation-for-api-endpoints)
-
-## Overview
-
-A C# client library [generated][openapi-generator] from `OpenAPI` 
-[specification file][openapi-spec] to interact with [Hashicorp][hashicorp] [Vault][vault]. The library currently supports the following features:
-
-- Custom HttpClientHandler
-- Retry logic using [Polly][polly]
-- Vault token support
-- Vault namespace support
-- Thread-safe operations
+  - [Documentation for API Endpoints](#documentation-for-api-endpoints)
 
 ## Installation
 
@@ -92,7 +86,9 @@ using Vault.Client;
 using Vault.Model;
 ```
 
-## Getting Started
+## Examples
+
+### Getting Started
 Here is a simple copy-pastable example of using the library to get a list of
 currently enabled secrets engines (equivalent to `GET /v1/sys/mounts`). This example 
 works with a Vault server started in dev mode with a hardcoded root token (e.g.
@@ -132,8 +128,6 @@ namespace Example
 _**Note**_: the responses are currently generic objects that need
 to be marshalled into an appropriate model. Structured responses are 
 coming soon!
-
-## Examples
 
 ### Configuring a Vault Client
 The VaultClient requires you pass it a `VaultConfiguration` object. 
@@ -188,6 +182,27 @@ var myCustomHeaders = new Dictionary<string, string>
 vaultClient.AddCustomHeaders(myCustomHeaders);
 vaultClient.ClearCustomHeaders();
 ```
+
+### Authenticating with Vault
+In the previous example we used an insecure (root token) authentication method.
+For production applications, it is recommended to use [approle][doc-approle] or
+one of the platform-specific authentication methods instead (e.g.
+[kubernetes][doc-kubernetes], [AWS][doc-aws], [Azure][doc-azure], etc.). The
+functions to access these authentication methods are automatically generated
+under `vaultClient.Auth`. Below is an example of how to authenticate using `approle`
+authentication method. Please refer to the [approle documentation][doc-approle]
+for more details.
+
+```csharp
+VaultResponse<Object> vaultResp = vaultClient.Auth.PostAuthApproleLogin(
+    new ApproleLoginRequest(roleId: "myRoleId", secretId: "mySecretId"),
+    approleMountPath: "myMountPath");
+
+vaultClient.SetToken(token: vaultResp.ResponseAuth.ClientToken);
+```
+
+The secret identifier is often delivered as a wrapped token. In this case, you
+should unwrap it first as demonstrated [here](#wrapping-and-unwrapping-responses).
 
 ### Reading a KV Secret
 To call secrets endpoints, simply use the `VaultClient.Secrets` object, as shown below.
@@ -248,7 +263,7 @@ Dictionary<string, object>  secretData = new Dictionary<string, object>
     {
         {"1", "1"},
         {"2", 2},
-        {"5", false},
+        {"3", false},
     };
 
 await vaultClient.WriteAsync<Object>(writePath, secretData);
@@ -264,9 +279,14 @@ await vaultClient.WriteAsync<Object>(writePath, secretData);
 
 [access-token]:                 https://www.jfrog.com/confluence/display/JFROG/User+Profile#UserProfile-IdentityTokenidentitytoken
 [artifactory]:                  https://artifactory.hashicorp.engineering/ui/repos/tree/General/vault-devex-nuget-local
+[doc-approle]:                  https://developer.hashicorp.com/vault/docs/auth/approle
+[doc-aws]:                      https://developer.hashicorp.com/vault/docs/auth/aws
+[doc-azure]:                    https://developer.hashicorp.com/vault/docs/auth/azure
+[doc-kubernetes]:               https://developer.hashicorp.com/vault/docs/auth/kubernetes
+[doc-response-wrapping]:        https://www.vaultproject.io/docs/concepts/response-wrapping 
 [hashicorp]:                    https://www.hashicorp.com/
-[vault]:                        https://www.vaultproject.io/
+[http-client-handler-docs]:     https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclienthandler?view=net-6.0
 [openapi-spec]:                 openapi.json
 [openapi-generator]:	        https://openapi-generator.tech/docs/generators/csharp-netcore
 [polly]:                        http://www.thepollyproject.org/
-[http-client-handler-docs]:     https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclienthandler?view=net-6.0
+[vault]:                        https://www.vaultproject.io/

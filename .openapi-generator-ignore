@@ -23,6 +23,7 @@
 #!docs/README.md
 git_push.sh
 appveyor.yml
+README.md
 src/Vault/Client/GlobalConfiguration.cs
 src/Vault/Client/IReadableConfiguration.cs
 src/Vault/Client/OpenAPIDateConverter.cs
