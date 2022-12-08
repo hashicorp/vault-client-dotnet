@@ -195,10 +195,14 @@ for more details.
 
 ```csharp
 VaultResponse<Object> vaultResp = vaultClient.Auth.PostAuthApproleLogin(
-    new ApproleLoginRequest(roleId: "myRoleId", secretId: "mySecretId"));
+    new ApproleLoginRequest(roleId: "myRoleId", secretId: "mySecretId"),
+    approleMountPath: "myMountPath");
 
 vaultClient.SetToken(token: vaultResp.ResponseAuth.ClientToken);
 ```
+
+The secret identifier is often delivered as a wrapped token. In this case, you
+should unwrap it first as demonstrated [here](#response-wrapping--unwrapping).
 
 ### Reading a KV Secret
 To call secrets endpoints, simply use the `VaultClient.Secrets` object, as shown below.
@@ -276,9 +280,10 @@ await vaultClient.WriteAsync<Object>(writePath, secretData);
 [access-token]:                 https://www.jfrog.com/confluence/display/JFROG/User+Profile#UserProfile-IdentityTokenidentitytoken
 [artifactory]:                  https://artifactory.hashicorp.engineering/ui/repos/tree/General/vault-devex-nuget-local
 [doc-approle]:                  https://developer.hashicorp.com/vault/docs/auth/approle
-[doc-kubernetes]:               https://developer.hashicorp.com/vault/docs/auth/kubernetes
 [doc-aws]:                      https://developer.hashicorp.com/vault/docs/auth/aws
 [doc-azure]:                    https://developer.hashicorp.com/vault/docs/auth/azure
+[doc-kubernetes]:               https://developer.hashicorp.com/vault/docs/auth/kubernetes
+[doc-response-wrapping]: https://www.vaultproject.io/docs/concepts/response-wrapping 
 [hashicorp]:                    https://www.hashicorp.com/
 [http-client-handler-docs]:     https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclienthandler?view=net-6.0
 [openapi-spec]:                 openapi.json
