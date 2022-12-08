@@ -202,7 +202,7 @@ vaultClient.SetToken(token: vaultResp.ResponseAuth.ClientToken);
 ```
 
 The secret identifier is often delivered as a wrapped token. In this case, you
-should unwrap it first as demonstrated [here](#response-wrapping--unwrapping).
+should unwrap it first as demonstrated [here](#response-wrapping-unwrapping).
 
 ### Reading a KV Secret
 To call secrets endpoints, simply use the `VaultClient.Secrets` object, as shown below.
