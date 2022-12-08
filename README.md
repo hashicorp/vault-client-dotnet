@@ -14,7 +14,7 @@ A C# client library [generated][openapi-generator] from `OpenAPI` [specification
     - [Getting Started](#getting-started)
     - [Configuring a Vault Client](#configuring-a-vault-client)
     - [Setting Headers](#setting-headers)
-    - [Authenticating](#authenticating)
+    - [Authenticating with Vault](#authenticating-with-vault)
     - [Reading a KV Secret](#reading-a-kv-secret)
     - [Wrapping and Unwrapping Responses](#wrapping-and-unwrapping-responses)
     - [Performing Generic Operations](#performing-generic-operations)
@@ -202,7 +202,7 @@ vaultClient.SetToken(token: vaultResp.ResponseAuth.ClientToken);
 ```
 
 The secret identifier is often delivered as a wrapped token. In this case, you
-should unwrap it first as demonstrated [here](#response-wrapping-unwrapping).
+should unwrap it first as demonstrated [here](#wrapping-and-unwrapping-responses).
 
 ### Reading a KV Secret
 To call secrets endpoints, simply use the `VaultClient.Secrets` object, as shown below.
@@ -283,7 +283,7 @@ await vaultClient.WriteAsync<Object>(writePath, secretData);
 [doc-aws]:                      https://developer.hashicorp.com/vault/docs/auth/aws
 [doc-azure]:                    https://developer.hashicorp.com/vault/docs/auth/azure
 [doc-kubernetes]:               https://developer.hashicorp.com/vault/docs/auth/kubernetes
-[doc-response-wrapping]: https://www.vaultproject.io/docs/concepts/response-wrapping 
+[doc-response-wrapping]:        https://www.vaultproject.io/docs/concepts/response-wrapping 
 [hashicorp]:                    https://www.hashicorp.com/
 [http-client-handler-docs]:     https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclienthandler?view=net-6.0
 [openapi-spec]:                 openapi.json
