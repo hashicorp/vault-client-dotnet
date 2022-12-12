@@ -236,13 +236,13 @@ try
 catch (VaultApiException e)
 {
     // Status Code
-    Console.WriteLine("Status Code: ");
+    Console.WriteLine("Status code: {0}", e.StatusCode);
 
-    // Vault Errors
-    Console.WriteLine("");
+    // Get the first Api Error returned
+    Console.WriteLine("First api error: {0}", e.ApiErrors.First());
 
-    // Original ErrorContent
-    Console.WriteLine("");
+    // Full Error Content
+    Console.WriteLine("Original error content: {0}", e.ErrorContent);
 }
 ```
 
