@@ -35,6 +35,7 @@ namespace Vault.Model
         /// Initializes a new instance of the <see cref="PkiDerPemRequest" /> class.
         /// </summary>
         /// <param name="crlDistributionPoints">Comma-separated list of URLs to be used for the CRL distribution points attribute. See also RFC 5280 Section 4.2.1.13..</param>
+        /// <param name="enableAiaUrlTemplating">Whether or not to enabling templating of the above AIA fields. When templating is enabled the special values &#39;{{issuer_id}}&#39; and &#39;{{cluster_path}}&#39; are available, but the addresses are not checked for URL validity until issuance time. This requires /config/cluster&#39;s path to be set on all PR Secondary clusters. (default to false).</param>
         /// <param name="issuerName">Provide a name to the generated or existing issuer, the name must be unique across all issuers and not be the reserved value &#39;default&#39;.</param>
         /// <param name="issuingCertificates">Comma-separated list of URLs to be used for the issuing certificate attribute. See also RFC 5280 Section 4.2.2.1..</param>
         /// <param name="leafNotAfterBehavior">Behavior of leaf&#39;s NotAfter fields: \&quot;err\&quot; to error if the computed NotAfter date exceeds that of this issuer; \&quot;truncate\&quot; to silently truncate to that of this issuer; or \&quot;permit\&quot; to allow this issuance to succeed (with NotAfter exceeding that of an issuer). Note that not all values will results in certificates that can be validated through the entire validity period. It is suggested to use \&quot;truncate\&quot; for intermediate CAs and \&quot;permit\&quot; only for root CAs. (default to &quot;err&quot;).</param>
@@ -42,9 +43,10 @@ namespace Vault.Model
         /// <param name="ocspServers">Comma-separated list of URLs to be used for the OCSP servers attribute. See also RFC 5280 Section 4.2.2.1..</param>
         /// <param name="revocationSignatureAlgorithm">Which x509.SignatureAlgorithm name to use for signing CRLs. This parameter allows differentiation between PKCS#1v1.5 and PSS keys and choice of signature hash algorithm. The default (empty string) value is for Go to select the signature algorithm. This can fail if the underlying key does not support the requested signature algorithm, which may not be known at modification time (such as with PKCS#11 managed RSA keys). (default to &quot;&quot;).</param>
         /// <param name="usage">Comma-separated list (or string slice) of usages for this issuer; valid values are \&quot;read-only\&quot;, \&quot;issuing-certificates\&quot;, \&quot;crl-signing\&quot;, and \&quot;ocsp-signing\&quot;. Multiple values may be specified. Read-only is implicit and always set..</param>
-        public PkiDerPemRequest(List<string> crlDistributionPoints = default(List<string>), string issuerName = default(string), List<string> issuingCertificates = default(List<string>), string leafNotAfterBehavior = "err", List<string> manualChain = default(List<string>), List<string> ocspServers = default(List<string>), string revocationSignatureAlgorithm = "", List<string> usage = default(List<string>))
+        public PkiDerPemRequest(List<string> crlDistributionPoints = default(List<string>), bool enableAiaUrlTemplating = false, string issuerName = default(string), List<string> issuingCertificates = default(List<string>), string leafNotAfterBehavior = "err", List<string> manualChain = default(List<string>), List<string> ocspServers = default(List<string>), string revocationSignatureAlgorithm = "", List<string> usage = default(List<string>))
         {
             this.CrlDistributionPoints = crlDistributionPoints;
+            this.EnableAiaUrlTemplating = enableAiaUrlTemplating;
             this.IssuerName = issuerName;
             this.IssuingCertificates = issuingCertificates;
             // use default value if no "leafNotAfterBehavior" provided
@@ -62,6 +64,13 @@ namespace Vault.Model
         /// <value>Comma-separated list of URLs to be used for the CRL distribution points attribute. See also RFC 5280 Section 4.2.1.13.</value>
         [DataMember(Name = "crl_distribution_points", EmitDefaultValue = false)]
         public List<string> CrlDistributionPoints { get; set; }
+
+        /// <summary>
+        /// Whether or not to enabling templating of the above AIA fields. When templating is enabled the special values &#39;{{issuer_id}}&#39; and &#39;{{cluster_path}}&#39; are available, but the addresses are not checked for URL validity until issuance time. This requires /config/cluster&#39;s path to be set on all PR Secondary clusters.
+        /// </summary>
+        /// <value>Whether or not to enabling templating of the above AIA fields. When templating is enabled the special values &#39;{{issuer_id}}&#39; and &#39;{{cluster_path}}&#39; are available, but the addresses are not checked for URL validity until issuance time. This requires /config/cluster&#39;s path to be set on all PR Secondary clusters.</value>
+        [DataMember(Name = "enable_aia_url_templating", EmitDefaultValue = true)]
+        public bool EnableAiaUrlTemplating { get; set; }
 
         /// <summary>
         /// Provide a name to the generated or existing issuer, the name must be unique across all issuers and not be the reserved value &#39;default&#39;
@@ -121,6 +130,7 @@ namespace Vault.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class PkiDerPemRequest {\n");
             sb.Append("  CrlDistributionPoints: ").Append(CrlDistributionPoints).Append("\n");
+            sb.Append("  EnableAiaUrlTemplating: ").Append(EnableAiaUrlTemplating).Append("\n");
             sb.Append("  IssuerName: ").Append(IssuerName).Append("\n");
             sb.Append("  IssuingCertificates: ").Append(IssuingCertificates).Append("\n");
             sb.Append("  LeafNotAfterBehavior: ").Append(LeafNotAfterBehavior).Append("\n");
@@ -168,6 +178,10 @@ namespace Vault.Model
                     this.CrlDistributionPoints != null &&
                     input.CrlDistributionPoints != null &&
                     this.CrlDistributionPoints.SequenceEqual(input.CrlDistributionPoints)
+                ) && 
+                (
+                    this.EnableAiaUrlTemplating == input.EnableAiaUrlTemplating ||
+                    this.EnableAiaUrlTemplating.Equals(input.EnableAiaUrlTemplating)
                 ) && 
                 (
                     this.IssuerName == input.IssuerName ||
@@ -223,6 +237,7 @@ namespace Vault.Model
                 {
                     hashCode = (hashCode * 59) + this.CrlDistributionPoints.GetHashCode();
                 }
+                hashCode = (hashCode * 59) + this.EnableAiaUrlTemplating.GetHashCode();
                 if (this.IssuerName != null)
                 {
                     hashCode = (hashCode * 59) + this.IssuerName.GetHashCode();

@@ -42,7 +42,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> DeleteAuthAlicloudRoleRole(string role, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Register an role with the backend.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -60,7 +60,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> DeleteAuthApproleRoleRoleName(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Impose secret_id to be presented during login using this role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -78,7 +78,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> DeleteAuthApproleRoleRoleNameBindSecretId(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -96,7 +96,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> DeleteAuthApproleRoleRoleNameBoundCidrList(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Updates the value of &#39;period&#39; on the role
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -114,7 +114,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> DeleteAuthApproleRoleRoleNamePeriod(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Policies of the role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -150,7 +150,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroy(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -168,7 +168,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Invalidate an issued secret_id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -186,7 +186,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdDestroy(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Use limit of the SecretID generated against the role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -204,7 +204,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdNumUses(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Duration in seconds of the SecretID generated against the role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -222,7 +222,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> DeleteAuthApproleRoleRoleNameSecretIdTtl(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -240,7 +240,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> DeleteAuthApproleRoleRoleNameTokenBoundCidrs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -258,7 +258,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> DeleteAuthApproleRoleRoleNameTokenMaxTtl(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Number of times issued tokens can be used
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -276,7 +276,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> DeleteAuthApproleRoleRoleNameTokenNumUses(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -952,7 +952,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> GetAuthAlicloudRoles(string list, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Lists all the roles registered with the backend.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -960,7 +960,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -968,9 +968,9 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GetAuthApproleRole(string list, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+        VaultResponse<ApproleRoleResponse> GetAuthApproleRole(string list, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Register an role with the backend.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -978,7 +978,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -986,9 +986,9 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GetAuthApproleRoleRoleName(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+        VaultResponse<ApproleRoleResponse> GetAuthApproleRoleRoleName(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Impose secret_id to be presented during login using this role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -996,7 +996,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleBindSecretIdResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1004,9 +1004,9 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GetAuthApproleRoleRoleNameBindSecretId(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+        VaultResponse<ApproleRoleBindSecretIdResponse> GetAuthApproleRoleRoleNameBindSecretId(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -1014,7 +1014,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleBoundCidrListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1022,9 +1022,9 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GetAuthApproleRoleRoleNameBoundCidrList(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+        VaultResponse<ApproleRoleBoundCidrListResponse> GetAuthApproleRoleRoleNameBoundCidrList(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Enables cluster local secret IDs
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -1032,7 +1032,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleLocalSecretIdsResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1040,9 +1040,9 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GetAuthApproleRoleRoleNameLocalSecretIds(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+        VaultResponse<ApproleRoleLocalSecretIdsResponse> GetAuthApproleRoleRoleNameLocalSecretIds(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Updates the value of &#39;period&#39; on the role
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -1050,7 +1050,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRolePeriodResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1058,9 +1058,9 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GetAuthApproleRoleRoleNamePeriod(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+        VaultResponse<ApproleRolePeriodResponse> GetAuthApproleRoleRoleNamePeriod(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Policies of the role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -1068,7 +1068,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRolePoliciesResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1076,9 +1076,9 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GetAuthApproleRoleRoleNamePolicies(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+        VaultResponse<ApproleRolePoliciesResponse> GetAuthApproleRoleRoleNamePolicies(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Returns the &#39;role_id&#39; of the role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -1086,7 +1086,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleRoleIdResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1094,9 +1094,9 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GetAuthApproleRoleRoleNameRoleId(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+        VaultResponse<ApproleRoleRoleIdResponse> GetAuthApproleRoleRoleNameRoleId(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Generate a SecretID against this role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -1105,7 +1105,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleSecretIdResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1113,9 +1113,9 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GetAuthApproleRoleRoleNameSecretId(string roleName, string list, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+        VaultResponse<ApproleRoleSecretIdResponse> GetAuthApproleRoleRoleNameSecretId(string roleName, string list, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -1123,7 +1123,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleSecretIdBoundCidrsResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1131,9 +1131,9 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GetAuthApproleRoleRoleNameSecretIdBoundCidrs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+        VaultResponse<ApproleRoleSecretIdBoundCidrsResponse> GetAuthApproleRoleRoleNameSecretIdBoundCidrs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Use limit of the SecretID generated against the role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -1141,7 +1141,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleSecretIdNumUsesResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1149,9 +1149,9 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GetAuthApproleRoleRoleNameSecretIdNumUses(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+        VaultResponse<ApproleRoleSecretIdNumUsesResponse> GetAuthApproleRoleRoleNameSecretIdNumUses(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Duration in seconds of the SecretID generated against the role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -1159,7 +1159,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleSecretIdTtlResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1167,9 +1167,9 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GetAuthApproleRoleRoleNameSecretIdTtl(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+        VaultResponse<ApproleRoleSecretIdTtlResponse> GetAuthApproleRoleRoleNameSecretIdTtl(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -1177,7 +1177,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleTokenBoundCidrsResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1185,9 +1185,9 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GetAuthApproleRoleRoleNameTokenBoundCidrs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+        VaultResponse<ApproleRoleTokenBoundCidrsResponse> GetAuthApproleRoleRoleNameTokenBoundCidrs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -1195,7 +1195,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleTokenMaxTtlResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1203,9 +1203,9 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GetAuthApproleRoleRoleNameTokenMaxTtl(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+        VaultResponse<ApproleRoleTokenMaxTtlResponse> GetAuthApproleRoleRoleNameTokenMaxTtl(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Number of times issued tokens can be used
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -1213,7 +1213,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleTokenNumUsesResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1221,9 +1221,9 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GetAuthApproleRoleRoleNameTokenNumUses(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+        VaultResponse<ApproleRoleTokenNumUsesResponse> GetAuthApproleRoleRoleNameTokenNumUses(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -1231,7 +1231,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleTokenTtlResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -1239,7 +1239,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GetAuthApproleRoleRoleNameTokenTtl(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+        VaultResponse<ApproleRoleTokenTtlResponse> GetAuthApproleRoleRoleNameTokenTtl(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1735,6 +1735,24 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> GetAuthCertConfig(string certMountPath = "cert", TimeSpan? wrapTTL = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> GetAuthCertCrls(string list, string certMountPath = "cert", TimeSpan? wrapTTL = null);
         /// <summary>
         /// Manage Certificate Revocation Lists checked during authentication.
         /// </summary>
@@ -2728,7 +2746,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> PostAuthApproleLogin(ApproleLoginRequest approleLoginRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Register an role with the backend.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -2747,7 +2765,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> PostAuthApproleRoleRoleName(string roleName, ApproleRoleRequest approleRoleRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Impose secret_id to be presented during login using this role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -2766,7 +2784,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> PostAuthApproleRoleRoleNameBindSecretId(string roleName, ApproleRoleBindSecretIdRequest approleRoleBindSecretIdRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -2785,7 +2803,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> PostAuthApproleRoleRoleNameBoundCidrList(string roleName, ApproleRoleBoundCidrListRequest approleRoleBoundCidrListRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Assign a SecretID of choice against the role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -2794,7 +2812,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleRoleCustomSecretIdRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleCustomSecretIdResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -2802,9 +2820,9 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> PostAuthApproleRoleRoleNameCustomSecretId(string roleName, ApproleRoleCustomSecretIdRequest approleRoleCustomSecretIdRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+        VaultResponse<ApproleRoleCustomSecretIdResponse> PostAuthApproleRoleRoleNameCustomSecretId(string roleName, ApproleRoleCustomSecretIdRequest approleRoleCustomSecretIdRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Updates the value of &#39;period&#39; on the role
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -2823,7 +2841,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> PostAuthApproleRoleRoleNamePeriod(string roleName, ApproleRolePeriodRequest approleRolePeriodRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Policies of the role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -2842,7 +2860,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> PostAuthApproleRoleRoleNamePolicies(string roleName, ApproleRolePoliciesRequest approleRolePoliciesRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Returns the &#39;role_id&#39; of the role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -2861,7 +2879,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> PostAuthApproleRoleRoleNameRoleId(string roleName, ApproleRoleRoleIdRequest approleRoleRoleIdRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Generate a SecretID against this role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -2870,7 +2888,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleRoleSecretIdRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleSecretIdResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -2878,7 +2896,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> PostAuthApproleRoleRoleNameSecretId(string roleName, ApproleRoleSecretIdRequest approleRoleSecretIdRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+        VaultResponse<ApproleRoleSecretIdResponse> PostAuthApproleRoleRoleNameSecretId(string roleName, ApproleRoleSecretIdRequest approleRoleSecretIdRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -2908,7 +2926,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleRoleSecretIdAccessorLookupRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleSecretIdAccessorLookupResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -2916,9 +2934,9 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdAccessorLookup(string roleName, ApproleRoleSecretIdAccessorLookupRequest approleRoleSecretIdAccessorLookupRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+        VaultResponse<ApproleRoleSecretIdAccessorLookupResponse> PostAuthApproleRoleRoleNameSecretIdAccessorLookup(string roleName, ApproleRoleSecretIdAccessorLookupRequest approleRoleSecretIdAccessorLookupRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -2937,7 +2955,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdBoundCidrs(string roleName, ApproleRoleSecretIdBoundCidrsRequest approleRoleSecretIdBoundCidrsRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Invalidate an issued secret_id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -2956,7 +2974,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdDestroy(string roleName, ApproleRoleSecretIdDestroyRequest approleRoleSecretIdDestroyRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Read the properties of an issued secret_id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -2965,7 +2983,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleRoleSecretIdLookupRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleSecretIdLookupResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -2973,9 +2991,9 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdLookup(string roleName, ApproleRoleSecretIdLookupRequest approleRoleSecretIdLookupRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+        VaultResponse<ApproleRoleSecretIdLookupResponse> PostAuthApproleRoleRoleNameSecretIdLookup(string roleName, ApproleRoleSecretIdLookupRequest approleRoleSecretIdLookupRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Use limit of the SecretID generated against the role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -2994,7 +3012,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdNumUses(string roleName, ApproleRoleSecretIdNumUsesRequest approleRoleSecretIdNumUsesRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Duration in seconds of the SecretID generated against the role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -3013,7 +3031,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdTtl(string roleName, ApproleRoleSecretIdTtlRequest approleRoleSecretIdTtlRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -3032,7 +3050,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> PostAuthApproleRoleRoleNameTokenBoundCidrs(string roleName, ApproleRoleTokenBoundCidrsRequest approleRoleTokenBoundCidrsRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -3051,7 +3069,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> PostAuthApproleRoleRoleNameTokenMaxTtl(string roleName, ApproleRoleTokenMaxTtlRequest approleRoleTokenMaxTtlRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Number of times issued tokens can be used
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -3070,7 +3088,7 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> PostAuthApproleRoleRoleNameTokenNumUses(string roleName, ApproleRoleTokenNumUsesRequest approleRoleTokenNumUsesRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -4417,7 +4435,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateRequest"></param>
-        /// <param name="format">Return json formatted output (optional, default to &quot;json&quot;)</param>
+        /// <param name="format">Return json formatted output (optional, default to &quot;&quot;)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -4427,7 +4445,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> PostAuthTokenCreate(TokenCreateRequest tokenCreateRequest, string format = "json", string tokenMountPath = "token", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> PostAuthTokenCreate(TokenCreateRequest tokenCreateRequest, string format = "", string tokenMountPath = "token", TimeSpan? wrapTTL = null);
         /// <summary>
         /// The token create path is used to create new orphan tokens.
         /// </summary>
@@ -4436,7 +4454,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateOrphanRequest"></param>
-        /// <param name="format">Return json formatted output (optional, default to &quot;json&quot;)</param>
+        /// <param name="format">Return json formatted output (optional, default to &quot;&quot;)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -4446,7 +4464,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> PostAuthTokenCreateOrphan(TokenCreateOrphanRequest tokenCreateOrphanRequest, string format = "json", string tokenMountPath = "token", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> PostAuthTokenCreateOrphan(TokenCreateOrphanRequest tokenCreateOrphanRequest, string format = "", string tokenMountPath = "token", TimeSpan? wrapTTL = null);
         /// <summary>
         /// This token create path is used to create new tokens adhering to the given role.
         /// </summary>
@@ -4456,7 +4474,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role</param>
         /// <param name="tokenCreateRequest"></param>
-        /// <param name="format">Return json formatted output (optional, default to &quot;json&quot;)</param>
+        /// <param name="format">Return json formatted output (optional, default to &quot;&quot;)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -4466,7 +4484,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> PostAuthTokenCreateRoleName(string roleName, TokenCreateRequest tokenCreateRequest, string format = "json", string tokenMountPath = "token", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> PostAuthTokenCreateRoleName(string roleName, TokenCreateRequest tokenCreateRequest, string format = "", string tokenMountPath = "token", TimeSpan? wrapTTL = null);
         /// <summary>
         /// This endpoint will lookup a token and its properties.
         /// </summary>
@@ -4789,7 +4807,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> DeleteAuthAlicloudRoleRoleAsync(string role, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Register an role with the backend.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -4809,7 +4827,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Impose secret_id to be presented during login using this role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -4829,7 +4847,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameBindSecretIdAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -4849,7 +4867,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameBoundCidrListAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Updates the value of &#39;period&#39; on the role
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -4869,7 +4887,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNamePeriodAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Policies of the role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -4909,7 +4927,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroyAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -4929,7 +4947,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdBoundCidrsAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Invalidate an issued secret_id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -4949,7 +4967,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdDestroyAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Use limit of the SecretID generated against the role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -4969,7 +4987,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdNumUsesAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Duration in seconds of the SecretID generated against the role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -4989,7 +5007,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameSecretIdTtlAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -5009,7 +5027,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameTokenBoundCidrsAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -5029,7 +5047,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameTokenMaxTtlAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Number of times issued tokens can be used
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -5049,7 +5067,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> DeleteAuthApproleRoleRoleNameTokenNumUsesAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -5801,7 +5819,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> GetAuthAlicloudRolesAsync(string list, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Lists all the roles registered with the backend.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -5817,11 +5835,11 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleAsync(string list, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (ApproleRoleResponse)</returns>
+        Task<VaultResponse<ApproleRoleResponse>> GetAuthApproleRoleAsync(string list, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Register an role with the backend.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -5837,11 +5855,11 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (ApproleRoleResponse)</returns>
+        Task<VaultResponse<ApproleRoleResponse>> GetAuthApproleRoleRoleNameAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Impose secret_id to be presented during login using this role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -5857,11 +5875,11 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameBindSecretIdAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (ApproleRoleBindSecretIdResponse)</returns>
+        Task<VaultResponse<ApproleRoleBindSecretIdResponse>> GetAuthApproleRoleRoleNameBindSecretIdAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -5877,11 +5895,11 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameBoundCidrListAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (ApproleRoleBoundCidrListResponse)</returns>
+        Task<VaultResponse<ApproleRoleBoundCidrListResponse>> GetAuthApproleRoleRoleNameBoundCidrListAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Enables cluster local secret IDs
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -5897,11 +5915,11 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameLocalSecretIdsAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (ApproleRoleLocalSecretIdsResponse)</returns>
+        Task<VaultResponse<ApproleRoleLocalSecretIdsResponse>> GetAuthApproleRoleRoleNameLocalSecretIdsAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Updates the value of &#39;period&#39; on the role
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -5917,11 +5935,11 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNamePeriodAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (ApproleRolePeriodResponse)</returns>
+        Task<VaultResponse<ApproleRolePeriodResponse>> GetAuthApproleRoleRoleNamePeriodAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Policies of the role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -5937,11 +5955,11 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNamePoliciesAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (ApproleRolePoliciesResponse)</returns>
+        Task<VaultResponse<ApproleRolePoliciesResponse>> GetAuthApproleRoleRoleNamePoliciesAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Returns the &#39;role_id&#39; of the role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -5957,11 +5975,11 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameRoleIdAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (ApproleRoleRoleIdResponse)</returns>
+        Task<VaultResponse<ApproleRoleRoleIdResponse>> GetAuthApproleRoleRoleNameRoleIdAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Generate a SecretID against this role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -5978,11 +5996,11 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameSecretIdAsync(string roleName, string list, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (ApproleRoleSecretIdResponse)</returns>
+        Task<VaultResponse<ApproleRoleSecretIdResponse>> GetAuthApproleRoleRoleNameSecretIdAsync(string roleName, string list, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -5998,11 +6016,11 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameSecretIdBoundCidrsAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (ApproleRoleSecretIdBoundCidrsResponse)</returns>
+        Task<VaultResponse<ApproleRoleSecretIdBoundCidrsResponse>> GetAuthApproleRoleRoleNameSecretIdBoundCidrsAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Use limit of the SecretID generated against the role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -6018,11 +6036,11 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameSecretIdNumUsesAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (ApproleRoleSecretIdNumUsesResponse)</returns>
+        Task<VaultResponse<ApproleRoleSecretIdNumUsesResponse>> GetAuthApproleRoleRoleNameSecretIdNumUsesAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Duration in seconds of the SecretID generated against the role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -6038,11 +6056,11 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameSecretIdTtlAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (ApproleRoleSecretIdTtlResponse)</returns>
+        Task<VaultResponse<ApproleRoleSecretIdTtlResponse>> GetAuthApproleRoleRoleNameSecretIdTtlAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -6058,11 +6076,11 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameTokenBoundCidrsAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (ApproleRoleTokenBoundCidrsResponse)</returns>
+        Task<VaultResponse<ApproleRoleTokenBoundCidrsResponse>> GetAuthApproleRoleRoleNameTokenBoundCidrsAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -6078,11 +6096,11 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameTokenMaxTtlAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (ApproleRoleTokenMaxTtlResponse)</returns>
+        Task<VaultResponse<ApproleRoleTokenMaxTtlResponse>> GetAuthApproleRoleRoleNameTokenMaxTtlAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Number of times issued tokens can be used
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -6098,11 +6116,11 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameTokenNumUsesAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (ApproleRoleTokenNumUsesResponse)</returns>
+        Task<VaultResponse<ApproleRoleTokenNumUsesResponse>> GetAuthApproleRoleRoleNameTokenNumUsesAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -6118,8 +6136,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameTokenTtlAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (ApproleRoleTokenTtlResponse)</returns>
+        Task<VaultResponse<ApproleRoleTokenTtlResponse>> GetAuthApproleRoleRoleNameTokenTtlAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -6671,6 +6689,26 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> GetAuthCertConfigAsync(string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> GetAuthCertCrlsAsync(string list, string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage Certificate Revocation Lists checked during authentication.
@@ -7777,7 +7815,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> PostAuthApproleLoginAsync(ApproleLoginRequest approleLoginRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Register an role with the backend.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -7798,7 +7836,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameAsync(string roleName, ApproleRoleRequest approleRoleRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Impose secret_id to be presented during login using this role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -7819,7 +7857,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameBindSecretIdAsync(string roleName, ApproleRoleBindSecretIdRequest approleRoleBindSecretIdRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -7840,7 +7878,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameBoundCidrListAsync(string roleName, ApproleRoleBoundCidrListRequest approleRoleBoundCidrListRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Assign a SecretID of choice against the role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -7857,11 +7895,11 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameCustomSecretIdAsync(string roleName, ApproleRoleCustomSecretIdRequest approleRoleCustomSecretIdRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (ApproleRoleCustomSecretIdResponse)</returns>
+        Task<VaultResponse<ApproleRoleCustomSecretIdResponse>> PostAuthApproleRoleRoleNameCustomSecretIdAsync(string roleName, ApproleRoleCustomSecretIdRequest approleRoleCustomSecretIdRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Updates the value of &#39;period&#39; on the role
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -7882,7 +7920,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> PostAuthApproleRoleRoleNamePeriodAsync(string roleName, ApproleRolePeriodRequest approleRolePeriodRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Policies of the role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -7903,7 +7941,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> PostAuthApproleRoleRoleNamePoliciesAsync(string roleName, ApproleRolePoliciesRequest approleRolePoliciesRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Returns the &#39;role_id&#39; of the role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -7924,7 +7962,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameRoleIdAsync(string roleName, ApproleRoleRoleIdRequest approleRoleRoleIdRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Generate a SecretID against this role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -7941,8 +7979,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdAsync(string roleName, ApproleRoleSecretIdRequest approleRoleSecretIdRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (ApproleRoleSecretIdResponse)</returns>
+        Task<VaultResponse<ApproleRoleSecretIdResponse>> PostAuthApproleRoleRoleNameSecretIdAsync(string roleName, ApproleRoleSecretIdRequest approleRoleSecretIdRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -7983,11 +8021,11 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdAccessorLookupAsync(string roleName, ApproleRoleSecretIdAccessorLookupRequest approleRoleSecretIdAccessorLookupRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (ApproleRoleSecretIdAccessorLookupResponse)</returns>
+        Task<VaultResponse<ApproleRoleSecretIdAccessorLookupResponse>> PostAuthApproleRoleRoleNameSecretIdAccessorLookupAsync(string roleName, ApproleRoleSecretIdAccessorLookupRequest approleRoleSecretIdAccessorLookupRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -8008,7 +8046,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdBoundCidrsAsync(string roleName, ApproleRoleSecretIdBoundCidrsRequest approleRoleSecretIdBoundCidrsRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Invalidate an issued secret_id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -8029,7 +8067,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdDestroyAsync(string roleName, ApproleRoleSecretIdDestroyRequest approleRoleSecretIdDestroyRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Read the properties of an issued secret_id
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -8046,11 +8084,11 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdLookupAsync(string roleName, ApproleRoleSecretIdLookupRequest approleRoleSecretIdLookupRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of VaultResponse (ApproleRoleSecretIdLookupResponse)</returns>
+        Task<VaultResponse<ApproleRoleSecretIdLookupResponse>> PostAuthApproleRoleRoleNameSecretIdLookupAsync(string roleName, ApproleRoleSecretIdLookupRequest approleRoleSecretIdLookupRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Use limit of the SecretID generated against the role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -8071,7 +8109,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdNumUsesAsync(string roleName, ApproleRoleSecretIdNumUsesRequest approleRoleSecretIdNumUsesRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Duration in seconds of the SecretID generated against the role.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -8092,7 +8130,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdTtlAsync(string roleName, ApproleRoleSecretIdTtlRequest approleRoleSecretIdTtlRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -8113,7 +8151,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameTokenBoundCidrsAsync(string roleName, ApproleRoleTokenBoundCidrsRequest approleRoleTokenBoundCidrsRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -8134,7 +8172,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameTokenMaxTtlAsync(string roleName, ApproleRoleTokenMaxTtlRequest approleRoleTokenMaxTtlRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Number of times issued tokens can be used
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -8155,7 +8193,7 @@ namespace Vault.Api
         Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameTokenNumUsesAsync(string roleName, ApproleRoleTokenNumUsesRequest approleRoleTokenNumUsesRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
+        /// 
         /// </summary>
         /// <remarks>
         /// 
@@ -9648,7 +9686,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateRequest"></param>
-        /// <param name="format">Return json formatted output (optional, default to &quot;json&quot;)</param>
+        /// <param name="format">Return json formatted output (optional, default to &quot;&quot;)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -9659,7 +9697,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthTokenCreateAsync(TokenCreateRequest tokenCreateRequest, string format = "json", string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthTokenCreateAsync(TokenCreateRequest tokenCreateRequest, string format = "", string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// The token create path is used to create new orphan tokens.
@@ -9669,7 +9707,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateOrphanRequest"></param>
-        /// <param name="format">Return json formatted output (optional, default to &quot;json&quot;)</param>
+        /// <param name="format">Return json formatted output (optional, default to &quot;&quot;)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -9680,7 +9718,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthTokenCreateOrphanAsync(TokenCreateOrphanRequest tokenCreateOrphanRequest, string format = "json", string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthTokenCreateOrphanAsync(TokenCreateOrphanRequest tokenCreateOrphanRequest, string format = "", string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This token create path is used to create new tokens adhering to the given role.
@@ -9691,7 +9729,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role</param>
         /// <param name="tokenCreateRequest"></param>
-        /// <param name="format">Return json formatted output (optional, default to &quot;json&quot;)</param>
+        /// <param name="format">Return json formatted output (optional, default to &quot;&quot;)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -9702,7 +9740,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PostAuthTokenCreateRoleNameAsync(string roleName, TokenCreateRequest tokenCreateRequest, string format = "json", string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PostAuthTokenCreateRoleNameAsync(string roleName, TokenCreateRequest tokenCreateRequest, string format = "", string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This endpoint will lookup a token and its properties.
@@ -10154,7 +10192,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -10215,12 +10253,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Register an role with the backend. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -10274,12 +10312,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Register an role with the backend. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -10335,12 +10373,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Impose secret_id to be presented during login using this role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -10394,12 +10432,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Impose secret_id to be presented during login using this role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -10455,12 +10493,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -10514,12 +10552,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -10575,12 +10613,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Updates the value of &#39;period&#39; on the role 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -10634,12 +10672,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Updates the value of &#39;period&#39; on the role 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -10695,12 +10733,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Policies of the role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -10754,12 +10792,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Policies of the role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -10815,7 +10853,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -10874,7 +10912,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -10935,12 +10973,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -10994,12 +11032,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -11055,12 +11093,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Invalidate an issued secret_id 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -11114,12 +11152,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Invalidate an issued secret_id 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -11175,12 +11213,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Use limit of the SecretID generated against the role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -11234,12 +11272,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Use limit of the SecretID generated against the role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -11295,12 +11333,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Duration in seconds of the SecretID generated against the role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -11354,12 +11392,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Duration in seconds of the SecretID generated against the role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -11415,12 +11453,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -11474,12 +11512,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -11535,12 +11573,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -11594,12 +11632,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -11655,12 +11693,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Number of times issued tokens can be used 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -11714,12 +11752,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Number of times issued tokens can be used 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -11775,12 +11813,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -11834,12 +11872,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -11895,7 +11933,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -11954,7 +11992,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12015,7 +12053,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12068,7 +12106,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12123,7 +12161,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12182,7 +12220,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12243,7 +12281,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12296,7 +12334,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12351,7 +12389,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12404,7 +12442,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12459,7 +12497,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12512,7 +12550,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12567,7 +12605,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12620,7 +12658,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12675,7 +12713,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12734,7 +12772,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12795,7 +12833,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12854,7 +12892,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12915,7 +12953,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12974,7 +13012,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13035,7 +13073,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13094,7 +13132,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13155,7 +13193,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13214,7 +13252,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13275,7 +13313,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13328,7 +13366,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13383,7 +13421,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13442,7 +13480,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13503,7 +13541,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13562,7 +13600,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13623,7 +13661,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13682,7 +13720,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13743,7 +13781,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13796,7 +13834,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13851,7 +13889,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13910,7 +13948,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13971,7 +14009,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14030,7 +14068,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14091,7 +14129,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14150,7 +14188,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14211,7 +14249,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14270,7 +14308,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14331,7 +14369,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14390,7 +14428,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14451,7 +14489,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14510,7 +14548,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14571,7 +14609,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14630,7 +14668,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14691,7 +14729,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14750,7 +14788,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14811,7 +14849,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14870,7 +14908,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14931,7 +14969,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14984,7 +15022,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15039,7 +15077,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15098,7 +15136,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15159,7 +15197,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15218,7 +15256,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15279,7 +15317,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15338,7 +15376,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15399,7 +15437,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15458,7 +15496,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15519,7 +15557,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15578,7 +15616,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15639,7 +15677,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15698,7 +15736,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15759,7 +15797,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15818,7 +15856,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15879,7 +15917,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15938,7 +15976,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15999,7 +16037,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -16058,7 +16096,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -16119,7 +16157,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -16178,7 +16216,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -16239,17 +16277,17 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Lists all the roles registered with the backend. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -16257,7 +16295,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GetAuthApproleRole(string list, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+        public VaultResponse<ApproleRoleResponse> GetAuthApproleRole(string list, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -16275,6 +16313,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16290,7 +16329,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{approle_mount_path}/role", requestOptions);
+            var response = this.Client.Get<ApproleRoleResponse>("/auth/{approle_mount_path}/role", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16298,12 +16337,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Lists all the roles registered with the backend. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
@@ -16316,8 +16355,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleAsync(string list, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (ApproleRoleResponse)</returns>
+        public async Task<VaultResponse<ApproleRoleResponse>> GetAuthApproleRoleAsync(string list, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -16336,6 +16375,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16351,7 +16391,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{approle_mount_path}/role", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<ApproleRoleResponse>("/auth/{approle_mount_path}/role", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16359,17 +16399,17 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Register an role with the backend. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -16377,7 +16417,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GetAuthApproleRoleRoleName(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+        public VaultResponse<ApproleRoleResponse> GetAuthApproleRoleRoleName(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -16395,6 +16435,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16410,7 +16451,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{approle_mount_path}/role/{role_name}", requestOptions);
+            var response = this.Client.Get<ApproleRoleResponse>("/auth/{approle_mount_path}/role/{role_name}", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16418,12 +16459,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Register an role with the backend. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -16436,8 +16477,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (ApproleRoleResponse)</returns>
+        public async Task<VaultResponse<ApproleRoleResponse>> GetAuthApproleRoleRoleNameAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -16456,6 +16497,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16471,7 +16513,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{approle_mount_path}/role/{role_name}", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<ApproleRoleResponse>("/auth/{approle_mount_path}/role/{role_name}", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16479,17 +16521,17 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Impose secret_id to be presented during login using this role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleBindSecretIdResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -16497,7 +16539,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNameBindSecretId(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+        public VaultResponse<ApproleRoleBindSecretIdResponse> GetAuthApproleRoleRoleNameBindSecretId(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -16515,6 +16557,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16530,7 +16573,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{approle_mount_path}/role/{role_name}/bind-secret-id", requestOptions);
+            var response = this.Client.Get<ApproleRoleBindSecretIdResponse>("/auth/{approle_mount_path}/role/{role_name}/bind-secret-id", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16538,12 +16581,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleBindSecretIdResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Impose secret_id to be presented during login using this role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -16556,8 +16599,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameBindSecretIdAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (ApproleRoleBindSecretIdResponse)</returns>
+        public async Task<VaultResponse<ApproleRoleBindSecretIdResponse>> GetAuthApproleRoleRoleNameBindSecretIdAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -16576,6 +16619,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16591,7 +16635,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{approle_mount_path}/role/{role_name}/bind-secret-id", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<ApproleRoleBindSecretIdResponse>("/auth/{approle_mount_path}/role/{role_name}/bind-secret-id", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16599,17 +16643,17 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleBindSecretIdResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleBoundCidrListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -16617,7 +16661,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNameBoundCidrList(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+        public VaultResponse<ApproleRoleBoundCidrListResponse> GetAuthApproleRoleRoleNameBoundCidrList(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -16635,6 +16679,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16650,7 +16695,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{approle_mount_path}/role/{role_name}/bound-cidr-list", requestOptions);
+            var response = this.Client.Get<ApproleRoleBoundCidrListResponse>("/auth/{approle_mount_path}/role/{role_name}/bound-cidr-list", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16658,12 +16703,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleBoundCidrListResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -16676,8 +16721,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameBoundCidrListAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (ApproleRoleBoundCidrListResponse)</returns>
+        public async Task<VaultResponse<ApproleRoleBoundCidrListResponse>> GetAuthApproleRoleRoleNameBoundCidrListAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -16696,6 +16741,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16711,7 +16757,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{approle_mount_path}/role/{role_name}/bound-cidr-list", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<ApproleRoleBoundCidrListResponse>("/auth/{approle_mount_path}/role/{role_name}/bound-cidr-list", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16719,17 +16765,17 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleBoundCidrListResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Enables cluster local secret IDs 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleLocalSecretIdsResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -16737,7 +16783,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNameLocalSecretIds(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+        public VaultResponse<ApproleRoleLocalSecretIdsResponse> GetAuthApproleRoleRoleNameLocalSecretIds(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -16755,6 +16801,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16770,7 +16817,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{approle_mount_path}/role/{role_name}/local-secret-ids", requestOptions);
+            var response = this.Client.Get<ApproleRoleLocalSecretIdsResponse>("/auth/{approle_mount_path}/role/{role_name}/local-secret-ids", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16778,12 +16825,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleLocalSecretIdsResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Enables cluster local secret IDs 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -16796,8 +16843,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameLocalSecretIdsAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (ApproleRoleLocalSecretIdsResponse)</returns>
+        public async Task<VaultResponse<ApproleRoleLocalSecretIdsResponse>> GetAuthApproleRoleRoleNameLocalSecretIdsAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -16816,6 +16863,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16831,7 +16879,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{approle_mount_path}/role/{role_name}/local-secret-ids", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<ApproleRoleLocalSecretIdsResponse>("/auth/{approle_mount_path}/role/{role_name}/local-secret-ids", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16839,17 +16887,17 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleLocalSecretIdsResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Updates the value of &#39;period&#39; on the role 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRolePeriodResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -16857,7 +16905,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNamePeriod(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+        public VaultResponse<ApproleRolePeriodResponse> GetAuthApproleRoleRoleNamePeriod(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -16875,6 +16923,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16890,7 +16939,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{approle_mount_path}/role/{role_name}/period", requestOptions);
+            var response = this.Client.Get<ApproleRolePeriodResponse>("/auth/{approle_mount_path}/role/{role_name}/period", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -16898,12 +16947,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRolePeriodResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Updates the value of &#39;period&#39; on the role 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -16916,8 +16965,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNamePeriodAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (ApproleRolePeriodResponse)</returns>
+        public async Task<VaultResponse<ApproleRolePeriodResponse>> GetAuthApproleRoleRoleNamePeriodAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -16936,6 +16985,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -16951,7 +17001,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{approle_mount_path}/role/{role_name}/period", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<ApproleRolePeriodResponse>("/auth/{approle_mount_path}/role/{role_name}/period", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -16959,17 +17009,17 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRolePeriodResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Policies of the role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRolePoliciesResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -16977,7 +17027,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNamePolicies(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+        public VaultResponse<ApproleRolePoliciesResponse> GetAuthApproleRoleRoleNamePolicies(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -16995,6 +17045,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17010,7 +17061,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{approle_mount_path}/role/{role_name}/policies", requestOptions);
+            var response = this.Client.Get<ApproleRolePoliciesResponse>("/auth/{approle_mount_path}/role/{role_name}/policies", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17018,12 +17069,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRolePoliciesResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Policies of the role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -17036,8 +17087,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNamePoliciesAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (ApproleRolePoliciesResponse)</returns>
+        public async Task<VaultResponse<ApproleRolePoliciesResponse>> GetAuthApproleRoleRoleNamePoliciesAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -17056,6 +17107,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17071,7 +17123,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{approle_mount_path}/role/{role_name}/policies", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<ApproleRolePoliciesResponse>("/auth/{approle_mount_path}/role/{role_name}/policies", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17079,17 +17131,17 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRolePoliciesResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Returns the &#39;role_id&#39; of the role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleRoleIdResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -17097,7 +17149,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNameRoleId(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+        public VaultResponse<ApproleRoleRoleIdResponse> GetAuthApproleRoleRoleNameRoleId(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -17115,6 +17167,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17130,7 +17183,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{approle_mount_path}/role/{role_name}/role-id", requestOptions);
+            var response = this.Client.Get<ApproleRoleRoleIdResponse>("/auth/{approle_mount_path}/role/{role_name}/role-id", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17138,12 +17191,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleRoleIdResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Returns the &#39;role_id&#39; of the role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -17156,8 +17209,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameRoleIdAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (ApproleRoleRoleIdResponse)</returns>
+        public async Task<VaultResponse<ApproleRoleRoleIdResponse>> GetAuthApproleRoleRoleNameRoleIdAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -17176,6 +17229,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17191,7 +17245,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{approle_mount_path}/role/{role_name}/role-id", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<ApproleRoleRoleIdResponse>("/auth/{approle_mount_path}/role/{role_name}/role-id", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17199,18 +17253,18 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleRoleIdResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Generate a SecretID against this role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleSecretIdResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -17218,7 +17272,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNameSecretId(string roleName, string list, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+        public VaultResponse<ApproleRoleSecretIdResponse> GetAuthApproleRoleRoleNameSecretId(string roleName, string list, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -17240,6 +17294,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17256,7 +17311,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{approle_mount_path}/role/{role_name}/secret-id", requestOptions);
+            var response = this.Client.Get<ApproleRoleSecretIdResponse>("/auth/{approle_mount_path}/role/{role_name}/secret-id", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17264,12 +17319,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleSecretIdResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Generate a SecretID against this role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -17283,8 +17338,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameSecretIdAsync(string roleName, string list, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (ApproleRoleSecretIdResponse)</returns>
+        public async Task<VaultResponse<ApproleRoleSecretIdResponse>> GetAuthApproleRoleRoleNameSecretIdAsync(string roleName, string list, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -17307,6 +17362,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17323,7 +17379,7 @@ namespace Vault.Api
             requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{approle_mount_path}/role/{role_name}/secret-id", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<ApproleRoleSecretIdResponse>("/auth/{approle_mount_path}/role/{role_name}/secret-id", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17331,17 +17387,17 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleSecretIdResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleSecretIdBoundCidrsResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -17349,7 +17405,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNameSecretIdBoundCidrs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+        public VaultResponse<ApproleRoleSecretIdBoundCidrsResponse> GetAuthApproleRoleRoleNameSecretIdBoundCidrs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -17367,6 +17423,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17382,7 +17439,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{approle_mount_path}/role/{role_name}/secret-id-bound-cidrs", requestOptions);
+            var response = this.Client.Get<ApproleRoleSecretIdBoundCidrsResponse>("/auth/{approle_mount_path}/role/{role_name}/secret-id-bound-cidrs", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17390,12 +17447,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleSecretIdBoundCidrsResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -17408,8 +17465,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameSecretIdBoundCidrsAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (ApproleRoleSecretIdBoundCidrsResponse)</returns>
+        public async Task<VaultResponse<ApproleRoleSecretIdBoundCidrsResponse>> GetAuthApproleRoleRoleNameSecretIdBoundCidrsAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -17428,6 +17485,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17443,7 +17501,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{approle_mount_path}/role/{role_name}/secret-id-bound-cidrs", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<ApproleRoleSecretIdBoundCidrsResponse>("/auth/{approle_mount_path}/role/{role_name}/secret-id-bound-cidrs", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17451,17 +17509,17 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleSecretIdBoundCidrsResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Use limit of the SecretID generated against the role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleSecretIdNumUsesResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -17469,7 +17527,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNameSecretIdNumUses(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+        public VaultResponse<ApproleRoleSecretIdNumUsesResponse> GetAuthApproleRoleRoleNameSecretIdNumUses(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -17487,6 +17545,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17502,7 +17561,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{approle_mount_path}/role/{role_name}/secret-id-num-uses", requestOptions);
+            var response = this.Client.Get<ApproleRoleSecretIdNumUsesResponse>("/auth/{approle_mount_path}/role/{role_name}/secret-id-num-uses", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17510,12 +17569,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleSecretIdNumUsesResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Use limit of the SecretID generated against the role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -17528,8 +17587,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameSecretIdNumUsesAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (ApproleRoleSecretIdNumUsesResponse)</returns>
+        public async Task<VaultResponse<ApproleRoleSecretIdNumUsesResponse>> GetAuthApproleRoleRoleNameSecretIdNumUsesAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -17548,6 +17607,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17563,7 +17623,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{approle_mount_path}/role/{role_name}/secret-id-num-uses", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<ApproleRoleSecretIdNumUsesResponse>("/auth/{approle_mount_path}/role/{role_name}/secret-id-num-uses", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17571,17 +17631,17 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleSecretIdNumUsesResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Duration in seconds of the SecretID generated against the role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleSecretIdTtlResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -17589,7 +17649,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNameSecretIdTtl(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+        public VaultResponse<ApproleRoleSecretIdTtlResponse> GetAuthApproleRoleRoleNameSecretIdTtl(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -17607,6 +17667,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17622,7 +17683,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{approle_mount_path}/role/{role_name}/secret-id-ttl", requestOptions);
+            var response = this.Client.Get<ApproleRoleSecretIdTtlResponse>("/auth/{approle_mount_path}/role/{role_name}/secret-id-ttl", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17630,12 +17691,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleSecretIdTtlResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Duration in seconds of the SecretID generated against the role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -17648,8 +17709,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameSecretIdTtlAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (ApproleRoleSecretIdTtlResponse)</returns>
+        public async Task<VaultResponse<ApproleRoleSecretIdTtlResponse>> GetAuthApproleRoleRoleNameSecretIdTtlAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -17668,6 +17729,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17683,7 +17745,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{approle_mount_path}/role/{role_name}/secret-id-ttl", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<ApproleRoleSecretIdTtlResponse>("/auth/{approle_mount_path}/role/{role_name}/secret-id-ttl", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17691,17 +17753,17 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleSecretIdTtlResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleTokenBoundCidrsResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -17709,7 +17771,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNameTokenBoundCidrs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+        public VaultResponse<ApproleRoleTokenBoundCidrsResponse> GetAuthApproleRoleRoleNameTokenBoundCidrs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -17727,6 +17789,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17742,7 +17805,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{approle_mount_path}/role/{role_name}/token-bound-cidrs", requestOptions);
+            var response = this.Client.Get<ApproleRoleTokenBoundCidrsResponse>("/auth/{approle_mount_path}/role/{role_name}/token-bound-cidrs", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17750,12 +17813,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleTokenBoundCidrsResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -17768,8 +17831,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameTokenBoundCidrsAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (ApproleRoleTokenBoundCidrsResponse)</returns>
+        public async Task<VaultResponse<ApproleRoleTokenBoundCidrsResponse>> GetAuthApproleRoleRoleNameTokenBoundCidrsAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -17788,6 +17851,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17803,7 +17867,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{approle_mount_path}/role/{role_name}/token-bound-cidrs", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<ApproleRoleTokenBoundCidrsResponse>("/auth/{approle_mount_path}/role/{role_name}/token-bound-cidrs", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17811,17 +17875,17 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleTokenBoundCidrsResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleTokenMaxTtlResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -17829,7 +17893,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNameTokenMaxTtl(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+        public VaultResponse<ApproleRoleTokenMaxTtlResponse> GetAuthApproleRoleRoleNameTokenMaxTtl(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -17847,6 +17911,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17862,7 +17927,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{approle_mount_path}/role/{role_name}/token-max-ttl", requestOptions);
+            var response = this.Client.Get<ApproleRoleTokenMaxTtlResponse>("/auth/{approle_mount_path}/role/{role_name}/token-max-ttl", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17870,12 +17935,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleTokenMaxTtlResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -17888,8 +17953,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameTokenMaxTtlAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (ApproleRoleTokenMaxTtlResponse)</returns>
+        public async Task<VaultResponse<ApproleRoleTokenMaxTtlResponse>> GetAuthApproleRoleRoleNameTokenMaxTtlAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -17908,6 +17973,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17923,7 +17989,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{approle_mount_path}/role/{role_name}/token-max-ttl", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<ApproleRoleTokenMaxTtlResponse>("/auth/{approle_mount_path}/role/{role_name}/token-max-ttl", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17931,17 +17997,17 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleTokenMaxTtlResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Number of times issued tokens can be used 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleTokenNumUsesResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -17949,7 +18015,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNameTokenNumUses(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+        public VaultResponse<ApproleRoleTokenNumUsesResponse> GetAuthApproleRoleRoleNameTokenNumUses(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -17967,6 +18033,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -17982,7 +18049,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{approle_mount_path}/role/{role_name}/token-num-uses", requestOptions);
+            var response = this.Client.Get<ApproleRoleTokenNumUsesResponse>("/auth/{approle_mount_path}/role/{role_name}/token-num-uses", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -17990,12 +18057,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleTokenNumUsesResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Number of times issued tokens can be used 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -18008,8 +18075,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameTokenNumUsesAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (ApproleRoleTokenNumUsesResponse)</returns>
+        public async Task<VaultResponse<ApproleRoleTokenNumUsesResponse>> GetAuthApproleRoleRoleNameTokenNumUsesAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -18028,6 +18095,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18043,7 +18111,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{approle_mount_path}/role/{role_name}/token-num-uses", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<ApproleRoleTokenNumUsesResponse>("/auth/{approle_mount_path}/role/{role_name}/token-num-uses", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18051,17 +18119,17 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleTokenNumUsesResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleTokenTtlResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -18069,7 +18137,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GetAuthApproleRoleRoleNameTokenTtl(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+        public VaultResponse<ApproleRoleTokenTtlResponse> GetAuthApproleRoleRoleNameTokenTtl(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -18087,6 +18155,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18102,7 +18171,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = this.Client.Get<Object>("/auth/{approle_mount_path}/role/{role_name}/token-ttl", requestOptions);
+            var response = this.Client.Get<ApproleRoleTokenTtlResponse>("/auth/{approle_mount_path}/role/{role_name}/token-ttl", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -18110,12 +18179,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleTokenTtlResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -18128,8 +18197,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetAuthApproleRoleRoleNameTokenTtlAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (ApproleRoleTokenTtlResponse)</returns>
+        public async Task<VaultResponse<ApproleRoleTokenTtlResponse>> GetAuthApproleRoleRoleNameTokenTtlAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -18148,6 +18217,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -18163,7 +18233,7 @@ namespace Vault.Api
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{approle_mount_path}/role/{role_name}/token-ttl", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.GetAsync<ApproleRoleTokenTtlResponse>("/auth/{approle_mount_path}/role/{role_name}/token-ttl", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -18171,7 +18241,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleTokenTtlResponse>(response.RawContent);
         }
 
 
@@ -18230,7 +18300,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18291,7 +18361,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18350,7 +18420,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18411,7 +18481,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18464,7 +18534,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18519,7 +18589,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18572,7 +18642,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18627,7 +18697,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18686,7 +18756,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18747,7 +18817,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18806,7 +18876,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18867,7 +18937,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18920,7 +18990,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18975,7 +19045,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19028,7 +19098,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19083,7 +19153,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19136,7 +19206,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19191,7 +19261,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19244,7 +19314,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19299,7 +19369,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19358,7 +19428,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19419,7 +19489,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19478,7 +19548,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19539,7 +19609,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19598,7 +19668,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19659,7 +19729,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19718,7 +19788,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19779,7 +19849,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19838,7 +19908,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19899,7 +19969,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19958,7 +20028,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20019,7 +20089,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20078,7 +20148,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20139,7 +20209,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20198,7 +20268,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20259,7 +20329,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20318,7 +20388,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20379,7 +20449,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20438,7 +20508,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20499,7 +20569,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20558,7 +20628,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20619,7 +20689,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20672,7 +20742,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20727,7 +20797,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20786,7 +20856,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20847,7 +20917,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20906,7 +20976,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20967,7 +21037,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21020,7 +21090,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21075,7 +21145,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21134,7 +21204,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21195,7 +21265,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21254,7 +21324,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21315,7 +21385,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21368,7 +21438,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21423,7 +21493,127 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> GetAuthCertCrls(string list, string certMountPath = "cert", TimeSpan? wrapTTL = null)
+        {
+            // verify the required parameter 'list' is set
+            if (list == null)
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthCertCrls");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (certMountPath != null)
+            {
+                requestOptions.PathParameters.Add("cert_mount_path", ClientUtils.ParameterToString(certMountPath)); // path parameter
+            }
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/auth/{cert_mount_path}/crls", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("GetAuthCertCrls", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="list">Must be set to &#x60;true&#x60;</param>
+        /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> GetAuthCertCrlsAsync(string list, string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'list' is set
+            if (list == null)
+                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->GetAuthCertCrls");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            if (certMountPath != null)
+            {
+                requestOptions.PathParameters.Add("cert_mount_path", ClientUtils.ParameterToString(certMountPath)); // path parameter
+            }
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{cert_mount_path}/crls", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("GetAuthCertCrls", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21482,7 +21672,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21543,7 +21733,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21596,7 +21786,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21651,7 +21841,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21710,7 +21900,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21771,7 +21961,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21830,7 +22020,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21891,7 +22081,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21944,7 +22134,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21999,7 +22189,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22058,7 +22248,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22119,7 +22309,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22178,7 +22368,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22239,7 +22429,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22298,7 +22488,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22359,7 +22549,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22412,7 +22602,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22467,7 +22657,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22525,7 +22715,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22585,7 +22775,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22644,7 +22834,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22705,7 +22895,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22763,7 +22953,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22823,7 +23013,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22882,7 +23072,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22943,7 +23133,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22996,7 +23186,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23051,7 +23241,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23104,7 +23294,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23159,7 +23349,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23218,7 +23408,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23279,7 +23469,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23338,7 +23528,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23399,7 +23589,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23452,7 +23642,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23507,7 +23697,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23560,7 +23750,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23615,7 +23805,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23674,7 +23864,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23735,7 +23925,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23794,7 +23984,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23855,7 +24045,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23908,7 +24098,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23963,7 +24153,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -24016,7 +24206,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -24071,7 +24261,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -24130,7 +24320,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -24191,7 +24381,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -24250,7 +24440,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -24311,7 +24501,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -24364,7 +24554,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -24419,7 +24609,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -24478,7 +24668,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -24539,7 +24729,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -24598,7 +24788,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -24659,7 +24849,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -24718,7 +24908,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -24779,7 +24969,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -24838,7 +25028,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -24899,7 +25089,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -24952,7 +25142,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -25007,7 +25197,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -25066,7 +25256,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -25127,7 +25317,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -25186,7 +25376,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -25247,7 +25437,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -25300,7 +25490,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -25355,7 +25545,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -25408,7 +25598,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -25463,7 +25653,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -25522,7 +25712,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -25583,7 +25773,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -25642,7 +25832,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -25703,7 +25893,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -25756,7 +25946,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -25811,7 +26001,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -25870,7 +26060,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -25931,7 +26121,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -25990,7 +26180,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -26051,7 +26241,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -26110,7 +26300,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -26171,7 +26361,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -26230,7 +26420,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -26291,7 +26481,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -26350,7 +26540,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -26411,7 +26601,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -26464,7 +26654,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -26519,7 +26709,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -26578,7 +26768,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -26639,7 +26829,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -26698,7 +26888,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -26759,7 +26949,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -26818,7 +27008,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -26879,7 +27069,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -26932,7 +27122,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -26987,7 +27177,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -27040,7 +27230,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -27095,7 +27285,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -27154,7 +27344,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -27215,7 +27405,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -27274,7 +27464,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -27335,7 +27525,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -27394,7 +27584,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -27455,7 +27645,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -27514,7 +27704,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -27575,7 +27765,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -27635,7 +27825,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -27697,7 +27887,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -27763,7 +27953,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -27831,7 +28021,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -27891,7 +28081,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -27953,12 +28143,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Register an role with the backend. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -28019,12 +28209,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Register an role with the backend. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -28087,12 +28277,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Impose secret_id to be presented during login using this role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -28153,12 +28343,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Impose secret_id to be presented during login using this role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -28221,12 +28411,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -28287,12 +28477,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -28355,18 +28545,18 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Assign a SecretID of choice against the role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleRoleCustomSecretIdRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleCustomSecretIdResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -28374,7 +28564,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> PostAuthApproleRoleRoleNameCustomSecretId(string roleName, ApproleRoleCustomSecretIdRequest approleRoleCustomSecretIdRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+        public VaultResponse<ApproleRoleCustomSecretIdResponse> PostAuthApproleRoleRoleNameCustomSecretId(string roleName, ApproleRoleCustomSecretIdRequest approleRoleCustomSecretIdRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -28397,6 +28587,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -28413,7 +28604,7 @@ namespace Vault.Api
             requestOptions.Data = approleRoleCustomSecretIdRequest;
 
             // make the HTTP request
-            var response = this.Client.Post<Object>("/auth/{approle_mount_path}/role/{role_name}/custom-secret-id", requestOptions);
+            var response = this.Client.Post<ApproleRoleCustomSecretIdResponse>("/auth/{approle_mount_path}/role/{role_name}/custom-secret-id", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28421,12 +28612,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleCustomSecretIdResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Assign a SecretID of choice against the role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -28440,8 +28631,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameCustomSecretIdAsync(string roleName, ApproleRoleCustomSecretIdRequest approleRoleCustomSecretIdRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (ApproleRoleCustomSecretIdResponse)</returns>
+        public async Task<VaultResponse<ApproleRoleCustomSecretIdResponse>> PostAuthApproleRoleRoleNameCustomSecretIdAsync(string roleName, ApproleRoleCustomSecretIdRequest approleRoleCustomSecretIdRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -28465,6 +28656,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -28481,7 +28673,7 @@ namespace Vault.Api
             requestOptions.Data = approleRoleCustomSecretIdRequest;
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/auth/{approle_mount_path}/role/{role_name}/custom-secret-id", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<ApproleRoleCustomSecretIdResponse>("/auth/{approle_mount_path}/role/{role_name}/custom-secret-id", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -28489,12 +28681,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleCustomSecretIdResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Updates the value of &#39;period&#39; on the role 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -28555,12 +28747,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Updates the value of &#39;period&#39; on the role 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -28623,12 +28815,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Policies of the role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -28689,12 +28881,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Policies of the role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -28757,12 +28949,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Returns the &#39;role_id&#39; of the role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -28823,12 +29015,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Returns the &#39;role_id&#39; of the role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -28891,18 +29083,18 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Generate a SecretID against this role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleRoleSecretIdRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleSecretIdResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -28910,7 +29102,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> PostAuthApproleRoleRoleNameSecretId(string roleName, ApproleRoleSecretIdRequest approleRoleSecretIdRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+        public VaultResponse<ApproleRoleSecretIdResponse> PostAuthApproleRoleRoleNameSecretId(string roleName, ApproleRoleSecretIdRequest approleRoleSecretIdRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -28933,6 +29125,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -28949,7 +29142,7 @@ namespace Vault.Api
             requestOptions.Data = approleRoleSecretIdRequest;
 
             // make the HTTP request
-            var response = this.Client.Post<Object>("/auth/{approle_mount_path}/role/{role_name}/secret-id", requestOptions);
+            var response = this.Client.Post<ApproleRoleSecretIdResponse>("/auth/{approle_mount_path}/role/{role_name}/secret-id", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -28957,12 +29150,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleSecretIdResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Generate a SecretID against this role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -28976,8 +29169,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdAsync(string roleName, ApproleRoleSecretIdRequest approleRoleSecretIdRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (ApproleRoleSecretIdResponse)</returns>
+        public async Task<VaultResponse<ApproleRoleSecretIdResponse>> PostAuthApproleRoleRoleNameSecretIdAsync(string roleName, ApproleRoleSecretIdRequest approleRoleSecretIdRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -29001,6 +29194,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -29017,7 +29211,7 @@ namespace Vault.Api
             requestOptions.Data = approleRoleSecretIdRequest;
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/auth/{approle_mount_path}/role/{role_name}/secret-id", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<ApproleRoleSecretIdResponse>("/auth/{approle_mount_path}/role/{role_name}/secret-id", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29025,7 +29219,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleSecretIdResponse>(response.RawContent);
         }
 
 
@@ -29091,7 +29285,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -29159,7 +29353,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -29170,7 +29364,7 @@ namespace Vault.Api
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleRoleSecretIdAccessorLookupRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleSecretIdAccessorLookupResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -29178,7 +29372,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdAccessorLookup(string roleName, ApproleRoleSecretIdAccessorLookupRequest approleRoleSecretIdAccessorLookupRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+        public VaultResponse<ApproleRoleSecretIdAccessorLookupResponse> PostAuthApproleRoleRoleNameSecretIdAccessorLookup(string roleName, ApproleRoleSecretIdAccessorLookupRequest approleRoleSecretIdAccessorLookupRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -29201,6 +29395,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -29217,7 +29412,7 @@ namespace Vault.Api
             requestOptions.Data = approleRoleSecretIdAccessorLookupRequest;
 
             // make the HTTP request
-            var response = this.Client.Post<Object>("/auth/{approle_mount_path}/role/{role_name}/secret-id-accessor/lookup", requestOptions);
+            var response = this.Client.Post<ApproleRoleSecretIdAccessorLookupResponse>("/auth/{approle_mount_path}/role/{role_name}/secret-id-accessor/lookup", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29225,7 +29420,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleSecretIdAccessorLookupResponse>(response.RawContent);
         }
 
 
@@ -29244,8 +29439,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdAccessorLookupAsync(string roleName, ApproleRoleSecretIdAccessorLookupRequest approleRoleSecretIdAccessorLookupRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (ApproleRoleSecretIdAccessorLookupResponse)</returns>
+        public async Task<VaultResponse<ApproleRoleSecretIdAccessorLookupResponse>> PostAuthApproleRoleRoleNameSecretIdAccessorLookupAsync(string roleName, ApproleRoleSecretIdAccessorLookupRequest approleRoleSecretIdAccessorLookupRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -29269,6 +29464,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -29285,7 +29481,7 @@ namespace Vault.Api
             requestOptions.Data = approleRoleSecretIdAccessorLookupRequest;
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/auth/{approle_mount_path}/role/{role_name}/secret-id-accessor/lookup", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<ApproleRoleSecretIdAccessorLookupResponse>("/auth/{approle_mount_path}/role/{role_name}/secret-id-accessor/lookup", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29293,12 +29489,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleSecretIdAccessorLookupResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -29359,12 +29555,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -29427,12 +29623,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Invalidate an issued secret_id 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -29493,12 +29689,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Invalidate an issued secret_id 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -29561,18 +29757,18 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Read the properties of an issued secret_id 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleRoleSecretIdLookupRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
+        /// <returns>VaultResponse of ApproleRoleSecretIdLookupResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -29580,7 +29776,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> PostAuthApproleRoleRoleNameSecretIdLookup(string roleName, ApproleRoleSecretIdLookupRequest approleRoleSecretIdLookupRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+        public VaultResponse<ApproleRoleSecretIdLookupResponse> PostAuthApproleRoleRoleNameSecretIdLookup(string roleName, ApproleRoleSecretIdLookupRequest approleRoleSecretIdLookupRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -29603,6 +29799,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -29619,7 +29816,7 @@ namespace Vault.Api
             requestOptions.Data = approleRoleSecretIdLookupRequest;
 
             // make the HTTP request
-            var response = this.Client.Post<Object>("/auth/{approle_mount_path}/role/{role_name}/secret-id/lookup", requestOptions);
+            var response = this.Client.Post<ApproleRoleSecretIdLookupResponse>("/auth/{approle_mount_path}/role/{role_name}/secret-id/lookup", requestOptions);
 
             if (this.ExceptionFactory != null)
             {
@@ -29627,12 +29824,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleSecretIdLookupResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Read the properties of an issued secret_id 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -29646,8 +29843,8 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthApproleRoleRoleNameSecretIdLookupAsync(string roleName, ApproleRoleSecretIdLookupRequest approleRoleSecretIdLookupRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of VaultResponse (ApproleRoleSecretIdLookupResponse)</returns>
+        public async Task<VaultResponse<ApproleRoleSecretIdLookupResponse>> PostAuthApproleRoleRoleNameSecretIdLookupAsync(string roleName, ApproleRoleSecretIdLookupRequest approleRoleSecretIdLookupRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -29671,6 +29868,7 @@ namespace Vault.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
+                "application/json"
             };
 
             var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -29687,7 +29885,7 @@ namespace Vault.Api
             requestOptions.Data = approleRoleSecretIdLookupRequest;
 
             // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/auth/{approle_mount_path}/role/{role_name}/secret-id/lookup", requestOptions, cancellationToken).ConfigureAwait(false);
+            var response = await this.AsynchronousClient.PostAsync<ApproleRoleSecretIdLookupResponse>("/auth/{approle_mount_path}/role/{role_name}/secret-id/lookup", requestOptions, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -29695,12 +29893,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<ApproleRoleSecretIdLookupResponse>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Use limit of the SecretID generated against the role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -29761,12 +29959,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Use limit of the SecretID generated against the role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -29829,12 +30027,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Duration in seconds of the SecretID generated against the role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -29895,12 +30093,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Duration in seconds of the SecretID generated against the role. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -29963,12 +30161,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -30029,12 +30227,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -30097,12 +30295,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -30163,12 +30361,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -30231,12 +30429,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Number of times issued tokens can be used 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -30297,12 +30495,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Number of times issued tokens can be used 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -30365,12 +30563,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -30431,12 +30629,12 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed. 
+        ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
@@ -30499,7 +30697,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -30552,7 +30750,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -30607,7 +30805,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -30673,7 +30871,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -30741,7 +30939,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -30801,7 +30999,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -30863,7 +31061,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -30923,7 +31121,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -30985,7 +31183,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -31038,7 +31236,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -31093,7 +31291,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -31159,7 +31357,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -31227,7 +31425,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -31287,7 +31485,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -31349,7 +31547,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -31409,7 +31607,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -31471,7 +31669,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -31531,7 +31729,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -31593,7 +31791,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -31653,7 +31851,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -31715,7 +31913,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -31775,7 +31973,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -31837,7 +32035,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -31903,7 +32101,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -31971,7 +32169,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -32037,7 +32235,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -32105,7 +32303,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -32164,7 +32362,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -32225,7 +32423,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -32284,7 +32482,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -32345,7 +32543,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -32405,7 +32603,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -32467,7 +32665,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -32527,7 +32725,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -32589,7 +32787,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -32649,7 +32847,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -32711,7 +32909,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -32771,7 +32969,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -32833,7 +33031,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -32893,7 +33091,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -32955,7 +33153,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -33015,7 +33213,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -33077,7 +33275,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -33143,7 +33341,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -33211,7 +33409,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -33271,7 +33469,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -33333,7 +33531,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -33393,7 +33591,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -33455,7 +33653,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -33521,7 +33719,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -33589,7 +33787,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -33649,7 +33847,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -33711,7 +33909,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -33777,7 +33975,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -33845,7 +34043,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -33905,7 +34103,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -33967,7 +34165,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -34027,7 +34225,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -34089,7 +34287,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -34149,7 +34347,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -34211,7 +34409,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -34277,7 +34475,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -34345,7 +34543,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -34405,7 +34603,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -34467,7 +34665,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -34527,7 +34725,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -34589,7 +34787,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -34655,7 +34853,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -34723,7 +34921,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -34789,7 +34987,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -34857,7 +35055,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -34923,7 +35121,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -34991,7 +35189,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -35051,7 +35249,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -35113,7 +35311,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -35173,7 +35371,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -35235,7 +35433,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -35301,7 +35499,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -35369,7 +35567,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -35435,7 +35633,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -35503,7 +35701,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -35563,7 +35761,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -35625,7 +35823,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -35685,7 +35883,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -35747,7 +35945,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -35807,7 +36005,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -35869,7 +36067,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -35929,7 +36127,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -35991,7 +36189,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -36057,7 +36255,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -36125,7 +36323,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -36185,7 +36383,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -36247,7 +36445,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -36307,7 +36505,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -36369,7 +36567,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -36435,7 +36633,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -36503,7 +36701,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -36563,7 +36761,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -36625,7 +36823,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -36685,7 +36883,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -36747,7 +36945,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -36807,7 +37005,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -36869,7 +37067,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -36935,7 +37133,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -37003,7 +37201,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -37063,7 +37261,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -37125,7 +37323,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -37191,7 +37389,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -37259,7 +37457,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -37325,7 +37523,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -37393,7 +37591,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -37459,7 +37657,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -37527,7 +37725,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -37587,7 +37785,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -37649,7 +37847,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -37715,7 +37913,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -37783,7 +37981,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -37849,7 +38047,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -37917,7 +38115,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -37977,7 +38175,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -38039,7 +38237,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -38099,7 +38297,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -38161,7 +38359,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -38221,7 +38419,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -38283,7 +38481,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -38343,7 +38541,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -38405,7 +38603,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -38471,7 +38669,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -38539,7 +38737,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -38599,7 +38797,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -38661,7 +38859,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -38727,7 +38925,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -38795,7 +38993,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -38861,7 +39059,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -38929,7 +39127,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -38995,7 +39193,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -39063,7 +39261,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -39123,7 +39321,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -39185,7 +39383,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -39245,7 +39443,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -39307,7 +39505,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -39373,7 +39571,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -39441,7 +39639,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -39507,7 +39705,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -39575,7 +39773,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -39584,7 +39782,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateRequest"></param>
-        /// <param name="format">Return json formatted output (optional, default to &quot;json&quot;)</param>
+        /// <param name="format">Return json formatted output (optional, default to &quot;&quot;)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -39594,7 +39792,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> PostAuthTokenCreate(TokenCreateRequest tokenCreateRequest, string format = "json", string tokenMountPath = "token", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> PostAuthTokenCreate(TokenCreateRequest tokenCreateRequest, string format = "", string tokenMountPath = "token", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'tokenCreateRequest' is set
             if (tokenCreateRequest == null)
@@ -39640,7 +39838,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -39649,7 +39847,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateRequest"></param>
-        /// <param name="format">Return json formatted output (optional, default to &quot;json&quot;)</param>
+        /// <param name="format">Return json formatted output (optional, default to &quot;&quot;)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -39660,7 +39858,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthTokenCreateAsync(TokenCreateRequest tokenCreateRequest, string format = "json", string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthTokenCreateAsync(TokenCreateRequest tokenCreateRequest, string format = "", string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'tokenCreateRequest' is set
             if (tokenCreateRequest == null)
@@ -39707,7 +39905,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -39716,7 +39914,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateOrphanRequest"></param>
-        /// <param name="format">Return json formatted output (optional, default to &quot;json&quot;)</param>
+        /// <param name="format">Return json formatted output (optional, default to &quot;&quot;)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -39726,7 +39924,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> PostAuthTokenCreateOrphan(TokenCreateOrphanRequest tokenCreateOrphanRequest, string format = "json", string tokenMountPath = "token", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> PostAuthTokenCreateOrphan(TokenCreateOrphanRequest tokenCreateOrphanRequest, string format = "", string tokenMountPath = "token", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'tokenCreateOrphanRequest' is set
             if (tokenCreateOrphanRequest == null)
@@ -39772,7 +39970,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -39781,7 +39979,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenCreateOrphanRequest"></param>
-        /// <param name="format">Return json formatted output (optional, default to &quot;json&quot;)</param>
+        /// <param name="format">Return json formatted output (optional, default to &quot;&quot;)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -39792,7 +39990,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthTokenCreateOrphanAsync(TokenCreateOrphanRequest tokenCreateOrphanRequest, string format = "json", string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthTokenCreateOrphanAsync(TokenCreateOrphanRequest tokenCreateOrphanRequest, string format = "", string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'tokenCreateOrphanRequest' is set
             if (tokenCreateOrphanRequest == null)
@@ -39839,7 +40037,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -39849,7 +40047,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role</param>
         /// <param name="tokenCreateRequest"></param>
-        /// <param name="format">Return json formatted output (optional, default to &quot;json&quot;)</param>
+        /// <param name="format">Return json formatted output (optional, default to &quot;&quot;)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -39859,7 +40057,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> PostAuthTokenCreateRoleName(string roleName, TokenCreateRequest tokenCreateRequest, string format = "json", string tokenMountPath = "token", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> PostAuthTokenCreateRoleName(string roleName, TokenCreateRequest tokenCreateRequest, string format = "", string tokenMountPath = "token", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -39910,7 +40108,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -39920,7 +40118,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role</param>
         /// <param name="tokenCreateRequest"></param>
-        /// <param name="format">Return json formatted output (optional, default to &quot;json&quot;)</param>
+        /// <param name="format">Return json formatted output (optional, default to &quot;&quot;)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -39931,7 +40129,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PostAuthTokenCreateRoleNameAsync(string roleName, TokenCreateRequest tokenCreateRequest, string format = "json", string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PostAuthTokenCreateRoleNameAsync(string roleName, TokenCreateRequest tokenCreateRequest, string format = "", string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -39983,7 +40181,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -40043,7 +40241,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -40105,7 +40303,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -40165,7 +40363,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -40227,7 +40425,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -40287,7 +40485,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -40349,7 +40547,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -40409,7 +40607,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -40471,7 +40669,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -40531,7 +40729,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -40593,7 +40791,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -40653,7 +40851,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -40715,7 +40913,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -40775,7 +40973,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -40837,7 +41035,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -40897,7 +41095,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -40959,7 +41157,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -41019,7 +41217,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -41081,7 +41279,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -41134,7 +41332,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -41189,7 +41387,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -41255,7 +41453,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -41323,7 +41521,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -41376,7 +41574,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -41431,7 +41629,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -41497,7 +41695,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -41565,7 +41763,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -41631,7 +41829,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -41699,7 +41897,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -41765,7 +41963,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -41833,7 +42031,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -41899,7 +42097,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -41967,7 +42165,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
     }

@@ -992,13 +992,12 @@ namespace Vault.Api
         /// </param>
         VaultResponse<Object> GetSysLeasesLookupPrefix(string prefix, string list, TimeSpan? wrapTTL = null);
         /// <summary>
-        /// Export the metrics aggregated for telemetry purpose.
+        /// Read the log level for all existing loggers.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional, default to &quot;json&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1007,7 +1006,41 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GetSysMetrics(string format = "json", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> GetSysLoggers(TimeSpan? wrapTTL = null);
+        /// <summary>
+        /// Read the log level for a single logger.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of the logger to be modified.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> GetSysLoggersName(string name, TimeSpan? wrapTTL = null);
+        /// <summary>
+        /// Export the metrics aggregated for telemetry purpose.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional, default to &quot;&quot;)</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> GetSysMetrics(string format = "", TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -3895,13 +3928,12 @@ namespace Vault.Api
         Task<VaultResponse<Object>> GetSysLeasesLookupPrefixAsync(string prefix, string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
-        /// Export the metrics aggregated for telemetry purpose.
+        /// Read the log level for all existing loggers.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional, default to &quot;json&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -3911,7 +3943,45 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GetSysMetricsAsync(string format = "json", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GetSysLoggersAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Read the log level for a single logger.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of the logger to be modified.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> GetSysLoggersNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+   
+        /// <summary>
+        /// Export the metrics aggregated for telemetry purpose.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional, default to &quot;&quot;)</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> GetSysMetricsAsync(string format = "", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -6035,7 +6105,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -6091,7 +6161,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -6145,7 +6215,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -6201,7 +6271,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -6255,7 +6325,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -6311,7 +6381,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -6359,7 +6429,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -6409,7 +6479,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -6463,7 +6533,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -6519,7 +6589,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -6567,7 +6637,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -6617,7 +6687,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -6665,7 +6735,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -6715,7 +6785,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -6763,7 +6833,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -6813,7 +6883,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -6867,7 +6937,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -6923,7 +6993,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -6977,7 +7047,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -7033,7 +7103,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -7087,7 +7157,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -7143,7 +7213,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -7203,7 +7273,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -7265,7 +7335,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -7319,7 +7389,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -7375,7 +7445,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -7429,7 +7499,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -7485,7 +7555,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -7539,7 +7609,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -7595,7 +7665,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -7649,7 +7719,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -7705,7 +7775,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -7753,7 +7823,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -7803,7 +7873,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -7857,7 +7927,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -7913,7 +7983,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -7961,7 +8031,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -8011,7 +8081,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -8059,7 +8129,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -8109,7 +8179,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -8157,7 +8227,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -8207,7 +8277,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -8255,7 +8325,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -8305,7 +8375,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -8353,7 +8423,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -8403,7 +8473,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -8451,7 +8521,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -8501,7 +8571,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -8555,7 +8625,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -8611,7 +8681,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -8665,7 +8735,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -8721,7 +8791,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -8769,7 +8839,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -8819,7 +8889,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -8873,7 +8943,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -8929,7 +8999,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -8977,7 +9047,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -9027,7 +9097,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -9075,7 +9145,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -9125,7 +9195,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -9179,7 +9249,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -9235,7 +9305,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -9289,7 +9359,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -9345,7 +9415,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -9393,7 +9463,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -9443,7 +9513,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -9491,7 +9561,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -9541,7 +9611,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -9589,7 +9659,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -9639,7 +9709,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -9687,7 +9757,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -9737,7 +9807,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -9785,7 +9855,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -9835,7 +9905,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -9883,7 +9953,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -9933,7 +10003,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -9981,7 +10051,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -10031,7 +10101,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -10079,7 +10149,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -10129,7 +10199,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -10177,7 +10247,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -10227,7 +10297,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -10275,7 +10345,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -10325,7 +10395,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -10373,7 +10443,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -10423,7 +10493,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -10471,7 +10541,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -10521,7 +10591,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -10569,7 +10639,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -10619,7 +10689,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -10667,7 +10737,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -10717,7 +10787,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -10771,7 +10841,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -10827,7 +10897,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -10875,7 +10945,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -10925,7 +10995,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -10973,7 +11043,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -11023,7 +11093,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -11071,7 +11141,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -11121,7 +11191,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -11175,7 +11245,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -11231,7 +11301,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -11279,7 +11349,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -11329,7 +11399,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -11377,7 +11447,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -11427,7 +11497,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -11475,7 +11545,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -11525,7 +11595,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -11573,7 +11643,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -11623,7 +11693,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -11671,7 +11741,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -11721,7 +11791,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -11769,7 +11839,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -11819,7 +11889,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -11873,7 +11943,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -11929,7 +11999,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -11989,7 +12059,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12051,15 +12121,14 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
         /// <summary>
-        /// Export the metrics aggregated for telemetry purpose. 
+        /// Read the log level for all existing loggers. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional, default to &quot;json&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -12068,7 +12137,216 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GetSysMetrics(string format = "json", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> GetSysLoggers(TimeSpan? wrapTTL = null)
+        {
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/loggers", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("GetSysLoggers", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Read the log level for all existing loggers. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> GetSysLoggersAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/loggers", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("GetSysLoggers", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Read the log level for a single logger. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of the logger to be modified.</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> GetSysLoggersName(string name, TimeSpan? wrapTTL = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->GetSysLoggersName");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = this.Client.Get<Object>("/sys/loggers/{name}", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("GetSysLoggersName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Read the log level for a single logger. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The name of the logger to be modified.</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> GetSysLoggersNameAsync(string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new VaultApiException(400, "Missing required parameter 'name' when calling System->GetSysLoggersName");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("name", ClientUtils.ParameterToString(name)); // path parameter
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.GetAsync<Object>("/sys/loggers/{name}", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("GetSysLoggersName", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        /// Export the metrics aggregated for telemetry purpose. 
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional, default to &quot;&quot;)</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> GetSysMetrics(string format = "", TimeSpan? wrapTTL = null)
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -12104,7 +12382,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12112,7 +12390,7 @@ namespace Vault.Api
         /// Export the metrics aggregated for telemetry purpose. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional, default to &quot;json&quot;)</param>
+        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional, default to &quot;&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -12122,7 +12400,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GetSysMetricsAsync(string format = "json", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GetSysMetricsAsync(string format = "", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -12159,7 +12437,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12217,7 +12495,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12277,7 +12555,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12325,7 +12603,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12375,7 +12653,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12429,7 +12707,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12485,7 +12763,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12539,7 +12817,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12595,7 +12873,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12643,7 +12921,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12693,7 +12971,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12747,7 +13025,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12803,7 +13081,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12863,7 +13141,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12925,7 +13203,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -12985,7 +13263,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13047,7 +13325,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13101,7 +13379,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13157,7 +13435,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13211,7 +13489,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13267,7 +13545,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13321,7 +13599,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13377,7 +13655,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13431,7 +13709,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13487,7 +13765,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13541,7 +13819,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13597,7 +13875,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13650,7 +13928,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13705,7 +13983,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13759,7 +14037,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13815,7 +14093,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13863,7 +14141,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13913,7 +14191,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -13961,7 +14239,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14011,7 +14289,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14059,7 +14337,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14109,7 +14387,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14157,7 +14435,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14207,7 +14485,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14255,7 +14533,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14305,7 +14583,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14353,7 +14631,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14403,7 +14681,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14451,7 +14729,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14501,7 +14779,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14549,7 +14827,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14599,7 +14877,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14647,7 +14925,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14697,7 +14975,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14745,7 +15023,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14795,7 +15073,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14843,7 +15121,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14893,7 +15171,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14941,7 +15219,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -14991,7 +15269,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15045,7 +15323,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15101,7 +15379,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15155,7 +15433,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15211,7 +15489,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15264,7 +15542,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15319,7 +15597,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15378,7 +15656,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15439,7 +15717,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15487,7 +15765,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15537,7 +15815,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15585,7 +15863,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15635,7 +15913,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15683,7 +15961,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15733,7 +16011,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15781,7 +16059,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15831,7 +16109,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15885,7 +16163,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15941,7 +16219,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -15989,7 +16267,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -16039,7 +16317,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -16087,7 +16365,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -16137,7 +16415,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -16185,7 +16463,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -16235,7 +16513,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -16289,7 +16567,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -16345,7 +16623,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -16393,7 +16671,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -16443,7 +16721,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -16504,7 +16782,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -16567,7 +16845,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -16628,7 +16906,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -16691,7 +16969,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -16752,7 +17030,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -16815,7 +17093,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -16876,7 +17154,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -16939,7 +17217,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -16994,7 +17272,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -17051,7 +17329,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -17106,7 +17384,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -17163,7 +17441,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -17218,7 +17496,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -17275,7 +17553,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -17336,7 +17614,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -17399,7 +17677,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -17454,7 +17732,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -17511,7 +17789,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -17565,7 +17843,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -17621,7 +17899,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -17682,7 +17960,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -17745,7 +18023,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -17800,7 +18078,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -17857,7 +18135,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -17912,7 +18190,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -17969,7 +18247,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18024,7 +18302,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18081,7 +18359,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18136,7 +18414,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18193,7 +18471,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18248,7 +18526,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18305,7 +18583,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18360,7 +18638,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18417,7 +18695,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18472,7 +18750,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18529,7 +18807,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18590,7 +18868,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18653,7 +18931,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18708,7 +18986,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18765,7 +19043,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18819,7 +19097,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18875,7 +19153,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18936,7 +19214,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -18999,7 +19277,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19060,7 +19338,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19123,7 +19401,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19171,7 +19449,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19221,7 +19499,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19276,7 +19554,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19333,7 +19611,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19394,7 +19672,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19457,7 +19735,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19512,7 +19790,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19569,7 +19847,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19630,7 +19908,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19693,7 +19971,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19754,7 +20032,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19817,7 +20095,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19878,7 +20156,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -19941,7 +20219,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20008,7 +20286,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20077,7 +20355,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20132,7 +20410,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20189,7 +20467,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20250,7 +20528,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20313,7 +20591,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20374,7 +20652,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20437,7 +20715,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20498,7 +20776,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20561,7 +20839,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20616,7 +20894,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20673,7 +20951,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20734,7 +21012,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20797,7 +21075,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20852,7 +21130,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20909,7 +21187,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -20970,7 +21248,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21033,7 +21311,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21088,7 +21366,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21145,7 +21423,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21200,7 +21478,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21257,7 +21535,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21312,7 +21590,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21369,7 +21647,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21424,7 +21702,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21481,7 +21759,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21536,7 +21814,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21593,7 +21871,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21654,7 +21932,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21717,7 +21995,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21772,7 +22050,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21829,7 +22107,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21883,7 +22161,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -21939,7 +22217,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22000,7 +22278,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22063,7 +22341,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22124,7 +22402,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22187,7 +22465,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22235,7 +22513,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22285,7 +22563,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22340,7 +22618,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22397,7 +22675,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22445,7 +22723,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22495,7 +22773,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22543,7 +22821,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22593,7 +22871,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22648,7 +22926,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22705,7 +22983,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22766,7 +23044,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22829,7 +23107,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22884,7 +23162,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -22941,7 +23219,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23002,7 +23280,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23065,7 +23343,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23132,7 +23410,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23201,7 +23479,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23262,7 +23540,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23325,7 +23603,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23380,7 +23658,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23437,7 +23715,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23492,7 +23770,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23549,7 +23827,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23604,7 +23882,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23661,7 +23939,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23716,7 +23994,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23773,7 +24051,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23821,7 +24099,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
 
@@ -23871,7 +24149,7 @@ namespace Vault.Api
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
         }
 
     }

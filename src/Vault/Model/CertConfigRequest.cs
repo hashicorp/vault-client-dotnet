@@ -36,10 +36,12 @@ namespace Vault.Model
         /// </summary>
         /// <param name="disableBinding">If set, during renewal, skips the matching of presented client identity with the client identity used during login. Defaults to false. (default to false).</param>
         /// <param name="enableIdentityAliasMetadata">If set, metadata of the certificate including the metadata corresponding to allowed_metadata_extensions will be stored in the alias. Defaults to false. (default to false).</param>
-        public CertConfigRequest(bool disableBinding = false, bool enableIdentityAliasMetadata = false)
+        /// <param name="ocspCacheSize">The size of the in memory OCSP response cache, shared by all configured certs (default to 100).</param>
+        public CertConfigRequest(bool disableBinding = false, bool enableIdentityAliasMetadata = false, int ocspCacheSize = 100)
         {
             this.DisableBinding = disableBinding;
             this.EnableIdentityAliasMetadata = enableIdentityAliasMetadata;
+            this.OcspCacheSize = ocspCacheSize;
         }
 
         /// <summary>
@@ -57,6 +59,13 @@ namespace Vault.Model
         public bool EnableIdentityAliasMetadata { get; set; }
 
         /// <summary>
+        /// The size of the in memory OCSP response cache, shared by all configured certs
+        /// </summary>
+        /// <value>The size of the in memory OCSP response cache, shared by all configured certs</value>
+        [DataMember(Name = "ocsp_cache_size", EmitDefaultValue = false)]
+        public int OcspCacheSize { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -66,6 +75,7 @@ namespace Vault.Model
             sb.Append("class CertConfigRequest {\n");
             sb.Append("  DisableBinding: ").Append(DisableBinding).Append("\n");
             sb.Append("  EnableIdentityAliasMetadata: ").Append(EnableIdentityAliasMetadata).Append("\n");
+            sb.Append("  OcspCacheSize: ").Append(OcspCacheSize).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,6 +118,10 @@ namespace Vault.Model
                 (
                     this.EnableIdentityAliasMetadata == input.EnableIdentityAliasMetadata ||
                     this.EnableIdentityAliasMetadata.Equals(input.EnableIdentityAliasMetadata)
+                ) && 
+                (
+                    this.OcspCacheSize == input.OcspCacheSize ||
+                    this.OcspCacheSize.Equals(input.OcspCacheSize)
                 );
         }
 
@@ -122,6 +136,7 @@ namespace Vault.Model
                 int hashCode = 41;
                 hashCode = (hashCode * 59) + this.DisableBinding.GetHashCode();
                 hashCode = (hashCode * 59) + this.EnableIdentityAliasMetadata.GetHashCode();
+                hashCode = (hashCode * 59) + this.OcspCacheSize.GetHashCode();
                 return hashCode;
             }
         }

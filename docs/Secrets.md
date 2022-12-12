@@ -136,6 +136,7 @@ Method | HTTP request | Description
 [**GetPkiCerts**](Secrets.md#getpkicerts) | **GET** /{pki_mount_path}/certs | 
 [**GetPkiCertsRevoked**](Secrets.md#getpkicertsrevoked) | **GET** /{pki_mount_path}/certs/revoked | 
 [**GetPkiConfigAutoTidy**](Secrets.md#getpkiconfigautotidy) | **GET** /{pki_mount_path}/config/auto-tidy | 
+[**GetPkiConfigCluster**](Secrets.md#getpkiconfigcluster) | **GET** /{pki_mount_path}/config/cluster | 
 [**GetPkiConfigCrl**](Secrets.md#getpkiconfigcrl) | **GET** /{pki_mount_path}/config/crl | 
 [**GetPkiConfigIssuers**](Secrets.md#getpkiconfigissuers) | **GET** /{pki_mount_path}/config/issuers | 
 [**GetPkiConfigKeys**](Secrets.md#getpkiconfigkeys) | **GET** /{pki_mount_path}/config/keys | 
@@ -264,6 +265,7 @@ Method | HTTP request | Description
 [**PostPkiCert**](Secrets.md#postpkicert) | **POST** /{pki_mount_path}/cert | 
 [**PostPkiConfigAutoTidy**](Secrets.md#postpkiconfigautotidy) | **POST** /{pki_mount_path}/config/auto-tidy | 
 [**PostPkiConfigCa**](Secrets.md#postpkiconfigca) | **POST** /{pki_mount_path}/config/ca | 
+[**PostPkiConfigCluster**](Secrets.md#postpkiconfigcluster) | **POST** /{pki_mount_path}/config/cluster | 
 [**PostPkiConfigCrl**](Secrets.md#postpkiconfigcrl) | **POST** /{pki_mount_path}/config/crl | 
 [**PostPkiConfigIssuers**](Secrets.md#postpkiconfigissuers) | **POST** /{pki_mount_path}/config/issuers | 
 [**PostPkiConfigKeys**](Secrets.md#postpkiconfigkeys) | **POST** /{pki_mount_path}/config/keys | 
@@ -274,8 +276,10 @@ Method | HTTP request | Description
 [**PostPkiInternalExported**](Secrets.md#postpkiinternalexported) | **POST** /{pki_mount_path}/internal|exported | 
 [**PostPkiIssueRole**](Secrets.md#postpkiissuerole) | **POST** /{pki_mount_path}/issue/{role} | 
 [**PostPkiIssuerIssuerRefIssueRole**](Secrets.md#postpkiissuerissuerrefissuerole) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/issue/{role} | 
+[**PostPkiIssuerIssuerRefResignCrls**](Secrets.md#postpkiissuerissuerrefresigncrls) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/resign-crls | 
 [**PostPkiIssuerIssuerRefRevoke**](Secrets.md#postpkiissuerissuerrefrevoke) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/revoke | 
 [**PostPkiIssuerIssuerRefSignIntermediate**](Secrets.md#postpkiissuerissuerrefsignintermediate) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/sign-intermediate | 
+[**PostPkiIssuerIssuerRefSignRevocationList**](Secrets.md#postpkiissuerissuerrefsignrevocationlist) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/sign-revocation-list | 
 [**PostPkiIssuerIssuerRefSignRole**](Secrets.md#postpkiissuerissuerrefsignrole) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/sign/{role} | 
 [**PostPkiIssuerIssuerRefSignSelfIssued**](Secrets.md#postpkiissuerissuerrefsignselfissued) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/sign-self-issued | 
 [**PostPkiIssuerIssuerRefSignVerbatim**](Secrets.md#postpkiissuerissuerrefsignverbatim) | **POST** /{pki_mount_path}/issuer/{issuer_ref}/sign-verbatim | 
@@ -9979,6 +9983,77 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getpkiconfigcluster"></a>
+# **GetPkiConfigCluster**
+> void GetPkiConfigCluster (string pkiMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetPkiConfigClusterExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+
+            try
+            {
+                apiInstance.GetPkiConfigCluster(pkiMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.GetPkiConfigCluster: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getpkiconfigcrl"></a>
 # **GetPkiConfigCrl**
 > void GetPkiConfigCrl (string pkiMountPath = null)
@@ -19419,6 +19494,79 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="postpkiconfigcluster"></a>
+# **PostPkiConfigCluster**
+> void PostPkiConfigCluster (PkiConfigClusterRequest pkiConfigClusterRequest, string pkiMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostPkiConfigClusterExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var pkiConfigClusterRequest = new PkiConfigClusterRequest(); // PkiConfigClusterRequest | 
+            var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+
+            try
+            {
+                apiInstance.PostPkiConfigCluster(pkiConfigClusterRequest, pkiMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PostPkiConfigCluster: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pkiConfigClusterRequest** | [**PkiConfigClusterRequest**](PkiConfigClusterRequest.md)|  | 
+ **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="postpkiconfigcrl"></a>
 # **PostPkiConfigCrl**
 > void PostPkiConfigCrl (PkiConfigCrlRequest pkiConfigCrlRequest, string pkiMountPath = null)
@@ -20157,6 +20305,81 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="postpkiissuerissuerrefresigncrls"></a>
+# **PostPkiIssuerIssuerRefResignCrls**
+> void PostPkiIssuerIssuerRefResignCrls (string issuerRef, PkiIssuerResignCrlsRequest pkiIssuerResignCrlsRequest, string pkiMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostPkiIssuerIssuerRefResignCrlsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
+            var pkiIssuerResignCrlsRequest = new PkiIssuerResignCrlsRequest(); // PkiIssuerResignCrlsRequest | 
+            var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+
+            try
+            {
+                apiInstance.PostPkiIssuerIssuerRefResignCrls(issuerRef, pkiIssuerResignCrlsRequest, pkiMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PostPkiIssuerIssuerRefResignCrls: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer. | [default to &quot;default&quot;]
+ **pkiIssuerResignCrlsRequest** | [**PkiIssuerResignCrlsRequest**](PkiIssuerResignCrlsRequest.md)|  | 
+ **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="postpkiissuerissuerrefrevoke"></a>
 # **PostPkiIssuerIssuerRefRevoke**
 > void PostPkiIssuerIssuerRefRevoke (string issuerRef, string pkiMountPath = null)
@@ -20282,6 +20505,81 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **issuerRef** | **string**| Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer. | [default to &quot;default&quot;]
  **pkiIssuerSignIntermediateRequest** | [**PkiIssuerSignIntermediateRequest**](PkiIssuerSignIntermediateRequest.md)|  | 
+ **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postpkiissuerissuerrefsignrevocationlist"></a>
+# **PostPkiIssuerIssuerRefSignRevocationList**
+> void PostPkiIssuerIssuerRefSignRevocationList (string issuerRef, PkiIssuerSignRevocationListRequest pkiIssuerSignRevocationListRequest, string pkiMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PostPkiIssuerIssuerRefSignRevocationListExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
+            var pkiIssuerSignRevocationListRequest = new PkiIssuerSignRevocationListRequest(); // PkiIssuerSignRevocationListRequest | 
+            var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+
+            try
+            {
+                apiInstance.PostPkiIssuerIssuerRefSignRevocationList(issuerRef, pkiIssuerSignRevocationListRequest, pkiMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PostPkiIssuerIssuerRefSignRevocationList: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer. | [default to &quot;default&quot;]
+ **pkiIssuerSignRevocationListRequest** | [**PkiIssuerSignRevocationListRequest**](PkiIssuerSignRevocationListRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
 ### Return type

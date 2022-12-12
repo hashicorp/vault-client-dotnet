@@ -1604,6 +1604,17 @@ namespace Vault.Test.Api
         }
 
         /// <summary>
+        /// Test GetPkiConfigCluster
+        /// </summary>
+        [Fact]
+        public void GetPkiConfigClusterTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pkiMountPath = null;
+            //instance.GetPkiConfigCluster(pkiMountPath);
+        }
+
+        /// <summary>
         /// Test GetPkiConfigCrl
         /// </summary>
         [Fact]
@@ -3156,6 +3167,18 @@ namespace Vault.Test.Api
         }
 
         /// <summary>
+        /// Test PostPkiConfigCluster
+        /// </summary>
+        [Fact]
+        public void PostPkiConfigClusterTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PkiConfigClusterRequest pkiConfigClusterRequest = null;
+            //string pkiMountPath = null;
+            //instance.PostPkiConfigCluster(pkiConfigClusterRequest, pkiMountPath);
+        }
+
+        /// <summary>
         /// Test PostPkiConfigCrl
         /// </summary>
         [Fact]
@@ -3280,6 +3303,19 @@ namespace Vault.Test.Api
         }
 
         /// <summary>
+        /// Test PostPkiIssuerIssuerRefResignCrls
+        /// </summary>
+        [Fact]
+        public void PostPkiIssuerIssuerRefResignCrlsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string issuerRef = null;
+            //PkiIssuerResignCrlsRequest pkiIssuerResignCrlsRequest = null;
+            //string pkiMountPath = null;
+            //instance.PostPkiIssuerIssuerRefResignCrls(issuerRef, pkiIssuerResignCrlsRequest, pkiMountPath);
+        }
+
+        /// <summary>
         /// Test PostPkiIssuerIssuerRefRevoke
         /// </summary>
         [Fact]
@@ -3302,6 +3338,19 @@ namespace Vault.Test.Api
             //PkiIssuerSignIntermediateRequest pkiIssuerSignIntermediateRequest = null;
             //string pkiMountPath = null;
             //instance.PostPkiIssuerIssuerRefSignIntermediate(issuerRef, pkiIssuerSignIntermediateRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PostPkiIssuerIssuerRefSignRevocationList
+        /// </summary>
+        [Fact]
+        public void PostPkiIssuerIssuerRefSignRevocationListTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string issuerRef = null;
+            //PkiIssuerSignRevocationListRequest pkiIssuerSignRevocationListRequest = null;
+            //string pkiMountPath = null;
+            //instance.PostPkiIssuerIssuerRefSignRevocationList(issuerRef, pkiIssuerSignRevocationListRequest, pkiMountPath);
         }
 
         /// <summary>
