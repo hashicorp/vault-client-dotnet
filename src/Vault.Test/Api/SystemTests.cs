@@ -668,6 +668,27 @@ namespace Vault.Test.Api
         }
 
         /// <summary>
+        /// Test GetSysLoggers
+        /// </summary>
+        [Fact]
+        public void GetSysLoggersTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //instance.GetSysLoggers();
+        }
+
+        /// <summary>
+        /// Test GetSysLoggersName
+        /// </summary>
+        [Fact]
+        public void GetSysLoggersNameTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //instance.GetSysLoggersName(name);
+        }
+
+        /// <summary>
         /// Test GetSysMetrics
         /// </summary>
         [Fact]

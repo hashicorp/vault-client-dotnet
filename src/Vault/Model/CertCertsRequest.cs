@@ -46,6 +46,11 @@ namespace Vault.Model
         /// <param name="displayName">The display name to use for clients using this certificate..</param>
         /// <param name="lease">Use \&quot;token_ttl\&quot; instead. If this and \&quot;token_ttl\&quot; are both specified, only \&quot;token_ttl\&quot; will be used..</param>
         /// <param name="maxTtl">Use \&quot;token_max_ttl\&quot; instead. If this and \&quot;token_max_ttl\&quot; are both specified, only \&quot;token_max_ttl\&quot; will be used..</param>
+        /// <param name="ocspCaCertificates">Any additional CA certificates needed to communicate with OCSP servers.</param>
+        /// <param name="ocspEnabled">Whether to attempt OCSP verification of certificates at login.</param>
+        /// <param name="ocspFailOpen">If set to true, if an OCSP revocation cannot be made successfully, login will proceed rather than failing. If false, failing to get an OCSP status fails the request. (default to false).</param>
+        /// <param name="ocspQueryAllServers">If set to true, rather than accepting the first successful OCSP response, query all servers and consider the certificate valid only if all servers agree. (default to false).</param>
+        /// <param name="ocspServersOverride">A comma-separated list of OCSP server addresses. If unset, the OCSP server is determined from the AuthorityInformationAccess extension on the certificate being inspected..</param>
         /// <param name="period">Use \&quot;token_period\&quot; instead. If this and \&quot;token_period\&quot; are both specified, only \&quot;token_period\&quot; will be used..</param>
         /// <param name="policies">Use \&quot;token_policies\&quot; instead. If this and \&quot;token_policies\&quot; are both specified, only \&quot;token_policies\&quot; will be used..</param>
         /// <param name="requiredExtensions">A comma-separated string or array of extensions formatted as \&quot;oid:value\&quot;. Expects the extension value to be some type of ASN1 encoded string. All values much match. Supports globbing on \&quot;value\&quot;..</param>
@@ -59,7 +64,7 @@ namespace Vault.Model
         /// <param name="tokenTtl">The initial ttl of the token to generate.</param>
         /// <param name="tokenType">The type of token to generate, service or batch (default to &quot;default-service&quot;).</param>
         /// <param name="ttl">Use \&quot;token_ttl\&quot; instead. If this and \&quot;token_ttl\&quot; are both specified, only \&quot;token_ttl\&quot; will be used..</param>
-        public CertCertsRequest(List<string> allowedCommonNames = default(List<string>), List<string> allowedDnsSans = default(List<string>), List<string> allowedEmailSans = default(List<string>), List<string> allowedMetadataExtensions = default(List<string>), List<string> allowedNames = default(List<string>), List<string> allowedOrganizationalUnits = default(List<string>), List<string> allowedUriSans = default(List<string>), List<string> boundCidrs = default(List<string>), string certificate = default(string), string displayName = default(string), int lease = default(int), int maxTtl = default(int), int period = default(int), List<string> policies = default(List<string>), List<string> requiredExtensions = default(List<string>), List<string> tokenBoundCidrs = default(List<string>), int tokenExplicitMaxTtl = default(int), int tokenMaxTtl = default(int), bool tokenNoDefaultPolicy = default(bool), int tokenNumUses = default(int), int tokenPeriod = default(int), List<string> tokenPolicies = default(List<string>), int tokenTtl = default(int), string tokenType = "default-service", int ttl = default(int))
+        public CertCertsRequest(List<string> allowedCommonNames = default(List<string>), List<string> allowedDnsSans = default(List<string>), List<string> allowedEmailSans = default(List<string>), List<string> allowedMetadataExtensions = default(List<string>), List<string> allowedNames = default(List<string>), List<string> allowedOrganizationalUnits = default(List<string>), List<string> allowedUriSans = default(List<string>), List<string> boundCidrs = default(List<string>), string certificate = default(string), string displayName = default(string), int lease = default(int), int maxTtl = default(int), string ocspCaCertificates = default(string), bool ocspEnabled = default(bool), bool ocspFailOpen = false, bool ocspQueryAllServers = false, List<string> ocspServersOverride = default(List<string>), int period = default(int), List<string> policies = default(List<string>), List<string> requiredExtensions = default(List<string>), List<string> tokenBoundCidrs = default(List<string>), int tokenExplicitMaxTtl = default(int), int tokenMaxTtl = default(int), bool tokenNoDefaultPolicy = default(bool), int tokenNumUses = default(int), int tokenPeriod = default(int), List<string> tokenPolicies = default(List<string>), int tokenTtl = default(int), string tokenType = "default-service", int ttl = default(int))
         {
             this.AllowedCommonNames = allowedCommonNames;
             this.AllowedDnsSans = allowedDnsSans;
@@ -73,6 +78,11 @@ namespace Vault.Model
             this.DisplayName = displayName;
             this.Lease = lease;
             this.MaxTtl = maxTtl;
+            this.OcspCaCertificates = ocspCaCertificates;
+            this.OcspEnabled = ocspEnabled;
+            this.OcspFailOpen = ocspFailOpen;
+            this.OcspQueryAllServers = ocspQueryAllServers;
+            this.OcspServersOverride = ocspServersOverride;
             this.Period = period;
             this.Policies = policies;
             this.RequiredExtensions = requiredExtensions;
@@ -175,6 +185,41 @@ namespace Vault.Model
         [DataMember(Name = "max_ttl", EmitDefaultValue = false)]
         [Obsolete]
         public int MaxTtl { get; set; }
+
+        /// <summary>
+        /// Any additional CA certificates needed to communicate with OCSP servers
+        /// </summary>
+        /// <value>Any additional CA certificates needed to communicate with OCSP servers</value>
+        [DataMember(Name = "ocsp_ca_certificates", EmitDefaultValue = false)]
+        public string OcspCaCertificates { get; set; }
+
+        /// <summary>
+        /// Whether to attempt OCSP verification of certificates at login
+        /// </summary>
+        /// <value>Whether to attempt OCSP verification of certificates at login</value>
+        [DataMember(Name = "ocsp_enabled", EmitDefaultValue = true)]
+        public bool OcspEnabled { get; set; }
+
+        /// <summary>
+        /// If set to true, if an OCSP revocation cannot be made successfully, login will proceed rather than failing. If false, failing to get an OCSP status fails the request.
+        /// </summary>
+        /// <value>If set to true, if an OCSP revocation cannot be made successfully, login will proceed rather than failing. If false, failing to get an OCSP status fails the request.</value>
+        [DataMember(Name = "ocsp_fail_open", EmitDefaultValue = true)]
+        public bool OcspFailOpen { get; set; }
+
+        /// <summary>
+        /// If set to true, rather than accepting the first successful OCSP response, query all servers and consider the certificate valid only if all servers agree.
+        /// </summary>
+        /// <value>If set to true, rather than accepting the first successful OCSP response, query all servers and consider the certificate valid only if all servers agree.</value>
+        [DataMember(Name = "ocsp_query_all_servers", EmitDefaultValue = true)]
+        public bool OcspQueryAllServers { get; set; }
+
+        /// <summary>
+        /// A comma-separated list of OCSP server addresses. If unset, the OCSP server is determined from the AuthorityInformationAccess extension on the certificate being inspected.
+        /// </summary>
+        /// <value>A comma-separated list of OCSP server addresses. If unset, the OCSP server is determined from the AuthorityInformationAccess extension on the certificate being inspected.</value>
+        [DataMember(Name = "ocsp_servers_override", EmitDefaultValue = false)]
+        public List<string> OcspServersOverride { get; set; }
 
         /// <summary>
         /// Use \&quot;token_period\&quot; instead. If this and \&quot;token_period\&quot; are both specified, only \&quot;token_period\&quot; will be used.
@@ -290,6 +335,11 @@ namespace Vault.Model
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  Lease: ").Append(Lease).Append("\n");
             sb.Append("  MaxTtl: ").Append(MaxTtl).Append("\n");
+            sb.Append("  OcspCaCertificates: ").Append(OcspCaCertificates).Append("\n");
+            sb.Append("  OcspEnabled: ").Append(OcspEnabled).Append("\n");
+            sb.Append("  OcspFailOpen: ").Append(OcspFailOpen).Append("\n");
+            sb.Append("  OcspQueryAllServers: ").Append(OcspQueryAllServers).Append("\n");
+            sb.Append("  OcspServersOverride: ").Append(OcspServersOverride).Append("\n");
             sb.Append("  Period: ").Append(Period).Append("\n");
             sb.Append("  Policies: ").Append(Policies).Append("\n");
             sb.Append("  RequiredExtensions: ").Append(RequiredExtensions).Append("\n");
@@ -405,6 +455,29 @@ namespace Vault.Model
                     this.MaxTtl.Equals(input.MaxTtl)
                 ) && 
                 (
+                    this.OcspCaCertificates == input.OcspCaCertificates ||
+                    (this.OcspCaCertificates != null &&
+                    this.OcspCaCertificates.Equals(input.OcspCaCertificates))
+                ) && 
+                (
+                    this.OcspEnabled == input.OcspEnabled ||
+                    this.OcspEnabled.Equals(input.OcspEnabled)
+                ) && 
+                (
+                    this.OcspFailOpen == input.OcspFailOpen ||
+                    this.OcspFailOpen.Equals(input.OcspFailOpen)
+                ) && 
+                (
+                    this.OcspQueryAllServers == input.OcspQueryAllServers ||
+                    this.OcspQueryAllServers.Equals(input.OcspQueryAllServers)
+                ) && 
+                (
+                    this.OcspServersOverride == input.OcspServersOverride ||
+                    this.OcspServersOverride != null &&
+                    input.OcspServersOverride != null &&
+                    this.OcspServersOverride.SequenceEqual(input.OcspServersOverride)
+                ) && 
+                (
                     this.Period == input.Period ||
                     this.Period.Equals(input.Period)
                 ) && 
@@ -518,6 +591,17 @@ namespace Vault.Model
                 }
                 hashCode = (hashCode * 59) + this.Lease.GetHashCode();
                 hashCode = (hashCode * 59) + this.MaxTtl.GetHashCode();
+                if (this.OcspCaCertificates != null)
+                {
+                    hashCode = (hashCode * 59) + this.OcspCaCertificates.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.OcspEnabled.GetHashCode();
+                hashCode = (hashCode * 59) + this.OcspFailOpen.GetHashCode();
+                hashCode = (hashCode * 59) + this.OcspQueryAllServers.GetHashCode();
+                if (this.OcspServersOverride != null)
+                {
+                    hashCode = (hashCode * 59) + this.OcspServersOverride.GetHashCode();
+                }
                 hashCode = (hashCode * 59) + this.Period.GetHashCode();
                 if (this.Policies != null)
                 {

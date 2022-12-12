@@ -35,11 +35,13 @@ namespace Vault.Model
         /// Initializes a new instance of the <see cref="PkiConfigUrlsRequest" /> class.
         /// </summary>
         /// <param name="crlDistributionPoints">Comma-separated list of URLs to be used for the CRL distribution points attribute. See also RFC 5280 Section 4.2.1.13..</param>
+        /// <param name="enableTemplating">Whether or not to enabling templating of the above AIA fields. When templating is enabled the special values &#39;{{issuer_id}}&#39; and &#39;{{cluster_path}}&#39; are available, but the addresses are not checked for URI validity until issuance time. This requires /config/cluster&#39;s path to be set on all PR Secondary clusters. (default to false).</param>
         /// <param name="issuingCertificates">Comma-separated list of URLs to be used for the issuing certificate attribute. See also RFC 5280 Section 4.2.2.1..</param>
         /// <param name="ocspServers">Comma-separated list of URLs to be used for the OCSP servers attribute. See also RFC 5280 Section 4.2.2.1..</param>
-        public PkiConfigUrlsRequest(List<string> crlDistributionPoints = default(List<string>), List<string> issuingCertificates = default(List<string>), List<string> ocspServers = default(List<string>))
+        public PkiConfigUrlsRequest(List<string> crlDistributionPoints = default(List<string>), bool enableTemplating = false, List<string> issuingCertificates = default(List<string>), List<string> ocspServers = default(List<string>))
         {
             this.CrlDistributionPoints = crlDistributionPoints;
+            this.EnableTemplating = enableTemplating;
             this.IssuingCertificates = issuingCertificates;
             this.OcspServers = ocspServers;
         }
@@ -50,6 +52,13 @@ namespace Vault.Model
         /// <value>Comma-separated list of URLs to be used for the CRL distribution points attribute. See also RFC 5280 Section 4.2.1.13.</value>
         [DataMember(Name = "crl_distribution_points", EmitDefaultValue = false)]
         public List<string> CrlDistributionPoints { get; set; }
+
+        /// <summary>
+        /// Whether or not to enabling templating of the above AIA fields. When templating is enabled the special values &#39;{{issuer_id}}&#39; and &#39;{{cluster_path}}&#39; are available, but the addresses are not checked for URI validity until issuance time. This requires /config/cluster&#39;s path to be set on all PR Secondary clusters.
+        /// </summary>
+        /// <value>Whether or not to enabling templating of the above AIA fields. When templating is enabled the special values &#39;{{issuer_id}}&#39; and &#39;{{cluster_path}}&#39; are available, but the addresses are not checked for URI validity until issuance time. This requires /config/cluster&#39;s path to be set on all PR Secondary clusters.</value>
+        [DataMember(Name = "enable_templating", EmitDefaultValue = true)]
+        public bool EnableTemplating { get; set; }
 
         /// <summary>
         /// Comma-separated list of URLs to be used for the issuing certificate attribute. See also RFC 5280 Section 4.2.2.1.
@@ -74,6 +83,7 @@ namespace Vault.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class PkiConfigUrlsRequest {\n");
             sb.Append("  CrlDistributionPoints: ").Append(CrlDistributionPoints).Append("\n");
+            sb.Append("  EnableTemplating: ").Append(EnableTemplating).Append("\n");
             sb.Append("  IssuingCertificates: ").Append(IssuingCertificates).Append("\n");
             sb.Append("  OcspServers: ").Append(OcspServers).Append("\n");
             sb.Append("}\n");
@@ -118,6 +128,10 @@ namespace Vault.Model
                     this.CrlDistributionPoints.SequenceEqual(input.CrlDistributionPoints)
                 ) && 
                 (
+                    this.EnableTemplating == input.EnableTemplating ||
+                    this.EnableTemplating.Equals(input.EnableTemplating)
+                ) && 
+                (
                     this.IssuingCertificates == input.IssuingCertificates ||
                     this.IssuingCertificates != null &&
                     input.IssuingCertificates != null &&
@@ -144,6 +158,7 @@ namespace Vault.Model
                 {
                     hashCode = (hashCode * 59) + this.CrlDistributionPoints.GetHashCode();
                 }
+                hashCode = (hashCode * 59) + this.EnableTemplating.GetHashCode();
                 if (this.IssuingCertificates != null)
                 {
                     hashCode = (hashCode * 59) + this.IssuingCertificates.GetHashCode();

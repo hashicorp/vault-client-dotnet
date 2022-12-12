@@ -358,7 +358,7 @@ namespace {{packageName}}.{{apiPackage}}
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<{{{returnType}}}{{^returnType}}Object{{/returnType}}>(response.RawContent);
         }
 
         {{#supportsAsync}}
@@ -552,7 +552,7 @@ namespace {{packageName}}.{{apiPackage}}
                 if (exception != null) throw exception;
             }
 
-            return ClientUtils.ToVaultResponse<object>(response.RawContent);
+            return ClientUtils.ToVaultResponse<{{{returnType}}}{{^returnType}}Object{{/returnType}}>(response.RawContent);
         }
 
         {{/supportsAsync}}

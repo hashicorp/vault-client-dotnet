@@ -5,20 +5,20 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**DeleteAuthAlicloudRoleRole**](Auth.md#deleteauthalicloudrolerole) | **DELETE** /auth/{alicloud_mount_path}/role/{role} | Create a role and associate policies to it.
-[**DeleteAuthApproleRoleRoleName**](Auth.md#deleteauthapprolerolerolename) | **DELETE** /auth/{approle_mount_path}/role/{role_name} | Register an role with the backend.
-[**DeleteAuthApproleRoleRoleNameBindSecretId**](Auth.md#deleteauthapprolerolerolenamebindsecretid) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
-[**DeleteAuthApproleRoleRoleNameBoundCidrList**](Auth.md#deleteauthapprolerolerolenameboundcidrlist) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/bound-cidr-list | Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-[**DeleteAuthApproleRoleRoleNamePeriod**](Auth.md#deleteauthapprolerolerolenameperiod) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/period | Updates the value of &#39;period&#39; on the role
-[**DeleteAuthApproleRoleRoleNamePolicies**](Auth.md#deleteauthapprolerolerolenamepolicies) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/policies | Policies of the role.
+[**DeleteAuthApproleRoleRoleName**](Auth.md#deleteauthapprolerolerolename) | **DELETE** /auth/{approle_mount_path}/role/{role_name} | 
+[**DeleteAuthApproleRoleRoleNameBindSecretId**](Auth.md#deleteauthapprolerolerolenamebindsecretid) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/bind-secret-id | 
+[**DeleteAuthApproleRoleRoleNameBoundCidrList**](Auth.md#deleteauthapprolerolerolenameboundcidrlist) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/bound-cidr-list | 
+[**DeleteAuthApproleRoleRoleNamePeriod**](Auth.md#deleteauthapprolerolerolenameperiod) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/period | 
+[**DeleteAuthApproleRoleRoleNamePolicies**](Auth.md#deleteauthapprolerolerolenamepolicies) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/policies | 
 [**DeleteAuthApproleRoleRoleNameSecretIdAccessorDestroy**](Auth.md#deleteauthapprolerolerolenamesecretidaccessordestroy) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id-accessor/destroy | 
-[**DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs**](Auth.md#deleteauthapprolerolerolenamesecretidboundcidrs) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-[**DeleteAuthApproleRoleRoleNameSecretIdDestroy**](Auth.md#deleteauthapprolerolerolenamesecretiddestroy) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id/destroy | Invalidate an issued secret_id
-[**DeleteAuthApproleRoleRoleNameSecretIdNumUses**](Auth.md#deleteauthapprolerolerolenamesecretidnumuses) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
-[**DeleteAuthApproleRoleRoleNameSecretIdTtl**](Auth.md#deleteauthapprolerolerolenamesecretidttl) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id-ttl | Duration in seconds of the SecretID generated against the role.
-[**DeleteAuthApproleRoleRoleNameTokenBoundCidrs**](Auth.md#deleteauthapprolerolerolenametokenboundcidrs) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
-[**DeleteAuthApproleRoleRoleNameTokenMaxTtl**](Auth.md#deleteauthapprolerolerolenametokenmaxttl) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
-[**DeleteAuthApproleRoleRoleNameTokenNumUses**](Auth.md#deleteauthapprolerolerolenametokennumuses) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/token-num-uses | Number of times issued tokens can be used
-[**DeleteAuthApproleRoleRoleNameTokenTtl**](Auth.md#deleteauthapprolerolerolenametokenttl) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/token-ttl | Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
+[**DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs**](Auth.md#deleteauthapprolerolerolenamesecretidboundcidrs) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id-bound-cidrs | 
+[**DeleteAuthApproleRoleRoleNameSecretIdDestroy**](Auth.md#deleteauthapprolerolerolenamesecretiddestroy) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id/destroy | 
+[**DeleteAuthApproleRoleRoleNameSecretIdNumUses**](Auth.md#deleteauthapprolerolerolenamesecretidnumuses) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id-num-uses | 
+[**DeleteAuthApproleRoleRoleNameSecretIdTtl**](Auth.md#deleteauthapprolerolerolenamesecretidttl) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/secret-id-ttl | 
+[**DeleteAuthApproleRoleRoleNameTokenBoundCidrs**](Auth.md#deleteauthapprolerolerolenametokenboundcidrs) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/token-bound-cidrs | 
+[**DeleteAuthApproleRoleRoleNameTokenMaxTtl**](Auth.md#deleteauthapprolerolerolenametokenmaxttl) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/token-max-ttl | 
+[**DeleteAuthApproleRoleRoleNameTokenNumUses**](Auth.md#deleteauthapprolerolerolenametokennumuses) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/token-num-uses | 
+[**DeleteAuthApproleRoleRoleNameTokenTtl**](Auth.md#deleteauthapprolerolerolenametokenttl) | **DELETE** /auth/{approle_mount_path}/role/{role_name}/token-ttl | 
 [**DeleteAuthAwsConfigCertificateCertName**](Auth.md#deleteauthawsconfigcertificatecertname) | **DELETE** /auth/{aws_mount_path}/config/certificate/{cert_name} | 
 [**DeleteAuthAwsConfigClient**](Auth.md#deleteauthawsconfigclient) | **DELETE** /auth/{aws_mount_path}/config/client | 
 [**DeleteAuthAwsConfigStsAccountId**](Auth.md#deleteauthawsconfigstsaccountid) | **DELETE** /auth/{aws_mount_path}/config/sts/{account_id} | 
@@ -56,22 +56,22 @@ Method | HTTP request | Description
 [**GetAuthAlicloudRole**](Auth.md#getauthalicloudrole) | **GET** /auth/{alicloud_mount_path}/role | Lists all the roles that are registered with Vault.
 [**GetAuthAlicloudRoleRole**](Auth.md#getauthalicloudrolerole) | **GET** /auth/{alicloud_mount_path}/role/{role} | Create a role and associate policies to it.
 [**GetAuthAlicloudRoles**](Auth.md#getauthalicloudroles) | **GET** /auth/{alicloud_mount_path}/roles | Lists all the roles that are registered with Vault.
-[**GetAuthApproleRole**](Auth.md#getauthapprolerole) | **GET** /auth/{approle_mount_path}/role | Lists all the roles registered with the backend.
-[**GetAuthApproleRoleRoleName**](Auth.md#getauthapprolerolerolename) | **GET** /auth/{approle_mount_path}/role/{role_name} | Register an role with the backend.
-[**GetAuthApproleRoleRoleNameBindSecretId**](Auth.md#getauthapprolerolerolenamebindsecretid) | **GET** /auth/{approle_mount_path}/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
-[**GetAuthApproleRoleRoleNameBoundCidrList**](Auth.md#getauthapprolerolerolenameboundcidrlist) | **GET** /auth/{approle_mount_path}/role/{role_name}/bound-cidr-list | Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-[**GetAuthApproleRoleRoleNameLocalSecretIds**](Auth.md#getauthapprolerolerolenamelocalsecretids) | **GET** /auth/{approle_mount_path}/role/{role_name}/local-secret-ids | Enables cluster local secret IDs
-[**GetAuthApproleRoleRoleNamePeriod**](Auth.md#getauthapprolerolerolenameperiod) | **GET** /auth/{approle_mount_path}/role/{role_name}/period | Updates the value of &#39;period&#39; on the role
-[**GetAuthApproleRoleRoleNamePolicies**](Auth.md#getauthapprolerolerolenamepolicies) | **GET** /auth/{approle_mount_path}/role/{role_name}/policies | Policies of the role.
-[**GetAuthApproleRoleRoleNameRoleId**](Auth.md#getauthapprolerolerolenameroleid) | **GET** /auth/{approle_mount_path}/role/{role_name}/role-id | Returns the &#39;role_id&#39; of the role.
-[**GetAuthApproleRoleRoleNameSecretId**](Auth.md#getauthapprolerolerolenamesecretid) | **GET** /auth/{approle_mount_path}/role/{role_name}/secret-id | Generate a SecretID against this role.
-[**GetAuthApproleRoleRoleNameSecretIdBoundCidrs**](Auth.md#getauthapprolerolerolenamesecretidboundcidrs) | **GET** /auth/{approle_mount_path}/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-[**GetAuthApproleRoleRoleNameSecretIdNumUses**](Auth.md#getauthapprolerolerolenamesecretidnumuses) | **GET** /auth/{approle_mount_path}/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
-[**GetAuthApproleRoleRoleNameSecretIdTtl**](Auth.md#getauthapprolerolerolenamesecretidttl) | **GET** /auth/{approle_mount_path}/role/{role_name}/secret-id-ttl | Duration in seconds of the SecretID generated against the role.
-[**GetAuthApproleRoleRoleNameTokenBoundCidrs**](Auth.md#getauthapprolerolerolenametokenboundcidrs) | **GET** /auth/{approle_mount_path}/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
-[**GetAuthApproleRoleRoleNameTokenMaxTtl**](Auth.md#getauthapprolerolerolenametokenmaxttl) | **GET** /auth/{approle_mount_path}/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
-[**GetAuthApproleRoleRoleNameTokenNumUses**](Auth.md#getauthapprolerolerolenametokennumuses) | **GET** /auth/{approle_mount_path}/role/{role_name}/token-num-uses | Number of times issued tokens can be used
-[**GetAuthApproleRoleRoleNameTokenTtl**](Auth.md#getauthapprolerolerolenametokenttl) | **GET** /auth/{approle_mount_path}/role/{role_name}/token-ttl | Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
+[**GetAuthApproleRole**](Auth.md#getauthapprolerole) | **GET** /auth/{approle_mount_path}/role | 
+[**GetAuthApproleRoleRoleName**](Auth.md#getauthapprolerolerolename) | **GET** /auth/{approle_mount_path}/role/{role_name} | 
+[**GetAuthApproleRoleRoleNameBindSecretId**](Auth.md#getauthapprolerolerolenamebindsecretid) | **GET** /auth/{approle_mount_path}/role/{role_name}/bind-secret-id | 
+[**GetAuthApproleRoleRoleNameBoundCidrList**](Auth.md#getauthapprolerolerolenameboundcidrlist) | **GET** /auth/{approle_mount_path}/role/{role_name}/bound-cidr-list | 
+[**GetAuthApproleRoleRoleNameLocalSecretIds**](Auth.md#getauthapprolerolerolenamelocalsecretids) | **GET** /auth/{approle_mount_path}/role/{role_name}/local-secret-ids | 
+[**GetAuthApproleRoleRoleNamePeriod**](Auth.md#getauthapprolerolerolenameperiod) | **GET** /auth/{approle_mount_path}/role/{role_name}/period | 
+[**GetAuthApproleRoleRoleNamePolicies**](Auth.md#getauthapprolerolerolenamepolicies) | **GET** /auth/{approle_mount_path}/role/{role_name}/policies | 
+[**GetAuthApproleRoleRoleNameRoleId**](Auth.md#getauthapprolerolerolenameroleid) | **GET** /auth/{approle_mount_path}/role/{role_name}/role-id | 
+[**GetAuthApproleRoleRoleNameSecretId**](Auth.md#getauthapprolerolerolenamesecretid) | **GET** /auth/{approle_mount_path}/role/{role_name}/secret-id | 
+[**GetAuthApproleRoleRoleNameSecretIdBoundCidrs**](Auth.md#getauthapprolerolerolenamesecretidboundcidrs) | **GET** /auth/{approle_mount_path}/role/{role_name}/secret-id-bound-cidrs | 
+[**GetAuthApproleRoleRoleNameSecretIdNumUses**](Auth.md#getauthapprolerolerolenamesecretidnumuses) | **GET** /auth/{approle_mount_path}/role/{role_name}/secret-id-num-uses | 
+[**GetAuthApproleRoleRoleNameSecretIdTtl**](Auth.md#getauthapprolerolerolenamesecretidttl) | **GET** /auth/{approle_mount_path}/role/{role_name}/secret-id-ttl | 
+[**GetAuthApproleRoleRoleNameTokenBoundCidrs**](Auth.md#getauthapprolerolerolenametokenboundcidrs) | **GET** /auth/{approle_mount_path}/role/{role_name}/token-bound-cidrs | 
+[**GetAuthApproleRoleRoleNameTokenMaxTtl**](Auth.md#getauthapprolerolerolenametokenmaxttl) | **GET** /auth/{approle_mount_path}/role/{role_name}/token-max-ttl | 
+[**GetAuthApproleRoleRoleNameTokenNumUses**](Auth.md#getauthapprolerolerolenametokennumuses) | **GET** /auth/{approle_mount_path}/role/{role_name}/token-num-uses | 
+[**GetAuthApproleRoleRoleNameTokenTtl**](Auth.md#getauthapprolerolerolenametokenttl) | **GET** /auth/{approle_mount_path}/role/{role_name}/token-ttl | 
 [**GetAuthAwsConfigCertificateCertName**](Auth.md#getauthawsconfigcertificatecertname) | **GET** /auth/{aws_mount_path}/config/certificate/{cert_name} | 
 [**GetAuthAwsConfigCertificates**](Auth.md#getauthawsconfigcertificates) | **GET** /auth/{aws_mount_path}/config/certificates | 
 [**GetAuthAwsConfigClient**](Auth.md#getauthawsconfigclient) | **GET** /auth/{aws_mount_path}/config/client | 
@@ -100,6 +100,7 @@ Method | HTTP request | Description
 [**GetAuthCertCerts**](Auth.md#getauthcertcerts) | **GET** /auth/{cert_mount_path}/certs | Manage trusted certificates used for authentication.
 [**GetAuthCertCertsName**](Auth.md#getauthcertcertsname) | **GET** /auth/{cert_mount_path}/certs/{name} | Manage trusted certificates used for authentication.
 [**GetAuthCertConfig**](Auth.md#getauthcertconfig) | **GET** /auth/{cert_mount_path}/config | 
+[**GetAuthCertCrls**](Auth.md#getauthcertcrls) | **GET** /auth/{cert_mount_path}/crls | 
 [**GetAuthCertCrlsName**](Auth.md#getauthcertcrlsname) | **GET** /auth/{cert_mount_path}/crls/{name} | Manage Certificate Revocation Lists checked during authentication.
 [**GetAuthCfConfig**](Auth.md#getauthcfconfig) | **GET** /auth/{cf_mount_path}/config | 
 [**GetAuthCfRoles**](Auth.md#getauthcfroles) | **GET** /auth/{cf_mount_path}/roles | 
@@ -156,25 +157,25 @@ Method | HTTP request | Description
 [**PostAuthAlicloudLogin**](Auth.md#postauthalicloudlogin) | **POST** /auth/{alicloud_mount_path}/login | Authenticates an RAM entity with Vault.
 [**PostAuthAlicloudRoleRole**](Auth.md#postauthalicloudrolerole) | **POST** /auth/{alicloud_mount_path}/role/{role} | Create a role and associate policies to it.
 [**PostAuthApproleLogin**](Auth.md#postauthapprolelogin) | **POST** /auth/{approle_mount_path}/login | 
-[**PostAuthApproleRoleRoleName**](Auth.md#postauthapprolerolerolename) | **POST** /auth/{approle_mount_path}/role/{role_name} | Register an role with the backend.
-[**PostAuthApproleRoleRoleNameBindSecretId**](Auth.md#postauthapprolerolerolenamebindsecretid) | **POST** /auth/{approle_mount_path}/role/{role_name}/bind-secret-id | Impose secret_id to be presented during login using this role.
-[**PostAuthApproleRoleRoleNameBoundCidrList**](Auth.md#postauthapprolerolerolenameboundcidrlist) | **POST** /auth/{approle_mount_path}/role/{role_name}/bound-cidr-list | Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-[**PostAuthApproleRoleRoleNameCustomSecretId**](Auth.md#postauthapprolerolerolenamecustomsecretid) | **POST** /auth/{approle_mount_path}/role/{role_name}/custom-secret-id | Assign a SecretID of choice against the role.
-[**PostAuthApproleRoleRoleNamePeriod**](Auth.md#postauthapprolerolerolenameperiod) | **POST** /auth/{approle_mount_path}/role/{role_name}/period | Updates the value of &#39;period&#39; on the role
-[**PostAuthApproleRoleRoleNamePolicies**](Auth.md#postauthapprolerolerolenamepolicies) | **POST** /auth/{approle_mount_path}/role/{role_name}/policies | Policies of the role.
-[**PostAuthApproleRoleRoleNameRoleId**](Auth.md#postauthapprolerolerolenameroleid) | **POST** /auth/{approle_mount_path}/role/{role_name}/role-id | Returns the &#39;role_id&#39; of the role.
-[**PostAuthApproleRoleRoleNameSecretId**](Auth.md#postauthapprolerolerolenamesecretid) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id | Generate a SecretID against this role.
+[**PostAuthApproleRoleRoleName**](Auth.md#postauthapprolerolerolename) | **POST** /auth/{approle_mount_path}/role/{role_name} | 
+[**PostAuthApproleRoleRoleNameBindSecretId**](Auth.md#postauthapprolerolerolenamebindsecretid) | **POST** /auth/{approle_mount_path}/role/{role_name}/bind-secret-id | 
+[**PostAuthApproleRoleRoleNameBoundCidrList**](Auth.md#postauthapprolerolerolenameboundcidrlist) | **POST** /auth/{approle_mount_path}/role/{role_name}/bound-cidr-list | 
+[**PostAuthApproleRoleRoleNameCustomSecretId**](Auth.md#postauthapprolerolerolenamecustomsecretid) | **POST** /auth/{approle_mount_path}/role/{role_name}/custom-secret-id | 
+[**PostAuthApproleRoleRoleNamePeriod**](Auth.md#postauthapprolerolerolenameperiod) | **POST** /auth/{approle_mount_path}/role/{role_name}/period | 
+[**PostAuthApproleRoleRoleNamePolicies**](Auth.md#postauthapprolerolerolenamepolicies) | **POST** /auth/{approle_mount_path}/role/{role_name}/policies | 
+[**PostAuthApproleRoleRoleNameRoleId**](Auth.md#postauthapprolerolerolenameroleid) | **POST** /auth/{approle_mount_path}/role/{role_name}/role-id | 
+[**PostAuthApproleRoleRoleNameSecretId**](Auth.md#postauthapprolerolerolenamesecretid) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id | 
 [**PostAuthApproleRoleRoleNameSecretIdAccessorDestroy**](Auth.md#postauthapprolerolerolenamesecretidaccessordestroy) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-accessor/destroy | 
 [**PostAuthApproleRoleRoleNameSecretIdAccessorLookup**](Auth.md#postauthapprolerolerolenamesecretidaccessorlookup) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-accessor/lookup | 
-[**PostAuthApproleRoleRoleNameSecretIdBoundCidrs**](Auth.md#postauthapprolerolerolenamesecretidboundcidrs) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-bound-cidrs | Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-[**PostAuthApproleRoleRoleNameSecretIdDestroy**](Auth.md#postauthapprolerolerolenamesecretiddestroy) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id/destroy | Invalidate an issued secret_id
-[**PostAuthApproleRoleRoleNameSecretIdLookup**](Auth.md#postauthapprolerolerolenamesecretidlookup) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id/lookup | Read the properties of an issued secret_id
-[**PostAuthApproleRoleRoleNameSecretIdNumUses**](Auth.md#postauthapprolerolerolenamesecretidnumuses) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-num-uses | Use limit of the SecretID generated against the role.
-[**PostAuthApproleRoleRoleNameSecretIdTtl**](Auth.md#postauthapprolerolerolenamesecretidttl) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-ttl | Duration in seconds of the SecretID generated against the role.
-[**PostAuthApproleRoleRoleNameTokenBoundCidrs**](Auth.md#postauthapprolerolerolenametokenboundcidrs) | **POST** /auth/{approle_mount_path}/role/{role_name}/token-bound-cidrs | Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
-[**PostAuthApproleRoleRoleNameTokenMaxTtl**](Auth.md#postauthapprolerolerolenametokenmaxttl) | **POST** /auth/{approle_mount_path}/role/{role_name}/token-max-ttl | Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
-[**PostAuthApproleRoleRoleNameTokenNumUses**](Auth.md#postauthapprolerolerolenametokennumuses) | **POST** /auth/{approle_mount_path}/role/{role_name}/token-num-uses | Number of times issued tokens can be used
-[**PostAuthApproleRoleRoleNameTokenTtl**](Auth.md#postauthapprolerolerolenametokenttl) | **POST** /auth/{approle_mount_path}/role/{role_name}/token-ttl | Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
+[**PostAuthApproleRoleRoleNameSecretIdBoundCidrs**](Auth.md#postauthapprolerolerolenamesecretidboundcidrs) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-bound-cidrs | 
+[**PostAuthApproleRoleRoleNameSecretIdDestroy**](Auth.md#postauthapprolerolerolenamesecretiddestroy) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id/destroy | 
+[**PostAuthApproleRoleRoleNameSecretIdLookup**](Auth.md#postauthapprolerolerolenamesecretidlookup) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id/lookup | 
+[**PostAuthApproleRoleRoleNameSecretIdNumUses**](Auth.md#postauthapprolerolerolenamesecretidnumuses) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-num-uses | 
+[**PostAuthApproleRoleRoleNameSecretIdTtl**](Auth.md#postauthapprolerolerolenamesecretidttl) | **POST** /auth/{approle_mount_path}/role/{role_name}/secret-id-ttl | 
+[**PostAuthApproleRoleRoleNameTokenBoundCidrs**](Auth.md#postauthapprolerolerolenametokenboundcidrs) | **POST** /auth/{approle_mount_path}/role/{role_name}/token-bound-cidrs | 
+[**PostAuthApproleRoleRoleNameTokenMaxTtl**](Auth.md#postauthapprolerolerolenametokenmaxttl) | **POST** /auth/{approle_mount_path}/role/{role_name}/token-max-ttl | 
+[**PostAuthApproleRoleRoleNameTokenNumUses**](Auth.md#postauthapprolerolerolenametokennumuses) | **POST** /auth/{approle_mount_path}/role/{role_name}/token-num-uses | 
+[**PostAuthApproleRoleRoleNameTokenTtl**](Auth.md#postauthapprolerolerolenametokenttl) | **POST** /auth/{approle_mount_path}/role/{role_name}/token-ttl | 
 [**PostAuthApproleTidySecretId**](Auth.md#postauthapproletidysecretid) | **POST** /auth/{approle_mount_path}/tidy/secret-id | Trigger the clean-up of expired SecretID entries.
 [**PostAuthAwsConfigCertificateCertName**](Auth.md#postauthawsconfigcertificatecertname) | **POST** /auth/{aws_mount_path}/config/certificate/{cert_name} | 
 [**PostAuthAwsConfigClient**](Auth.md#postauthawsconfigclient) | **POST** /auth/{aws_mount_path}/config/client | 
@@ -346,7 +347,7 @@ No authorization required
 # **DeleteAuthApproleRoleRoleName**
 > void DeleteAuthApproleRoleRoleName (string roleName, string approleMountPath = null)
 
-Register an role with the backend.
+
 
 ### Example
 ```csharp
@@ -374,7 +375,6 @@ namespace Example
 
             try
             {
-                // Register an role with the backend.
                 apiInstance.DeleteAuthApproleRoleRoleName(roleName, approleMountPath);
             }
             catch (ApiException  e)
@@ -412,7 +412,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **204** | empty body |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -420,7 +420,7 @@ No authorization required
 # **DeleteAuthApproleRoleRoleNameBindSecretId**
 > void DeleteAuthApproleRoleRoleNameBindSecretId (string roleName, string approleMountPath = null)
 
-Impose secret_id to be presented during login using this role.
+
 
 ### Example
 ```csharp
@@ -448,7 +448,6 @@ namespace Example
 
             try
             {
-                // Impose secret_id to be presented during login using this role.
                 apiInstance.DeleteAuthApproleRoleRoleNameBindSecretId(roleName, approleMountPath);
             }
             catch (ApiException  e)
@@ -486,7 +485,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **204** | empty body |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -494,7 +493,7 @@ No authorization required
 # **DeleteAuthApproleRoleRoleNameBoundCidrList**
 > void DeleteAuthApproleRoleRoleNameBoundCidrList (string roleName, string approleMountPath = null)
 
-Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+
 
 ### Example
 ```csharp
@@ -522,7 +521,6 @@ namespace Example
 
             try
             {
-                // Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
                 apiInstance.DeleteAuthApproleRoleRoleNameBoundCidrList(roleName, approleMountPath);
             }
             catch (ApiException  e)
@@ -560,7 +558,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **204** | empty body |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -568,7 +566,7 @@ No authorization required
 # **DeleteAuthApproleRoleRoleNamePeriod**
 > void DeleteAuthApproleRoleRoleNamePeriod (string roleName, string approleMountPath = null)
 
-Updates the value of 'period' on the role
+
 
 ### Example
 ```csharp
@@ -596,7 +594,6 @@ namespace Example
 
             try
             {
-                // Updates the value of 'period' on the role
                 apiInstance.DeleteAuthApproleRoleRoleNamePeriod(roleName, approleMountPath);
             }
             catch (ApiException  e)
@@ -634,7 +631,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **204** | empty body |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -642,7 +639,7 @@ No authorization required
 # **DeleteAuthApproleRoleRoleNamePolicies**
 > void DeleteAuthApproleRoleRoleNamePolicies (string roleName, string approleMountPath = null)
 
-Policies of the role.
+
 
 ### Example
 ```csharp
@@ -670,7 +667,6 @@ namespace Example
 
             try
             {
-                // Policies of the role.
                 apiInstance.DeleteAuthApproleRoleRoleNamePolicies(roleName, approleMountPath);
             }
             catch (ApiException  e)
@@ -708,7 +704,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **204** | empty body |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -781,7 +777,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **204** | empty body |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -789,7 +785,7 @@ No authorization required
 # **DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs**
 > void DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs (string roleName, string approleMountPath = null)
 
-Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+
 
 ### Example
 ```csharp
@@ -817,7 +813,6 @@ namespace Example
 
             try
             {
-                // Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
                 apiInstance.DeleteAuthApproleRoleRoleNameSecretIdBoundCidrs(roleName, approleMountPath);
             }
             catch (ApiException  e)
@@ -855,7 +850,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **204** | empty body |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -863,7 +858,7 @@ No authorization required
 # **DeleteAuthApproleRoleRoleNameSecretIdDestroy**
 > void DeleteAuthApproleRoleRoleNameSecretIdDestroy (string roleName, string approleMountPath = null)
 
-Invalidate an issued secret_id
+
 
 ### Example
 ```csharp
@@ -891,7 +886,6 @@ namespace Example
 
             try
             {
-                // Invalidate an issued secret_id
                 apiInstance.DeleteAuthApproleRoleRoleNameSecretIdDestroy(roleName, approleMountPath);
             }
             catch (ApiException  e)
@@ -929,7 +923,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **204** | empty body |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -937,7 +931,7 @@ No authorization required
 # **DeleteAuthApproleRoleRoleNameSecretIdNumUses**
 > void DeleteAuthApproleRoleRoleNameSecretIdNumUses (string roleName, string approleMountPath = null)
 
-Use limit of the SecretID generated against the role.
+
 
 ### Example
 ```csharp
@@ -965,7 +959,6 @@ namespace Example
 
             try
             {
-                // Use limit of the SecretID generated against the role.
                 apiInstance.DeleteAuthApproleRoleRoleNameSecretIdNumUses(roleName, approleMountPath);
             }
             catch (ApiException  e)
@@ -1003,7 +996,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **204** | empty body |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1011,7 +1004,7 @@ No authorization required
 # **DeleteAuthApproleRoleRoleNameSecretIdTtl**
 > void DeleteAuthApproleRoleRoleNameSecretIdTtl (string roleName, string approleMountPath = null)
 
-Duration in seconds of the SecretID generated against the role.
+
 
 ### Example
 ```csharp
@@ -1039,7 +1032,6 @@ namespace Example
 
             try
             {
-                // Duration in seconds of the SecretID generated against the role.
                 apiInstance.DeleteAuthApproleRoleRoleNameSecretIdTtl(roleName, approleMountPath);
             }
             catch (ApiException  e)
@@ -1077,7 +1069,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **204** | empty body |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1085,7 +1077,7 @@ No authorization required
 # **DeleteAuthApproleRoleRoleNameTokenBoundCidrs**
 > void DeleteAuthApproleRoleRoleNameTokenBoundCidrs (string roleName, string approleMountPath = null)
 
-Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
+
 
 ### Example
 ```csharp
@@ -1113,7 +1105,6 @@ namespace Example
 
             try
             {
-                // Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
                 apiInstance.DeleteAuthApproleRoleRoleNameTokenBoundCidrs(roleName, approleMountPath);
             }
             catch (ApiException  e)
@@ -1151,7 +1142,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **204** | empty body |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1159,7 +1150,7 @@ No authorization required
 # **DeleteAuthApproleRoleRoleNameTokenMaxTtl**
 > void DeleteAuthApproleRoleRoleNameTokenMaxTtl (string roleName, string approleMountPath = null)
 
-Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
+
 
 ### Example
 ```csharp
@@ -1187,7 +1178,6 @@ namespace Example
 
             try
             {
-                // Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
                 apiInstance.DeleteAuthApproleRoleRoleNameTokenMaxTtl(roleName, approleMountPath);
             }
             catch (ApiException  e)
@@ -1225,7 +1215,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **204** | empty body |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1233,7 +1223,7 @@ No authorization required
 # **DeleteAuthApproleRoleRoleNameTokenNumUses**
 > void DeleteAuthApproleRoleRoleNameTokenNumUses (string roleName, string approleMountPath = null)
 
-Number of times issued tokens can be used
+
 
 ### Example
 ```csharp
@@ -1261,7 +1251,6 @@ namespace Example
 
             try
             {
-                // Number of times issued tokens can be used
                 apiInstance.DeleteAuthApproleRoleRoleNameTokenNumUses(roleName, approleMountPath);
             }
             catch (ApiException  e)
@@ -1299,7 +1288,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **204** | empty body |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1307,7 +1296,7 @@ No authorization required
 # **DeleteAuthApproleRoleRoleNameTokenTtl**
 > void DeleteAuthApproleRoleRoleNameTokenTtl (string roleName, string approleMountPath = null)
 
-Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
+
 
 ### Example
 ```csharp
@@ -1335,7 +1324,6 @@ namespace Example
 
             try
             {
-                // Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
                 apiInstance.DeleteAuthApproleRoleRoleNameTokenTtl(roleName, approleMountPath);
             }
             catch (ApiException  e)
@@ -1373,7 +1361,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **204** | empty body |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -4083,9 +4071,9 @@ No authorization required
 
 <a name="getauthapprolerole"></a>
 # **GetAuthApproleRole**
-> void GetAuthApproleRole (string list, string approleMountPath = null)
+> ApproleRoleResponse GetAuthApproleRole (string list, string approleMountPath = null)
 
-Lists all the roles registered with the backend.
+
 
 ### Example
 ```csharp
@@ -4113,8 +4101,8 @@ namespace Example
 
             try
             {
-                // Lists all the roles registered with the backend.
-                apiInstance.GetAuthApproleRole(list, approleMountPath);
+                ApproleRoleResponse result = apiInstance.GetAuthApproleRole(list, approleMountPath);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -4136,7 +4124,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ApproleRoleResponse**](ApproleRoleResponse.md)
 
 ### Authorization
 
@@ -4145,7 +4133,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -4157,9 +4145,9 @@ No authorization required
 
 <a name="getauthapprolerolerolename"></a>
 # **GetAuthApproleRoleRoleName**
-> void GetAuthApproleRoleRoleName (string roleName, string approleMountPath = null)
+> ApproleRoleResponse GetAuthApproleRoleRoleName (string roleName, string approleMountPath = null)
 
-Register an role with the backend.
+
 
 ### Example
 ```csharp
@@ -4187,8 +4175,8 @@ namespace Example
 
             try
             {
-                // Register an role with the backend.
-                apiInstance.GetAuthApproleRoleRoleName(roleName, approleMountPath);
+                ApproleRoleResponse result = apiInstance.GetAuthApproleRoleRoleName(roleName, approleMountPath);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -4210,7 +4198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ApproleRoleResponse**](ApproleRoleResponse.md)
 
 ### Authorization
 
@@ -4219,7 +4207,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -4231,9 +4219,9 @@ No authorization required
 
 <a name="getauthapprolerolerolenamebindsecretid"></a>
 # **GetAuthApproleRoleRoleNameBindSecretId**
-> void GetAuthApproleRoleRoleNameBindSecretId (string roleName, string approleMountPath = null)
+> ApproleRoleBindSecretIdResponse GetAuthApproleRoleRoleNameBindSecretId (string roleName, string approleMountPath = null)
 
-Impose secret_id to be presented during login using this role.
+
 
 ### Example
 ```csharp
@@ -4261,8 +4249,8 @@ namespace Example
 
             try
             {
-                // Impose secret_id to be presented during login using this role.
-                apiInstance.GetAuthApproleRoleRoleNameBindSecretId(roleName, approleMountPath);
+                ApproleRoleBindSecretIdResponse result = apiInstance.GetAuthApproleRoleRoleNameBindSecretId(roleName, approleMountPath);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -4284,7 +4272,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ApproleRoleBindSecretIdResponse**](ApproleRoleBindSecretIdResponse.md)
 
 ### Authorization
 
@@ -4293,7 +4281,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -4305,9 +4293,9 @@ No authorization required
 
 <a name="getauthapprolerolerolenameboundcidrlist"></a>
 # **GetAuthApproleRoleRoleNameBoundCidrList**
-> void GetAuthApproleRoleRoleNameBoundCidrList (string roleName, string approleMountPath = null)
+> ApproleRoleBoundCidrListResponse GetAuthApproleRoleRoleNameBoundCidrList (string roleName, string approleMountPath = null)
 
-Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+
 
 ### Example
 ```csharp
@@ -4335,8 +4323,8 @@ namespace Example
 
             try
             {
-                // Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-                apiInstance.GetAuthApproleRoleRoleNameBoundCidrList(roleName, approleMountPath);
+                ApproleRoleBoundCidrListResponse result = apiInstance.GetAuthApproleRoleRoleNameBoundCidrList(roleName, approleMountPath);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -4358,7 +4346,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ApproleRoleBoundCidrListResponse**](ApproleRoleBoundCidrListResponse.md)
 
 ### Authorization
 
@@ -4367,7 +4355,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -4379,9 +4367,9 @@ No authorization required
 
 <a name="getauthapprolerolerolenamelocalsecretids"></a>
 # **GetAuthApproleRoleRoleNameLocalSecretIds**
-> void GetAuthApproleRoleRoleNameLocalSecretIds (string roleName, string approleMountPath = null)
+> ApproleRoleLocalSecretIdsResponse GetAuthApproleRoleRoleNameLocalSecretIds (string roleName, string approleMountPath = null)
 
-Enables cluster local secret IDs
+
 
 ### Example
 ```csharp
@@ -4409,8 +4397,8 @@ namespace Example
 
             try
             {
-                // Enables cluster local secret IDs
-                apiInstance.GetAuthApproleRoleRoleNameLocalSecretIds(roleName, approleMountPath);
+                ApproleRoleLocalSecretIdsResponse result = apiInstance.GetAuthApproleRoleRoleNameLocalSecretIds(roleName, approleMountPath);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -4432,7 +4420,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ApproleRoleLocalSecretIdsResponse**](ApproleRoleLocalSecretIdsResponse.md)
 
 ### Authorization
 
@@ -4441,7 +4429,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -4453,9 +4441,9 @@ No authorization required
 
 <a name="getauthapprolerolerolenameperiod"></a>
 # **GetAuthApproleRoleRoleNamePeriod**
-> void GetAuthApproleRoleRoleNamePeriod (string roleName, string approleMountPath = null)
+> ApproleRolePeriodResponse GetAuthApproleRoleRoleNamePeriod (string roleName, string approleMountPath = null)
 
-Updates the value of 'period' on the role
+
 
 ### Example
 ```csharp
@@ -4483,8 +4471,8 @@ namespace Example
 
             try
             {
-                // Updates the value of 'period' on the role
-                apiInstance.GetAuthApproleRoleRoleNamePeriod(roleName, approleMountPath);
+                ApproleRolePeriodResponse result = apiInstance.GetAuthApproleRoleRoleNamePeriod(roleName, approleMountPath);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -4506,7 +4494,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ApproleRolePeriodResponse**](ApproleRolePeriodResponse.md)
 
 ### Authorization
 
@@ -4515,7 +4503,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -4527,9 +4515,9 @@ No authorization required
 
 <a name="getauthapprolerolerolenamepolicies"></a>
 # **GetAuthApproleRoleRoleNamePolicies**
-> void GetAuthApproleRoleRoleNamePolicies (string roleName, string approleMountPath = null)
+> ApproleRolePoliciesResponse GetAuthApproleRoleRoleNamePolicies (string roleName, string approleMountPath = null)
 
-Policies of the role.
+
 
 ### Example
 ```csharp
@@ -4557,8 +4545,8 @@ namespace Example
 
             try
             {
-                // Policies of the role.
-                apiInstance.GetAuthApproleRoleRoleNamePolicies(roleName, approleMountPath);
+                ApproleRolePoliciesResponse result = apiInstance.GetAuthApproleRoleRoleNamePolicies(roleName, approleMountPath);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -4580,7 +4568,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ApproleRolePoliciesResponse**](ApproleRolePoliciesResponse.md)
 
 ### Authorization
 
@@ -4589,7 +4577,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -4601,9 +4589,9 @@ No authorization required
 
 <a name="getauthapprolerolerolenameroleid"></a>
 # **GetAuthApproleRoleRoleNameRoleId**
-> void GetAuthApproleRoleRoleNameRoleId (string roleName, string approleMountPath = null)
+> ApproleRoleRoleIdResponse GetAuthApproleRoleRoleNameRoleId (string roleName, string approleMountPath = null)
 
-Returns the 'role_id' of the role.
+
 
 ### Example
 ```csharp
@@ -4631,8 +4619,8 @@ namespace Example
 
             try
             {
-                // Returns the 'role_id' of the role.
-                apiInstance.GetAuthApproleRoleRoleNameRoleId(roleName, approleMountPath);
+                ApproleRoleRoleIdResponse result = apiInstance.GetAuthApproleRoleRoleNameRoleId(roleName, approleMountPath);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -4654,7 +4642,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ApproleRoleRoleIdResponse**](ApproleRoleRoleIdResponse.md)
 
 ### Authorization
 
@@ -4663,7 +4651,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -4675,9 +4663,9 @@ No authorization required
 
 <a name="getauthapprolerolerolenamesecretid"></a>
 # **GetAuthApproleRoleRoleNameSecretId**
-> void GetAuthApproleRoleRoleNameSecretId (string roleName, string list, string approleMountPath = null)
+> ApproleRoleSecretIdResponse GetAuthApproleRoleRoleNameSecretId (string roleName, string list, string approleMountPath = null)
 
-Generate a SecretID against this role.
+
 
 ### Example
 ```csharp
@@ -4706,8 +4694,8 @@ namespace Example
 
             try
             {
-                // Generate a SecretID against this role.
-                apiInstance.GetAuthApproleRoleRoleNameSecretId(roleName, list, approleMountPath);
+                ApproleRoleSecretIdResponse result = apiInstance.GetAuthApproleRoleRoleNameSecretId(roleName, list, approleMountPath);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -4730,7 +4718,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ApproleRoleSecretIdResponse**](ApproleRoleSecretIdResponse.md)
 
 ### Authorization
 
@@ -4739,7 +4727,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -4751,9 +4739,9 @@ No authorization required
 
 <a name="getauthapprolerolerolenamesecretidboundcidrs"></a>
 # **GetAuthApproleRoleRoleNameSecretIdBoundCidrs**
-> void GetAuthApproleRoleRoleNameSecretIdBoundCidrs (string roleName, string approleMountPath = null)
+> ApproleRoleSecretIdBoundCidrsResponse GetAuthApproleRoleRoleNameSecretIdBoundCidrs (string roleName, string approleMountPath = null)
 
-Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+
 
 ### Example
 ```csharp
@@ -4781,8 +4769,8 @@ namespace Example
 
             try
             {
-                // Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
-                apiInstance.GetAuthApproleRoleRoleNameSecretIdBoundCidrs(roleName, approleMountPath);
+                ApproleRoleSecretIdBoundCidrsResponse result = apiInstance.GetAuthApproleRoleRoleNameSecretIdBoundCidrs(roleName, approleMountPath);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -4804,7 +4792,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ApproleRoleSecretIdBoundCidrsResponse**](ApproleRoleSecretIdBoundCidrsResponse.md)
 
 ### Authorization
 
@@ -4813,7 +4801,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -4825,9 +4813,9 @@ No authorization required
 
 <a name="getauthapprolerolerolenamesecretidnumuses"></a>
 # **GetAuthApproleRoleRoleNameSecretIdNumUses**
-> void GetAuthApproleRoleRoleNameSecretIdNumUses (string roleName, string approleMountPath = null)
+> ApproleRoleSecretIdNumUsesResponse GetAuthApproleRoleRoleNameSecretIdNumUses (string roleName, string approleMountPath = null)
 
-Use limit of the SecretID generated against the role.
+
 
 ### Example
 ```csharp
@@ -4855,8 +4843,8 @@ namespace Example
 
             try
             {
-                // Use limit of the SecretID generated against the role.
-                apiInstance.GetAuthApproleRoleRoleNameSecretIdNumUses(roleName, approleMountPath);
+                ApproleRoleSecretIdNumUsesResponse result = apiInstance.GetAuthApproleRoleRoleNameSecretIdNumUses(roleName, approleMountPath);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -4878,7 +4866,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ApproleRoleSecretIdNumUsesResponse**](ApproleRoleSecretIdNumUsesResponse.md)
 
 ### Authorization
 
@@ -4887,7 +4875,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -4899,9 +4887,9 @@ No authorization required
 
 <a name="getauthapprolerolerolenamesecretidttl"></a>
 # **GetAuthApproleRoleRoleNameSecretIdTtl**
-> void GetAuthApproleRoleRoleNameSecretIdTtl (string roleName, string approleMountPath = null)
+> ApproleRoleSecretIdTtlResponse GetAuthApproleRoleRoleNameSecretIdTtl (string roleName, string approleMountPath = null)
 
-Duration in seconds of the SecretID generated against the role.
+
 
 ### Example
 ```csharp
@@ -4929,8 +4917,8 @@ namespace Example
 
             try
             {
-                // Duration in seconds of the SecretID generated against the role.
-                apiInstance.GetAuthApproleRoleRoleNameSecretIdTtl(roleName, approleMountPath);
+                ApproleRoleSecretIdTtlResponse result = apiInstance.GetAuthApproleRoleRoleNameSecretIdTtl(roleName, approleMountPath);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -4952,7 +4940,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ApproleRoleSecretIdTtlResponse**](ApproleRoleSecretIdTtlResponse.md)
 
 ### Authorization
 
@@ -4961,7 +4949,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -4973,9 +4961,9 @@ No authorization required
 
 <a name="getauthapprolerolerolenametokenboundcidrs"></a>
 # **GetAuthApproleRoleRoleNameTokenBoundCidrs**
-> void GetAuthApproleRoleRoleNameTokenBoundCidrs (string roleName, string approleMountPath = null)
+> ApproleRoleTokenBoundCidrsResponse GetAuthApproleRoleRoleNameTokenBoundCidrs (string roleName, string approleMountPath = null)
 
-Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
+
 
 ### Example
 ```csharp
@@ -5003,8 +4991,8 @@ namespace Example
 
             try
             {
-                // Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
-                apiInstance.GetAuthApproleRoleRoleNameTokenBoundCidrs(roleName, approleMountPath);
+                ApproleRoleTokenBoundCidrsResponse result = apiInstance.GetAuthApproleRoleRoleNameTokenBoundCidrs(roleName, approleMountPath);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -5026,7 +5014,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ApproleRoleTokenBoundCidrsResponse**](ApproleRoleTokenBoundCidrsResponse.md)
 
 ### Authorization
 
@@ -5035,7 +5023,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -5047,9 +5035,9 @@ No authorization required
 
 <a name="getauthapprolerolerolenametokenmaxttl"></a>
 # **GetAuthApproleRoleRoleNameTokenMaxTtl**
-> void GetAuthApproleRoleRoleNameTokenMaxTtl (string roleName, string approleMountPath = null)
+> ApproleRoleTokenMaxTtlResponse GetAuthApproleRoleRoleNameTokenMaxTtl (string roleName, string approleMountPath = null)
 
-Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
+
 
 ### Example
 ```csharp
@@ -5077,8 +5065,8 @@ namespace Example
 
             try
             {
-                // Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
-                apiInstance.GetAuthApproleRoleRoleNameTokenMaxTtl(roleName, approleMountPath);
+                ApproleRoleTokenMaxTtlResponse result = apiInstance.GetAuthApproleRoleRoleNameTokenMaxTtl(roleName, approleMountPath);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -5100,7 +5088,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ApproleRoleTokenMaxTtlResponse**](ApproleRoleTokenMaxTtlResponse.md)
 
 ### Authorization
 
@@ -5109,7 +5097,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -5121,9 +5109,9 @@ No authorization required
 
 <a name="getauthapprolerolerolenametokennumuses"></a>
 # **GetAuthApproleRoleRoleNameTokenNumUses**
-> void GetAuthApproleRoleRoleNameTokenNumUses (string roleName, string approleMountPath = null)
+> ApproleRoleTokenNumUsesResponse GetAuthApproleRoleRoleNameTokenNumUses (string roleName, string approleMountPath = null)
 
-Number of times issued tokens can be used
+
 
 ### Example
 ```csharp
@@ -5151,8 +5139,8 @@ namespace Example
 
             try
             {
-                // Number of times issued tokens can be used
-                apiInstance.GetAuthApproleRoleRoleNameTokenNumUses(roleName, approleMountPath);
+                ApproleRoleTokenNumUsesResponse result = apiInstance.GetAuthApproleRoleRoleNameTokenNumUses(roleName, approleMountPath);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -5174,7 +5162,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ApproleRoleTokenNumUsesResponse**](ApproleRoleTokenNumUsesResponse.md)
 
 ### Authorization
 
@@ -5183,7 +5171,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -5195,9 +5183,9 @@ No authorization required
 
 <a name="getauthapprolerolerolenametokenttl"></a>
 # **GetAuthApproleRoleRoleNameTokenTtl**
-> void GetAuthApproleRoleRoleNameTokenTtl (string roleName, string approleMountPath = null)
+> ApproleRoleTokenTtlResponse GetAuthApproleRoleRoleNameTokenTtl (string roleName, string approleMountPath = null)
 
-Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
+
 
 ### Example
 ```csharp
@@ -5225,8 +5213,8 @@ namespace Example
 
             try
             {
-                // Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
-                apiInstance.GetAuthApproleRoleRoleNameTokenTtl(roleName, approleMountPath);
+                ApproleRoleTokenTtlResponse result = apiInstance.GetAuthApproleRoleRoleNameTokenTtl(roleName, approleMountPath);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -5248,7 +5236,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ApproleRoleTokenTtlResponse**](ApproleRoleTokenTtlResponse.md)
 
 ### Authorization
 
@@ -5257,7 +5245,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -7273,6 +7261,79 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **certMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cert&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getauthcertcrls"></a>
+# **GetAuthCertCrls**
+> void GetAuthCertCrls (string list, string certMountPath = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class GetAuthCertCrlsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Auth(httpClient, config, httpClientHandler);
+            var list = "true";  // string | Must be set to `true`
+            var certMountPath = "\"cert\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cert")
+
+            try
+            {
+                apiInstance.GetAuthCertCrls(list, certMountPath);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Auth.GetAuthCertCrls: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **list** | **string**| Must be set to &#x60;true&#x60; | 
  **certMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cert&quot;]
 
 ### Return type
@@ -11404,7 +11465,7 @@ No authorization required
 # **PostAuthApproleRoleRoleName**
 > void PostAuthApproleRoleRoleName (string roleName, ApproleRoleRequest approleRoleRequest, string approleMountPath = null)
 
-Register an role with the backend.
+
 
 ### Example
 ```csharp
@@ -11433,7 +11494,6 @@ namespace Example
 
             try
             {
-                // Register an role with the backend.
                 apiInstance.PostAuthApproleRoleRoleName(roleName, approleRoleRequest, approleMountPath);
             }
             catch (ApiException  e)
@@ -11480,7 +11540,7 @@ No authorization required
 # **PostAuthApproleRoleRoleNameBindSecretId**
 > void PostAuthApproleRoleRoleNameBindSecretId (string roleName, ApproleRoleBindSecretIdRequest approleRoleBindSecretIdRequest, string approleMountPath = null)
 
-Impose secret_id to be presented during login using this role.
+
 
 ### Example
 ```csharp
@@ -11509,7 +11569,6 @@ namespace Example
 
             try
             {
-                // Impose secret_id to be presented during login using this role.
                 apiInstance.PostAuthApproleRoleRoleNameBindSecretId(roleName, approleRoleBindSecretIdRequest, approleMountPath);
             }
             catch (ApiException  e)
@@ -11548,7 +11607,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -11556,7 +11615,7 @@ No authorization required
 # **PostAuthApproleRoleRoleNameBoundCidrList**
 > void PostAuthApproleRoleRoleNameBoundCidrList (string roleName, ApproleRoleBoundCidrListRequest approleRoleBoundCidrListRequest, string approleMountPath = null)
 
-Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+
 
 ### Example
 ```csharp
@@ -11585,7 +11644,6 @@ namespace Example
 
             try
             {
-                // Deprecated: Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
                 apiInstance.PostAuthApproleRoleRoleNameBoundCidrList(roleName, approleRoleBoundCidrListRequest, approleMountPath);
             }
             catch (ApiException  e)
@@ -11624,15 +11682,15 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="postauthapprolerolerolenamecustomsecretid"></a>
 # **PostAuthApproleRoleRoleNameCustomSecretId**
-> void PostAuthApproleRoleRoleNameCustomSecretId (string roleName, ApproleRoleCustomSecretIdRequest approleRoleCustomSecretIdRequest, string approleMountPath = null)
+> ApproleRoleCustomSecretIdResponse PostAuthApproleRoleRoleNameCustomSecretId (string roleName, ApproleRoleCustomSecretIdRequest approleRoleCustomSecretIdRequest, string approleMountPath = null)
 
-Assign a SecretID of choice against the role.
+
 
 ### Example
 ```csharp
@@ -11661,8 +11719,8 @@ namespace Example
 
             try
             {
-                // Assign a SecretID of choice against the role.
-                apiInstance.PostAuthApproleRoleRoleNameCustomSecretId(roleName, approleRoleCustomSecretIdRequest, approleMountPath);
+                ApproleRoleCustomSecretIdResponse result = apiInstance.PostAuthApproleRoleRoleNameCustomSecretId(roleName, approleRoleCustomSecretIdRequest, approleMountPath);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -11685,7 +11743,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ApproleRoleCustomSecretIdResponse**](ApproleRoleCustomSecretIdResponse.md)
 
 ### Authorization
 
@@ -11694,7 +11752,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -11708,7 +11766,7 @@ No authorization required
 # **PostAuthApproleRoleRoleNamePeriod**
 > void PostAuthApproleRoleRoleNamePeriod (string roleName, ApproleRolePeriodRequest approleRolePeriodRequest, string approleMountPath = null)
 
-Updates the value of 'period' on the role
+
 
 ### Example
 ```csharp
@@ -11737,7 +11795,6 @@ namespace Example
 
             try
             {
-                // Updates the value of 'period' on the role
                 apiInstance.PostAuthApproleRoleRoleNamePeriod(roleName, approleRolePeriodRequest, approleMountPath);
             }
             catch (ApiException  e)
@@ -11776,7 +11833,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -11784,7 +11841,7 @@ No authorization required
 # **PostAuthApproleRoleRoleNamePolicies**
 > void PostAuthApproleRoleRoleNamePolicies (string roleName, ApproleRolePoliciesRequest approleRolePoliciesRequest, string approleMountPath = null)
 
-Policies of the role.
+
 
 ### Example
 ```csharp
@@ -11813,7 +11870,6 @@ namespace Example
 
             try
             {
-                // Policies of the role.
                 apiInstance.PostAuthApproleRoleRoleNamePolicies(roleName, approleRolePoliciesRequest, approleMountPath);
             }
             catch (ApiException  e)
@@ -11852,7 +11908,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -11860,7 +11916,7 @@ No authorization required
 # **PostAuthApproleRoleRoleNameRoleId**
 > void PostAuthApproleRoleRoleNameRoleId (string roleName, ApproleRoleRoleIdRequest approleRoleRoleIdRequest, string approleMountPath = null)
 
-Returns the 'role_id' of the role.
+
 
 ### Example
 ```csharp
@@ -11889,7 +11945,6 @@ namespace Example
 
             try
             {
-                // Returns the 'role_id' of the role.
                 apiInstance.PostAuthApproleRoleRoleNameRoleId(roleName, approleRoleRoleIdRequest, approleMountPath);
             }
             catch (ApiException  e)
@@ -11928,15 +11983,15 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="postauthapprolerolerolenamesecretid"></a>
 # **PostAuthApproleRoleRoleNameSecretId**
-> void PostAuthApproleRoleRoleNameSecretId (string roleName, ApproleRoleSecretIdRequest approleRoleSecretIdRequest, string approleMountPath = null)
+> ApproleRoleSecretIdResponse PostAuthApproleRoleRoleNameSecretId (string roleName, ApproleRoleSecretIdRequest approleRoleSecretIdRequest, string approleMountPath = null)
 
-Generate a SecretID against this role.
+
 
 ### Example
 ```csharp
@@ -11965,8 +12020,8 @@ namespace Example
 
             try
             {
-                // Generate a SecretID against this role.
-                apiInstance.PostAuthApproleRoleRoleNameSecretId(roleName, approleRoleSecretIdRequest, approleMountPath);
+                ApproleRoleSecretIdResponse result = apiInstance.PostAuthApproleRoleRoleNameSecretId(roleName, approleRoleSecretIdRequest, approleMountPath);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -11989,7 +12044,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ApproleRoleSecretIdResponse**](ApproleRoleSecretIdResponse.md)
 
 ### Authorization
 
@@ -11998,7 +12053,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -12079,13 +12134,13 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="postauthapprolerolerolenamesecretidaccessorlookup"></a>
 # **PostAuthApproleRoleRoleNameSecretIdAccessorLookup**
-> void PostAuthApproleRoleRoleNameSecretIdAccessorLookup (string roleName, ApproleRoleSecretIdAccessorLookupRequest approleRoleSecretIdAccessorLookupRequest, string approleMountPath = null)
+> ApproleRoleSecretIdAccessorLookupResponse PostAuthApproleRoleRoleNameSecretIdAccessorLookup (string roleName, ApproleRoleSecretIdAccessorLookupRequest approleRoleSecretIdAccessorLookupRequest, string approleMountPath = null)
 
 
 
@@ -12116,7 +12171,8 @@ namespace Example
 
             try
             {
-                apiInstance.PostAuthApproleRoleRoleNameSecretIdAccessorLookup(roleName, approleRoleSecretIdAccessorLookupRequest, approleMountPath);
+                ApproleRoleSecretIdAccessorLookupResponse result = apiInstance.PostAuthApproleRoleRoleNameSecretIdAccessorLookup(roleName, approleRoleSecretIdAccessorLookupRequest, approleMountPath);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -12139,7 +12195,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ApproleRoleSecretIdAccessorLookupResponse**](ApproleRoleSecretIdAccessorLookupResponse.md)
 
 ### Authorization
 
@@ -12148,7 +12204,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -12162,7 +12218,7 @@ No authorization required
 # **PostAuthApproleRoleRoleNameSecretIdBoundCidrs**
 > void PostAuthApproleRoleRoleNameSecretIdBoundCidrs (string roleName, ApproleRoleSecretIdBoundCidrsRequest approleRoleSecretIdBoundCidrsRequest, string approleMountPath = null)
 
-Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
+
 
 ### Example
 ```csharp
@@ -12191,7 +12247,6 @@ namespace Example
 
             try
             {
-                // Comma separated list of CIDR blocks, if set, specifies blocks of IP addresses which can perform the login operation
                 apiInstance.PostAuthApproleRoleRoleNameSecretIdBoundCidrs(roleName, approleRoleSecretIdBoundCidrsRequest, approleMountPath);
             }
             catch (ApiException  e)
@@ -12230,7 +12285,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -12238,7 +12293,7 @@ No authorization required
 # **PostAuthApproleRoleRoleNameSecretIdDestroy**
 > void PostAuthApproleRoleRoleNameSecretIdDestroy (string roleName, ApproleRoleSecretIdDestroyRequest approleRoleSecretIdDestroyRequest, string approleMountPath = null)
 
-Invalidate an issued secret_id
+
 
 ### Example
 ```csharp
@@ -12267,7 +12322,6 @@ namespace Example
 
             try
             {
-                // Invalidate an issued secret_id
                 apiInstance.PostAuthApproleRoleRoleNameSecretIdDestroy(roleName, approleRoleSecretIdDestroyRequest, approleMountPath);
             }
             catch (ApiException  e)
@@ -12306,15 +12360,15 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="postauthapprolerolerolenamesecretidlookup"></a>
 # **PostAuthApproleRoleRoleNameSecretIdLookup**
-> void PostAuthApproleRoleRoleNameSecretIdLookup (string roleName, ApproleRoleSecretIdLookupRequest approleRoleSecretIdLookupRequest, string approleMountPath = null)
+> ApproleRoleSecretIdLookupResponse PostAuthApproleRoleRoleNameSecretIdLookup (string roleName, ApproleRoleSecretIdLookupRequest approleRoleSecretIdLookupRequest, string approleMountPath = null)
 
-Read the properties of an issued secret_id
+
 
 ### Example
 ```csharp
@@ -12343,8 +12397,8 @@ namespace Example
 
             try
             {
-                // Read the properties of an issued secret_id
-                apiInstance.PostAuthApproleRoleRoleNameSecretIdLookup(roleName, approleRoleSecretIdLookupRequest, approleMountPath);
+                ApproleRoleSecretIdLookupResponse result = apiInstance.PostAuthApproleRoleRoleNameSecretIdLookup(roleName, approleRoleSecretIdLookupRequest, approleMountPath);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -12367,7 +12421,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ApproleRoleSecretIdLookupResponse**](ApproleRoleSecretIdLookupResponse.md)
 
 ### Authorization
 
@@ -12376,7 +12430,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
@@ -12390,7 +12444,7 @@ No authorization required
 # **PostAuthApproleRoleRoleNameSecretIdNumUses**
 > void PostAuthApproleRoleRoleNameSecretIdNumUses (string roleName, ApproleRoleSecretIdNumUsesRequest approleRoleSecretIdNumUsesRequest, string approleMountPath = null)
 
-Use limit of the SecretID generated against the role.
+
 
 ### Example
 ```csharp
@@ -12419,7 +12473,6 @@ namespace Example
 
             try
             {
-                // Use limit of the SecretID generated against the role.
                 apiInstance.PostAuthApproleRoleRoleNameSecretIdNumUses(roleName, approleRoleSecretIdNumUsesRequest, approleMountPath);
             }
             catch (ApiException  e)
@@ -12458,7 +12511,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -12466,7 +12519,7 @@ No authorization required
 # **PostAuthApproleRoleRoleNameSecretIdTtl**
 > void PostAuthApproleRoleRoleNameSecretIdTtl (string roleName, ApproleRoleSecretIdTtlRequest approleRoleSecretIdTtlRequest, string approleMountPath = null)
 
-Duration in seconds of the SecretID generated against the role.
+
 
 ### Example
 ```csharp
@@ -12495,7 +12548,6 @@ namespace Example
 
             try
             {
-                // Duration in seconds of the SecretID generated against the role.
                 apiInstance.PostAuthApproleRoleRoleNameSecretIdTtl(roleName, approleRoleSecretIdTtlRequest, approleMountPath);
             }
             catch (ApiException  e)
@@ -12534,7 +12586,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -12542,7 +12594,7 @@ No authorization required
 # **PostAuthApproleRoleRoleNameTokenBoundCidrs**
 > void PostAuthApproleRoleRoleNameTokenBoundCidrs (string roleName, ApproleRoleTokenBoundCidrsRequest approleRoleTokenBoundCidrsRequest, string approleMountPath = null)
 
-Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
+
 
 ### Example
 ```csharp
@@ -12571,7 +12623,6 @@ namespace Example
 
             try
             {
-                // Comma separated string or list of CIDR blocks. If set, specifies the blocks of IP addresses which can use the returned token.
                 apiInstance.PostAuthApproleRoleRoleNameTokenBoundCidrs(roleName, approleRoleTokenBoundCidrsRequest, approleMountPath);
             }
             catch (ApiException  e)
@@ -12610,7 +12661,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -12618,7 +12669,7 @@ No authorization required
 # **PostAuthApproleRoleRoleNameTokenMaxTtl**
 > void PostAuthApproleRoleRoleNameTokenMaxTtl (string roleName, ApproleRoleTokenMaxTtlRequest approleRoleTokenMaxTtlRequest, string approleMountPath = null)
 
-Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
+
 
 ### Example
 ```csharp
@@ -12647,7 +12698,6 @@ namespace Example
 
             try
             {
-                // Duration in seconds, the maximum lifetime of the tokens issued by using the SecretIDs that were generated against this role, after which the tokens are not allowed to be renewed.
                 apiInstance.PostAuthApproleRoleRoleNameTokenMaxTtl(roleName, approleRoleTokenMaxTtlRequest, approleMountPath);
             }
             catch (ApiException  e)
@@ -12686,7 +12736,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -12694,7 +12744,7 @@ No authorization required
 # **PostAuthApproleRoleRoleNameTokenNumUses**
 > void PostAuthApproleRoleRoleNameTokenNumUses (string roleName, ApproleRoleTokenNumUsesRequest approleRoleTokenNumUsesRequest, string approleMountPath = null)
 
-Number of times issued tokens can be used
+
 
 ### Example
 ```csharp
@@ -12723,7 +12773,6 @@ namespace Example
 
             try
             {
-                // Number of times issued tokens can be used
                 apiInstance.PostAuthApproleRoleRoleNameTokenNumUses(roleName, approleRoleTokenNumUsesRequest, approleMountPath);
             }
             catch (ApiException  e)
@@ -12762,7 +12811,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -12770,7 +12819,7 @@ No authorization required
 # **PostAuthApproleRoleRoleNameTokenTtl**
 > void PostAuthApproleRoleRoleNameTokenTtl (string roleName, ApproleRoleTokenTtlRequest approleRoleTokenTtlRequest, string approleMountPath = null)
 
-Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
+
 
 ### Example
 ```csharp
@@ -12799,7 +12848,6 @@ namespace Example
 
             try
             {
-                // Duration in seconds, the lifetime of the token issued by using the SecretID that is generated against this role, before which the token needs to be renewed.
                 apiInstance.PostAuthApproleRoleRoleNameTokenTtl(roleName, approleRoleTokenTtlRequest, approleMountPath);
             }
             catch (ApiException  e)
@@ -12838,7 +12886,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | OK |  -  |
+| **204** | No Content |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -18223,7 +18271,7 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var tokenCreateRequest = new TokenCreateRequest(); // TokenCreateRequest | 
-            var format = "\"json\"";  // string | Return json formatted output (optional)  (default to "json")
+            var format = "\"\"";  // string | Return json formatted output (optional)  (default to "")
             var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
 
             try
@@ -18247,7 +18295,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tokenCreateRequest** | [**TokenCreateRequest**](TokenCreateRequest.md)|  | 
- **format** | **string**| Return json formatted output | [optional] [default to &quot;json&quot;]
+ **format** | **string**| Return json formatted output | [optional] [default to &quot;&quot;]
  **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
 
 ### Return type
@@ -18299,7 +18347,7 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var tokenCreateOrphanRequest = new TokenCreateOrphanRequest(); // TokenCreateOrphanRequest | 
-            var format = "\"json\"";  // string | Return json formatted output (optional)  (default to "json")
+            var format = "\"\"";  // string | Return json formatted output (optional)  (default to "")
             var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
 
             try
@@ -18323,7 +18371,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tokenCreateOrphanRequest** | [**TokenCreateOrphanRequest**](TokenCreateOrphanRequest.md)|  | 
- **format** | **string**| Return json formatted output | [optional] [default to &quot;json&quot;]
+ **format** | **string**| Return json formatted output | [optional] [default to &quot;&quot;]
  **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
 
 ### Return type
@@ -18376,7 +18424,7 @@ namespace Example
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role
             var tokenCreateRequest = new TokenCreateRequest(); // TokenCreateRequest | 
-            var format = "\"json\"";  // string | Return json formatted output (optional)  (default to "json")
+            var format = "\"\"";  // string | Return json formatted output (optional)  (default to "")
             var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
 
             try
@@ -18401,7 +18449,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role | 
  **tokenCreateRequest** | [**TokenCreateRequest**](TokenCreateRequest.md)|  | 
- **format** | **string**| Return json formatted output | [optional] [default to &quot;json&quot;]
+ **format** | **string**| Return json formatted output | [optional] [default to &quot;&quot;]
  **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
 
 ### Return type

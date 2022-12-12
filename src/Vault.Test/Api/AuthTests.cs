@@ -678,7 +678,8 @@ namespace Vault.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
             //string approleMountPath = null;
-            //instance.GetAuthApproleRole(list, approleMountPath);
+            //var response = instance.GetAuthApproleRole(list, approleMountPath);
+            //Assert.IsType<ApproleRoleResponse>(response);
         }
 
         /// <summary>
@@ -690,7 +691,8 @@ namespace Vault.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
             //string approleMountPath = null;
-            //instance.GetAuthApproleRoleRoleName(roleName, approleMountPath);
+            //var response = instance.GetAuthApproleRoleRoleName(roleName, approleMountPath);
+            //Assert.IsType<ApproleRoleResponse>(response);
         }
 
         /// <summary>
@@ -702,7 +704,8 @@ namespace Vault.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
             //string approleMountPath = null;
-            //instance.GetAuthApproleRoleRoleNameBindSecretId(roleName, approleMountPath);
+            //var response = instance.GetAuthApproleRoleRoleNameBindSecretId(roleName, approleMountPath);
+            //Assert.IsType<ApproleRoleBindSecretIdResponse>(response);
         }
 
         /// <summary>
@@ -714,7 +717,8 @@ namespace Vault.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
             //string approleMountPath = null;
-            //instance.GetAuthApproleRoleRoleNameBoundCidrList(roleName, approleMountPath);
+            //var response = instance.GetAuthApproleRoleRoleNameBoundCidrList(roleName, approleMountPath);
+            //Assert.IsType<ApproleRoleBoundCidrListResponse>(response);
         }
 
         /// <summary>
@@ -726,7 +730,8 @@ namespace Vault.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
             //string approleMountPath = null;
-            //instance.GetAuthApproleRoleRoleNameLocalSecretIds(roleName, approleMountPath);
+            //var response = instance.GetAuthApproleRoleRoleNameLocalSecretIds(roleName, approleMountPath);
+            //Assert.IsType<ApproleRoleLocalSecretIdsResponse>(response);
         }
 
         /// <summary>
@@ -738,7 +743,8 @@ namespace Vault.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
             //string approleMountPath = null;
-            //instance.GetAuthApproleRoleRoleNamePeriod(roleName, approleMountPath);
+            //var response = instance.GetAuthApproleRoleRoleNamePeriod(roleName, approleMountPath);
+            //Assert.IsType<ApproleRolePeriodResponse>(response);
         }
 
         /// <summary>
@@ -750,7 +756,8 @@ namespace Vault.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
             //string approleMountPath = null;
-            //instance.GetAuthApproleRoleRoleNamePolicies(roleName, approleMountPath);
+            //var response = instance.GetAuthApproleRoleRoleNamePolicies(roleName, approleMountPath);
+            //Assert.IsType<ApproleRolePoliciesResponse>(response);
         }
 
         /// <summary>
@@ -762,7 +769,8 @@ namespace Vault.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
             //string approleMountPath = null;
-            //instance.GetAuthApproleRoleRoleNameRoleId(roleName, approleMountPath);
+            //var response = instance.GetAuthApproleRoleRoleNameRoleId(roleName, approleMountPath);
+            //Assert.IsType<ApproleRoleRoleIdResponse>(response);
         }
 
         /// <summary>
@@ -775,7 +783,8 @@ namespace Vault.Test.Api
             //string roleName = null;
             //string list = null;
             //string approleMountPath = null;
-            //instance.GetAuthApproleRoleRoleNameSecretId(roleName, list, approleMountPath);
+            //var response = instance.GetAuthApproleRoleRoleNameSecretId(roleName, list, approleMountPath);
+            //Assert.IsType<ApproleRoleSecretIdResponse>(response);
         }
 
         /// <summary>
@@ -787,7 +796,8 @@ namespace Vault.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
             //string approleMountPath = null;
-            //instance.GetAuthApproleRoleRoleNameSecretIdBoundCidrs(roleName, approleMountPath);
+            //var response = instance.GetAuthApproleRoleRoleNameSecretIdBoundCidrs(roleName, approleMountPath);
+            //Assert.IsType<ApproleRoleSecretIdBoundCidrsResponse>(response);
         }
 
         /// <summary>
@@ -799,7 +809,8 @@ namespace Vault.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
             //string approleMountPath = null;
-            //instance.GetAuthApproleRoleRoleNameSecretIdNumUses(roleName, approleMountPath);
+            //var response = instance.GetAuthApproleRoleRoleNameSecretIdNumUses(roleName, approleMountPath);
+            //Assert.IsType<ApproleRoleSecretIdNumUsesResponse>(response);
         }
 
         /// <summary>
@@ -811,7 +822,8 @@ namespace Vault.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
             //string approleMountPath = null;
-            //instance.GetAuthApproleRoleRoleNameSecretIdTtl(roleName, approleMountPath);
+            //var response = instance.GetAuthApproleRoleRoleNameSecretIdTtl(roleName, approleMountPath);
+            //Assert.IsType<ApproleRoleSecretIdTtlResponse>(response);
         }
 
         /// <summary>
@@ -823,7 +835,8 @@ namespace Vault.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
             //string approleMountPath = null;
-            //instance.GetAuthApproleRoleRoleNameTokenBoundCidrs(roleName, approleMountPath);
+            //var response = instance.GetAuthApproleRoleRoleNameTokenBoundCidrs(roleName, approleMountPath);
+            //Assert.IsType<ApproleRoleTokenBoundCidrsResponse>(response);
         }
 
         /// <summary>
@@ -835,7 +848,8 @@ namespace Vault.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
             //string approleMountPath = null;
-            //instance.GetAuthApproleRoleRoleNameTokenMaxTtl(roleName, approleMountPath);
+            //var response = instance.GetAuthApproleRoleRoleNameTokenMaxTtl(roleName, approleMountPath);
+            //Assert.IsType<ApproleRoleTokenMaxTtlResponse>(response);
         }
 
         /// <summary>
@@ -847,7 +861,8 @@ namespace Vault.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
             //string approleMountPath = null;
-            //instance.GetAuthApproleRoleRoleNameTokenNumUses(roleName, approleMountPath);
+            //var response = instance.GetAuthApproleRoleRoleNameTokenNumUses(roleName, approleMountPath);
+            //Assert.IsType<ApproleRoleTokenNumUsesResponse>(response);
         }
 
         /// <summary>
@@ -859,7 +874,8 @@ namespace Vault.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string roleName = null;
             //string approleMountPath = null;
-            //instance.GetAuthApproleRoleRoleNameTokenTtl(roleName, approleMountPath);
+            //var response = instance.GetAuthApproleRoleRoleNameTokenTtl(roleName, approleMountPath);
+            //Assert.IsType<ApproleRoleTokenTtlResponse>(response);
         }
 
         /// <summary>
@@ -1187,6 +1203,18 @@ namespace Vault.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string certMountPath = null;
             //instance.GetAuthCertConfig(certMountPath);
+        }
+
+        /// <summary>
+        /// Test GetAuthCertCrls
+        /// </summary>
+        [Fact]
+        public void GetAuthCertCrlsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string certMountPath = null;
+            //instance.GetAuthCertCrls(list, certMountPath);
         }
 
         /// <summary>
@@ -1894,7 +1922,8 @@ namespace Vault.Test.Api
             //string roleName = null;
             //ApproleRoleCustomSecretIdRequest approleRoleCustomSecretIdRequest = null;
             //string approleMountPath = null;
-            //instance.PostAuthApproleRoleRoleNameCustomSecretId(roleName, approleRoleCustomSecretIdRequest, approleMountPath);
+            //var response = instance.PostAuthApproleRoleRoleNameCustomSecretId(roleName, approleRoleCustomSecretIdRequest, approleMountPath);
+            //Assert.IsType<ApproleRoleCustomSecretIdResponse>(response);
         }
 
         /// <summary>
@@ -1946,7 +1975,8 @@ namespace Vault.Test.Api
             //string roleName = null;
             //ApproleRoleSecretIdRequest approleRoleSecretIdRequest = null;
             //string approleMountPath = null;
-            //instance.PostAuthApproleRoleRoleNameSecretId(roleName, approleRoleSecretIdRequest, approleMountPath);
+            //var response = instance.PostAuthApproleRoleRoleNameSecretId(roleName, approleRoleSecretIdRequest, approleMountPath);
+            //Assert.IsType<ApproleRoleSecretIdResponse>(response);
         }
 
         /// <summary>
@@ -1972,7 +2002,8 @@ namespace Vault.Test.Api
             //string roleName = null;
             //ApproleRoleSecretIdAccessorLookupRequest approleRoleSecretIdAccessorLookupRequest = null;
             //string approleMountPath = null;
-            //instance.PostAuthApproleRoleRoleNameSecretIdAccessorLookup(roleName, approleRoleSecretIdAccessorLookupRequest, approleMountPath);
+            //var response = instance.PostAuthApproleRoleRoleNameSecretIdAccessorLookup(roleName, approleRoleSecretIdAccessorLookupRequest, approleMountPath);
+            //Assert.IsType<ApproleRoleSecretIdAccessorLookupResponse>(response);
         }
 
         /// <summary>
@@ -2011,7 +2042,8 @@ namespace Vault.Test.Api
             //string roleName = null;
             //ApproleRoleSecretIdLookupRequest approleRoleSecretIdLookupRequest = null;
             //string approleMountPath = null;
-            //instance.PostAuthApproleRoleRoleNameSecretIdLookup(roleName, approleRoleSecretIdLookupRequest, approleMountPath);
+            //var response = instance.PostAuthApproleRoleRoleNameSecretIdLookup(roleName, approleRoleSecretIdLookupRequest, approleMountPath);
+            //Assert.IsType<ApproleRoleSecretIdLookupResponse>(response);
         }
 
         /// <summary>
