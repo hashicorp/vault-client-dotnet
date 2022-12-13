@@ -239,10 +239,10 @@ catch (VaultApiException e)
     Console.WriteLine("Status code: {0}", e.StatusCode);
 
     // Get the first Api Error returned
-    Console.WriteLine("First api error: {0}", e.ApiErrors.First());
+    e.Errors.ToList().ForEach(x => Console.WriteLine(x));
 
-    // Full Error Content
-    Console.WriteLine("Original error content: {0}", e.ErrorContent);
+    // Well formatted exception message
+    Console.WriteLine(e.Message);
 }
 ```
 
