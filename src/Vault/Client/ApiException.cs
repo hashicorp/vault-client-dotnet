@@ -26,12 +26,6 @@ namespace Vault.Client
         public int StatusCode { get; private set; }
 
         /// <summary>
-        /// Gets or sets the error content (body json object)
-        /// </summary>
-        /// <value>The error content (Http response body).</value>
-        public object ErrorContent { get; private set; }
-
-        /// <summary>
         /// Gets or sets the list of Api Errors
         /// </summary>
         public IEnumerable<string> Errors { get; private set; }
@@ -67,7 +61,6 @@ namespace Vault.Client
         public VaultApiException(int statusCode, string message, string errorContent, Multimap<string, string> headers = null) : base(message)
         {
             this.StatusCode = statusCode;
-            this.ErrorContent = errorContent;
             this.Headers = headers;
 
             try
@@ -81,7 +74,9 @@ namespace Vault.Client
             }
             catch
             {
-                // Ignore
+                // With a deserialization exception we set the full 
+                // error content to the first element
+                this.Errors = new List<string>() { errorContent };
             }
         }
     }
