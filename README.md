@@ -16,6 +16,7 @@ A C# client library [generated][openapi-generator] from `OpenAPI` [specification
     - [Setting Headers](#setting-headers)
     - [Authenticating with Vault](#authenticating-with-vault)
     - [Reading a KV Secret](#reading-a-kv-secret)
+    - [Exception Handling](#exception-handling)
     - [Wrapping and Unwrapping Responses](#wrapping-and-unwrapping-responses)
     - [Performing Generic Operations](#performing-generic-operations)
   - [Documentation for API Endpoints](#documentation-for-api-endpoints)
@@ -220,6 +221,29 @@ All calls have both an async and synchronous implementation. E.g.
 ```csharp
 VaultResponse<Object> respAsync = await vaultClient.Secrets.GetSecretPathAsync("path");
 VaultResponse<Object> respSync = vaultClient.Secrets.GetSecretPath("path");
+```
+
+### Exception Handling
+For api level exceptions we provide the `VaultApiException` that provides the Vault
+specific errors, status code and original error content.
+
+```csharp
+try
+{
+    // Example call to Vault
+    vaultClient.System.GetSysMounts();
+}
+catch (VaultApiException e)
+{
+    // Status Code
+    Console.WriteLine("Status code: {0}", e.StatusCode);
+
+    // Print the individual errors returned by Vault
+    e.Errors.ToList().ForEach(x => Console.WriteLine(x));
+
+    // Well formatted exception message
+    Console.WriteLine(e.Message);
+}
 ```
 
 ### Wrapping and Unwrapping Responses
