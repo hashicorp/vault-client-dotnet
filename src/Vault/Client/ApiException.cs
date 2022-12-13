@@ -34,7 +34,7 @@ namespace Vault.Client
         /// <summary>
         /// Gets or sets the list of Api Errors
         /// </summary>
-        public IEnumerable<string> ApiErrors { get; private set; }
+        public IEnumerable<string> Errors { get; private set; }
 
         /// <summary>
         /// Gets or sets the HTTP headers
@@ -76,7 +76,7 @@ namespace Vault.Client
 
                 if (structured.ContainsKey("errors"))
                 {
-                    this.ApiErrors = structured["errors"];
+                    this.Errors = structured["errors"];
                 }
             }
             catch
