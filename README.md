@@ -238,7 +238,7 @@ catch (VaultApiException e)
     // Status Code
     Console.WriteLine("Status code: {0}", e.StatusCode);
 
-    // Get the first Api Error returned
+    // Print the individual errors returned by Vault
     e.Errors.ToList().ForEach(x => Console.WriteLine(x));
 
     // Well formatted exception message
