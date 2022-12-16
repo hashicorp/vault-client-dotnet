@@ -246,6 +246,27 @@ catch (VaultApiException e)
 }
 ```
 
+### Enable TLS
+
+### Certificate/TLS Authentication
+
+
+```csharp
+var clientCert = new X509Certificate2("path/to/client/cert", "passphrase");
+
+var serverCert = new X509Certificate2("path/to/server/cert");
+
+TLSConfiguration tlsConfig = new TLSConfiguration(clientCertificate: clientCert,
+                                                serverCertificate: serverCert);
+
+VaultConfiguration vaultConfig = new VaultConfiguration("http://127.0.0.1:8200",
+                                                        tlsConfiguration: tlsConfig);
+
+VaultClient vaultClient = new VaultClient();
+
+// Login w/ Cert Auth
+```
+
 ### Wrapping and Unwrapping Responses
 All functions accept an optional `TimeSpan? wrapTTL` function parameter. Vault will wrap the response and return a response-wrapping token instead. 
 More documentation on response wrapping can be found [here]([vault-response-wrapping]).
