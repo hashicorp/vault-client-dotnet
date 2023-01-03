@@ -248,10 +248,11 @@ catch (VaultApiException e)
 
 ### Enable TLS
 
-### Certificate/TLS Authentication
-
+### Using Certificate/TLS Authentication
 
 ```csharp
+
+// The Client Certificate must contain a private key.
 var clientCert = new X509Certificate2("path/to/client/cert", "passphrase");
 
 var serverCert = new X509Certificate2("path/to/server/cert");
@@ -264,7 +265,7 @@ VaultConfiguration vaultConfig = new VaultConfiguration("http://127.0.0.1:8200",
 
 VaultClient vaultClient = new VaultClient(vaultConfig);
 
-// Login w/ Cert Auth Method using the name of the certificate role
+// Login with Cert Auth Method using the name of the certificate role
 vaultClient.Auth.PostAuthCertLogin(new CertLoginRequest("roleName"));
 ```
 
