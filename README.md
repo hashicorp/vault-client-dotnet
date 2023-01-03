@@ -17,6 +17,8 @@ A C# client library [generated][openapi-generator] from `OpenAPI` [specification
     - [Authenticating with Vault](#authenticating-with-vault)
     - [Reading a KV Secret](#reading-a-kv-secret)
     - [Exception Handling](#exception-handling)
+    - [Enabling TLS](#enable-tls)
+    - [Using Certificate/TLS Authentication](#using-certificatetls-authentication)
     - [Wrapping and Unwrapping Responses](#wrapping-and-unwrapping-responses)
     - [Performing Generic Operations](#performing-generic-operations)
   - [Documentation for API Endpoints](#documentation-for-api-endpoints)
