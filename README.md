@@ -247,6 +247,23 @@ catch (VaultApiException e)
 ```
 
 ### Enable TLS
+To enable TLS, specify the location of Vault server's CA certificate file and create
+a new TLSConfiguration object:
+
+```csharp
+
+var serverCert = new X509Certificate2("path/to/server/cert");
+
+TLSConfiguration tlsConfig = new TLSConfiguration(serverCertificate: serverCert);
+
+VaultConfiguration vaultConfig = new VaultConfiguration("http://127.0.0.1:8200",
+                                                        tlsConfiguration: tlsConfig);
+
+VaultClient vaultClient = new VaultClient(vaultConfig);
+```
+
+This can be tested with a `-dev-tls` flag when spinning up a Vault server:
+`vault server -dev-tls -dev-root-token-id="my-token"`
 
 ### Using Certificate/TLS Authentication
 
