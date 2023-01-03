@@ -262,9 +262,10 @@ TLSConfiguration tlsConfig = new TLSConfiguration(clientCertificate: clientCert,
 VaultConfiguration vaultConfig = new VaultConfiguration("http://127.0.0.1:8200",
                                                         tlsConfiguration: tlsConfig);
 
-VaultClient vaultClient = new VaultClient();
+VaultClient vaultClient = new VaultClient(vaultConfig);
 
-// Login w/ Cert Auth
+// Login w/ Cert Auth Method using the name of the certificate role
+vaultClient.Auth.PostAuthCertLogin(new CertLoginRequest("roleName"));
 ```
 
 ### Wrapping and Unwrapping Responses
