@@ -249,6 +249,7 @@ catch (VaultApiException e)
 ```
 
 ### Enable TLS
+
 To enable TLS, specify the location of Vault server's CA certificate file and create
 a new TLSConfiguration object:
 
