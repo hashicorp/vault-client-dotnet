@@ -8,8 +8,6 @@ A .NET client library [generated][openapi-generator] from `OpenAPI` [specificati
 
   - [Installation](#installation)
     - [Frameworks supported](#frameworks-supported)
-    - [Dependencies](#dependencies)
-    - [Local Development](#local-development)
   - [Examples](#examples)
     - [Getting Started](#getting-started)
     - [Configuring a Vault Client](#configuring-a-vault-client)
@@ -19,6 +17,8 @@ A .NET client library [generated][openapi-generator] from `OpenAPI` [specificati
     - [Exception Handling](#exception-handling)
     - [Wrapping and Unwrapping Responses](#wrapping-and-unwrapping-responses)
     - [Performing Generic Operations](#performing-generic-operations)
+  - [Contributing to the Vault SDK](#contributing-to-vault-sdk)
+    - [Local Development](#local-development)
   - [Documentation for API Endpoints](#documentation-for-api-endpoints)
 
 ## Installation
@@ -61,31 +61,6 @@ dotnet add package Vault --source HashicorpArtifactory -version "PackageVersion"
 - .NET Core >=1.0
 - .NET Framework >=4.6
 - Mono/Xamarin >=vNext
-
-### Dependencies
-
-- [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) - 12.0.3 or later
-- [JsonSubTypes](https://www.nuget.org/packages/JsonSubTypes/) - 1.8.0 or later
-- [System.ComponentModel.Annotations](https://www.nuget.org/packages/System.ComponentModel.Annotations) - 5.0.0 or later
-
-The DLLs included in the package may not be the latest version. We recommend using [NuGet](https://docs.nuget.org/consume/installing-nuget) to obtain the latest version of the packages:
-```
-Install-Package Newtonsoft.Json
-Install-Package JsonSubTypes
-Install-Package System.ComponentModel.Annotations
-```
-
-### Local Development
-
-Generate the DLL using your preferred tool (e.g. `dotnet build`)
-
-Then include the DLL (under the `bin` folder) in the C# project, and use the namespaces:
-```csharp
-using Vault;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-```
 
 ## Examples
 
@@ -293,6 +268,30 @@ Dictionary<string, object>  secretData = new Dictionary<string, object>
 await vaultClient.WriteAsync<Object>(writePath, secretData);
 ```
 
+## Contributing to Vault SDK
+### Local Development
+
+To develop locally with the Vault SDK, you can generate the DLL using your preferred tool (e.g. `dotnet build`) in the `src` folder.
+
+Then include the generated DLL (under the `bin` folder) in the C# project, and use the namespaces:
+
+```csharp
+using Vault;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+```
+
+You will also need to include the following dependencies:
+- [Json.Net][newtonsoft-json]
+- [Polly][polly]
+
+Using your preferred method:
+```shell-session
+Install-Package Newtonsoft.Json
+Install-Package Polly
+```
+
 <a name="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
 
@@ -310,6 +309,7 @@ await vaultClient.WriteAsync<Object>(writePath, secretData);
 [doc-response-wrapping]:        https://www.vaultproject.io/docs/concepts/response-wrapping 
 [hashicorp]:                    https://www.hashicorp.com/
 [http-client-handler-docs]:     https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclienthandler?view=net-6.0
+[newtonsoft-json]:              https://www.nuget.org/packages/Newtonsoft.Json/
 [openapi-spec]:                 openapi.json
 [openapi-generator]:	        https://openapi-generator.tech/docs/generators/csharp-netcore
 [polly]:                        http://www.thepollyproject.org/
