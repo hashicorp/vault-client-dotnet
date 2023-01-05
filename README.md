@@ -268,10 +268,10 @@ Dictionary<string, object>  secretData = new Dictionary<string, object>
 await vaultClient.WriteAsync<Object>(writePath, secretData);
 ```
 
-## Contributing to Vault SDK
+## Contributing to Vault .Net Library
 ### Local Development
 
-To develop locally with the Vault SDK, you can generate the DLL using your preferred tool (e.g. `dotnet build`) in the `src` folder.
+To develop locally with the Vault .Net Library, you can generate the DLL using your preferred tool (e.g. `dotnet build`) in the `src` folder.
 
 Then include the generated DLL (under the `bin` folder) in the C# project, and use the namespaces:
 
