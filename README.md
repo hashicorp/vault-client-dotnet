@@ -17,7 +17,7 @@ A .NET client library [generated][openapi-generator] from `OpenAPI` [specificati
     - [Exception Handling](#exception-handling)
     - [Wrapping and Unwrapping Responses](#wrapping-and-unwrapping-responses)
     - [Performing Generic Operations](#performing-generic-operations)
-  - [Contributing to the Vault SDK](#contributing-to-vault-sdk)
+  - [Contributing to the Vault .Net Library](#contributing-to-vault-net-library)
     - [Local Development](#local-development)
   - [Documentation for API Endpoints](#documentation-for-api-endpoints)
 
