@@ -90,6 +90,43 @@ using Vault.Model;
 ## Examples
 
 ### Getting Started
+Here is a simple example of using the library to read and write your first secret. For the sake of simplicity, we are authenticating with a root token. This example works with a Vault server running in -dev mode:
+
+```shell-session
+vault server -dev -dev-root-token-id="my-token"
+```
+
+```csharp
+using Vault;
+using Vault.Client;
+
+namespace Example
+{
+    public class Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration(“http://127.0.0.1:8200");
+
+            VaultClient vaultClient = new VaultClient(config);
+            vaultClient.SetToken("my-token");
+
+            // Write a secret
+            var secretData = new Dictionary<string, string> { { “password” : “mypassword” } };  
+            var kvRequestData = new KvDataRequest(secretData);          
+            vaultClient.Secrets.PostSecretDataPath(“mypath”, kvRequestData);
+            
+            // Read a secret
+            ApiResponse<Object> resp = await vaultClient.Secrets.GetKvPathAsync("path");
+
+            Console.Writeline(resp.Content);
+        }
+    }
+}
+
+```
+
+### List Sys Mounts
 Here is a simple copy-pastable example of using the library to get a list of
 currently enabled secrets engines (equivalent to `GET /v1/sys/mounts`). This example 
 works with a Vault server started in dev mode with a hardcoded root token (e.g.
@@ -204,24 +241,6 @@ vaultClient.SetToken(token: vaultResp.ResponseAuth.ClientToken);
 
 The secret identifier is often delivered as a wrapped token. In this case, you
 should unwrap it first as demonstrated [here](#wrapping-and-unwrapping-responses).
-
-### Reading a KV Secret
-To call secrets endpoints, simply use the `VaultClient.Secrets` object, as shown below.
-
-All secrets and auth calls have an optional mount path parameter that can be specified,
-otherwise we will use a default mount path.
-
-```csharp
-VaultResponse<Object> resp = await vaultClient.Secrets.GetSecretPathAsync("path", secretMountPath: "myCustomMountPath");
-Console.WriteLine(resp.Data);
-```
-
-All calls have both an async and synchronous implementation. E.g.
-
-```csharp
-VaultResponse<Object> respAsync = await vaultClient.Secrets.GetSecretPathAsync("path");
-VaultResponse<Object> respSync = vaultClient.Secrets.GetSecretPath("path");
-```
 
 ### Exception Handling
 For api level exceptions we provide the `VaultApiException` that provides the Vault
