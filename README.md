@@ -95,7 +95,7 @@ namespace Example
                 vaultClient.Secrets.PostSecretDataPath(“mypath”, kvRequestData);
 
                 // Read a secret
-                VaultResponse<Object> resp = await vaultClient.Secrets.GetSecretPath("mypath");
+                VaultResponse<Object> resp = vaultClient.Secrets.GetSecretPath("mypath");
 
                 Console.Writeline(resp.Data);
             }
