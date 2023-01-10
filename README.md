@@ -92,10 +92,10 @@ namespace Example
                 var secretData = new Dictionary<string, string> { { “password”: “mypassword” } };
                 var kvRequestData = new KvDataRequest(secretData);    
 
-                vaultClient.Secrets.PostSecretDataPath(“mypath”, kvRequestData);
+                await vaultClient.Secrets.PostSecretDataPathAsync(“mypath”, kvRequestData);
 
                 // Read a secret
-                VaultResponse<Object> resp = await vaultClient.Secrets.GetKvPathAsync("mypath");
+                VaultResponse<Object> resp = await vaultClient.Secrets.GetSecretPathAsync("mypath");
 
                 Console.Writeline(resp.Data);
             }
