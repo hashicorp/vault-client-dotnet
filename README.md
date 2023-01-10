@@ -65,8 +65,8 @@ dotnet add package Vault --source HashicorpArtifactory -version "PackageVersion"
 ## Examples
 
 ### Getting Started
-Here is a simple copy-pastable example of using the library to get a list of
-currently enabled secrets engines (equivalent to `GET /v1/sys/mounts`). This example 
+Here is a simple copy-pastable example of using the library to write a secret to the
+kv secrets engine and then read the secret back. This example 
 works with a Vault server started in dev mode with a hardcoded root token (e.g.
 `vault server -dev -dev-root-token-id="my-token"`);
 
@@ -87,15 +87,21 @@ namespace Example
             vaultClient.SetToken("my-token");
 
             try 
-            {
-                VaultResponse<Object> resp = vaultClient.System.GetSysMounts();
+            {    
+                // Write a secret
+                var secretData = new Dictionary<string, string> { { “password”: “mypassword” } };
+                var kvRequestData = new KvDataRequest(secretData);    
 
-                // Write out response data
+                vaultClient.Secrets.PostSecretDataPath(“mypath”, kvRequestData);
+
+                // Read a secret
+                VaultResponse<Object> resp = await vaultClient.Secrets.GetKvPathAsync("mypath");
+
                 Console.Writeline(resp.Data);
             }
             catch (VaultApiException e)
             {
-                Console.WriteLine("Failed to read mounts with message {0}", e.Message);
+                Console.WriteLine("Failed to read secret with message {0}", e.Message);
             }
         }
     }
