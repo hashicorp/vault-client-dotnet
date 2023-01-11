@@ -26,18 +26,18 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PkiRootSignSelfIssuedRequest
+    /// PKIRootSignSelfIssuedRequest
     /// </summary>
-    [DataContract(Name = "PkiRootSignSelfIssuedRequest")]
-    public partial class PkiRootSignSelfIssuedRequest : IEquatable<PkiRootSignSelfIssuedRequest>, IValidatableObject
+    [DataContract(Name = "PKIRootSignSelfIssuedRequest")]
+    public partial class PKIRootSignSelfIssuedRequest : IEquatable<PKIRootSignSelfIssuedRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PkiRootSignSelfIssuedRequest" /> class.
+        /// Initializes a new instance of the <see cref="PKIRootSignSelfIssuedRequest" /> class.
         /// </summary>
         /// <param name="certificate">PEM-format self-issued certificate to be signed..</param>
         /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer. (default to &quot;default&quot;).</param>
         /// <param name="requireMatchingCertificateAlgorithms">If true, require the public key algorithm of the signer to match that of the self issued certificate. (default to false).</param>
-        public PkiRootSignSelfIssuedRequest(string certificate = default(string), string issuerRef = "default", bool requireMatchingCertificateAlgorithms = false)
+        public PKIRootSignSelfIssuedRequest(string certificate = default(string), string issuerRef = "default", bool requireMatchingCertificateAlgorithms = false)
         {
             this.Certificate = certificate;
             // use default value if no "issuerRef" provided
@@ -73,7 +73,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PkiRootSignSelfIssuedRequest {\n");
+            sb.Append("class PKIRootSignSelfIssuedRequest {\n");
             sb.Append("  Certificate: ").Append(Certificate).Append("\n");
             sb.Append("  IssuerRef: ").Append(IssuerRef).Append("\n");
             sb.Append("  RequireMatchingCertificateAlgorithms: ").Append(RequireMatchingCertificateAlgorithms).Append("\n");
@@ -97,15 +97,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PkiRootSignSelfIssuedRequest);
+            return this.Equals(input as PKIRootSignSelfIssuedRequest);
         }
 
         /// <summary>
-        /// Returns true if PkiRootSignSelfIssuedRequest instances are equal
+        /// Returns true if PKIRootSignSelfIssuedRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of PkiRootSignSelfIssuedRequest to be compared</param>
+        /// <param name="input">Instance of PKIRootSignSelfIssuedRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PkiRootSignSelfIssuedRequest input)
+        public bool Equals(PKIRootSignSelfIssuedRequest input)
         {
             if (input == null)
             {

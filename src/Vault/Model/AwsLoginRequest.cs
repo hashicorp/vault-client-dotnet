@@ -26,13 +26,13 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// AwsLoginRequest
+    /// AWSLoginRequest
     /// </summary>
-    [DataContract(Name = "AwsLoginRequest")]
-    public partial class AwsLoginRequest : IEquatable<AwsLoginRequest>, IValidatableObject
+    [DataContract(Name = "AWSLoginRequest")]
+    public partial class AWSLoginRequest : IEquatable<AWSLoginRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AwsLoginRequest" /> class.
+        /// Initializes a new instance of the <see cref="AWSLoginRequest" /> class.
         /// </summary>
         /// <param name="iamHttpRequestMethod">HTTP method to use for the AWS request when auth_type is iam. This must match what has been signed in the presigned request. Currently, POST is the only supported value.</param>
         /// <param name="iamRequestBody">Base64-encoded request body when auth_type is iam. This must match the request body included in the signature..</param>
@@ -43,7 +43,7 @@ namespace Vault.Model
         /// <param name="pkcs7">PKCS7 signature of the identity document when using an auth_type of ec2..</param>
         /// <param name="role">Name of the role against which the login is being attempted. If &#39;role&#39; is not specified, then the login endpoint looks for a role bearing the name of the AMI ID of the EC2 instance that is trying to login. If a matching role is not found, login fails..</param>
         /// <param name="signature">Base64 encoded SHA256 RSA signature of the instance identity document. This needs to be supplied along with &#39;identity&#39; parameter..</param>
-        public AwsLoginRequest(string iamHttpRequestMethod = default(string), string iamRequestBody = default(string), string iamRequestHeaders = default(string), string iamRequestUrl = default(string), string identity = default(string), string nonce = default(string), string pkcs7 = default(string), string role = default(string), string signature = default(string))
+        public AWSLoginRequest(string iamHttpRequestMethod = default(string), string iamRequestBody = default(string), string iamRequestHeaders = default(string), string iamRequestUrl = default(string), string identity = default(string), string nonce = default(string), string pkcs7 = default(string), string role = default(string), string signature = default(string))
         {
             this.IamHttpRequestMethod = iamHttpRequestMethod;
             this.IamRequestBody = iamRequestBody;
@@ -126,7 +126,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AwsLoginRequest {\n");
+            sb.Append("class AWSLoginRequest {\n");
             sb.Append("  IamHttpRequestMethod: ").Append(IamHttpRequestMethod).Append("\n");
             sb.Append("  IamRequestBody: ").Append(IamRequestBody).Append("\n");
             sb.Append("  IamRequestHeaders: ").Append(IamRequestHeaders).Append("\n");
@@ -156,15 +156,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as AwsLoginRequest);
+            return this.Equals(input as AWSLoginRequest);
         }
 
         /// <summary>
-        /// Returns true if AwsLoginRequest instances are equal
+        /// Returns true if AWSLoginRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of AwsLoginRequest to be compared</param>
+        /// <param name="input">Instance of AWSLoginRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AwsLoginRequest input)
+        public bool Equals(AWSLoginRequest input)
         {
             if (input == null)
             {

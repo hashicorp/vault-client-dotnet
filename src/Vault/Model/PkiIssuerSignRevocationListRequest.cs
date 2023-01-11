@@ -26,13 +26,13 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PkiIssuerSignRevocationListRequest
+    /// PKIIssuerSignRevocationListRequest
     /// </summary>
-    [DataContract(Name = "PkiIssuerSignRevocationListRequest")]
-    public partial class PkiIssuerSignRevocationListRequest : IEquatable<PkiIssuerSignRevocationListRequest>, IValidatableObject
+    [DataContract(Name = "PKIIssuerSignRevocationListRequest")]
+    public partial class PKIIssuerSignRevocationListRequest : IEquatable<PKIIssuerSignRevocationListRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PkiIssuerSignRevocationListRequest" /> class.
+        /// Initializes a new instance of the <see cref="PKIIssuerSignRevocationListRequest" /> class.
         /// </summary>
         /// <param name="crlNumber">The sequence number to be written within the CRL Number extension..</param>
         /// <param name="deltaCrlBaseNumber">Using a zero or greater value specifies the base CRL revision number to encode within a Delta CRL indicator extension, otherwise the extension will not be added. (default to -1).</param>
@@ -40,7 +40,7 @@ namespace Vault.Model
         /// <param name="format">The format of the combined CRL, can be \&quot;pem\&quot; or \&quot;der\&quot;. If \&quot;der\&quot;, the value will be base64 encoded. Defaults to \&quot;pem\&quot;. (default to &quot;pem&quot;).</param>
         /// <param name="nextUpdate">The amount of time the generated CRL should be valid; defaults to 72 hours. (default to &quot;72h&quot;).</param>
         /// <param name="revokedCerts">A list of maps containing the keys serial_number (string), revocation_time (string), and extensions (map with keys id (string), critical (bool), value (string)).</param>
-        public PkiIssuerSignRevocationListRequest(int crlNumber = default(int), int deltaCrlBaseNumber = -1, List<Object> extensions = default(List<Object>), string format = "pem", string nextUpdate = "72h", List<Object> revokedCerts = default(List<Object>))
+        public PKIIssuerSignRevocationListRequest(int crlNumber = default(int), int deltaCrlBaseNumber = -1, List<Object> extensions = default(List<Object>), string format = "pem", string nextUpdate = "72h", List<Object> revokedCerts = default(List<Object>))
         {
             this.CrlNumber = crlNumber;
             this.DeltaCrlBaseNumber = deltaCrlBaseNumber;
@@ -101,7 +101,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PkiIssuerSignRevocationListRequest {\n");
+            sb.Append("class PKIIssuerSignRevocationListRequest {\n");
             sb.Append("  CrlNumber: ").Append(CrlNumber).Append("\n");
             sb.Append("  DeltaCrlBaseNumber: ").Append(DeltaCrlBaseNumber).Append("\n");
             sb.Append("  Extensions: ").Append(Extensions).Append("\n");
@@ -128,15 +128,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PkiIssuerSignRevocationListRequest);
+            return this.Equals(input as PKIIssuerSignRevocationListRequest);
         }
 
         /// <summary>
-        /// Returns true if PkiIssuerSignRevocationListRequest instances are equal
+        /// Returns true if PKIIssuerSignRevocationListRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of PkiIssuerSignRevocationListRequest to be compared</param>
+        /// <param name="input">Instance of PKIIssuerSignRevocationListRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PkiIssuerSignRevocationListRequest input)
+        public bool Equals(PKIIssuerSignRevocationListRequest input)
         {
             if (input == null)
             {

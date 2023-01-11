@@ -26,17 +26,17 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// ApproleLoginRequest
+    /// AppRoleLoginRequest
     /// </summary>
-    [DataContract(Name = "ApproleLoginRequest")]
-    public partial class ApproleLoginRequest : IEquatable<ApproleLoginRequest>, IValidatableObject
+    [DataContract(Name = "AppRoleLoginRequest")]
+    public partial class AppRoleLoginRequest : IEquatable<AppRoleLoginRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApproleLoginRequest" /> class.
+        /// Initializes a new instance of the <see cref="AppRoleLoginRequest" /> class.
         /// </summary>
         /// <param name="roleId">Unique identifier of the Role. Required to be supplied when the &#39;bind_secret_id&#39; constraint is set..</param>
         /// <param name="secretId">SecretID belong to the App role (default to &quot;&quot;).</param>
-        public ApproleLoginRequest(string roleId = default(string), string secretId = "")
+        public AppRoleLoginRequest(string roleId = default(string), string secretId = "")
         {
             this.RoleId = roleId;
             // use default value if no "secretId" provided
@@ -64,7 +64,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class ApproleLoginRequest {\n");
+            sb.Append("class AppRoleLoginRequest {\n");
             sb.Append("  RoleId: ").Append(RoleId).Append("\n");
             sb.Append("  SecretId: ").Append(SecretId).Append("\n");
             sb.Append("}\n");
@@ -87,15 +87,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ApproleLoginRequest);
+            return this.Equals(input as AppRoleLoginRequest);
         }
 
         /// <summary>
-        /// Returns true if ApproleLoginRequest instances are equal
+        /// Returns true if AppRoleLoginRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of ApproleLoginRequest to be compared</param>
+        /// <param name="input">Instance of AppRoleLoginRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ApproleLoginRequest input)
+        public bool Equals(AppRoleLoginRequest input)
         {
             if (input == null)
             {

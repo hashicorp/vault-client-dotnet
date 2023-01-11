@@ -1,4 +1,4 @@
-# Vault.Model.SshLookupRequest
+# Vault.Model.SSHLookupRequest
 
 ## Properties
 

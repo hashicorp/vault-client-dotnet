@@ -26,10 +26,10 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PkiIssuersGenerateIntermediateRequest
+    /// PKIIssuersGenerateIntermediateRequest
     /// </summary>
-    [DataContract(Name = "PkiIssuersGenerateIntermediateRequest")]
-    public partial class PkiIssuersGenerateIntermediateRequest : IEquatable<PkiIssuersGenerateIntermediateRequest>, IValidatableObject
+    [DataContract(Name = "PKIIssuersGenerateIntermediateRequest")]
+    public partial class PKIIssuersGenerateIntermediateRequest : IEquatable<PKIIssuersGenerateIntermediateRequest>, IValidatableObject
     {
         /// <summary>
         /// Format for returned data. Can be \&quot;pem\&quot;, \&quot;der\&quot;, or \&quot;pem_bundle\&quot;. If \&quot;pem_bundle\&quot;, any private key and issuing cert will be appended to the certificate pem. If \&quot;der\&quot;, the value will be base64 encoded. Defaults to \&quot;pem\&quot;.
@@ -140,7 +140,7 @@ namespace Vault.Model
         [DataMember(Name = "private_key_format", EmitDefaultValue = false)]
         public PrivateKeyFormatEnum? PrivateKeyFormat { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="PkiIssuersGenerateIntermediateRequest" /> class.
+        /// Initializes a new instance of the <see cref="PKIIssuersGenerateIntermediateRequest" /> class.
         /// </summary>
         /// <param name="addBasicConstraints">Whether to add a Basic Constraints extension with CA: true. Only needed as a workaround in some compatibility scenarios with Active Directory Certificate Services..</param>
         /// <param name="altNames">The requested Subject Alternative Names, if any, in a comma-delimited list. May contain both DNS names and email addresses..</param>
@@ -169,7 +169,7 @@ namespace Vault.Model
         /// <param name="streetAddress">If set, Street Address will be set to this value..</param>
         /// <param name="ttl">The requested Time To Live for the certificate; sets the expiration date. If not specified the role default, backend default, or system default TTL is used, in that order. Cannot be larger than the mount max TTL. Note: this only has an effect when generating a CA cert or signing a CA cert, not when generating a CSR for an intermediate CA..</param>
         /// <param name="uriSans">The requested URI SANs, if any, in a comma-delimited list..</param>
-        public PkiIssuersGenerateIntermediateRequest(bool addBasicConstraints = default(bool), string altNames = default(string), string commonName = default(string), List<string> country = default(List<string>), bool excludeCnFromSans = false, FormatEnum? format = FormatEnum.Pem, List<string> ipSans = default(List<string>), int keyBits = 0, string keyName = default(string), string keyRef = "default", KeyTypeEnum? keyType = KeyTypeEnum.Rsa, List<string> locality = default(List<string>), string managedKeyId = default(string), string managedKeyName = default(string), string notAfter = default(string), int notBeforeDuration = 30, List<string> organization = default(List<string>), List<string> otherSans = default(List<string>), List<string> ou = default(List<string>), List<string> postalCode = default(List<string>), PrivateKeyFormatEnum? privateKeyFormat = PrivateKeyFormatEnum.Der, List<string> province = default(List<string>), string serialNumber = default(string), int signatureBits = 0, List<string> streetAddress = default(List<string>), int ttl = default(int), List<string> uriSans = default(List<string>))
+        public PKIIssuersGenerateIntermediateRequest(bool addBasicConstraints = default(bool), string altNames = default(string), string commonName = default(string), List<string> country = default(List<string>), bool excludeCnFromSans = false, FormatEnum? format = FormatEnum.Pem, List<string> ipSans = default(List<string>), int keyBits = 0, string keyName = default(string), string keyRef = "default", KeyTypeEnum? keyType = KeyTypeEnum.Rsa, List<string> locality = default(List<string>), string managedKeyId = default(string), string managedKeyName = default(string), string notAfter = default(string), int notBeforeDuration = 30, List<string> organization = default(List<string>), List<string> otherSans = default(List<string>), List<string> ou = default(List<string>), List<string> postalCode = default(List<string>), PrivateKeyFormatEnum? privateKeyFormat = PrivateKeyFormatEnum.Der, List<string> province = default(List<string>), string serialNumber = default(string), int signatureBits = 0, List<string> streetAddress = default(List<string>), int ttl = default(int), List<string> uriSans = default(List<string>))
         {
             this.AddBasicConstraints = addBasicConstraints;
             this.AltNames = altNames;
@@ -376,7 +376,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PkiIssuersGenerateIntermediateRequest {\n");
+            sb.Append("class PKIIssuersGenerateIntermediateRequest {\n");
             sb.Append("  AddBasicConstraints: ").Append(AddBasicConstraints).Append("\n");
             sb.Append("  AltNames: ").Append(AltNames).Append("\n");
             sb.Append("  CommonName: ").Append(CommonName).Append("\n");
@@ -424,15 +424,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PkiIssuersGenerateIntermediateRequest);
+            return this.Equals(input as PKIIssuersGenerateIntermediateRequest);
         }
 
         /// <summary>
-        /// Returns true if PkiIssuersGenerateIntermediateRequest instances are equal
+        /// Returns true if PKIIssuersGenerateIntermediateRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of PkiIssuersGenerateIntermediateRequest to be compared</param>
+        /// <param name="input">Instance of PKIIssuersGenerateIntermediateRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PkiIssuersGenerateIntermediateRequest input)
+        public bool Equals(PKIIssuersGenerateIntermediateRequest input)
         {
             if (input == null)
             {

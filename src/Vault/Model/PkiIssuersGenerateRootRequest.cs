@@ -26,10 +26,10 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PkiIssuersGenerateRootRequest
+    /// PKIIssuersGenerateRootRequest
     /// </summary>
-    [DataContract(Name = "PkiIssuersGenerateRootRequest")]
-    public partial class PkiIssuersGenerateRootRequest : IEquatable<PkiIssuersGenerateRootRequest>, IValidatableObject
+    [DataContract(Name = "PKIIssuersGenerateRootRequest")]
+    public partial class PKIIssuersGenerateRootRequest : IEquatable<PKIIssuersGenerateRootRequest>, IValidatableObject
     {
         /// <summary>
         /// Format for returned data. Can be \&quot;pem\&quot;, \&quot;der\&quot;, or \&quot;pem_bundle\&quot;. If \&quot;pem_bundle\&quot;, any private key and issuing cert will be appended to the certificate pem. If \&quot;der\&quot;, the value will be base64 encoded. Defaults to \&quot;pem\&quot;.
@@ -140,7 +140,7 @@ namespace Vault.Model
         [DataMember(Name = "private_key_format", EmitDefaultValue = false)]
         public PrivateKeyFormatEnum? PrivateKeyFormat { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="PkiIssuersGenerateRootRequest" /> class.
+        /// Initializes a new instance of the <see cref="PKIIssuersGenerateRootRequest" /> class.
         /// </summary>
         /// <param name="altNames">The requested Subject Alternative Names, if any, in a comma-delimited list. May contain both DNS names and email addresses..</param>
         /// <param name="commonName">The requested common name; if you want more than one, specify the alternative names in the alt_names map. If not specified when signing, the common name will be taken from the CSR; other names must still be specified in alt_names or ip_sans..</param>
@@ -172,7 +172,7 @@ namespace Vault.Model
         /// <param name="ttl">The requested Time To Live for the certificate; sets the expiration date. If not specified the role default, backend default, or system default TTL is used, in that order. Cannot be larger than the mount max TTL. Note: this only has an effect when generating a CA cert or signing a CA cert, not when generating a CSR for an intermediate CA..</param>
         /// <param name="uriSans">The requested URI SANs, if any, in a comma-delimited list..</param>
         /// <param name="usePss">Whether or not to use PSS signatures when using a RSA key-type issuer. Defaults to false. (default to false).</param>
-        public PkiIssuersGenerateRootRequest(string altNames = default(string), string commonName = default(string), List<string> country = default(List<string>), bool excludeCnFromSans = false, FormatEnum? format = FormatEnum.Pem, List<string> ipSans = default(List<string>), string issuerName = default(string), int keyBits = 0, string keyName = default(string), string keyRef = "default", KeyTypeEnum? keyType = KeyTypeEnum.Rsa, List<string> locality = default(List<string>), string managedKeyId = default(string), string managedKeyName = default(string), int maxPathLength = -1, string notAfter = default(string), int notBeforeDuration = 30, List<string> organization = default(List<string>), List<string> otherSans = default(List<string>), List<string> ou = default(List<string>), List<string> permittedDnsDomains = default(List<string>), List<string> postalCode = default(List<string>), PrivateKeyFormatEnum? privateKeyFormat = PrivateKeyFormatEnum.Der, List<string> province = default(List<string>), string serialNumber = default(string), int signatureBits = 0, List<string> streetAddress = default(List<string>), int ttl = default(int), List<string> uriSans = default(List<string>), bool usePss = false)
+        public PKIIssuersGenerateRootRequest(string altNames = default(string), string commonName = default(string), List<string> country = default(List<string>), bool excludeCnFromSans = false, FormatEnum? format = FormatEnum.Pem, List<string> ipSans = default(List<string>), string issuerName = default(string), int keyBits = 0, string keyName = default(string), string keyRef = "default", KeyTypeEnum? keyType = KeyTypeEnum.Rsa, List<string> locality = default(List<string>), string managedKeyId = default(string), string managedKeyName = default(string), int maxPathLength = -1, string notAfter = default(string), int notBeforeDuration = 30, List<string> organization = default(List<string>), List<string> otherSans = default(List<string>), List<string> ou = default(List<string>), List<string> permittedDnsDomains = default(List<string>), List<string> postalCode = default(List<string>), PrivateKeyFormatEnum? privateKeyFormat = PrivateKeyFormatEnum.Der, List<string> province = default(List<string>), string serialNumber = default(string), int signatureBits = 0, List<string> streetAddress = default(List<string>), int ttl = default(int), List<string> uriSans = default(List<string>), bool usePss = false)
         {
             this.AltNames = altNames;
             this.CommonName = commonName;
@@ -403,7 +403,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PkiIssuersGenerateRootRequest {\n");
+            sb.Append("class PKIIssuersGenerateRootRequest {\n");
             sb.Append("  AltNames: ").Append(AltNames).Append("\n");
             sb.Append("  CommonName: ").Append(CommonName).Append("\n");
             sb.Append("  Country: ").Append(Country).Append("\n");
@@ -454,15 +454,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PkiIssuersGenerateRootRequest);
+            return this.Equals(input as PKIIssuersGenerateRootRequest);
         }
 
         /// <summary>
-        /// Returns true if PkiIssuersGenerateRootRequest instances are equal
+        /// Returns true if PKIIssuersGenerateRootRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of PkiIssuersGenerateRootRequest to be compared</param>
+        /// <param name="input">Instance of PKIIssuersGenerateRootRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PkiIssuersGenerateRootRequest input)
+        public bool Equals(PKIIssuersGenerateRootRequest input)
         {
             if (input == null)
             {

@@ -26,16 +26,16 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// SshLookupRequest
+    /// SSHLookupRequest
     /// </summary>
-    [DataContract(Name = "SshLookupRequest")]
-    public partial class SshLookupRequest : IEquatable<SshLookupRequest>, IValidatableObject
+    [DataContract(Name = "SSHLookupRequest")]
+    public partial class SSHLookupRequest : IEquatable<SSHLookupRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SshLookupRequest" /> class.
+        /// Initializes a new instance of the <see cref="SSHLookupRequest" /> class.
         /// </summary>
         /// <param name="ip">[Required] IP address of remote host.</param>
-        public SshLookupRequest(string ip = default(string))
+        public SSHLookupRequest(string ip = default(string))
         {
             this.Ip = ip;
         }
@@ -54,7 +54,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class SshLookupRequest {\n");
+            sb.Append("class SSHLookupRequest {\n");
             sb.Append("  Ip: ").Append(Ip).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -76,15 +76,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as SshLookupRequest);
+            return this.Equals(input as SSHLookupRequest);
         }
 
         /// <summary>
-        /// Returns true if SshLookupRequest instances are equal
+        /// Returns true if SSHLookupRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of SshLookupRequest to be compared</param>
+        /// <param name="input">Instance of SSHLookupRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SshLookupRequest input)
+        public bool Equals(SSHLookupRequest input)
         {
             if (input == null)
             {

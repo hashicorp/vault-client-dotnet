@@ -26,16 +26,16 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// SshVerifyRequest
+    /// SSHVerifyRequest
     /// </summary>
-    [DataContract(Name = "SshVerifyRequest")]
-    public partial class SshVerifyRequest : IEquatable<SshVerifyRequest>, IValidatableObject
+    [DataContract(Name = "SSHVerifyRequest")]
+    public partial class SSHVerifyRequest : IEquatable<SSHVerifyRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SshVerifyRequest" /> class.
+        /// Initializes a new instance of the <see cref="SSHVerifyRequest" /> class.
         /// </summary>
         /// <param name="otp">[Required] One-Time-Key that needs to be validated.</param>
-        public SshVerifyRequest(string otp = default(string))
+        public SSHVerifyRequest(string otp = default(string))
         {
             this.Otp = otp;
         }
@@ -54,7 +54,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class SshVerifyRequest {\n");
+            sb.Append("class SSHVerifyRequest {\n");
             sb.Append("  Otp: ").Append(Otp).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -76,15 +76,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as SshVerifyRequest);
+            return this.Equals(input as SSHVerifyRequest);
         }
 
         /// <summary>
-        /// Returns true if SshVerifyRequest instances are equal
+        /// Returns true if SSHVerifyRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of SshVerifyRequest to be compared</param>
+        /// <param name="input">Instance of SSHVerifyRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SshVerifyRequest input)
+        public bool Equals(SSHVerifyRequest input)
         {
             if (input == null)
             {

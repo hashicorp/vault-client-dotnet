@@ -26,17 +26,17 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PkiRevokeRequest
+    /// PKIRevokeRequest
     /// </summary>
-    [DataContract(Name = "PkiRevokeRequest")]
-    public partial class PkiRevokeRequest : IEquatable<PkiRevokeRequest>, IValidatableObject
+    [DataContract(Name = "PKIRevokeRequest")]
+    public partial class PKIRevokeRequest : IEquatable<PKIRevokeRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PkiRevokeRequest" /> class.
+        /// Initializes a new instance of the <see cref="PKIRevokeRequest" /> class.
         /// </summary>
         /// <param name="certificate">Certificate to revoke in PEM format; must be signed by an issuer in this mount..</param>
         /// <param name="serialNumber">Certificate serial number, in colon- or hyphen-separated octal.</param>
-        public PkiRevokeRequest(string certificate = default(string), string serialNumber = default(string))
+        public PKIRevokeRequest(string certificate = default(string), string serialNumber = default(string))
         {
             this.Certificate = certificate;
             this.SerialNumber = serialNumber;
@@ -63,7 +63,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PkiRevokeRequest {\n");
+            sb.Append("class PKIRevokeRequest {\n");
             sb.Append("  Certificate: ").Append(Certificate).Append("\n");
             sb.Append("  SerialNumber: ").Append(SerialNumber).Append("\n");
             sb.Append("}\n");
@@ -86,15 +86,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PkiRevokeRequest);
+            return this.Equals(input as PKIRevokeRequest);
         }
 
         /// <summary>
-        /// Returns true if PkiRevokeRequest instances are equal
+        /// Returns true if PKIRevokeRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of PkiRevokeRequest to be compared</param>
+        /// <param name="input">Instance of PKIRevokeRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PkiRevokeRequest input)
+        public bool Equals(PKIRevokeRequest input)
         {
             if (input == null)
             {

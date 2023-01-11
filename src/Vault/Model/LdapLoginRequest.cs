@@ -26,16 +26,16 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// LdapLoginRequest
+    /// LDAPLoginRequest
     /// </summary>
-    [DataContract(Name = "LdapLoginRequest")]
-    public partial class LdapLoginRequest : IEquatable<LdapLoginRequest>, IValidatableObject
+    [DataContract(Name = "LDAPLoginRequest")]
+    public partial class LDAPLoginRequest : IEquatable<LDAPLoginRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="LdapLoginRequest" /> class.
+        /// Initializes a new instance of the <see cref="LDAPLoginRequest" /> class.
         /// </summary>
         /// <param name="password">Password for this user..</param>
-        public LdapLoginRequest(string password = default(string))
+        public LDAPLoginRequest(string password = default(string))
         {
             this.Password = password;
         }
@@ -54,7 +54,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class LdapLoginRequest {\n");
+            sb.Append("class LDAPLoginRequest {\n");
             sb.Append("  Password: ").Append(Password).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -76,15 +76,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as LdapLoginRequest);
+            return this.Equals(input as LDAPLoginRequest);
         }
 
         /// <summary>
-        /// Returns true if LdapLoginRequest instances are equal
+        /// Returns true if LDAPLoginRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of LdapLoginRequest to be compared</param>
+        /// <param name="input">Instance of LDAPLoginRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(LdapLoginRequest input)
+        public bool Equals(LDAPLoginRequest input)
         {
             if (input == null)
             {

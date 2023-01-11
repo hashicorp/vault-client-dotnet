@@ -26,17 +26,17 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PkiIssuerSignSelfIssuedRequest
+    /// PKIIssuerSignSelfIssuedRequest
     /// </summary>
-    [DataContract(Name = "PkiIssuerSignSelfIssuedRequest")]
-    public partial class PkiIssuerSignSelfIssuedRequest : IEquatable<PkiIssuerSignSelfIssuedRequest>, IValidatableObject
+    [DataContract(Name = "PKIIssuerSignSelfIssuedRequest")]
+    public partial class PKIIssuerSignSelfIssuedRequest : IEquatable<PKIIssuerSignSelfIssuedRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PkiIssuerSignSelfIssuedRequest" /> class.
+        /// Initializes a new instance of the <see cref="PKIIssuerSignSelfIssuedRequest" /> class.
         /// </summary>
         /// <param name="certificate">PEM-format self-issued certificate to be signed..</param>
         /// <param name="requireMatchingCertificateAlgorithms">If true, require the public key algorithm of the signer to match that of the self issued certificate. (default to false).</param>
-        public PkiIssuerSignSelfIssuedRequest(string certificate = default(string), bool requireMatchingCertificateAlgorithms = false)
+        public PKIIssuerSignSelfIssuedRequest(string certificate = default(string), bool requireMatchingCertificateAlgorithms = false)
         {
             this.Certificate = certificate;
             this.RequireMatchingCertificateAlgorithms = requireMatchingCertificateAlgorithms;
@@ -63,7 +63,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PkiIssuerSignSelfIssuedRequest {\n");
+            sb.Append("class PKIIssuerSignSelfIssuedRequest {\n");
             sb.Append("  Certificate: ").Append(Certificate).Append("\n");
             sb.Append("  RequireMatchingCertificateAlgorithms: ").Append(RequireMatchingCertificateAlgorithms).Append("\n");
             sb.Append("}\n");
@@ -86,15 +86,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PkiIssuerSignSelfIssuedRequest);
+            return this.Equals(input as PKIIssuerSignSelfIssuedRequest);
         }
 
         /// <summary>
-        /// Returns true if PkiIssuerSignSelfIssuedRequest instances are equal
+        /// Returns true if PKIIssuerSignSelfIssuedRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of PkiIssuerSignSelfIssuedRequest to be compared</param>
+        /// <param name="input">Instance of PKIIssuerSignSelfIssuedRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PkiIssuerSignSelfIssuedRequest input)
+        public bool Equals(PKIIssuerSignSelfIssuedRequest input)
         {
             if (input == null)
             {

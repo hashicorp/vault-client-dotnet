@@ -26,17 +26,17 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// OidcLoginRequest
+    /// OIDCLoginRequest
     /// </summary>
-    [DataContract(Name = "OidcLoginRequest")]
-    public partial class OidcLoginRequest : IEquatable<OidcLoginRequest>, IValidatableObject
+    [DataContract(Name = "OIDCLoginRequest")]
+    public partial class OIDCLoginRequest : IEquatable<OIDCLoginRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="OidcLoginRequest" /> class.
+        /// Initializes a new instance of the <see cref="OIDCLoginRequest" /> class.
         /// </summary>
         /// <param name="jwt">The signed JWT to validate..</param>
         /// <param name="role">The role to log in against..</param>
-        public OidcLoginRequest(string jwt = default(string), string role = default(string))
+        public OIDCLoginRequest(string jwt = default(string), string role = default(string))
         {
             this.Jwt = jwt;
             this.Role = role;
@@ -63,7 +63,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class OidcLoginRequest {\n");
+            sb.Append("class OIDCLoginRequest {\n");
             sb.Append("  Jwt: ").Append(Jwt).Append("\n");
             sb.Append("  Role: ").Append(Role).Append("\n");
             sb.Append("}\n");
@@ -86,15 +86,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as OidcLoginRequest);
+            return this.Equals(input as OIDCLoginRequest);
         }
 
         /// <summary>
-        /// Returns true if OidcLoginRequest instances are equal
+        /// Returns true if OIDCLoginRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of OidcLoginRequest to be compared</param>
+        /// <param name="input">Instance of OIDCLoginRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OidcLoginRequest input)
+        public bool Equals(OIDCLoginRequest input)
         {
             if (input == null)
             {

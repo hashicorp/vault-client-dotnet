@@ -26,27 +26,27 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// AlicloudLoginRequest
+    /// AliCloudLoginRequest
     /// </summary>
-    [DataContract(Name = "AlicloudLoginRequest")]
-    public partial class AlicloudLoginRequest : IEquatable<AlicloudLoginRequest>, IValidatableObject
+    [DataContract(Name = "AliCloudLoginRequest")]
+    public partial class AliCloudLoginRequest : IEquatable<AliCloudLoginRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AlicloudLoginRequest" /> class.
+        /// Initializes a new instance of the <see cref="AliCloudLoginRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected AlicloudLoginRequest() { }
+        protected AliCloudLoginRequest() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="AlicloudLoginRequest" /> class.
+        /// Initializes a new instance of the <see cref="AliCloudLoginRequest" /> class.
         /// </summary>
         /// <param name="identityRequestHeaders">The request headers. This must include the headers over which AliCloud has included a signature..</param>
         /// <param name="identityRequestUrl">Base64-encoded full URL against which to make the AliCloud request..</param>
         /// <param name="role">Name of the role against which the login is being attempted. If &#39;role&#39; is not specified, then the login endpoint looks for a role name in the ARN returned by the GetCallerIdentity request. If a matching role is not found, login fails. (required).</param>
-        public AlicloudLoginRequest(string identityRequestHeaders = default(string), string identityRequestUrl = default(string), string role = default(string))
+        public AliCloudLoginRequest(string identityRequestHeaders = default(string), string identityRequestUrl = default(string), string role = default(string))
         {
             // to ensure "role" is required (not null)
             if (role == null) {
-                throw new ArgumentNullException("role is a required property for AlicloudLoginRequest and cannot be null");
+                throw new ArgumentNullException("role is a required property for AliCloudLoginRequest and cannot be null");
             }
             this.Role = role;
             this.IdentityRequestHeaders = identityRequestHeaders;
@@ -81,7 +81,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class AlicloudLoginRequest {\n");
+            sb.Append("class AliCloudLoginRequest {\n");
             sb.Append("  IdentityRequestHeaders: ").Append(IdentityRequestHeaders).Append("\n");
             sb.Append("  IdentityRequestUrl: ").Append(IdentityRequestUrl).Append("\n");
             sb.Append("  Role: ").Append(Role).Append("\n");
@@ -105,15 +105,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as AlicloudLoginRequest);
+            return this.Equals(input as AliCloudLoginRequest);
         }
 
         /// <summary>
-        /// Returns true if AlicloudLoginRequest instances are equal
+        /// Returns true if AliCloudLoginRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of AlicloudLoginRequest to be compared</param>
+        /// <param name="input">Instance of AliCloudLoginRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AlicloudLoginRequest input)
+        public bool Equals(AliCloudLoginRequest input)
         {
             if (input == null)
             {

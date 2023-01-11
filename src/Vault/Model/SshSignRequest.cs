@@ -26,13 +26,13 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// SshSignRequest
+    /// SSHSignRequest
     /// </summary>
-    [DataContract(Name = "SshSignRequest")]
-    public partial class SshSignRequest : IEquatable<SshSignRequest>, IValidatableObject
+    [DataContract(Name = "SSHSignRequest")]
+    public partial class SSHSignRequest : IEquatable<SSHSignRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SshSignRequest" /> class.
+        /// Initializes a new instance of the <see cref="SSHSignRequest" /> class.
         /// </summary>
         /// <param name="certType">Type of certificate to be created; either \&quot;user\&quot; or \&quot;host\&quot;. (default to &quot;user&quot;).</param>
         /// <param name="criticalOptions">Critical options that the certificate should be signed for..</param>
@@ -41,7 +41,7 @@ namespace Vault.Model
         /// <param name="publicKey">SSH public key that should be signed..</param>
         /// <param name="ttl">The requested Time To Live for the SSH certificate; sets the expiration date. If not specified the role default, backend default, or system default TTL is used, in that order. Cannot be later than the role max TTL..</param>
         /// <param name="validPrincipals">Valid principals, either usernames or hostnames, that the certificate should be signed for..</param>
-        public SshSignRequest(string certType = "user", Object criticalOptions = default(Object), Object extensions = default(Object), string keyId = default(string), string publicKey = default(string), int ttl = default(int), string validPrincipals = default(string))
+        public SSHSignRequest(string certType = "user", Object criticalOptions = default(Object), Object extensions = default(Object), string keyId = default(string), string publicKey = default(string), int ttl = default(int), string validPrincipals = default(string))
         {
             // use default value if no "certType" provided
             this.CertType = certType ?? "user";
@@ -109,7 +109,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class SshSignRequest {\n");
+            sb.Append("class SSHSignRequest {\n");
             sb.Append("  CertType: ").Append(CertType).Append("\n");
             sb.Append("  CriticalOptions: ").Append(CriticalOptions).Append("\n");
             sb.Append("  Extensions: ").Append(Extensions).Append("\n");
@@ -137,15 +137,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as SshSignRequest);
+            return this.Equals(input as SSHSignRequest);
         }
 
         /// <summary>
-        /// Returns true if SshSignRequest instances are equal
+        /// Returns true if SSHSignRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of SshSignRequest to be compared</param>
+        /// <param name="input">Instance of SSHSignRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SshSignRequest input)
+        public bool Equals(SSHSignRequest input)
         {
             if (input == null)
             {

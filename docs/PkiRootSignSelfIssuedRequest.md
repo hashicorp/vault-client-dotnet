@@ -1,4 +1,4 @@
-# Vault.Model.PkiRootSignSelfIssuedRequest
+# Vault.Model.PKIRootSignSelfIssuedRequest
 
 ## Properties
 

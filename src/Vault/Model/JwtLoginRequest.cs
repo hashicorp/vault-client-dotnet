@@ -26,17 +26,17 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// JwtLoginRequest
+    /// JWTLoginRequest
     /// </summary>
-    [DataContract(Name = "JwtLoginRequest")]
-    public partial class JwtLoginRequest : IEquatable<JwtLoginRequest>, IValidatableObject
+    [DataContract(Name = "JWTLoginRequest")]
+    public partial class JWTLoginRequest : IEquatable<JWTLoginRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="JwtLoginRequest" /> class.
+        /// Initializes a new instance of the <see cref="JWTLoginRequest" /> class.
         /// </summary>
         /// <param name="jwt">The signed JWT to validate..</param>
         /// <param name="role">The role to log in against..</param>
-        public JwtLoginRequest(string jwt = default(string), string role = default(string))
+        public JWTLoginRequest(string jwt = default(string), string role = default(string))
         {
             this.Jwt = jwt;
             this.Role = role;
@@ -63,7 +63,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class JwtLoginRequest {\n");
+            sb.Append("class JWTLoginRequest {\n");
             sb.Append("  Jwt: ").Append(Jwt).Append("\n");
             sb.Append("  Role: ").Append(Role).Append("\n");
             sb.Append("}\n");
@@ -86,15 +86,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as JwtLoginRequest);
+            return this.Equals(input as JWTLoginRequest);
         }
 
         /// <summary>
-        /// Returns true if JwtLoginRequest instances are equal
+        /// Returns true if JWTLoginRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of JwtLoginRequest to be compared</param>
+        /// <param name="input">Instance of JWTLoginRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(JwtLoginRequest input)
+        public bool Equals(JWTLoginRequest input)
         {
             if (input == null)
             {

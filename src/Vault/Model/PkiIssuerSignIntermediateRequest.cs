@@ -26,10 +26,10 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PkiIssuerSignIntermediateRequest
+    /// PKIIssuerSignIntermediateRequest
     /// </summary>
-    [DataContract(Name = "PkiIssuerSignIntermediateRequest")]
-    public partial class PkiIssuerSignIntermediateRequest : IEquatable<PkiIssuerSignIntermediateRequest>, IValidatableObject
+    [DataContract(Name = "PKIIssuerSignIntermediateRequest")]
+    public partial class PKIIssuerSignIntermediateRequest : IEquatable<PKIIssuerSignIntermediateRequest>, IValidatableObject
     {
         /// <summary>
         /// Format for returned data. Can be \&quot;pem\&quot;, \&quot;der\&quot;, or \&quot;pem_bundle\&quot;. If \&quot;pem_bundle\&quot;, any private key and issuing cert will be appended to the certificate pem. If \&quot;der\&quot;, the value will be base64 encoded. Defaults to \&quot;pem\&quot;.
@@ -106,7 +106,7 @@ namespace Vault.Model
         [DataMember(Name = "private_key_format", EmitDefaultValue = false)]
         public PrivateKeyFormatEnum? PrivateKeyFormat { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="PkiIssuerSignIntermediateRequest" /> class.
+        /// Initializes a new instance of the <see cref="PKIIssuerSignIntermediateRequest" /> class.
         /// </summary>
         /// <param name="altNames">The requested Subject Alternative Names, if any, in a comma-delimited list. May contain both DNS names and email addresses..</param>
         /// <param name="commonName">The requested common name; if you want more than one, specify the alternative names in the alt_names map. If not specified when signing, the common name will be taken from the CSR; other names must still be specified in alt_names or ip_sans..</param>
@@ -135,7 +135,7 @@ namespace Vault.Model
         /// <param name="uriSans">The requested URI SANs, if any, in a comma-delimited list..</param>
         /// <param name="useCsrValues">If true, then: 1) Subject information, including names and alternate names, will be preserved from the CSR rather than using values provided in the other parameters to this path; 2) Any key usages requested in the CSR will be added to the basic set of key usages used for CA certs signed by this path; for instance, the non-repudiation flag; 3) Extensions requested in the CSR will be copied into the issued certificate. (default to false).</param>
         /// <param name="usePss">Whether or not to use PSS signatures when using a RSA key-type issuer. Defaults to false. (default to false).</param>
-        public PkiIssuerSignIntermediateRequest(string altNames = default(string), string commonName = default(string), List<string> country = default(List<string>), string csr = "", bool excludeCnFromSans = false, FormatEnum? format = FormatEnum.Pem, List<string> ipSans = default(List<string>), string issuerName = default(string), List<string> locality = default(List<string>), int maxPathLength = -1, string notAfter = default(string), int notBeforeDuration = 30, List<string> organization = default(List<string>), List<string> otherSans = default(List<string>), List<string> ou = default(List<string>), List<string> permittedDnsDomains = default(List<string>), List<string> postalCode = default(List<string>), PrivateKeyFormatEnum? privateKeyFormat = PrivateKeyFormatEnum.Der, List<string> province = default(List<string>), string serialNumber = default(string), int signatureBits = 0, string skid = "", List<string> streetAddress = default(List<string>), int ttl = default(int), List<string> uriSans = default(List<string>), bool useCsrValues = false, bool usePss = false)
+        public PKIIssuerSignIntermediateRequest(string altNames = default(string), string commonName = default(string), List<string> country = default(List<string>), string csr = "", bool excludeCnFromSans = false, FormatEnum? format = FormatEnum.Pem, List<string> ipSans = default(List<string>), string issuerName = default(string), List<string> locality = default(List<string>), int maxPathLength = -1, string notAfter = default(string), int notBeforeDuration = 30, List<string> organization = default(List<string>), List<string> otherSans = default(List<string>), List<string> ou = default(List<string>), List<string> permittedDnsDomains = default(List<string>), List<string> postalCode = default(List<string>), PrivateKeyFormatEnum? privateKeyFormat = PrivateKeyFormatEnum.Der, List<string> province = default(List<string>), string serialNumber = default(string), int signatureBits = 0, string skid = "", List<string> streetAddress = default(List<string>), int ttl = default(int), List<string> uriSans = default(List<string>), bool useCsrValues = false, bool usePss = false)
         {
             this.AltNames = altNames;
             this.CommonName = commonName;
@@ -350,7 +350,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PkiIssuerSignIntermediateRequest {\n");
+            sb.Append("class PKIIssuerSignIntermediateRequest {\n");
             sb.Append("  AltNames: ").Append(AltNames).Append("\n");
             sb.Append("  CommonName: ").Append(CommonName).Append("\n");
             sb.Append("  Country: ").Append(Country).Append("\n");
@@ -398,15 +398,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PkiIssuerSignIntermediateRequest);
+            return this.Equals(input as PKIIssuerSignIntermediateRequest);
         }
 
         /// <summary>
-        /// Returns true if PkiIssuerSignIntermediateRequest instances are equal
+        /// Returns true if PKIIssuerSignIntermediateRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of PkiIssuerSignIntermediateRequest to be compared</param>
+        /// <param name="input">Instance of PKIIssuerSignIntermediateRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PkiIssuerSignIntermediateRequest input)
+        public bool Equals(PKIIssuerSignIntermediateRequest input)
         {
             if (input == null)
             {

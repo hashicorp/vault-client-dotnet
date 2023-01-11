@@ -1,4 +1,4 @@
-# Vault.Model.PkiRootSignIntermediateRequest
+# Vault.Model.PKIRootSignIntermediateRequest
 
 ## Properties
 

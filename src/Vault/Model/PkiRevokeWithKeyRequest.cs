@@ -26,18 +26,18 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PkiRevokeWithKeyRequest
+    /// PKIRevokeWithKeyRequest
     /// </summary>
-    [DataContract(Name = "PkiRevokeWithKeyRequest")]
-    public partial class PkiRevokeWithKeyRequest : IEquatable<PkiRevokeWithKeyRequest>, IValidatableObject
+    [DataContract(Name = "PKIRevokeWithKeyRequest")]
+    public partial class PKIRevokeWithKeyRequest : IEquatable<PKIRevokeWithKeyRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PkiRevokeWithKeyRequest" /> class.
+        /// Initializes a new instance of the <see cref="PKIRevokeWithKeyRequest" /> class.
         /// </summary>
         /// <param name="certificate">Certificate to revoke in PEM format; must be signed by an issuer in this mount..</param>
         /// <param name="privateKey">Key to use to verify revocation permission; must be in PEM format..</param>
         /// <param name="serialNumber">Certificate serial number, in colon- or hyphen-separated octal.</param>
-        public PkiRevokeWithKeyRequest(string certificate = default(string), string privateKey = default(string), string serialNumber = default(string))
+        public PKIRevokeWithKeyRequest(string certificate = default(string), string privateKey = default(string), string serialNumber = default(string))
         {
             this.Certificate = certificate;
             this.PrivateKey = privateKey;
@@ -72,7 +72,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PkiRevokeWithKeyRequest {\n");
+            sb.Append("class PKIRevokeWithKeyRequest {\n");
             sb.Append("  Certificate: ").Append(Certificate).Append("\n");
             sb.Append("  PrivateKey: ").Append(PrivateKey).Append("\n");
             sb.Append("  SerialNumber: ").Append(SerialNumber).Append("\n");
@@ -96,15 +96,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PkiRevokeWithKeyRequest);
+            return this.Equals(input as PKIRevokeWithKeyRequest);
         }
 
         /// <summary>
-        /// Returns true if PkiRevokeWithKeyRequest instances are equal
+        /// Returns true if PKIRevokeWithKeyRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of PkiRevokeWithKeyRequest to be compared</param>
+        /// <param name="input">Instance of PKIRevokeWithKeyRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PkiRevokeWithKeyRequest input)
+        public bool Equals(PKIRevokeWithKeyRequest input)
         {
             if (input == null)
             {

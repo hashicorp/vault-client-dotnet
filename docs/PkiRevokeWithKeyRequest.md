@@ -1,4 +1,4 @@
-# Vault.Model.PkiRevokeWithKeyRequest
+# Vault.Model.PKIRevokeWithKeyRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# Vault.Model.LdapLoginRequest
+# Vault.Model.LDAPLoginRequest
 
 ## Properties
 

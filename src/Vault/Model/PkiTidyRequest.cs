@@ -26,13 +26,13 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PkiTidyRequest
+    /// PKITidyRequest
     /// </summary>
-    [DataContract(Name = "PkiTidyRequest")]
-    public partial class PkiTidyRequest : IEquatable<PkiTidyRequest>, IValidatableObject
+    [DataContract(Name = "PKITidyRequest")]
+    public partial class PKITidyRequest : IEquatable<PKITidyRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PkiTidyRequest" /> class.
+        /// Initializes a new instance of the <see cref="PKITidyRequest" /> class.
         /// </summary>
         /// <param name="issuerSafetyBuffer">The amount of extra time that must have passed beyond issuer&#39;s expiration before it is removed from the backend storage. Defaults to 8760 hours (1 year). (default to 31536000).</param>
         /// <param name="pauseDuration">The amount of time to wait between processing certificates. This allows operators to change the execution profile of tidy to take consume less resources by slowing down how long it takes to run. Note that the entire list of certificates will be stored in memory during the entire tidy operation, but resources to read/process/update existing entries will be spread out over a greater period of time. By default this is zero seconds. (default to &quot;0s&quot;).</param>
@@ -42,7 +42,7 @@ namespace Vault.Model
         /// <param name="tidyRevocationList">Deprecated; synonym for &#39;tidy_revoked_certs.</param>
         /// <param name="tidyRevokedCertIssuerAssociations">Set to true to validate issuer associations on revocation entries. This helps increase the performance of CRL building and OCSP responses..</param>
         /// <param name="tidyRevokedCerts">Set to true to expire all revoked and expired certificates, removing them both from the CRL and from storage. The CRL will be rotated if this causes any values to be removed..</param>
-        public PkiTidyRequest(int issuerSafetyBuffer = 31536000, string pauseDuration = "0s", int safetyBuffer = 259200, bool tidyCertStore = default(bool), bool tidyExpiredIssuers = default(bool), bool tidyRevocationList = default(bool), bool tidyRevokedCertIssuerAssociations = default(bool), bool tidyRevokedCerts = default(bool))
+        public PKITidyRequest(int issuerSafetyBuffer = 31536000, string pauseDuration = "0s", int safetyBuffer = 259200, bool tidyCertStore = default(bool), bool tidyExpiredIssuers = default(bool), bool tidyRevocationList = default(bool), bool tidyRevokedCertIssuerAssociations = default(bool), bool tidyRevokedCerts = default(bool))
         {
             this.IssuerSafetyBuffer = issuerSafetyBuffer;
             // use default value if no "pauseDuration" provided
@@ -118,7 +118,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PkiTidyRequest {\n");
+            sb.Append("class PKITidyRequest {\n");
             sb.Append("  IssuerSafetyBuffer: ").Append(IssuerSafetyBuffer).Append("\n");
             sb.Append("  PauseDuration: ").Append(PauseDuration).Append("\n");
             sb.Append("  SafetyBuffer: ").Append(SafetyBuffer).Append("\n");
@@ -147,15 +147,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PkiTidyRequest);
+            return this.Equals(input as PKITidyRequest);
         }
 
         /// <summary>
-        /// Returns true if PkiTidyRequest instances are equal
+        /// Returns true if PKITidyRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of PkiTidyRequest to be compared</param>
+        /// <param name="input">Instance of PKITidyRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PkiTidyRequest input)
+        public bool Equals(PKITidyRequest input)
         {
             if (input == null)
             {

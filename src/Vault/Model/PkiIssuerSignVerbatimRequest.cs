@@ -26,10 +26,10 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PkiIssuerSignVerbatimRequest
+    /// PKIIssuerSignVerbatimRequest
     /// </summary>
-    [DataContract(Name = "PkiIssuerSignVerbatimRequest")]
-    public partial class PkiIssuerSignVerbatimRequest : IEquatable<PkiIssuerSignVerbatimRequest>, IValidatableObject
+    [DataContract(Name = "PKIIssuerSignVerbatimRequest")]
+    public partial class PKIIssuerSignVerbatimRequest : IEquatable<PKIIssuerSignVerbatimRequest>, IValidatableObject
     {
         /// <summary>
         /// Format for returned data. Can be \&quot;pem\&quot;, \&quot;der\&quot;, or \&quot;pem_bundle\&quot;. If \&quot;pem_bundle\&quot;, any private key and issuing cert will be appended to the certificate pem. If \&quot;der\&quot;, the value will be base64 encoded. Defaults to \&quot;pem\&quot;.
@@ -106,7 +106,7 @@ namespace Vault.Model
         [DataMember(Name = "private_key_format", EmitDefaultValue = false)]
         public PrivateKeyFormatEnum? PrivateKeyFormat { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="PkiIssuerSignVerbatimRequest" /> class.
+        /// Initializes a new instance of the <see cref="PKIIssuerSignVerbatimRequest" /> class.
         /// </summary>
         /// <param name="altNames">The requested Subject Alternative Names, if any, in a comma-delimited list. If email protection is enabled for the role, this may contain email addresses..</param>
         /// <param name="commonName">The requested common name; if you want more than one, specify the alternative names in the alt_names map. If email protection is enabled in the role, this may be an email address..</param>
@@ -127,7 +127,7 @@ namespace Vault.Model
         /// <param name="ttl">The requested Time To Live for the certificate; sets the expiration date. If not specified the role default, backend default, or system default TTL is used, in that order. Cannot be larger than the role max TTL..</param>
         /// <param name="uriSans">The requested URI SANs, if any, in a comma-delimited list..</param>
         /// <param name="usePss">Whether or not to use PSS signatures when using a RSA key-type issuer. Defaults to false. (default to false).</param>
-        public PkiIssuerSignVerbatimRequest(string altNames = default(string), string commonName = default(string), string csr = "", bool excludeCnFromSans = false, List<string> extKeyUsage = default(List<string>), List<string> extKeyUsageOids = default(List<string>), FormatEnum? format = FormatEnum.Pem, List<string> ipSans = default(List<string>), List<string> keyUsage = default(List<string>), string notAfter = default(string), List<string> otherSans = default(List<string>), PrivateKeyFormatEnum? privateKeyFormat = PrivateKeyFormatEnum.Der, bool removeRootsFromChain = false, string role = default(string), string serialNumber = default(string), int signatureBits = 0, int ttl = default(int), List<string> uriSans = default(List<string>), bool usePss = false)
+        public PKIIssuerSignVerbatimRequest(string altNames = default(string), string commonName = default(string), string csr = "", bool excludeCnFromSans = false, List<string> extKeyUsage = default(List<string>), List<string> extKeyUsageOids = default(List<string>), FormatEnum? format = FormatEnum.Pem, List<string> ipSans = default(List<string>), List<string> keyUsage = default(List<string>), string notAfter = default(string), List<string> otherSans = default(List<string>), PrivateKeyFormatEnum? privateKeyFormat = PrivateKeyFormatEnum.Der, bool removeRootsFromChain = false, string role = default(string), string serialNumber = default(string), int signatureBits = 0, int ttl = default(int), List<string> uriSans = default(List<string>), bool usePss = false)
         {
             this.AltNames = altNames;
             this.CommonName = commonName;
@@ -277,7 +277,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PkiIssuerSignVerbatimRequest {\n");
+            sb.Append("class PKIIssuerSignVerbatimRequest {\n");
             sb.Append("  AltNames: ").Append(AltNames).Append("\n");
             sb.Append("  CommonName: ").Append(CommonName).Append("\n");
             sb.Append("  Csr: ").Append(Csr).Append("\n");
@@ -317,15 +317,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PkiIssuerSignVerbatimRequest);
+            return this.Equals(input as PKIIssuerSignVerbatimRequest);
         }
 
         /// <summary>
-        /// Returns true if PkiIssuerSignVerbatimRequest instances are equal
+        /// Returns true if PKIIssuerSignVerbatimRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of PkiIssuerSignVerbatimRequest to be compared</param>
+        /// <param name="input">Instance of PKIIssuerSignVerbatimRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PkiIssuerSignVerbatimRequest input)
+        public bool Equals(PKIIssuerSignVerbatimRequest input)
         {
             if (input == null)
             {

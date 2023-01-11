@@ -1,4 +1,4 @@
-# Vault.Model.JwtLoginRequest
+# Vault.Model.JWTLoginRequest
 
 ## Properties
 

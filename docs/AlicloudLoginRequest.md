@@ -1,4 +1,4 @@
-# Vault.Model.AlicloudLoginRequest
+# Vault.Model.AliCloudLoginRequest
 
 ## Properties
 

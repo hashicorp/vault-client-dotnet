@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vault", "src\Vault\Vault.csproj", "{D4DA54BE-466F-4C98-8E11-E05C1BE9EBF9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vault", "src\Vault\Vault.csproj", "{51BB0BB5-E5E2-475C-82B4-8B0EB78B5047}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vault.Test", "src\Vault.Test\Vault.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D4DA54BE-466F-4C98-8E11-E05C1BE9EBF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D4DA54BE-466F-4C98-8E11-E05C1BE9EBF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D4DA54BE-466F-4C98-8E11-E05C1BE9EBF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D4DA54BE-466F-4C98-8E11-E05C1BE9EBF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51BB0BB5-E5E2-475C-82B4-8B0EB78B5047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51BB0BB5-E5E2-475C-82B4-8B0EB78B5047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51BB0BB5-E5E2-475C-82B4-8B0EB78B5047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51BB0BB5-E5E2-475C-82B4-8B0EB78B5047}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU

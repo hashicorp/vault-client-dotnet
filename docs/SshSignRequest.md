@@ -1,4 +1,4 @@
-# Vault.Model.SshSignRequest
+# Vault.Model.SSHSignRequest
 
 ## Properties
 
