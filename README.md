@@ -88,16 +88,16 @@ namespace Example
 
             try 
             {    
-                // Write a secret
-                var secretData = new Dictionary<string, string> { { “password”: “mypassword” } };
-                var kvRequestData = new KvDataRequest(secretData);    
+                var secretData = new Dictionary<string, string> { { "mypass", "pass" } };
 
-                vaultClient.Secrets.PostSecretDataPath(“mypath”, kvRequestData);
+                // Write a secret
+                var kvRequestData = new KVv2WriteRequest(secretData);
+
+                vaultClient.Secrets.KVv2Write("mypath", kvRequestData);
 
                 // Read a secret
-                VaultResponse<Object> resp = vaultClient.Secrets.GetSecretPath("mypath");
-
-                Console.Writeline(resp.Data);
+                VaultResponse<Object> resp = vaultClient.Secrets.KVv2Read("mypath");
+                Console.WriteLine(resp.Data);
             }
             catch (VaultApiException e)
             {
@@ -193,15 +193,15 @@ All secrets and auth calls have an optional mount path parameter that can be spe
 otherwise we will use a default mount path.
 
 ```csharp
-VaultResponse<Object> resp = await vaultClient.Secrets.GetSecretPathAsync("path", secretMountPath: "myCustomMountPath");
+VaultResponse<Object> resp = await vaultClient.Secrets.KVv2ReadAsync("path", secretMountPath: "myCustomMountPath");
 Console.WriteLine(resp.Data);
 ```
 
 All calls have both an async and synchronous implementation. E.g.
 
 ```csharp
-VaultResponse<Object> respAsync = await vaultClient.Secrets.GetSecretPathAsync("path");
-VaultResponse<Object> respSync = vaultClient.Secrets.GetSecretPath("path");
+VaultResponse<Object> respAsync = await vaultClient.Secrets.KVv2ReadAsync("path");
+VaultResponse<Object> respSync = vaultClient.Secrets.KVv2ReadAsync("path");
 ```
 
 ### Exception Handling
@@ -212,7 +212,7 @@ specific errors, status code and original error content.
 try
 {
     // Example call to Vault
-    vaultClient.System.GetSysMounts();
+    vaultClient.System.ReadMounts();
 }
 catch (VaultApiException e)
 {
@@ -233,7 +233,7 @@ More documentation on response wrapping can be found [here]([vault-response-wrap
 
 ```csharp
 // Get a wrapped response from Vault
-VaultResponse<Object> wrappedResp = vaultClient.System.GetSysMounts(wrapTTL: TimeSpan.FromSeconds(100));
+VaultResponse<Object> wrappedResp = vaultClient.System.ReadMounts(wrapTTL: TimeSpan.FromSeconds(100));
 
 // Unwrap the given response object
 VaultResponse<Object> unwrappedResp = vaultClient.Unwrap<Object>(wrappedResp.ResponseWrapInfo.Token);
