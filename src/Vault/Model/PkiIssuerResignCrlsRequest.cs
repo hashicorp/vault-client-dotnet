@@ -26,20 +26,20 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PkiIssuerResignCrlsRequest
+    /// PKIIssuerResignCRLsRequest
     /// </summary>
-    [DataContract(Name = "PkiIssuerResignCrlsRequest")]
-    public partial class PkiIssuerResignCrlsRequest : IEquatable<PkiIssuerResignCrlsRequest>, IValidatableObject
+    [DataContract(Name = "PKIIssuerResignCRLsRequest")]
+    public partial class PKIIssuerResignCRLsRequest : IEquatable<PKIIssuerResignCRLsRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PkiIssuerResignCrlsRequest" /> class.
+        /// Initializes a new instance of the <see cref="PKIIssuerResignCRLsRequest" /> class.
         /// </summary>
         /// <param name="crlNumber">The sequence number to be written within the CRL Number extension..</param>
         /// <param name="crls">A list of PEM encoded CRLs to combine, originally signed by the requested issuer..</param>
         /// <param name="deltaCrlBaseNumber">Using a zero or greater value specifies the base CRL revision number to encode within a Delta CRL indicator extension, otherwise the extension will not be added. (default to -1).</param>
         /// <param name="format">The format of the combined CRL, can be \&quot;pem\&quot; or \&quot;der\&quot;. If \&quot;der\&quot;, the value will be base64 encoded. Defaults to \&quot;pem\&quot;. (default to &quot;pem&quot;).</param>
         /// <param name="nextUpdate">The amount of time the generated CRL should be valid; defaults to 72 hours. (default to &quot;72h&quot;).</param>
-        public PkiIssuerResignCrlsRequest(int crlNumber = default(int), List<string> crls = default(List<string>), int deltaCrlBaseNumber = -1, string format = "pem", string nextUpdate = "72h")
+        public PKIIssuerResignCRLsRequest(int crlNumber = default(int), List<string> crls = default(List<string>), int deltaCrlBaseNumber = -1, string format = "pem", string nextUpdate = "72h")
         {
             this.CrlNumber = crlNumber;
             this.Crls = crls;
@@ -92,7 +92,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PkiIssuerResignCrlsRequest {\n");
+            sb.Append("class PKIIssuerResignCRLsRequest {\n");
             sb.Append("  CrlNumber: ").Append(CrlNumber).Append("\n");
             sb.Append("  Crls: ").Append(Crls).Append("\n");
             sb.Append("  DeltaCrlBaseNumber: ").Append(DeltaCrlBaseNumber).Append("\n");
@@ -118,15 +118,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PkiIssuerResignCrlsRequest);
+            return this.Equals(input as PKIIssuerResignCRLsRequest);
         }
 
         /// <summary>
-        /// Returns true if PkiIssuerResignCrlsRequest instances are equal
+        /// Returns true if PKIIssuerResignCRLsRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of PkiIssuerResignCrlsRequest to be compared</param>
+        /// <param name="input">Instance of PKIIssuerResignCRLsRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PkiIssuerResignCrlsRequest input)
+        public bool Equals(PKIIssuerResignCRLsRequest input)
         {
             if (input == null)
             {

@@ -1,0 +1,11 @@
+# Vault.Model.TransitRestoreKeyRequest
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Backup** | **string** | Backed up key data to be restored. This should be the output from the &#39;backup/&#39; endpoint. | [optional] 
+**Force** | **bool** | If set and a key by the given name exists, force the restore operation and override the key. | [optional] [default to false]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

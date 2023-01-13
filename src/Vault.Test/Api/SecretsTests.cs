@@ -54,4255 +54,4243 @@ namespace Vault.Test.Api
         }
 
         /// <summary>
-        /// Test DeleteAdConfig
+        /// Test AWSConfigReadLease
         /// </summary>
         [Fact]
-        public void DeleteAdConfigTest()
+        public void AWSConfigReadLeaseTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string adMountPath = null;
-            //instance.DeleteAdConfig(adMountPath);
+            //string awsMountPath = null;
+            //instance.AWSConfigReadLease(awsMountPath);
         }
 
         /// <summary>
-        /// Test DeleteAdLibraryName
+        /// Test AWSConfigReadRootIAMCredentials
         /// </summary>
         [Fact]
-        public void DeleteAdLibraryNameTest()
+        public void AWSConfigReadRootIAMCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string adMountPath = null;
-            //instance.DeleteAdLibraryName(name, adMountPath);
+            //string awsMountPath = null;
+            //instance.AWSConfigReadRootIAMCredentials(awsMountPath);
         }
 
         /// <summary>
-        /// Test DeleteAdRolesName
+        /// Test AWSConfigRotateRootIAMCredentials
         /// </summary>
         [Fact]
-        public void DeleteAdRolesNameTest()
+        public void AWSConfigRotateRootIAMCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string adMountPath = null;
-            //instance.DeleteAdRolesName(name, adMountPath);
+            //string awsMountPath = null;
+            //instance.AWSConfigRotateRootIAMCredentials(awsMountPath);
         }
 
         /// <summary>
-        /// Test DeleteAlicloudConfig
+        /// Test AWSConfigWriteLease
         /// </summary>
         [Fact]
-        public void DeleteAlicloudConfigTest()
+        public void AWSConfigWriteLeaseTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string alicloudMountPath = null;
-            //instance.DeleteAlicloudConfig(alicloudMountPath);
+            //AWSConfigWriteLeaseRequest aWSConfigWriteLeaseRequest = null;
+            //string awsMountPath = null;
+            //instance.AWSConfigWriteLease(aWSConfigWriteLeaseRequest, awsMountPath);
         }
 
         /// <summary>
-        /// Test DeleteAlicloudRoleName
+        /// Test AWSConfigWriteRootIAMCredentials
         /// </summary>
         [Fact]
-        public void DeleteAlicloudRoleNameTest()
+        public void AWSConfigWriteRootIAMCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string alicloudMountPath = null;
-            //instance.DeleteAlicloudRoleName(name, alicloudMountPath);
+            //AWSConfigWriteRootIAMCredentialsRequest aWSConfigWriteRootIAMCredentialsRequest = null;
+            //string awsMountPath = null;
+            //instance.AWSConfigWriteRootIAMCredentials(aWSConfigWriteRootIAMCredentialsRequest, awsMountPath);
         }
 
         /// <summary>
-        /// Test DeleteAwsRolesName
+        /// Test AWSDeleteRole
         /// </summary>
         [Fact]
-        public void DeleteAwsRolesNameTest()
+        public void AWSDeleteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string awsMountPath = null;
-            //instance.DeleteAwsRolesName(name, awsMountPath);
+            //instance.AWSDeleteRole(name, awsMountPath);
         }
 
         /// <summary>
-        /// Test DeleteAzureConfig
+        /// Test AWSListRoles
         /// </summary>
         [Fact]
-        public void DeleteAzureConfigTest()
+        public void AWSListRolesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string awsMountPath = null;
+            //instance.AWSListRoles(list, awsMountPath);
+        }
+
+        /// <summary>
+        /// Test AWSReadCredentials
+        /// </summary>
+        [Fact]
+        public void AWSReadCredentialsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string awsMountPath = null;
+            //instance.AWSReadCredentials(awsMountPath);
+        }
+
+        /// <summary>
+        /// Test AWSReadRole
+        /// </summary>
+        [Fact]
+        public void AWSReadRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string awsMountPath = null;
+            //instance.AWSReadRole(name, awsMountPath);
+        }
+
+        /// <summary>
+        /// Test AWSReadSecurityTokenService
+        /// </summary>
+        [Fact]
+        public void AWSReadSecurityTokenServiceTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string awsMountPath = null;
+            //instance.AWSReadSecurityTokenService(name, awsMountPath);
+        }
+
+        /// <summary>
+        /// Test AWSWriteCredentials
+        /// </summary>
+        [Fact]
+        public void AWSWriteCredentialsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //AWSWriteCredentialsRequest aWSWriteCredentialsRequest = null;
+            //string awsMountPath = null;
+            //instance.AWSWriteCredentials(aWSWriteCredentialsRequest, awsMountPath);
+        }
+
+        /// <summary>
+        /// Test AWSWriteRole
+        /// </summary>
+        [Fact]
+        public void AWSWriteRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //AWSWriteRoleRequest aWSWriteRoleRequest = null;
+            //string awsMountPath = null;
+            //instance.AWSWriteRole(name, aWSWriteRoleRequest, awsMountPath);
+        }
+
+        /// <summary>
+        /// Test AWSWriteSecurityTokenService
+        /// </summary>
+        [Fact]
+        public void AWSWriteSecurityTokenServiceTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //AWSWriteSecurityTokenServiceRequest aWSWriteSecurityTokenServiceRequest = null;
+            //string awsMountPath = null;
+            //instance.AWSWriteSecurityTokenService(name, aWSWriteSecurityTokenServiceRequest, awsMountPath);
+        }
+
+        /// <summary>
+        /// Test ActiveDirectoryCheckInLibrary
+        /// </summary>
+        [Fact]
+        public void ActiveDirectoryCheckInLibraryTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //ActiveDirectoryCheckInLibraryRequest activeDirectoryCheckInLibraryRequest = null;
+            //string adMountPath = null;
+            //instance.ActiveDirectoryCheckInLibrary(name, activeDirectoryCheckInLibraryRequest, adMountPath);
+        }
+
+        /// <summary>
+        /// Test ActiveDirectoryCheckInManageLibrary
+        /// </summary>
+        [Fact]
+        public void ActiveDirectoryCheckInManageLibraryTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //ActiveDirectoryCheckInManageLibraryRequest activeDirectoryCheckInManageLibraryRequest = null;
+            //string adMountPath = null;
+            //instance.ActiveDirectoryCheckInManageLibrary(name, activeDirectoryCheckInManageLibraryRequest, adMountPath);
+        }
+
+        /// <summary>
+        /// Test ActiveDirectoryCheckOutLibrary
+        /// </summary>
+        [Fact]
+        public void ActiveDirectoryCheckOutLibraryTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //ActiveDirectoryCheckOutLibraryRequest activeDirectoryCheckOutLibraryRequest = null;
+            //string adMountPath = null;
+            //instance.ActiveDirectoryCheckOutLibrary(name, activeDirectoryCheckOutLibraryRequest, adMountPath);
+        }
+
+        /// <summary>
+        /// Test ActiveDirectoryDeleteConfig
+        /// </summary>
+        [Fact]
+        public void ActiveDirectoryDeleteConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string adMountPath = null;
+            //instance.ActiveDirectoryDeleteConfig(adMountPath);
+        }
+
+        /// <summary>
+        /// Test ActiveDirectoryDeleteLibrary
+        /// </summary>
+        [Fact]
+        public void ActiveDirectoryDeleteLibraryTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string adMountPath = null;
+            //instance.ActiveDirectoryDeleteLibrary(name, adMountPath);
+        }
+
+        /// <summary>
+        /// Test ActiveDirectoryDeleteRole
+        /// </summary>
+        [Fact]
+        public void ActiveDirectoryDeleteRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string adMountPath = null;
+            //instance.ActiveDirectoryDeleteRole(name, adMountPath);
+        }
+
+        /// <summary>
+        /// Test ActiveDirectoryListLibraries
+        /// </summary>
+        [Fact]
+        public void ActiveDirectoryListLibrariesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string adMountPath = null;
+            //instance.ActiveDirectoryListLibraries(list, adMountPath);
+        }
+
+        /// <summary>
+        /// Test ActiveDirectoryListRoles
+        /// </summary>
+        [Fact]
+        public void ActiveDirectoryListRolesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string adMountPath = null;
+            //instance.ActiveDirectoryListRoles(list, adMountPath);
+        }
+
+        /// <summary>
+        /// Test ActiveDirectoryReadConfig
+        /// </summary>
+        [Fact]
+        public void ActiveDirectoryReadConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string adMountPath = null;
+            //instance.ActiveDirectoryReadConfig(adMountPath);
+        }
+
+        /// <summary>
+        /// Test ActiveDirectoryReadCredentials
+        /// </summary>
+        [Fact]
+        public void ActiveDirectoryReadCredentialsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string adMountPath = null;
+            //instance.ActiveDirectoryReadCredentials(name, adMountPath);
+        }
+
+        /// <summary>
+        /// Test ActiveDirectoryReadLibrary
+        /// </summary>
+        [Fact]
+        public void ActiveDirectoryReadLibraryTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string adMountPath = null;
+            //instance.ActiveDirectoryReadLibrary(name, adMountPath);
+        }
+
+        /// <summary>
+        /// Test ActiveDirectoryReadLibraryStatus
+        /// </summary>
+        [Fact]
+        public void ActiveDirectoryReadLibraryStatusTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string adMountPath = null;
+            //instance.ActiveDirectoryReadLibraryStatus(name, adMountPath);
+        }
+
+        /// <summary>
+        /// Test ActiveDirectoryReadRole
+        /// </summary>
+        [Fact]
+        public void ActiveDirectoryReadRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string adMountPath = null;
+            //instance.ActiveDirectoryReadRole(name, adMountPath);
+        }
+
+        /// <summary>
+        /// Test ActiveDirectoryRotateRole
+        /// </summary>
+        [Fact]
+        public void ActiveDirectoryRotateRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string adMountPath = null;
+            //instance.ActiveDirectoryRotateRole(name, adMountPath);
+        }
+
+        /// <summary>
+        /// Test ActiveDirectoryRotateRoot
+        /// </summary>
+        [Fact]
+        public void ActiveDirectoryRotateRootTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string adMountPath = null;
+            //instance.ActiveDirectoryRotateRoot(adMountPath);
+        }
+
+        /// <summary>
+        /// Test ActiveDirectoryWriteConfig
+        /// </summary>
+        [Fact]
+        public void ActiveDirectoryWriteConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ActiveDirectoryWriteConfigRequest activeDirectoryWriteConfigRequest = null;
+            //string adMountPath = null;
+            //instance.ActiveDirectoryWriteConfig(activeDirectoryWriteConfigRequest, adMountPath);
+        }
+
+        /// <summary>
+        /// Test ActiveDirectoryWriteLibrary
+        /// </summary>
+        [Fact]
+        public void ActiveDirectoryWriteLibraryTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //ActiveDirectoryWriteLibraryRequest activeDirectoryWriteLibraryRequest = null;
+            //string adMountPath = null;
+            //instance.ActiveDirectoryWriteLibrary(name, activeDirectoryWriteLibraryRequest, adMountPath);
+        }
+
+        /// <summary>
+        /// Test ActiveDirectoryWriteRole
+        /// </summary>
+        [Fact]
+        public void ActiveDirectoryWriteRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //ActiveDirectoryWriteRoleRequest activeDirectoryWriteRoleRequest = null;
+            //string adMountPath = null;
+            //instance.ActiveDirectoryWriteRole(name, activeDirectoryWriteRoleRequest, adMountPath);
+        }
+
+        /// <summary>
+        /// Test AliCloudDeleteConfig
+        /// </summary>
+        [Fact]
+        public void AliCloudDeleteConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string alicloudMountPath = null;
+            //instance.AliCloudDeleteConfig(alicloudMountPath);
+        }
+
+        /// <summary>
+        /// Test AliCloudDeleteRole
+        /// </summary>
+        [Fact]
+        public void AliCloudDeleteRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string alicloudMountPath = null;
+            //instance.AliCloudDeleteRole(name, alicloudMountPath);
+        }
+
+        /// <summary>
+        /// Test AliCloudListRoles
+        /// </summary>
+        [Fact]
+        public void AliCloudListRolesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string alicloudMountPath = null;
+            //instance.AliCloudListRoles(list, alicloudMountPath);
+        }
+
+        /// <summary>
+        /// Test AliCloudReadConfig
+        /// </summary>
+        [Fact]
+        public void AliCloudReadConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string alicloudMountPath = null;
+            //instance.AliCloudReadConfig(alicloudMountPath);
+        }
+
+        /// <summary>
+        /// Test AliCloudReadCredentials
+        /// </summary>
+        [Fact]
+        public void AliCloudReadCredentialsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string alicloudMountPath = null;
+            //instance.AliCloudReadCredentials(name, alicloudMountPath);
+        }
+
+        /// <summary>
+        /// Test AliCloudReadRole
+        /// </summary>
+        [Fact]
+        public void AliCloudReadRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string alicloudMountPath = null;
+            //instance.AliCloudReadRole(name, alicloudMountPath);
+        }
+
+        /// <summary>
+        /// Test AliCloudWriteConfig
+        /// </summary>
+        [Fact]
+        public void AliCloudWriteConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //AliCloudWriteConfigRequest aliCloudWriteConfigRequest = null;
+            //string alicloudMountPath = null;
+            //instance.AliCloudWriteConfig(aliCloudWriteConfigRequest, alicloudMountPath);
+        }
+
+        /// <summary>
+        /// Test AliCloudWriteRole
+        /// </summary>
+        [Fact]
+        public void AliCloudWriteRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //AliCloudWriteRoleRequest aliCloudWriteRoleRequest = null;
+            //string alicloudMountPath = null;
+            //instance.AliCloudWriteRole(name, aliCloudWriteRoleRequest, alicloudMountPath);
+        }
+
+        /// <summary>
+        /// Test AzureDeleteConfig
+        /// </summary>
+        [Fact]
+        public void AzureDeleteConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string azureMountPath = null;
-            //instance.DeleteAzureConfig(azureMountPath);
+            //instance.AzureDeleteConfig(azureMountPath);
         }
 
         /// <summary>
-        /// Test DeleteAzureRolesName
+        /// Test AzureDeleteRole
         /// </summary>
         [Fact]
-        public void DeleteAzureRolesNameTest()
+        public void AzureDeleteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string azureMountPath = null;
-            //instance.DeleteAzureRolesName(name, azureMountPath);
+            //instance.AzureDeleteRole(name, azureMountPath);
         }
 
         /// <summary>
-        /// Test DeleteConsulRolesName
+        /// Test AzureListRoles
         /// </summary>
         [Fact]
-        public void DeleteConsulRolesNameTest()
+        public void AzureListRolesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string azureMountPath = null;
+            //instance.AzureListRoles(list, azureMountPath);
+        }
+
+        /// <summary>
+        /// Test AzureReadConfig
+        /// </summary>
+        [Fact]
+        public void AzureReadConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string azureMountPath = null;
+            //instance.AzureReadConfig(azureMountPath);
+        }
+
+        /// <summary>
+        /// Test AzureReadCredentials
+        /// </summary>
+        [Fact]
+        public void AzureReadCredentialsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string role = null;
+            //string azureMountPath = null;
+            //instance.AzureReadCredentials(role, azureMountPath);
+        }
+
+        /// <summary>
+        /// Test AzureReadRole
+        /// </summary>
+        [Fact]
+        public void AzureReadRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string azureMountPath = null;
+            //instance.AzureReadRole(name, azureMountPath);
+        }
+
+        /// <summary>
+        /// Test AzureRotateRoot
+        /// </summary>
+        [Fact]
+        public void AzureRotateRootTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string azureMountPath = null;
+            //instance.AzureRotateRoot(azureMountPath);
+        }
+
+        /// <summary>
+        /// Test AzureWriteConfig
+        /// </summary>
+        [Fact]
+        public void AzureWriteConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //AzureWriteConfigRequest azureWriteConfigRequest = null;
+            //string azureMountPath = null;
+            //instance.AzureWriteConfig(azureWriteConfigRequest, azureMountPath);
+        }
+
+        /// <summary>
+        /// Test AzureWriteRole
+        /// </summary>
+        [Fact]
+        public void AzureWriteRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //AzureWriteRoleRequest azureWriteRoleRequest = null;
+            //string azureMountPath = null;
+            //instance.AzureWriteRole(name, azureWriteRoleRequest, azureMountPath);
+        }
+
+        /// <summary>
+        /// Test ConsulDeleteRole
+        /// </summary>
+        [Fact]
+        public void ConsulDeleteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string consulMountPath = null;
-            //instance.DeleteConsulRolesName(name, consulMountPath);
+            //instance.ConsulDeleteRole(name, consulMountPath);
         }
 
         /// <summary>
-        /// Test DeleteCubbyholePath
+        /// Test ConsulListRoles
         /// </summary>
         [Fact]
-        public void DeleteCubbyholePathTest()
+        public void ConsulListRolesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string consulMountPath = null;
+            //instance.ConsulListRoles(list, consulMountPath);
+        }
+
+        /// <summary>
+        /// Test ConsulReadAccessConfig
+        /// </summary>
+        [Fact]
+        public void ConsulReadAccessConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string consulMountPath = null;
+            //instance.ConsulReadAccessConfig(consulMountPath);
+        }
+
+        /// <summary>
+        /// Test ConsulReadCredentials
+        /// </summary>
+        [Fact]
+        public void ConsulReadCredentialsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string role = null;
+            //string consulMountPath = null;
+            //instance.ConsulReadCredentials(role, consulMountPath);
+        }
+
+        /// <summary>
+        /// Test ConsulReadRole
+        /// </summary>
+        [Fact]
+        public void ConsulReadRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string consulMountPath = null;
+            //instance.ConsulReadRole(name, consulMountPath);
+        }
+
+        /// <summary>
+        /// Test ConsulWriteAccessConfig
+        /// </summary>
+        [Fact]
+        public void ConsulWriteAccessConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ConsulWriteAccessConfigRequest consulWriteAccessConfigRequest = null;
+            //string consulMountPath = null;
+            //instance.ConsulWriteAccessConfig(consulWriteAccessConfigRequest, consulMountPath);
+        }
+
+        /// <summary>
+        /// Test ConsulWriteRole
+        /// </summary>
+        [Fact]
+        public void ConsulWriteRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //ConsulWriteRoleRequest consulWriteRoleRequest = null;
+            //string consulMountPath = null;
+            //instance.ConsulWriteRole(name, consulWriteRoleRequest, consulMountPath);
+        }
+
+        /// <summary>
+        /// Test CubbyholeDelete
+        /// </summary>
+        [Fact]
+        public void CubbyholeDeleteTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string path = null;
             //string cubbyholeMountPath = null;
-            //instance.DeleteCubbyholePath(path, cubbyholeMountPath);
+            //instance.CubbyholeDelete(path, cubbyholeMountPath);
         }
 
         /// <summary>
-        /// Test DeleteGcpRolesetName
+        /// Test CubbyholeRead
         /// </summary>
         [Fact]
-        public void DeleteGcpRolesetNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string gcpMountPath = null;
-            //instance.DeleteGcpRolesetName(name, gcpMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteGcpStaticAccountName
-        /// </summary>
-        [Fact]
-        public void DeleteGcpStaticAccountNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string gcpMountPath = null;
-            //instance.DeleteGcpStaticAccountName(name, gcpMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteGcpkmsConfig
-        /// </summary>
-        [Fact]
-        public void DeleteGcpkmsConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string gcpkmsMountPath = null;
-            //instance.DeleteGcpkmsConfig(gcpkmsMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteGcpkmsKeysDeregisterKey
-        /// </summary>
-        [Fact]
-        public void DeleteGcpkmsKeysDeregisterKeyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //string gcpkmsMountPath = null;
-            //instance.DeleteGcpkmsKeysDeregisterKey(key, gcpkmsMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteGcpkmsKeysKey
-        /// </summary>
-        [Fact]
-        public void DeleteGcpkmsKeysKeyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //string gcpkmsMountPath = null;
-            //instance.DeleteGcpkmsKeysKey(key, gcpkmsMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteGcpkmsKeysTrimKey
-        /// </summary>
-        [Fact]
-        public void DeleteGcpkmsKeysTrimKeyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //string gcpkmsMountPath = null;
-            //instance.DeleteGcpkmsKeysTrimKey(key, gcpkmsMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteKubernetesConfig
-        /// </summary>
-        [Fact]
-        public void DeleteKubernetesConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string kubernetesMountPath = null;
-            //instance.DeleteKubernetesConfig(kubernetesMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteKubernetesRolesName
-        /// </summary>
-        [Fact]
-        public void DeleteKubernetesRolesNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string kubernetesMountPath = null;
-            //instance.DeleteKubernetesRolesName(name, kubernetesMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteLdapConfig
-        /// </summary>
-        [Fact]
-        public void DeleteLdapConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string ldapMountPath = null;
-            //instance.DeleteLdapConfig(ldapMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteLdapLibraryName
-        /// </summary>
-        [Fact]
-        public void DeleteLdapLibraryNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string ldapMountPath = null;
-            //instance.DeleteLdapLibraryName(name, ldapMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteLdapRoleName
-        /// </summary>
-        [Fact]
-        public void DeleteLdapRoleNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string ldapMountPath = null;
-            //instance.DeleteLdapRoleName(name, ldapMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteLdapStaticRoleName
-        /// </summary>
-        [Fact]
-        public void DeleteLdapStaticRoleNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string ldapMountPath = null;
-            //instance.DeleteLdapStaticRoleName(name, ldapMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteMongodbatlasRolesName
-        /// </summary>
-        [Fact]
-        public void DeleteMongodbatlasRolesNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string mongodbatlasMountPath = null;
-            //instance.DeleteMongodbatlasRolesName(name, mongodbatlasMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteNomadConfigAccess
-        /// </summary>
-        [Fact]
-        public void DeleteNomadConfigAccessTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string nomadMountPath = null;
-            //instance.DeleteNomadConfigAccess(nomadMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteNomadConfigLease
-        /// </summary>
-        [Fact]
-        public void DeleteNomadConfigLeaseTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string nomadMountPath = null;
-            //instance.DeleteNomadConfigLease(nomadMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteNomadRoleName
-        /// </summary>
-        [Fact]
-        public void DeleteNomadRoleNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string nomadMountPath = null;
-            //instance.DeleteNomadRoleName(name, nomadMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteOpenldapConfig
-        /// </summary>
-        [Fact]
-        public void DeleteOpenldapConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string openldapMountPath = null;
-            //instance.DeleteOpenldapConfig(openldapMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteOpenldapLibraryName
-        /// </summary>
-        [Fact]
-        public void DeleteOpenldapLibraryNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string openldapMountPath = null;
-            //instance.DeleteOpenldapLibraryName(name, openldapMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteOpenldapRoleName
-        /// </summary>
-        [Fact]
-        public void DeleteOpenldapRoleNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string openldapMountPath = null;
-            //instance.DeleteOpenldapRoleName(name, openldapMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteOpenldapStaticRoleName
-        /// </summary>
-        [Fact]
-        public void DeleteOpenldapStaticRoleNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string openldapMountPath = null;
-            //instance.DeleteOpenldapStaticRoleName(name, openldapMountPath);
-        }
-
-        /// <summary>
-        /// Test DeletePkiIssuerRefDerPem
-        /// </summary>
-        [Fact]
-        public void DeletePkiIssuerRefDerPemTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //string pkiMountPath = null;
-            //instance.DeletePkiIssuerRefDerPem(issuerRef, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test DeletePkiJson
-        /// </summary>
-        [Fact]
-        public void DeletePkiJsonTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string pkiMountPath = null;
-            //instance.DeletePkiJson(pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test DeletePkiKeyKeyRef
-        /// </summary>
-        [Fact]
-        public void DeletePkiKeyKeyRefTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string keyRef = null;
-            //string pkiMountPath = null;
-            //instance.DeletePkiKeyKeyRef(keyRef, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test DeletePkiRolesName
-        /// </summary>
-        [Fact]
-        public void DeletePkiRolesNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string pkiMountPath = null;
-            //instance.DeletePkiRolesName(name, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test DeletePkiRoot
-        /// </summary>
-        [Fact]
-        public void DeletePkiRootTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string pkiMountPath = null;
-            //instance.DeletePkiRoot(pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteRabbitmqRolesName
-        /// </summary>
-        [Fact]
-        public void DeleteRabbitmqRolesNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string rabbitmqMountPath = null;
-            //instance.DeleteRabbitmqRolesName(name, rabbitmqMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteSecretDataPath
-        /// </summary>
-        [Fact]
-        public void DeleteSecretDataPathTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //string secretMountPath = null;
-            //instance.DeleteSecretDataPath(path, secretMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteSecretMetadataPath
-        /// </summary>
-        [Fact]
-        public void DeleteSecretMetadataPathTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //string secretMountPath = null;
-            //instance.DeleteSecretMetadataPath(path, secretMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteSecretPath
-        /// </summary>
-        [Fact]
-        public void DeleteSecretPathTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //string secretMountPath = null;
-            //instance.DeleteSecretPath(path, secretMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteSshConfigCa
-        /// </summary>
-        [Fact]
-        public void DeleteSshConfigCaTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string sshMountPath = null;
-            //instance.DeleteSshConfigCa(sshMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteSshConfigZeroaddress
-        /// </summary>
-        [Fact]
-        public void DeleteSshConfigZeroaddressTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string sshMountPath = null;
-            //instance.DeleteSshConfigZeroaddress(sshMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteSshKeysKeyName
-        /// </summary>
-        [Fact]
-        public void DeleteSshKeysKeyNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string keyName = null;
-            //string sshMountPath = null;
-            //instance.DeleteSshKeysKeyName(keyName, sshMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteSshRolesRole
-        /// </summary>
-        [Fact]
-        public void DeleteSshRolesRoleTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string role = null;
-            //string sshMountPath = null;
-            //instance.DeleteSshRolesRole(role, sshMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteTerraformConfig
-        /// </summary>
-        [Fact]
-        public void DeleteTerraformConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string terraformMountPath = null;
-            //instance.DeleteTerraformConfig(terraformMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteTerraformRoleName
-        /// </summary>
-        [Fact]
-        public void DeleteTerraformRoleNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string terraformMountPath = null;
-            //instance.DeleteTerraformRoleName(name, terraformMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteTotpKeysName
-        /// </summary>
-        [Fact]
-        public void DeleteTotpKeysNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string totpMountPath = null;
-            //instance.DeleteTotpKeysName(name, totpMountPath);
-        }
-
-        /// <summary>
-        /// Test DeleteTransitKeysName
-        /// </summary>
-        [Fact]
-        public void DeleteTransitKeysNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string transitMountPath = null;
-            //instance.DeleteTransitKeysName(name, transitMountPath);
-        }
-
-        /// <summary>
-        /// Test GetAdConfig
-        /// </summary>
-        [Fact]
-        public void GetAdConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string adMountPath = null;
-            //instance.GetAdConfig(adMountPath);
-        }
-
-        /// <summary>
-        /// Test GetAdCredsName
-        /// </summary>
-        [Fact]
-        public void GetAdCredsNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string adMountPath = null;
-            //instance.GetAdCredsName(name, adMountPath);
-        }
-
-        /// <summary>
-        /// Test GetAdLibrary
-        /// </summary>
-        [Fact]
-        public void GetAdLibraryTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string adMountPath = null;
-            //instance.GetAdLibrary(list, adMountPath);
-        }
-
-        /// <summary>
-        /// Test GetAdLibraryName
-        /// </summary>
-        [Fact]
-        public void GetAdLibraryNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string adMountPath = null;
-            //instance.GetAdLibraryName(name, adMountPath);
-        }
-
-        /// <summary>
-        /// Test GetAdLibraryNameStatus
-        /// </summary>
-        [Fact]
-        public void GetAdLibraryNameStatusTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string adMountPath = null;
-            //instance.GetAdLibraryNameStatus(name, adMountPath);
-        }
-
-        /// <summary>
-        /// Test GetAdRoles
-        /// </summary>
-        [Fact]
-        public void GetAdRolesTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string adMountPath = null;
-            //instance.GetAdRoles(list, adMountPath);
-        }
-
-        /// <summary>
-        /// Test GetAdRolesName
-        /// </summary>
-        [Fact]
-        public void GetAdRolesNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string adMountPath = null;
-            //instance.GetAdRolesName(name, adMountPath);
-        }
-
-        /// <summary>
-        /// Test GetAdRotateRoot
-        /// </summary>
-        [Fact]
-        public void GetAdRotateRootTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string adMountPath = null;
-            //instance.GetAdRotateRoot(adMountPath);
-        }
-
-        /// <summary>
-        /// Test GetAlicloudConfig
-        /// </summary>
-        [Fact]
-        public void GetAlicloudConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string alicloudMountPath = null;
-            //instance.GetAlicloudConfig(alicloudMountPath);
-        }
-
-        /// <summary>
-        /// Test GetAlicloudCredsName
-        /// </summary>
-        [Fact]
-        public void GetAlicloudCredsNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string alicloudMountPath = null;
-            //instance.GetAlicloudCredsName(name, alicloudMountPath);
-        }
-
-        /// <summary>
-        /// Test GetAlicloudRole
-        /// </summary>
-        [Fact]
-        public void GetAlicloudRoleTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string alicloudMountPath = null;
-            //instance.GetAlicloudRole(list, alicloudMountPath);
-        }
-
-        /// <summary>
-        /// Test GetAlicloudRoleName
-        /// </summary>
-        [Fact]
-        public void GetAlicloudRoleNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string alicloudMountPath = null;
-            //instance.GetAlicloudRoleName(name, alicloudMountPath);
-        }
-
-        /// <summary>
-        /// Test GetAwsConfigLease
-        /// </summary>
-        [Fact]
-        public void GetAwsConfigLeaseTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string awsMountPath = null;
-            //instance.GetAwsConfigLease(awsMountPath);
-        }
-
-        /// <summary>
-        /// Test GetAwsConfigRoot
-        /// </summary>
-        [Fact]
-        public void GetAwsConfigRootTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string awsMountPath = null;
-            //instance.GetAwsConfigRoot(awsMountPath);
-        }
-
-        /// <summary>
-        /// Test GetAwsCreds
-        /// </summary>
-        [Fact]
-        public void GetAwsCredsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string awsMountPath = null;
-            //instance.GetAwsCreds(awsMountPath);
-        }
-
-        /// <summary>
-        /// Test GetAwsRoles
-        /// </summary>
-        [Fact]
-        public void GetAwsRolesTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string awsMountPath = null;
-            //instance.GetAwsRoles(list, awsMountPath);
-        }
-
-        /// <summary>
-        /// Test GetAwsRolesName
-        /// </summary>
-        [Fact]
-        public void GetAwsRolesNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string awsMountPath = null;
-            //instance.GetAwsRolesName(name, awsMountPath);
-        }
-
-        /// <summary>
-        /// Test GetAwsStsName
-        /// </summary>
-        [Fact]
-        public void GetAwsStsNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string awsMountPath = null;
-            //instance.GetAwsStsName(name, awsMountPath);
-        }
-
-        /// <summary>
-        /// Test GetAzureConfig
-        /// </summary>
-        [Fact]
-        public void GetAzureConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string azureMountPath = null;
-            //instance.GetAzureConfig(azureMountPath);
-        }
-
-        /// <summary>
-        /// Test GetAzureCredsRole
-        /// </summary>
-        [Fact]
-        public void GetAzureCredsRoleTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string role = null;
-            //string azureMountPath = null;
-            //instance.GetAzureCredsRole(role, azureMountPath);
-        }
-
-        /// <summary>
-        /// Test GetAzureRoles
-        /// </summary>
-        [Fact]
-        public void GetAzureRolesTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string azureMountPath = null;
-            //instance.GetAzureRoles(list, azureMountPath);
-        }
-
-        /// <summary>
-        /// Test GetAzureRolesName
-        /// </summary>
-        [Fact]
-        public void GetAzureRolesNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string azureMountPath = null;
-            //instance.GetAzureRolesName(name, azureMountPath);
-        }
-
-        /// <summary>
-        /// Test GetConsulConfigAccess
-        /// </summary>
-        [Fact]
-        public void GetConsulConfigAccessTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string consulMountPath = null;
-            //instance.GetConsulConfigAccess(consulMountPath);
-        }
-
-        /// <summary>
-        /// Test GetConsulCredsRole
-        /// </summary>
-        [Fact]
-        public void GetConsulCredsRoleTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string role = null;
-            //string consulMountPath = null;
-            //instance.GetConsulCredsRole(role, consulMountPath);
-        }
-
-        /// <summary>
-        /// Test GetConsulRoles
-        /// </summary>
-        [Fact]
-        public void GetConsulRolesTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string consulMountPath = null;
-            //instance.GetConsulRoles(list, consulMountPath);
-        }
-
-        /// <summary>
-        /// Test GetConsulRolesName
-        /// </summary>
-        [Fact]
-        public void GetConsulRolesNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string consulMountPath = null;
-            //instance.GetConsulRolesName(name, consulMountPath);
-        }
-
-        /// <summary>
-        /// Test GetCubbyholePath
-        /// </summary>
-        [Fact]
-        public void GetCubbyholePathTest()
+        public void CubbyholeReadTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string path = null;
             //string cubbyholeMountPath = null;
             //string list = null;
-            //instance.GetCubbyholePath(path, cubbyholeMountPath, list);
+            //instance.CubbyholeRead(path, cubbyholeMountPath, list);
         }
 
         /// <summary>
-        /// Test GetGcpConfig
+        /// Test CubbyholeWrite
         /// </summary>
         [Fact]
-        public void GetGcpConfigTest()
+        public void CubbyholeWriteTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string gcpMountPath = null;
-            //instance.GetGcpConfig(gcpMountPath);
+            //string path = null;
+            //string cubbyholeMountPath = null;
+            //instance.CubbyholeWrite(path, cubbyholeMountPath);
         }
 
         /// <summary>
-        /// Test GetGcpKeyRoleset
+        /// Test GoogleCloudDeleteRoleset
         /// </summary>
         [Fact]
-        public void GetGcpKeyRolesetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string roleset = null;
-            //string gcpMountPath = null;
-            //instance.GetGcpKeyRoleset(roleset, gcpMountPath);
-        }
-
-        /// <summary>
-        /// Test GetGcpRolesetName
-        /// </summary>
-        [Fact]
-        public void GetGcpRolesetNameTest()
+        public void GoogleCloudDeleteRolesetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string gcpMountPath = null;
-            //instance.GetGcpRolesetName(name, gcpMountPath);
+            //instance.GoogleCloudDeleteRoleset(name, gcpMountPath);
         }
 
         /// <summary>
-        /// Test GetGcpRolesetRolesetKey
+        /// Test GoogleCloudDeleteStaticAccount
         /// </summary>
         [Fact]
-        public void GetGcpRolesetRolesetKeyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string roleset = null;
-            //string gcpMountPath = null;
-            //instance.GetGcpRolesetRolesetKey(roleset, gcpMountPath);
-        }
-
-        /// <summary>
-        /// Test GetGcpRolesetRolesetToken
-        /// </summary>
-        [Fact]
-        public void GetGcpRolesetRolesetTokenTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string roleset = null;
-            //string gcpMountPath = null;
-            //instance.GetGcpRolesetRolesetToken(roleset, gcpMountPath);
-        }
-
-        /// <summary>
-        /// Test GetGcpRolesets
-        /// </summary>
-        [Fact]
-        public void GetGcpRolesetsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string gcpMountPath = null;
-            //instance.GetGcpRolesets(list, gcpMountPath);
-        }
-
-        /// <summary>
-        /// Test GetGcpStaticAccountName
-        /// </summary>
-        [Fact]
-        public void GetGcpStaticAccountNameTest()
+        public void GoogleCloudDeleteStaticAccountTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string gcpMountPath = null;
-            //instance.GetGcpStaticAccountName(name, gcpMountPath);
+            //instance.GoogleCloudDeleteStaticAccount(name, gcpMountPath);
         }
 
         /// <summary>
-        /// Test GetGcpStaticAccountNameKey
+        /// Test GoogleCloudKMSDecrypt
         /// </summary>
         [Fact]
-        public void GetGcpStaticAccountNameKeyTest()
+        public void GoogleCloudKMSDecryptTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string gcpMountPath = null;
-            //instance.GetGcpStaticAccountNameKey(name, gcpMountPath);
+            //string key = null;
+            //GoogleCloudKMSDecryptRequest googleCloudKMSDecryptRequest = null;
+            //string gcpkmsMountPath = null;
+            //instance.GoogleCloudKMSDecrypt(key, googleCloudKMSDecryptRequest, gcpkmsMountPath);
         }
 
         /// <summary>
-        /// Test GetGcpStaticAccountNameToken
+        /// Test GoogleCloudKMSDeleteConfig
         /// </summary>
         [Fact]
-        public void GetGcpStaticAccountNameTokenTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string gcpMountPath = null;
-            //instance.GetGcpStaticAccountNameToken(name, gcpMountPath);
-        }
-
-        /// <summary>
-        /// Test GetGcpStaticAccounts
-        /// </summary>
-        [Fact]
-        public void GetGcpStaticAccountsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string gcpMountPath = null;
-            //instance.GetGcpStaticAccounts(list, gcpMountPath);
-        }
-
-        /// <summary>
-        /// Test GetGcpTokenRoleset
-        /// </summary>
-        [Fact]
-        public void GetGcpTokenRolesetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string roleset = null;
-            //string gcpMountPath = null;
-            //instance.GetGcpTokenRoleset(roleset, gcpMountPath);
-        }
-
-        /// <summary>
-        /// Test GetGcpkmsConfig
-        /// </summary>
-        [Fact]
-        public void GetGcpkmsConfigTest()
+        public void GoogleCloudKMSDeleteConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string gcpkmsMountPath = null;
-            //instance.GetGcpkmsConfig(gcpkmsMountPath);
+            //instance.GoogleCloudKMSDeleteConfig(gcpkmsMountPath);
         }
 
         /// <summary>
-        /// Test GetGcpkmsKeys
+        /// Test GoogleCloudKMSDeleteKey
         /// </summary>
         [Fact]
-        public void GetGcpkmsKeysTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string gcpkmsMountPath = null;
-            //instance.GetGcpkmsKeys(list, gcpkmsMountPath);
-        }
-
-        /// <summary>
-        /// Test GetGcpkmsKeysConfigKey
-        /// </summary>
-        [Fact]
-        public void GetGcpkmsKeysConfigKeyTest()
+        public void GoogleCloudKMSDeleteKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string key = null;
             //string gcpkmsMountPath = null;
-            //instance.GetGcpkmsKeysConfigKey(key, gcpkmsMountPath);
+            //instance.GoogleCloudKMSDeleteKey(key, gcpkmsMountPath);
         }
 
         /// <summary>
-        /// Test GetGcpkmsKeysKey
+        /// Test GoogleCloudKMSDeregisterKey
         /// </summary>
         [Fact]
-        public void GetGcpkmsKeysKeyTest()
+        public void GoogleCloudKMSDeregisterKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string key = null;
             //string gcpkmsMountPath = null;
-            //instance.GetGcpkmsKeysKey(key, gcpkmsMountPath);
+            //instance.GoogleCloudKMSDeregisterKey(key, gcpkmsMountPath);
         }
 
         /// <summary>
-        /// Test GetGcpkmsPubkeyKey
+        /// Test GoogleCloudKMSEncrypt
         /// </summary>
         [Fact]
-        public void GetGcpkmsPubkeyKeyTest()
+        public void GoogleCloudKMSEncryptTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string key = null;
+            //GoogleCloudKMSEncryptRequest googleCloudKMSEncryptRequest = null;
+            //string gcpkmsMountPath = null;
+            //instance.GoogleCloudKMSEncrypt(key, googleCloudKMSEncryptRequest, gcpkmsMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudKMSListKeys
+        /// </summary>
+        [Fact]
+        public void GoogleCloudKMSListKeysTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string gcpkmsMountPath = null;
+            //instance.GoogleCloudKMSListKeys(list, gcpkmsMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudKMSReadConfig
+        /// </summary>
+        [Fact]
+        public void GoogleCloudKMSReadConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string gcpkmsMountPath = null;
+            //instance.GoogleCloudKMSReadConfig(gcpkmsMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudKMSReadKey
+        /// </summary>
+        [Fact]
+        public void GoogleCloudKMSReadKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string key = null;
             //string gcpkmsMountPath = null;
-            //instance.GetGcpkmsPubkeyKey(key, gcpkmsMountPath);
+            //instance.GoogleCloudKMSReadKey(key, gcpkmsMountPath);
         }
 
         /// <summary>
-        /// Test GetKubernetesConfig
+        /// Test GoogleCloudKMSReadKeyConfig
         /// </summary>
         [Fact]
-        public void GetKubernetesConfigTest()
+        public void GoogleCloudKMSReadKeyConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string key = null;
+            //string gcpkmsMountPath = null;
+            //instance.GoogleCloudKMSReadKeyConfig(key, gcpkmsMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudKMSReadPubkey
+        /// </summary>
+        [Fact]
+        public void GoogleCloudKMSReadPubkeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string key = null;
+            //string gcpkmsMountPath = null;
+            //instance.GoogleCloudKMSReadPubkey(key, gcpkmsMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudKMSReencrypt
+        /// </summary>
+        [Fact]
+        public void GoogleCloudKMSReencryptTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string key = null;
+            //GoogleCloudKMSReencryptRequest googleCloudKMSReencryptRequest = null;
+            //string gcpkmsMountPath = null;
+            //instance.GoogleCloudKMSReencrypt(key, googleCloudKMSReencryptRequest, gcpkmsMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudKMSRegisterKey
+        /// </summary>
+        [Fact]
+        public void GoogleCloudKMSRegisterKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string key = null;
+            //GoogleCloudKMSRegisterKeyRequest googleCloudKMSRegisterKeyRequest = null;
+            //string gcpkmsMountPath = null;
+            //instance.GoogleCloudKMSRegisterKey(key, googleCloudKMSRegisterKeyRequest, gcpkmsMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudKMSRotateKey
+        /// </summary>
+        [Fact]
+        public void GoogleCloudKMSRotateKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string key = null;
+            //string gcpkmsMountPath = null;
+            //instance.GoogleCloudKMSRotateKey(key, gcpkmsMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudKMSSign
+        /// </summary>
+        [Fact]
+        public void GoogleCloudKMSSignTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string key = null;
+            //GoogleCloudKMSSignRequest googleCloudKMSSignRequest = null;
+            //string gcpkmsMountPath = null;
+            //instance.GoogleCloudKMSSign(key, googleCloudKMSSignRequest, gcpkmsMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudKMSTrimKey
+        /// </summary>
+        [Fact]
+        public void GoogleCloudKMSTrimKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string key = null;
+            //string gcpkmsMountPath = null;
+            //instance.GoogleCloudKMSTrimKey(key, gcpkmsMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudKMSVerify
+        /// </summary>
+        [Fact]
+        public void GoogleCloudKMSVerifyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string key = null;
+            //GoogleCloudKMSVerifyRequest googleCloudKMSVerifyRequest = null;
+            //string gcpkmsMountPath = null;
+            //instance.GoogleCloudKMSVerify(key, googleCloudKMSVerifyRequest, gcpkmsMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudKMSWriteConfig
+        /// </summary>
+        [Fact]
+        public void GoogleCloudKMSWriteConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GoogleCloudKMSWriteConfigRequest googleCloudKMSWriteConfigRequest = null;
+            //string gcpkmsMountPath = null;
+            //instance.GoogleCloudKMSWriteConfig(googleCloudKMSWriteConfigRequest, gcpkmsMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudKMSWriteKey
+        /// </summary>
+        [Fact]
+        public void GoogleCloudKMSWriteKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string key = null;
+            //GoogleCloudKMSWriteKeyRequest googleCloudKMSWriteKeyRequest = null;
+            //string gcpkmsMountPath = null;
+            //instance.GoogleCloudKMSWriteKey(key, googleCloudKMSWriteKeyRequest, gcpkmsMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudKMSWriteKeyConfig
+        /// </summary>
+        [Fact]
+        public void GoogleCloudKMSWriteKeyConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string key = null;
+            //GoogleCloudKMSWriteKeyConfigRequest googleCloudKMSWriteKeyConfigRequest = null;
+            //string gcpkmsMountPath = null;
+            //instance.GoogleCloudKMSWriteKeyConfig(key, googleCloudKMSWriteKeyConfigRequest, gcpkmsMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudListRolesets
+        /// </summary>
+        [Fact]
+        public void GoogleCloudListRolesetsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string gcpMountPath = null;
+            //instance.GoogleCloudListRolesets(list, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudListStaticAccounts
+        /// </summary>
+        [Fact]
+        public void GoogleCloudListStaticAccountsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string gcpMountPath = null;
+            //instance.GoogleCloudListStaticAccounts(list, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudReadConfig
+        /// </summary>
+        [Fact]
+        public void GoogleCloudReadConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string gcpMountPath = null;
+            //instance.GoogleCloudReadConfig(gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudReadKey
+        /// </summary>
+        [Fact]
+        public void GoogleCloudReadKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string roleset = null;
+            //string gcpMountPath = null;
+            //instance.GoogleCloudReadKey(roleset, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudReadRoleset
+        /// </summary>
+        [Fact]
+        public void GoogleCloudReadRolesetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string gcpMountPath = null;
+            //instance.GoogleCloudReadRoleset(name, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudReadRolesetKey
+        /// </summary>
+        [Fact]
+        public void GoogleCloudReadRolesetKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string roleset = null;
+            //string gcpMountPath = null;
+            //instance.GoogleCloudReadRolesetKey(roleset, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudReadRolesetToken
+        /// </summary>
+        [Fact]
+        public void GoogleCloudReadRolesetTokenTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string roleset = null;
+            //string gcpMountPath = null;
+            //instance.GoogleCloudReadRolesetToken(roleset, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudReadStaticAccount
+        /// </summary>
+        [Fact]
+        public void GoogleCloudReadStaticAccountTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string gcpMountPath = null;
+            //instance.GoogleCloudReadStaticAccount(name, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudReadStaticAccountKey
+        /// </summary>
+        [Fact]
+        public void GoogleCloudReadStaticAccountKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string gcpMountPath = null;
+            //instance.GoogleCloudReadStaticAccountKey(name, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudReadStaticAccountToken
+        /// </summary>
+        [Fact]
+        public void GoogleCloudReadStaticAccountTokenTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string gcpMountPath = null;
+            //instance.GoogleCloudReadStaticAccountToken(name, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudReadToken
+        /// </summary>
+        [Fact]
+        public void GoogleCloudReadTokenTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string roleset = null;
+            //string gcpMountPath = null;
+            //instance.GoogleCloudReadToken(roleset, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudRotateRoleset
+        /// </summary>
+        [Fact]
+        public void GoogleCloudRotateRolesetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string gcpMountPath = null;
+            //instance.GoogleCloudRotateRoleset(name, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudRotateRolesetKey
+        /// </summary>
+        [Fact]
+        public void GoogleCloudRotateRolesetKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string gcpMountPath = null;
+            //instance.GoogleCloudRotateRolesetKey(name, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudRotateRoot
+        /// </summary>
+        [Fact]
+        public void GoogleCloudRotateRootTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string gcpMountPath = null;
+            //instance.GoogleCloudRotateRoot(gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudRotateStaticAccountKey
+        /// </summary>
+        [Fact]
+        public void GoogleCloudRotateStaticAccountKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string gcpMountPath = null;
+            //instance.GoogleCloudRotateStaticAccountKey(name, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudWriteConfig
+        /// </summary>
+        [Fact]
+        public void GoogleCloudWriteConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GoogleCloudWriteConfigRequest googleCloudWriteConfigRequest = null;
+            //string gcpMountPath = null;
+            //instance.GoogleCloudWriteConfig(googleCloudWriteConfigRequest, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudWriteKey
+        /// </summary>
+        [Fact]
+        public void GoogleCloudWriteKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string roleset = null;
+            //GoogleCloudWriteKeyRequest googleCloudWriteKeyRequest = null;
+            //string gcpMountPath = null;
+            //instance.GoogleCloudWriteKey(roleset, googleCloudWriteKeyRequest, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudWriteRoleset
+        /// </summary>
+        [Fact]
+        public void GoogleCloudWriteRolesetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //GoogleCloudWriteRolesetRequest googleCloudWriteRolesetRequest = null;
+            //string gcpMountPath = null;
+            //instance.GoogleCloudWriteRoleset(name, googleCloudWriteRolesetRequest, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudWriteRolesetKey
+        /// </summary>
+        [Fact]
+        public void GoogleCloudWriteRolesetKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string roleset = null;
+            //GoogleCloudWriteRolesetKeyRequest googleCloudWriteRolesetKeyRequest = null;
+            //string gcpMountPath = null;
+            //instance.GoogleCloudWriteRolesetKey(roleset, googleCloudWriteRolesetKeyRequest, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudWriteRolesetToken
+        /// </summary>
+        [Fact]
+        public void GoogleCloudWriteRolesetTokenTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string roleset = null;
+            //string gcpMountPath = null;
+            //instance.GoogleCloudWriteRolesetToken(roleset, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudWriteStaticAccount
+        /// </summary>
+        [Fact]
+        public void GoogleCloudWriteStaticAccountTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //GoogleCloudWriteStaticAccountRequest googleCloudWriteStaticAccountRequest = null;
+            //string gcpMountPath = null;
+            //instance.GoogleCloudWriteStaticAccount(name, googleCloudWriteStaticAccountRequest, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudWriteStaticAccountKey
+        /// </summary>
+        [Fact]
+        public void GoogleCloudWriteStaticAccountKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //GoogleCloudWriteStaticAccountKeyRequest googleCloudWriteStaticAccountKeyRequest = null;
+            //string gcpMountPath = null;
+            //instance.GoogleCloudWriteStaticAccountKey(name, googleCloudWriteStaticAccountKeyRequest, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudWriteStaticAccountToken
+        /// </summary>
+        [Fact]
+        public void GoogleCloudWriteStaticAccountTokenTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string gcpMountPath = null;
+            //instance.GoogleCloudWriteStaticAccountToken(name, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test GoogleCloudWriteToken
+        /// </summary>
+        [Fact]
+        public void GoogleCloudWriteTokenTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string roleset = null;
+            //string gcpMountPath = null;
+            //instance.GoogleCloudWriteToken(roleset, gcpMountPath);
+        }
+
+        /// <summary>
+        /// Test KVv1Delete
+        /// </summary>
+        [Fact]
+        public void KVv1DeleteTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string path = null;
+            //string kvMountPath = null;
+            //instance.KVv1Delete(path, kvMountPath);
+        }
+
+        /// <summary>
+        /// Test KVv1Read
+        /// </summary>
+        [Fact]
+        public void KVv1ReadTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string path = null;
+            //string kvMountPath = null;
+            //string list = null;
+            //instance.KVv1Read(path, kvMountPath, list);
+        }
+
+        /// <summary>
+        /// Test KVv1Write
+        /// </summary>
+        [Fact]
+        public void KVv1WriteTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string path = null;
+            //string kvMountPath = null;
+            //instance.KVv1Write(path, kvMountPath);
+        }
+
+        /// <summary>
+        /// Test KVv2Delete
+        /// </summary>
+        [Fact]
+        public void KVv2DeleteTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string path = null;
+            //string secretMountPath = null;
+            //instance.KVv2Delete(path, secretMountPath);
+        }
+
+        /// <summary>
+        /// Test KVv2DeleteMetadata
+        /// </summary>
+        [Fact]
+        public void KVv2DeleteMetadataTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string path = null;
+            //string secretMountPath = null;
+            //instance.KVv2DeleteMetadata(path, secretMountPath);
+        }
+
+        /// <summary>
+        /// Test KVv2DeleteVersions
+        /// </summary>
+        [Fact]
+        public void KVv2DeleteVersionsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string path = null;
+            //KVv2DeleteVersionsRequest kVv2DeleteVersionsRequest = null;
+            //string secretMountPath = null;
+            //instance.KVv2DeleteVersions(path, kVv2DeleteVersionsRequest, secretMountPath);
+        }
+
+        /// <summary>
+        /// Test KVv2DestroyVersions
+        /// </summary>
+        [Fact]
+        public void KVv2DestroyVersionsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string path = null;
+            //KVv2DestroyVersionsRequest kVv2DestroyVersionsRequest = null;
+            //string secretMountPath = null;
+            //instance.KVv2DestroyVersions(path, kVv2DestroyVersionsRequest, secretMountPath);
+        }
+
+        /// <summary>
+        /// Test KVv2Read
+        /// </summary>
+        [Fact]
+        public void KVv2ReadTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string path = null;
+            //string secretMountPath = null;
+            //instance.KVv2Read(path, secretMountPath);
+        }
+
+        /// <summary>
+        /// Test KVv2ReadConfig
+        /// </summary>
+        [Fact]
+        public void KVv2ReadConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string secretMountPath = null;
+            //instance.KVv2ReadConfig(secretMountPath);
+        }
+
+        /// <summary>
+        /// Test KVv2ReadMetadata
+        /// </summary>
+        [Fact]
+        public void KVv2ReadMetadataTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string path = null;
+            //string secretMountPath = null;
+            //string list = null;
+            //instance.KVv2ReadMetadata(path, secretMountPath, list);
+        }
+
+        /// <summary>
+        /// Test KVv2ReadSubkeys
+        /// </summary>
+        [Fact]
+        public void KVv2ReadSubkeysTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string path = null;
+            //string secretMountPath = null;
+            //instance.KVv2ReadSubkeys(path, secretMountPath);
+        }
+
+        /// <summary>
+        /// Test KVv2UndeleteVersions
+        /// </summary>
+        [Fact]
+        public void KVv2UndeleteVersionsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string path = null;
+            //KVv2UndeleteVersionsRequest kVv2UndeleteVersionsRequest = null;
+            //string secretMountPath = null;
+            //instance.KVv2UndeleteVersions(path, kVv2UndeleteVersionsRequest, secretMountPath);
+        }
+
+        /// <summary>
+        /// Test KVv2Write
+        /// </summary>
+        [Fact]
+        public void KVv2WriteTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string path = null;
+            //KVv2WriteRequest kVv2WriteRequest = null;
+            //string secretMountPath = null;
+            //instance.KVv2Write(path, kVv2WriteRequest, secretMountPath);
+        }
+
+        /// <summary>
+        /// Test KVv2WriteConfig
+        /// </summary>
+        [Fact]
+        public void KVv2WriteConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //KVv2WriteConfigRequest kVv2WriteConfigRequest = null;
+            //string secretMountPath = null;
+            //instance.KVv2WriteConfig(kVv2WriteConfigRequest, secretMountPath);
+        }
+
+        /// <summary>
+        /// Test KVv2WriteMetadata
+        /// </summary>
+        [Fact]
+        public void KVv2WriteMetadataTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string path = null;
+            //KVv2WriteMetadataRequest kVv2WriteMetadataRequest = null;
+            //string secretMountPath = null;
+            //instance.KVv2WriteMetadata(path, kVv2WriteMetadataRequest, secretMountPath);
+        }
+
+        /// <summary>
+        /// Test KubernetesDeleteConfig
+        /// </summary>
+        [Fact]
+        public void KubernetesDeleteConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string kubernetesMountPath = null;
-            //instance.GetKubernetesConfig(kubernetesMountPath);
+            //instance.KubernetesDeleteConfig(kubernetesMountPath);
         }
 
         /// <summary>
-        /// Test GetKubernetesRoles
+        /// Test KubernetesDeleteRole
         /// </summary>
         [Fact]
-        public void GetKubernetesRolesTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string kubernetesMountPath = null;
-            //instance.GetKubernetesRoles(list, kubernetesMountPath);
-        }
-
-        /// <summary>
-        /// Test GetKubernetesRolesName
-        /// </summary>
-        [Fact]
-        public void GetKubernetesRolesNameTest()
+        public void KubernetesDeleteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string kubernetesMountPath = null;
-            //instance.GetKubernetesRolesName(name, kubernetesMountPath);
+            //instance.KubernetesDeleteRole(name, kubernetesMountPath);
         }
 
         /// <summary>
-        /// Test GetLdapConfig
+        /// Test KubernetesListRoles
         /// </summary>
         [Fact]
-        public void GetLdapConfigTest()
+        public void KubernetesListRolesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string kubernetesMountPath = null;
+            //instance.KubernetesListRoles(list, kubernetesMountPath);
+        }
+
+        /// <summary>
+        /// Test KubernetesReadConfig
+        /// </summary>
+        [Fact]
+        public void KubernetesReadConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string kubernetesMountPath = null;
+            //instance.KubernetesReadConfig(kubernetesMountPath);
+        }
+
+        /// <summary>
+        /// Test KubernetesReadRole
+        /// </summary>
+        [Fact]
+        public void KubernetesReadRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string kubernetesMountPath = null;
+            //instance.KubernetesReadRole(name, kubernetesMountPath);
+        }
+
+        /// <summary>
+        /// Test KubernetesWriteConfig
+        /// </summary>
+        [Fact]
+        public void KubernetesWriteConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //KubernetesWriteConfigRequest kubernetesWriteConfigRequest = null;
+            //string kubernetesMountPath = null;
+            //instance.KubernetesWriteConfig(kubernetesWriteConfigRequest, kubernetesMountPath);
+        }
+
+        /// <summary>
+        /// Test KubernetesWriteCredentials
+        /// </summary>
+        [Fact]
+        public void KubernetesWriteCredentialsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //KubernetesWriteCredentialsRequest kubernetesWriteCredentialsRequest = null;
+            //string kubernetesMountPath = null;
+            //instance.KubernetesWriteCredentials(name, kubernetesWriteCredentialsRequest, kubernetesMountPath);
+        }
+
+        /// <summary>
+        /// Test KubernetesWriteRole
+        /// </summary>
+        [Fact]
+        public void KubernetesWriteRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //KubernetesWriteRoleRequest kubernetesWriteRoleRequest = null;
+            //string kubernetesMountPath = null;
+            //instance.KubernetesWriteRole(name, kubernetesWriteRoleRequest, kubernetesMountPath);
+        }
+
+        /// <summary>
+        /// Test LDAPCheckInLibrary
+        /// </summary>
+        [Fact]
+        public void LDAPCheckInLibraryTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //LDAPCheckInLibraryRequest lDAPCheckInLibraryRequest = null;
+            //string ldapMountPath = null;
+            //instance.LDAPCheckInLibrary(name, lDAPCheckInLibraryRequest, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test LDAPCheckInManageLibrary
+        /// </summary>
+        [Fact]
+        public void LDAPCheckInManageLibraryTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //LDAPCheckInManageLibraryRequest lDAPCheckInManageLibraryRequest = null;
+            //string ldapMountPath = null;
+            //instance.LDAPCheckInManageLibrary(name, lDAPCheckInManageLibraryRequest, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test LDAPCheckOutLibrary
+        /// </summary>
+        [Fact]
+        public void LDAPCheckOutLibraryTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //LDAPCheckOutLibraryRequest lDAPCheckOutLibraryRequest = null;
+            //string ldapMountPath = null;
+            //instance.LDAPCheckOutLibrary(name, lDAPCheckOutLibraryRequest, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test LDAPDeleteConfig
+        /// </summary>
+        [Fact]
+        public void LDAPDeleteConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string ldapMountPath = null;
-            //instance.GetLdapConfig(ldapMountPath);
+            //instance.LDAPDeleteConfig(ldapMountPath);
         }
 
         /// <summary>
-        /// Test GetLdapCredsName
+        /// Test LDAPDeleteLibrary
         /// </summary>
         [Fact]
-        public void GetLdapCredsNameTest()
+        public void LDAPDeleteLibraryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string ldapMountPath = null;
-            //instance.GetLdapCredsName(name, ldapMountPath);
+            //instance.LDAPDeleteLibrary(name, ldapMountPath);
         }
 
         /// <summary>
-        /// Test GetLdapLibrary
+        /// Test LDAPDeleteRole
         /// </summary>
         [Fact]
-        public void GetLdapLibraryTest()
+        public void LDAPDeleteRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string ldapMountPath = null;
+            //instance.LDAPDeleteRole(name, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test LDAPDeleteStaticRole
+        /// </summary>
+        [Fact]
+        public void LDAPDeleteStaticRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string ldapMountPath = null;
+            //instance.LDAPDeleteStaticRole(name, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test LDAPListLibraries
+        /// </summary>
+        [Fact]
+        public void LDAPListLibrariesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
             //string ldapMountPath = null;
-            //instance.GetLdapLibrary(list, ldapMountPath);
+            //instance.LDAPListLibraries(list, ldapMountPath);
         }
 
         /// <summary>
-        /// Test GetLdapLibraryName
+        /// Test LDAPListRoles
         /// </summary>
         [Fact]
-        public void GetLdapLibraryNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string ldapMountPath = null;
-            //instance.GetLdapLibraryName(name, ldapMountPath);
-        }
-
-        /// <summary>
-        /// Test GetLdapLibraryNameStatus
-        /// </summary>
-        [Fact]
-        public void GetLdapLibraryNameStatusTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string ldapMountPath = null;
-            //instance.GetLdapLibraryNameStatus(name, ldapMountPath);
-        }
-
-        /// <summary>
-        /// Test GetLdapRole
-        /// </summary>
-        [Fact]
-        public void GetLdapRoleTest()
+        public void LDAPListRolesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
             //string ldapMountPath = null;
-            //instance.GetLdapRole(list, ldapMountPath);
+            //instance.LDAPListRoles(list, ldapMountPath);
         }
 
         /// <summary>
-        /// Test GetLdapRoleName
+        /// Test LDAPListStaticRoles
         /// </summary>
         [Fact]
-        public void GetLdapRoleNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string ldapMountPath = null;
-            //instance.GetLdapRoleName(name, ldapMountPath);
-        }
-
-        /// <summary>
-        /// Test GetLdapStaticCredName
-        /// </summary>
-        [Fact]
-        public void GetLdapStaticCredNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string ldapMountPath = null;
-            //instance.GetLdapStaticCredName(name, ldapMountPath);
-        }
-
-        /// <summary>
-        /// Test GetLdapStaticRole
-        /// </summary>
-        [Fact]
-        public void GetLdapStaticRoleTest()
+        public void LDAPListStaticRolesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
             //string ldapMountPath = null;
-            //instance.GetLdapStaticRole(list, ldapMountPath);
+            //instance.LDAPListStaticRoles(list, ldapMountPath);
         }
 
         /// <summary>
-        /// Test GetLdapStaticRoleName
+        /// Test LDAPReadConfig
         /// </summary>
         [Fact]
-        public void GetLdapStaticRoleNameTest()
+        public void LDAPReadConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string ldapMountPath = null;
+            //instance.LDAPReadConfig(ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test LDAPReadCredentials
+        /// </summary>
+        [Fact]
+        public void LDAPReadCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string ldapMountPath = null;
-            //instance.GetLdapStaticRoleName(name, ldapMountPath);
+            //instance.LDAPReadCredentials(name, ldapMountPath);
         }
 
         /// <summary>
-        /// Test GetMongodbatlasConfig
+        /// Test LDAPReadLibrary
         /// </summary>
         [Fact]
-        public void GetMongodbatlasConfigTest()
+        public void LDAPReadLibraryTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string ldapMountPath = null;
+            //instance.LDAPReadLibrary(name, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test LDAPReadLibraryStatus
+        /// </summary>
+        [Fact]
+        public void LDAPReadLibraryStatusTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string ldapMountPath = null;
+            //instance.LDAPReadLibraryStatus(name, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test LDAPReadRole
+        /// </summary>
+        [Fact]
+        public void LDAPReadRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string ldapMountPath = null;
+            //instance.LDAPReadRole(name, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test LDAPReadStaticCredentials
+        /// </summary>
+        [Fact]
+        public void LDAPReadStaticCredentialsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string ldapMountPath = null;
+            //instance.LDAPReadStaticCredentials(name, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test LDAPReadStaticRole
+        /// </summary>
+        [Fact]
+        public void LDAPReadStaticRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string ldapMountPath = null;
+            //instance.LDAPReadStaticRole(name, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test LDAPRotateRole
+        /// </summary>
+        [Fact]
+        public void LDAPRotateRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string ldapMountPath = null;
+            //instance.LDAPRotateRole(name, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test LDAPRotateRoot
+        /// </summary>
+        [Fact]
+        public void LDAPRotateRootTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string ldapMountPath = null;
+            //instance.LDAPRotateRoot(ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test LDAPWriteConfig
+        /// </summary>
+        [Fact]
+        public void LDAPWriteConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //LDAPWriteConfigRequest lDAPWriteConfigRequest = null;
+            //string ldapMountPath = null;
+            //instance.LDAPWriteConfig(lDAPWriteConfigRequest, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test LDAPWriteLibrary
+        /// </summary>
+        [Fact]
+        public void LDAPWriteLibraryTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //LDAPWriteLibraryRequest lDAPWriteLibraryRequest = null;
+            //string ldapMountPath = null;
+            //instance.LDAPWriteLibrary(name, lDAPWriteLibraryRequest, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test LDAPWriteRole
+        /// </summary>
+        [Fact]
+        public void LDAPWriteRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //LDAPWriteRoleRequest lDAPWriteRoleRequest = null;
+            //string ldapMountPath = null;
+            //instance.LDAPWriteRole(name, lDAPWriteRoleRequest, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test LDAPWriteStaticRole
+        /// </summary>
+        [Fact]
+        public void LDAPWriteStaticRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //LDAPWriteStaticRoleRequest lDAPWriteStaticRoleRequest = null;
+            //string ldapMountPath = null;
+            //instance.LDAPWriteStaticRole(name, lDAPWriteStaticRoleRequest, ldapMountPath);
+        }
+
+        /// <summary>
+        /// Test MongoDBAtlasDeleteRole
+        /// </summary>
+        [Fact]
+        public void MongoDBAtlasDeleteRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string mongodbatlasMountPath = null;
+            //instance.MongoDBAtlasDeleteRole(name, mongodbatlasMountPath);
+        }
+
+        /// <summary>
+        /// Test MongoDBAtlasListRoles
+        /// </summary>
+        [Fact]
+        public void MongoDBAtlasListRolesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string mongodbatlasMountPath = null;
+            //instance.MongoDBAtlasListRoles(list, mongodbatlasMountPath);
+        }
+
+        /// <summary>
+        /// Test MongoDBAtlasReadConfig
+        /// </summary>
+        [Fact]
+        public void MongoDBAtlasReadConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string mongodbatlasMountPath = null;
-            //instance.GetMongodbatlasConfig(mongodbatlasMountPath);
+            //instance.MongoDBAtlasReadConfig(mongodbatlasMountPath);
         }
 
         /// <summary>
-        /// Test GetMongodbatlasCredsName
+        /// Test MongoDBAtlasReadCredentials
         /// </summary>
         [Fact]
-        public void GetMongodbatlasCredsNameTest()
+        public void MongoDBAtlasReadCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string mongodbatlasMountPath = null;
-            //instance.GetMongodbatlasCredsName(name, mongodbatlasMountPath);
+            //instance.MongoDBAtlasReadCredentials(name, mongodbatlasMountPath);
         }
 
         /// <summary>
-        /// Test GetMongodbatlasRoles
+        /// Test MongoDBAtlasReadRole
         /// </summary>
         [Fact]
-        public void GetMongodbatlasRolesTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string mongodbatlasMountPath = null;
-            //instance.GetMongodbatlasRoles(list, mongodbatlasMountPath);
-        }
-
-        /// <summary>
-        /// Test GetMongodbatlasRolesName
-        /// </summary>
-        [Fact]
-        public void GetMongodbatlasRolesNameTest()
+        public void MongoDBAtlasReadRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string mongodbatlasMountPath = null;
-            //instance.GetMongodbatlasRolesName(name, mongodbatlasMountPath);
+            //instance.MongoDBAtlasReadRole(name, mongodbatlasMountPath);
         }
 
         /// <summary>
-        /// Test GetNomadConfigAccess
+        /// Test MongoDBAtlasWriteConfig
         /// </summary>
         [Fact]
-        public void GetNomadConfigAccessTest()
+        public void MongoDBAtlasWriteConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //MongoDBAtlasWriteConfigRequest mongoDBAtlasWriteConfigRequest = null;
+            //string mongodbatlasMountPath = null;
+            //instance.MongoDBAtlasWriteConfig(mongoDBAtlasWriteConfigRequest, mongodbatlasMountPath);
+        }
+
+        /// <summary>
+        /// Test MongoDBAtlasWriteCredentials
+        /// </summary>
+        [Fact]
+        public void MongoDBAtlasWriteCredentialsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string mongodbatlasMountPath = null;
+            //instance.MongoDBAtlasWriteCredentials(name, mongodbatlasMountPath);
+        }
+
+        /// <summary>
+        /// Test MongoDBAtlasWriteRole
+        /// </summary>
+        [Fact]
+        public void MongoDBAtlasWriteRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //MongoDBAtlasWriteRoleRequest mongoDBAtlasWriteRoleRequest = null;
+            //string mongodbatlasMountPath = null;
+            //instance.MongoDBAtlasWriteRole(name, mongoDBAtlasWriteRoleRequest, mongodbatlasMountPath);
+        }
+
+        /// <summary>
+        /// Test NomadDeleteAccessConfig
+        /// </summary>
+        [Fact]
+        public void NomadDeleteAccessConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string nomadMountPath = null;
-            //instance.GetNomadConfigAccess(nomadMountPath);
+            //instance.NomadDeleteAccessConfig(nomadMountPath);
         }
 
         /// <summary>
-        /// Test GetNomadConfigLease
+        /// Test NomadDeleteLeaseConfig
         /// </summary>
         [Fact]
-        public void GetNomadConfigLeaseTest()
+        public void NomadDeleteLeaseConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string nomadMountPath = null;
-            //instance.GetNomadConfigLease(nomadMountPath);
+            //instance.NomadDeleteLeaseConfig(nomadMountPath);
         }
 
         /// <summary>
-        /// Test GetNomadCredsName
+        /// Test NomadDeleteRole
         /// </summary>
         [Fact]
-        public void GetNomadCredsNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string nomadMountPath = null;
-            //instance.GetNomadCredsName(name, nomadMountPath);
-        }
-
-        /// <summary>
-        /// Test GetNomadRole
-        /// </summary>
-        [Fact]
-        public void GetNomadRoleTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string nomadMountPath = null;
-            //instance.GetNomadRole(list, nomadMountPath);
-        }
-
-        /// <summary>
-        /// Test GetNomadRoleName
-        /// </summary>
-        [Fact]
-        public void GetNomadRoleNameTest()
+        public void NomadDeleteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string nomadMountPath = null;
-            //instance.GetNomadRoleName(name, nomadMountPath);
+            //instance.NomadDeleteRole(name, nomadMountPath);
         }
 
         /// <summary>
-        /// Test GetOpenldapConfig
+        /// Test NomadListRoles
         /// </summary>
         [Fact]
-        public void GetOpenldapConfigTest()
+        public void NomadListRolesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string nomadMountPath = null;
+            //instance.NomadListRoles(list, nomadMountPath);
+        }
+
+        /// <summary>
+        /// Test NomadReadAccessConfig
+        /// </summary>
+        [Fact]
+        public void NomadReadAccessConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string nomadMountPath = null;
+            //instance.NomadReadAccessConfig(nomadMountPath);
+        }
+
+        /// <summary>
+        /// Test NomadReadCredentials
+        /// </summary>
+        [Fact]
+        public void NomadReadCredentialsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string nomadMountPath = null;
+            //instance.NomadReadCredentials(name, nomadMountPath);
+        }
+
+        /// <summary>
+        /// Test NomadReadLeaseConfig
+        /// </summary>
+        [Fact]
+        public void NomadReadLeaseConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string nomadMountPath = null;
+            //instance.NomadReadLeaseConfig(nomadMountPath);
+        }
+
+        /// <summary>
+        /// Test NomadReadRole
+        /// </summary>
+        [Fact]
+        public void NomadReadRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string nomadMountPath = null;
+            //instance.NomadReadRole(name, nomadMountPath);
+        }
+
+        /// <summary>
+        /// Test NomadWriteAccessConfig
+        /// </summary>
+        [Fact]
+        public void NomadWriteAccessConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //NomadWriteAccessConfigRequest nomadWriteAccessConfigRequest = null;
+            //string nomadMountPath = null;
+            //instance.NomadWriteAccessConfig(nomadWriteAccessConfigRequest, nomadMountPath);
+        }
+
+        /// <summary>
+        /// Test NomadWriteLeaseConfig
+        /// </summary>
+        [Fact]
+        public void NomadWriteLeaseConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //NomadWriteLeaseConfigRequest nomadWriteLeaseConfigRequest = null;
+            //string nomadMountPath = null;
+            //instance.NomadWriteLeaseConfig(nomadWriteLeaseConfigRequest, nomadMountPath);
+        }
+
+        /// <summary>
+        /// Test NomadWriteRole
+        /// </summary>
+        [Fact]
+        public void NomadWriteRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //NomadWriteRoleRequest nomadWriteRoleRequest = null;
+            //string nomadMountPath = null;
+            //instance.NomadWriteRole(name, nomadWriteRoleRequest, nomadMountPath);
+        }
+
+        /// <summary>
+        /// Test OpenLDAPCheckInLibrary
+        /// </summary>
+        [Fact]
+        public void OpenLDAPCheckInLibraryTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //OpenLDAPCheckInLibraryRequest openLDAPCheckInLibraryRequest = null;
+            //string openldapMountPath = null;
+            //instance.OpenLDAPCheckInLibrary(name, openLDAPCheckInLibraryRequest, openldapMountPath);
+        }
+
+        /// <summary>
+        /// Test OpenLDAPCheckInManageLibrary
+        /// </summary>
+        [Fact]
+        public void OpenLDAPCheckInManageLibraryTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //OpenLDAPCheckInManageLibraryRequest openLDAPCheckInManageLibraryRequest = null;
+            //string openldapMountPath = null;
+            //instance.OpenLDAPCheckInManageLibrary(name, openLDAPCheckInManageLibraryRequest, openldapMountPath);
+        }
+
+        /// <summary>
+        /// Test OpenLDAPCheckOutLibrary
+        /// </summary>
+        [Fact]
+        public void OpenLDAPCheckOutLibraryTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //OpenLDAPCheckOutLibraryRequest openLDAPCheckOutLibraryRequest = null;
+            //string openldapMountPath = null;
+            //instance.OpenLDAPCheckOutLibrary(name, openLDAPCheckOutLibraryRequest, openldapMountPath);
+        }
+
+        /// <summary>
+        /// Test OpenLDAPDeleteConfig
+        /// </summary>
+        [Fact]
+        public void OpenLDAPDeleteConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string openldapMountPath = null;
-            //instance.GetOpenldapConfig(openldapMountPath);
+            //instance.OpenLDAPDeleteConfig(openldapMountPath);
         }
 
         /// <summary>
-        /// Test GetOpenldapCredsName
+        /// Test OpenLDAPDeleteLibrary
         /// </summary>
         [Fact]
-        public void GetOpenldapCredsNameTest()
+        public void OpenLDAPDeleteLibraryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string openldapMountPath = null;
-            //instance.GetOpenldapCredsName(name, openldapMountPath);
+            //instance.OpenLDAPDeleteLibrary(name, openldapMountPath);
         }
 
         /// <summary>
-        /// Test GetOpenldapLibrary
+        /// Test OpenLDAPDeleteRole
         /// </summary>
         [Fact]
-        public void GetOpenldapLibraryTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string openldapMountPath = null;
-            //instance.GetOpenldapLibrary(list, openldapMountPath);
-        }
-
-        /// <summary>
-        /// Test GetOpenldapLibraryName
-        /// </summary>
-        [Fact]
-        public void GetOpenldapLibraryNameTest()
+        public void OpenLDAPDeleteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string openldapMountPath = null;
-            //instance.GetOpenldapLibraryName(name, openldapMountPath);
+            //instance.OpenLDAPDeleteRole(name, openldapMountPath);
         }
 
         /// <summary>
-        /// Test GetOpenldapLibraryNameStatus
+        /// Test OpenLDAPDeleteStaticRole
         /// </summary>
         [Fact]
-        public void GetOpenldapLibraryNameStatusTest()
+        public void OpenLDAPDeleteStaticRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string openldapMountPath = null;
-            //instance.GetOpenldapLibraryNameStatus(name, openldapMountPath);
+            //instance.OpenLDAPDeleteStaticRole(name, openldapMountPath);
         }
 
         /// <summary>
-        /// Test GetOpenldapRole
+        /// Test OpenLDAPListLibraries
         /// </summary>
         [Fact]
-        public void GetOpenldapRoleTest()
+        public void OpenLDAPListLibrariesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
             //string openldapMountPath = null;
-            //instance.GetOpenldapRole(list, openldapMountPath);
+            //instance.OpenLDAPListLibraries(list, openldapMountPath);
         }
 
         /// <summary>
-        /// Test GetOpenldapRoleName
+        /// Test OpenLDAPListRoles
         /// </summary>
         [Fact]
-        public void GetOpenldapRoleNameTest()
+        public void OpenLDAPListRolesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string openldapMountPath = null;
+            //instance.OpenLDAPListRoles(list, openldapMountPath);
+        }
+
+        /// <summary>
+        /// Test OpenLDAPListStaticRoles
+        /// </summary>
+        [Fact]
+        public void OpenLDAPListStaticRolesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string openldapMountPath = null;
+            //instance.OpenLDAPListStaticRoles(list, openldapMountPath);
+        }
+
+        /// <summary>
+        /// Test OpenLDAPReadConfig
+        /// </summary>
+        [Fact]
+        public void OpenLDAPReadConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string openldapMountPath = null;
+            //instance.OpenLDAPReadConfig(openldapMountPath);
+        }
+
+        /// <summary>
+        /// Test OpenLDAPReadCredentials
+        /// </summary>
+        [Fact]
+        public void OpenLDAPReadCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string openldapMountPath = null;
-            //instance.GetOpenldapRoleName(name, openldapMountPath);
+            //instance.OpenLDAPReadCredentials(name, openldapMountPath);
         }
 
         /// <summary>
-        /// Test GetOpenldapStaticCredName
+        /// Test OpenLDAPReadLibrary
         /// </summary>
         [Fact]
-        public void GetOpenldapStaticCredNameTest()
+        public void OpenLDAPReadLibraryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string openldapMountPath = null;
-            //instance.GetOpenldapStaticCredName(name, openldapMountPath);
+            //instance.OpenLDAPReadLibrary(name, openldapMountPath);
         }
 
         /// <summary>
-        /// Test GetOpenldapStaticRole
+        /// Test OpenLDAPReadLibraryStatus
         /// </summary>
         [Fact]
-        public void GetOpenldapStaticRoleTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string openldapMountPath = null;
-            //instance.GetOpenldapStaticRole(list, openldapMountPath);
-        }
-
-        /// <summary>
-        /// Test GetOpenldapStaticRoleName
-        /// </summary>
-        [Fact]
-        public void GetOpenldapStaticRoleNameTest()
+        public void OpenLDAPReadLibraryStatusTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string openldapMountPath = null;
-            //instance.GetOpenldapStaticRoleName(name, openldapMountPath);
+            //instance.OpenLDAPReadLibraryStatus(name, openldapMountPath);
         }
 
         /// <summary>
-        /// Test GetPkiCa
+        /// Test OpenLDAPReadRole
         /// </summary>
         [Fact]
-        public void GetPkiCaTest()
+        public void OpenLDAPReadRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string pkiMountPath = null;
-            //instance.GetPkiCa(pkiMountPath);
+            //string name = null;
+            //string openldapMountPath = null;
+            //instance.OpenLDAPReadRole(name, openldapMountPath);
         }
 
         /// <summary>
-        /// Test GetPkiCaChain
+        /// Test OpenLDAPReadStaticCredentials
         /// </summary>
         [Fact]
-        public void GetPkiCaChainTest()
+        public void OpenLDAPReadStaticCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string pkiMountPath = null;
-            //instance.GetPkiCaChain(pkiMountPath);
+            //string name = null;
+            //string openldapMountPath = null;
+            //instance.OpenLDAPReadStaticCredentials(name, openldapMountPath);
         }
 
         /// <summary>
-        /// Test GetPkiCaPem
+        /// Test OpenLDAPReadStaticRole
         /// </summary>
         [Fact]
-        public void GetPkiCaPemTest()
+        public void OpenLDAPReadStaticRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string pkiMountPath = null;
-            //instance.GetPkiCaPem(pkiMountPath);
+            //string name = null;
+            //string openldapMountPath = null;
+            //instance.OpenLDAPReadStaticRole(name, openldapMountPath);
         }
 
         /// <summary>
-        /// Test GetPkiCertCaChain
+        /// Test OpenLDAPRotateRole
         /// </summary>
         [Fact]
-        public void GetPkiCertCaChainTest()
+        public void OpenLDAPRotateRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string pkiMountPath = null;
-            //instance.GetPkiCertCaChain(pkiMountPath);
+            //string name = null;
+            //string openldapMountPath = null;
+            //instance.OpenLDAPRotateRole(name, openldapMountPath);
         }
 
         /// <summary>
-        /// Test GetPkiCertSerial
+        /// Test OpenLDAPRotateRoot
         /// </summary>
         [Fact]
-        public void GetPkiCertSerialTest()
+        public void OpenLDAPRotateRootTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string serial = null;
-            //string pkiMountPath = null;
-            //instance.GetPkiCertSerial(serial, pkiMountPath);
+            //string openldapMountPath = null;
+            //instance.OpenLDAPRotateRoot(openldapMountPath);
         }
 
         /// <summary>
-        /// Test GetPkiCertSerialRaw
+        /// Test OpenLDAPWriteConfig
         /// </summary>
         [Fact]
-        public void GetPkiCertSerialRawTest()
+        public void OpenLDAPWriteConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string serial = null;
-            //string pkiMountPath = null;
-            //instance.GetPkiCertSerialRaw(serial, pkiMountPath);
+            //OpenLDAPWriteConfigRequest openLDAPWriteConfigRequest = null;
+            //string openldapMountPath = null;
+            //instance.OpenLDAPWriteConfig(openLDAPWriteConfigRequest, openldapMountPath);
         }
 
         /// <summary>
-        /// Test GetPkiCertSerialRawPem
+        /// Test OpenLDAPWriteLibrary
         /// </summary>
         [Fact]
-        public void GetPkiCertSerialRawPemTest()
+        public void OpenLDAPWriteLibraryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string serial = null;
-            //string pkiMountPath = null;
-            //instance.GetPkiCertSerialRawPem(serial, pkiMountPath);
+            //string name = null;
+            //OpenLDAPWriteLibraryRequest openLDAPWriteLibraryRequest = null;
+            //string openldapMountPath = null;
+            //instance.OpenLDAPWriteLibrary(name, openLDAPWriteLibraryRequest, openldapMountPath);
         }
 
         /// <summary>
-        /// Test GetPkiCerts
+        /// Test OpenLDAPWriteRole
         /// </summary>
         [Fact]
-        public void GetPkiCertsTest()
+        public void OpenLDAPWriteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string pkiMountPath = null;
-            //instance.GetPkiCerts(list, pkiMountPath);
+            //string name = null;
+            //OpenLDAPWriteRoleRequest openLDAPWriteRoleRequest = null;
+            //string openldapMountPath = null;
+            //instance.OpenLDAPWriteRole(name, openLDAPWriteRoleRequest, openldapMountPath);
         }
 
         /// <summary>
-        /// Test GetPkiCertsRevoked
+        /// Test OpenLDAPWriteStaticRole
         /// </summary>
         [Fact]
-        public void GetPkiCertsRevokedTest()
+        public void OpenLDAPWriteStaticRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string pkiMountPath = null;
-            //instance.GetPkiCertsRevoked(list, pkiMountPath);
+            //string name = null;
+            //OpenLDAPWriteStaticRoleRequest openLDAPWriteStaticRoleRequest = null;
+            //string openldapMountPath = null;
+            //instance.OpenLDAPWriteStaticRole(name, openLDAPWriteStaticRoleRequest, openldapMountPath);
         }
 
         /// <summary>
-        /// Test GetPkiConfigAutoTidy
+        /// Test PKIBundleWrite
         /// </summary>
         [Fact]
-        public void GetPkiConfigAutoTidyTest()
+        public void PKIBundleWriteTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //PKIBundleWriteRequest pKIBundleWriteRequest = null;
             //string pkiMountPath = null;
-            //instance.GetPkiConfigAutoTidy(pkiMountPath);
+            //instance.PKIBundleWrite(pKIBundleWriteRequest, pkiMountPath);
         }
 
         /// <summary>
-        /// Test GetPkiConfigCluster
+        /// Test PKIDeleteKey
         /// </summary>
         [Fact]
-        public void GetPkiConfigClusterTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string pkiMountPath = null;
-            //instance.GetPkiConfigCluster(pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test GetPkiConfigCrl
-        /// </summary>
-        [Fact]
-        public void GetPkiConfigCrlTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string pkiMountPath = null;
-            //instance.GetPkiConfigCrl(pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test GetPkiConfigIssuers
-        /// </summary>
-        [Fact]
-        public void GetPkiConfigIssuersTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string pkiMountPath = null;
-            //instance.GetPkiConfigIssuers(pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test GetPkiConfigKeys
-        /// </summary>
-        [Fact]
-        public void GetPkiConfigKeysTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string pkiMountPath = null;
-            //instance.GetPkiConfigKeys(pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test GetPkiConfigUrls
-        /// </summary>
-        [Fact]
-        public void GetPkiConfigUrlsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string pkiMountPath = null;
-            //instance.GetPkiConfigUrls(pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test GetPkiCrl
-        /// </summary>
-        [Fact]
-        public void GetPkiCrlTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string pkiMountPath = null;
-            //instance.GetPkiCrl(pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test GetPkiCrlRotate
-        /// </summary>
-        [Fact]
-        public void GetPkiCrlRotateTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string pkiMountPath = null;
-            //instance.GetPkiCrlRotate(pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test GetPkiCrlRotateDelta
-        /// </summary>
-        [Fact]
-        public void GetPkiCrlRotateDeltaTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string pkiMountPath = null;
-            //instance.GetPkiCrlRotateDelta(pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test GetPkiDelta
-        /// </summary>
-        [Fact]
-        public void GetPkiDeltaTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string pkiMountPath = null;
-            //instance.GetPkiDelta(pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test GetPkiDeltaCrl
-        /// </summary>
-        [Fact]
-        public void GetPkiDeltaCrlTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string pkiMountPath = null;
-            //instance.GetPkiDeltaCrl(pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test GetPkiDeltaPem
-        /// </summary>
-        [Fact]
-        public void GetPkiDeltaPemTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string pkiMountPath = null;
-            //instance.GetPkiDeltaPem(pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test GetPkiDer
-        /// </summary>
-        [Fact]
-        public void GetPkiDerTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string pkiMountPath = null;
-            //instance.GetPkiDer(pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test GetPkiIssuerRefCrlPemDerDeltaPem
-        /// </summary>
-        [Fact]
-        public void GetPkiIssuerRefCrlPemDerDeltaPemTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //string pkiMountPath = null;
-            //instance.GetPkiIssuerRefCrlPemDerDeltaPem(issuerRef, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test GetPkiIssuerRefDerPem
-        /// </summary>
-        [Fact]
-        public void GetPkiIssuerRefDerPemTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //string pkiMountPath = null;
-            //instance.GetPkiIssuerRefDerPem(issuerRef, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test GetPkiIssuers
-        /// </summary>
-        [Fact]
-        public void GetPkiIssuersTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string pkiMountPath = null;
-            //instance.GetPkiIssuers(list, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test GetPkiJson
-        /// </summary>
-        [Fact]
-        public void GetPkiJsonTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string pkiMountPath = null;
-            //instance.GetPkiJson(pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test GetPkiKeyKeyRef
-        /// </summary>
-        [Fact]
-        public void GetPkiKeyKeyRefTest()
+        public void PKIDeleteKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string keyRef = null;
             //string pkiMountPath = null;
-            //instance.GetPkiKeyKeyRef(keyRef, pkiMountPath);
+            //instance.PKIDeleteKey(keyRef, pkiMountPath);
         }
 
         /// <summary>
-        /// Test GetPkiKeys
+        /// Test PKIDeleteRole
         /// </summary>
         [Fact]
-        public void GetPkiKeysTest()
+        public void PKIDeleteRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string pkiMountPath = null;
+            //instance.PKIDeleteRole(name, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIDeleteRoot
+        /// </summary>
+        [Fact]
+        public void PKIDeleteRootTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pkiMountPath = null;
+            //instance.PKIDeleteRoot(pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIGenerateRoot
+        /// </summary>
+        [Fact]
+        public void PKIGenerateRootTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string exported = null;
+            //PKIGenerateRootRequest pKIGenerateRootRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIGenerateRoot(exported, pKIGenerateRootRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIImportKeys
+        /// </summary>
+        [Fact]
+        public void PKIImportKeysTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PKIImportKeysRequest pKIImportKeysRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIImportKeys(pKIImportKeysRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIIssuerIssueRole
+        /// </summary>
+        [Fact]
+        public void PKIIssuerIssueRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string issuerRef = null;
+            //string role = null;
+            //PKIIssuerIssueRoleRequest pKIIssuerIssueRoleRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIIssuerIssueRole(issuerRef, role, pKIIssuerIssueRoleRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIIssuerResignCRLs
+        /// </summary>
+        [Fact]
+        public void PKIIssuerResignCRLsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string issuerRef = null;
+            //PKIIssuerResignCRLsRequest pKIIssuerResignCRLsRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIIssuerResignCRLs(issuerRef, pKIIssuerResignCRLsRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIIssuerRevoke
+        /// </summary>
+        [Fact]
+        public void PKIIssuerRevokeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string issuerRef = null;
+            //string pkiMountPath = null;
+            //instance.PKIIssuerRevoke(issuerRef, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIIssuerSignIntermediate
+        /// </summary>
+        [Fact]
+        public void PKIIssuerSignIntermediateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string issuerRef = null;
+            //PKIIssuerSignIntermediateRequest pKIIssuerSignIntermediateRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIIssuerSignIntermediate(issuerRef, pKIIssuerSignIntermediateRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIIssuerSignRevocationList
+        /// </summary>
+        [Fact]
+        public void PKIIssuerSignRevocationListTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string issuerRef = null;
+            //PKIIssuerSignRevocationListRequest pKIIssuerSignRevocationListRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIIssuerSignRevocationList(issuerRef, pKIIssuerSignRevocationListRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIIssuerSignRole
+        /// </summary>
+        [Fact]
+        public void PKIIssuerSignRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string issuerRef = null;
+            //string role = null;
+            //PKIIssuerSignRoleRequest pKIIssuerSignRoleRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIIssuerSignRole(issuerRef, role, pKIIssuerSignRoleRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIIssuerSignSelfIssued
+        /// </summary>
+        [Fact]
+        public void PKIIssuerSignSelfIssuedTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string issuerRef = null;
+            //PKIIssuerSignSelfIssuedRequest pKIIssuerSignSelfIssuedRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIIssuerSignSelfIssued(issuerRef, pKIIssuerSignSelfIssuedRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIIssuerSignVerbatim
+        /// </summary>
+        [Fact]
+        public void PKIIssuerSignVerbatimTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string issuerRef = null;
+            //PKIIssuerSignVerbatimRequest pKIIssuerSignVerbatimRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIIssuerSignVerbatim(issuerRef, pKIIssuerSignVerbatimRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIIssuerSignVerbatimRole
+        /// </summary>
+        [Fact]
+        public void PKIIssuerSignVerbatimRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string issuerRef = null;
+            //string role = null;
+            //PKIIssuerSignVerbatimRoleRequest pKIIssuerSignVerbatimRoleRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIIssuerSignVerbatimRole(issuerRef, role, pKIIssuerSignVerbatimRoleRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIIssuersGenerateIntermediate
+        /// </summary>
+        [Fact]
+        public void PKIIssuersGenerateIntermediateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string exported = null;
+            //PKIIssuersGenerateIntermediateRequest pKIIssuersGenerateIntermediateRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIIssuersGenerateIntermediate(exported, pKIIssuersGenerateIntermediateRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIIssuersGenerateRoot
+        /// </summary>
+        [Fact]
+        public void PKIIssuersGenerateRootTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string exported = null;
+            //PKIIssuersGenerateRootRequest pKIIssuersGenerateRootRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIIssuersGenerateRoot(exported, pKIIssuersGenerateRootRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIIssuersList
+        /// </summary>
+        [Fact]
+        public void PKIIssuersListTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
             //string pkiMountPath = null;
-            //instance.GetPkiKeys(list, pkiMountPath);
+            //instance.PKIIssuersList(list, pkiMountPath);
         }
 
         /// <summary>
-        /// Test GetPkiOcspReq
+        /// Test PKIListCerts
         /// </summary>
         [Fact]
-        public void GetPkiOcspReqTest()
+        public void PKIListCertsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string pkiMountPath = null;
+            //instance.PKIListCerts(list, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIListCertsRevoked
+        /// </summary>
+        [Fact]
+        public void PKIListCertsRevokedTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string pkiMountPath = null;
+            //instance.PKIListCertsRevoked(list, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIListKeys
+        /// </summary>
+        [Fact]
+        public void PKIListKeysTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string pkiMountPath = null;
+            //instance.PKIListKeys(list, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIListRoles
+        /// </summary>
+        [Fact]
+        public void PKIListRolesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string pkiMountPath = null;
+            //instance.PKIListRoles(list, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIReadAutoTidyConfig
+        /// </summary>
+        [Fact]
+        public void PKIReadAutoTidyConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pkiMountPath = null;
+            //instance.PKIReadAutoTidyConfig(pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIReadCA
+        /// </summary>
+        [Fact]
+        public void PKIReadCATest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pkiMountPath = null;
+            //instance.PKIReadCA(pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIReadCAChain
+        /// </summary>
+        [Fact]
+        public void PKIReadCAChainTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pkiMountPath = null;
+            //instance.PKIReadCAChain(pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIReadCAPem
+        /// </summary>
+        [Fact]
+        public void PKIReadCAPemTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pkiMountPath = null;
+            //instance.PKIReadCAPem(pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIReadCRL
+        /// </summary>
+        [Fact]
+        public void PKIReadCRLTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pkiMountPath = null;
+            //instance.PKIReadCRL(pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIReadCRLConfig
+        /// </summary>
+        [Fact]
+        public void PKIReadCRLConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pkiMountPath = null;
+            //instance.PKIReadCRLConfig(pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIReadCRLRotate
+        /// </summary>
+        [Fact]
+        public void PKIReadCRLRotateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pkiMountPath = null;
+            //instance.PKIReadCRLRotate(pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIReadCRLRotateDelta
+        /// </summary>
+        [Fact]
+        public void PKIReadCRLRotateDeltaTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pkiMountPath = null;
+            //instance.PKIReadCRLRotateDelta(pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIReadCert
+        /// </summary>
+        [Fact]
+        public void PKIReadCertTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string serial = null;
+            //string pkiMountPath = null;
+            //instance.PKIReadCert(serial, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIReadCertCAChain
+        /// </summary>
+        [Fact]
+        public void PKIReadCertCAChainTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pkiMountPath = null;
+            //instance.PKIReadCertCAChain(pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIReadCertRaw
+        /// </summary>
+        [Fact]
+        public void PKIReadCertRawTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string serial = null;
+            //string pkiMountPath = null;
+            //instance.PKIReadCertRaw(serial, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIReadCertRawPem
+        /// </summary>
+        [Fact]
+        public void PKIReadCertRawPemTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string serial = null;
+            //string pkiMountPath = null;
+            //instance.PKIReadCertRawPem(serial, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIReadClusterConfig
+        /// </summary>
+        [Fact]
+        public void PKIReadClusterConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pkiMountPath = null;
+            //instance.PKIReadClusterConfig(pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIReadDeltaCRL
+        /// </summary>
+        [Fact]
+        public void PKIReadDeltaCRLTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pkiMountPath = null;
+            //instance.PKIReadDeltaCRL(pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIReadIssuersConfig
+        /// </summary>
+        [Fact]
+        public void PKIReadIssuersConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pkiMountPath = null;
+            //instance.PKIReadIssuersConfig(pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIReadKey
+        /// </summary>
+        [Fact]
+        public void PKIReadKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string keyRef = null;
+            //string pkiMountPath = null;
+            //instance.PKIReadKey(keyRef, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIReadKeysConfig
+        /// </summary>
+        [Fact]
+        public void PKIReadKeysConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pkiMountPath = null;
+            //instance.PKIReadKeysConfig(pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIReadOCSPReq
+        /// </summary>
+        [Fact]
+        public void PKIReadOCSPReqTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string req = null;
             //string pkiMountPath = null;
-            //instance.GetPkiOcspReq(req, pkiMountPath);
+            //instance.PKIReadOCSPReq(req, pkiMountPath);
         }
 
         /// <summary>
-        /// Test GetPkiPem
+        /// Test PKIReadRole
         /// </summary>
         [Fact]
-        public void GetPkiPemTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string pkiMountPath = null;
-            //instance.GetPkiPem(pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test GetPkiRoles
-        /// </summary>
-        [Fact]
-        public void GetPkiRolesTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string pkiMountPath = null;
-            //instance.GetPkiRoles(list, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test GetPkiRolesName
-        /// </summary>
-        [Fact]
-        public void GetPkiRolesNameTest()
+        public void PKIReadRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string pkiMountPath = null;
-            //instance.GetPkiRolesName(name, pkiMountPath);
+            //instance.PKIReadRole(name, pkiMountPath);
         }
 
         /// <summary>
-        /// Test GetPkiTidyStatus
+        /// Test PKIReadURLConfig
         /// </summary>
         [Fact]
-        public void GetPkiTidyStatusTest()
+        public void PKIReadURLConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string pkiMountPath = null;
-            //instance.GetPkiTidyStatus(pkiMountPath);
+            //instance.PKIReadURLConfig(pkiMountPath);
         }
 
         /// <summary>
-        /// Test GetRabbitmqConfigLease
+        /// Test PKIReplaceRoot
         /// </summary>
         [Fact]
-        public void GetRabbitmqConfigLeaseTest()
+        public void PKIReplaceRootTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string rabbitmqMountPath = null;
-            //instance.GetRabbitmqConfigLease(rabbitmqMountPath);
+            //PKIReplaceRootRequest pKIReplaceRootRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIReplaceRoot(pKIReplaceRootRequest, pkiMountPath);
         }
 
         /// <summary>
-        /// Test GetRabbitmqCredsName
+        /// Test PKIRevoke
         /// </summary>
         [Fact]
-        public void GetRabbitmqCredsNameTest()
+        public void PKIRevokeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PKIRevokeRequest pKIRevokeRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIRevoke(pKIRevokeRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIRevokeWithKey
+        /// </summary>
+        [Fact]
+        public void PKIRevokeWithKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PKIRevokeWithKeyRequest pKIRevokeWithKeyRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIRevokeWithKey(pKIRevokeWithKeyRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIRootSignIntermediate
+        /// </summary>
+        [Fact]
+        public void PKIRootSignIntermediateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PKIRootSignIntermediateRequest pKIRootSignIntermediateRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIRootSignIntermediate(pKIRootSignIntermediateRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIRootSignSelfIssued
+        /// </summary>
+        [Fact]
+        public void PKIRootSignSelfIssuedTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PKIRootSignSelfIssuedRequest pKIRootSignSelfIssuedRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIRootSignSelfIssued(pKIRootSignSelfIssuedRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIRotateRoot
+        /// </summary>
+        [Fact]
+        public void PKIRotateRootTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string exported = null;
+            //PKIRotateRootRequest pKIRotateRootRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIRotateRoot(exported, pKIRotateRootRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKISignRole
+        /// </summary>
+        [Fact]
+        public void PKISignRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string role = null;
+            //PKISignRoleRequest pKISignRoleRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKISignRole(role, pKISignRoleRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKISignVerbatim
+        /// </summary>
+        [Fact]
+        public void PKISignVerbatimTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PKISignVerbatimRequest pKISignVerbatimRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKISignVerbatim(pKISignVerbatimRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKISignVerbatimRole
+        /// </summary>
+        [Fact]
+        public void PKISignVerbatimRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string role = null;
+            //PKISignVerbatimRoleRequest pKISignVerbatimRoleRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKISignVerbatimRole(role, pKISignVerbatimRoleRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKITidy
+        /// </summary>
+        [Fact]
+        public void PKITidyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PKITidyRequest pKITidyRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKITidy(pKITidyRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKITidyCancel
+        /// </summary>
+        [Fact]
+        public void PKITidyCancelTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pkiMountPath = null;
+            //instance.PKITidyCancel(pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKITidyStatus
+        /// </summary>
+        [Fact]
+        public void PKITidyStatusTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pkiMountPath = null;
+            //instance.PKITidyStatus(pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIWriteAutoTidyConfig
+        /// </summary>
+        [Fact]
+        public void PKIWriteAutoTidyConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PKIWriteAutoTidyConfigRequest pKIWriteAutoTidyConfigRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIWriteAutoTidyConfig(pKIWriteAutoTidyConfigRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIWriteCAConfig
+        /// </summary>
+        [Fact]
+        public void PKIWriteCAConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PKIWriteCAConfigRequest pKIWriteCAConfigRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIWriteCAConfig(pKIWriteCAConfigRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIWriteCRLConfig
+        /// </summary>
+        [Fact]
+        public void PKIWriteCRLConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PKIWriteCRLConfigRequest pKIWriteCRLConfigRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIWriteCRLConfig(pKIWriteCRLConfigRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIWriteCerts
+        /// </summary>
+        [Fact]
+        public void PKIWriteCertsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PKIWriteCertsRequest pKIWriteCertsRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIWriteCerts(pKIWriteCertsRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIWriteClusterConfig
+        /// </summary>
+        [Fact]
+        public void PKIWriteClusterConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PKIWriteClusterConfigRequest pKIWriteClusterConfigRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIWriteClusterConfig(pKIWriteClusterConfigRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIWriteIntermediateCrossSign
+        /// </summary>
+        [Fact]
+        public void PKIWriteIntermediateCrossSignTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PKIWriteIntermediateCrossSignRequest pKIWriteIntermediateCrossSignRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIWriteIntermediateCrossSign(pKIWriteIntermediateCrossSignRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIWriteIntermediateGenerate
+        /// </summary>
+        [Fact]
+        public void PKIWriteIntermediateGenerateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string exported = null;
+            //PKIWriteIntermediateGenerateRequest pKIWriteIntermediateGenerateRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIWriteIntermediateGenerate(exported, pKIWriteIntermediateGenerateRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIWriteIntermediateSetSigned
+        /// </summary>
+        [Fact]
+        public void PKIWriteIntermediateSetSignedTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PKIWriteIntermediateSetSignedRequest pKIWriteIntermediateSetSignedRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIWriteIntermediateSetSigned(pKIWriteIntermediateSetSignedRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIWriteInternalExported
+        /// </summary>
+        [Fact]
+        public void PKIWriteInternalExportedTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PKIWriteInternalExportedRequest pKIWriteInternalExportedRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIWriteInternalExported(pKIWriteInternalExportedRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIWriteIssueRole
+        /// </summary>
+        [Fact]
+        public void PKIWriteIssueRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string role = null;
+            //PKIWriteIssueRoleRequest pKIWriteIssueRoleRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIWriteIssueRole(role, pKIWriteIssueRoleRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIWriteIssuersConfig
+        /// </summary>
+        [Fact]
+        public void PKIWriteIssuersConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PKIWriteIssuersConfigRequest pKIWriteIssuersConfigRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIWriteIssuersConfig(pKIWriteIssuersConfigRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIWriteKMS
+        /// </summary>
+        [Fact]
+        public void PKIWriteKMSTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PKIWriteKMSRequest pKIWriteKMSRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIWriteKMS(pKIWriteKMSRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIWriteKey
+        /// </summary>
+        [Fact]
+        public void PKIWriteKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string keyRef = null;
+            //PKIWriteKeyRequest pKIWriteKeyRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIWriteKey(keyRef, pKIWriteKeyRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIWriteKeysConfig
+        /// </summary>
+        [Fact]
+        public void PKIWriteKeysConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PKIWriteKeysConfigRequest pKIWriteKeysConfigRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIWriteKeysConfig(pKIWriteKeysConfigRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIWriteOCSP
+        /// </summary>
+        [Fact]
+        public void PKIWriteOCSPTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pkiMountPath = null;
+            //instance.PKIWriteOCSP(pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIWriteRole
+        /// </summary>
+        [Fact]
+        public void PKIWriteRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //PKIWriteRoleRequest pKIWriteRoleRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIWriteRole(name, pKIWriteRoleRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIWriteURLConfig
+        /// </summary>
+        [Fact]
+        public void PKIWriteURLConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PKIWriteURLConfigRequest pKIWriteURLConfigRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIWriteURLConfig(pKIWriteURLConfigRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PkiDeleteIssuerRefDerPem
+        /// </summary>
+        [Fact]
+        public void PkiDeleteIssuerRefDerPemTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string issuerRef = null;
+            //string pkiMountPath = null;
+            //instance.PkiDeleteIssuerRefDerPem(issuerRef, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PkiDeleteJson
+        /// </summary>
+        [Fact]
+        public void PkiDeleteJsonTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pkiMountPath = null;
+            //instance.PkiDeleteJson(pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PkiReadDelta
+        /// </summary>
+        [Fact]
+        public void PkiReadDeltaTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pkiMountPath = null;
+            //instance.PkiReadDelta(pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PkiReadDeltaPem
+        /// </summary>
+        [Fact]
+        public void PkiReadDeltaPemTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pkiMountPath = null;
+            //instance.PkiReadDeltaPem(pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PkiReadDer
+        /// </summary>
+        [Fact]
+        public void PkiReadDerTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pkiMountPath = null;
+            //instance.PkiReadDer(pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PkiReadIssuerRefCrlPemDerDeltaPem
+        /// </summary>
+        [Fact]
+        public void PkiReadIssuerRefCrlPemDerDeltaPemTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string issuerRef = null;
+            //string pkiMountPath = null;
+            //instance.PkiReadIssuerRefCrlPemDerDeltaPem(issuerRef, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PkiReadIssuerRefDerPem
+        /// </summary>
+        [Fact]
+        public void PkiReadIssuerRefDerPemTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string issuerRef = null;
+            //string pkiMountPath = null;
+            //instance.PkiReadIssuerRefDerPem(issuerRef, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PkiReadJson
+        /// </summary>
+        [Fact]
+        public void PkiReadJsonTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pkiMountPath = null;
+            //instance.PkiReadJson(pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PkiReadPem
+        /// </summary>
+        [Fact]
+        public void PkiReadPemTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string pkiMountPath = null;
+            //instance.PkiReadPem(pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PkiWriteIssuerRefDerPem
+        /// </summary>
+        [Fact]
+        public void PkiWriteIssuerRefDerPemTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string issuerRef = null;
+            //PkiWriteIssuerRefDerPemRequest pkiWriteIssuerRefDerPemRequest = null;
+            //string pkiMountPath = null;
+            //instance.PkiWriteIssuerRefDerPem(issuerRef, pkiWriteIssuerRefDerPemRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PkiWriteJson
+        /// </summary>
+        [Fact]
+        public void PkiWriteJsonTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PkiWriteJsonRequest pkiWriteJsonRequest = null;
+            //string pkiMountPath = null;
+            //instance.PkiWriteJson(pkiWriteJsonRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test RabbitMQDeleteRole
+        /// </summary>
+        [Fact]
+        public void RabbitMQDeleteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string rabbitmqMountPath = null;
-            //instance.GetRabbitmqCredsName(name, rabbitmqMountPath);
+            //instance.RabbitMQDeleteRole(name, rabbitmqMountPath);
         }
 
         /// <summary>
-        /// Test GetRabbitmqRoles
+        /// Test RabbitMQListRoles
         /// </summary>
         [Fact]
-        public void GetRabbitmqRolesTest()
+        public void RabbitMQListRolesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
             //string rabbitmqMountPath = null;
-            //instance.GetRabbitmqRoles(list, rabbitmqMountPath);
+            //instance.RabbitMQListRoles(list, rabbitmqMountPath);
         }
 
         /// <summary>
-        /// Test GetRabbitmqRolesName
+        /// Test RabbitMQReadCredentials
         /// </summary>
         [Fact]
-        public void GetRabbitmqRolesNameTest()
+        public void RabbitMQReadCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string rabbitmqMountPath = null;
-            //instance.GetRabbitmqRolesName(name, rabbitmqMountPath);
+            //instance.RabbitMQReadCredentials(name, rabbitmqMountPath);
         }
 
         /// <summary>
-        /// Test GetSecretConfig
+        /// Test RabbitMQReadLeaseConfig
         /// </summary>
         [Fact]
-        public void GetSecretConfigTest()
+        public void RabbitMQReadLeaseConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string secretMountPath = null;
-            //instance.GetSecretConfig(secretMountPath);
+            //string rabbitmqMountPath = null;
+            //instance.RabbitMQReadLeaseConfig(rabbitmqMountPath);
         }
 
         /// <summary>
-        /// Test GetSecretDataPath
+        /// Test RabbitMQReadRole
         /// </summary>
         [Fact]
-        public void GetSecretDataPathTest()
+        public void RabbitMQReadRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //string secretMountPath = null;
-            //instance.GetSecretDataPath(path, secretMountPath);
+            //string name = null;
+            //string rabbitmqMountPath = null;
+            //instance.RabbitMQReadRole(name, rabbitmqMountPath);
         }
 
         /// <summary>
-        /// Test GetSecretMetadataPath
+        /// Test RabbitMQWriteConnectionConfig
         /// </summary>
         [Fact]
-        public void GetSecretMetadataPathTest()
+        public void RabbitMQWriteConnectionConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //string secretMountPath = null;
-            //string list = null;
-            //instance.GetSecretMetadataPath(path, secretMountPath, list);
+            //RabbitMQWriteConnectionConfigRequest rabbitMQWriteConnectionConfigRequest = null;
+            //string rabbitmqMountPath = null;
+            //instance.RabbitMQWriteConnectionConfig(rabbitMQWriteConnectionConfigRequest, rabbitmqMountPath);
         }
 
         /// <summary>
-        /// Test GetSecretPath
+        /// Test RabbitMQWriteLeaseConfig
         /// </summary>
         [Fact]
-        public void GetSecretPathTest()
+        public void RabbitMQWriteLeaseConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //string secretMountPath = null;
-            //string list = null;
-            //instance.GetSecretPath(path, secretMountPath, list);
+            //RabbitMQWriteLeaseConfigRequest rabbitMQWriteLeaseConfigRequest = null;
+            //string rabbitmqMountPath = null;
+            //instance.RabbitMQWriteLeaseConfig(rabbitMQWriteLeaseConfigRequest, rabbitmqMountPath);
         }
 
         /// <summary>
-        /// Test GetSecretSubkeysPath
+        /// Test RabbitMQWriteRole
         /// </summary>
         [Fact]
-        public void GetSecretSubkeysPathTest()
+        public void RabbitMQWriteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //string secretMountPath = null;
-            //instance.GetSecretSubkeysPath(path, secretMountPath);
+            //string name = null;
+            //RabbitMQWriteRoleRequest rabbitMQWriteRoleRequest = null;
+            //string rabbitmqMountPath = null;
+            //instance.RabbitMQWriteRole(name, rabbitMQWriteRoleRequest, rabbitmqMountPath);
         }
 
         /// <summary>
-        /// Test GetSshConfigCa
+        /// Test SSHDeleteCAConfig
         /// </summary>
         [Fact]
-        public void GetSshConfigCaTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string sshMountPath = null;
-            //instance.GetSshConfigCa(sshMountPath);
-        }
-
-        /// <summary>
-        /// Test GetSshConfigZeroaddress
-        /// </summary>
-        [Fact]
-        public void GetSshConfigZeroaddressTest()
+        public void SSHDeleteCAConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string sshMountPath = null;
-            //instance.GetSshConfigZeroaddress(sshMountPath);
+            //instance.SSHDeleteCAConfig(sshMountPath);
         }
 
         /// <summary>
-        /// Test GetSshPublicKey
+        /// Test SSHDeleteKeys
         /// </summary>
         [Fact]
-        public void GetSshPublicKeyTest()
+        public void SSHDeleteKeysTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string keyName = null;
             //string sshMountPath = null;
-            //instance.GetSshPublicKey(sshMountPath);
+            //instance.SSHDeleteKeys(keyName, sshMountPath);
         }
 
         /// <summary>
-        /// Test GetSshRoles
+        /// Test SSHDeleteRole
         /// </summary>
         [Fact]
-        public void GetSshRolesTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string sshMountPath = null;
-            //instance.GetSshRoles(list, sshMountPath);
-        }
-
-        /// <summary>
-        /// Test GetSshRolesRole
-        /// </summary>
-        [Fact]
-        public void GetSshRolesRoleTest()
+        public void SSHDeleteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string role = null;
             //string sshMountPath = null;
-            //instance.GetSshRolesRole(role, sshMountPath);
+            //instance.SSHDeleteRole(role, sshMountPath);
         }
 
         /// <summary>
-        /// Test GetTerraformConfig
+        /// Test SSHDeleteZeroAddressConfig
         /// </summary>
         [Fact]
-        public void GetTerraformConfigTest()
+        public void SSHDeleteZeroAddressConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string sshMountPath = null;
+            //instance.SSHDeleteZeroAddressConfig(sshMountPath);
+        }
+
+        /// <summary>
+        /// Test SSHListRoles
+        /// </summary>
+        [Fact]
+        public void SSHListRolesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string sshMountPath = null;
+            //instance.SSHListRoles(list, sshMountPath);
+        }
+
+        /// <summary>
+        /// Test SSHLookup
+        /// </summary>
+        [Fact]
+        public void SSHLookupTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //SSHLookupRequest sSHLookupRequest = null;
+            //string sshMountPath = null;
+            //instance.SSHLookup(sSHLookupRequest, sshMountPath);
+        }
+
+        /// <summary>
+        /// Test SSHReadCAConfig
+        /// </summary>
+        [Fact]
+        public void SSHReadCAConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string sshMountPath = null;
+            //instance.SSHReadCAConfig(sshMountPath);
+        }
+
+        /// <summary>
+        /// Test SSHReadPublicKey
+        /// </summary>
+        [Fact]
+        public void SSHReadPublicKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string sshMountPath = null;
+            //instance.SSHReadPublicKey(sshMountPath);
+        }
+
+        /// <summary>
+        /// Test SSHReadRole
+        /// </summary>
+        [Fact]
+        public void SSHReadRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string role = null;
+            //string sshMountPath = null;
+            //instance.SSHReadRole(role, sshMountPath);
+        }
+
+        /// <summary>
+        /// Test SSHReadZeroAddressConfig
+        /// </summary>
+        [Fact]
+        public void SSHReadZeroAddressConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string sshMountPath = null;
+            //instance.SSHReadZeroAddressConfig(sshMountPath);
+        }
+
+        /// <summary>
+        /// Test SSHSign
+        /// </summary>
+        [Fact]
+        public void SSHSignTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string role = null;
+            //SSHSignRequest sSHSignRequest = null;
+            //string sshMountPath = null;
+            //instance.SSHSign(role, sSHSignRequest, sshMountPath);
+        }
+
+        /// <summary>
+        /// Test SSHVerify
+        /// </summary>
+        [Fact]
+        public void SSHVerifyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //SSHVerifyRequest sSHVerifyRequest = null;
+            //string sshMountPath = null;
+            //instance.SSHVerify(sSHVerifyRequest, sshMountPath);
+        }
+
+        /// <summary>
+        /// Test SSHWriteCAConfig
+        /// </summary>
+        [Fact]
+        public void SSHWriteCAConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //SSHWriteCAConfigRequest sSHWriteCAConfigRequest = null;
+            //string sshMountPath = null;
+            //instance.SSHWriteCAConfig(sSHWriteCAConfigRequest, sshMountPath);
+        }
+
+        /// <summary>
+        /// Test SSHWriteCredentials
+        /// </summary>
+        [Fact]
+        public void SSHWriteCredentialsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string role = null;
+            //SSHWriteCredentialsRequest sSHWriteCredentialsRequest = null;
+            //string sshMountPath = null;
+            //instance.SSHWriteCredentials(role, sSHWriteCredentialsRequest, sshMountPath);
+        }
+
+        /// <summary>
+        /// Test SSHWriteIssue
+        /// </summary>
+        [Fact]
+        public void SSHWriteIssueTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string role = null;
+            //SSHWriteIssueRequest sSHWriteIssueRequest = null;
+            //string sshMountPath = null;
+            //instance.SSHWriteIssue(role, sSHWriteIssueRequest, sshMountPath);
+        }
+
+        /// <summary>
+        /// Test SSHWriteKeys
+        /// </summary>
+        [Fact]
+        public void SSHWriteKeysTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string keyName = null;
+            //SSHWriteKeysRequest sSHWriteKeysRequest = null;
+            //string sshMountPath = null;
+            //instance.SSHWriteKeys(keyName, sSHWriteKeysRequest, sshMountPath);
+        }
+
+        /// <summary>
+        /// Test SSHWriteRole
+        /// </summary>
+        [Fact]
+        public void SSHWriteRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string role = null;
+            //SSHWriteRoleRequest sSHWriteRoleRequest = null;
+            //string sshMountPath = null;
+            //instance.SSHWriteRole(role, sSHWriteRoleRequest, sshMountPath);
+        }
+
+        /// <summary>
+        /// Test SSHWriteZeroAddressConfig
+        /// </summary>
+        [Fact]
+        public void SSHWriteZeroAddressConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //SSHWriteZeroAddressConfigRequest sSHWriteZeroAddressConfigRequest = null;
+            //string sshMountPath = null;
+            //instance.SSHWriteZeroAddressConfig(sSHWriteZeroAddressConfigRequest, sshMountPath);
+        }
+
+        /// <summary>
+        /// Test TOTPDeleteKey
+        /// </summary>
+        [Fact]
+        public void TOTPDeleteKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string totpMountPath = null;
+            //instance.TOTPDeleteKey(name, totpMountPath);
+        }
+
+        /// <summary>
+        /// Test TOTPListKeys
+        /// </summary>
+        [Fact]
+        public void TOTPListKeysTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string totpMountPath = null;
+            //instance.TOTPListKeys(list, totpMountPath);
+        }
+
+        /// <summary>
+        /// Test TOTPReadCode
+        /// </summary>
+        [Fact]
+        public void TOTPReadCodeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string totpMountPath = null;
+            //instance.TOTPReadCode(name, totpMountPath);
+        }
+
+        /// <summary>
+        /// Test TOTPReadKey
+        /// </summary>
+        [Fact]
+        public void TOTPReadKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string totpMountPath = null;
+            //instance.TOTPReadKey(name, totpMountPath);
+        }
+
+        /// <summary>
+        /// Test TOTPWriteCode
+        /// </summary>
+        [Fact]
+        public void TOTPWriteCodeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //TOTPWriteCodeRequest tOTPWriteCodeRequest = null;
+            //string totpMountPath = null;
+            //instance.TOTPWriteCode(name, tOTPWriteCodeRequest, totpMountPath);
+        }
+
+        /// <summary>
+        /// Test TOTPWriteKey
+        /// </summary>
+        [Fact]
+        public void TOTPWriteKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //TOTPWriteKeyRequest tOTPWriteKeyRequest = null;
+            //string totpMountPath = null;
+            //instance.TOTPWriteKey(name, tOTPWriteKeyRequest, totpMountPath);
+        }
+
+        /// <summary>
+        /// Test TerraformDeleteConfig
+        /// </summary>
+        [Fact]
+        public void TerraformDeleteConfigTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string terraformMountPath = null;
-            //instance.GetTerraformConfig(terraformMountPath);
+            //instance.TerraformDeleteConfig(terraformMountPath);
         }
 
         /// <summary>
-        /// Test GetTerraformCredsName
+        /// Test TerraformDeleteRole
         /// </summary>
         [Fact]
-        public void GetTerraformCredsNameTest()
+        public void TerraformDeleteRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string terraformMountPath = null;
-            //instance.GetTerraformCredsName(name, terraformMountPath);
+            //instance.TerraformDeleteRole(name, terraformMountPath);
         }
 
         /// <summary>
-        /// Test GetTerraformRole
+        /// Test TerraformListRoles
         /// </summary>
         [Fact]
-        public void GetTerraformRoleTest()
+        public void TerraformListRolesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string list = null;
             //string terraformMountPath = null;
-            //instance.GetTerraformRole(list, terraformMountPath);
+            //instance.TerraformListRoles(list, terraformMountPath);
         }
 
         /// <summary>
-        /// Test GetTerraformRoleName
+        /// Test TerraformReadConfig
         /// </summary>
         [Fact]
-        public void GetTerraformRoleNameTest()
+        public void TerraformReadConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string terraformMountPath = null;
+            //instance.TerraformReadConfig(terraformMountPath);
+        }
+
+        /// <summary>
+        /// Test TerraformReadCredentials
+        /// </summary>
+        [Fact]
+        public void TerraformReadCredentialsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string terraformMountPath = null;
-            //instance.GetTerraformRoleName(name, terraformMountPath);
+            //instance.TerraformReadCredentials(name, terraformMountPath);
         }
 
         /// <summary>
-        /// Test GetTotpCodeName
+        /// Test TerraformReadRole
         /// </summary>
         [Fact]
-        public void GetTotpCodeNameTest()
+        public void TerraformReadRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //string totpMountPath = null;
-            //instance.GetTotpCodeName(name, totpMountPath);
+            //string terraformMountPath = null;
+            //instance.TerraformReadRole(name, terraformMountPath);
         }
 
         /// <summary>
-        /// Test GetTotpKeys
+        /// Test TerraformRotateRole
         /// </summary>
         [Fact]
-        public void GetTotpKeysTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string totpMountPath = null;
-            //instance.GetTotpKeys(list, totpMountPath);
-        }
-
-        /// <summary>
-        /// Test GetTotpKeysName
-        /// </summary>
-        [Fact]
-        public void GetTotpKeysNameTest()
+        public void TerraformRotateRoleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //string totpMountPath = null;
-            //instance.GetTotpKeysName(name, totpMountPath);
+            //string terraformMountPath = null;
+            //instance.TerraformRotateRole(name, terraformMountPath);
         }
 
         /// <summary>
-        /// Test GetTransitBackupName
+        /// Test TerraformWriteConfig
         /// </summary>
         [Fact]
-        public void GetTransitBackupNameTest()
+        public void TerraformWriteConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //TerraformWriteConfigRequest terraformWriteConfigRequest = null;
+            //string terraformMountPath = null;
+            //instance.TerraformWriteConfig(terraformWriteConfigRequest, terraformMountPath);
+        }
+
+        /// <summary>
+        /// Test TerraformWriteCredentials
+        /// </summary>
+        [Fact]
+        public void TerraformWriteCredentialsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string terraformMountPath = null;
+            //instance.TerraformWriteCredentials(name, terraformMountPath);
+        }
+
+        /// <summary>
+        /// Test TerraformWriteRole
+        /// </summary>
+        [Fact]
+        public void TerraformWriteRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //TerraformWriteRoleRequest terraformWriteRoleRequest = null;
+            //string terraformMountPath = null;
+            //instance.TerraformWriteRole(name, terraformWriteRoleRequest, terraformMountPath);
+        }
+
+        /// <summary>
+        /// Test TransitBackup
+        /// </summary>
+        [Fact]
+        public void TransitBackupTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string transitMountPath = null;
-            //instance.GetTransitBackupName(name, transitMountPath);
+            //instance.TransitBackup(name, transitMountPath);
         }
 
         /// <summary>
-        /// Test GetTransitCacheConfig
+        /// Test TransitDecrypt
         /// </summary>
         [Fact]
-        public void GetTransitCacheConfigTest()
+        public void TransitDecryptTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //TransitDecryptRequest transitDecryptRequest = null;
             //string transitMountPath = null;
-            //instance.GetTransitCacheConfig(transitMountPath);
+            //instance.TransitDecrypt(name, transitDecryptRequest, transitMountPath);
         }
 
         /// <summary>
-        /// Test GetTransitExportTypeName
+        /// Test TransitDeleteKey
         /// </summary>
         [Fact]
-        public void GetTransitExportTypeNameTest()
+        public void TransitDeleteKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string transitMountPath = null;
+            //instance.TransitDeleteKey(name, transitMountPath);
+        }
+
+        /// <summary>
+        /// Test TransitEncrypt
+        /// </summary>
+        [Fact]
+        public void TransitEncryptTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //TransitEncryptRequest transitEncryptRequest = null;
+            //string transitMountPath = null;
+            //instance.TransitEncrypt(name, transitEncryptRequest, transitMountPath);
+        }
+
+        /// <summary>
+        /// Test TransitExport
+        /// </summary>
+        [Fact]
+        public void TransitExportTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string type = null;
             //string transitMountPath = null;
-            //instance.GetTransitExportTypeName(name, type, transitMountPath);
+            //instance.TransitExport(name, type, transitMountPath);
         }
 
         /// <summary>
-        /// Test GetTransitExportTypeNameVersion
+        /// Test TransitExportVersion
         /// </summary>
         [Fact]
-        public void GetTransitExportTypeNameVersionTest()
+        public void TransitExportVersionTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string type = null;
             //string version = null;
             //string transitMountPath = null;
-            //instance.GetTransitExportTypeNameVersion(name, type, version, transitMountPath);
+            //instance.TransitExportVersion(name, type, version, transitMountPath);
         }
 
         /// <summary>
-        /// Test GetTransitKeys
+        /// Test TransitGenerateDataKey
         /// </summary>
         [Fact]
-        public void GetTransitKeysTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string list = null;
-            //string transitMountPath = null;
-            //instance.GetTransitKeys(list, transitMountPath);
-        }
-
-        /// <summary>
-        /// Test GetTransitKeysName
-        /// </summary>
-        [Fact]
-        public void GetTransitKeysNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string transitMountPath = null;
-            //instance.GetTransitKeysName(name, transitMountPath);
-        }
-
-        /// <summary>
-        /// Test GetTransitWrappingKey
-        /// </summary>
-        [Fact]
-        public void GetTransitWrappingKeyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string transitMountPath = null;
-            //instance.GetTransitWrappingKey(transitMountPath);
-        }
-
-        /// <summary>
-        /// Test PostAdConfig
-        /// </summary>
-        [Fact]
-        public void PostAdConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //AdConfigRequest adConfigRequest = null;
-            //string adMountPath = null;
-            //instance.PostAdConfig(adConfigRequest, adMountPath);
-        }
-
-        /// <summary>
-        /// Test PostAdLibraryManageNameCheckIn
-        /// </summary>
-        [Fact]
-        public void PostAdLibraryManageNameCheckInTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //AdLibraryManageCheckInRequest adLibraryManageCheckInRequest = null;
-            //string adMountPath = null;
-            //instance.PostAdLibraryManageNameCheckIn(name, adLibraryManageCheckInRequest, adMountPath);
-        }
-
-        /// <summary>
-        /// Test PostAdLibraryName
-        /// </summary>
-        [Fact]
-        public void PostAdLibraryNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //AdLibraryRequest adLibraryRequest = null;
-            //string adMountPath = null;
-            //instance.PostAdLibraryName(name, adLibraryRequest, adMountPath);
-        }
-
-        /// <summary>
-        /// Test PostAdLibraryNameCheckIn
-        /// </summary>
-        [Fact]
-        public void PostAdLibraryNameCheckInTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //AdLibraryCheckInRequest adLibraryCheckInRequest = null;
-            //string adMountPath = null;
-            //instance.PostAdLibraryNameCheckIn(name, adLibraryCheckInRequest, adMountPath);
-        }
-
-        /// <summary>
-        /// Test PostAdLibraryNameCheckOut
-        /// </summary>
-        [Fact]
-        public void PostAdLibraryNameCheckOutTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //AdLibraryCheckOutRequest adLibraryCheckOutRequest = null;
-            //string adMountPath = null;
-            //instance.PostAdLibraryNameCheckOut(name, adLibraryCheckOutRequest, adMountPath);
-        }
-
-        /// <summary>
-        /// Test PostAdRolesName
-        /// </summary>
-        [Fact]
-        public void PostAdRolesNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //AdRolesRequest adRolesRequest = null;
-            //string adMountPath = null;
-            //instance.PostAdRolesName(name, adRolesRequest, adMountPath);
-        }
-
-        /// <summary>
-        /// Test PostAdRotateRoleName
-        /// </summary>
-        [Fact]
-        public void PostAdRotateRoleNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string adMountPath = null;
-            //instance.PostAdRotateRoleName(name, adMountPath);
-        }
-
-        /// <summary>
-        /// Test PostAdRotateRoot
-        /// </summary>
-        [Fact]
-        public void PostAdRotateRootTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string adMountPath = null;
-            //instance.PostAdRotateRoot(adMountPath);
-        }
-
-        /// <summary>
-        /// Test PostAlicloudConfig
-        /// </summary>
-        [Fact]
-        public void PostAlicloudConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //AlicloudConfigRequest alicloudConfigRequest = null;
-            //string alicloudMountPath = null;
-            //instance.PostAlicloudConfig(alicloudConfigRequest, alicloudMountPath);
-        }
-
-        /// <summary>
-        /// Test PostAlicloudRoleName
-        /// </summary>
-        [Fact]
-        public void PostAlicloudRoleNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //AlicloudRoleRequest alicloudRoleRequest = null;
-            //string alicloudMountPath = null;
-            //instance.PostAlicloudRoleName(name, alicloudRoleRequest, alicloudMountPath);
-        }
-
-        /// <summary>
-        /// Test PostAwsConfigLease
-        /// </summary>
-        [Fact]
-        public void PostAwsConfigLeaseTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //AwsConfigLeaseRequest awsConfigLeaseRequest = null;
-            //string awsMountPath = null;
-            //instance.PostAwsConfigLease(awsConfigLeaseRequest, awsMountPath);
-        }
-
-        /// <summary>
-        /// Test PostAwsConfigRoot
-        /// </summary>
-        [Fact]
-        public void PostAwsConfigRootTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //AwsConfigRootRequest awsConfigRootRequest = null;
-            //string awsMountPath = null;
-            //instance.PostAwsConfigRoot(awsConfigRootRequest, awsMountPath);
-        }
-
-        /// <summary>
-        /// Test PostAwsConfigRotateRoot
-        /// </summary>
-        [Fact]
-        public void PostAwsConfigRotateRootTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string awsMountPath = null;
-            //instance.PostAwsConfigRotateRoot(awsMountPath);
-        }
-
-        /// <summary>
-        /// Test PostAwsCreds
-        /// </summary>
-        [Fact]
-        public void PostAwsCredsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //AwsCredsRequest awsCredsRequest = null;
-            //string awsMountPath = null;
-            //instance.PostAwsCreds(awsCredsRequest, awsMountPath);
-        }
-
-        /// <summary>
-        /// Test PostAwsRolesName
-        /// </summary>
-        [Fact]
-        public void PostAwsRolesNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //AwsRolesRequest awsRolesRequest = null;
-            //string awsMountPath = null;
-            //instance.PostAwsRolesName(name, awsRolesRequest, awsMountPath);
-        }
-
-        /// <summary>
-        /// Test PostAwsStsName
-        /// </summary>
-        [Fact]
-        public void PostAwsStsNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //AwsStsRequest awsStsRequest = null;
-            //string awsMountPath = null;
-            //instance.PostAwsStsName(name, awsStsRequest, awsMountPath);
-        }
-
-        /// <summary>
-        /// Test PostAzureConfig
-        /// </summary>
-        [Fact]
-        public void PostAzureConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //AzureConfigRequest azureConfigRequest = null;
-            //string azureMountPath = null;
-            //instance.PostAzureConfig(azureConfigRequest, azureMountPath);
-        }
-
-        /// <summary>
-        /// Test PostAzureRolesName
-        /// </summary>
-        [Fact]
-        public void PostAzureRolesNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //AzureRolesRequest azureRolesRequest = null;
-            //string azureMountPath = null;
-            //instance.PostAzureRolesName(name, azureRolesRequest, azureMountPath);
-        }
-
-        /// <summary>
-        /// Test PostAzureRotateRoot
-        /// </summary>
-        [Fact]
-        public void PostAzureRotateRootTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string azureMountPath = null;
-            //instance.PostAzureRotateRoot(azureMountPath);
-        }
-
-        /// <summary>
-        /// Test PostConsulConfigAccess
-        /// </summary>
-        [Fact]
-        public void PostConsulConfigAccessTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //ConsulConfigAccessRequest consulConfigAccessRequest = null;
-            //string consulMountPath = null;
-            //instance.PostConsulConfigAccess(consulConfigAccessRequest, consulMountPath);
-        }
-
-        /// <summary>
-        /// Test PostConsulRolesName
-        /// </summary>
-        [Fact]
-        public void PostConsulRolesNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //ConsulRolesRequest consulRolesRequest = null;
-            //string consulMountPath = null;
-            //instance.PostConsulRolesName(name, consulRolesRequest, consulMountPath);
-        }
-
-        /// <summary>
-        /// Test PostCubbyholePath
-        /// </summary>
-        [Fact]
-        public void PostCubbyholePathTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //string cubbyholeMountPath = null;
-            //instance.PostCubbyholePath(path, cubbyholeMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpConfig
-        /// </summary>
-        [Fact]
-        public void PostGcpConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //GcpConfigRequest gcpConfigRequest = null;
-            //string gcpMountPath = null;
-            //instance.PostGcpConfig(gcpConfigRequest, gcpMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpConfigRotateRoot
-        /// </summary>
-        [Fact]
-        public void PostGcpConfigRotateRootTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string gcpMountPath = null;
-            //instance.PostGcpConfigRotateRoot(gcpMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpKeyRoleset
-        /// </summary>
-        [Fact]
-        public void PostGcpKeyRolesetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string roleset = null;
-            //GcpKeyRequest gcpKeyRequest = null;
-            //string gcpMountPath = null;
-            //instance.PostGcpKeyRoleset(roleset, gcpKeyRequest, gcpMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpRolesetName
-        /// </summary>
-        [Fact]
-        public void PostGcpRolesetNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //GcpRolesetRequest gcpRolesetRequest = null;
-            //string gcpMountPath = null;
-            //instance.PostGcpRolesetName(name, gcpRolesetRequest, gcpMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpRolesetNameRotate
-        /// </summary>
-        [Fact]
-        public void PostGcpRolesetNameRotateTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string gcpMountPath = null;
-            //instance.PostGcpRolesetNameRotate(name, gcpMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpRolesetNameRotateKey
-        /// </summary>
-        [Fact]
-        public void PostGcpRolesetNameRotateKeyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string gcpMountPath = null;
-            //instance.PostGcpRolesetNameRotateKey(name, gcpMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpRolesetRolesetKey
-        /// </summary>
-        [Fact]
-        public void PostGcpRolesetRolesetKeyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string roleset = null;
-            //GcpRolesetKeyRequest gcpRolesetKeyRequest = null;
-            //string gcpMountPath = null;
-            //instance.PostGcpRolesetRolesetKey(roleset, gcpRolesetKeyRequest, gcpMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpRolesetRolesetToken
-        /// </summary>
-        [Fact]
-        public void PostGcpRolesetRolesetTokenTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string roleset = null;
-            //string gcpMountPath = null;
-            //instance.PostGcpRolesetRolesetToken(roleset, gcpMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpStaticAccountName
-        /// </summary>
-        [Fact]
-        public void PostGcpStaticAccountNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //GcpStaticAccountRequest gcpStaticAccountRequest = null;
-            //string gcpMountPath = null;
-            //instance.PostGcpStaticAccountName(name, gcpStaticAccountRequest, gcpMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpStaticAccountNameKey
-        /// </summary>
-        [Fact]
-        public void PostGcpStaticAccountNameKeyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //GcpStaticAccountKeyRequest gcpStaticAccountKeyRequest = null;
-            //string gcpMountPath = null;
-            //instance.PostGcpStaticAccountNameKey(name, gcpStaticAccountKeyRequest, gcpMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpStaticAccountNameRotateKey
-        /// </summary>
-        [Fact]
-        public void PostGcpStaticAccountNameRotateKeyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string gcpMountPath = null;
-            //instance.PostGcpStaticAccountNameRotateKey(name, gcpMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpStaticAccountNameToken
-        /// </summary>
-        [Fact]
-        public void PostGcpStaticAccountNameTokenTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string gcpMountPath = null;
-            //instance.PostGcpStaticAccountNameToken(name, gcpMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpTokenRoleset
-        /// </summary>
-        [Fact]
-        public void PostGcpTokenRolesetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string roleset = null;
-            //string gcpMountPath = null;
-            //instance.PostGcpTokenRoleset(roleset, gcpMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpkmsConfig
-        /// </summary>
-        [Fact]
-        public void PostGcpkmsConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //GcpkmsConfigRequest gcpkmsConfigRequest = null;
-            //string gcpkmsMountPath = null;
-            //instance.PostGcpkmsConfig(gcpkmsConfigRequest, gcpkmsMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpkmsDecryptKey
-        /// </summary>
-        [Fact]
-        public void PostGcpkmsDecryptKeyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //GcpkmsDecryptRequest gcpkmsDecryptRequest = null;
-            //string gcpkmsMountPath = null;
-            //instance.PostGcpkmsDecryptKey(key, gcpkmsDecryptRequest, gcpkmsMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpkmsEncryptKey
-        /// </summary>
-        [Fact]
-        public void PostGcpkmsEncryptKeyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //GcpkmsEncryptRequest gcpkmsEncryptRequest = null;
-            //string gcpkmsMountPath = null;
-            //instance.PostGcpkmsEncryptKey(key, gcpkmsEncryptRequest, gcpkmsMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpkmsKeysConfigKey
-        /// </summary>
-        [Fact]
-        public void PostGcpkmsKeysConfigKeyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //GcpkmsKeysConfigRequest gcpkmsKeysConfigRequest = null;
-            //string gcpkmsMountPath = null;
-            //instance.PostGcpkmsKeysConfigKey(key, gcpkmsKeysConfigRequest, gcpkmsMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpkmsKeysDeregisterKey
-        /// </summary>
-        [Fact]
-        public void PostGcpkmsKeysDeregisterKeyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //string gcpkmsMountPath = null;
-            //instance.PostGcpkmsKeysDeregisterKey(key, gcpkmsMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpkmsKeysKey
-        /// </summary>
-        [Fact]
-        public void PostGcpkmsKeysKeyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //GcpkmsKeysRequest gcpkmsKeysRequest = null;
-            //string gcpkmsMountPath = null;
-            //instance.PostGcpkmsKeysKey(key, gcpkmsKeysRequest, gcpkmsMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpkmsKeysRegisterKey
-        /// </summary>
-        [Fact]
-        public void PostGcpkmsKeysRegisterKeyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //GcpkmsKeysRegisterRequest gcpkmsKeysRegisterRequest = null;
-            //string gcpkmsMountPath = null;
-            //instance.PostGcpkmsKeysRegisterKey(key, gcpkmsKeysRegisterRequest, gcpkmsMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpkmsKeysRotateKey
-        /// </summary>
-        [Fact]
-        public void PostGcpkmsKeysRotateKeyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //string gcpkmsMountPath = null;
-            //instance.PostGcpkmsKeysRotateKey(key, gcpkmsMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpkmsKeysTrimKey
-        /// </summary>
-        [Fact]
-        public void PostGcpkmsKeysTrimKeyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //string gcpkmsMountPath = null;
-            //instance.PostGcpkmsKeysTrimKey(key, gcpkmsMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpkmsReencryptKey
-        /// </summary>
-        [Fact]
-        public void PostGcpkmsReencryptKeyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //GcpkmsReencryptRequest gcpkmsReencryptRequest = null;
-            //string gcpkmsMountPath = null;
-            //instance.PostGcpkmsReencryptKey(key, gcpkmsReencryptRequest, gcpkmsMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpkmsSignKey
-        /// </summary>
-        [Fact]
-        public void PostGcpkmsSignKeyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //GcpkmsSignRequest gcpkmsSignRequest = null;
-            //string gcpkmsMountPath = null;
-            //instance.PostGcpkmsSignKey(key, gcpkmsSignRequest, gcpkmsMountPath);
-        }
-
-        /// <summary>
-        /// Test PostGcpkmsVerifyKey
-        /// </summary>
-        [Fact]
-        public void PostGcpkmsVerifyKeyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string key = null;
-            //GcpkmsVerifyRequest gcpkmsVerifyRequest = null;
-            //string gcpkmsMountPath = null;
-            //instance.PostGcpkmsVerifyKey(key, gcpkmsVerifyRequest, gcpkmsMountPath);
-        }
-
-        /// <summary>
-        /// Test PostKubernetesConfig
-        /// </summary>
-        [Fact]
-        public void PostKubernetesConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //KubernetesConfigRequest kubernetesConfigRequest = null;
-            //string kubernetesMountPath = null;
-            //instance.PostKubernetesConfig(kubernetesConfigRequest, kubernetesMountPath);
-        }
-
-        /// <summary>
-        /// Test PostKubernetesCredsName
-        /// </summary>
-        [Fact]
-        public void PostKubernetesCredsNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //KubernetesCredsRequest kubernetesCredsRequest = null;
-            //string kubernetesMountPath = null;
-            //instance.PostKubernetesCredsName(name, kubernetesCredsRequest, kubernetesMountPath);
-        }
-
-        /// <summary>
-        /// Test PostKubernetesRolesName
-        /// </summary>
-        [Fact]
-        public void PostKubernetesRolesNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //KubernetesRolesRequest kubernetesRolesRequest = null;
-            //string kubernetesMountPath = null;
-            //instance.PostKubernetesRolesName(name, kubernetesRolesRequest, kubernetesMountPath);
-        }
-
-        /// <summary>
-        /// Test PostLdapConfig
-        /// </summary>
-        [Fact]
-        public void PostLdapConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //LdapConfigRequest ldapConfigRequest = null;
-            //string ldapMountPath = null;
-            //instance.PostLdapConfig(ldapConfigRequest, ldapMountPath);
-        }
-
-        /// <summary>
-        /// Test PostLdapLibraryManageNameCheckIn
-        /// </summary>
-        [Fact]
-        public void PostLdapLibraryManageNameCheckInTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //LdapLibraryManageCheckInRequest ldapLibraryManageCheckInRequest = null;
-            //string ldapMountPath = null;
-            //instance.PostLdapLibraryManageNameCheckIn(name, ldapLibraryManageCheckInRequest, ldapMountPath);
-        }
-
-        /// <summary>
-        /// Test PostLdapLibraryName
-        /// </summary>
-        [Fact]
-        public void PostLdapLibraryNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //LdapLibraryRequest ldapLibraryRequest = null;
-            //string ldapMountPath = null;
-            //instance.PostLdapLibraryName(name, ldapLibraryRequest, ldapMountPath);
-        }
-
-        /// <summary>
-        /// Test PostLdapLibraryNameCheckIn
-        /// </summary>
-        [Fact]
-        public void PostLdapLibraryNameCheckInTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //LdapLibraryCheckInRequest ldapLibraryCheckInRequest = null;
-            //string ldapMountPath = null;
-            //instance.PostLdapLibraryNameCheckIn(name, ldapLibraryCheckInRequest, ldapMountPath);
-        }
-
-        /// <summary>
-        /// Test PostLdapLibraryNameCheckOut
-        /// </summary>
-        [Fact]
-        public void PostLdapLibraryNameCheckOutTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //LdapLibraryCheckOutRequest ldapLibraryCheckOutRequest = null;
-            //string ldapMountPath = null;
-            //instance.PostLdapLibraryNameCheckOut(name, ldapLibraryCheckOutRequest, ldapMountPath);
-        }
-
-        /// <summary>
-        /// Test PostLdapRoleName
-        /// </summary>
-        [Fact]
-        public void PostLdapRoleNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //LdapRoleRequest ldapRoleRequest = null;
-            //string ldapMountPath = null;
-            //instance.PostLdapRoleName(name, ldapRoleRequest, ldapMountPath);
-        }
-
-        /// <summary>
-        /// Test PostLdapRotateRoleName
-        /// </summary>
-        [Fact]
-        public void PostLdapRotateRoleNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string ldapMountPath = null;
-            //instance.PostLdapRotateRoleName(name, ldapMountPath);
-        }
-
-        /// <summary>
-        /// Test PostLdapRotateRoot
-        /// </summary>
-        [Fact]
-        public void PostLdapRotateRootTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string ldapMountPath = null;
-            //instance.PostLdapRotateRoot(ldapMountPath);
-        }
-
-        /// <summary>
-        /// Test PostLdapStaticRoleName
-        /// </summary>
-        [Fact]
-        public void PostLdapStaticRoleNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //LdapStaticRoleRequest ldapStaticRoleRequest = null;
-            //string ldapMountPath = null;
-            //instance.PostLdapStaticRoleName(name, ldapStaticRoleRequest, ldapMountPath);
-        }
-
-        /// <summary>
-        /// Test PostMongodbatlasConfig
-        /// </summary>
-        [Fact]
-        public void PostMongodbatlasConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //MongodbatlasConfigRequest mongodbatlasConfigRequest = null;
-            //string mongodbatlasMountPath = null;
-            //instance.PostMongodbatlasConfig(mongodbatlasConfigRequest, mongodbatlasMountPath);
-        }
-
-        /// <summary>
-        /// Test PostMongodbatlasCredsName
-        /// </summary>
-        [Fact]
-        public void PostMongodbatlasCredsNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string mongodbatlasMountPath = null;
-            //instance.PostMongodbatlasCredsName(name, mongodbatlasMountPath);
-        }
-
-        /// <summary>
-        /// Test PostMongodbatlasRolesName
-        /// </summary>
-        [Fact]
-        public void PostMongodbatlasRolesNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //MongodbatlasRolesRequest mongodbatlasRolesRequest = null;
-            //string mongodbatlasMountPath = null;
-            //instance.PostMongodbatlasRolesName(name, mongodbatlasRolesRequest, mongodbatlasMountPath);
-        }
-
-        /// <summary>
-        /// Test PostNomadConfigAccess
-        /// </summary>
-        [Fact]
-        public void PostNomadConfigAccessTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //NomadConfigAccessRequest nomadConfigAccessRequest = null;
-            //string nomadMountPath = null;
-            //instance.PostNomadConfigAccess(nomadConfigAccessRequest, nomadMountPath);
-        }
-
-        /// <summary>
-        /// Test PostNomadConfigLease
-        /// </summary>
-        [Fact]
-        public void PostNomadConfigLeaseTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //NomadConfigLeaseRequest nomadConfigLeaseRequest = null;
-            //string nomadMountPath = null;
-            //instance.PostNomadConfigLease(nomadConfigLeaseRequest, nomadMountPath);
-        }
-
-        /// <summary>
-        /// Test PostNomadRoleName
-        /// </summary>
-        [Fact]
-        public void PostNomadRoleNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //NomadRoleRequest nomadRoleRequest = null;
-            //string nomadMountPath = null;
-            //instance.PostNomadRoleName(name, nomadRoleRequest, nomadMountPath);
-        }
-
-        /// <summary>
-        /// Test PostOpenldapConfig
-        /// </summary>
-        [Fact]
-        public void PostOpenldapConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //OpenldapConfigRequest openldapConfigRequest = null;
-            //string openldapMountPath = null;
-            //instance.PostOpenldapConfig(openldapConfigRequest, openldapMountPath);
-        }
-
-        /// <summary>
-        /// Test PostOpenldapLibraryManageNameCheckIn
-        /// </summary>
-        [Fact]
-        public void PostOpenldapLibraryManageNameCheckInTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //OpenldapLibraryManageCheckInRequest openldapLibraryManageCheckInRequest = null;
-            //string openldapMountPath = null;
-            //instance.PostOpenldapLibraryManageNameCheckIn(name, openldapLibraryManageCheckInRequest, openldapMountPath);
-        }
-
-        /// <summary>
-        /// Test PostOpenldapLibraryName
-        /// </summary>
-        [Fact]
-        public void PostOpenldapLibraryNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //OpenldapLibraryRequest openldapLibraryRequest = null;
-            //string openldapMountPath = null;
-            //instance.PostOpenldapLibraryName(name, openldapLibraryRequest, openldapMountPath);
-        }
-
-        /// <summary>
-        /// Test PostOpenldapLibraryNameCheckIn
-        /// </summary>
-        [Fact]
-        public void PostOpenldapLibraryNameCheckInTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //OpenldapLibraryCheckInRequest openldapLibraryCheckInRequest = null;
-            //string openldapMountPath = null;
-            //instance.PostOpenldapLibraryNameCheckIn(name, openldapLibraryCheckInRequest, openldapMountPath);
-        }
-
-        /// <summary>
-        /// Test PostOpenldapLibraryNameCheckOut
-        /// </summary>
-        [Fact]
-        public void PostOpenldapLibraryNameCheckOutTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //OpenldapLibraryCheckOutRequest openldapLibraryCheckOutRequest = null;
-            //string openldapMountPath = null;
-            //instance.PostOpenldapLibraryNameCheckOut(name, openldapLibraryCheckOutRequest, openldapMountPath);
-        }
-
-        /// <summary>
-        /// Test PostOpenldapRoleName
-        /// </summary>
-        [Fact]
-        public void PostOpenldapRoleNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //OpenldapRoleRequest openldapRoleRequest = null;
-            //string openldapMountPath = null;
-            //instance.PostOpenldapRoleName(name, openldapRoleRequest, openldapMountPath);
-        }
-
-        /// <summary>
-        /// Test PostOpenldapRotateRoleName
-        /// </summary>
-        [Fact]
-        public void PostOpenldapRotateRoleNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string openldapMountPath = null;
-            //instance.PostOpenldapRotateRoleName(name, openldapMountPath);
-        }
-
-        /// <summary>
-        /// Test PostOpenldapRotateRoot
-        /// </summary>
-        [Fact]
-        public void PostOpenldapRotateRootTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string openldapMountPath = null;
-            //instance.PostOpenldapRotateRoot(openldapMountPath);
-        }
-
-        /// <summary>
-        /// Test PostOpenldapStaticRoleName
-        /// </summary>
-        [Fact]
-        public void PostOpenldapStaticRoleNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //OpenldapStaticRoleRequest openldapStaticRoleRequest = null;
-            //string openldapMountPath = null;
-            //instance.PostOpenldapStaticRoleName(name, openldapStaticRoleRequest, openldapMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiBundle
-        /// </summary>
-        [Fact]
-        public void PostPkiBundleTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //PkiBundleRequest pkiBundleRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiBundle(pkiBundleRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiCert
-        /// </summary>
-        [Fact]
-        public void PostPkiCertTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //PkiCertRequest pkiCertRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiCert(pkiCertRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiConfigAutoTidy
-        /// </summary>
-        [Fact]
-        public void PostPkiConfigAutoTidyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //PkiConfigAutoTidyRequest pkiConfigAutoTidyRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiConfigAutoTidy(pkiConfigAutoTidyRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiConfigCa
-        /// </summary>
-        [Fact]
-        public void PostPkiConfigCaTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //PkiConfigCaRequest pkiConfigCaRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiConfigCa(pkiConfigCaRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiConfigCluster
-        /// </summary>
-        [Fact]
-        public void PostPkiConfigClusterTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //PkiConfigClusterRequest pkiConfigClusterRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiConfigCluster(pkiConfigClusterRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiConfigCrl
-        /// </summary>
-        [Fact]
-        public void PostPkiConfigCrlTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //PkiConfigCrlRequest pkiConfigCrlRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiConfigCrl(pkiConfigCrlRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiConfigIssuers
-        /// </summary>
-        [Fact]
-        public void PostPkiConfigIssuersTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //PkiConfigIssuersRequest pkiConfigIssuersRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiConfigIssuers(pkiConfigIssuersRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiConfigKeys
-        /// </summary>
-        [Fact]
-        public void PostPkiConfigKeysTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //PkiConfigKeysRequest pkiConfigKeysRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiConfigKeys(pkiConfigKeysRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiConfigUrls
-        /// </summary>
-        [Fact]
-        public void PostPkiConfigUrlsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //PkiConfigUrlsRequest pkiConfigUrlsRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiConfigUrls(pkiConfigUrlsRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiIntermediateCrossSign
-        /// </summary>
-        [Fact]
-        public void PostPkiIntermediateCrossSignTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //PkiIntermediateCrossSignRequest pkiIntermediateCrossSignRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiIntermediateCrossSign(pkiIntermediateCrossSignRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiIntermediateGenerateExported
-        /// </summary>
-        [Fact]
-        public void PostPkiIntermediateGenerateExportedTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string exported = null;
-            //PkiIntermediateGenerateRequest pkiIntermediateGenerateRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiIntermediateGenerateExported(exported, pkiIntermediateGenerateRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiIntermediateSetSigned
-        /// </summary>
-        [Fact]
-        public void PostPkiIntermediateSetSignedTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //PkiIntermediateSetSignedRequest pkiIntermediateSetSignedRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiIntermediateSetSigned(pkiIntermediateSetSignedRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiInternalExported
-        /// </summary>
-        [Fact]
-        public void PostPkiInternalExportedTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //PkiInternalExportedRequest pkiInternalExportedRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiInternalExported(pkiInternalExportedRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiIssueRole
-        /// </summary>
-        [Fact]
-        public void PostPkiIssueRoleTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string role = null;
-            //PkiIssueRequest pkiIssueRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiIssueRole(role, pkiIssueRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiIssuerIssuerRefIssueRole
-        /// </summary>
-        [Fact]
-        public void PostPkiIssuerIssuerRefIssueRoleTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //string role = null;
-            //PkiIssuerIssueRequest pkiIssuerIssueRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiIssuerIssuerRefIssueRole(issuerRef, role, pkiIssuerIssueRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiIssuerIssuerRefResignCrls
-        /// </summary>
-        [Fact]
-        public void PostPkiIssuerIssuerRefResignCrlsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //PkiIssuerResignCrlsRequest pkiIssuerResignCrlsRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiIssuerIssuerRefResignCrls(issuerRef, pkiIssuerResignCrlsRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiIssuerIssuerRefRevoke
-        /// </summary>
-        [Fact]
-        public void PostPkiIssuerIssuerRefRevokeTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiIssuerIssuerRefRevoke(issuerRef, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiIssuerIssuerRefSignIntermediate
-        /// </summary>
-        [Fact]
-        public void PostPkiIssuerIssuerRefSignIntermediateTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //PkiIssuerSignIntermediateRequest pkiIssuerSignIntermediateRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiIssuerIssuerRefSignIntermediate(issuerRef, pkiIssuerSignIntermediateRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiIssuerIssuerRefSignRevocationList
-        /// </summary>
-        [Fact]
-        public void PostPkiIssuerIssuerRefSignRevocationListTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //PkiIssuerSignRevocationListRequest pkiIssuerSignRevocationListRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiIssuerIssuerRefSignRevocationList(issuerRef, pkiIssuerSignRevocationListRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiIssuerIssuerRefSignRole
-        /// </summary>
-        [Fact]
-        public void PostPkiIssuerIssuerRefSignRoleTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //string role = null;
-            //PkiIssuerSignRequest pkiIssuerSignRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiIssuerIssuerRefSignRole(issuerRef, role, pkiIssuerSignRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiIssuerIssuerRefSignSelfIssued
-        /// </summary>
-        [Fact]
-        public void PostPkiIssuerIssuerRefSignSelfIssuedTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //PkiIssuerSignSelfIssuedRequest pkiIssuerSignSelfIssuedRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiIssuerIssuerRefSignSelfIssued(issuerRef, pkiIssuerSignSelfIssuedRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiIssuerIssuerRefSignVerbatim
-        /// </summary>
-        [Fact]
-        public void PostPkiIssuerIssuerRefSignVerbatimTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //PkiIssuerSignVerbatimRequest pkiIssuerSignVerbatimRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiIssuerIssuerRefSignVerbatim(issuerRef, pkiIssuerSignVerbatimRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiIssuerIssuerRefSignVerbatimRole
-        /// </summary>
-        [Fact]
-        public void PostPkiIssuerIssuerRefSignVerbatimRoleTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //string role = null;
-            //PkiIssuerSignVerbatimRequest pkiIssuerSignVerbatimRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiIssuerIssuerRefSignVerbatimRole(issuerRef, role, pkiIssuerSignVerbatimRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiIssuerRefDerPem
-        /// </summary>
-        [Fact]
-        public void PostPkiIssuerRefDerPemTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //PkiDerPemRequest pkiDerPemRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiIssuerRefDerPem(issuerRef, pkiDerPemRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiIssuersGenerateIntermediateExported
-        /// </summary>
-        [Fact]
-        public void PostPkiIssuersGenerateIntermediateExportedTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string exported = null;
-            //PkiIssuersGenerateIntermediateRequest pkiIssuersGenerateIntermediateRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiIssuersGenerateIntermediateExported(exported, pkiIssuersGenerateIntermediateRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiIssuersGenerateRootExported
-        /// </summary>
-        [Fact]
-        public void PostPkiIssuersGenerateRootExportedTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string exported = null;
-            //PkiIssuersGenerateRootRequest pkiIssuersGenerateRootRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiIssuersGenerateRootExported(exported, pkiIssuersGenerateRootRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiJson
-        /// </summary>
-        [Fact]
-        public void PostPkiJsonTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //PkiJsonRequest pkiJsonRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiJson(pkiJsonRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiKeyKeyRef
-        /// </summary>
-        [Fact]
-        public void PostPkiKeyKeyRefTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string keyRef = null;
-            //PkiKeyRequest pkiKeyRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiKeyKeyRef(keyRef, pkiKeyRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiKeysImport
-        /// </summary>
-        [Fact]
-        public void PostPkiKeysImportTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //PkiKeysImportRequest pkiKeysImportRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiKeysImport(pkiKeysImportRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiKms
-        /// </summary>
-        [Fact]
-        public void PostPkiKmsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //PkiKmsRequest pkiKmsRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiKms(pkiKmsRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiOcsp
-        /// </summary>
-        [Fact]
-        public void PostPkiOcspTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string pkiMountPath = null;
-            //instance.PostPkiOcsp(pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiRevoke
-        /// </summary>
-        [Fact]
-        public void PostPkiRevokeTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //PkiRevokeRequest pkiRevokeRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiRevoke(pkiRevokeRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiRevokeWithKey
-        /// </summary>
-        [Fact]
-        public void PostPkiRevokeWithKeyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //PkiRevokeWithKeyRequest pkiRevokeWithKeyRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiRevokeWithKey(pkiRevokeWithKeyRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiRolesName
-        /// </summary>
-        [Fact]
-        public void PostPkiRolesNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //PkiRolesRequest pkiRolesRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiRolesName(name, pkiRolesRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiRootGenerateExported
-        /// </summary>
-        [Fact]
-        public void PostPkiRootGenerateExportedTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string exported = null;
-            //PkiRootGenerateRequest pkiRootGenerateRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiRootGenerateExported(exported, pkiRootGenerateRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiRootReplace
-        /// </summary>
-        [Fact]
-        public void PostPkiRootReplaceTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //PkiRootReplaceRequest pkiRootReplaceRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiRootReplace(pkiRootReplaceRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiRootRotateExported
-        /// </summary>
-        [Fact]
-        public void PostPkiRootRotateExportedTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string exported = null;
-            //PkiRootRotateRequest pkiRootRotateRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiRootRotateExported(exported, pkiRootRotateRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiRootSignIntermediate
-        /// </summary>
-        [Fact]
-        public void PostPkiRootSignIntermediateTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //PkiRootSignIntermediateRequest pkiRootSignIntermediateRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiRootSignIntermediate(pkiRootSignIntermediateRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiRootSignSelfIssued
-        /// </summary>
-        [Fact]
-        public void PostPkiRootSignSelfIssuedTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //PkiRootSignSelfIssuedRequest pkiRootSignSelfIssuedRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiRootSignSelfIssued(pkiRootSignSelfIssuedRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiSignRole
-        /// </summary>
-        [Fact]
-        public void PostPkiSignRoleTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string role = null;
-            //PkiSignRequest pkiSignRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiSignRole(role, pkiSignRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiSignVerbatim
-        /// </summary>
-        [Fact]
-        public void PostPkiSignVerbatimTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //PkiSignVerbatimRequest pkiSignVerbatimRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiSignVerbatim(pkiSignVerbatimRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiSignVerbatimRole
-        /// </summary>
-        [Fact]
-        public void PostPkiSignVerbatimRoleTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string role = null;
-            //PkiSignVerbatimRequest pkiSignVerbatimRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiSignVerbatimRole(role, pkiSignVerbatimRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiTidy
-        /// </summary>
-        [Fact]
-        public void PostPkiTidyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //PkiTidyRequest pkiTidyRequest = null;
-            //string pkiMountPath = null;
-            //instance.PostPkiTidy(pkiTidyRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostPkiTidyCancel
-        /// </summary>
-        [Fact]
-        public void PostPkiTidyCancelTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string pkiMountPath = null;
-            //instance.PostPkiTidyCancel(pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PostRabbitmqConfigConnection
-        /// </summary>
-        [Fact]
-        public void PostRabbitmqConfigConnectionTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //RabbitmqConfigConnectionRequest rabbitmqConfigConnectionRequest = null;
-            //string rabbitmqMountPath = null;
-            //instance.PostRabbitmqConfigConnection(rabbitmqConfigConnectionRequest, rabbitmqMountPath);
-        }
-
-        /// <summary>
-        /// Test PostRabbitmqConfigLease
-        /// </summary>
-        [Fact]
-        public void PostRabbitmqConfigLeaseTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //RabbitmqConfigLeaseRequest rabbitmqConfigLeaseRequest = null;
-            //string rabbitmqMountPath = null;
-            //instance.PostRabbitmqConfigLease(rabbitmqConfigLeaseRequest, rabbitmqMountPath);
-        }
-
-        /// <summary>
-        /// Test PostRabbitmqRolesName
-        /// </summary>
-        [Fact]
-        public void PostRabbitmqRolesNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //RabbitmqRolesRequest rabbitmqRolesRequest = null;
-            //string rabbitmqMountPath = null;
-            //instance.PostRabbitmqRolesName(name, rabbitmqRolesRequest, rabbitmqMountPath);
-        }
-
-        /// <summary>
-        /// Test PostSecretConfig
-        /// </summary>
-        [Fact]
-        public void PostSecretConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //KvConfigRequest kvConfigRequest = null;
-            //string secretMountPath = null;
-            //instance.PostSecretConfig(kvConfigRequest, secretMountPath);
-        }
-
-        /// <summary>
-        /// Test PostSecretDataPath
-        /// </summary>
-        [Fact]
-        public void PostSecretDataPathTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //KvDataRequest kvDataRequest = null;
-            //string secretMountPath = null;
-            //instance.PostSecretDataPath(path, kvDataRequest, secretMountPath);
-        }
-
-        /// <summary>
-        /// Test PostSecretDeletePath
-        /// </summary>
-        [Fact]
-        public void PostSecretDeletePathTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //KvDeleteRequest kvDeleteRequest = null;
-            //string secretMountPath = null;
-            //instance.PostSecretDeletePath(path, kvDeleteRequest, secretMountPath);
-        }
-
-        /// <summary>
-        /// Test PostSecretDestroyPath
-        /// </summary>
-        [Fact]
-        public void PostSecretDestroyPathTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //KvDestroyRequest kvDestroyRequest = null;
-            //string secretMountPath = null;
-            //instance.PostSecretDestroyPath(path, kvDestroyRequest, secretMountPath);
-        }
-
-        /// <summary>
-        /// Test PostSecretMetadataPath
-        /// </summary>
-        [Fact]
-        public void PostSecretMetadataPathTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //KvMetadataRequest kvMetadataRequest = null;
-            //string secretMountPath = null;
-            //instance.PostSecretMetadataPath(path, kvMetadataRequest, secretMountPath);
-        }
-
-        /// <summary>
-        /// Test PostSecretPath
-        /// </summary>
-        [Fact]
-        public void PostSecretPathTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //string secretMountPath = null;
-            //instance.PostSecretPath(path, secretMountPath);
-        }
-
-        /// <summary>
-        /// Test PostSecretUndeletePath
-        /// </summary>
-        [Fact]
-        public void PostSecretUndeletePathTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string path = null;
-            //KvUndeleteRequest kvUndeleteRequest = null;
-            //string secretMountPath = null;
-            //instance.PostSecretUndeletePath(path, kvUndeleteRequest, secretMountPath);
-        }
-
-        /// <summary>
-        /// Test PostSshConfigCa
-        /// </summary>
-        [Fact]
-        public void PostSshConfigCaTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //SshConfigCaRequest sshConfigCaRequest = null;
-            //string sshMountPath = null;
-            //instance.PostSshConfigCa(sshConfigCaRequest, sshMountPath);
-        }
-
-        /// <summary>
-        /// Test PostSshConfigZeroaddress
-        /// </summary>
-        [Fact]
-        public void PostSshConfigZeroaddressTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //SshConfigZeroaddressRequest sshConfigZeroaddressRequest = null;
-            //string sshMountPath = null;
-            //instance.PostSshConfigZeroaddress(sshConfigZeroaddressRequest, sshMountPath);
-        }
-
-        /// <summary>
-        /// Test PostSshCredsRole
-        /// </summary>
-        [Fact]
-        public void PostSshCredsRoleTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string role = null;
-            //SshCredsRequest sshCredsRequest = null;
-            //string sshMountPath = null;
-            //instance.PostSshCredsRole(role, sshCredsRequest, sshMountPath);
-        }
-
-        /// <summary>
-        /// Test PostSshIssueRole
-        /// </summary>
-        [Fact]
-        public void PostSshIssueRoleTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string role = null;
-            //SshIssueRequest sshIssueRequest = null;
-            //string sshMountPath = null;
-            //instance.PostSshIssueRole(role, sshIssueRequest, sshMountPath);
-        }
-
-        /// <summary>
-        /// Test PostSshKeysKeyName
-        /// </summary>
-        [Fact]
-        public void PostSshKeysKeyNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string keyName = null;
-            //SshKeysRequest sshKeysRequest = null;
-            //string sshMountPath = null;
-            //instance.PostSshKeysKeyName(keyName, sshKeysRequest, sshMountPath);
-        }
-
-        /// <summary>
-        /// Test PostSshLookup
-        /// </summary>
-        [Fact]
-        public void PostSshLookupTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //SshLookupRequest sshLookupRequest = null;
-            //string sshMountPath = null;
-            //instance.PostSshLookup(sshLookupRequest, sshMountPath);
-        }
-
-        /// <summary>
-        /// Test PostSshRolesRole
-        /// </summary>
-        [Fact]
-        public void PostSshRolesRoleTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string role = null;
-            //SshRolesRequest sshRolesRequest = null;
-            //string sshMountPath = null;
-            //instance.PostSshRolesRole(role, sshRolesRequest, sshMountPath);
-        }
-
-        /// <summary>
-        /// Test PostSshSignRole
-        /// </summary>
-        [Fact]
-        public void PostSshSignRoleTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string role = null;
-            //SshSignRequest sshSignRequest = null;
-            //string sshMountPath = null;
-            //instance.PostSshSignRole(role, sshSignRequest, sshMountPath);
-        }
-
-        /// <summary>
-        /// Test PostSshVerify
-        /// </summary>
-        [Fact]
-        public void PostSshVerifyTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //SshVerifyRequest sshVerifyRequest = null;
-            //string sshMountPath = null;
-            //instance.PostSshVerify(sshVerifyRequest, sshMountPath);
-        }
-
-        /// <summary>
-        /// Test PostTerraformConfig
-        /// </summary>
-        [Fact]
-        public void PostTerraformConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //TerraformConfigRequest terraformConfigRequest = null;
-            //string terraformMountPath = null;
-            //instance.PostTerraformConfig(terraformConfigRequest, terraformMountPath);
-        }
-
-        /// <summary>
-        /// Test PostTerraformCredsName
-        /// </summary>
-        [Fact]
-        public void PostTerraformCredsNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string terraformMountPath = null;
-            //instance.PostTerraformCredsName(name, terraformMountPath);
-        }
-
-        /// <summary>
-        /// Test PostTerraformRoleName
-        /// </summary>
-        [Fact]
-        public void PostTerraformRoleNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TerraformRoleRequest terraformRoleRequest = null;
-            //string terraformMountPath = null;
-            //instance.PostTerraformRoleName(name, terraformRoleRequest, terraformMountPath);
-        }
-
-        /// <summary>
-        /// Test PostTerraformRotateRoleName
-        /// </summary>
-        [Fact]
-        public void PostTerraformRotateRoleNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string terraformMountPath = null;
-            //instance.PostTerraformRotateRoleName(name, terraformMountPath);
-        }
-
-        /// <summary>
-        /// Test PostTotpCodeName
-        /// </summary>
-        [Fact]
-        public void PostTotpCodeNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TotpCodeRequest totpCodeRequest = null;
-            //string totpMountPath = null;
-            //instance.PostTotpCodeName(name, totpCodeRequest, totpMountPath);
-        }
-
-        /// <summary>
-        /// Test PostTotpKeysName
-        /// </summary>
-        [Fact]
-        public void PostTotpKeysNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TotpKeysRequest totpKeysRequest = null;
-            //string totpMountPath = null;
-            //instance.PostTotpKeysName(name, totpKeysRequest, totpMountPath);
-        }
-
-        /// <summary>
-        /// Test PostTransitCacheConfig
-        /// </summary>
-        [Fact]
-        public void PostTransitCacheConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //TransitCacheConfigRequest transitCacheConfigRequest = null;
-            //string transitMountPath = null;
-            //instance.PostTransitCacheConfig(transitCacheConfigRequest, transitMountPath);
-        }
-
-        /// <summary>
-        /// Test PostTransitDatakeyPlaintextName
-        /// </summary>
-        [Fact]
-        public void PostTransitDatakeyPlaintextNameTest()
+        public void TransitGenerateDataKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string plaintext = null;
-            //TransitDatakeyRequest transitDatakeyRequest = null;
+            //TransitGenerateDataKeyRequest transitGenerateDataKeyRequest = null;
             //string transitMountPath = null;
-            //instance.PostTransitDatakeyPlaintextName(name, plaintext, transitDatakeyRequest, transitMountPath);
+            //instance.TransitGenerateDataKey(name, plaintext, transitGenerateDataKeyRequest, transitMountPath);
         }
 
         /// <summary>
-        /// Test PostTransitDecryptName
+        /// Test TransitGenerateHMAC
         /// </summary>
         [Fact]
-        public void PostTransitDecryptNameTest()
+        public void TransitGenerateHMACTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //TransitDecryptRequest transitDecryptRequest = null;
+            //TransitGenerateHMACRequest transitGenerateHMACRequest = null;
             //string transitMountPath = null;
-            //instance.PostTransitDecryptName(name, transitDecryptRequest, transitMountPath);
+            //instance.TransitGenerateHMAC(name, transitGenerateHMACRequest, transitMountPath);
         }
 
         /// <summary>
-        /// Test PostTransitEncryptName
+        /// Test TransitGenerateHMACWithAlgorithm
         /// </summary>
         [Fact]
-        public void PostTransitEncryptNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TransitEncryptRequest transitEncryptRequest = null;
-            //string transitMountPath = null;
-            //instance.PostTransitEncryptName(name, transitEncryptRequest, transitMountPath);
-        }
-
-        /// <summary>
-        /// Test PostTransitHash
-        /// </summary>
-        [Fact]
-        public void PostTransitHashTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //TransitHashRequest transitHashRequest = null;
-            //string transitMountPath = null;
-            //instance.PostTransitHash(transitHashRequest, transitMountPath);
-        }
-
-        /// <summary>
-        /// Test PostTransitHashUrlalgorithm
-        /// </summary>
-        [Fact]
-        public void PostTransitHashUrlalgorithmTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string urlalgorithm = null;
-            //TransitHashRequest transitHashRequest = null;
-            //string transitMountPath = null;
-            //instance.PostTransitHashUrlalgorithm(urlalgorithm, transitHashRequest, transitMountPath);
-        }
-
-        /// <summary>
-        /// Test PostTransitHmacName
-        /// </summary>
-        [Fact]
-        public void PostTransitHmacNameTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TransitHmacRequest transitHmacRequest = null;
-            //string transitMountPath = null;
-            //instance.PostTransitHmacName(name, transitHmacRequest, transitMountPath);
-        }
-
-        /// <summary>
-        /// Test PostTransitHmacNameUrlalgorithm
-        /// </summary>
-        [Fact]
-        public void PostTransitHmacNameUrlalgorithmTest()
+        public void TransitGenerateHMACWithAlgorithmTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string urlalgorithm = null;
-            //TransitHmacRequest transitHmacRequest = null;
+            //TransitGenerateHMACWithAlgorithmRequest transitGenerateHMACWithAlgorithmRequest = null;
             //string transitMountPath = null;
-            //instance.PostTransitHmacNameUrlalgorithm(name, urlalgorithm, transitHmacRequest, transitMountPath);
+            //instance.TransitGenerateHMACWithAlgorithm(name, urlalgorithm, transitGenerateHMACWithAlgorithmRequest, transitMountPath);
         }
 
         /// <summary>
-        /// Test PostTransitKeysName
+        /// Test TransitGenerateRandom
         /// </summary>
         [Fact]
-        public void PostTransitKeysNameTest()
+        public void TransitGenerateRandomTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TransitKeysRequest transitKeysRequest = null;
+            //TransitGenerateRandomRequest transitGenerateRandomRequest = null;
             //string transitMountPath = null;
-            //instance.PostTransitKeysName(name, transitKeysRequest, transitMountPath);
+            //instance.TransitGenerateRandom(transitGenerateRandomRequest, transitMountPath);
         }
 
         /// <summary>
-        /// Test PostTransitKeysNameConfig
+        /// Test TransitGenerateRandomSource
         /// </summary>
         [Fact]
-        public void PostTransitKeysNameConfigTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TransitKeysConfigRequest transitKeysConfigRequest = null;
-            //string transitMountPath = null;
-            //instance.PostTransitKeysNameConfig(name, transitKeysConfigRequest, transitMountPath);
-        }
-
-        /// <summary>
-        /// Test PostTransitKeysNameImport
-        /// </summary>
-        [Fact]
-        public void PostTransitKeysNameImportTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TransitKeysImportRequest transitKeysImportRequest = null;
-            //string transitMountPath = null;
-            //instance.PostTransitKeysNameImport(name, transitKeysImportRequest, transitMountPath);
-        }
-
-        /// <summary>
-        /// Test PostTransitKeysNameImportVersion
-        /// </summary>
-        [Fact]
-        public void PostTransitKeysNameImportVersionTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TransitKeysImportVersionRequest transitKeysImportVersionRequest = null;
-            //string transitMountPath = null;
-            //instance.PostTransitKeysNameImportVersion(name, transitKeysImportVersionRequest, transitMountPath);
-        }
-
-        /// <summary>
-        /// Test PostTransitKeysNameRotate
-        /// </summary>
-        [Fact]
-        public void PostTransitKeysNameRotateTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //string transitMountPath = null;
-            //instance.PostTransitKeysNameRotate(name, transitMountPath);
-        }
-
-        /// <summary>
-        /// Test PostTransitKeysNameTrim
-        /// </summary>
-        [Fact]
-        public void PostTransitKeysNameTrimTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
-            //TransitKeysTrimRequest transitKeysTrimRequest = null;
-            //string transitMountPath = null;
-            //instance.PostTransitKeysNameTrim(name, transitKeysTrimRequest, transitMountPath);
-        }
-
-        /// <summary>
-        /// Test PostTransitRandom
-        /// </summary>
-        [Fact]
-        public void PostTransitRandomTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //TransitRandomRequest transitRandomRequest = null;
-            //string transitMountPath = null;
-            //instance.PostTransitRandom(transitRandomRequest, transitMountPath);
-        }
-
-        /// <summary>
-        /// Test PostTransitRandomSource
-        /// </summary>
-        [Fact]
-        public void PostTransitRandomSourceTest()
+        public void TransitGenerateRandomSourceTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string source = null;
-            //TransitRandomRequest transitRandomRequest = null;
+            //TransitGenerateRandomSourceRequest transitGenerateRandomSourceRequest = null;
             //string transitMountPath = null;
-            //instance.PostTransitRandomSource(source, transitRandomRequest, transitMountPath);
+            //instance.TransitGenerateRandomSource(source, transitGenerateRandomSourceRequest, transitMountPath);
         }
 
         /// <summary>
-        /// Test PostTransitRandomSourceUrlbytes
+        /// Test TransitGenerateRandomSourceBytes
         /// </summary>
         [Fact]
-        public void PostTransitRandomSourceUrlbytesTest()
+        public void TransitGenerateRandomSourceBytesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string source = null;
             //string urlbytes = null;
-            //TransitRandomRequest transitRandomRequest = null;
+            //TransitGenerateRandomSourceBytesRequest transitGenerateRandomSourceBytesRequest = null;
             //string transitMountPath = null;
-            //instance.PostTransitRandomSourceUrlbytes(source, urlbytes, transitRandomRequest, transitMountPath);
+            //instance.TransitGenerateRandomSourceBytes(source, urlbytes, transitGenerateRandomSourceBytesRequest, transitMountPath);
         }
 
         /// <summary>
-        /// Test PostTransitRandomUrlbytes
+        /// Test TransitHash
         /// </summary>
         [Fact]
-        public void PostTransitRandomUrlbytesTest()
+        public void TransitHashTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string urlbytes = null;
-            //TransitRandomRequest transitRandomRequest = null;
+            //TransitHashRequest transitHashRequest = null;
             //string transitMountPath = null;
-            //instance.PostTransitRandomUrlbytes(urlbytes, transitRandomRequest, transitMountPath);
+            //instance.TransitHash(transitHashRequest, transitMountPath);
         }
 
         /// <summary>
-        /// Test PostTransitRestore
+        /// Test TransitHashWithAlgorithm
         /// </summary>
         [Fact]
-        public void PostTransitRestoreTest()
+        public void TransitHashWithAlgorithmTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //TransitRestoreRequest transitRestoreRequest = null;
+            //string urlalgorithm = null;
+            //TransitHashWithAlgorithmRequest transitHashWithAlgorithmRequest = null;
             //string transitMountPath = null;
-            //instance.PostTransitRestore(transitRestoreRequest, transitMountPath);
+            //instance.TransitHashWithAlgorithm(urlalgorithm, transitHashWithAlgorithmRequest, transitMountPath);
         }
 
         /// <summary>
-        /// Test PostTransitRestoreName
+        /// Test TransitImportKey
         /// </summary>
         [Fact]
-        public void PostTransitRestoreNameTest()
+        public void TransitImportKeyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
-            //TransitRestoreRequest transitRestoreRequest = null;
+            //TransitImportKeyRequest transitImportKeyRequest = null;
             //string transitMountPath = null;
-            //instance.PostTransitRestoreName(name, transitRestoreRequest, transitMountPath);
+            //instance.TransitImportKey(name, transitImportKeyRequest, transitMountPath);
         }
 
         /// <summary>
-        /// Test PostTransitRewrapName
+        /// Test TransitImportKeyVersion
         /// </summary>
         [Fact]
-        public void PostTransitRewrapNameTest()
+        public void TransitImportKeyVersionTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //TransitImportKeyVersionRequest transitImportKeyVersionRequest = null;
+            //string transitMountPath = null;
+            //instance.TransitImportKeyVersion(name, transitImportKeyVersionRequest, transitMountPath);
+        }
+
+        /// <summary>
+        /// Test TransitListKeys
+        /// </summary>
+        [Fact]
+        public void TransitListKeysTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string transitMountPath = null;
+            //instance.TransitListKeys(list, transitMountPath);
+        }
+
+        /// <summary>
+        /// Test TransitReadCacheConfig
+        /// </summary>
+        [Fact]
+        public void TransitReadCacheConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string transitMountPath = null;
+            //instance.TransitReadCacheConfig(transitMountPath);
+        }
+
+        /// <summary>
+        /// Test TransitReadConfigKeys
+        /// </summary>
+        [Fact]
+        public void TransitReadConfigKeysTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string transitMountPath = null;
+            //instance.TransitReadConfigKeys(transitMountPath);
+        }
+
+        /// <summary>
+        /// Test TransitReadKey
+        /// </summary>
+        [Fact]
+        public void TransitReadKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string transitMountPath = null;
+            //instance.TransitReadKey(name, transitMountPath);
+        }
+
+        /// <summary>
+        /// Test TransitReadWrappingKey
+        /// </summary>
+        [Fact]
+        public void TransitReadWrappingKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string transitMountPath = null;
+            //instance.TransitReadWrappingKey(transitMountPath);
+        }
+
+        /// <summary>
+        /// Test TransitRestore
+        /// </summary>
+        [Fact]
+        public void TransitRestoreTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //TransitRestoreRequest transitRestoreRequest = null;
+            //string transitMountPath = null;
+            //instance.TransitRestore(transitRestoreRequest, transitMountPath);
+        }
+
+        /// <summary>
+        /// Test TransitRestoreKey
+        /// </summary>
+        [Fact]
+        public void TransitRestoreKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //TransitRestoreKeyRequest transitRestoreKeyRequest = null;
+            //string transitMountPath = null;
+            //instance.TransitRestoreKey(name, transitRestoreKeyRequest, transitMountPath);
+        }
+
+        /// <summary>
+        /// Test TransitRewrap
+        /// </summary>
+        [Fact]
+        public void TransitRewrapTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //TransitRewrapRequest transitRewrapRequest = null;
             //string transitMountPath = null;
-            //instance.PostTransitRewrapName(name, transitRewrapRequest, transitMountPath);
+            //instance.TransitRewrap(name, transitRewrapRequest, transitMountPath);
         }
 
         /// <summary>
-        /// Test PostTransitSignName
+        /// Test TransitRotateKey
         /// </summary>
         [Fact]
-        public void PostTransitSignNameTest()
+        public void TransitRotateKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string transitMountPath = null;
+            //instance.TransitRotateKey(name, transitMountPath);
+        }
+
+        /// <summary>
+        /// Test TransitSign
+        /// </summary>
+        [Fact]
+        public void TransitSignTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //TransitSignRequest transitSignRequest = null;
             //string transitMountPath = null;
-            //instance.PostTransitSignName(name, transitSignRequest, transitMountPath);
+            //instance.TransitSign(name, transitSignRequest, transitMountPath);
         }
 
         /// <summary>
-        /// Test PostTransitSignNameUrlalgorithm
+        /// Test TransitSignWithAlgorithm
         /// </summary>
         [Fact]
-        public void PostTransitSignNameUrlalgorithmTest()
+        public void TransitSignWithAlgorithmTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string urlalgorithm = null;
-            //TransitSignRequest transitSignRequest = null;
+            //TransitSignWithAlgorithmRequest transitSignWithAlgorithmRequest = null;
             //string transitMountPath = null;
-            //instance.PostTransitSignNameUrlalgorithm(name, urlalgorithm, transitSignRequest, transitMountPath);
+            //instance.TransitSignWithAlgorithm(name, urlalgorithm, transitSignWithAlgorithmRequest, transitMountPath);
         }
 
         /// <summary>
-        /// Test PostTransitVerifyName
+        /// Test TransitTrimKey
         /// </summary>
         [Fact]
-        public void PostTransitVerifyNameTest()
+        public void TransitTrimKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //TransitTrimKeyRequest transitTrimKeyRequest = null;
+            //string transitMountPath = null;
+            //instance.TransitTrimKey(name, transitTrimKeyRequest, transitMountPath);
+        }
+
+        /// <summary>
+        /// Test TransitVerify
+        /// </summary>
+        [Fact]
+        public void TransitVerifyTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //TransitVerifyRequest transitVerifyRequest = null;
             //string transitMountPath = null;
-            //instance.PostTransitVerifyName(name, transitVerifyRequest, transitMountPath);
+            //instance.TransitVerify(name, transitVerifyRequest, transitMountPath);
         }
 
         /// <summary>
-        /// Test PostTransitVerifyNameUrlalgorithm
+        /// Test TransitVerifyWithAlgorithm
         /// </summary>
         [Fact]
-        public void PostTransitVerifyNameUrlalgorithmTest()
+        public void TransitVerifyWithAlgorithmTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //string urlalgorithm = null;
-            //TransitVerifyRequest transitVerifyRequest = null;
+            //TransitVerifyWithAlgorithmRequest transitVerifyWithAlgorithmRequest = null;
             //string transitMountPath = null;
-            //instance.PostTransitVerifyNameUrlalgorithm(name, urlalgorithm, transitVerifyRequest, transitMountPath);
+            //instance.TransitVerifyWithAlgorithm(name, urlalgorithm, transitVerifyWithAlgorithmRequest, transitMountPath);
+        }
+
+        /// <summary>
+        /// Test TransitWriteCacheConfig
+        /// </summary>
+        [Fact]
+        public void TransitWriteCacheConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //TransitWriteCacheConfigRequest transitWriteCacheConfigRequest = null;
+            //string transitMountPath = null;
+            //instance.TransitWriteCacheConfig(transitWriteCacheConfigRequest, transitMountPath);
+        }
+
+        /// <summary>
+        /// Test TransitWriteConfigKeys
+        /// </summary>
+        [Fact]
+        public void TransitWriteConfigKeysTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //TransitWriteConfigKeysRequest transitWriteConfigKeysRequest = null;
+            //string transitMountPath = null;
+            //instance.TransitWriteConfigKeys(transitWriteConfigKeysRequest, transitMountPath);
+        }
+
+        /// <summary>
+        /// Test TransitWriteKey
+        /// </summary>
+        [Fact]
+        public void TransitWriteKeyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //TransitWriteKeyRequest transitWriteKeyRequest = null;
+            //string transitMountPath = null;
+            //instance.TransitWriteKey(name, transitWriteKeyRequest, transitMountPath);
+        }
+
+        /// <summary>
+        /// Test TransitWriteKeyConfig
+        /// </summary>
+        [Fact]
+        public void TransitWriteKeyConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //TransitWriteKeyConfigRequest transitWriteKeyConfigRequest = null;
+            //string transitMountPath = null;
+            //instance.TransitWriteKeyConfig(name, transitWriteKeyConfigRequest, transitMountPath);
+        }
+
+        /// <summary>
+        /// Test TransitWriteRandomUrlbytes
+        /// </summary>
+        [Fact]
+        public void TransitWriteRandomUrlbytesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string urlbytes = null;
+            //TransitWriteRandomUrlbytesRequest transitWriteRandomUrlbytesRequest = null;
+            //string transitMountPath = null;
+            //instance.TransitWriteRandomUrlbytes(urlbytes, transitWriteRandomUrlbytesRequest, transitMountPath);
         }
     }
 }
