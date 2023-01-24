@@ -1276,7 +1276,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> OIDCListProviders(string list, string allowedClientId  = "", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> OIDCListProviders(string list, string allowedClientId = default(string), TimeSpan? wrapTTL = null);
         /// <summary>
         /// List configured OIDC roles
         /// </summary>
@@ -3236,7 +3236,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> OIDCListProvidersAsync(string list, string allowedClientId  = "", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> OIDCListProvidersAsync(string list, string allowedClientId = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// List configured OIDC roles
@@ -12053,7 +12053,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> OIDCListProviders(string list, string allowedClientId  = "", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> OIDCListProviders(string list, string allowedClientId = default(string), TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -12113,7 +12113,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> OIDCListProvidersAsync(string list, string allowedClientId  = "", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> OIDCListProvidersAsync(string list, string allowedClientId = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)

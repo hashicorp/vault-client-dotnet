@@ -2614,7 +2614,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2623,7 +2623,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GitHubReadMapTeams(string githubMountPath = "github", string list  = "false", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> GitHubReadMapTeams(string githubMountPath = "github", string list = default(string), TimeSpan? wrapTTL = null);
         /// <summary>
         /// Read/write/delete a single users mapping
         /// </summary>
@@ -2650,7 +2650,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2659,7 +2659,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GitHubReadMapUsers(string githubMountPath = "github", string list  = "false", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> GitHubReadMapUsers(string githubMountPath = "github", string list = default(string), TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -4506,7 +4506,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenWriteCreateRequest"></param>
-        /// <param name="format">Return json formatted output (optional, default to &quot;&quot;)</param>
+        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -4516,7 +4516,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> TokenWriteCreate(TokenWriteCreateRequest tokenWriteCreateRequest, string tokenMountPath = "token", string format  = "", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> TokenWriteCreate(TokenWriteCreateRequest tokenWriteCreateRequest, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null);
         /// <summary>
         /// The token create path is used to create new orphan tokens.
         /// </summary>
@@ -4525,7 +4525,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenWriteCreateOrphanRequest"></param>
-        /// <param name="format">Return json formatted output (optional, default to &quot;&quot;)</param>
+        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -4535,7 +4535,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> TokenWriteCreateOrphan(TokenWriteCreateOrphanRequest tokenWriteCreateOrphanRequest, string tokenMountPath = "token", string format  = "", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> TokenWriteCreateOrphan(TokenWriteCreateOrphanRequest tokenWriteCreateOrphanRequest, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null);
         /// <summary>
         /// This token create path is used to create new tokens adhering to the given role.
         /// </summary>
@@ -4545,7 +4545,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role</param>
         /// <param name="tokenWriteCreateWithRoleRequest"></param>
-        /// <param name="format">Return json formatted output (optional, default to &quot;&quot;)</param>
+        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -4555,7 +4555,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> TokenWriteCreateWithRole(TokenWriteCreateWithRoleRequest tokenWriteCreateWithRoleRequest, string roleName, string tokenMountPath = "token", string format  = "", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> TokenWriteCreateWithRole(TokenWriteCreateWithRoleRequest tokenWriteCreateWithRoleRequest, string roleName, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null);
         /// <summary>
         /// This endpoint will lookup a token and its properties.
         /// </summary>
@@ -7646,7 +7646,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7656,7 +7656,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GitHubReadMapTeamsAsync(string githubMountPath = "github", string list  = "false", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GitHubReadMapTeamsAsync(string githubMountPath = "github", string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Read/write/delete a single users mapping
@@ -7686,7 +7686,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7696,7 +7696,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GitHubReadMapUsersAsync(string githubMountPath = "github", string list  = "false", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GitHubReadMapUsersAsync(string githubMountPath = "github", string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -9748,7 +9748,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenWriteCreateRequest"></param>
-        /// <param name="format">Return json formatted output (optional, default to &quot;&quot;)</param>
+        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -9759,7 +9759,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> TokenWriteCreateAsync(TokenWriteCreateRequest tokenWriteCreateRequest, string tokenMountPath = "token", string format  = "", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> TokenWriteCreateAsync(TokenWriteCreateRequest tokenWriteCreateRequest, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// The token create path is used to create new orphan tokens.
@@ -9769,7 +9769,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenWriteCreateOrphanRequest"></param>
-        /// <param name="format">Return json formatted output (optional, default to &quot;&quot;)</param>
+        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -9780,7 +9780,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> TokenWriteCreateOrphanAsync(TokenWriteCreateOrphanRequest tokenWriteCreateOrphanRequest, string tokenMountPath = "token", string format  = "", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> TokenWriteCreateOrphanAsync(TokenWriteCreateOrphanRequest tokenWriteCreateOrphanRequest, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This token create path is used to create new tokens adhering to the given role.
@@ -9791,7 +9791,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role</param>
         /// <param name="tokenWriteCreateWithRoleRequest"></param>
-        /// <param name="format">Return json formatted output (optional, default to &quot;&quot;)</param>
+        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -9802,7 +9802,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> TokenWriteCreateWithRoleAsync(TokenWriteCreateWithRoleRequest tokenWriteCreateWithRoleRequest, string roleName, string tokenMountPath = "token", string format  = "", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> TokenWriteCreateWithRoleAsync(TokenWriteCreateWithRoleRequest tokenWriteCreateWithRoleRequest, string roleName, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This endpoint will lookup a token and its properties.
@@ -27514,7 +27514,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -27523,7 +27523,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GitHubReadMapTeams(string githubMountPath = "github", string list  = "false", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> GitHubReadMapTeams(string githubMountPath = "github", string list = default(string), TimeSpan? wrapTTL = null)
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -27572,7 +27572,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -27582,7 +27582,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GitHubReadMapTeamsAsync(string githubMountPath = "github", string list  = "false", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GitHubReadMapTeamsAsync(string githubMountPath = "github", string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -27752,7 +27752,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -27761,7 +27761,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GitHubReadMapUsers(string githubMountPath = "github", string list  = "false", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> GitHubReadMapUsers(string githubMountPath = "github", string list = default(string), TimeSpan? wrapTTL = null)
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -27810,7 +27810,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -27820,7 +27820,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GitHubReadMapUsersAsync(string githubMountPath = "github", string list  = "false", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GitHubReadMapUsersAsync(string githubMountPath = "github", string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -40226,7 +40226,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenWriteCreateRequest"></param>
-        /// <param name="format">Return json formatted output (optional, default to &quot;&quot;)</param>
+        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -40236,7 +40236,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> TokenWriteCreate(TokenWriteCreateRequest tokenWriteCreateRequest, string tokenMountPath = "token", string format  = "", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> TokenWriteCreate(TokenWriteCreateRequest tokenWriteCreateRequest, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'tokenWriteCreateRequest' is set
             if (tokenWriteCreateRequest == null)
@@ -40291,7 +40291,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenWriteCreateRequest"></param>
-        /// <param name="format">Return json formatted output (optional, default to &quot;&quot;)</param>
+        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -40302,7 +40302,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> TokenWriteCreateAsync(TokenWriteCreateRequest tokenWriteCreateRequest, string tokenMountPath = "token", string format  = "", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> TokenWriteCreateAsync(TokenWriteCreateRequest tokenWriteCreateRequest, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'tokenWriteCreateRequest' is set
             if (tokenWriteCreateRequest == null)
@@ -40358,7 +40358,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenWriteCreateOrphanRequest"></param>
-        /// <param name="format">Return json formatted output (optional, default to &quot;&quot;)</param>
+        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -40368,7 +40368,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> TokenWriteCreateOrphan(TokenWriteCreateOrphanRequest tokenWriteCreateOrphanRequest, string tokenMountPath = "token", string format  = "", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> TokenWriteCreateOrphan(TokenWriteCreateOrphanRequest tokenWriteCreateOrphanRequest, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'tokenWriteCreateOrphanRequest' is set
             if (tokenWriteCreateOrphanRequest == null)
@@ -40423,7 +40423,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenWriteCreateOrphanRequest"></param>
-        /// <param name="format">Return json formatted output (optional, default to &quot;&quot;)</param>
+        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -40434,7 +40434,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> TokenWriteCreateOrphanAsync(TokenWriteCreateOrphanRequest tokenWriteCreateOrphanRequest, string tokenMountPath = "token", string format  = "", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> TokenWriteCreateOrphanAsync(TokenWriteCreateOrphanRequest tokenWriteCreateOrphanRequest, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'tokenWriteCreateOrphanRequest' is set
             if (tokenWriteCreateOrphanRequest == null)
@@ -40491,7 +40491,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role</param>
         /// <param name="tokenWriteCreateWithRoleRequest"></param>
-        /// <param name="format">Return json formatted output (optional, default to &quot;&quot;)</param>
+        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -40501,7 +40501,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> TokenWriteCreateWithRole(TokenWriteCreateWithRoleRequest tokenWriteCreateWithRoleRequest, string roleName, string tokenMountPath = "token", string format  = "", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> TokenWriteCreateWithRole(TokenWriteCreateWithRoleRequest tokenWriteCreateWithRoleRequest, string roleName, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
@@ -40562,7 +40562,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="roleName">Name of the role</param>
         /// <param name="tokenWriteCreateWithRoleRequest"></param>
-        /// <param name="format">Return json formatted output (optional, default to &quot;&quot;)</param>
+        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -40573,7 +40573,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> TokenWriteCreateWithRoleAsync(TokenWriteCreateWithRoleRequest tokenWriteCreateWithRoleRequest, string roleName, string tokenMountPath = "token", string format  = "", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> TokenWriteCreateWithRoleAsync(TokenWriteCreateWithRoleRequest tokenWriteCreateWithRoleRequest, string roleName, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)

@@ -536,7 +536,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
-        /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional, default to &quot;info&quot;)</param>
+        /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -545,7 +545,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> Monitor(string logFormat  = "standard", string logLevel  = "info", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> Monitor(string logFormat = default(string), string logLevel = default(string), TimeSpan? wrapTTL = null);
         /// <summary>
         /// Returns an HTML page listing the available profiles.
         /// </summary>
@@ -1312,7 +1312,7 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional, default to &quot;&quot;)</param>
+        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1321,7 +1321,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> ReadMetrics(string format  = "", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> ReadMetrics(string format = default(string), TimeSpan? wrapTTL = null);
         /// <summary>
         /// Read the configuration of the secret engine at the given path.
         /// </summary>
@@ -1413,7 +1413,7 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1422,7 +1422,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> ReadPolicies(string list  = "false", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> ReadPolicies(string list = default(string), TimeSpan? wrapTTL = null);
         /// <summary>
         /// Retrieve information about the named ACL policy.
         /// </summary>
@@ -1531,7 +1531,7 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1540,7 +1540,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> ReadRaw(string list  = "false", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> ReadRaw(string list = default(string), TimeSpan? wrapTTL = null);
         /// <summary>
         /// Read the value of the key at the given path.
         /// </summary>
@@ -1549,7 +1549,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path"></param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1558,7 +1558,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> ReadRawPath(string path, string list  = "false", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> ReadRawPath(string path, string list = default(string), TimeSpan? wrapTTL = null);
         /// <summary>
         /// Return the backup copy of PGP-encrypted unseal keys.
         /// </summary>
@@ -3432,7 +3432,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
-        /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional, default to &quot;info&quot;)</param>
+        /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -3442,7 +3442,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> MonitorAsync(string logFormat  = "standard", string logLevel  = "info", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> MonitorAsync(string logFormat = default(string), string logLevel = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Returns an HTML page listing the available profiles.
@@ -4304,7 +4304,7 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional, default to &quot;&quot;)</param>
+        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -4314,7 +4314,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> ReadMetricsAsync(string format  = "", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ReadMetricsAsync(string format = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Read the configuration of the secret engine at the given path.
@@ -4417,7 +4417,7 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -4427,7 +4427,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> ReadPoliciesAsync(string list  = "false", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ReadPoliciesAsync(string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Retrieve information about the named ACL policy.
@@ -4549,7 +4549,7 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -4559,7 +4559,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> ReadRawAsync(string list  = "false", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ReadRawAsync(string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Read the value of the key at the given path.
@@ -4569,7 +4569,7 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path"></param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -4579,7 +4579,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> ReadRawPathAsync(string path, string list  = "false", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ReadRawPathAsync(string path, string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Return the backup copy of PGP-encrypted unseal keys.
@@ -9342,7 +9342,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
-        /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional, default to &quot;info&quot;)</param>
+        /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -9351,7 +9351,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> Monitor(string logFormat  = "standard", string logLevel  = "info", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> Monitor(string logFormat = default(string), string logLevel = default(string), TimeSpan? wrapTTL = null)
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9400,7 +9400,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="logFormat">Output format of logs. Supported values are \&quot;standard\&quot; and \&quot;json\&quot;. The default is \&quot;standard\&quot;. (optional, default to &quot;standard&quot;)</param>
-        /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional, default to &quot;info&quot;)</param>
+        /// <param name="logLevel">Log level to view system logs at. Currently supported values are \&quot;trace\&quot;, \&quot;debug\&quot;, \&quot;info\&quot;, \&quot;warn\&quot;, \&quot;error\&quot;. (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -9410,7 +9410,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> MonitorAsync(string logFormat  = "standard", string logLevel  = "info", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> MonitorAsync(string logFormat = default(string), string logLevel = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14149,7 +14149,7 @@ namespace Vault.Api
         /// Export the metrics aggregated for telemetry purpose. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional, default to &quot;&quot;)</param>
+        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -14158,7 +14158,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> ReadMetrics(string format  = "", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> ReadMetrics(string format = default(string), TimeSpan? wrapTTL = null)
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14202,7 +14202,7 @@ namespace Vault.Api
         /// Export the metrics aggregated for telemetry purpose. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional, default to &quot;&quot;)</param>
+        /// <param name="format">Format to export metrics into. Currently accepts only \&quot;prometheus\&quot;. (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -14212,7 +14212,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> ReadMetricsAsync(string format  = "", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ReadMetricsAsync(string format = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -14795,7 +14795,7 @@ namespace Vault.Api
         /// List the configured access control policies. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -14804,7 +14804,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> ReadPolicies(string list  = "false", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> ReadPolicies(string list = default(string), TimeSpan? wrapTTL = null)
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14848,7 +14848,7 @@ namespace Vault.Api
         /// List the configured access control policies. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -14858,7 +14858,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> ReadPoliciesAsync(string list  = "false", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ReadPoliciesAsync(string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15551,7 +15551,7 @@ namespace Vault.Api
         /// Read the value of the key at the given path. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -15560,7 +15560,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> ReadRaw(string list  = "false", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> ReadRaw(string list = default(string), TimeSpan? wrapTTL = null)
         {
             RequestOptions requestOptions = new RequestOptions();
 
@@ -15604,7 +15604,7 @@ namespace Vault.Api
         /// Read the value of the key at the given path. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -15614,7 +15614,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> ReadRawAsync(string list  = "false", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ReadRawAsync(string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
 
             RequestOptions requestOptions = new RequestOptions();
@@ -15660,7 +15660,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path"></param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -15669,7 +15669,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> ReadRawPath(string path, string list  = "false", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> ReadRawPath(string path, string list = default(string), TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -15719,7 +15719,7 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path"></param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -15729,7 +15729,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> ReadRawPathAsync(string path, string list  = "false", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ReadRawPathAsync(string path, string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)

@@ -1037,7 +1037,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Specifies the path of the secret.</param>
         /// <param name="cubbyholeMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cubbyhole&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1046,7 +1046,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> CubbyholeRead(string path, string cubbyholeMountPath = "cubbyhole", string list  = "false", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> CubbyholeRead(string path, string cubbyholeMountPath = "cubbyhole", string list = default(string), TimeSpan? wrapTTL = null);
         /// <summary>
         /// Store a secret at the specified location.
         /// </summary>
@@ -1911,7 +1911,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kv&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1920,7 +1920,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> KVv1Read(string path, string kvMountPath = "kv", string list  = "false", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> KVv1Read(string path, string kvMountPath = "kv", string list = default(string), TimeSpan? wrapTTL = null);
         /// <summary>
         /// Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
         /// </summary>
@@ -2057,7 +2057,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2066,7 +2066,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> KVv2ReadMetadata(string path, string secretMountPath = "secret", string list  = "false", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> KVv2ReadMetadata(string path, string secretMountPath = "secret", string list = default(string), TimeSpan? wrapTTL = null);
         /// <summary>
         /// Read the structure of a secret entry from the Key-Value store with the values removed.
         /// </summary>
@@ -7499,7 +7499,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Specifies the path of the secret.</param>
         /// <param name="cubbyholeMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cubbyhole&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7509,7 +7509,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> CubbyholeReadAsync(string path, string cubbyholeMountPath = "cubbyhole", string list  = "false", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> CubbyholeReadAsync(string path, string cubbyholeMountPath = "cubbyhole", string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Store a secret at the specified location.
@@ -8469,7 +8469,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kv&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8479,7 +8479,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> KVv1ReadAsync(string path, string kvMountPath = "kv", string list  = "false", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> KVv1ReadAsync(string path, string kvMountPath = "kv", string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
@@ -8631,7 +8631,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8641,7 +8641,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> KVv2ReadMetadataAsync(string path, string secretMountPath = "secret", string list  = "false", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> KVv2ReadMetadataAsync(string path, string secretMountPath = "secret", string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Read the structure of a secret entry from the Key-Value store with the values removed.
@@ -20209,7 +20209,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Specifies the path of the secret.</param>
         /// <param name="cubbyholeMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cubbyhole&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -20218,7 +20218,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> CubbyholeRead(string path, string cubbyholeMountPath = "cubbyhole", string list  = "false", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> CubbyholeRead(string path, string cubbyholeMountPath = "cubbyhole", string list = default(string), TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -20273,7 +20273,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Specifies the path of the secret.</param>
         /// <param name="cubbyholeMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cubbyhole&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -20283,7 +20283,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> CubbyholeReadAsync(string path, string cubbyholeMountPath = "cubbyhole", string list  = "false", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> CubbyholeReadAsync(string path, string cubbyholeMountPath = "cubbyhole", string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -26117,7 +26117,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kv&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -26126,7 +26126,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> KVv1Read(string path, string kvMountPath = "kv", string list  = "false", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> KVv1Read(string path, string kvMountPath = "kv", string list = default(string), TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -26181,7 +26181,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="kvMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kv&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -26191,7 +26191,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> KVv1ReadAsync(string path, string kvMountPath = "kv", string list  = "false", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> KVv1ReadAsync(string path, string kvMountPath = "kv", string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -27103,7 +27103,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -27112,7 +27112,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> KVv2ReadMetadata(string path, string secretMountPath = "secret", string list  = "false", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> KVv2ReadMetadata(string path, string secretMountPath = "secret", string list = default(string), TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -27167,7 +27167,7 @@ namespace Vault.Api
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="path">Location of the secret.</param>
         /// <param name="secretMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;secret&quot;)</param>
-        /// <param name="list">Return a list if &#x60;true&#x60; (optional, default to &quot;false&quot;)</param>
+        /// <param name="list">Return a list if &#x60;true&#x60; (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -27177,7 +27177,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> KVv2ReadMetadataAsync(string path, string secretMountPath = "secret", string list  = "false", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> KVv2ReadMetadataAsync(string path, string secretMountPath = "secret", string list = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
