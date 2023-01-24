@@ -108,7 +108,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> AliasWriteByID(string id, AliasWriteByIDRequest aliasWriteByIDRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> AliasWriteByID(AliasWriteByIDRequest aliasWriteByIDRequest, string id, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Delete all of the entities provided
         /// </summary>
@@ -364,7 +364,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> EntityWriteAliasByID(string id, EntityWriteAliasByIDRequest entityWriteAliasByIDRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> EntityWriteAliasByID(EntityWriteAliasByIDRequest entityWriteAliasByIDRequest, string id, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update, read or delete an entity using entity ID
         /// </summary>
@@ -382,7 +382,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> EntityWriteByID(string id, EntityWriteByIDRequest entityWriteByIDRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> EntityWriteByID(EntityWriteByIDRequest entityWriteByIDRequest, string id, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update, read or delete an entity using entity name
         /// </summary>
@@ -400,7 +400,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> EntityWriteByName(string name, EntityWriteByNameRequest entityWriteByNameRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> EntityWriteByName(EntityWriteByNameRequest entityWriteByNameRequest, string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -622,7 +622,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GroupWriteAliasByID(string id, GroupWriteAliasByIDRequest groupWriteAliasByIDRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> GroupWriteAliasByID(GroupWriteAliasByIDRequest groupWriteAliasByIDRequest, string id, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update or delete an existing group using its ID.
         /// </summary>
@@ -640,7 +640,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GroupWriteByID(string id, GroupWriteByIDRequest groupWriteByIDRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> GroupWriteByID(GroupWriteByIDRequest groupWriteByIDRequest, string id, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -658,7 +658,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GroupWriteByName(string name, GroupWriteByNameRequest groupWriteByNameRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> GroupWriteByName(GroupWriteByNameRequest groupWriteByNameRequest, string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Delete a login enforcement
         /// </summary>
@@ -999,7 +999,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> MFAMethodWriteDuo(string methodId, MFAMethodWriteDuoRequest mFAMethodWriteDuoRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> MFAMethodWriteDuo(MFAMethodWriteDuoRequest mFAMethodWriteDuoRequest, string methodId, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update or create a configuration for the given MFA method
         /// </summary>
@@ -1017,7 +1017,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> MFAMethodWriteOkta(string methodId, MFAMethodWriteOktaRequest mFAMethodWriteOktaRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> MFAMethodWriteOkta(MFAMethodWriteOktaRequest mFAMethodWriteOktaRequest, string methodId, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update or create a configuration for the given MFA method
         /// </summary>
@@ -1035,7 +1035,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> MFAMethodWritePingID(string methodId, MFAMethodWritePingIDRequest mFAMethodWritePingIDRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> MFAMethodWritePingID(MFAMethodWritePingIDRequest mFAMethodWritePingIDRequest, string methodId, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update or create a configuration for the given MFA method
         /// </summary>
@@ -1053,7 +1053,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> MFAMethodWriteTOTP(string methodId, MFAMethodWriteTOTPRequest mFAMethodWriteTOTPRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> MFAMethodWriteTOTP(MFAMethodWriteTOTPRequest mFAMethodWriteTOTPRequest, string methodId, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Read the current login enforcement
         /// </summary>
@@ -1088,7 +1088,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> MFAWriteLoginEnforcement(string name, MFAWriteLoginEnforcementRequest mFAWriteLoginEnforcementRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> MFAWriteLoginEnforcement(MFAWriteLoginEnforcementRequest mFAWriteLoginEnforcementRequest, string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1276,7 +1276,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> OIDCListProviders(string list, string allowedClientId = "", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> OIDCListProviders(string list, string allowedClientId = default(string), TimeSpan? wrapTTL = null);
         /// <summary>
         /// List configured OIDC roles
         /// </summary>
@@ -1563,7 +1563,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> OIDCRotateKey(string name, OIDCRotateKeyRequest oIDCRotateKeyRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> OIDCRotateKey(OIDCRotateKeyRequest oIDCRotateKeyRequest, string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1581,7 +1581,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> OIDCWriteAssignment(string name, OIDCWriteAssignmentRequest oIDCWriteAssignmentRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> OIDCWriteAssignment(OIDCWriteAssignmentRequest oIDCWriteAssignmentRequest, string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1599,7 +1599,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> OIDCWriteClient(string name, OIDCWriteClientRequest oIDCWriteClientRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> OIDCWriteClient(OIDCWriteClientRequest oIDCWriteClientRequest, string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// OIDC configuration
         /// </summary>
@@ -1634,7 +1634,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> OIDCWriteKey(string name, OIDCWriteKeyRequest oIDCWriteKeyRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> OIDCWriteKey(OIDCWriteKeyRequest oIDCWriteKeyRequest, string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1652,7 +1652,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> OIDCWriteProvider(string name, OIDCWriteProviderRequest oIDCWriteProviderRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> OIDCWriteProvider(OIDCWriteProviderRequest oIDCWriteProviderRequest, string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1670,7 +1670,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> OIDCWriteProviderAuthorize(string name, OIDCWriteProviderAuthorizeRequest oIDCWriteProviderAuthorizeRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> OIDCWriteProviderAuthorize(OIDCWriteProviderAuthorizeRequest oIDCWriteProviderAuthorizeRequest, string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1688,7 +1688,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> OIDCWriteProviderToken(string name, OIDCWriteProviderTokenRequest oIDCWriteProviderTokenRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> OIDCWriteProviderToken(OIDCWriteProviderTokenRequest oIDCWriteProviderTokenRequest, string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1723,7 +1723,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> OIDCWriteRole(string name, OIDCWriteRoleRequest oIDCWriteRoleRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> OIDCWriteRole(OIDCWriteRoleRequest oIDCWriteRoleRequest, string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1741,7 +1741,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> OIDCWriteScope(string name, OIDCWriteScopeRequest oIDCWriteScopeRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> OIDCWriteScope(OIDCWriteScopeRequest oIDCWriteScopeRequest, string name, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update, read or delete an alias ID.
         /// </summary>
@@ -1793,7 +1793,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> PersonaIDWriteByID(string id, PersonaIDWriteByIDRequest personaIDWriteByIDRequest, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> PersonaIDWriteByID(PersonaIDWriteByIDRequest personaIDWriteByIDRequest, string id, TimeSpan? wrapTTL = null);
         /// <summary>
         /// List all the alias IDs.
         /// </summary>
@@ -1932,7 +1932,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AliasWriteByIDAsync(string id, AliasWriteByIDRequest aliasWriteByIDRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> AliasWriteByIDAsync(AliasWriteByIDRequest aliasWriteByIDRequest, string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Delete all of the entities provided
@@ -2218,7 +2218,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> EntityWriteAliasByIDAsync(string id, EntityWriteAliasByIDRequest entityWriteAliasByIDRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> EntityWriteAliasByIDAsync(EntityWriteAliasByIDRequest entityWriteAliasByIDRequest, string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Update, read or delete an entity using entity ID
@@ -2238,7 +2238,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> EntityWriteByIDAsync(string id, EntityWriteByIDRequest entityWriteByIDRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> EntityWriteByIDAsync(EntityWriteByIDRequest entityWriteByIDRequest, string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Update, read or delete an entity using entity name
@@ -2258,7 +2258,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> EntityWriteByNameAsync(string name, EntityWriteByNameRequest entityWriteByNameRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> EntityWriteByNameAsync(EntityWriteByNameRequest entityWriteByNameRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -2506,7 +2506,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GroupWriteAliasByIDAsync(string id, GroupWriteAliasByIDRequest groupWriteAliasByIDRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GroupWriteAliasByIDAsync(GroupWriteAliasByIDRequest groupWriteAliasByIDRequest, string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Update or delete an existing group using its ID.
@@ -2526,7 +2526,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GroupWriteByIDAsync(string id, GroupWriteByIDRequest groupWriteByIDRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GroupWriteByIDAsync(GroupWriteByIDRequest groupWriteByIDRequest, string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -2546,7 +2546,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GroupWriteByNameAsync(string name, GroupWriteByNameRequest groupWriteByNameRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GroupWriteByNameAsync(GroupWriteByNameRequest groupWriteByNameRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Delete a login enforcement
@@ -2927,7 +2927,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> MFAMethodWriteDuoAsync(string methodId, MFAMethodWriteDuoRequest mFAMethodWriteDuoRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> MFAMethodWriteDuoAsync(MFAMethodWriteDuoRequest mFAMethodWriteDuoRequest, string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Update or create a configuration for the given MFA method
@@ -2947,7 +2947,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> MFAMethodWriteOktaAsync(string methodId, MFAMethodWriteOktaRequest mFAMethodWriteOktaRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> MFAMethodWriteOktaAsync(MFAMethodWriteOktaRequest mFAMethodWriteOktaRequest, string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Update or create a configuration for the given MFA method
@@ -2967,7 +2967,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> MFAMethodWritePingIDAsync(string methodId, MFAMethodWritePingIDRequest mFAMethodWritePingIDRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> MFAMethodWritePingIDAsync(MFAMethodWritePingIDRequest mFAMethodWritePingIDRequest, string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Update or create a configuration for the given MFA method
@@ -2987,7 +2987,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> MFAMethodWriteTOTPAsync(string methodId, MFAMethodWriteTOTPRequest mFAMethodWriteTOTPRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> MFAMethodWriteTOTPAsync(MFAMethodWriteTOTPRequest mFAMethodWriteTOTPRequest, string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Read the current login enforcement
@@ -3026,7 +3026,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> MFAWriteLoginEnforcementAsync(string name, MFAWriteLoginEnforcementRequest mFAWriteLoginEnforcementRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> MFAWriteLoginEnforcementAsync(MFAWriteLoginEnforcementRequest mFAWriteLoginEnforcementRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3236,7 +3236,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> OIDCListProvidersAsync(string list, string allowedClientId = "", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> OIDCListProvidersAsync(string list, string allowedClientId = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// List configured OIDC roles
@@ -3557,7 +3557,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> OIDCRotateKeyAsync(string name, OIDCRotateKeyRequest oIDCRotateKeyRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> OIDCRotateKeyAsync(OIDCRotateKeyRequest oIDCRotateKeyRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3577,7 +3577,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> OIDCWriteAssignmentAsync(string name, OIDCWriteAssignmentRequest oIDCWriteAssignmentRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> OIDCWriteAssignmentAsync(OIDCWriteAssignmentRequest oIDCWriteAssignmentRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3597,7 +3597,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> OIDCWriteClientAsync(string name, OIDCWriteClientRequest oIDCWriteClientRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> OIDCWriteClientAsync(OIDCWriteClientRequest oIDCWriteClientRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// OIDC configuration
@@ -3636,7 +3636,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> OIDCWriteKeyAsync(string name, OIDCWriteKeyRequest oIDCWriteKeyRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> OIDCWriteKeyAsync(OIDCWriteKeyRequest oIDCWriteKeyRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3656,7 +3656,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> OIDCWriteProviderAsync(string name, OIDCWriteProviderRequest oIDCWriteProviderRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> OIDCWriteProviderAsync(OIDCWriteProviderRequest oIDCWriteProviderRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3676,7 +3676,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> OIDCWriteProviderAuthorizeAsync(string name, OIDCWriteProviderAuthorizeRequest oIDCWriteProviderAuthorizeRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> OIDCWriteProviderAuthorizeAsync(OIDCWriteProviderAuthorizeRequest oIDCWriteProviderAuthorizeRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3696,7 +3696,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> OIDCWriteProviderTokenAsync(string name, OIDCWriteProviderTokenRequest oIDCWriteProviderTokenRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> OIDCWriteProviderTokenAsync(OIDCWriteProviderTokenRequest oIDCWriteProviderTokenRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3735,7 +3735,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> OIDCWriteRoleAsync(string name, OIDCWriteRoleRequest oIDCWriteRoleRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> OIDCWriteRoleAsync(OIDCWriteRoleRequest oIDCWriteRoleRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3755,7 +3755,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> OIDCWriteScopeAsync(string name, OIDCWriteScopeRequest oIDCWriteScopeRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> OIDCWriteScopeAsync(OIDCWriteScopeRequest oIDCWriteScopeRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Update, read or delete an alias ID.
@@ -3813,7 +3813,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PersonaIDWriteByIDAsync(string id, PersonaIDWriteByIDRequest personaIDWriteByIDRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> PersonaIDWriteByIDAsync(PersonaIDWriteByIDRequest personaIDWriteByIDRequest, string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// List all the alias IDs.
@@ -4381,7 +4381,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> AliasWriteByID(string id, AliasWriteByIDRequest aliasWriteByIDRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> AliasWriteByID(AliasWriteByIDRequest aliasWriteByIDRequest, string id, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -4443,7 +4443,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AliasWriteByIDAsync(string id, AliasWriteByIDRequest aliasWriteByIDRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> AliasWriteByIDAsync(AliasWriteByIDRequest aliasWriteByIDRequest, string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -6055,7 +6055,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> EntityWriteAliasByID(string id, EntityWriteAliasByIDRequest entityWriteAliasByIDRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> EntityWriteAliasByID(EntityWriteAliasByIDRequest entityWriteAliasByIDRequest, string id, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -6117,7 +6117,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> EntityWriteAliasByIDAsync(string id, EntityWriteAliasByIDRequest entityWriteAliasByIDRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> EntityWriteAliasByIDAsync(EntityWriteAliasByIDRequest entityWriteAliasByIDRequest, string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -6179,7 +6179,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> EntityWriteByID(string id, EntityWriteByIDRequest entityWriteByIDRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> EntityWriteByID(EntityWriteByIDRequest entityWriteByIDRequest, string id, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -6241,7 +6241,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> EntityWriteByIDAsync(string id, EntityWriteByIDRequest entityWriteByIDRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> EntityWriteByIDAsync(EntityWriteByIDRequest entityWriteByIDRequest, string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -6303,7 +6303,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> EntityWriteByName(string name, EntityWriteByNameRequest entityWriteByNameRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> EntityWriteByName(EntityWriteByNameRequest entityWriteByNameRequest, string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -6365,7 +6365,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> EntityWriteByNameAsync(string name, EntityWriteByNameRequest entityWriteByNameRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> EntityWriteByNameAsync(EntityWriteByNameRequest entityWriteByNameRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -7753,7 +7753,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GroupWriteAliasByID(string id, GroupWriteAliasByIDRequest groupWriteAliasByIDRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> GroupWriteAliasByID(GroupWriteAliasByIDRequest groupWriteAliasByIDRequest, string id, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -7815,7 +7815,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GroupWriteAliasByIDAsync(string id, GroupWriteAliasByIDRequest groupWriteAliasByIDRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GroupWriteAliasByIDAsync(GroupWriteAliasByIDRequest groupWriteAliasByIDRequest, string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -7877,7 +7877,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GroupWriteByID(string id, GroupWriteByIDRequest groupWriteByIDRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> GroupWriteByID(GroupWriteByIDRequest groupWriteByIDRequest, string id, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -7939,7 +7939,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GroupWriteByIDAsync(string id, GroupWriteByIDRequest groupWriteByIDRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GroupWriteByIDAsync(GroupWriteByIDRequest groupWriteByIDRequest, string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -8001,7 +8001,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GroupWriteByName(string name, GroupWriteByNameRequest groupWriteByNameRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> GroupWriteByName(GroupWriteByNameRequest groupWriteByNameRequest, string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8063,7 +8063,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GroupWriteByNameAsync(string name, GroupWriteByNameRequest groupWriteByNameRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GroupWriteByNameAsync(GroupWriteByNameRequest groupWriteByNameRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10221,7 +10221,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> MFAMethodWriteDuo(string methodId, MFAMethodWriteDuoRequest mFAMethodWriteDuoRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> MFAMethodWriteDuo(MFAMethodWriteDuoRequest mFAMethodWriteDuoRequest, string methodId, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
@@ -10283,7 +10283,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> MFAMethodWriteDuoAsync(string methodId, MFAMethodWriteDuoRequest mFAMethodWriteDuoRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> MFAMethodWriteDuoAsync(MFAMethodWriteDuoRequest mFAMethodWriteDuoRequest, string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
@@ -10345,7 +10345,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> MFAMethodWriteOkta(string methodId, MFAMethodWriteOktaRequest mFAMethodWriteOktaRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> MFAMethodWriteOkta(MFAMethodWriteOktaRequest mFAMethodWriteOktaRequest, string methodId, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
@@ -10407,7 +10407,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> MFAMethodWriteOktaAsync(string methodId, MFAMethodWriteOktaRequest mFAMethodWriteOktaRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> MFAMethodWriteOktaAsync(MFAMethodWriteOktaRequest mFAMethodWriteOktaRequest, string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
@@ -10469,7 +10469,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> MFAMethodWritePingID(string methodId, MFAMethodWritePingIDRequest mFAMethodWritePingIDRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> MFAMethodWritePingID(MFAMethodWritePingIDRequest mFAMethodWritePingIDRequest, string methodId, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
@@ -10531,7 +10531,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> MFAMethodWritePingIDAsync(string methodId, MFAMethodWritePingIDRequest mFAMethodWritePingIDRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> MFAMethodWritePingIDAsync(MFAMethodWritePingIDRequest mFAMethodWritePingIDRequest, string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
@@ -10593,7 +10593,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> MFAMethodWriteTOTP(string methodId, MFAMethodWriteTOTPRequest mFAMethodWriteTOTPRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> MFAMethodWriteTOTP(MFAMethodWriteTOTPRequest mFAMethodWriteTOTPRequest, string methodId, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
@@ -10655,7 +10655,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> MFAMethodWriteTOTPAsync(string methodId, MFAMethodWriteTOTPRequest mFAMethodWriteTOTPRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> MFAMethodWriteTOTPAsync(MFAMethodWriteTOTPRequest mFAMethodWriteTOTPRequest, string methodId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'methodId' is set
             if (methodId == null)
@@ -10827,7 +10827,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> MFAWriteLoginEnforcement(string name, MFAWriteLoginEnforcementRequest mFAWriteLoginEnforcementRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> MFAWriteLoginEnforcement(MFAWriteLoginEnforcementRequest mFAWriteLoginEnforcementRequest, string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10889,7 +10889,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> MFAWriteLoginEnforcementAsync(string name, MFAWriteLoginEnforcementRequest mFAWriteLoginEnforcementRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> MFAWriteLoginEnforcementAsync(MFAWriteLoginEnforcementRequest mFAWriteLoginEnforcementRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -12053,7 +12053,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> OIDCListProviders(string list, string allowedClientId = "", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> OIDCListProviders(string list, string allowedClientId = default(string), TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -12113,7 +12113,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> OIDCListProvidersAsync(string list, string allowedClientId = "", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> OIDCListProvidersAsync(string list, string allowedClientId = default(string), TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'list' is set
             if (list == null)
@@ -13897,7 +13897,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> OIDCRotateKey(string name, OIDCRotateKeyRequest oIDCRotateKeyRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> OIDCRotateKey(OIDCRotateKeyRequest oIDCRotateKeyRequest, string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -13959,7 +13959,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> OIDCRotateKeyAsync(string name, OIDCRotateKeyRequest oIDCRotateKeyRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> OIDCRotateKeyAsync(OIDCRotateKeyRequest oIDCRotateKeyRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -14021,7 +14021,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> OIDCWriteAssignment(string name, OIDCWriteAssignmentRequest oIDCWriteAssignmentRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> OIDCWriteAssignment(OIDCWriteAssignmentRequest oIDCWriteAssignmentRequest, string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -14083,7 +14083,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> OIDCWriteAssignmentAsync(string name, OIDCWriteAssignmentRequest oIDCWriteAssignmentRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> OIDCWriteAssignmentAsync(OIDCWriteAssignmentRequest oIDCWriteAssignmentRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -14145,7 +14145,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> OIDCWriteClient(string name, OIDCWriteClientRequest oIDCWriteClientRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> OIDCWriteClient(OIDCWriteClientRequest oIDCWriteClientRequest, string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -14207,7 +14207,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> OIDCWriteClientAsync(string name, OIDCWriteClientRequest oIDCWriteClientRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> OIDCWriteClientAsync(OIDCWriteClientRequest oIDCWriteClientRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -14381,7 +14381,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> OIDCWriteKey(string name, OIDCWriteKeyRequest oIDCWriteKeyRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> OIDCWriteKey(OIDCWriteKeyRequest oIDCWriteKeyRequest, string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -14443,7 +14443,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> OIDCWriteKeyAsync(string name, OIDCWriteKeyRequest oIDCWriteKeyRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> OIDCWriteKeyAsync(OIDCWriteKeyRequest oIDCWriteKeyRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -14505,7 +14505,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> OIDCWriteProvider(string name, OIDCWriteProviderRequest oIDCWriteProviderRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> OIDCWriteProvider(OIDCWriteProviderRequest oIDCWriteProviderRequest, string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -14567,7 +14567,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> OIDCWriteProviderAsync(string name, OIDCWriteProviderRequest oIDCWriteProviderRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> OIDCWriteProviderAsync(OIDCWriteProviderRequest oIDCWriteProviderRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -14629,7 +14629,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> OIDCWriteProviderAuthorize(string name, OIDCWriteProviderAuthorizeRequest oIDCWriteProviderAuthorizeRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> OIDCWriteProviderAuthorize(OIDCWriteProviderAuthorizeRequest oIDCWriteProviderAuthorizeRequest, string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -14691,7 +14691,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> OIDCWriteProviderAuthorizeAsync(string name, OIDCWriteProviderAuthorizeRequest oIDCWriteProviderAuthorizeRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> OIDCWriteProviderAuthorizeAsync(OIDCWriteProviderAuthorizeRequest oIDCWriteProviderAuthorizeRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -14753,7 +14753,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> OIDCWriteProviderToken(string name, OIDCWriteProviderTokenRequest oIDCWriteProviderTokenRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> OIDCWriteProviderToken(OIDCWriteProviderTokenRequest oIDCWriteProviderTokenRequest, string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -14815,7 +14815,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> OIDCWriteProviderTokenAsync(string name, OIDCWriteProviderTokenRequest oIDCWriteProviderTokenRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> OIDCWriteProviderTokenAsync(OIDCWriteProviderTokenRequest oIDCWriteProviderTokenRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -14987,7 +14987,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> OIDCWriteRole(string name, OIDCWriteRoleRequest oIDCWriteRoleRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> OIDCWriteRole(OIDCWriteRoleRequest oIDCWriteRoleRequest, string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -15049,7 +15049,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> OIDCWriteRoleAsync(string name, OIDCWriteRoleRequest oIDCWriteRoleRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> OIDCWriteRoleAsync(OIDCWriteRoleRequest oIDCWriteRoleRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -15111,7 +15111,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> OIDCWriteScope(string name, OIDCWriteScopeRequest oIDCWriteScopeRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> OIDCWriteScope(OIDCWriteScopeRequest oIDCWriteScopeRequest, string name, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -15173,7 +15173,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> OIDCWriteScopeAsync(string name, OIDCWriteScopeRequest oIDCWriteScopeRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> OIDCWriteScopeAsync(OIDCWriteScopeRequest oIDCWriteScopeRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -15455,7 +15455,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> PersonaIDWriteByID(string id, PersonaIDWriteByIDRequest personaIDWriteByIDRequest, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> PersonaIDWriteByID(PersonaIDWriteByIDRequest personaIDWriteByIDRequest, string id, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -15517,7 +15517,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PersonaIDWriteByIDAsync(string id, PersonaIDWriteByIDRequest personaIDWriteByIDRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> PersonaIDWriteByIDAsync(PersonaIDWriteByIDRequest personaIDWriteByIDRequest, string id, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
