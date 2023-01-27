@@ -345,7 +345,7 @@ namespace Vault.Client
         {
             StringBuilder sb = new StringBuilder("vault-client-dotnet/");
             string OSName = RuntimeInformation.OSDescription.Substring(0, RuntimeInformation.OSDescription.IndexOf(" "));
-            sb.AppendFormat("{0} ({1} {2}; .Net {3})", "0.0.1", OSName, RuntimeInformation.OSArchitecture, System.Environment.Version
+            sb.AppendFormat("{0} ({1} {2}; .Net {3})", Version, OSName, RuntimeInformation.OSArchitecture, System.Environment.Version);
             return sb.ToString();
         }
 
