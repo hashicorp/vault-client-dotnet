@@ -4506,7 +4506,7 @@ namespace Example
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Specifies the path of the secret.
             var cubbyholeMountPath = "\"cubbyhole\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "cubbyhole")
-            var list = "\"false\"";  // string | Return a list if `true` (optional)  (default to "false")
+            var list = "list_example";  // string | Return a list if `true` (optional) 
 
             try
             {
@@ -4530,7 +4530,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **string**| Specifies the path of the secret. | 
  **cubbyholeMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;cubbyhole&quot;]
- **list** | **string**| Return a list if &#x60;true&#x60; | [optional] [default to &quot;false&quot;]
+ **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
 
 ### Return type
 
@@ -8052,7 +8052,7 @@ namespace Example
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
             var kvMountPath = "\"kv\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "kv")
-            var list = "\"false\"";  // string | Return a list if `true` (optional)  (default to "false")
+            var list = "list_example";  // string | Return a list if `true` (optional) 
 
             try
             {
@@ -8076,7 +8076,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **string**| Location of the secret. | 
  **kvMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;kv&quot;]
- **list** | **string**| Return a list if &#x60;true&#x60; | [optional] [default to &quot;false&quot;]
+ **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
 
 ### Return type
 
@@ -8648,7 +8648,7 @@ namespace Example
             var apiInstance = new Secrets(httpClient, config, httpClientHandler);
             var path = "path_example";  // string | Location of the secret.
             var secretMountPath = "\"secret\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "secret")
-            var list = "\"false\"";  // string | Return a list if `true` (optional)  (default to "false")
+            var list = "list_example";  // string | Return a list if `true` (optional) 
 
             try
             {
@@ -8672,7 +8672,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **path** | **string**| Location of the secret. | 
  **secretMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;secret&quot;]
- **list** | **string**| Return a list if &#x60;true&#x60; | [optional] [default to &quot;false&quot;]
+ **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
 
 ### Return type
 

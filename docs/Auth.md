@@ -10793,7 +10793,7 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var githubMountPath = "\"github\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "github")
-            var list = "\"false\"";  // string | Return a list if `true` (optional)  (default to "false")
+            var list = "list_example";  // string | Return a list if `true` (optional) 
 
             try
             {
@@ -10816,7 +10816,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **githubMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;github&quot;]
- **list** | **string**| Return a list if &#x60;true&#x60; | [optional] [default to &quot;false&quot;]
+ **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
 
 ### Return type
 
@@ -10941,7 +10941,7 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var githubMountPath = "\"github\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "github")
-            var list = "\"false\"";  // string | Return a list if `true` (optional)  (default to "false")
+            var list = "list_example";  // string | Return a list if `true` (optional) 
 
             try
             {
@@ -10964,7 +10964,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **githubMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;github&quot;]
- **list** | **string**| Return a list if &#x60;true&#x60; | [optional] [default to &quot;false&quot;]
+ **list** | **string**| Return a list if &#x60;true&#x60; | [optional] 
 
 ### Return type
 
@@ -18565,7 +18565,7 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var tokenWriteCreateRequest = new TokenWriteCreateRequest(); // TokenWriteCreateRequest | 
-            var format = "\"\"";  // string | Return json formatted output (optional)  (default to "")
+            var format = "format_example";  // string | Return json formatted output (optional) 
             var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
 
             try
@@ -18589,7 +18589,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tokenWriteCreateRequest** | [**TokenWriteCreateRequest**](TokenWriteCreateRequest.md)|  | 
- **format** | **string**| Return json formatted output | [optional] [default to &quot;&quot;]
+ **format** | **string**| Return json formatted output | [optional] 
  **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
 
 ### Return type
@@ -18641,7 +18641,7 @@ namespace Example
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var tokenWriteCreateOrphanRequest = new TokenWriteCreateOrphanRequest(); // TokenWriteCreateOrphanRequest | 
-            var format = "\"\"";  // string | Return json formatted output (optional)  (default to "")
+            var format = "format_example";  // string | Return json formatted output (optional) 
             var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
 
             try
@@ -18665,7 +18665,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tokenWriteCreateOrphanRequest** | [**TokenWriteCreateOrphanRequest**](TokenWriteCreateOrphanRequest.md)|  | 
- **format** | **string**| Return json formatted output | [optional] [default to &quot;&quot;]
+ **format** | **string**| Return json formatted output | [optional] 
  **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
 
 ### Return type
@@ -18718,7 +18718,7 @@ namespace Example
             var apiInstance = new Auth(httpClient, config, httpClientHandler);
             var roleName = "roleName_example";  // string | Name of the role
             var tokenWriteCreateWithRoleRequest = new TokenWriteCreateWithRoleRequest(); // TokenWriteCreateWithRoleRequest | 
-            var format = "\"\"";  // string | Return json formatted output (optional)  (default to "")
+            var format = "format_example";  // string | Return json formatted output (optional) 
             var tokenMountPath = "\"token\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "token")
 
             try
@@ -18743,7 +18743,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **roleName** | **string**| Name of the role | 
  **tokenWriteCreateWithRoleRequest** | [**TokenWriteCreateWithRoleRequest**](TokenWriteCreateWithRoleRequest.md)|  | 
- **format** | **string**| Return json formatted output | [optional] [default to &quot;&quot;]
+ **format** | **string**| Return json formatted output | [optional] 
  **tokenMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;token&quot;]
 
 ### Return type

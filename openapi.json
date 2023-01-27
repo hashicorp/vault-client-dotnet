@@ -4145,8 +4145,7 @@
             "description": "Return a list if `true`",
             "in": "query",
             "schema": {
-              "type": "string",
-              "default": "false"
+              "type": "string"
             }
           }
         ],
@@ -4252,8 +4251,7 @@
             "description": "Return a list if `true`",
             "in": "query",
             "schema": {
-              "type": "string",
-              "default": "false"
+              "type": "string"
             }
           }
         ],
@@ -6565,8 +6563,7 @@
           "description": "Return json formatted output",
           "in": "query",
           "schema": {
-            "type": "string",
-            "default": ""
+            "type": "string"
           }
         },
         {
@@ -6610,8 +6607,7 @@
           "description": "Return json formatted output",
           "in": "query",
           "schema": {
-            "type": "string",
-            "default": ""
+            "type": "string"
           }
         },
         {
@@ -6655,8 +6651,7 @@
           "description": "Return json formatted output",
           "in": "query",
           "schema": {
-            "type": "string",
-            "default": ""
+            "type": "string"
           }
         },
         {
@@ -11400,8 +11395,7 @@
           "description": "Format to export metrics into. Currently accepts only \"prometheus\".",
           "in": "query",
           "schema": {
-            "type": "string",
-            "default": ""
+            "type": "string"
           }
         }
       ],
@@ -11459,8 +11453,7 @@
           "description": "Log level to view system logs at. Currently supported values are \"trace\", \"debug\", \"info\", \"warn\", \"error\".",
           "in": "query",
           "schema": {
-            "type": "string",
-            "default": "info"
+            "type": "string"
           }
         }
       ],
@@ -12029,8 +12022,7 @@
             "description": "Return a list if `true`",
             "in": "query",
             "schema": {
-              "type": "string",
-              "default": "false"
+              "type": "string"
             }
           }
         ],
@@ -12402,8 +12394,7 @@
             "description": "Return a list if `true`",
             "in": "query",
             "schema": {
-              "type": "string",
-              "default": "false"
+              "type": "string"
             }
           }
         ],
@@ -12474,8 +12465,7 @@
             "description": "Return a list if `true`",
             "in": "query",
             "schema": {
-              "type": "string",
-              "default": "false"
+              "type": "string"
             }
           }
         ],
@@ -14941,8 +14931,7 @@
             "description": "Return a list if `true`",
             "in": "query",
             "schema": {
-              "type": "string",
-              "default": false
+              "type": "string"
             }
           }
         ],
@@ -16549,8 +16538,7 @@
             "description": "Return a list if `true`",
             "in": "query",
             "schema": {
-              "type": "string",
-              "default": "false"
+              "type": "string"
             }
           }
         ],
@@ -21521,8 +21509,7 @@
             "description": "Return a list if `true`",
             "in": "query",
             "schema": {
-              "type": "string",
-              "default": false
+              "type": "string"
             }
           }
         ],

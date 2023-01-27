@@ -37,7 +37,7 @@ namespace {{packageName}}.{{apiPackage}}
         {{#isDeprecated}}
         [Obsolete]
         {{/isDeprecated}}
-        VaultResponse<{{{returnType}}}{{^returnType}}Object{{/returnType}}> {{operationId}}({{#allParams}}{{{dataType}}} {{paramName}}{{^required}}{{#optionalMethodArgument}} = {{#defaultValue}}{{{.}}}{{/defaultValue}}{{/optionalMethodArgument}}{{/required}}{{^-last}}, {{/-last}}{{/allParams}}{{#allParams.0}}, {{/allParams.0}}TimeSpan? wrapTTL = null);
+        VaultResponse<{{{returnType}}}{{^returnType}}Object{{/returnType}}> {{operationId}}({{#bodyParam}}{{{dataType}}} {{{paramName}}}, {{/bodyParam}}{{#pathParams}}{{#required}}{{{dataType}}} {{paramName}}, {{/required}}{{/pathParams}}{{#queryParams}}{{#required}}{{{dataType}}} {{paramName}}, {{/required}}{{/queryParams}}{{#pathParams}}{{^required}}{{{dataType}}} {{paramName}}{{#optionalMethodArgument}} = {{#defaultValue}}{{{.}}}{{/defaultValue}}{{/optionalMethodArgument}}, {{/required}}{{/pathParams}}{{#queryParams}}{{^required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/required}}{{/queryParams}}TimeSpan? wrapTTL = null);
         {{/operation}}
         #endregion Synchronous Operations
     }
@@ -73,7 +73,7 @@ namespace {{packageName}}.{{apiPackage}}
         {{#isDeprecated}}
         [Obsolete]
         {{/isDeprecated}}
-        Task<VaultResponse<{{{returnType}}}{{^returnType}}Object{{/returnType}}>> {{operationId}}Async({{#allParams}}{{{dataType}}} {{paramName}}{{^required}}{{#optionalMethodArgument}} = {{#defaultValue}}{{{.}}}{{/defaultValue}}{{/optionalMethodArgument}}{{/required}}{{^-last}}, {{/-last}}{{/allParams}}{{#allParams.0}}, {{/allParams.0}}TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<{{{returnType}}}{{^returnType}}Object{{/returnType}}>> {{operationId}}Async({{#bodyParam}}{{{dataType}}} {{{paramName}}}, {{/bodyParam}}{{#pathParams}}{{#required}}{{{dataType}}} {{paramName}}, {{/required}}{{/pathParams}}{{#queryParams}}{{#required}}{{{dataType}}} {{paramName}}, {{/required}}{{/queryParams}}{{#pathParams}}{{^required}}{{{dataType}}} {{paramName}}{{#optionalMethodArgument}} = {{#defaultValue}}{{{.}}}{{/defaultValue}}{{/optionalMethodArgument}}, {{/required}}{{/pathParams}}{{#queryParams}}{{^required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/required}}{{/queryParams}}TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
         {{/operation}}
         #endregion Asynchronous Operations
     }
@@ -168,7 +168,7 @@ namespace {{packageName}}.{{apiPackage}}
         {{#isDeprecated}}
         [Obsolete]
         {{/isDeprecated}}
-        public VaultResponse<{{{returnType}}}{{^returnType}}Object{{/returnType}}> {{operationId}}({{#allParams}}{{{dataType}}} {{paramName}}{{^required}}{{#optionalMethodArgument}} = {{#defaultValue}}{{{.}}}{{/defaultValue}}{{/optionalMethodArgument}}{{/required}}{{^-last}}, {{/-last}}{{/allParams}}{{#allParams.0}}, {{/allParams.0}}TimeSpan? wrapTTL = null)
+        public VaultResponse<{{{returnType}}}{{^returnType}}Object{{/returnType}}> {{operationId}}({{#bodyParam}}{{{dataType}}} {{{paramName}}}, {{/bodyParam}}{{#pathParams}}{{#required}}{{{dataType}}} {{paramName}}, {{/required}}{{/pathParams}}{{#queryParams}}{{#required}}{{{dataType}}} {{paramName}}, {{/required}}{{/queryParams}}{{#pathParams}}{{^required}}{{{dataType}}} {{paramName}}{{#optionalMethodArgument}} = {{#defaultValue}}{{{.}}}{{/defaultValue}}{{/optionalMethodArgument}}, {{/required}}{{/pathParams}}{{#queryParams}}{{^required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/required}}{{/queryParams}}TimeSpan? wrapTTL = null)
         {
             {{#allParams}}
             {{#required}}
@@ -382,7 +382,7 @@ namespace {{packageName}}.{{apiPackage}}
         {{#isDeprecated}}
         [Obsolete]
         {{/isDeprecated}}
-        public async Task<VaultResponse<{{{returnType}}}{{^returnType}}Object{{/returnType}}>> {{operationId}}Async({{#allParams}}{{{dataType}}} {{paramName}}{{^required}}{{#optionalMethodArgument}} = {{#defaultValue}}{{{.}}}{{/defaultValue}}{{/optionalMethodArgument}}{{/required}}{{^-last}}, {{/-last}}{{/allParams}}{{#allParams.0}}, {{/allParams.0}}TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<{{{returnType}}}{{^returnType}}Object{{/returnType}}>> {{operationId}}Async({{#bodyParam}}{{{dataType}}} {{{paramName}}}, {{/bodyParam}}{{#pathParams}}{{#required}}{{{dataType}}} {{paramName}}, {{/required}}{{/pathParams}}{{#queryParams}}{{#required}}{{{dataType}}} {{paramName}}, {{/required}}{{/queryParams}}{{#pathParams}}{{^required}}{{{dataType}}} {{paramName}}{{#optionalMethodArgument}} = {{#defaultValue}}{{{.}}}{{/defaultValue}}{{/optionalMethodArgument}}, {{/required}}{{/pathParams}}{{#queryParams}}{{^required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/required}}{{/queryParams}}TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             {{#allParams}}
             {{#required}}
