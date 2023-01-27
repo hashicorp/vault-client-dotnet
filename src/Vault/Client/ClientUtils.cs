@@ -34,6 +34,8 @@ namespace Vault.Client
         /// <returns>HttpRequestMessage</returns>
         public static HttpRequestMessage CloneRequest(HttpRequestMessage req)
         {
+            if (req == null) throw new ArgumentNullException("req");
+
             HttpRequestMessage clone = new HttpRequestMessage(req.Method, req.RequestUri);
 
             clone.Content = CloneRequestContent(req.Content);
@@ -85,7 +87,7 @@ namespace Vault.Client
         /// </summary>
         public static string SanitizePath(string path)
         {
-            if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("Path cannot be null");
+            if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("path");
 
             return path.StartsWith("/") ? path : "/" + path;
         }
@@ -133,7 +135,8 @@ namespace Vault.Client
                         parameters.Add(name + "[" + entry.Key + "]", ParameterToString(entry.Value));
                     }
                 }
-                else {
+                else 
+                {
                     foreach (DictionaryEntry entry in dictionary)
                     {
                         parameters.Add(entry.Key.ToString(), ParameterToString(entry.Value));
