@@ -23,7 +23,7 @@ namespace Vault.Test
             HttpRequestMessage expectedReq = new HttpRequestMessage();
             expectedReq.Method = HttpMethod.Get;
             expectedReq.Headers.TryAddWithoutValidation("X-Example-Header", "my-header-value");
-            var secretData = new Dictionary<string, string> { { "mypass", "pass" } };
+
             HttpRequestMessage actualReq = ClientUtils.CloneRequest(expectedReq);
 
             Assert.Equal(expectedReq.Method, actualReq.Method);
