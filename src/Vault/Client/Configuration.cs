@@ -17,6 +17,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Security;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
@@ -343,8 +344,8 @@ namespace Vault.Client
         public string BuildUserAgent()
         {
             StringBuilder sb = new StringBuilder("vault-client-dotnet/");
-
-            sb.AppendFormat("{0} (.Net {1})", Version, System.Environment.Version);
+            string OSName = RuntimeInformation.OSDescription.Substring(0, RuntimeInformation.OSDescription.IndexOf(" "));
+            sb.AppendFormat("{0} ({1} {2}; .Net {3})", "0.0.1", OSName, RuntimeInformation.OSArchitecture, System.Environment.Version
             return sb.ToString();
         }
 
