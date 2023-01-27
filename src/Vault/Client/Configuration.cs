@@ -305,7 +305,7 @@ namespace Vault.Client
         /// Gets or sets the HTTP user agent.
         /// </summary>
         /// <value>Http user agent.</value>
-        public string UserAgent { get; set; }
+        public string UserAgent { get; }
 
         /// <summary>
         /// Gets or sets the username (HTTP basic authentication).
