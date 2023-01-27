@@ -37,10 +37,11 @@ namespace Vault.Test
             Assert.Throws<ArgumentNullException>("path", () => ClientUtils.SanitizePath(string.Empty));
         }
 
-        [Fact]
-        public void SanitizePath_ShouldSanitizePath()
+        [Theory]
+        [InlineData("path/to/sanitize")]
+        [InlineData("/path/to/sanitize")]
+        public void SanitizePath_ShouldSanitizePath(string pathToSanitize)
         {
-            var pathToSanitize = "path/to/sanitize";
             var actual = ClientUtils.SanitizePath(pathToSanitize);
 
             var expected = "/path/to/sanitize";
