@@ -12,7 +12,7 @@ Method | HTTP request | Description
 {{#operation}}
 <a name="{{{operationIdLowerCase}}}"></a>
 # **{{{operationId}}}**
-> {{returnType}}{{^returnType}}void{{/returnType}} {{operationId}} ({{#allParams}}{{{dataType}}} {{paramName}}{{^required}}{{#optionalMethodArgument}} = null{{/optionalMethodArgument}}{{/required}}{{^-last}}, {{/-last}}{{/allParams}})
+> {{returnType}}{{^returnType}}void{{/returnType}} {{operationId}} ({{#bodyParam}}{{{dataType}}} {{{paramName}}}, {{/bodyParam}}{{#pathParams}}{{#required}}{{{dataType}}} {{paramName}}, {{/required}}{{/pathParams}}{{#pathParams}}{{^required}}{{{dataType}}} {{paramName}}{{#optionalMethodArgument}} = {{#defaultValue}}{{{.}}}{{/defaultValue}}{{/optionalMethodArgument}}, {{/required}}{{/pathParams}}{{#queryParams}}{{^required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/required}}{{/queryParams}}TimeSpan? wrapTTL = null)
 
 {{{summary}}}{{#notes}}
 
@@ -84,14 +84,13 @@ namespace Example
                 {{#summary}}
                 // {{{.}}}
                 {{/summary}}
-                {{#returnType}}{{{.}}} result = {{/returnType}}apiInstance.{{{operationId}}}({{#allParams}}{{paramName}}{{^-last}}, {{/-last}}{{/allParams}});{{#returnType}}
+                {{#returnType}}{{{.}}} result = {{/returnType}}apiInstance.{{{operationId}}}({{#bodyParam}}{{{dataType}}} {{{paramName}}}, {{/bodyParam}}{{#pathParams}}{{#required}}{{{dataType}}} {{paramName}}, {{/required}}{{/pathParams}}{{#pathParams}}{{^required}}{{{dataType}}} {{paramName}}{{#optionalMethodArgument}} = {{#defaultValue}}{{{.}}}{{/defaultValue}}{{/optionalMethodArgument}}, {{/required}}{{/pathParams}}{{#queryParams}}{{^required}}{{{dataType}}} {{paramName}} = default({{{dataType}}}), {{/required}}{{/queryParams}}TimeSpan? wrapTTL = null);{{#returnType}}
                 Debug.WriteLine(result);{{/returnType}}
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling {{classname}}.{{operationId}}: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
