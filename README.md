@@ -26,39 +26,24 @@ A .NET client library [generated][openapi-generator] from `OpenAPI` [specificati
   - [Documentation for API Endpoints](#documentation-for-api-endpoints)
 
 ## Installation
+Vault is a package available at [Hashicorp Nuget][nuget-hashicorp]. We've provided install commands below.
 
-The Nuget packages are hosted in an internal Nuget feed that can be found in [Artifactory][artifactory].
-You can use the Dotnet CLI or Nuget CLI to retrieve the package.
-
-You first need to add the private Nuget feed as a source in either CLI. You can also generate an 
-[access token][access-token] that can be used in lieu of a password. 
-
+Using Powershell:
 ```shell-session
-nuget sources add \
-    -name HashicorpArtifactory \ 
-    -source https://artifactory.hashicorp.engineering/ui/repos/tree/General/vault-devex-nuget-local \
-    -username "myusername" \
-    -password "mypassword"
+ Install-Package Vault -Version "PackageVersion"
 ```
 
+Using Nuget CLI:
 ```shell-session
-dotnet nuget add source https://artifactory.hashicorp.engineering/artifactory/api/nuget/v3/vault-devex-nuget-local \
-    --name HashicorpArtifactory \
-    --username "myusername" \
-    --password "mypassword"
+ nuget install Vault -Version "PackageVersion"
 ```
 
-You can then install the package via either of the following commands:
-
-_**Note**_: Make sure to specify the package version. You can find the latest in the Release
+_**Note**_: You can find the latest package version in the Release
 tab in github
 
+You can add the package to your .Net project using the following command:
 ```shell-session
- nuget install Vault -source HashicorpArtifactory -Version "PackageVersion"
-```
-
-```shell-session
-dotnet add package Vault --source HashicorpArtifactory -version "PackageVersion" 
+dotnet add package Vault -version "PackageVersion" 
 ```
 
 ### Frameworks supported
@@ -318,6 +303,7 @@ Install-Package Polly
 [doc-kubernetes]:               https://developer.hashicorp.com/vault/docs/auth/kubernetes
 [doc-response-wrapping]:        https://www.vaultproject.io/docs/concepts/response-wrapping 
 [hashicorp]:                    https://www.hashicorp.com/
+[nuget-hashicorp]:              https://www.nuget.org/profiles/hashicorp
 [http-client-handler-docs]:     https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclienthandler?view=net-6.0
 [newtonsoft-json]:              https://www.nuget.org/packages/Newtonsoft.Json/
 [openapi-spec]:                 openapi.json
