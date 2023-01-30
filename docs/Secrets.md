@@ -388,7 +388,7 @@ namespace Example
             try
             {
                 // Configure the default lease information for generated credentials.
-                apiInstance.AWSConfigReadLease(awsMountPath);
+                apiInstance.AWSConfigReadLease(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -459,7 +459,7 @@ namespace Example
             try
             {
                 // Configure the root credentials that are used to manage IAM.
-                apiInstance.AWSConfigReadRootIAMCredentials(awsMountPath);
+                apiInstance.AWSConfigReadRootIAMCredentials(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -529,7 +529,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigRotateRootIAMCredentials(awsMountPath);
+                apiInstance.AWSConfigRotateRootIAMCredentials(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -601,7 +601,7 @@ namespace Example
             try
             {
                 // Configure the default lease information for generated credentials.
-                apiInstance.AWSConfigWriteLease(aWSConfigWriteLeaseRequest, awsMountPath);
+                apiInstance.AWSConfigWriteLease(AWSConfigWriteLeaseRequest aWSConfigWriteLeaseRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -674,7 +674,7 @@ namespace Example
             try
             {
                 // Configure the root credentials that are used to manage IAM.
-                apiInstance.AWSConfigWriteRootIAMCredentials(aWSConfigWriteRootIAMCredentialsRequest, awsMountPath);
+                apiInstance.AWSConfigWriteRootIAMCredentials(AWSConfigWriteRootIAMCredentialsRequest aWSConfigWriteRootIAMCredentialsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -747,7 +747,7 @@ namespace Example
             try
             {
                 // Read, write and reference IAM policies that access keys can be made for.
-                apiInstance.AWSDeleteRole(name, awsMountPath);
+                apiInstance.AWSDeleteRole(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -820,7 +820,7 @@ namespace Example
             try
             {
                 // List the existing roles in this backend
-                apiInstance.AWSListRoles(list, awsMountPath);
+                apiInstance.AWSListRoles(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -892,7 +892,7 @@ namespace Example
             try
             {
                 // Generate AWS credentials from a specific Vault role.
-                apiInstance.AWSReadCredentials(awsMountPath);
+                apiInstance.AWSReadCredentials(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -964,7 +964,7 @@ namespace Example
             try
             {
                 // Read, write and reference IAM policies that access keys can be made for.
-                apiInstance.AWSReadRole(name, awsMountPath);
+                apiInstance.AWSReadRole(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1037,7 +1037,7 @@ namespace Example
             try
             {
                 // Generate AWS credentials from a specific Vault role.
-                apiInstance.AWSReadSecurityTokenService(name, awsMountPath);
+                apiInstance.AWSReadSecurityTokenService(string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1110,7 +1110,7 @@ namespace Example
             try
             {
                 // Generate AWS credentials from a specific Vault role.
-                apiInstance.AWSWriteCredentials(aWSWriteCredentialsRequest, awsMountPath);
+                apiInstance.AWSWriteCredentials(AWSWriteCredentialsRequest aWSWriteCredentialsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1184,7 +1184,7 @@ namespace Example
             try
             {
                 // Read, write and reference IAM policies that access keys can be made for.
-                apiInstance.AWSWriteRole(name, aWSWriteRoleRequest, awsMountPath);
+                apiInstance.AWSWriteRole(AWSWriteRoleRequest aWSWriteRoleRequest, string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1259,7 +1259,7 @@ namespace Example
             try
             {
                 // Generate AWS credentials from a specific Vault role.
-                apiInstance.AWSWriteSecurityTokenService(name, aWSWriteSecurityTokenServiceRequest, awsMountPath);
+                apiInstance.AWSWriteSecurityTokenService(AWSWriteSecurityTokenServiceRequest aWSWriteSecurityTokenServiceRequest, string name, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1334,7 +1334,7 @@ namespace Example
             try
             {
                 // Check service accounts in to the library.
-                apiInstance.ActiveDirectoryCheckInLibrary(name, activeDirectoryCheckInLibraryRequest, adMountPath);
+                apiInstance.ActiveDirectoryCheckInLibrary(ActiveDirectoryCheckInLibraryRequest activeDirectoryCheckInLibraryRequest, string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1409,7 +1409,7 @@ namespace Example
             try
             {
                 // Check service accounts in to the library.
-                apiInstance.ActiveDirectoryCheckInManageLibrary(name, activeDirectoryCheckInManageLibraryRequest, adMountPath);
+                apiInstance.ActiveDirectoryCheckInManageLibrary(ActiveDirectoryCheckInManageLibraryRequest activeDirectoryCheckInManageLibraryRequest, string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1484,7 +1484,7 @@ namespace Example
             try
             {
                 // Check a service account out from the library.
-                apiInstance.ActiveDirectoryCheckOutLibrary(name, activeDirectoryCheckOutLibraryRequest, adMountPath);
+                apiInstance.ActiveDirectoryCheckOutLibrary(ActiveDirectoryCheckOutLibraryRequest activeDirectoryCheckOutLibraryRequest, string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1557,7 +1557,7 @@ namespace Example
             try
             {
                 // Configure the AD server to connect to, along with password options.
-                apiInstance.ActiveDirectoryDeleteConfig(adMountPath);
+                apiInstance.ActiveDirectoryDeleteConfig(string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1629,7 +1629,7 @@ namespace Example
             try
             {
                 // Delete a library set.
-                apiInstance.ActiveDirectoryDeleteLibrary(name, adMountPath);
+                apiInstance.ActiveDirectoryDeleteLibrary(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1702,7 +1702,7 @@ namespace Example
             try
             {
                 // Manage roles to build links between Vault and Active Directory service accounts.
-                apiInstance.ActiveDirectoryDeleteRole(name, adMountPath);
+                apiInstance.ActiveDirectoryDeleteRole(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1774,7 +1774,7 @@ namespace Example
 
             try
             {
-                apiInstance.ActiveDirectoryListLibraries(list, adMountPath);
+                apiInstance.ActiveDirectoryListLibraries(string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1847,7 +1847,7 @@ namespace Example
             try
             {
                 // List the name of each role currently stored.
-                apiInstance.ActiveDirectoryListRoles(list, adMountPath);
+                apiInstance.ActiveDirectoryListRoles(string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1919,7 +1919,7 @@ namespace Example
             try
             {
                 // Configure the AD server to connect to, along with password options.
-                apiInstance.ActiveDirectoryReadConfig(adMountPath);
+                apiInstance.ActiveDirectoryReadConfig(string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1990,7 +1990,7 @@ namespace Example
 
             try
             {
-                apiInstance.ActiveDirectoryReadCredentials(name, adMountPath);
+                apiInstance.ActiveDirectoryReadCredentials(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2063,7 +2063,7 @@ namespace Example
             try
             {
                 // Read a library set.
-                apiInstance.ActiveDirectoryReadLibrary(name, adMountPath);
+                apiInstance.ActiveDirectoryReadLibrary(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2136,7 +2136,7 @@ namespace Example
             try
             {
                 // Check the status of the service accounts in a library set.
-                apiInstance.ActiveDirectoryReadLibraryStatus(name, adMountPath);
+                apiInstance.ActiveDirectoryReadLibraryStatus(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2209,7 +2209,7 @@ namespace Example
             try
             {
                 // Manage roles to build links between Vault and Active Directory service accounts.
-                apiInstance.ActiveDirectoryReadRole(name, adMountPath);
+                apiInstance.ActiveDirectoryReadRole(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2281,7 +2281,7 @@ namespace Example
 
             try
             {
-                apiInstance.ActiveDirectoryRotateRole(name, adMountPath);
+                apiInstance.ActiveDirectoryRotateRole(string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2352,7 +2352,7 @@ namespace Example
 
             try
             {
-                apiInstance.ActiveDirectoryRotateRoot(adMountPath);
+                apiInstance.ActiveDirectoryRotateRoot(string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2424,7 +2424,7 @@ namespace Example
             try
             {
                 // Configure the AD server to connect to, along with password options.
-                apiInstance.ActiveDirectoryWriteConfig(activeDirectoryWriteConfigRequest, adMountPath);
+                apiInstance.ActiveDirectoryWriteConfig(ActiveDirectoryWriteConfigRequest activeDirectoryWriteConfigRequest, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2498,7 +2498,7 @@ namespace Example
             try
             {
                 // Update a library set.
-                apiInstance.ActiveDirectoryWriteLibrary(name, activeDirectoryWriteLibraryRequest, adMountPath);
+                apiInstance.ActiveDirectoryWriteLibrary(ActiveDirectoryWriteLibraryRequest activeDirectoryWriteLibraryRequest, string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2573,7 +2573,7 @@ namespace Example
             try
             {
                 // Manage roles to build links between Vault and Active Directory service accounts.
-                apiInstance.ActiveDirectoryWriteRole(name, activeDirectoryWriteRoleRequest, adMountPath);
+                apiInstance.ActiveDirectoryWriteRole(ActiveDirectoryWriteRoleRequest activeDirectoryWriteRoleRequest, string name, string adMountPath = "ad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2646,7 +2646,7 @@ namespace Example
             try
             {
                 // Configure the access key and secret to use for RAM and STS calls.
-                apiInstance.AliCloudDeleteConfig(alicloudMountPath);
+                apiInstance.AliCloudDeleteConfig(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2718,7 +2718,7 @@ namespace Example
             try
             {
                 // Read, write and reference policies and roles that API keys or STS credentials can be made for.
-                apiInstance.AliCloudDeleteRole(name, alicloudMountPath);
+                apiInstance.AliCloudDeleteRole(string name, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2791,7 +2791,7 @@ namespace Example
             try
             {
                 // List the existing roles in this backend.
-                apiInstance.AliCloudListRoles(list, alicloudMountPath);
+                apiInstance.AliCloudListRoles(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2863,7 +2863,7 @@ namespace Example
             try
             {
                 // Configure the access key and secret to use for RAM and STS calls.
-                apiInstance.AliCloudReadConfig(alicloudMountPath);
+                apiInstance.AliCloudReadConfig(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2935,7 +2935,7 @@ namespace Example
             try
             {
                 // Generate an API key or STS credential using the given role's configuration.'
-                apiInstance.AliCloudReadCredentials(name, alicloudMountPath);
+                apiInstance.AliCloudReadCredentials(string name, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3008,7 +3008,7 @@ namespace Example
             try
             {
                 // Read, write and reference policies and roles that API keys or STS credentials can be made for.
-                apiInstance.AliCloudReadRole(name, alicloudMountPath);
+                apiInstance.AliCloudReadRole(string name, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3081,7 +3081,7 @@ namespace Example
             try
             {
                 // Configure the access key and secret to use for RAM and STS calls.
-                apiInstance.AliCloudWriteConfig(aliCloudWriteConfigRequest, alicloudMountPath);
+                apiInstance.AliCloudWriteConfig(AliCloudWriteConfigRequest aliCloudWriteConfigRequest, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3155,7 +3155,7 @@ namespace Example
             try
             {
                 // Read, write and reference policies and roles that API keys or STS credentials can be made for.
-                apiInstance.AliCloudWriteRole(name, aliCloudWriteRoleRequest, alicloudMountPath);
+                apiInstance.AliCloudWriteRole(AliCloudWriteRoleRequest aliCloudWriteRoleRequest, string name, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3227,7 +3227,7 @@ namespace Example
 
             try
             {
-                apiInstance.AzureDeleteConfig(azureMountPath);
+                apiInstance.AzureDeleteConfig(string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3299,7 +3299,7 @@ namespace Example
             try
             {
                 // Manage the Vault roles used to generate Azure credentials.
-                apiInstance.AzureDeleteRole(name, azureMountPath);
+                apiInstance.AzureDeleteRole(string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3372,7 +3372,7 @@ namespace Example
             try
             {
                 // List existing roles.
-                apiInstance.AzureListRoles(list, azureMountPath);
+                apiInstance.AzureListRoles(string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3443,7 +3443,7 @@ namespace Example
 
             try
             {
-                apiInstance.AzureReadConfig(azureMountPath);
+                apiInstance.AzureReadConfig(string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3514,7 +3514,7 @@ namespace Example
 
             try
             {
-                apiInstance.AzureReadCredentials(role, azureMountPath);
+                apiInstance.AzureReadCredentials(string role, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3587,7 +3587,7 @@ namespace Example
             try
             {
                 // Manage the Vault roles used to generate Azure credentials.
-                apiInstance.AzureReadRole(name, azureMountPath);
+                apiInstance.AzureReadRole(string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3658,7 +3658,7 @@ namespace Example
 
             try
             {
-                apiInstance.AzureRotateRoot(azureMountPath);
+                apiInstance.AzureRotateRoot(string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3729,7 +3729,7 @@ namespace Example
 
             try
             {
-                apiInstance.AzureWriteConfig(azureWriteConfigRequest, azureMountPath);
+                apiInstance.AzureWriteConfig(AzureWriteConfigRequest azureWriteConfigRequest, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3803,7 +3803,7 @@ namespace Example
             try
             {
                 // Manage the Vault roles used to generate Azure credentials.
-                apiInstance.AzureWriteRole(name, azureWriteRoleRequest, azureMountPath);
+                apiInstance.AzureWriteRole(AzureWriteRoleRequest azureWriteRoleRequest, string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3876,7 +3876,7 @@ namespace Example
 
             try
             {
-                apiInstance.ConsulDeleteRole(name, consulMountPath);
+                apiInstance.ConsulDeleteRole(string name, string consulMountPath = "consul", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3948,7 +3948,7 @@ namespace Example
 
             try
             {
-                apiInstance.ConsulListRoles(list, consulMountPath);
+                apiInstance.ConsulListRoles(string consulMountPath = "consul", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4019,7 +4019,7 @@ namespace Example
 
             try
             {
-                apiInstance.ConsulReadAccessConfig(consulMountPath);
+                apiInstance.ConsulReadAccessConfig(string consulMountPath = "consul", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4090,7 +4090,7 @@ namespace Example
 
             try
             {
-                apiInstance.ConsulReadCredentials(role, consulMountPath);
+                apiInstance.ConsulReadCredentials(string role, string consulMountPath = "consul", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4162,7 +4162,7 @@ namespace Example
 
             try
             {
-                apiInstance.ConsulReadRole(name, consulMountPath);
+                apiInstance.ConsulReadRole(string name, string consulMountPath = "consul", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4234,7 +4234,7 @@ namespace Example
 
             try
             {
-                apiInstance.ConsulWriteAccessConfig(consulWriteAccessConfigRequest, consulMountPath);
+                apiInstance.ConsulWriteAccessConfig(ConsulWriteAccessConfigRequest consulWriteAccessConfigRequest, string consulMountPath = "consul", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4307,7 +4307,7 @@ namespace Example
 
             try
             {
-                apiInstance.ConsulWriteRole(name, consulWriteRoleRequest, consulMountPath);
+                apiInstance.ConsulWriteRole(ConsulWriteRoleRequest consulWriteRoleRequest, string name, string consulMountPath = "consul", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4381,7 +4381,7 @@ namespace Example
             try
             {
                 // Deletes the secret at the specified location.
-                apiInstance.CubbyholeDelete(path, cubbyholeMountPath);
+                apiInstance.CubbyholeDelete(string path, string cubbyholeMountPath = "cubbyhole", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4455,7 +4455,7 @@ namespace Example
             try
             {
                 // Retrieve the secret at the specified location.
-                apiInstance.CubbyholeRead(path, cubbyholeMountPath, list);
+                apiInstance.CubbyholeRead(string path, string cubbyholeMountPath = "cubbyhole", string list = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4529,7 +4529,7 @@ namespace Example
             try
             {
                 // Store a secret at the specified location.
-                apiInstance.CubbyholeWrite(path, cubbyholeMountPath);
+                apiInstance.CubbyholeWrite(string path, string cubbyholeMountPath = "cubbyhole", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4601,7 +4601,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudDeleteRoleset(name, gcpMountPath);
+                apiInstance.GoogleCloudDeleteRoleset(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4673,7 +4673,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudDeleteStaticAccount(name, gcpMountPath);
+                apiInstance.GoogleCloudDeleteStaticAccount(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4747,7 +4747,7 @@ namespace Example
             try
             {
                 // Decrypt a ciphertext value using a named key
-                apiInstance.GoogleCloudKMSDecrypt(key, googleCloudKMSDecryptRequest, gcpkmsMountPath);
+                apiInstance.GoogleCloudKMSDecrypt(GoogleCloudKMSDecryptRequest googleCloudKMSDecryptRequest, string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4820,7 +4820,7 @@ namespace Example
             try
             {
                 // Configure the GCP KMS secrets engine
-                apiInstance.GoogleCloudKMSDeleteConfig(gcpkmsMountPath);
+                apiInstance.GoogleCloudKMSDeleteConfig(string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4892,7 +4892,7 @@ namespace Example
             try
             {
                 // Interact with crypto keys in Vault and Google Cloud KMS
-                apiInstance.GoogleCloudKMSDeleteKey(key, gcpkmsMountPath);
+                apiInstance.GoogleCloudKMSDeleteKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4965,7 +4965,7 @@ namespace Example
             try
             {
                 // Deregister an existing key in Vault
-                apiInstance.GoogleCloudKMSDeregisterKey(key, gcpkmsMountPath);
+                apiInstance.GoogleCloudKMSDeregisterKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5039,7 +5039,7 @@ namespace Example
             try
             {
                 // Encrypt a plaintext value using a named key
-                apiInstance.GoogleCloudKMSEncrypt(key, googleCloudKMSEncryptRequest, gcpkmsMountPath);
+                apiInstance.GoogleCloudKMSEncrypt(GoogleCloudKMSEncryptRequest googleCloudKMSEncryptRequest, string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5113,7 +5113,7 @@ namespace Example
             try
             {
                 // List named keys
-                apiInstance.GoogleCloudKMSListKeys(list, gcpkmsMountPath);
+                apiInstance.GoogleCloudKMSListKeys(string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5185,7 +5185,7 @@ namespace Example
             try
             {
                 // Configure the GCP KMS secrets engine
-                apiInstance.GoogleCloudKMSReadConfig(gcpkmsMountPath);
+                apiInstance.GoogleCloudKMSReadConfig(string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5257,7 +5257,7 @@ namespace Example
             try
             {
                 // Interact with crypto keys in Vault and Google Cloud KMS
-                apiInstance.GoogleCloudKMSReadKey(key, gcpkmsMountPath);
+                apiInstance.GoogleCloudKMSReadKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5330,7 +5330,7 @@ namespace Example
             try
             {
                 // Configure the key in Vault
-                apiInstance.GoogleCloudKMSReadKeyConfig(key, gcpkmsMountPath);
+                apiInstance.GoogleCloudKMSReadKeyConfig(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5403,7 +5403,7 @@ namespace Example
             try
             {
                 // Retrieve the public key associated with the named key
-                apiInstance.GoogleCloudKMSReadPubkey(key, gcpkmsMountPath);
+                apiInstance.GoogleCloudKMSReadPubkey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5477,7 +5477,7 @@ namespace Example
             try
             {
                 // Re-encrypt existing ciphertext data to a new version
-                apiInstance.GoogleCloudKMSReencrypt(key, googleCloudKMSReencryptRequest, gcpkmsMountPath);
+                apiInstance.GoogleCloudKMSReencrypt(GoogleCloudKMSReencryptRequest googleCloudKMSReencryptRequest, string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5552,7 +5552,7 @@ namespace Example
             try
             {
                 // Register an existing crypto key in Google Cloud KMS
-                apiInstance.GoogleCloudKMSRegisterKey(key, googleCloudKMSRegisterKeyRequest, gcpkmsMountPath);
+                apiInstance.GoogleCloudKMSRegisterKey(GoogleCloudKMSRegisterKeyRequest googleCloudKMSRegisterKeyRequest, string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5626,7 +5626,7 @@ namespace Example
             try
             {
                 // Rotate a crypto key to a new primary version
-                apiInstance.GoogleCloudKMSRotateKey(key, gcpkmsMountPath);
+                apiInstance.GoogleCloudKMSRotateKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5700,7 +5700,7 @@ namespace Example
             try
             {
                 // Signs a message or digest using a named key
-                apiInstance.GoogleCloudKMSSign(key, googleCloudKMSSignRequest, gcpkmsMountPath);
+                apiInstance.GoogleCloudKMSSign(GoogleCloudKMSSignRequest googleCloudKMSSignRequest, string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5774,7 +5774,7 @@ namespace Example
             try
             {
                 // Delete old crypto key versions from Google Cloud KMS
-                apiInstance.GoogleCloudKMSTrimKey(key, gcpkmsMountPath);
+                apiInstance.GoogleCloudKMSTrimKey(string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5848,7 +5848,7 @@ namespace Example
             try
             {
                 // Verify a signature using a named key
-                apiInstance.GoogleCloudKMSVerify(key, googleCloudKMSVerifyRequest, gcpkmsMountPath);
+                apiInstance.GoogleCloudKMSVerify(GoogleCloudKMSVerifyRequest googleCloudKMSVerifyRequest, string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5922,7 +5922,7 @@ namespace Example
             try
             {
                 // Configure the GCP KMS secrets engine
-                apiInstance.GoogleCloudKMSWriteConfig(googleCloudKMSWriteConfigRequest, gcpkmsMountPath);
+                apiInstance.GoogleCloudKMSWriteConfig(GoogleCloudKMSWriteConfigRequest googleCloudKMSWriteConfigRequest, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5996,7 +5996,7 @@ namespace Example
             try
             {
                 // Interact with crypto keys in Vault and Google Cloud KMS
-                apiInstance.GoogleCloudKMSWriteKey(key, googleCloudKMSWriteKeyRequest, gcpkmsMountPath);
+                apiInstance.GoogleCloudKMSWriteKey(GoogleCloudKMSWriteKeyRequest googleCloudKMSWriteKeyRequest, string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6071,7 +6071,7 @@ namespace Example
             try
             {
                 // Configure the key in Vault
-                apiInstance.GoogleCloudKMSWriteKeyConfig(key, googleCloudKMSWriteKeyConfigRequest, gcpkmsMountPath);
+                apiInstance.GoogleCloudKMSWriteKeyConfig(GoogleCloudKMSWriteKeyConfigRequest googleCloudKMSWriteKeyConfigRequest, string key, string gcpkmsMountPath = "gcpkms", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6144,7 +6144,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudListRolesets(list, gcpMountPath);
+                apiInstance.GoogleCloudListRolesets(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6216,7 +6216,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudListStaticAccounts(list, gcpMountPath);
+                apiInstance.GoogleCloudListStaticAccounts(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6287,7 +6287,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudReadConfig(gcpMountPath);
+                apiInstance.GoogleCloudReadConfig(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6358,7 +6358,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudReadKey(roleset, gcpMountPath);
+                apiInstance.GoogleCloudReadKey(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6430,7 +6430,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudReadRoleset(name, gcpMountPath);
+                apiInstance.GoogleCloudReadRoleset(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6502,7 +6502,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudReadRolesetKey(roleset, gcpMountPath);
+                apiInstance.GoogleCloudReadRolesetKey(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6574,7 +6574,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudReadRolesetToken(roleset, gcpMountPath);
+                apiInstance.GoogleCloudReadRolesetToken(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6646,7 +6646,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudReadStaticAccount(name, gcpMountPath);
+                apiInstance.GoogleCloudReadStaticAccount(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6718,7 +6718,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudReadStaticAccountKey(name, gcpMountPath);
+                apiInstance.GoogleCloudReadStaticAccountKey(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6790,7 +6790,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudReadStaticAccountToken(name, gcpMountPath);
+                apiInstance.GoogleCloudReadStaticAccountToken(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6862,7 +6862,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudReadToken(roleset, gcpMountPath);
+                apiInstance.GoogleCloudReadToken(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6934,7 +6934,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudRotateRoleset(name, gcpMountPath);
+                apiInstance.GoogleCloudRotateRoleset(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7006,7 +7006,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudRotateRolesetKey(name, gcpMountPath);
+                apiInstance.GoogleCloudRotateRolesetKey(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7077,7 +7077,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudRotateRoot(gcpMountPath);
+                apiInstance.GoogleCloudRotateRoot(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7148,7 +7148,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudRotateStaticAccountKey(name, gcpMountPath);
+                apiInstance.GoogleCloudRotateStaticAccountKey(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7220,7 +7220,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudWriteConfig(googleCloudWriteConfigRequest, gcpMountPath);
+                apiInstance.GoogleCloudWriteConfig(GoogleCloudWriteConfigRequest googleCloudWriteConfigRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7293,7 +7293,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudWriteKey(roleset, googleCloudWriteKeyRequest, gcpMountPath);
+                apiInstance.GoogleCloudWriteKey(GoogleCloudWriteKeyRequest googleCloudWriteKeyRequest, string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7367,7 +7367,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudWriteRoleset(name, googleCloudWriteRolesetRequest, gcpMountPath);
+                apiInstance.GoogleCloudWriteRoleset(GoogleCloudWriteRolesetRequest googleCloudWriteRolesetRequest, string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7441,7 +7441,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudWriteRolesetKey(roleset, googleCloudWriteRolesetKeyRequest, gcpMountPath);
+                apiInstance.GoogleCloudWriteRolesetKey(GoogleCloudWriteRolesetKeyRequest googleCloudWriteRolesetKeyRequest, string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7514,7 +7514,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudWriteRolesetToken(roleset, gcpMountPath);
+                apiInstance.GoogleCloudWriteRolesetToken(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7587,7 +7587,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudWriteStaticAccount(name, googleCloudWriteStaticAccountRequest, gcpMountPath);
+                apiInstance.GoogleCloudWriteStaticAccount(GoogleCloudWriteStaticAccountRequest googleCloudWriteStaticAccountRequest, string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7661,7 +7661,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudWriteStaticAccountKey(name, googleCloudWriteStaticAccountKeyRequest, gcpMountPath);
+                apiInstance.GoogleCloudWriteStaticAccountKey(GoogleCloudWriteStaticAccountKeyRequest googleCloudWriteStaticAccountKeyRequest, string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7734,7 +7734,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudWriteStaticAccountToken(name, gcpMountPath);
+                apiInstance.GoogleCloudWriteStaticAccountToken(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7806,7 +7806,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudWriteToken(roleset, gcpMountPath);
+                apiInstance.GoogleCloudWriteToken(string roleset, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7879,7 +7879,7 @@ namespace Example
             try
             {
                 // Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
-                apiInstance.KVv1Delete(path, kvMountPath);
+                apiInstance.KVv1Delete(string path, string kvMountPath = "kv", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7953,7 +7953,7 @@ namespace Example
             try
             {
                 // Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
-                apiInstance.KVv1Read(path, kvMountPath, list);
+                apiInstance.KVv1Read(string path, string kvMountPath = "kv", string list = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8027,7 +8027,7 @@ namespace Example
             try
             {
                 // Pass-through secret storage to the storage backend, allowing you to read/write arbitrary data into secret storage.
-                apiInstance.KVv1Write(path, kvMountPath);
+                apiInstance.KVv1Write(string path, string kvMountPath = "kv", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8100,7 +8100,7 @@ namespace Example
             try
             {
                 // Write, Patch, Read, and Delete data in the Key-Value Store.
-                apiInstance.KVv2Delete(path, secretMountPath);
+                apiInstance.KVv2Delete(string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8173,7 +8173,7 @@ namespace Example
             try
             {
                 // Configures settings for the KV store
-                apiInstance.KVv2DeleteMetadata(path, secretMountPath);
+                apiInstance.KVv2DeleteMetadata(string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8247,7 +8247,7 @@ namespace Example
             try
             {
                 // Marks one or more versions as deleted in the KV store.
-                apiInstance.KVv2DeleteVersions(path, kVv2DeleteVersionsRequest, secretMountPath);
+                apiInstance.KVv2DeleteVersions(KVv2DeleteVersionsRequest kVv2DeleteVersionsRequest, string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8322,7 +8322,7 @@ namespace Example
             try
             {
                 // Permanently removes one or more versions in the KV store
-                apiInstance.KVv2DestroyVersions(path, kVv2DestroyVersionsRequest, secretMountPath);
+                apiInstance.KVv2DestroyVersions(KVv2DestroyVersionsRequest kVv2DestroyVersionsRequest, string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8396,7 +8396,7 @@ namespace Example
             try
             {
                 // Write, Patch, Read, and Delete data in the Key-Value Store.
-                apiInstance.KVv2Read(path, secretMountPath);
+                apiInstance.KVv2Read(string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8468,7 +8468,7 @@ namespace Example
             try
             {
                 // Read the backend level settings.
-                apiInstance.KVv2ReadConfig(secretMountPath);
+                apiInstance.KVv2ReadConfig(string secretMountPath = "secret", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8541,7 +8541,7 @@ namespace Example
             try
             {
                 // Configures settings for the KV store
-                apiInstance.KVv2ReadMetadata(path, secretMountPath, list);
+                apiInstance.KVv2ReadMetadata(string path, string secretMountPath = "secret", string list = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8615,7 +8615,7 @@ namespace Example
             try
             {
                 // Read the structure of a secret entry from the Key-Value store with the values removed.
-                apiInstance.KVv2ReadSubkeys(path, secretMountPath);
+                apiInstance.KVv2ReadSubkeys(string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8689,7 +8689,7 @@ namespace Example
             try
             {
                 // Undeletes one or more versions from the KV store.
-                apiInstance.KVv2UndeleteVersions(path, kVv2UndeleteVersionsRequest, secretMountPath);
+                apiInstance.KVv2UndeleteVersions(KVv2UndeleteVersionsRequest kVv2UndeleteVersionsRequest, string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8764,7 +8764,7 @@ namespace Example
             try
             {
                 // Write, Patch, Read, and Delete data in the Key-Value Store.
-                apiInstance.KVv2Write(path, kVv2WriteRequest, secretMountPath);
+                apiInstance.KVv2Write(KVv2WriteRequest kVv2WriteRequest, string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8838,7 +8838,7 @@ namespace Example
             try
             {
                 // Configure backend level settings that are applied to every key in the key-value store.
-                apiInstance.KVv2WriteConfig(kVv2WriteConfigRequest, secretMountPath);
+                apiInstance.KVv2WriteConfig(KVv2WriteConfigRequest kVv2WriteConfigRequest, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8912,7 +8912,7 @@ namespace Example
             try
             {
                 // Configures settings for the KV store
-                apiInstance.KVv2WriteMetadata(path, kVv2WriteMetadataRequest, secretMountPath);
+                apiInstance.KVv2WriteMetadata(KVv2WriteMetadataRequest kVv2WriteMetadataRequest, string path, string secretMountPath = "secret", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8984,7 +8984,7 @@ namespace Example
 
             try
             {
-                apiInstance.KubernetesDeleteConfig(kubernetesMountPath);
+                apiInstance.KubernetesDeleteConfig(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9055,7 +9055,7 @@ namespace Example
 
             try
             {
-                apiInstance.KubernetesDeleteRole(name, kubernetesMountPath);
+                apiInstance.KubernetesDeleteRole(string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9127,7 +9127,7 @@ namespace Example
 
             try
             {
-                apiInstance.KubernetesListRoles(list, kubernetesMountPath);
+                apiInstance.KubernetesListRoles(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9198,7 +9198,7 @@ namespace Example
 
             try
             {
-                apiInstance.KubernetesReadConfig(kubernetesMountPath);
+                apiInstance.KubernetesReadConfig(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9269,7 +9269,7 @@ namespace Example
 
             try
             {
-                apiInstance.KubernetesReadRole(name, kubernetesMountPath);
+                apiInstance.KubernetesReadRole(string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9341,7 +9341,7 @@ namespace Example
 
             try
             {
-                apiInstance.KubernetesWriteConfig(kubernetesWriteConfigRequest, kubernetesMountPath);
+                apiInstance.KubernetesWriteConfig(KubernetesWriteConfigRequest kubernetesWriteConfigRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9414,7 +9414,7 @@ namespace Example
 
             try
             {
-                apiInstance.KubernetesWriteCredentials(name, kubernetesWriteCredentialsRequest, kubernetesMountPath);
+                apiInstance.KubernetesWriteCredentials(KubernetesWriteCredentialsRequest kubernetesWriteCredentialsRequest, string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9488,7 +9488,7 @@ namespace Example
 
             try
             {
-                apiInstance.KubernetesWriteRole(name, kubernetesWriteRoleRequest, kubernetesMountPath);
+                apiInstance.KubernetesWriteRole(KubernetesWriteRoleRequest kubernetesWriteRoleRequest, string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9563,7 +9563,7 @@ namespace Example
             try
             {
                 // Check service accounts in to the library.
-                apiInstance.LDAPCheckInLibrary(name, lDAPCheckInLibraryRequest, ldapMountPath);
+                apiInstance.LDAPCheckInLibrary(LDAPCheckInLibraryRequest lDAPCheckInLibraryRequest, string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9638,7 +9638,7 @@ namespace Example
             try
             {
                 // Check service accounts in to the library.
-                apiInstance.LDAPCheckInManageLibrary(name, lDAPCheckInManageLibraryRequest, ldapMountPath);
+                apiInstance.LDAPCheckInManageLibrary(LDAPCheckInManageLibraryRequest lDAPCheckInManageLibraryRequest, string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9713,7 +9713,7 @@ namespace Example
             try
             {
                 // Check a service account out from the library.
-                apiInstance.LDAPCheckOutLibrary(name, lDAPCheckOutLibraryRequest, ldapMountPath);
+                apiInstance.LDAPCheckOutLibrary(LDAPCheckOutLibraryRequest lDAPCheckOutLibraryRequest, string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9785,7 +9785,7 @@ namespace Example
 
             try
             {
-                apiInstance.LDAPDeleteConfig(ldapMountPath);
+                apiInstance.LDAPDeleteConfig(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9857,7 +9857,7 @@ namespace Example
             try
             {
                 // Delete a library set.
-                apiInstance.LDAPDeleteLibrary(name, ldapMountPath);
+                apiInstance.LDAPDeleteLibrary(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9929,7 +9929,7 @@ namespace Example
 
             try
             {
-                apiInstance.LDAPDeleteRole(name, ldapMountPath);
+                apiInstance.LDAPDeleteRole(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10001,7 +10001,7 @@ namespace Example
 
             try
             {
-                apiInstance.LDAPDeleteStaticRole(name, ldapMountPath);
+                apiInstance.LDAPDeleteStaticRole(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10073,7 +10073,7 @@ namespace Example
 
             try
             {
-                apiInstance.LDAPListLibraries(list, ldapMountPath);
+                apiInstance.LDAPListLibraries(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10145,7 +10145,7 @@ namespace Example
 
             try
             {
-                apiInstance.LDAPListRoles(list, ldapMountPath);
+                apiInstance.LDAPListRoles(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10217,7 +10217,7 @@ namespace Example
 
             try
             {
-                apiInstance.LDAPListStaticRoles(list, ldapMountPath);
+                apiInstance.LDAPListStaticRoles(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10288,7 +10288,7 @@ namespace Example
 
             try
             {
-                apiInstance.LDAPReadConfig(ldapMountPath);
+                apiInstance.LDAPReadConfig(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10359,7 +10359,7 @@ namespace Example
 
             try
             {
-                apiInstance.LDAPReadCredentials(name, ldapMountPath);
+                apiInstance.LDAPReadCredentials(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10432,7 +10432,7 @@ namespace Example
             try
             {
                 // Read a library set.
-                apiInstance.LDAPReadLibrary(name, ldapMountPath);
+                apiInstance.LDAPReadLibrary(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10505,7 +10505,7 @@ namespace Example
             try
             {
                 // Check the status of the service accounts in a library set.
-                apiInstance.LDAPReadLibraryStatus(name, ldapMountPath);
+                apiInstance.LDAPReadLibraryStatus(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10577,7 +10577,7 @@ namespace Example
 
             try
             {
-                apiInstance.LDAPReadRole(name, ldapMountPath);
+                apiInstance.LDAPReadRole(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10649,7 +10649,7 @@ namespace Example
 
             try
             {
-                apiInstance.LDAPReadStaticCredentials(name, ldapMountPath);
+                apiInstance.LDAPReadStaticCredentials(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10721,7 +10721,7 @@ namespace Example
 
             try
             {
-                apiInstance.LDAPReadStaticRole(name, ldapMountPath);
+                apiInstance.LDAPReadStaticRole(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10793,7 +10793,7 @@ namespace Example
 
             try
             {
-                apiInstance.LDAPRotateRole(name, ldapMountPath);
+                apiInstance.LDAPRotateRole(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10864,7 +10864,7 @@ namespace Example
 
             try
             {
-                apiInstance.LDAPRotateRoot(ldapMountPath);
+                apiInstance.LDAPRotateRoot(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10935,7 +10935,7 @@ namespace Example
 
             try
             {
-                apiInstance.LDAPWriteConfig(lDAPWriteConfigRequest, ldapMountPath);
+                apiInstance.LDAPWriteConfig(LDAPWriteConfigRequest lDAPWriteConfigRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11009,7 +11009,7 @@ namespace Example
             try
             {
                 // Update a library set.
-                apiInstance.LDAPWriteLibrary(name, lDAPWriteLibraryRequest, ldapMountPath);
+                apiInstance.LDAPWriteLibrary(LDAPWriteLibraryRequest lDAPWriteLibraryRequest, string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11083,7 +11083,7 @@ namespace Example
 
             try
             {
-                apiInstance.LDAPWriteRole(name, lDAPWriteRoleRequest, ldapMountPath);
+                apiInstance.LDAPWriteRole(LDAPWriteRoleRequest lDAPWriteRoleRequest, string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11157,7 +11157,7 @@ namespace Example
 
             try
             {
-                apiInstance.LDAPWriteStaticRole(name, lDAPWriteStaticRoleRequest, ldapMountPath);
+                apiInstance.LDAPWriteStaticRole(LDAPWriteStaticRoleRequest lDAPWriteStaticRoleRequest, string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11231,7 +11231,7 @@ namespace Example
             try
             {
                 // Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
-                apiInstance.MongoDBAtlasDeleteRole(name, mongodbatlasMountPath);
+                apiInstance.MongoDBAtlasDeleteRole(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11304,7 +11304,7 @@ namespace Example
             try
             {
                 // List the existing roles in this backend
-                apiInstance.MongoDBAtlasListRoles(list, mongodbatlasMountPath);
+                apiInstance.MongoDBAtlasListRoles(string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11376,7 +11376,7 @@ namespace Example
             try
             {
                 // Configure the  credentials that are used to manage Database Users.
-                apiInstance.MongoDBAtlasReadConfig(mongodbatlasMountPath);
+                apiInstance.MongoDBAtlasReadConfig(string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11448,7 +11448,7 @@ namespace Example
             try
             {
                 // Generate MongoDB Atlas Programmatic API from a specific Vault role.
-                apiInstance.MongoDBAtlasReadCredentials(name, mongodbatlasMountPath);
+                apiInstance.MongoDBAtlasReadCredentials(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11521,7 +11521,7 @@ namespace Example
             try
             {
                 // Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
-                apiInstance.MongoDBAtlasReadRole(name, mongodbatlasMountPath);
+                apiInstance.MongoDBAtlasReadRole(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11594,7 +11594,7 @@ namespace Example
             try
             {
                 // Configure the  credentials that are used to manage Database Users.
-                apiInstance.MongoDBAtlasWriteConfig(mongoDBAtlasWriteConfigRequest, mongodbatlasMountPath);
+                apiInstance.MongoDBAtlasWriteConfig(MongoDBAtlasWriteConfigRequest mongoDBAtlasWriteConfigRequest, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11667,7 +11667,7 @@ namespace Example
             try
             {
                 // Generate MongoDB Atlas Programmatic API from a specific Vault role.
-                apiInstance.MongoDBAtlasWriteCredentials(name, mongodbatlasMountPath);
+                apiInstance.MongoDBAtlasWriteCredentials(string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11741,7 +11741,7 @@ namespace Example
             try
             {
                 // Manage the roles used to generate MongoDB Atlas Programmatic API Keys.
-                apiInstance.MongoDBAtlasWriteRole(name, mongoDBAtlasWriteRoleRequest, mongodbatlasMountPath);
+                apiInstance.MongoDBAtlasWriteRole(MongoDBAtlasWriteRoleRequest mongoDBAtlasWriteRoleRequest, string name, string mongodbatlasMountPath = "mongodbatlas", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11813,7 +11813,7 @@ namespace Example
 
             try
             {
-                apiInstance.NomadDeleteAccessConfig(nomadMountPath);
+                apiInstance.NomadDeleteAccessConfig(string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11884,7 +11884,7 @@ namespace Example
             try
             {
                 // Configure the lease parameters for generated tokens
-                apiInstance.NomadDeleteLeaseConfig(nomadMountPath);
+                apiInstance.NomadDeleteLeaseConfig(string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11955,7 +11955,7 @@ namespace Example
 
             try
             {
-                apiInstance.NomadDeleteRole(name, nomadMountPath);
+                apiInstance.NomadDeleteRole(string name, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12027,7 +12027,7 @@ namespace Example
 
             try
             {
-                apiInstance.NomadListRoles(list, nomadMountPath);
+                apiInstance.NomadListRoles(string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12098,7 +12098,7 @@ namespace Example
 
             try
             {
-                apiInstance.NomadReadAccessConfig(nomadMountPath);
+                apiInstance.NomadReadAccessConfig(string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12169,7 +12169,7 @@ namespace Example
 
             try
             {
-                apiInstance.NomadReadCredentials(name, nomadMountPath);
+                apiInstance.NomadReadCredentials(string name, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12241,7 +12241,7 @@ namespace Example
             try
             {
                 // Configure the lease parameters for generated tokens
-                apiInstance.NomadReadLeaseConfig(nomadMountPath);
+                apiInstance.NomadReadLeaseConfig(string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12312,7 +12312,7 @@ namespace Example
 
             try
             {
-                apiInstance.NomadReadRole(name, nomadMountPath);
+                apiInstance.NomadReadRole(string name, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12384,7 +12384,7 @@ namespace Example
 
             try
             {
-                apiInstance.NomadWriteAccessConfig(nomadWriteAccessConfigRequest, nomadMountPath);
+                apiInstance.NomadWriteAccessConfig(NomadWriteAccessConfigRequest nomadWriteAccessConfigRequest, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12457,7 +12457,7 @@ namespace Example
             try
             {
                 // Configure the lease parameters for generated tokens
-                apiInstance.NomadWriteLeaseConfig(nomadWriteLeaseConfigRequest, nomadMountPath);
+                apiInstance.NomadWriteLeaseConfig(NomadWriteLeaseConfigRequest nomadWriteLeaseConfigRequest, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12530,7 +12530,7 @@ namespace Example
 
             try
             {
-                apiInstance.NomadWriteRole(name, nomadWriteRoleRequest, nomadMountPath);
+                apiInstance.NomadWriteRole(NomadWriteRoleRequest nomadWriteRoleRequest, string name, string nomadMountPath = "nomad", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12605,7 +12605,7 @@ namespace Example
             try
             {
                 // Check service accounts in to the library.
-                apiInstance.OpenLDAPCheckInLibrary(name, openLDAPCheckInLibraryRequest, openldapMountPath);
+                apiInstance.OpenLDAPCheckInLibrary(OpenLDAPCheckInLibraryRequest openLDAPCheckInLibraryRequest, string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12680,7 +12680,7 @@ namespace Example
             try
             {
                 // Check service accounts in to the library.
-                apiInstance.OpenLDAPCheckInManageLibrary(name, openLDAPCheckInManageLibraryRequest, openldapMountPath);
+                apiInstance.OpenLDAPCheckInManageLibrary(OpenLDAPCheckInManageLibraryRequest openLDAPCheckInManageLibraryRequest, string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12755,7 +12755,7 @@ namespace Example
             try
             {
                 // Check a service account out from the library.
-                apiInstance.OpenLDAPCheckOutLibrary(name, openLDAPCheckOutLibraryRequest, openldapMountPath);
+                apiInstance.OpenLDAPCheckOutLibrary(OpenLDAPCheckOutLibraryRequest openLDAPCheckOutLibraryRequest, string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12827,7 +12827,7 @@ namespace Example
 
             try
             {
-                apiInstance.OpenLDAPDeleteConfig(openldapMountPath);
+                apiInstance.OpenLDAPDeleteConfig(string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12899,7 +12899,7 @@ namespace Example
             try
             {
                 // Delete a library set.
-                apiInstance.OpenLDAPDeleteLibrary(name, openldapMountPath);
+                apiInstance.OpenLDAPDeleteLibrary(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12971,7 +12971,7 @@ namespace Example
 
             try
             {
-                apiInstance.OpenLDAPDeleteRole(name, openldapMountPath);
+                apiInstance.OpenLDAPDeleteRole(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13043,7 +13043,7 @@ namespace Example
 
             try
             {
-                apiInstance.OpenLDAPDeleteStaticRole(name, openldapMountPath);
+                apiInstance.OpenLDAPDeleteStaticRole(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13115,7 +13115,7 @@ namespace Example
 
             try
             {
-                apiInstance.OpenLDAPListLibraries(list, openldapMountPath);
+                apiInstance.OpenLDAPListLibraries(string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13187,7 +13187,7 @@ namespace Example
 
             try
             {
-                apiInstance.OpenLDAPListRoles(list, openldapMountPath);
+                apiInstance.OpenLDAPListRoles(string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13259,7 +13259,7 @@ namespace Example
 
             try
             {
-                apiInstance.OpenLDAPListStaticRoles(list, openldapMountPath);
+                apiInstance.OpenLDAPListStaticRoles(string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13330,7 +13330,7 @@ namespace Example
 
             try
             {
-                apiInstance.OpenLDAPReadConfig(openldapMountPath);
+                apiInstance.OpenLDAPReadConfig(string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13401,7 +13401,7 @@ namespace Example
 
             try
             {
-                apiInstance.OpenLDAPReadCredentials(name, openldapMountPath);
+                apiInstance.OpenLDAPReadCredentials(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13474,7 +13474,7 @@ namespace Example
             try
             {
                 // Read a library set.
-                apiInstance.OpenLDAPReadLibrary(name, openldapMountPath);
+                apiInstance.OpenLDAPReadLibrary(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13547,7 +13547,7 @@ namespace Example
             try
             {
                 // Check the status of the service accounts in a library set.
-                apiInstance.OpenLDAPReadLibraryStatus(name, openldapMountPath);
+                apiInstance.OpenLDAPReadLibraryStatus(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13619,7 +13619,7 @@ namespace Example
 
             try
             {
-                apiInstance.OpenLDAPReadRole(name, openldapMountPath);
+                apiInstance.OpenLDAPReadRole(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13691,7 +13691,7 @@ namespace Example
 
             try
             {
-                apiInstance.OpenLDAPReadStaticCredentials(name, openldapMountPath);
+                apiInstance.OpenLDAPReadStaticCredentials(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13763,7 +13763,7 @@ namespace Example
 
             try
             {
-                apiInstance.OpenLDAPReadStaticRole(name, openldapMountPath);
+                apiInstance.OpenLDAPReadStaticRole(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13835,7 +13835,7 @@ namespace Example
 
             try
             {
-                apiInstance.OpenLDAPRotateRole(name, openldapMountPath);
+                apiInstance.OpenLDAPRotateRole(string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13906,7 +13906,7 @@ namespace Example
 
             try
             {
-                apiInstance.OpenLDAPRotateRoot(openldapMountPath);
+                apiInstance.OpenLDAPRotateRoot(string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13977,7 +13977,7 @@ namespace Example
 
             try
             {
-                apiInstance.OpenLDAPWriteConfig(openLDAPWriteConfigRequest, openldapMountPath);
+                apiInstance.OpenLDAPWriteConfig(OpenLDAPWriteConfigRequest openLDAPWriteConfigRequest, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14051,7 +14051,7 @@ namespace Example
             try
             {
                 // Update a library set.
-                apiInstance.OpenLDAPWriteLibrary(name, openLDAPWriteLibraryRequest, openldapMountPath);
+                apiInstance.OpenLDAPWriteLibrary(OpenLDAPWriteLibraryRequest openLDAPWriteLibraryRequest, string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14125,7 +14125,7 @@ namespace Example
 
             try
             {
-                apiInstance.OpenLDAPWriteRole(name, openLDAPWriteRoleRequest, openldapMountPath);
+                apiInstance.OpenLDAPWriteRole(OpenLDAPWriteRoleRequest openLDAPWriteRoleRequest, string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14199,7 +14199,7 @@ namespace Example
 
             try
             {
-                apiInstance.OpenLDAPWriteStaticRole(name, openLDAPWriteStaticRoleRequest, openldapMountPath);
+                apiInstance.OpenLDAPWriteStaticRole(OpenLDAPWriteStaticRoleRequest openLDAPWriteStaticRoleRequest, string name, string openldapMountPath = "openldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14272,7 +14272,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIBundleWrite(pKIBundleWriteRequest, pkiMountPath);
+                apiInstance.PKIBundleWrite(PKIBundleWriteRequest pKIBundleWriteRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14344,7 +14344,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIDeleteKey(keyRef, pkiMountPath);
+                apiInstance.PKIDeleteKey(string keyRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14416,7 +14416,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIDeleteRole(name, pkiMountPath);
+                apiInstance.PKIDeleteRole(string name, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14487,7 +14487,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIDeleteRoot(pkiMountPath);
+                apiInstance.PKIDeleteRoot(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14559,7 +14559,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIGenerateRoot(exported, pKIGenerateRootRequest, pkiMountPath);
+                apiInstance.PKIGenerateRoot(PKIGenerateRootRequest pKIGenerateRootRequest, string exported, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14632,7 +14632,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIImportKeys(pKIImportKeysRequest, pkiMountPath);
+                apiInstance.PKIImportKeys(PKIImportKeysRequest pKIImportKeysRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14706,7 +14706,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIIssuerIssueRole(issuerRef, role, pKIIssuerIssueRoleRequest, pkiMountPath);
+                apiInstance.PKIIssuerIssueRole(PKIIssuerIssueRoleRequest pKIIssuerIssueRoleRequest, string issuerRef, string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14781,7 +14781,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIIssuerResignCRLs(issuerRef, pKIIssuerResignCRLsRequest, pkiMountPath);
+                apiInstance.PKIIssuerResignCRLs(PKIIssuerResignCRLsRequest pKIIssuerResignCRLsRequest, string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14854,7 +14854,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIIssuerRevoke(issuerRef, pkiMountPath);
+                apiInstance.PKIIssuerRevoke(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14927,7 +14927,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIIssuerSignIntermediate(issuerRef, pKIIssuerSignIntermediateRequest, pkiMountPath);
+                apiInstance.PKIIssuerSignIntermediate(PKIIssuerSignIntermediateRequest pKIIssuerSignIntermediateRequest, string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15001,7 +15001,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIIssuerSignRevocationList(issuerRef, pKIIssuerSignRevocationListRequest, pkiMountPath);
+                apiInstance.PKIIssuerSignRevocationList(PKIIssuerSignRevocationListRequest pKIIssuerSignRevocationListRequest, string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15076,7 +15076,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIIssuerSignRole(issuerRef, role, pKIIssuerSignRoleRequest, pkiMountPath);
+                apiInstance.PKIIssuerSignRole(PKIIssuerSignRoleRequest pKIIssuerSignRoleRequest, string issuerRef, string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15151,7 +15151,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIIssuerSignSelfIssued(issuerRef, pKIIssuerSignSelfIssuedRequest, pkiMountPath);
+                apiInstance.PKIIssuerSignSelfIssued(PKIIssuerSignSelfIssuedRequest pKIIssuerSignSelfIssuedRequest, string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15225,7 +15225,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIIssuerSignVerbatim(issuerRef, pKIIssuerSignVerbatimRequest, pkiMountPath);
+                apiInstance.PKIIssuerSignVerbatim(PKIIssuerSignVerbatimRequest pKIIssuerSignVerbatimRequest, string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15300,7 +15300,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIIssuerSignVerbatimRole(issuerRef, role, pKIIssuerSignVerbatimRoleRequest, pkiMountPath);
+                apiInstance.PKIIssuerSignVerbatimRole(PKIIssuerSignVerbatimRoleRequest pKIIssuerSignVerbatimRoleRequest, string issuerRef, string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15375,7 +15375,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIIssuersGenerateIntermediate(exported, pKIIssuersGenerateIntermediateRequest, pkiMountPath);
+                apiInstance.PKIIssuersGenerateIntermediate(PKIIssuersGenerateIntermediateRequest pKIIssuersGenerateIntermediateRequest, string exported, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15449,7 +15449,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIIssuersGenerateRoot(exported, pKIIssuersGenerateRootRequest, pkiMountPath);
+                apiInstance.PKIIssuersGenerateRoot(PKIIssuersGenerateRootRequest pKIIssuersGenerateRootRequest, string exported, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15522,7 +15522,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIIssuersList(list, pkiMountPath);
+                apiInstance.PKIIssuersList(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15594,7 +15594,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIListCerts(list, pkiMountPath);
+                apiInstance.PKIListCerts(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15666,7 +15666,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIListCertsRevoked(list, pkiMountPath);
+                apiInstance.PKIListCertsRevoked(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15738,7 +15738,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIListKeys(list, pkiMountPath);
+                apiInstance.PKIListKeys(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15810,7 +15810,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIListRoles(list, pkiMountPath);
+                apiInstance.PKIListRoles(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15881,7 +15881,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIReadAutoTidyConfig(pkiMountPath);
+                apiInstance.PKIReadAutoTidyConfig(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15951,7 +15951,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIReadCA(pkiMountPath);
+                apiInstance.PKIReadCA(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16021,7 +16021,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIReadCAChain(pkiMountPath);
+                apiInstance.PKIReadCAChain(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16091,7 +16091,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIReadCAPem(pkiMountPath);
+                apiInstance.PKIReadCAPem(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16161,7 +16161,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIReadCRL(pkiMountPath);
+                apiInstance.PKIReadCRL(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16231,7 +16231,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIReadCRLConfig(pkiMountPath);
+                apiInstance.PKIReadCRLConfig(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16301,7 +16301,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIReadCRLRotate(pkiMountPath);
+                apiInstance.PKIReadCRLRotate(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16371,7 +16371,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIReadCRLRotateDelta(pkiMountPath);
+                apiInstance.PKIReadCRLRotateDelta(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16442,7 +16442,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIReadCert(serial, pkiMountPath);
+                apiInstance.PKIReadCert(string serial, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16513,7 +16513,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIReadCertCAChain(pkiMountPath);
+                apiInstance.PKIReadCertCAChain(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16584,7 +16584,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIReadCertRaw(serial, pkiMountPath);
+                apiInstance.PKIReadCertRaw(string serial, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16656,7 +16656,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIReadCertRawPem(serial, pkiMountPath);
+                apiInstance.PKIReadCertRawPem(string serial, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16727,7 +16727,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIReadClusterConfig(pkiMountPath);
+                apiInstance.PKIReadClusterConfig(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16797,7 +16797,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIReadDeltaCRL(pkiMountPath);
+                apiInstance.PKIReadDeltaCRL(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16867,7 +16867,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIReadIssuersConfig(pkiMountPath);
+                apiInstance.PKIReadIssuersConfig(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16938,7 +16938,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIReadKey(keyRef, pkiMountPath);
+                apiInstance.PKIReadKey(string keyRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17009,7 +17009,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIReadKeysConfig(pkiMountPath);
+                apiInstance.PKIReadKeysConfig(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17080,7 +17080,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIReadOCSPReq(req, pkiMountPath);
+                apiInstance.PKIReadOCSPReq(string req, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17152,7 +17152,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIReadRole(name, pkiMountPath);
+                apiInstance.PKIReadRole(string name, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17223,7 +17223,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIReadURLConfig(pkiMountPath);
+                apiInstance.PKIReadURLConfig(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17294,7 +17294,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIReplaceRoot(pKIReplaceRootRequest, pkiMountPath);
+                apiInstance.PKIReplaceRoot(PKIReplaceRootRequest pKIReplaceRootRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17366,7 +17366,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIRevoke(pKIRevokeRequest, pkiMountPath);
+                apiInstance.PKIRevoke(PKIRevokeRequest pKIRevokeRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17438,7 +17438,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIRevokeWithKey(pKIRevokeWithKeyRequest, pkiMountPath);
+                apiInstance.PKIRevokeWithKey(PKIRevokeWithKeyRequest pKIRevokeWithKeyRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17510,7 +17510,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIRootSignIntermediate(pKIRootSignIntermediateRequest, pkiMountPath);
+                apiInstance.PKIRootSignIntermediate(PKIRootSignIntermediateRequest pKIRootSignIntermediateRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17582,7 +17582,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIRootSignSelfIssued(pKIRootSignSelfIssuedRequest, pkiMountPath);
+                apiInstance.PKIRootSignSelfIssued(PKIRootSignSelfIssuedRequest pKIRootSignSelfIssuedRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17655,7 +17655,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIRotateRoot(exported, pKIRotateRootRequest, pkiMountPath);
+                apiInstance.PKIRotateRoot(PKIRotateRootRequest pKIRotateRootRequest, string exported, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17729,7 +17729,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKISignRole(role, pKISignRoleRequest, pkiMountPath);
+                apiInstance.PKISignRole(PKISignRoleRequest pKISignRoleRequest, string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17802,7 +17802,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKISignVerbatim(pKISignVerbatimRequest, pkiMountPath);
+                apiInstance.PKISignVerbatim(PKISignVerbatimRequest pKISignVerbatimRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17875,7 +17875,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKISignVerbatimRole(role, pKISignVerbatimRoleRequest, pkiMountPath);
+                apiInstance.PKISignVerbatimRole(PKISignVerbatimRoleRequest pKISignVerbatimRoleRequest, string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17948,7 +17948,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKITidy(pKITidyRequest, pkiMountPath);
+                apiInstance.PKITidy(PKITidyRequest pKITidyRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18019,7 +18019,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKITidyCancel(pkiMountPath);
+                apiInstance.PKITidyCancel(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18089,7 +18089,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKITidyStatus(pkiMountPath);
+                apiInstance.PKITidyStatus(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18160,7 +18160,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIWriteAutoTidyConfig(pKIWriteAutoTidyConfigRequest, pkiMountPath);
+                apiInstance.PKIWriteAutoTidyConfig(PKIWriteAutoTidyConfigRequest pKIWriteAutoTidyConfigRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18232,7 +18232,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIWriteCAConfig(pKIWriteCAConfigRequest, pkiMountPath);
+                apiInstance.PKIWriteCAConfig(PKIWriteCAConfigRequest pKIWriteCAConfigRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18304,7 +18304,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIWriteCRLConfig(pKIWriteCRLConfigRequest, pkiMountPath);
+                apiInstance.PKIWriteCRLConfig(PKIWriteCRLConfigRequest pKIWriteCRLConfigRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18376,7 +18376,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIWriteCerts(pKIWriteCertsRequest, pkiMountPath);
+                apiInstance.PKIWriteCerts(PKIWriteCertsRequest pKIWriteCertsRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18448,7 +18448,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIWriteClusterConfig(pKIWriteClusterConfigRequest, pkiMountPath);
+                apiInstance.PKIWriteClusterConfig(PKIWriteClusterConfigRequest pKIWriteClusterConfigRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18520,7 +18520,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIWriteIntermediateCrossSign(pKIWriteIntermediateCrossSignRequest, pkiMountPath);
+                apiInstance.PKIWriteIntermediateCrossSign(PKIWriteIntermediateCrossSignRequest pKIWriteIntermediateCrossSignRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18593,7 +18593,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIWriteIntermediateGenerate(exported, pKIWriteIntermediateGenerateRequest, pkiMountPath);
+                apiInstance.PKIWriteIntermediateGenerate(PKIWriteIntermediateGenerateRequest pKIWriteIntermediateGenerateRequest, string exported, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18666,7 +18666,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIWriteIntermediateSetSigned(pKIWriteIntermediateSetSignedRequest, pkiMountPath);
+                apiInstance.PKIWriteIntermediateSetSigned(PKIWriteIntermediateSetSignedRequest pKIWriteIntermediateSetSignedRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18738,7 +18738,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIWriteInternalExported(pKIWriteInternalExportedRequest, pkiMountPath);
+                apiInstance.PKIWriteInternalExported(PKIWriteInternalExportedRequest pKIWriteInternalExportedRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18811,7 +18811,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIWriteIssueRole(role, pKIWriteIssueRoleRequest, pkiMountPath);
+                apiInstance.PKIWriteIssueRole(PKIWriteIssueRoleRequest pKIWriteIssueRoleRequest, string role, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18884,7 +18884,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIWriteIssuersConfig(pKIWriteIssuersConfigRequest, pkiMountPath);
+                apiInstance.PKIWriteIssuersConfig(PKIWriteIssuersConfigRequest pKIWriteIssuersConfigRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18956,7 +18956,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIWriteKMS(pKIWriteKMSRequest, pkiMountPath);
+                apiInstance.PKIWriteKMS(PKIWriteKMSRequest pKIWriteKMSRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -19029,7 +19029,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIWriteKey(keyRef, pKIWriteKeyRequest, pkiMountPath);
+                apiInstance.PKIWriteKey(PKIWriteKeyRequest pKIWriteKeyRequest, string keyRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -19102,7 +19102,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIWriteKeysConfig(pKIWriteKeysConfigRequest, pkiMountPath);
+                apiInstance.PKIWriteKeysConfig(PKIWriteKeysConfigRequest pKIWriteKeysConfigRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -19173,7 +19173,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIWriteOCSP(pkiMountPath);
+                apiInstance.PKIWriteOCSP(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -19245,7 +19245,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIWriteRole(name, pKIWriteRoleRequest, pkiMountPath);
+                apiInstance.PKIWriteRole(PKIWriteRoleRequest pKIWriteRoleRequest, string name, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -19318,7 +19318,7 @@ namespace Example
 
             try
             {
-                apiInstance.PKIWriteURLConfig(pKIWriteURLConfigRequest, pkiMountPath);
+                apiInstance.PKIWriteURLConfig(PKIWriteURLConfigRequest pKIWriteURLConfigRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -19390,7 +19390,7 @@ namespace Example
 
             try
             {
-                apiInstance.PkiDeleteIssuerRefDerPem(issuerRef, pkiMountPath);
+                apiInstance.PkiDeleteIssuerRefDerPem(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -19461,7 +19461,7 @@ namespace Example
 
             try
             {
-                apiInstance.PkiDeleteJson(pkiMountPath);
+                apiInstance.PkiDeleteJson(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -19531,7 +19531,7 @@ namespace Example
 
             try
             {
-                apiInstance.PkiReadDelta(pkiMountPath);
+                apiInstance.PkiReadDelta(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -19601,7 +19601,7 @@ namespace Example
 
             try
             {
-                apiInstance.PkiReadDeltaPem(pkiMountPath);
+                apiInstance.PkiReadDeltaPem(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -19671,7 +19671,7 @@ namespace Example
 
             try
             {
-                apiInstance.PkiReadDer(pkiMountPath);
+                apiInstance.PkiReadDer(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -19742,7 +19742,7 @@ namespace Example
 
             try
             {
-                apiInstance.PkiReadIssuerRefCrlPemDerDeltaPem(issuerRef, pkiMountPath);
+                apiInstance.PkiReadIssuerRefCrlPemDerDeltaPem(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -19814,7 +19814,7 @@ namespace Example
 
             try
             {
-                apiInstance.PkiReadIssuerRefDerPem(issuerRef, pkiMountPath);
+                apiInstance.PkiReadIssuerRefDerPem(string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -19885,7 +19885,7 @@ namespace Example
 
             try
             {
-                apiInstance.PkiReadJson(pkiMountPath);
+                apiInstance.PkiReadJson(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -19955,7 +19955,7 @@ namespace Example
 
             try
             {
-                apiInstance.PkiReadPem(pkiMountPath);
+                apiInstance.PkiReadPem(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -20027,7 +20027,7 @@ namespace Example
 
             try
             {
-                apiInstance.PkiWriteIssuerRefDerPem(issuerRef, pkiWriteIssuerRefDerPemRequest, pkiMountPath);
+                apiInstance.PkiWriteIssuerRefDerPem(PkiWriteIssuerRefDerPemRequest pkiWriteIssuerRefDerPemRequest, string issuerRef, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -20100,7 +20100,7 @@ namespace Example
 
             try
             {
-                apiInstance.PkiWriteJson(pkiWriteJsonRequest, pkiMountPath);
+                apiInstance.PkiWriteJson(PkiWriteJsonRequest pkiWriteJsonRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -20173,7 +20173,7 @@ namespace Example
             try
             {
                 // Manage the roles that can be created with this backend.
-                apiInstance.RabbitMQDeleteRole(name, rabbitmqMountPath);
+                apiInstance.RabbitMQDeleteRole(string name, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -20246,7 +20246,7 @@ namespace Example
             try
             {
                 // Manage the roles that can be created with this backend.
-                apiInstance.RabbitMQListRoles(list, rabbitmqMountPath);
+                apiInstance.RabbitMQListRoles(string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -20319,7 +20319,7 @@ namespace Example
             try
             {
                 // Request RabbitMQ credentials for a certain role.
-                apiInstance.RabbitMQReadCredentials(name, rabbitmqMountPath);
+                apiInstance.RabbitMQReadCredentials(string name, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -20391,7 +20391,7 @@ namespace Example
             try
             {
                 // Configure the lease parameters for generated credentials
-                apiInstance.RabbitMQReadLeaseConfig(rabbitmqMountPath);
+                apiInstance.RabbitMQReadLeaseConfig(string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -20463,7 +20463,7 @@ namespace Example
             try
             {
                 // Manage the roles that can be created with this backend.
-                apiInstance.RabbitMQReadRole(name, rabbitmqMountPath);
+                apiInstance.RabbitMQReadRole(string name, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -20536,7 +20536,7 @@ namespace Example
             try
             {
                 // Configure the connection URI, username, and password to talk to RabbitMQ management HTTP API.
-                apiInstance.RabbitMQWriteConnectionConfig(rabbitMQWriteConnectionConfigRequest, rabbitmqMountPath);
+                apiInstance.RabbitMQWriteConnectionConfig(RabbitMQWriteConnectionConfigRequest rabbitMQWriteConnectionConfigRequest, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -20609,7 +20609,7 @@ namespace Example
             try
             {
                 // Configure the lease parameters for generated credentials
-                apiInstance.RabbitMQWriteLeaseConfig(rabbitMQWriteLeaseConfigRequest, rabbitmqMountPath);
+                apiInstance.RabbitMQWriteLeaseConfig(RabbitMQWriteLeaseConfigRequest rabbitMQWriteLeaseConfigRequest, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -20683,7 +20683,7 @@ namespace Example
             try
             {
                 // Manage the roles that can be created with this backend.
-                apiInstance.RabbitMQWriteRole(name, rabbitMQWriteRoleRequest, rabbitmqMountPath);
+                apiInstance.RabbitMQWriteRole(RabbitMQWriteRoleRequest rabbitMQWriteRoleRequest, string name, string rabbitmqMountPath = "rabbitmq", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -20756,7 +20756,7 @@ namespace Example
             try
             {
                 // Set the SSH private key used for signing certificates.
-                apiInstance.SSHDeleteCAConfig(sshMountPath);
+                apiInstance.SSHDeleteCAConfig(string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -20828,7 +20828,7 @@ namespace Example
             try
             {
                 // Register a shared private key with Vault.
-                apiInstance.SSHDeleteKeys(keyName, sshMountPath);
+                apiInstance.SSHDeleteKeys(string keyName, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -20901,7 +20901,7 @@ namespace Example
             try
             {
                 // Manage the 'roles' that can be created with this backend.
-                apiInstance.SSHDeleteRole(role, sshMountPath);
+                apiInstance.SSHDeleteRole(string role, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -20973,7 +20973,7 @@ namespace Example
             try
             {
                 // Assign zero address as default CIDR block for select roles.
-                apiInstance.SSHDeleteZeroAddressConfig(sshMountPath);
+                apiInstance.SSHDeleteZeroAddressConfig(string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -21045,7 +21045,7 @@ namespace Example
             try
             {
                 // Manage the 'roles' that can be created with this backend.
-                apiInstance.SSHListRoles(list, sshMountPath);
+                apiInstance.SSHListRoles(string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -21118,7 +21118,7 @@ namespace Example
             try
             {
                 // List all the roles associated with the given IP address.
-                apiInstance.SSHLookup(sSHLookupRequest, sshMountPath);
+                apiInstance.SSHLookup(SSHLookupRequest sSHLookupRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -21190,7 +21190,7 @@ namespace Example
             try
             {
                 // Set the SSH private key used for signing certificates.
-                apiInstance.SSHReadCAConfig(sshMountPath);
+                apiInstance.SSHReadCAConfig(string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -21261,7 +21261,7 @@ namespace Example
             try
             {
                 // Retrieve the public key.
-                apiInstance.SSHReadPublicKey(sshMountPath);
+                apiInstance.SSHReadPublicKey(string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -21333,7 +21333,7 @@ namespace Example
             try
             {
                 // Manage the 'roles' that can be created with this backend.
-                apiInstance.SSHReadRole(role, sshMountPath);
+                apiInstance.SSHReadRole(string role, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -21405,7 +21405,7 @@ namespace Example
             try
             {
                 // Assign zero address as default CIDR block for select roles.
-                apiInstance.SSHReadZeroAddressConfig(sshMountPath);
+                apiInstance.SSHReadZeroAddressConfig(string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -21478,7 +21478,7 @@ namespace Example
             try
             {
                 // Request signing an SSH key using a certain role with the provided details.
-                apiInstance.SSHSign(role, sSHSignRequest, sshMountPath);
+                apiInstance.SSHSign(SSHSignRequest sSHSignRequest, string role, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -21552,7 +21552,7 @@ namespace Example
             try
             {
                 // Validate the OTP provided by Vault SSH Agent.
-                apiInstance.SSHVerify(sSHVerifyRequest, sshMountPath);
+                apiInstance.SSHVerify(SSHVerifyRequest sSHVerifyRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -21625,7 +21625,7 @@ namespace Example
             try
             {
                 // Set the SSH private key used for signing certificates.
-                apiInstance.SSHWriteCAConfig(sSHWriteCAConfigRequest, sshMountPath);
+                apiInstance.SSHWriteCAConfig(SSHWriteCAConfigRequest sSHWriteCAConfigRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -21699,7 +21699,7 @@ namespace Example
             try
             {
                 // Creates a credential for establishing SSH connection with the remote host.
-                apiInstance.SSHWriteCredentials(role, sSHWriteCredentialsRequest, sshMountPath);
+                apiInstance.SSHWriteCredentials(SSHWriteCredentialsRequest sSHWriteCredentialsRequest, string role, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -21773,7 +21773,7 @@ namespace Example
 
             try
             {
-                apiInstance.SSHWriteIssue(role, sSHWriteIssueRequest, sshMountPath);
+                apiInstance.SSHWriteIssue(SSHWriteIssueRequest sSHWriteIssueRequest, string role, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -21848,7 +21848,7 @@ namespace Example
             try
             {
                 // Register a shared private key with Vault.
-                apiInstance.SSHWriteKeys(keyName, sSHWriteKeysRequest, sshMountPath);
+                apiInstance.SSHWriteKeys(SSHWriteKeysRequest sSHWriteKeysRequest, string keyName, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -21923,7 +21923,7 @@ namespace Example
             try
             {
                 // Manage the 'roles' that can be created with this backend.
-                apiInstance.SSHWriteRole(role, sSHWriteRoleRequest, sshMountPath);
+                apiInstance.SSHWriteRole(SSHWriteRoleRequest sSHWriteRoleRequest, string role, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -21997,7 +21997,7 @@ namespace Example
             try
             {
                 // Assign zero address as default CIDR block for select roles.
-                apiInstance.SSHWriteZeroAddressConfig(sSHWriteZeroAddressConfigRequest, sshMountPath);
+                apiInstance.SSHWriteZeroAddressConfig(SSHWriteZeroAddressConfigRequest sSHWriteZeroAddressConfigRequest, string sshMountPath = "ssh", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -22070,7 +22070,7 @@ namespace Example
             try
             {
                 // Manage the keys that can be created with this backend.
-                apiInstance.TOTPDeleteKey(name, totpMountPath);
+                apiInstance.TOTPDeleteKey(string name, string totpMountPath = "totp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -22143,7 +22143,7 @@ namespace Example
             try
             {
                 // Manage the keys that can be created with this backend.
-                apiInstance.TOTPListKeys(list, totpMountPath);
+                apiInstance.TOTPListKeys(string totpMountPath = "totp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -22216,7 +22216,7 @@ namespace Example
             try
             {
                 // Request time-based one-time use password or validate a password for a certain key .
-                apiInstance.TOTPReadCode(name, totpMountPath);
+                apiInstance.TOTPReadCode(string name, string totpMountPath = "totp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -22289,7 +22289,7 @@ namespace Example
             try
             {
                 // Manage the keys that can be created with this backend.
-                apiInstance.TOTPReadKey(name, totpMountPath);
+                apiInstance.TOTPReadKey(string name, string totpMountPath = "totp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -22363,7 +22363,7 @@ namespace Example
             try
             {
                 // Request time-based one-time use password or validate a password for a certain key .
-                apiInstance.TOTPWriteCode(name, tOTPWriteCodeRequest, totpMountPath);
+                apiInstance.TOTPWriteCode(TOTPWriteCodeRequest tOTPWriteCodeRequest, string name, string totpMountPath = "totp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -22438,7 +22438,7 @@ namespace Example
             try
             {
                 // Manage the keys that can be created with this backend.
-                apiInstance.TOTPWriteKey(name, tOTPWriteKeyRequest, totpMountPath);
+                apiInstance.TOTPWriteKey(TOTPWriteKeyRequest tOTPWriteKeyRequest, string name, string totpMountPath = "totp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -22510,7 +22510,7 @@ namespace Example
 
             try
             {
-                apiInstance.TerraformDeleteConfig(terraformMountPath);
+                apiInstance.TerraformDeleteConfig(string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -22581,7 +22581,7 @@ namespace Example
 
             try
             {
-                apiInstance.TerraformDeleteRole(name, terraformMountPath);
+                apiInstance.TerraformDeleteRole(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -22653,7 +22653,7 @@ namespace Example
 
             try
             {
-                apiInstance.TerraformListRoles(list, terraformMountPath);
+                apiInstance.TerraformListRoles(string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -22724,7 +22724,7 @@ namespace Example
 
             try
             {
-                apiInstance.TerraformReadConfig(terraformMountPath);
+                apiInstance.TerraformReadConfig(string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -22796,7 +22796,7 @@ namespace Example
             try
             {
                 // Generate a Terraform Cloud or Enterprise API token from a specific Vault role.
-                apiInstance.TerraformReadCredentials(name, terraformMountPath);
+                apiInstance.TerraformReadCredentials(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -22868,7 +22868,7 @@ namespace Example
 
             try
             {
-                apiInstance.TerraformReadRole(name, terraformMountPath);
+                apiInstance.TerraformReadRole(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -22940,7 +22940,7 @@ namespace Example
 
             try
             {
-                apiInstance.TerraformRotateRole(name, terraformMountPath);
+                apiInstance.TerraformRotateRole(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -23012,7 +23012,7 @@ namespace Example
 
             try
             {
-                apiInstance.TerraformWriteConfig(terraformWriteConfigRequest, terraformMountPath);
+                apiInstance.TerraformWriteConfig(TerraformWriteConfigRequest terraformWriteConfigRequest, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -23085,7 +23085,7 @@ namespace Example
             try
             {
                 // Generate a Terraform Cloud or Enterprise API token from a specific Vault role.
-                apiInstance.TerraformWriteCredentials(name, terraformMountPath);
+                apiInstance.TerraformWriteCredentials(string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -23158,7 +23158,7 @@ namespace Example
 
             try
             {
-                apiInstance.TerraformWriteRole(name, terraformWriteRoleRequest, terraformMountPath);
+                apiInstance.TerraformWriteRole(TerraformWriteRoleRequest terraformWriteRoleRequest, string name, string terraformMountPath = "terraform", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -23232,7 +23232,7 @@ namespace Example
             try
             {
                 // Backup the named key
-                apiInstance.TransitBackup(name, transitMountPath);
+                apiInstance.TransitBackup(string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -23306,7 +23306,7 @@ namespace Example
             try
             {
                 // Decrypt a ciphertext value using a named key
-                apiInstance.TransitDecrypt(name, transitDecryptRequest, transitMountPath);
+                apiInstance.TransitDecrypt(TransitDecryptRequest transitDecryptRequest, string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -23380,7 +23380,7 @@ namespace Example
             try
             {
                 // Managed named encryption keys
-                apiInstance.TransitDeleteKey(name, transitMountPath);
+                apiInstance.TransitDeleteKey(string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -23454,7 +23454,7 @@ namespace Example
             try
             {
                 // Encrypt a plaintext value or a batch of plaintext blocks using a named key
-                apiInstance.TransitEncrypt(name, transitEncryptRequest, transitMountPath);
+                apiInstance.TransitEncrypt(TransitEncryptRequest transitEncryptRequest, string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -23529,7 +23529,7 @@ namespace Example
             try
             {
                 // Export named encryption or signing key
-                apiInstance.TransitExport(name, type, transitMountPath);
+                apiInstance.TransitExport(string name, string type, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -23605,7 +23605,7 @@ namespace Example
             try
             {
                 // Export named encryption or signing key
-                apiInstance.TransitExportVersion(name, type, version, transitMountPath);
+                apiInstance.TransitExportVersion(string name, string type, string version, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -23682,7 +23682,7 @@ namespace Example
             try
             {
                 // Generate a data key
-                apiInstance.TransitGenerateDataKey(name, plaintext, transitGenerateDataKeyRequest, transitMountPath);
+                apiInstance.TransitGenerateDataKey(TransitGenerateDataKeyRequest transitGenerateDataKeyRequest, string name, string plaintext, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -23758,7 +23758,7 @@ namespace Example
             try
             {
                 // Generate an HMAC for input data using the named key
-                apiInstance.TransitGenerateHMAC(name, transitGenerateHMACRequest, transitMountPath);
+                apiInstance.TransitGenerateHMAC(TransitGenerateHMACRequest transitGenerateHMACRequest, string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -23834,7 +23834,7 @@ namespace Example
             try
             {
                 // Generate an HMAC for input data using the named key
-                apiInstance.TransitGenerateHMACWithAlgorithm(name, urlalgorithm, transitGenerateHMACWithAlgorithmRequest, transitMountPath);
+                apiInstance.TransitGenerateHMACWithAlgorithm(TransitGenerateHMACWithAlgorithmRequest transitGenerateHMACWithAlgorithmRequest, string name, string urlalgorithm, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -23909,7 +23909,7 @@ namespace Example
             try
             {
                 // Generate random bytes
-                apiInstance.TransitGenerateRandom(transitGenerateRandomRequest, transitMountPath);
+                apiInstance.TransitGenerateRandom(TransitGenerateRandomRequest transitGenerateRandomRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -23983,7 +23983,7 @@ namespace Example
             try
             {
                 // Generate random bytes
-                apiInstance.TransitGenerateRandomSource(source, transitGenerateRandomSourceRequest, transitMountPath);
+                apiInstance.TransitGenerateRandomSource(TransitGenerateRandomSourceRequest transitGenerateRandomSourceRequest, string source, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -24059,7 +24059,7 @@ namespace Example
             try
             {
                 // Generate random bytes
-                apiInstance.TransitGenerateRandomSourceBytes(source, urlbytes, transitGenerateRandomSourceBytesRequest, transitMountPath);
+                apiInstance.TransitGenerateRandomSourceBytes(TransitGenerateRandomSourceBytesRequest transitGenerateRandomSourceBytesRequest, string source, string urlbytes, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -24134,7 +24134,7 @@ namespace Example
             try
             {
                 // Generate a hash sum for input data
-                apiInstance.TransitHash(transitHashRequest, transitMountPath);
+                apiInstance.TransitHash(TransitHashRequest transitHashRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -24208,7 +24208,7 @@ namespace Example
             try
             {
                 // Generate a hash sum for input data
-                apiInstance.TransitHashWithAlgorithm(urlalgorithm, transitHashWithAlgorithmRequest, transitMountPath);
+                apiInstance.TransitHashWithAlgorithm(TransitHashWithAlgorithmRequest transitHashWithAlgorithmRequest, string urlalgorithm, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -24283,7 +24283,7 @@ namespace Example
             try
             {
                 // Imports an externally-generated key into a new transit key
-                apiInstance.TransitImportKey(name, transitImportKeyRequest, transitMountPath);
+                apiInstance.TransitImportKey(TransitImportKeyRequest transitImportKeyRequest, string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -24358,7 +24358,7 @@ namespace Example
             try
             {
                 // Imports an externally-generated key into an existing imported key
-                apiInstance.TransitImportKeyVersion(name, transitImportKeyVersionRequest, transitMountPath);
+                apiInstance.TransitImportKeyVersion(TransitImportKeyVersionRequest transitImportKeyVersionRequest, string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -24432,7 +24432,7 @@ namespace Example
             try
             {
                 // Managed named encryption keys
-                apiInstance.TransitListKeys(list, transitMountPath);
+                apiInstance.TransitListKeys(string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -24504,7 +24504,7 @@ namespace Example
             try
             {
                 // Returns the size of the active cache
-                apiInstance.TransitReadCacheConfig(transitMountPath);
+                apiInstance.TransitReadCacheConfig(string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -24575,7 +24575,7 @@ namespace Example
             try
             {
                 // Configuration common across all keys
-                apiInstance.TransitReadConfigKeys(transitMountPath);
+                apiInstance.TransitReadConfigKeys(string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -24647,7 +24647,7 @@ namespace Example
             try
             {
                 // Managed named encryption keys
-                apiInstance.TransitReadKey(name, transitMountPath);
+                apiInstance.TransitReadKey(string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -24719,7 +24719,7 @@ namespace Example
             try
             {
                 // Returns the public key to use for wrapping imported keys
-                apiInstance.TransitReadWrappingKey(transitMountPath);
+                apiInstance.TransitReadWrappingKey(string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -24791,7 +24791,7 @@ namespace Example
             try
             {
                 // Restore the named key
-                apiInstance.TransitRestore(transitRestoreRequest, transitMountPath);
+                apiInstance.TransitRestore(TransitRestoreRequest transitRestoreRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -24865,7 +24865,7 @@ namespace Example
             try
             {
                 // Restore the named key
-                apiInstance.TransitRestoreKey(name, transitRestoreKeyRequest, transitMountPath);
+                apiInstance.TransitRestoreKey(TransitRestoreKeyRequest transitRestoreKeyRequest, string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -24940,7 +24940,7 @@ namespace Example
             try
             {
                 // Rewrap ciphertext
-                apiInstance.TransitRewrap(name, transitRewrapRequest, transitMountPath);
+                apiInstance.TransitRewrap(TransitRewrapRequest transitRewrapRequest, string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -25014,7 +25014,7 @@ namespace Example
             try
             {
                 // Rotate named encryption key
-                apiInstance.TransitRotateKey(name, transitMountPath);
+                apiInstance.TransitRotateKey(string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -25088,7 +25088,7 @@ namespace Example
             try
             {
                 // Generate a signature for input data using the named key
-                apiInstance.TransitSign(name, transitSignRequest, transitMountPath);
+                apiInstance.TransitSign(TransitSignRequest transitSignRequest, string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -25164,7 +25164,7 @@ namespace Example
             try
             {
                 // Generate a signature for input data using the named key
-                apiInstance.TransitSignWithAlgorithm(name, urlalgorithm, transitSignWithAlgorithmRequest, transitMountPath);
+                apiInstance.TransitSignWithAlgorithm(TransitSignWithAlgorithmRequest transitSignWithAlgorithmRequest, string name, string urlalgorithm, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -25240,7 +25240,7 @@ namespace Example
             try
             {
                 // Trim key versions of a named key
-                apiInstance.TransitTrimKey(name, transitTrimKeyRequest, transitMountPath);
+                apiInstance.TransitTrimKey(TransitTrimKeyRequest transitTrimKeyRequest, string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -25315,7 +25315,7 @@ namespace Example
             try
             {
                 // Verify a signature or HMAC for input data created using the named key
-                apiInstance.TransitVerify(name, transitVerifyRequest, transitMountPath);
+                apiInstance.TransitVerify(TransitVerifyRequest transitVerifyRequest, string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -25391,7 +25391,7 @@ namespace Example
             try
             {
                 // Verify a signature or HMAC for input data created using the named key
-                apiInstance.TransitVerifyWithAlgorithm(name, urlalgorithm, transitVerifyWithAlgorithmRequest, transitMountPath);
+                apiInstance.TransitVerifyWithAlgorithm(TransitVerifyWithAlgorithmRequest transitVerifyWithAlgorithmRequest, string name, string urlalgorithm, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -25466,7 +25466,7 @@ namespace Example
             try
             {
                 // Configures a new cache of the specified size
-                apiInstance.TransitWriteCacheConfig(transitWriteCacheConfigRequest, transitMountPath);
+                apiInstance.TransitWriteCacheConfig(TransitWriteCacheConfigRequest transitWriteCacheConfigRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -25539,7 +25539,7 @@ namespace Example
             try
             {
                 // Configuration common across all keys
-                apiInstance.TransitWriteConfigKeys(transitWriteConfigKeysRequest, transitMountPath);
+                apiInstance.TransitWriteConfigKeys(TransitWriteConfigKeysRequest transitWriteConfigKeysRequest, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -25613,7 +25613,7 @@ namespace Example
             try
             {
                 // Managed named encryption keys
-                apiInstance.TransitWriteKey(name, transitWriteKeyRequest, transitMountPath);
+                apiInstance.TransitWriteKey(TransitWriteKeyRequest transitWriteKeyRequest, string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -25688,7 +25688,7 @@ namespace Example
             try
             {
                 // Configure a named encryption key
-                apiInstance.TransitWriteKeyConfig(name, transitWriteKeyConfigRequest, transitMountPath);
+                apiInstance.TransitWriteKeyConfig(TransitWriteKeyConfigRequest transitWriteKeyConfigRequest, string name, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -25763,7 +25763,7 @@ namespace Example
             try
             {
                 // Generate random bytes
-                apiInstance.TransitWriteRandomUrlbytes(urlbytes, transitWriteRandomUrlbytesRequest, transitMountPath);
+                apiInstance.TransitWriteRandomUrlbytes(TransitWriteRandomUrlbytesRequest transitWriteRandomUrlbytesRequest, string urlbytes, string transitMountPath = "transit", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {

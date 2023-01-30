@@ -300,7 +300,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigDeleteCertificate(certName, awsMountPath);
+                apiInstance.AWSConfigDeleteCertificate(string certName, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -371,7 +371,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigDeleteClient(awsMountPath);
+                apiInstance.AWSConfigDeleteClient(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -441,7 +441,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigDeleteIdentityAccessList(awsMountPath);
+                apiInstance.AWSConfigDeleteIdentityAccessList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -511,7 +511,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigDeleteIdentityWhiteList(awsMountPath);
+                apiInstance.AWSConfigDeleteIdentityWhiteList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -581,7 +581,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigDeleteRoleTagBlackList(awsMountPath);
+                apiInstance.AWSConfigDeleteRoleTagBlackList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -651,7 +651,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigDeleteRoleTagDenyList(awsMountPath);
+                apiInstance.AWSConfigDeleteRoleTagDenyList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -722,7 +722,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigDeleteSecurityTokenServiceAccount(accountId, awsMountPath);
+                apiInstance.AWSConfigDeleteSecurityTokenServiceAccount(string accountId, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -794,7 +794,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigListCertificates(list, awsMountPath);
+                apiInstance.AWSConfigListCertificates(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -866,7 +866,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigListSecurityTokenService(list, awsMountPath);
+                apiInstance.AWSConfigListSecurityTokenService(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -938,7 +938,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigReadCertificate(certName, awsMountPath);
+                apiInstance.AWSConfigReadCertificate(string certName, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1009,7 +1009,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigReadClient(awsMountPath);
+                apiInstance.AWSConfigReadClient(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1079,7 +1079,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigReadIdentity(awsMountPath);
+                apiInstance.AWSConfigReadIdentity(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1149,7 +1149,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigReadIdentityAccessList(awsMountPath);
+                apiInstance.AWSConfigReadIdentityAccessList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1219,7 +1219,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigReadIdentityWhiteList(awsMountPath);
+                apiInstance.AWSConfigReadIdentityWhiteList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1289,7 +1289,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigReadRoleTagBlackList(awsMountPath);
+                apiInstance.AWSConfigReadRoleTagBlackList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1359,7 +1359,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigReadRoleTagDenyList(awsMountPath);
+                apiInstance.AWSConfigReadRoleTagDenyList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1430,7 +1430,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigReadSecurityTokenServiceAccount(accountId, awsMountPath);
+                apiInstance.AWSConfigReadSecurityTokenServiceAccount(string accountId, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1501,7 +1501,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigRotateRoot(awsMountPath);
+                apiInstance.AWSConfigRotateRoot(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1573,7 +1573,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigWriteCertificate(certName, aWSConfigWriteCertificateRequest, awsMountPath);
+                apiInstance.AWSConfigWriteCertificate(AWSConfigWriteCertificateRequest aWSConfigWriteCertificateRequest, string certName, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1646,7 +1646,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigWriteClient(aWSConfigWriteClientRequest, awsMountPath);
+                apiInstance.AWSConfigWriteClient(AWSConfigWriteClientRequest aWSConfigWriteClientRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1718,7 +1718,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigWriteIdentity(aWSConfigWriteIdentityRequest, awsMountPath);
+                apiInstance.AWSConfigWriteIdentity(AWSConfigWriteIdentityRequest aWSConfigWriteIdentityRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1790,7 +1790,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigWriteIdentityAccessList(aWSConfigWriteIdentityAccessListRequest, awsMountPath);
+                apiInstance.AWSConfigWriteIdentityAccessList(AWSConfigWriteIdentityAccessListRequest aWSConfigWriteIdentityAccessListRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1862,7 +1862,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigWriteIdentityWhiteList(aWSConfigWriteIdentityWhiteListRequest, awsMountPath);
+                apiInstance.AWSConfigWriteIdentityWhiteList(AWSConfigWriteIdentityWhiteListRequest aWSConfigWriteIdentityWhiteListRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1934,7 +1934,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigWriteRoleTagBlackList(aWSConfigWriteRoleTagBlackListRequest, awsMountPath);
+                apiInstance.AWSConfigWriteRoleTagBlackList(AWSConfigWriteRoleTagBlackListRequest aWSConfigWriteRoleTagBlackListRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2006,7 +2006,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigWriteRoleTagDenyList(aWSConfigWriteRoleTagDenyListRequest, awsMountPath);
+                apiInstance.AWSConfigWriteRoleTagDenyList(AWSConfigWriteRoleTagDenyListRequest aWSConfigWriteRoleTagDenyListRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2079,7 +2079,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigWriteSecurityTokenServiceAccount(accountId, aWSConfigWriteSecurityTokenServiceAccountRequest, awsMountPath);
+                apiInstance.AWSConfigWriteSecurityTokenServiceAccount(AWSConfigWriteSecurityTokenServiceAccountRequest aWSConfigWriteSecurityTokenServiceAccountRequest, string accountId, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2152,7 +2152,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSDeleteAuthRole(role, awsMountPath);
+                apiInstance.AWSDeleteAuthRole(string role, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2224,7 +2224,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSDeleteIdentityAccessListFor(instanceId, awsMountPath);
+                apiInstance.AWSDeleteIdentityAccessListFor(string instanceId, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2296,7 +2296,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSDeleteIdentityWhiteListFor(instanceId, awsMountPath);
+                apiInstance.AWSDeleteIdentityWhiteListFor(string instanceId, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2368,7 +2368,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSDeleteRoleTagBlackListFor(roleTag, awsMountPath);
+                apiInstance.AWSDeleteRoleTagBlackListFor(string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2440,7 +2440,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSDeleteRoleTagDenyListFor(roleTag, awsMountPath);
+                apiInstance.AWSDeleteRoleTagDenyListFor(string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2512,7 +2512,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSListAuthRoles(list, awsMountPath);
+                apiInstance.AWSListAuthRoles(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2584,7 +2584,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSListAuthRoles2(list, awsMountPath);
+                apiInstance.AWSListAuthRoles2(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2656,7 +2656,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSListIdentityAccessList(list, awsMountPath);
+                apiInstance.AWSListIdentityAccessList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2728,7 +2728,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSListIdentityWhiteList(list, awsMountPath);
+                apiInstance.AWSListIdentityWhiteList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2800,7 +2800,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSListRoleTagBlackList(list, awsMountPath);
+                apiInstance.AWSListRoleTagBlackList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2872,7 +2872,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSListRoleTagDenyList(list, awsMountPath);
+                apiInstance.AWSListRoleTagDenyList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2944,7 +2944,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSLogin(aWSLoginRequest, awsMountPath);
+                apiInstance.AWSLogin(AWSLoginRequest aWSLoginRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3016,7 +3016,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSReadAuthRole(role, awsMountPath);
+                apiInstance.AWSReadAuthRole(string role, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3088,7 +3088,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSReadIdentityAccessListFor(instanceId, awsMountPath);
+                apiInstance.AWSReadIdentityAccessListFor(string instanceId, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3160,7 +3160,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSReadIdentityWhiteListFor(instanceId, awsMountPath);
+                apiInstance.AWSReadIdentityWhiteListFor(string instanceId, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3232,7 +3232,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSReadRoleTagBlackListFor(roleTag, awsMountPath);
+                apiInstance.AWSReadRoleTagBlackListFor(string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3304,7 +3304,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSReadRoleTagDenyListFor(roleTag, awsMountPath);
+                apiInstance.AWSReadRoleTagDenyListFor(string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3377,7 +3377,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSWriteAuthRole(role, aWSWriteAuthRoleRequest, awsMountPath);
+                apiInstance.AWSWriteAuthRole(AWSWriteAuthRoleRequest aWSWriteAuthRoleRequest, string role, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3451,7 +3451,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSWriteAuthRoleTag(role, aWSWriteAuthRoleTagRequest, awsMountPath);
+                apiInstance.AWSWriteAuthRoleTag(AWSWriteAuthRoleTagRequest aWSWriteAuthRoleTagRequest, string role, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3524,7 +3524,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSWriteIdentityAccessListTidySettings(aWSWriteIdentityAccessListTidySettingsRequest, awsMountPath);
+                apiInstance.AWSWriteIdentityAccessListTidySettings(AWSWriteIdentityAccessListTidySettingsRequest aWSWriteIdentityAccessListTidySettingsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3596,7 +3596,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSWriteIdentityWhiteListTidySettings(aWSWriteIdentityWhiteListTidySettingsRequest, awsMountPath);
+                apiInstance.AWSWriteIdentityWhiteListTidySettings(AWSWriteIdentityWhiteListTidySettingsRequest aWSWriteIdentityWhiteListTidySettingsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3668,7 +3668,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSWriteRoleTagBlackListFor(roleTag, awsMountPath);
+                apiInstance.AWSWriteRoleTagBlackListFor(string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3740,7 +3740,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSWriteRoleTagBlackListTidySettings(aWSWriteRoleTagBlackListTidySettingsRequest, awsMountPath);
+                apiInstance.AWSWriteRoleTagBlackListTidySettings(AWSWriteRoleTagBlackListTidySettingsRequest aWSWriteRoleTagBlackListTidySettingsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3812,7 +3812,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSWriteRoleTagDenyListFor(roleTag, awsMountPath);
+                apiInstance.AWSWriteRoleTagDenyListFor(string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3884,7 +3884,7 @@ namespace Example
 
             try
             {
-                apiInstance.AWSWriteRoleTagDenyListTidySettings(aWSWriteRoleTagDenyListTidySettingsRequest, awsMountPath);
+                apiInstance.AWSWriteRoleTagDenyListTidySettings(AWSWriteRoleTagDenyListTidySettingsRequest aWSWriteRoleTagDenyListTidySettingsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3957,7 +3957,7 @@ namespace Example
             try
             {
                 // Create a role and associate policies to it.
-                apiInstance.AliCloudDeleteAuthRole(role, alicloudMountPath);
+                apiInstance.AliCloudDeleteAuthRole(string role, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4030,7 +4030,7 @@ namespace Example
             try
             {
                 // Lists all the roles that are registered with Vault.
-                apiInstance.AliCloudListAuthRoles(list, alicloudMountPath);
+                apiInstance.AliCloudListAuthRoles(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4103,7 +4103,7 @@ namespace Example
             try
             {
                 // Lists all the roles that are registered with Vault.
-                apiInstance.AliCloudListAuthRoles2(list, alicloudMountPath);
+                apiInstance.AliCloudListAuthRoles2(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4176,7 +4176,7 @@ namespace Example
             try
             {
                 // Authenticates an RAM entity with Vault.
-                apiInstance.AliCloudLogin(aliCloudLoginRequest, alicloudMountPath);
+                apiInstance.AliCloudLogin(AliCloudLoginRequest aliCloudLoginRequest, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4249,7 +4249,7 @@ namespace Example
             try
             {
                 // Create a role and associate policies to it.
-                apiInstance.AliCloudReadAuthRole(role, alicloudMountPath);
+                apiInstance.AliCloudReadAuthRole(string role, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4323,7 +4323,7 @@ namespace Example
             try
             {
                 // Create a role and associate policies to it.
-                apiInstance.AliCloudWriteAuthRole(role, aliCloudWriteAuthRoleRequest, alicloudMountPath);
+                apiInstance.AliCloudWriteAuthRole(AliCloudWriteAuthRoleRequest aliCloudWriteAuthRoleRequest, string role, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4396,7 +4396,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeleteBindSecretID(roleName, approleMountPath);
+                apiInstance.AppRoleDeleteBindSecretID(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4468,7 +4468,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeleteBoundCIDRList(roleName, approleMountPath);
+                apiInstance.AppRoleDeleteBoundCIDRList(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4540,7 +4540,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeletePeriod(roleName, approleMountPath);
+                apiInstance.AppRoleDeletePeriod(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4612,7 +4612,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeletePolicies(roleName, approleMountPath);
+                apiInstance.AppRoleDeletePolicies(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4684,7 +4684,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeleteRole(roleName, approleMountPath);
+                apiInstance.AppRoleDeleteRole(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4756,7 +4756,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeleteSecretIDAccessorDestroy(roleName, approleMountPath);
+                apiInstance.AppRoleDeleteSecretIDAccessorDestroy(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4828,7 +4828,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeleteSecretIDBoundCIDRs(roleName, approleMountPath);
+                apiInstance.AppRoleDeleteSecretIDBoundCIDRs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4900,7 +4900,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeleteSecretIDDestroy(roleName, approleMountPath);
+                apiInstance.AppRoleDeleteSecretIDDestroy(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4972,7 +4972,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeleteSecretIDNumUses(roleName, approleMountPath);
+                apiInstance.AppRoleDeleteSecretIDNumUses(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5044,7 +5044,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeleteSecretIDTTL(roleName, approleMountPath);
+                apiInstance.AppRoleDeleteSecretIDTTL(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5116,7 +5116,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeleteTokenBoundCIDRs(roleName, approleMountPath);
+                apiInstance.AppRoleDeleteTokenBoundCIDRs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5188,7 +5188,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeleteTokenMaxTTL(roleName, approleMountPath);
+                apiInstance.AppRoleDeleteTokenMaxTTL(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5260,7 +5260,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeleteTokenNumUses(roleName, approleMountPath);
+                apiInstance.AppRoleDeleteTokenNumUses(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5332,7 +5332,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeleteTokenTTL(roleName, approleMountPath);
+                apiInstance.AppRoleDeleteTokenTTL(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5404,7 +5404,7 @@ namespace Example
 
             try
             {
-                AppRoleListRolesResponse result = apiInstance.AppRoleListRoles(list, approleMountPath);
+                AppRoleListRolesResponse result = apiInstance.AppRoleListRoles(string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -5478,7 +5478,7 @@ namespace Example
 
             try
             {
-                AppRoleListSecretIDResponse result = apiInstance.AppRoleListSecretID(roleName, list, approleMountPath);
+                AppRoleListSecretIDResponse result = apiInstance.AppRoleListSecretID(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -5552,7 +5552,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleLogin(appRoleLoginRequest, approleMountPath);
+                apiInstance.AppRoleLogin(AppRoleLoginRequest appRoleLoginRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5624,7 +5624,7 @@ namespace Example
 
             try
             {
-                AppRoleReadBindSecretIDResponse result = apiInstance.AppRoleReadBindSecretID(roleName, approleMountPath);
+                AppRoleReadBindSecretIDResponse result = apiInstance.AppRoleReadBindSecretID(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -5697,7 +5697,7 @@ namespace Example
 
             try
             {
-                AppRoleReadBoundCIDRListResponse result = apiInstance.AppRoleReadBoundCIDRList(roleName, approleMountPath);
+                AppRoleReadBoundCIDRListResponse result = apiInstance.AppRoleReadBoundCIDRList(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -5770,7 +5770,7 @@ namespace Example
 
             try
             {
-                AppRoleReadLocalSecretIDsResponse result = apiInstance.AppRoleReadLocalSecretIDs(roleName, approleMountPath);
+                AppRoleReadLocalSecretIDsResponse result = apiInstance.AppRoleReadLocalSecretIDs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -5843,7 +5843,7 @@ namespace Example
 
             try
             {
-                AppRoleReadPeriodResponse result = apiInstance.AppRoleReadPeriod(roleName, approleMountPath);
+                AppRoleReadPeriodResponse result = apiInstance.AppRoleReadPeriod(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -5916,7 +5916,7 @@ namespace Example
 
             try
             {
-                AppRoleReadPoliciesResponse result = apiInstance.AppRoleReadPolicies(roleName, approleMountPath);
+                AppRoleReadPoliciesResponse result = apiInstance.AppRoleReadPolicies(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -5989,7 +5989,7 @@ namespace Example
 
             try
             {
-                AppRoleReadRoleResponse result = apiInstance.AppRoleReadRole(roleName, approleMountPath);
+                AppRoleReadRoleResponse result = apiInstance.AppRoleReadRole(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6062,7 +6062,7 @@ namespace Example
 
             try
             {
-                AppRoleReadRoleIDResponse result = apiInstance.AppRoleReadRoleID(roleName, approleMountPath);
+                AppRoleReadRoleIDResponse result = apiInstance.AppRoleReadRoleID(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6135,7 +6135,7 @@ namespace Example
 
             try
             {
-                AppRoleReadSecretIDBoundCIDRsResponse result = apiInstance.AppRoleReadSecretIDBoundCIDRs(roleName, approleMountPath);
+                AppRoleReadSecretIDBoundCIDRsResponse result = apiInstance.AppRoleReadSecretIDBoundCIDRs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6208,7 +6208,7 @@ namespace Example
 
             try
             {
-                AppRoleReadSecretIDNumUsesResponse result = apiInstance.AppRoleReadSecretIDNumUses(roleName, approleMountPath);
+                AppRoleReadSecretIDNumUsesResponse result = apiInstance.AppRoleReadSecretIDNumUses(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6281,7 +6281,7 @@ namespace Example
 
             try
             {
-                AppRoleReadSecretIDTTLResponse result = apiInstance.AppRoleReadSecretIDTTL(roleName, approleMountPath);
+                AppRoleReadSecretIDTTLResponse result = apiInstance.AppRoleReadSecretIDTTL(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6354,7 +6354,7 @@ namespace Example
 
             try
             {
-                AppRoleReadTokenBoundCIDRsResponse result = apiInstance.AppRoleReadTokenBoundCIDRs(roleName, approleMountPath);
+                AppRoleReadTokenBoundCIDRsResponse result = apiInstance.AppRoleReadTokenBoundCIDRs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6427,7 +6427,7 @@ namespace Example
 
             try
             {
-                AppRoleReadTokenMaxTTLResponse result = apiInstance.AppRoleReadTokenMaxTTL(roleName, approleMountPath);
+                AppRoleReadTokenMaxTTLResponse result = apiInstance.AppRoleReadTokenMaxTTL(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6500,7 +6500,7 @@ namespace Example
 
             try
             {
-                AppRoleReadTokenNumUsesResponse result = apiInstance.AppRoleReadTokenNumUses(roleName, approleMountPath);
+                AppRoleReadTokenNumUsesResponse result = apiInstance.AppRoleReadTokenNumUses(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6573,7 +6573,7 @@ namespace Example
 
             try
             {
-                AppRoleReadTokenTTLResponse result = apiInstance.AppRoleReadTokenTTL(roleName, approleMountPath);
+                AppRoleReadTokenTTLResponse result = apiInstance.AppRoleReadTokenTTL(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6646,7 +6646,7 @@ namespace Example
             try
             {
                 // Trigger the clean-up of expired SecretID entries.
-                apiInstance.AppRoleTidySecretID(approleMountPath);
+                apiInstance.AppRoleTidySecretID(string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6718,7 +6718,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteBindSecretID(roleName, appRoleWriteBindSecretIDRequest, approleMountPath);
+                apiInstance.AppRoleWriteBindSecretID(AppRoleWriteBindSecretIDRequest appRoleWriteBindSecretIDRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6792,7 +6792,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteBoundCIDRList(roleName, appRoleWriteBoundCIDRListRequest, approleMountPath);
+                apiInstance.AppRoleWriteBoundCIDRList(AppRoleWriteBoundCIDRListRequest appRoleWriteBoundCIDRListRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6866,7 +6866,7 @@ namespace Example
 
             try
             {
-                AppRoleWriteCustomSecretIDResponse result = apiInstance.AppRoleWriteCustomSecretID(roleName, appRoleWriteCustomSecretIDRequest, approleMountPath);
+                AppRoleWriteCustomSecretIDResponse result = apiInstance.AppRoleWriteCustomSecretID(AppRoleWriteCustomSecretIDRequest appRoleWriteCustomSecretIDRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6941,7 +6941,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWritePeriod(roleName, appRoleWritePeriodRequest, approleMountPath);
+                apiInstance.AppRoleWritePeriod(AppRoleWritePeriodRequest appRoleWritePeriodRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7015,7 +7015,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWritePolicies(roleName, appRoleWritePoliciesRequest, approleMountPath);
+                apiInstance.AppRoleWritePolicies(AppRoleWritePoliciesRequest appRoleWritePoliciesRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7089,7 +7089,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteRole(roleName, appRoleWriteRoleRequest, approleMountPath);
+                apiInstance.AppRoleWriteRole(AppRoleWriteRoleRequest appRoleWriteRoleRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7163,7 +7163,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteRoleID(roleName, appRoleWriteRoleIDRequest, approleMountPath);
+                apiInstance.AppRoleWriteRoleID(AppRoleWriteRoleIDRequest appRoleWriteRoleIDRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7237,7 +7237,7 @@ namespace Example
 
             try
             {
-                AppRoleWriteSecretIDResponse result = apiInstance.AppRoleWriteSecretID(roleName, appRoleWriteSecretIDRequest, approleMountPath);
+                AppRoleWriteSecretIDResponse result = apiInstance.AppRoleWriteSecretID(AppRoleWriteSecretIDRequest appRoleWriteSecretIDRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -7312,7 +7312,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteSecretIDAccessorDestroy(roleName, appRoleWriteSecretIDAccessorDestroyRequest, approleMountPath);
+                apiInstance.AppRoleWriteSecretIDAccessorDestroy(AppRoleWriteSecretIDAccessorDestroyRequest appRoleWriteSecretIDAccessorDestroyRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7386,7 +7386,7 @@ namespace Example
 
             try
             {
-                AppRoleWriteSecretIDAccessorLookupResponse result = apiInstance.AppRoleWriteSecretIDAccessorLookup(roleName, appRoleWriteSecretIDAccessorLookupRequest, approleMountPath);
+                AppRoleWriteSecretIDAccessorLookupResponse result = apiInstance.AppRoleWriteSecretIDAccessorLookup(AppRoleWriteSecretIDAccessorLookupRequest appRoleWriteSecretIDAccessorLookupRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -7461,7 +7461,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteSecretIDBoundCIDRs(roleName, appRoleWriteSecretIDBoundCIDRsRequest, approleMountPath);
+                apiInstance.AppRoleWriteSecretIDBoundCIDRs(AppRoleWriteSecretIDBoundCIDRsRequest appRoleWriteSecretIDBoundCIDRsRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7535,7 +7535,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteSecretIDDestroy(roleName, appRoleWriteSecretIDDestroyRequest, approleMountPath);
+                apiInstance.AppRoleWriteSecretIDDestroy(AppRoleWriteSecretIDDestroyRequest appRoleWriteSecretIDDestroyRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7609,7 +7609,7 @@ namespace Example
 
             try
             {
-                AppRoleWriteSecretIDLookupResponse result = apiInstance.AppRoleWriteSecretIDLookup(roleName, appRoleWriteSecretIDLookupRequest, approleMountPath);
+                AppRoleWriteSecretIDLookupResponse result = apiInstance.AppRoleWriteSecretIDLookup(AppRoleWriteSecretIDLookupRequest appRoleWriteSecretIDLookupRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -7684,7 +7684,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteSecretIDNumUses(roleName, appRoleWriteSecretIDNumUsesRequest, approleMountPath);
+                apiInstance.AppRoleWriteSecretIDNumUses(AppRoleWriteSecretIDNumUsesRequest appRoleWriteSecretIDNumUsesRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7758,7 +7758,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteSecretIDTTL(roleName, appRoleWriteSecretIDTTLRequest, approleMountPath);
+                apiInstance.AppRoleWriteSecretIDTTL(AppRoleWriteSecretIDTTLRequest appRoleWriteSecretIDTTLRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7832,7 +7832,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteTokenBoundCIDRs(roleName, appRoleWriteTokenBoundCIDRsRequest, approleMountPath);
+                apiInstance.AppRoleWriteTokenBoundCIDRs(AppRoleWriteTokenBoundCIDRsRequest appRoleWriteTokenBoundCIDRsRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7906,7 +7906,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteTokenMaxTTL(roleName, appRoleWriteTokenMaxTTLRequest, approleMountPath);
+                apiInstance.AppRoleWriteTokenMaxTTL(AppRoleWriteTokenMaxTTLRequest appRoleWriteTokenMaxTTLRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7980,7 +7980,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteTokenNumUses(roleName, appRoleWriteTokenNumUsesRequest, approleMountPath);
+                apiInstance.AppRoleWriteTokenNumUses(AppRoleWriteTokenNumUsesRequest appRoleWriteTokenNumUsesRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8054,7 +8054,7 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteTokenTTL(roleName, appRoleWriteTokenTTLRequest, approleMountPath);
+                apiInstance.AppRoleWriteTokenTTL(AppRoleWriteTokenTTLRequest appRoleWriteTokenTTLRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8126,7 +8126,7 @@ namespace Example
 
             try
             {
-                apiInstance.AzureDeleteAuthConfig(azureMountPath);
+                apiInstance.AzureDeleteAuthConfig(string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8197,7 +8197,7 @@ namespace Example
 
             try
             {
-                apiInstance.AzureDeleteAuthRole(name, azureMountPath);
+                apiInstance.AzureDeleteAuthRole(string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8269,7 +8269,7 @@ namespace Example
 
             try
             {
-                apiInstance.AzureListAuthRoles(list, azureMountPath);
+                apiInstance.AzureListAuthRoles(string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8341,7 +8341,7 @@ namespace Example
 
             try
             {
-                apiInstance.AzureLogin(azureLoginRequest, azureMountPath);
+                apiInstance.AzureLogin(AzureLoginRequest azureLoginRequest, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8412,7 +8412,7 @@ namespace Example
 
             try
             {
-                apiInstance.AzureReadAuthConfig(azureMountPath);
+                apiInstance.AzureReadAuthConfig(string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8483,7 +8483,7 @@ namespace Example
 
             try
             {
-                apiInstance.AzureReadAuthRole(name, azureMountPath);
+                apiInstance.AzureReadAuthRole(string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8555,7 +8555,7 @@ namespace Example
 
             try
             {
-                apiInstance.AzureWriteAuthConfig(azureWriteAuthConfigRequest, azureMountPath);
+                apiInstance.AzureWriteAuthConfig(AzureWriteAuthConfigRequest azureWriteAuthConfigRequest, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8628,7 +8628,7 @@ namespace Example
 
             try
             {
-                apiInstance.AzureWriteAuthRole(name, azureWriteAuthRoleRequest, azureMountPath);
+                apiInstance.AzureWriteAuthRole(AzureWriteAuthRoleRequest azureWriteAuthRoleRequest, string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8702,7 +8702,7 @@ namespace Example
             try
             {
                 // Log in with a username and password.
-                apiInstance.CentrifyLogin(centrifyLoginRequest, centrifyMountPath);
+                apiInstance.CentrifyLogin(CentrifyLoginRequest centrifyLoginRequest, string centrifyMountPath = "centrify", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8774,7 +8774,7 @@ namespace Example
             try
             {
                 // This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
-                apiInstance.CentrifyReadConfig(centrifyMountPath);
+                apiInstance.CentrifyReadConfig(string centrifyMountPath = "centrify", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8846,7 +8846,7 @@ namespace Example
             try
             {
                 // This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
-                apiInstance.CentrifyWriteConfig(centrifyWriteConfigRequest, centrifyMountPath);
+                apiInstance.CentrifyWriteConfig(CentrifyWriteConfigRequest centrifyWriteConfigRequest, string centrifyMountPath = "centrify", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8919,7 +8919,7 @@ namespace Example
             try
             {
                 // Manage trusted certificates used for authentication.
-                apiInstance.CertificatesDelete(name, certMountPath);
+                apiInstance.CertificatesDelete(string name, string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8992,7 +8992,7 @@ namespace Example
             try
             {
                 // Manage Certificate Revocation Lists checked during authentication.
-                apiInstance.CertificatesDeleteCRL(name, certMountPath);
+                apiInstance.CertificatesDeleteCRL(string name, string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9065,7 +9065,7 @@ namespace Example
             try
             {
                 // Manage trusted certificates used for authentication.
-                apiInstance.CertificatesList(list, certMountPath);
+                apiInstance.CertificatesList(string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9137,7 +9137,7 @@ namespace Example
 
             try
             {
-                apiInstance.CertificatesListCRLs(list, certMountPath);
+                apiInstance.CertificatesListCRLs(string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9209,7 +9209,7 @@ namespace Example
 
             try
             {
-                apiInstance.CertificatesLogin(certificatesLoginRequest, certMountPath);
+                apiInstance.CertificatesLogin(CertificatesLoginRequest certificatesLoginRequest, string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9282,7 +9282,7 @@ namespace Example
             try
             {
                 // Manage trusted certificates used for authentication.
-                apiInstance.CertificatesRead(name, certMountPath);
+                apiInstance.CertificatesRead(string name, string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9355,7 +9355,7 @@ namespace Example
             try
             {
                 // Manage Certificate Revocation Lists checked during authentication.
-                apiInstance.CertificatesReadCRL(name, certMountPath);
+                apiInstance.CertificatesReadCRL(string name, string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9426,7 +9426,7 @@ namespace Example
 
             try
             {
-                apiInstance.CertificatesReadConfig(certMountPath);
+                apiInstance.CertificatesReadConfig(string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9499,7 +9499,7 @@ namespace Example
             try
             {
                 // Manage trusted certificates used for authentication.
-                apiInstance.CertificatesWrite(name, certificatesWriteRequest, certMountPath);
+                apiInstance.CertificatesWrite(CertificatesWriteRequest certificatesWriteRequest, string name, string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9574,7 +9574,7 @@ namespace Example
             try
             {
                 // Manage Certificate Revocation Lists checked during authentication.
-                apiInstance.CertificatesWriteCRL(name, certificatesWriteCRLRequest, certMountPath);
+                apiInstance.CertificatesWriteCRL(CertificatesWriteCRLRequest certificatesWriteCRLRequest, string name, string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9647,7 +9647,7 @@ namespace Example
 
             try
             {
-                apiInstance.CertificatesWriteConfig(certificatesWriteConfigRequest, certMountPath);
+                apiInstance.CertificatesWriteConfig(CertificatesWriteConfigRequest certificatesWriteConfigRequest, string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9718,7 +9718,7 @@ namespace Example
 
             try
             {
-                apiInstance.CloudFoundryDeleteConfig(cfMountPath);
+                apiInstance.CloudFoundryDeleteConfig(string cfMountPath = "cf", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9789,7 +9789,7 @@ namespace Example
 
             try
             {
-                apiInstance.CloudFoundryDeleteRole(role, cfMountPath);
+                apiInstance.CloudFoundryDeleteRole(string role, string cfMountPath = "cf", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9861,7 +9861,7 @@ namespace Example
 
             try
             {
-                apiInstance.CloudFoundryListRoles(list, cfMountPath);
+                apiInstance.CloudFoundryListRoles(string cfMountPath = "cf", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9933,7 +9933,7 @@ namespace Example
 
             try
             {
-                apiInstance.CloudFoundryLogin(cloudFoundryLoginRequest, cfMountPath);
+                apiInstance.CloudFoundryLogin(CloudFoundryLoginRequest cloudFoundryLoginRequest, string cfMountPath = "cf", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10004,7 +10004,7 @@ namespace Example
 
             try
             {
-                apiInstance.CloudFoundryReadConfig(cfMountPath);
+                apiInstance.CloudFoundryReadConfig(string cfMountPath = "cf", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10075,7 +10075,7 @@ namespace Example
 
             try
             {
-                apiInstance.CloudFoundryReadRole(role, cfMountPath);
+                apiInstance.CloudFoundryReadRole(string role, string cfMountPath = "cf", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10147,7 +10147,7 @@ namespace Example
 
             try
             {
-                apiInstance.CloudFoundryWriteConfig(cloudFoundryWriteConfigRequest, cfMountPath);
+                apiInstance.CloudFoundryWriteConfig(CloudFoundryWriteConfigRequest cloudFoundryWriteConfigRequest, string cfMountPath = "cf", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10220,7 +10220,7 @@ namespace Example
 
             try
             {
-                apiInstance.CloudFoundryWriteRole(role, cloudFoundryWriteRoleRequest, cfMountPath);
+                apiInstance.CloudFoundryWriteRole(CloudFoundryWriteRoleRequest cloudFoundryWriteRoleRequest, string role, string cfMountPath = "cf", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10294,7 +10294,7 @@ namespace Example
             try
             {
                 // Read/write/delete a single teams mapping
-                apiInstance.GitHubDeleteMapTeam(key, githubMountPath);
+                apiInstance.GitHubDeleteMapTeam(string key, string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10367,7 +10367,7 @@ namespace Example
             try
             {
                 // Read/write/delete a single users mapping
-                apiInstance.GitHubDeleteMapUser(key, githubMountPath);
+                apiInstance.GitHubDeleteMapUser(string key, string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10439,7 +10439,7 @@ namespace Example
 
             try
             {
-                apiInstance.GitHubLogin(gitHubLoginRequest, githubMountPath);
+                apiInstance.GitHubLogin(GitHubLoginRequest gitHubLoginRequest, string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10510,7 +10510,7 @@ namespace Example
 
             try
             {
-                apiInstance.GitHubReadConfig(githubMountPath);
+                apiInstance.GitHubReadConfig(string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10582,7 +10582,7 @@ namespace Example
             try
             {
                 // Read/write/delete a single teams mapping
-                apiInstance.GitHubReadMapTeam(key, githubMountPath);
+                apiInstance.GitHubReadMapTeam(string key, string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10655,7 +10655,7 @@ namespace Example
             try
             {
                 // Read mappings for teams
-                apiInstance.GitHubReadMapTeams(githubMountPath, list);
+                apiInstance.GitHubReadMapTeams(string githubMountPath = "github", string list = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10728,7 +10728,7 @@ namespace Example
             try
             {
                 // Read/write/delete a single users mapping
-                apiInstance.GitHubReadMapUser(key, githubMountPath);
+                apiInstance.GitHubReadMapUser(string key, string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10801,7 +10801,7 @@ namespace Example
             try
             {
                 // Read mappings for users
-                apiInstance.GitHubReadMapUsers(githubMountPath, list);
+                apiInstance.GitHubReadMapUsers(string githubMountPath = "github", string list = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10873,7 +10873,7 @@ namespace Example
 
             try
             {
-                apiInstance.GitHubWriteConfig(gitHubWriteConfigRequest, githubMountPath);
+                apiInstance.GitHubWriteConfig(GitHubWriteConfigRequest gitHubWriteConfigRequest, string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10947,7 +10947,7 @@ namespace Example
             try
             {
                 // Read/write/delete a single teams mapping
-                apiInstance.GitHubWriteMapTeam(key, gitHubWriteMapTeamRequest, githubMountPath);
+                apiInstance.GitHubWriteMapTeam(GitHubWriteMapTeamRequest gitHubWriteMapTeamRequest, string key, string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11022,7 +11022,7 @@ namespace Example
             try
             {
                 // Read/write/delete a single users mapping
-                apiInstance.GitHubWriteMapUser(key, gitHubWriteMapUserRequest, githubMountPath);
+                apiInstance.GitHubWriteMapUser(GitHubWriteMapUserRequest gitHubWriteMapUserRequest, string key, string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11096,7 +11096,7 @@ namespace Example
             try
             {
                 // Create a GCP role with associated policies and required attributes.
-                apiInstance.GoogleCloudDeleteRole(name, gcpMountPath);
+                apiInstance.GoogleCloudDeleteRole(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11169,7 +11169,7 @@ namespace Example
             try
             {
                 // Lists all the roles that are registered with Vault.
-                apiInstance.GoogleCloudListRoles(list, gcpMountPath);
+                apiInstance.GoogleCloudListRoles(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11242,7 +11242,7 @@ namespace Example
             try
             {
                 // Lists all the roles that are registered with Vault.
-                apiInstance.GoogleCloudListRoles2(list, gcpMountPath);
+                apiInstance.GoogleCloudListRoles2(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11314,7 +11314,7 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudLogin(googleCloudLoginRequest, gcpMountPath);
+                apiInstance.GoogleCloudLogin(GoogleCloudLoginRequest googleCloudLoginRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11386,7 +11386,7 @@ namespace Example
             try
             {
                 // Configure credentials used to query the GCP IAM API to verify authenticating service accounts
-                apiInstance.GoogleCloudReadAuthConfig(gcpMountPath);
+                apiInstance.GoogleCloudReadAuthConfig(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11458,7 +11458,7 @@ namespace Example
             try
             {
                 // Create a GCP role with associated policies and required attributes.
-                apiInstance.GoogleCloudReadRole(name, gcpMountPath);
+                apiInstance.GoogleCloudReadRole(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11531,7 +11531,7 @@ namespace Example
             try
             {
                 // Configure credentials used to query the GCP IAM API to verify authenticating service accounts
-                apiInstance.GoogleCloudWriteAuthConfig(googleCloudWriteAuthConfigRequest, gcpMountPath);
+                apiInstance.GoogleCloudWriteAuthConfig(GoogleCloudWriteAuthConfigRequest googleCloudWriteAuthConfigRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11605,7 +11605,7 @@ namespace Example
             try
             {
                 // Create a GCP role with associated policies and required attributes.
-                apiInstance.GoogleCloudWriteRole(name, googleCloudWriteRoleRequest, gcpMountPath);
+                apiInstance.GoogleCloudWriteRole(GoogleCloudWriteRoleRequest googleCloudWriteRoleRequest, string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11680,7 +11680,7 @@ namespace Example
             try
             {
                 // Add or remove labels for an existing 'gce' role
-                apiInstance.GoogleCloudWriteRoleLabels(name, googleCloudWriteRoleLabelsRequest, gcpMountPath);
+                apiInstance.GoogleCloudWriteRoleLabels(GoogleCloudWriteRoleLabelsRequest googleCloudWriteRoleLabelsRequest, string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11755,7 +11755,7 @@ namespace Example
             try
             {
                 // Add or remove service accounts for an existing `iam` role
-                apiInstance.GoogleCloudWriteRoleServiceAccounts(name, googleCloudWriteRoleServiceAccountsRequest, gcpMountPath);
+                apiInstance.GoogleCloudWriteRoleServiceAccounts(GoogleCloudWriteRoleServiceAccountsRequest googleCloudWriteRoleServiceAccountsRequest, string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11829,7 +11829,7 @@ namespace Example
             try
             {
                 // Delete an existing role.
-                apiInstance.JWTDeleteRole(name, jwtMountPath);
+                apiInstance.JWTDeleteRole(string name, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11904,7 +11904,7 @@ namespace Example
             try
             {
                 // Lists all the roles registered with the backend.
-                apiInstance.JWTListRoles(list, jwtMountPath);
+                apiInstance.JWTListRoles(string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11977,7 +11977,7 @@ namespace Example
             try
             {
                 // Authenticates to Vault using a JWT (or OIDC) token.
-                apiInstance.JWTLogin(jWTLoginRequest, jwtMountPath);
+                apiInstance.JWTLogin(JWTLoginRequest jWTLoginRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12049,7 +12049,7 @@ namespace Example
             try
             {
                 // Read the current JWT authentication backend configuration.
-                apiInstance.JWTReadConfig(jwtMountPath);
+                apiInstance.JWTReadConfig(string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12120,7 +12120,7 @@ namespace Example
             try
             {
                 // Callback endpoint to complete an OIDC login.
-                apiInstance.JWTReadOIDCCallback(jwtMountPath);
+                apiInstance.JWTReadOIDCCallback(string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12192,7 +12192,7 @@ namespace Example
             try
             {
                 // Read an existing role.
-                apiInstance.JWTReadRole(name, jwtMountPath);
+                apiInstance.JWTReadRole(string name, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12267,7 +12267,7 @@ namespace Example
             try
             {
                 // Configure the JWT authentication backend.
-                apiInstance.JWTWriteConfig(jWTWriteConfigRequest, jwtMountPath);
+                apiInstance.JWTWriteConfig(JWTWriteConfigRequest jWTWriteConfigRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12340,7 +12340,7 @@ namespace Example
             try
             {
                 // Request an authorization URL to start an OIDC login flow.
-                apiInstance.JWTWriteOIDCAuthURL(jWTWriteOIDCAuthURLRequest, jwtMountPath);
+                apiInstance.JWTWriteOIDCAuthURL(JWTWriteOIDCAuthURLRequest jWTWriteOIDCAuthURLRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12413,7 +12413,7 @@ namespace Example
             try
             {
                 // Callback endpoint to handle form_posts.
-                apiInstance.JWTWriteOIDCCallback(jWTWriteOIDCCallbackRequest, jwtMountPath);
+                apiInstance.JWTWriteOIDCCallback(JWTWriteOIDCCallbackRequest jWTWriteOIDCCallbackRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12489,7 +12489,7 @@ namespace Example
             try
             {
                 // Register an role with the backend.
-                apiInstance.JWTWriteRole(name, jWTWriteRoleRequest, jwtMountPath);
+                apiInstance.JWTWriteRole(JWTWriteRoleRequest jWTWriteRoleRequest, string name, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12562,7 +12562,7 @@ namespace Example
 
             try
             {
-                apiInstance.KerberosDeleteGroup(name, kerberosMountPath);
+                apiInstance.KerberosDeleteGroup(string name, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12634,7 +12634,7 @@ namespace Example
 
             try
             {
-                apiInstance.KerberosListGroups(list, kerberosMountPath);
+                apiInstance.KerberosListGroups(string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12706,7 +12706,7 @@ namespace Example
 
             try
             {
-                apiInstance.KerberosLogin(kerberosLoginRequest, kerberosMountPath);
+                apiInstance.KerberosLogin(KerberosLoginRequest kerberosLoginRequest, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12777,7 +12777,7 @@ namespace Example
 
             try
             {
-                apiInstance.KerberosReadConfig(kerberosMountPath);
+                apiInstance.KerberosReadConfig(string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12848,7 +12848,7 @@ namespace Example
 
             try
             {
-                apiInstance.KerberosReadGroup(name, kerberosMountPath);
+                apiInstance.KerberosReadGroup(string name, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12919,7 +12919,7 @@ namespace Example
 
             try
             {
-                apiInstance.KerberosReadLDAPConfig(kerberosMountPath);
+                apiInstance.KerberosReadLDAPConfig(string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12990,7 +12990,7 @@ namespace Example
 
             try
             {
-                apiInstance.KerberosWriteConfig(kerberosWriteConfigRequest, kerberosMountPath);
+                apiInstance.KerberosWriteConfig(KerberosWriteConfigRequest kerberosWriteConfigRequest, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13063,7 +13063,7 @@ namespace Example
 
             try
             {
-                apiInstance.KerberosWriteGroup(name, kerberosWriteGroupRequest, kerberosMountPath);
+                apiInstance.KerberosWriteGroup(KerberosWriteGroupRequest kerberosWriteGroupRequest, string name, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13136,7 +13136,7 @@ namespace Example
 
             try
             {
-                apiInstance.KerberosWriteLDAPConfig(kerberosWriteLDAPConfigRequest, kerberosMountPath);
+                apiInstance.KerberosWriteLDAPConfig(KerberosWriteLDAPConfigRequest kerberosWriteLDAPConfigRequest, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13209,7 +13209,7 @@ namespace Example
             try
             {
                 // Register an role with the backend.
-                apiInstance.KubernetesDeleteAuthRole(name, kubernetesMountPath);
+                apiInstance.KubernetesDeleteAuthRole(string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13282,7 +13282,7 @@ namespace Example
             try
             {
                 // Lists all the roles registered with the backend.
-                apiInstance.KubernetesListAuthRoles(list, kubernetesMountPath);
+                apiInstance.KubernetesListAuthRoles(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13355,7 +13355,7 @@ namespace Example
             try
             {
                 // Authenticates Kubernetes service accounts with Vault.
-                apiInstance.KubernetesLogin(kubernetesLoginRequest, kubernetesMountPath);
+                apiInstance.KubernetesLogin(KubernetesLoginRequest kubernetesLoginRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13427,7 +13427,7 @@ namespace Example
             try
             {
                 // Configures the JWT Public Key and Kubernetes API information.
-                apiInstance.KubernetesReadAuthConfig(kubernetesMountPath);
+                apiInstance.KubernetesReadAuthConfig(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13499,7 +13499,7 @@ namespace Example
             try
             {
                 // Register an role with the backend.
-                apiInstance.KubernetesReadAuthRole(name, kubernetesMountPath);
+                apiInstance.KubernetesReadAuthRole(string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13572,7 +13572,7 @@ namespace Example
             try
             {
                 // Configures the JWT Public Key and Kubernetes API information.
-                apiInstance.KubernetesWriteAuthConfig(kubernetesWriteAuthConfigRequest, kubernetesMountPath);
+                apiInstance.KubernetesWriteAuthConfig(KubernetesWriteAuthConfigRequest kubernetesWriteAuthConfigRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13646,7 +13646,7 @@ namespace Example
             try
             {
                 // Register an role with the backend.
-                apiInstance.KubernetesWriteAuthRole(name, kubernetesWriteAuthRoleRequest, kubernetesMountPath);
+                apiInstance.KubernetesWriteAuthRole(KubernetesWriteAuthRoleRequest kubernetesWriteAuthRoleRequest, string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13720,7 +13720,7 @@ namespace Example
             try
             {
                 // Manage additional groups for users allowed to authenticate.
-                apiInstance.LDAPDeleteGroup(name, ldapMountPath);
+                apiInstance.LDAPDeleteGroup(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13793,7 +13793,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.LDAPDeleteUser(name, ldapMountPath);
+                apiInstance.LDAPDeleteUser(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13866,7 +13866,7 @@ namespace Example
             try
             {
                 // Manage additional groups for users allowed to authenticate.
-                apiInstance.LDAPListGroups(list, ldapMountPath);
+                apiInstance.LDAPListGroups(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13939,7 +13939,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.LDAPListUsers(list, ldapMountPath);
+                apiInstance.LDAPListUsers(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14013,7 +14013,7 @@ namespace Example
             try
             {
                 // Log in with a username and password.
-                apiInstance.LDAPLogin(username, lDAPLoginRequest, ldapMountPath);
+                apiInstance.LDAPLogin(LDAPLoginRequest lDAPLoginRequest, string username, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14086,7 +14086,7 @@ namespace Example
             try
             {
                 // Configure the LDAP server to connect to, along with its options.
-                apiInstance.LDAPReadAuthConfig(ldapMountPath);
+                apiInstance.LDAPReadAuthConfig(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14158,7 +14158,7 @@ namespace Example
             try
             {
                 // Manage additional groups for users allowed to authenticate.
-                apiInstance.LDAPReadGroup(name, ldapMountPath);
+                apiInstance.LDAPReadGroup(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14231,7 +14231,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.LDAPReadUser(name, ldapMountPath);
+                apiInstance.LDAPReadUser(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14304,7 +14304,7 @@ namespace Example
             try
             {
                 // Configure the LDAP server to connect to, along with its options.
-                apiInstance.LDAPWriteAuthConfig(lDAPWriteAuthConfigRequest, ldapMountPath);
+                apiInstance.LDAPWriteAuthConfig(LDAPWriteAuthConfigRequest lDAPWriteAuthConfigRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14378,7 +14378,7 @@ namespace Example
             try
             {
                 // Manage additional groups for users allowed to authenticate.
-                apiInstance.LDAPWriteGroup(name, lDAPWriteGroupRequest, ldapMountPath);
+                apiInstance.LDAPWriteGroup(LDAPWriteGroupRequest lDAPWriteGroupRequest, string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14453,7 +14453,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.LDAPWriteUser(name, lDAPWriteUserRequest, ldapMountPath);
+                apiInstance.LDAPWriteUser(LDAPWriteUserRequest lDAPWriteUserRequest, string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14526,7 +14526,7 @@ namespace Example
             try
             {
                 // Manages the configuration for the Vault Auth Plugin.
-                apiInstance.OCIDeleteConfig(ociMountPath);
+                apiInstance.OCIDeleteConfig(string ociMountPath = "oci", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14598,7 +14598,7 @@ namespace Example
             try
             {
                 // Create a role and associate policies to it.
-                apiInstance.OCIDeleteRole(role, ociMountPath);
+                apiInstance.OCIDeleteRole(string role, string ociMountPath = "oci", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14671,7 +14671,7 @@ namespace Example
             try
             {
                 // Lists all the roles that are registered with Vault.
-                apiInstance.OCIListRoles(list, ociMountPath);
+                apiInstance.OCIListRoles(string ociMountPath = "oci", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14745,7 +14745,7 @@ namespace Example
             try
             {
                 // Authenticates to Vault using OCI credentials
-                apiInstance.OCILoginWithRole(role, oCILoginWithRoleRequest, ociMountPath);
+                apiInstance.OCILoginWithRole(OCILoginWithRoleRequest oCILoginWithRoleRequest, string role, string ociMountPath = "oci", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14818,7 +14818,7 @@ namespace Example
             try
             {
                 // Manages the configuration for the Vault Auth Plugin.
-                apiInstance.OCIReadConfig(ociMountPath);
+                apiInstance.OCIReadConfig(string ociMountPath = "oci", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14890,7 +14890,7 @@ namespace Example
             try
             {
                 // Create a role and associate policies to it.
-                apiInstance.OCIReadRole(role, ociMountPath);
+                apiInstance.OCIReadRole(string role, string ociMountPath = "oci", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14963,7 +14963,7 @@ namespace Example
             try
             {
                 // Manages the configuration for the Vault Auth Plugin.
-                apiInstance.OCIWriteConfig(oCIWriteConfigRequest, ociMountPath);
+                apiInstance.OCIWriteConfig(OCIWriteConfigRequest oCIWriteConfigRequest, string ociMountPath = "oci", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15037,7 +15037,7 @@ namespace Example
             try
             {
                 // Create a role and associate policies to it.
-                apiInstance.OCIWriteRole(role, oCIWriteRoleRequest, ociMountPath);
+                apiInstance.OCIWriteRole(OCIWriteRoleRequest oCIWriteRoleRequest, string role, string ociMountPath = "oci", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15111,7 +15111,7 @@ namespace Example
             try
             {
                 // Delete an existing role.
-                apiInstance.OIDCDeleteAuthRole(name, oidcMountPath);
+                apiInstance.OIDCDeleteAuthRole(string name, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15186,7 +15186,7 @@ namespace Example
             try
             {
                 // Lists all the roles registered with the backend.
-                apiInstance.OIDCListAuthRoles(list, oidcMountPath);
+                apiInstance.OIDCListAuthRoles(string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15259,7 +15259,7 @@ namespace Example
             try
             {
                 // Authenticates to Vault using a JWT (or OIDC) token.
-                apiInstance.OIDCLogin(oIDCLoginRequest, oidcMountPath);
+                apiInstance.OIDCLogin(OIDCLoginRequest oIDCLoginRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15331,7 +15331,7 @@ namespace Example
             try
             {
                 // Read the current JWT authentication backend configuration.
-                apiInstance.OIDCReadAuthConfig(oidcMountPath);
+                apiInstance.OIDCReadAuthConfig(string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15403,7 +15403,7 @@ namespace Example
             try
             {
                 // Read an existing role.
-                apiInstance.OIDCReadAuthRole(name, oidcMountPath);
+                apiInstance.OIDCReadAuthRole(string name, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15475,7 +15475,7 @@ namespace Example
             try
             {
                 // Callback endpoint to complete an OIDC login.
-                apiInstance.OIDCReadCallback(oidcMountPath);
+                apiInstance.OIDCReadCallback(string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15549,7 +15549,7 @@ namespace Example
             try
             {
                 // Configure the JWT authentication backend.
-                apiInstance.OIDCWriteAuthConfig(oIDCWriteAuthConfigRequest, oidcMountPath);
+                apiInstance.OIDCWriteAuthConfig(OIDCWriteAuthConfigRequest oIDCWriteAuthConfigRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15625,7 +15625,7 @@ namespace Example
             try
             {
                 // Register an role with the backend.
-                apiInstance.OIDCWriteAuthRole(name, oIDCWriteAuthRoleRequest, oidcMountPath);
+                apiInstance.OIDCWriteAuthRole(OIDCWriteAuthRoleRequest oIDCWriteAuthRoleRequest, string name, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15699,7 +15699,7 @@ namespace Example
             try
             {
                 // Request an authorization URL to start an OIDC login flow.
-                apiInstance.OIDCWriteAuthURL(oIDCWriteAuthURLRequest, oidcMountPath);
+                apiInstance.OIDCWriteAuthURL(OIDCWriteAuthURLRequest oIDCWriteAuthURLRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15772,7 +15772,7 @@ namespace Example
             try
             {
                 // Callback endpoint to handle form_posts.
-                apiInstance.OIDCWriteCallback(oIDCWriteCallbackRequest, oidcMountPath);
+                apiInstance.OIDCWriteCallback(OIDCWriteCallbackRequest oIDCWriteCallbackRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15845,7 +15845,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.OktaDeleteGroup(name, oktaMountPath);
+                apiInstance.OktaDeleteGroup(string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15918,7 +15918,7 @@ namespace Example
             try
             {
                 // Manage additional groups for users allowed to authenticate.
-                apiInstance.OktaDeleteUser(name, oktaMountPath);
+                apiInstance.OktaDeleteUser(string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15991,7 +15991,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.OktaListGroups(list, oktaMountPath);
+                apiInstance.OktaListGroups(string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16064,7 +16064,7 @@ namespace Example
             try
             {
                 // Manage additional groups for users allowed to authenticate.
-                apiInstance.OktaListUsers(list, oktaMountPath);
+                apiInstance.OktaListUsers(string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16138,7 +16138,7 @@ namespace Example
             try
             {
                 // Log in with a username and password.
-                apiInstance.OktaLogin(username, oktaLoginRequest, oktaMountPath);
+                apiInstance.OktaLogin(OktaLoginRequest oktaLoginRequest, string username, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16211,7 +16211,7 @@ namespace Example
             try
             {
                 // This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
-                apiInstance.OktaReadConfig(oktaMountPath);
+                apiInstance.OktaReadConfig(string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16283,7 +16283,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.OktaReadGroup(name, oktaMountPath);
+                apiInstance.OktaReadGroup(string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16356,7 +16356,7 @@ namespace Example
             try
             {
                 // Manage additional groups for users allowed to authenticate.
-                apiInstance.OktaReadUser(name, oktaMountPath);
+                apiInstance.OktaReadUser(string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16428,7 +16428,7 @@ namespace Example
 
             try
             {
-                apiInstance.OktaVerify(nonce, oktaMountPath);
+                apiInstance.OktaVerify(string nonce, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16501,7 +16501,7 @@ namespace Example
             try
             {
                 // This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
-                apiInstance.OktaWriteConfig(oktaWriteConfigRequest, oktaMountPath);
+                apiInstance.OktaWriteConfig(OktaWriteConfigRequest oktaWriteConfigRequest, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16575,7 +16575,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.OktaWriteGroup(name, oktaWriteGroupRequest, oktaMountPath);
+                apiInstance.OktaWriteGroup(OktaWriteGroupRequest oktaWriteGroupRequest, string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16650,7 +16650,7 @@ namespace Example
             try
             {
                 // Manage additional groups for users allowed to authenticate.
-                apiInstance.OktaWriteUser(name, oktaWriteUserRequest, oktaMountPath);
+                apiInstance.OktaWriteUser(OktaWriteUserRequest oktaWriteUserRequest, string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16724,7 +16724,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.RadiusDeleteUser(name, radiusMountPath);
+                apiInstance.RadiusDeleteUser(string name, string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16797,7 +16797,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.RadiusListUsers(list, radiusMountPath);
+                apiInstance.RadiusListUsers(string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16870,7 +16870,7 @@ namespace Example
             try
             {
                 // Log in with a username and password.
-                apiInstance.RadiusLogin(radiusLoginRequest, radiusMountPath);
+                apiInstance.RadiusLogin(RadiusLoginRequest radiusLoginRequest, string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16944,7 +16944,7 @@ namespace Example
             try
             {
                 // Log in with a username and password.
-                apiInstance.RadiusLoginWithUsername(urlusername, radiusLoginWithUsernameRequest, radiusMountPath);
+                apiInstance.RadiusLoginWithUsername(RadiusLoginWithUsernameRequest radiusLoginWithUsernameRequest, string urlusername, string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17017,7 +17017,7 @@ namespace Example
             try
             {
                 // Configure the RADIUS server to connect to, along with its options.
-                apiInstance.RadiusReadConfig(radiusMountPath);
+                apiInstance.RadiusReadConfig(string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17089,7 +17089,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.RadiusReadUser(name, radiusMountPath);
+                apiInstance.RadiusReadUser(string name, string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17162,7 +17162,7 @@ namespace Example
             try
             {
                 // Configure the RADIUS server to connect to, along with its options.
-                apiInstance.RadiusWriteConfig(radiusWriteConfigRequest, radiusMountPath);
+                apiInstance.RadiusWriteConfig(RadiusWriteConfigRequest radiusWriteConfigRequest, string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17236,7 +17236,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.RadiusWriteUser(name, radiusWriteUserRequest, radiusMountPath);
+                apiInstance.RadiusWriteUser(RadiusWriteUserRequest radiusWriteUserRequest, string name, string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17309,7 +17309,7 @@ namespace Example
 
             try
             {
-                apiInstance.TokenDeleteRole(roleName, tokenMountPath);
+                apiInstance.TokenDeleteRole(string roleName, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17382,7 +17382,7 @@ namespace Example
             try
             {
                 // List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires 'sudo' capability in addition to 'list'.
-                apiInstance.TokenListAccessors(list, tokenMountPath);
+                apiInstance.TokenListAccessors(string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17455,7 +17455,7 @@ namespace Example
             try
             {
                 // This endpoint lists configured roles.
-                apiInstance.TokenListRoles(list, tokenMountPath);
+                apiInstance.TokenListRoles(string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17527,7 +17527,7 @@ namespace Example
             try
             {
                 // This endpoint will lookup a token and its properties.
-                apiInstance.TokenReadLookup(tokenMountPath);
+                apiInstance.TokenReadLookup(string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17598,7 +17598,7 @@ namespace Example
             try
             {
                 // This endpoint will lookup a token and its properties.
-                apiInstance.TokenReadLookupSelf(tokenMountPath);
+                apiInstance.TokenReadLookupSelf(string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17669,7 +17669,7 @@ namespace Example
 
             try
             {
-                apiInstance.TokenReadRole(roleName, tokenMountPath);
+                apiInstance.TokenReadRole(string roleName, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17742,7 +17742,7 @@ namespace Example
             try
             {
                 // This endpoint will renew the given token and prevent expiration.
-                apiInstance.TokenRenew(tokenRenewRequest, tokenMountPath);
+                apiInstance.TokenRenew(TokenRenewRequest tokenRenewRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17815,7 +17815,7 @@ namespace Example
             try
             {
                 // This endpoint will renew a token associated with the given accessor and its properties. Response will not contain the token ID.
-                apiInstance.TokenRenewAccessor(tokenRenewAccessorRequest, tokenMountPath);
+                apiInstance.TokenRenewAccessor(TokenRenewAccessorRequest tokenRenewAccessorRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17888,7 +17888,7 @@ namespace Example
             try
             {
                 // This endpoint will renew the token used to call it and prevent expiration.
-                apiInstance.TokenRenewSelf(tokenRenewSelfRequest, tokenMountPath);
+                apiInstance.TokenRenewSelf(TokenRenewSelfRequest tokenRenewSelfRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17961,7 +17961,7 @@ namespace Example
             try
             {
                 // This endpoint will delete the given token and all of its child tokens.
-                apiInstance.TokenRevoke(tokenRevokeRequest, tokenMountPath);
+                apiInstance.TokenRevoke(TokenRevokeRequest tokenRevokeRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18034,7 +18034,7 @@ namespace Example
             try
             {
                 // This endpoint will delete the token associated with the accessor and all of its child tokens.
-                apiInstance.TokenRevokeAccessor(tokenRevokeAccessorRequest, tokenMountPath);
+                apiInstance.TokenRevokeAccessor(TokenRevokeAccessorRequest tokenRevokeAccessorRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18107,7 +18107,7 @@ namespace Example
             try
             {
                 // This endpoint will delete the token and orphan its child tokens.
-                apiInstance.TokenRevokeOrphan(tokenRevokeOrphanRequest, tokenMountPath);
+                apiInstance.TokenRevokeOrphan(TokenRevokeOrphanRequest tokenRevokeOrphanRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18179,7 +18179,7 @@ namespace Example
             try
             {
                 // This endpoint will delete the token used to call it and all of its child tokens.
-                apiInstance.TokenRevokeSelf(tokenMountPath);
+                apiInstance.TokenRevokeSelf(string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18250,7 +18250,7 @@ namespace Example
             try
             {
                 // This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
-                apiInstance.TokenTidy(tokenMountPath);
+                apiInstance.TokenTidy(string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18323,7 +18323,7 @@ namespace Example
             try
             {
                 // The token create path is used to create new tokens.
-                apiInstance.TokenWriteCreate(tokenWriteCreateRequest, format, tokenMountPath);
+                apiInstance.TokenWriteCreate(TokenWriteCreateRequest tokenWriteCreateRequest, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18398,7 +18398,7 @@ namespace Example
             try
             {
                 // The token create path is used to create new orphan tokens.
-                apiInstance.TokenWriteCreateOrphan(tokenWriteCreateOrphanRequest, format, tokenMountPath);
+                apiInstance.TokenWriteCreateOrphan(TokenWriteCreateOrphanRequest tokenWriteCreateOrphanRequest, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18474,7 +18474,7 @@ namespace Example
             try
             {
                 // This token create path is used to create new tokens adhering to the given role.
-                apiInstance.TokenWriteCreateWithRole(roleName, tokenWriteCreateWithRoleRequest, format, tokenMountPath);
+                apiInstance.TokenWriteCreateWithRole(TokenWriteCreateWithRoleRequest tokenWriteCreateWithRoleRequest, string roleName, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18549,7 +18549,7 @@ namespace Example
             try
             {
                 // This endpoint will lookup a token and its properties.
-                apiInstance.TokenWriteLookup(tokenWriteLookupRequest, tokenMountPath);
+                apiInstance.TokenWriteLookup(TokenWriteLookupRequest tokenWriteLookupRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18622,7 +18622,7 @@ namespace Example
             try
             {
                 // This endpoint will lookup a token associated with the given accessor and its properties. Response will not contain the token ID.
-                apiInstance.TokenWriteLookupAccessor(tokenWriteLookupAccessorRequest, tokenMountPath);
+                apiInstance.TokenWriteLookupAccessor(TokenWriteLookupAccessorRequest tokenWriteLookupAccessorRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18695,7 +18695,7 @@ namespace Example
             try
             {
                 // This endpoint will lookup a token and its properties.
-                apiInstance.TokenWriteLookupSelf(tokenWriteLookupSelfRequest, tokenMountPath);
+                apiInstance.TokenWriteLookupSelf(TokenWriteLookupSelfRequest tokenWriteLookupSelfRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18768,7 +18768,7 @@ namespace Example
 
             try
             {
-                apiInstance.TokenWriteRole(roleName, tokenWriteRoleRequest, tokenMountPath);
+                apiInstance.TokenWriteRole(TokenWriteRoleRequest tokenWriteRoleRequest, string roleName, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18842,7 +18842,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.UserpassDeleteUser(username, userpassMountPath);
+                apiInstance.UserpassDeleteUser(string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18915,7 +18915,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.UserpassListUsers(list, userpassMountPath);
+                apiInstance.UserpassListUsers(string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18989,7 +18989,7 @@ namespace Example
             try
             {
                 // Log in with a username and password.
-                apiInstance.UserpassLogin(username, userpassLoginRequest, userpassMountPath);
+                apiInstance.UserpassLogin(UserpassLoginRequest userpassLoginRequest, string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -19063,7 +19063,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.UserpassReadUser(username, userpassMountPath);
+                apiInstance.UserpassReadUser(string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -19137,7 +19137,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.UserpassWriteUser(username, userpassWriteUserRequest, userpassMountPath);
+                apiInstance.UserpassWriteUser(UserpassWriteUserRequest userpassWriteUserRequest, string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -19212,7 +19212,7 @@ namespace Example
             try
             {
                 // Reset user's password.
-                apiInstance.UserpassWriteUserPassword(username, userpassWriteUserPasswordRequest, userpassMountPath);
+                apiInstance.UserpassWriteUserPassword(UserpassWriteUserPasswordRequest userpassWriteUserPasswordRequest, string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -19287,7 +19287,7 @@ namespace Example
             try
             {
                 // Update the policies associated with the username.
-                apiInstance.UserpassWriteUserPolicies(username, userpassWriteUserPoliciesRequest, userpassMountPath);
+                apiInstance.UserpassWriteUserPolicies(UserpassWriteUserPoliciesRequest userpassWriteUserPoliciesRequest, string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {

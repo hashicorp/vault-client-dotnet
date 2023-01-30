@@ -207,7 +207,7 @@ namespace Example
             try
             {
                 // The hash of the given string via the given audit backend
-                apiInstance.CalculateAuditHash(path, calculateAuditHashRequest);
+                apiInstance.CalculateAuditHash(CalculateAuditHashRequest calculateAuditHashRequest, string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -279,7 +279,7 @@ namespace Example
             try
             {
                 // Disable the audit device at the given path.
-                apiInstance.DeleteAuditDevice(path);
+                apiInstance.DeleteAuditDevice(string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -350,7 +350,7 @@ namespace Example
             try
             {
                 // Disable the auth method at the given auth path
-                apiInstance.DeleteAuthMethod(path);
+                apiInstance.DeleteAuthMethod(string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -421,7 +421,7 @@ namespace Example
             try
             {
                 // Disable auditing of the given request header.
-                apiInstance.DeleteConfigAuditingRequestHeader(header);
+                apiInstance.DeleteConfigAuditingRequestHeader(string header, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -491,7 +491,7 @@ namespace Example
             try
             {
                 // Remove any CORS settings.
-                apiInstance.DeleteConfigCORS();
+                apiInstance.DeleteConfigCORS(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -559,7 +559,7 @@ namespace Example
             try
             {
                 // Remove a UI header.
-                apiInstance.DeleteConfigUIHeader(header);
+                apiInstance.DeleteConfigUIHeader(string header, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -629,7 +629,7 @@ namespace Example
             try
             {
                 // Cancels any in-progress root generation attempt.
-                apiInstance.DeleteGenerateRoot();
+                apiInstance.DeleteGenerateRoot(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -696,7 +696,7 @@ namespace Example
             try
             {
                 // Cancels any in-progress root generation attempt.
-                apiInstance.DeleteGenerateRootAttempt();
+                apiInstance.DeleteGenerateRootAttempt(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -764,7 +764,7 @@ namespace Example
             try
             {
                 // Revert a single logger to use log level provided in config.
-                apiInstance.DeleteLogger(name);
+                apiInstance.DeleteLogger(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -834,7 +834,7 @@ namespace Example
             try
             {
                 // Revert the all loggers to use log level provided in config.
-                apiInstance.DeleteLoggers();
+                apiInstance.DeleteLoggers(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -902,7 +902,7 @@ namespace Example
             try
             {
                 // Disable the mount point specified at the given path.
-                apiInstance.DeleteMount(path);
+                apiInstance.DeleteMount(string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -974,7 +974,7 @@ namespace Example
             try
             {
                 // Remove the plugin with the given name.
-                apiInstance.DeletePluginsCatalogByTypeByName(name, type);
+                apiInstance.DeletePluginsCatalogByTypeByName(string name, string type, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1046,7 +1046,7 @@ namespace Example
             try
             {
                 // Delete the ACL policy with the given name.
-                apiInstance.DeletePoliciesACL(name);
+                apiInstance.DeletePoliciesACL(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1117,7 +1117,7 @@ namespace Example
             try
             {
                 // Delete a password policy.
-                apiInstance.DeletePoliciesPassword(name);
+                apiInstance.DeletePoliciesPassword(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1188,7 +1188,7 @@ namespace Example
             try
             {
                 // Delete the policy with the given name.
-                apiInstance.DeletePolicy(name);
+                apiInstance.DeletePolicy(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1258,7 +1258,7 @@ namespace Example
 
             try
             {
-                apiInstance.DeleteQuotasRateLimit(name);
+                apiInstance.DeleteQuotasRateLimit(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1328,7 +1328,7 @@ namespace Example
             try
             {
                 // Delete the key with given path.
-                apiInstance.DeleteRaw();
+                apiInstance.DeleteRaw(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1396,7 +1396,7 @@ namespace Example
             try
             {
                 // Delete the key with given path.
-                apiInstance.DeleteRawPath(path);
+                apiInstance.DeleteRawPath(string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1466,7 +1466,7 @@ namespace Example
             try
             {
                 // Delete the backup copy of PGP-encrypted unseal keys.
-                apiInstance.DeleteRekeyBackup();
+                apiInstance.DeleteRekeyBackup(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1535,7 +1535,7 @@ namespace Example
             try
             {
                 // Cancels any in-progress rekey.
-                apiInstance.DeleteRekeyInit();
+                apiInstance.DeleteRekeyInit(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1602,7 +1602,7 @@ namespace Example
             try
             {
                 // Allows fetching or deleting the backup of the rotated unseal keys.
-                apiInstance.DeleteRekeyRecoveryKeyBackup();
+                apiInstance.DeleteRekeyRecoveryKeyBackup(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1671,7 +1671,7 @@ namespace Example
             try
             {
                 // Cancel any in-progress rekey verification operation.
-                apiInstance.DeleteRekeyVerify();
+                apiInstance.DeleteRekeyVerify(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1739,7 +1739,7 @@ namespace Example
             try
             {
                 // Return a list of configured UI headers.
-                apiInstance.ListConfigUIHeaders(list);
+                apiInstance.ListConfigUIHeaders(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1811,7 +1811,7 @@ namespace Example
             try
             {
                 // Returns a list of lease ids.
-                apiInstance.ListLeasesLookupPrefix(prefix, list);
+                apiInstance.ListLeasesLookupPrefix(string prefix, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1884,7 +1884,7 @@ namespace Example
             try
             {
                 // List the plugins in the catalog.
-                apiInstance.ListPluginsCatalogByType(type, list);
+                apiInstance.ListPluginsCatalogByType(string type, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1956,7 +1956,7 @@ namespace Example
             try
             {
                 // List the configured access control policies.
-                apiInstance.ListPoliciesACL(list);
+                apiInstance.ListPoliciesACL(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2027,7 +2027,7 @@ namespace Example
             try
             {
                 // List the existing password policies.
-                apiInstance.ListPoliciesPassword(list);
+                apiInstance.ListPoliciesPassword(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2097,7 +2097,7 @@ namespace Example
 
             try
             {
-                apiInstance.ListQuotasRateLimits(list);
+                apiInstance.ListQuotasRateLimits(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2168,7 +2168,7 @@ namespace Example
             try
             {
                 // Returns map of historical version change entries
-                apiInstance.ListVersionHistory(list);
+                apiInstance.ListVersionHistory(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2239,7 +2239,7 @@ namespace Example
             try
             {
                 // Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token
-                apiInstance.MFAValidate(mFAValidateRequest);
+                apiInstance.MFAValidate(MFAValidateRequest mFAValidateRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2310,7 +2310,7 @@ namespace Example
 
             try
             {
-                apiInstance.Monitor(logFormat, logLevel);
+                apiInstance.Monitor(string logFormat = default(string), string logLevel = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2383,7 +2383,7 @@ namespace Example
             try
             {
                 // Returns an HTML page listing the available profiles.
-                apiInstance.PprofRead();
+                apiInstance.PprofRead(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2452,7 +2452,7 @@ namespace Example
             try
             {
                 // Returns a sampling of all past memory allocations.
-                apiInstance.PprofReadAllocs();
+                apiInstance.PprofReadAllocs(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2521,7 +2521,7 @@ namespace Example
             try
             {
                 // Returns stack traces that led to blocking on synchronization primitives
-                apiInstance.PprofReadBlock();
+                apiInstance.PprofReadBlock(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2590,7 +2590,7 @@ namespace Example
             try
             {
                 // Returns the running program's command line.
-                apiInstance.PprofReadCmdline();
+                apiInstance.PprofReadCmdline(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2659,7 +2659,7 @@ namespace Example
             try
             {
                 // Returns stack traces of all current goroutines.
-                apiInstance.PprofReadGoroutine();
+                apiInstance.PprofReadGoroutine(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2728,7 +2728,7 @@ namespace Example
             try
             {
                 // Returns a sampling of memory allocations of live object.
-                apiInstance.PprofReadHeap();
+                apiInstance.PprofReadHeap(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2797,7 +2797,7 @@ namespace Example
             try
             {
                 // Returns stack traces of holders of contended mutexes
-                apiInstance.PprofReadMutex();
+                apiInstance.PprofReadMutex(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2866,7 +2866,7 @@ namespace Example
             try
             {
                 // Returns a pprof-formatted cpu profile payload.
-                apiInstance.PprofReadProfile();
+                apiInstance.PprofReadProfile(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2935,7 +2935,7 @@ namespace Example
             try
             {
                 // Returns the program counters listed in the request.
-                apiInstance.PprofReadSymbol();
+                apiInstance.PprofReadSymbol(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3004,7 +3004,7 @@ namespace Example
             try
             {
                 // Returns stack traces that led to the creation of new OS threads
-                apiInstance.PprofReadThreadcreate();
+                apiInstance.PprofReadThreadcreate(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3073,7 +3073,7 @@ namespace Example
             try
             {
                 // Returns the execution trace in binary form.
-                apiInstance.PprofReadTrace();
+                apiInstance.PprofReadTrace(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3140,7 +3140,7 @@ namespace Example
             try
             {
                 // List the enabled audit devices.
-                apiInstance.ReadAuditDevices();
+                apiInstance.ReadAuditDevices(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3208,7 +3208,7 @@ namespace Example
             try
             {
                 // Read the configuration of the auth engine at the given path.
-                apiInstance.ReadAuthMethod(path);
+                apiInstance.ReadAuthMethod(string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3281,7 +3281,7 @@ namespace Example
             try
             {
                 // Reads the given auth path's configuration.
-                apiInstance.ReadAuthMethodTune(path);
+                apiInstance.ReadAuthMethodTune(string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3351,7 +3351,7 @@ namespace Example
             try
             {
                 // List the currently enabled credential backends.
-                apiInstance.ReadAuthMethods();
+                apiInstance.ReadAuthMethods(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3419,7 +3419,7 @@ namespace Example
             try
             {
                 // List the information for the given request header.
-                apiInstance.ReadConfigAuditingRequestHeader(header);
+                apiInstance.ReadConfigAuditingRequestHeader(string header, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3489,7 +3489,7 @@ namespace Example
             try
             {
                 // List the request headers that are configured to be audited.
-                apiInstance.ReadConfigAuditingRequestHeaders();
+                apiInstance.ReadConfigAuditingRequestHeaders(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3556,7 +3556,7 @@ namespace Example
             try
             {
                 // Return the current CORS settings.
-                apiInstance.ReadConfigCORS();
+                apiInstance.ReadConfigCORS(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3625,7 +3625,7 @@ namespace Example
             try
             {
                 // Return a sanitized version of the Vault server configuration.
-                apiInstance.ReadConfigStateSanitized();
+                apiInstance.ReadConfigStateSanitized(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3693,7 +3693,7 @@ namespace Example
             try
             {
                 // Return the given UI header's configuration
-                apiInstance.ReadConfigUIHeader(header);
+                apiInstance.ReadConfigUIHeader(string header, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3763,7 +3763,7 @@ namespace Example
             try
             {
                 // Read the configuration and progress of the current root generation attempt.
-                apiInstance.ReadGenerateRoot();
+                apiInstance.ReadGenerateRoot(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3830,7 +3830,7 @@ namespace Example
             try
             {
                 // Read the configuration and progress of the current root generation attempt.
-                apiInstance.ReadGenerateRootAttempt();
+                apiInstance.ReadGenerateRootAttempt(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3897,7 +3897,7 @@ namespace Example
             try
             {
                 // Check the HA status of a Vault cluster
-                apiInstance.ReadHAStatus();
+                apiInstance.ReadHAStatus(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3964,7 +3964,7 @@ namespace Example
             try
             {
                 // Returns the health status of Vault.
-                apiInstance.ReadHealth();
+                apiInstance.ReadHealth(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4037,7 +4037,7 @@ namespace Example
             try
             {
                 // Information about the host instance that this Vault server is running on.
-                apiInstance.ReadHostInfo();
+                apiInstance.ReadHostInfo(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4106,7 +4106,7 @@ namespace Example
             try
             {
                 // reports in-flight requests
-                apiInstance.ReadInFlightRequests();
+                apiInstance.ReadInFlightRequests(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4173,7 +4173,7 @@ namespace Example
             try
             {
                 // Returns the initialization status of Vault.
-                apiInstance.ReadInit();
+                apiInstance.ReadInit(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4240,7 +4240,7 @@ namespace Example
             try
             {
                 // Report the client count metrics, for this namespace and all child namespaces.
-                apiInstance.ReadInternalCountersActivity();
+                apiInstance.ReadInternalCountersActivity(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4307,7 +4307,7 @@ namespace Example
             try
             {
                 // Report the client count metrics, for this namespace and all child namespaces.
-                apiInstance.ReadInternalCountersActivityExport();
+                apiInstance.ReadInternalCountersActivityExport(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4374,7 +4374,7 @@ namespace Example
             try
             {
                 // Report the number of clients for this month, for this namespace and all child namespaces.
-                apiInstance.ReadInternalCountersActivityMonthly();
+                apiInstance.ReadInternalCountersActivityMonthly(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4441,7 +4441,7 @@ namespace Example
             try
             {
                 // Read the client count tracking configuration.
-                apiInstance.ReadInternalCountersConfig();
+                apiInstance.ReadInternalCountersConfig(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4508,7 +4508,7 @@ namespace Example
             try
             {
                 // Backwards compatibility is not guaranteed for this API
-                apiInstance.ReadInternalCountersEntities();
+                apiInstance.ReadInternalCountersEntities(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4575,7 +4575,7 @@ namespace Example
             try
             {
                 // Backwards compatibility is not guaranteed for this API
-                apiInstance.ReadInternalCountersRequests();
+                apiInstance.ReadInternalCountersRequests(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4642,7 +4642,7 @@ namespace Example
             try
             {
                 // Backwards compatibility is not guaranteed for this API
-                apiInstance.ReadInternalCountersTokens();
+                apiInstance.ReadInternalCountersTokens(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4710,7 +4710,7 @@ namespace Example
             try
             {
                 // Expose the route entry and mount entry tables present in the router
-                apiInstance.ReadInternalInspectRouter(tag);
+                apiInstance.ReadInternalInspectRouter(string tag, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4780,7 +4780,7 @@ namespace Example
             try
             {
                 // Generate an OpenAPI 3 document of all mounted paths.
-                apiInstance.ReadInternalSpecsOpenAPI();
+                apiInstance.ReadInternalSpecsOpenAPI(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4847,7 +4847,7 @@ namespace Example
             try
             {
                 // Lists enabled feature flags.
-                apiInstance.ReadInternalUIFeatureFlags();
+                apiInstance.ReadInternalUIFeatureFlags(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4915,7 +4915,7 @@ namespace Example
             try
             {
                 // Return information about the given mount.
-                apiInstance.ReadInternalUIMount(path);
+                apiInstance.ReadInternalUIMount(string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4985,7 +4985,7 @@ namespace Example
             try
             {
                 // Lists all enabled and visible auth and secrets mounts.
-                apiInstance.ReadInternalUIMounts();
+                apiInstance.ReadInternalUIMounts(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5052,7 +5052,7 @@ namespace Example
             try
             {
                 // Backwards compatibility is not guaranteed for this API
-                apiInstance.ReadInternalUINamespaces();
+                apiInstance.ReadInternalUINamespaces(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5119,7 +5119,7 @@ namespace Example
             try
             {
                 // Backwards compatibility is not guaranteed for this API
-                apiInstance.ReadInternalUIResultantACL();
+                apiInstance.ReadInternalUIResultantACL(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5186,7 +5186,7 @@ namespace Example
             try
             {
                 // Provides information about the backend encryption key.
-                apiInstance.ReadKeyStatus();
+                apiInstance.ReadKeyStatus(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5253,7 +5253,7 @@ namespace Example
             try
             {
                 // Returns the high availability status and current leader instance of Vault.
-                apiInstance.ReadLeader();
+                apiInstance.ReadLeader(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5320,7 +5320,7 @@ namespace Example
             try
             {
                 // List leases associated with this Vault cluster
-                apiInstance.ReadLeases();
+                apiInstance.ReadLeases(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5387,7 +5387,7 @@ namespace Example
             try
             {
                 // Count of leases associated with this Vault cluster
-                apiInstance.ReadLeasesCount();
+                apiInstance.ReadLeasesCount(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5455,7 +5455,7 @@ namespace Example
             try
             {
                 // Read the log level for a single logger.
-                apiInstance.ReadLogger(name);
+                apiInstance.ReadLogger(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5525,7 +5525,7 @@ namespace Example
             try
             {
                 // Read the log level for all existing loggers.
-                apiInstance.ReadLoggers();
+                apiInstance.ReadLoggers(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5593,7 +5593,7 @@ namespace Example
             try
             {
                 // Export the metrics aggregated for telemetry purpose.
-                apiInstance.ReadMetrics(format);
+                apiInstance.ReadMetrics(string format = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5664,7 +5664,7 @@ namespace Example
             try
             {
                 // Read the configuration of the secret engine at the given path.
-                apiInstance.ReadMount(path);
+                apiInstance.ReadMount(string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5734,7 +5734,7 @@ namespace Example
             try
             {
                 // List the currently mounted backends.
-                apiInstance.ReadMounts();
+                apiInstance.ReadMounts(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5802,7 +5802,7 @@ namespace Example
             try
             {
                 // Tune backend configuration parameters for this mount.
-                apiInstance.ReadMountsConfig(path);
+                apiInstance.ReadMountsConfig(string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5872,7 +5872,7 @@ namespace Example
             try
             {
                 // Lists all the plugins known to Vault
-                apiInstance.ReadPluginsCatalog();
+                apiInstance.ReadPluginsCatalog(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5941,7 +5941,7 @@ namespace Example
             try
             {
                 // Return the configuration data for the plugin with the given name.
-                apiInstance.ReadPluginsCatalogByTypeByName(name, type);
+                apiInstance.ReadPluginsCatalogByTypeByName(string name, string type, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6013,7 +6013,7 @@ namespace Example
             try
             {
                 // List the configured access control policies.
-                apiInstance.ReadPolicies(list);
+                apiInstance.ReadPolicies(string list = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6084,7 +6084,7 @@ namespace Example
             try
             {
                 // Retrieve information about the named ACL policy.
-                apiInstance.ReadPoliciesACL(name);
+                apiInstance.ReadPoliciesACL(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6155,7 +6155,7 @@ namespace Example
             try
             {
                 // Retrieve an existing password policy.
-                apiInstance.ReadPoliciesPassword(name);
+                apiInstance.ReadPoliciesPassword(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6226,7 +6226,7 @@ namespace Example
             try
             {
                 // Generate a password from an existing password policy.
-                apiInstance.ReadPoliciesPasswordGenerate(name);
+                apiInstance.ReadPoliciesPasswordGenerate(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6297,7 +6297,7 @@ namespace Example
             try
             {
                 // Retrieve the policy body for the named policy.
-                apiInstance.ReadPolicy(name);
+                apiInstance.ReadPolicy(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6366,7 +6366,7 @@ namespace Example
 
             try
             {
-                apiInstance.ReadQuotasConfig();
+                apiInstance.ReadQuotasConfig(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6433,7 +6433,7 @@ namespace Example
 
             try
             {
-                apiInstance.ReadQuotasRateLimit(name);
+                apiInstance.ReadQuotasRateLimit(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6504,7 +6504,7 @@ namespace Example
             try
             {
                 // Read the value of the key at the given path.
-                apiInstance.ReadRaw(list);
+                apiInstance.ReadRaw(string list = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6576,7 +6576,7 @@ namespace Example
             try
             {
                 // Read the value of the key at the given path.
-                apiInstance.ReadRawPath(path, list);
+                apiInstance.ReadRawPath(string path, string list = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6647,7 +6647,7 @@ namespace Example
             try
             {
                 // Return the backup copy of PGP-encrypted unseal keys.
-                apiInstance.ReadRekeyBackup();
+                apiInstance.ReadRekeyBackup(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6714,7 +6714,7 @@ namespace Example
             try
             {
                 // Reads the configuration and progress of the current rekey attempt.
-                apiInstance.ReadRekeyInit();
+                apiInstance.ReadRekeyInit(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6781,7 +6781,7 @@ namespace Example
             try
             {
                 // Allows fetching or deleting the backup of the rotated unseal keys.
-                apiInstance.ReadRekeyRecoveryKeyBackup();
+                apiInstance.ReadRekeyRecoveryKeyBackup(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6848,7 +6848,7 @@ namespace Example
             try
             {
                 // Read the configuration and progress of the current rekey verification attempt.
-                apiInstance.ReadRekeyVerify();
+                apiInstance.ReadRekeyVerify(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6916,7 +6916,7 @@ namespace Example
             try
             {
                 // Check status of a mount migration
-                apiInstance.ReadRemountStatus(migrationId);
+                apiInstance.ReadRemountStatus(string migrationId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6985,7 +6985,7 @@ namespace Example
 
             try
             {
-                apiInstance.ReadReplicationStatus();
+                apiInstance.ReadReplicationStatus(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7051,7 +7051,7 @@ namespace Example
 
             try
             {
-                apiInstance.ReadRotateConfig();
+                apiInstance.ReadRotateConfig(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7118,7 +7118,7 @@ namespace Example
             try
             {
                 // Check the seal status of a Vault.
-                apiInstance.ReadSealStatus();
+                apiInstance.ReadSealStatus(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7186,7 +7186,7 @@ namespace Example
             try
             {
                 // Initiate a mount migration
-                apiInstance.Remount(remountRequest);
+                apiInstance.Remount(RemountRequest remountRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7257,7 +7257,7 @@ namespace Example
             try
             {
                 // Renews a lease, requesting to extend the lease.
-                apiInstance.Renew(renewRequest);
+                apiInstance.Renew(RenewRequest renewRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7329,7 +7329,7 @@ namespace Example
             try
             {
                 // Renews a lease, requesting to extend the lease.
-                apiInstance.RenewFor(urlLeaseId, renewForRequest);
+                apiInstance.RenewFor(RenewForRequest renewForRequest, string urlLeaseId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7401,7 +7401,7 @@ namespace Example
             try
             {
                 // Revokes a lease immediately.
-                apiInstance.Revoke(revokeRequest);
+                apiInstance.Revoke(RevokeRequest revokeRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7474,7 +7474,7 @@ namespace Example
             try
             {
                 // Revokes all secrets or tokens generated under a given prefix immediately
-                apiInstance.RevokeForce(prefix);
+                apiInstance.RevokeForce(string prefix, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7546,7 +7546,7 @@ namespace Example
             try
             {
                 // Revokes a lease immediately.
-                apiInstance.RevokeLease(urlLeaseId, revokeLeaseRequest);
+                apiInstance.RevokeLease(RevokeLeaseRequest revokeLeaseRequest, string urlLeaseId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7619,7 +7619,7 @@ namespace Example
             try
             {
                 // Revokes all secrets (via a lease ID prefix) or tokens (via the tokens' path property) generated under a given prefix immediately.
-                apiInstance.RevokePrefix(prefix, revokePrefixRequest);
+                apiInstance.RevokePrefix(RevokePrefixRequest revokePrefixRequest, string prefix, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7690,7 +7690,7 @@ namespace Example
             try
             {
                 // Rotates the backend encryption key used to persist data.
-                apiInstance.Rotate();
+                apiInstance.Rotate(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7757,7 +7757,7 @@ namespace Example
             try
             {
                 // Seal the Vault.
-                apiInstance.Seal();
+                apiInstance.Seal(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7826,7 +7826,7 @@ namespace Example
             try
             {
                 // Cause the node to give up active status.
-                apiInstance.StepDownLeader();
+                apiInstance.StepDownLeader(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7894,7 +7894,7 @@ namespace Example
             try
             {
                 // Remove the plugin with the given name.
-                apiInstance.SysDeletePluginsCatalogName(name);
+                apiInstance.SysDeletePluginsCatalogName(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7965,7 +7965,7 @@ namespace Example
             try
             {
                 // Returns a list of lease ids.
-                apiInstance.SysListLeasesLookup(list);
+                apiInstance.SysListLeasesLookup(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8036,7 +8036,7 @@ namespace Example
             try
             {
                 // Return the configuration data for the plugin with the given name.
-                apiInstance.SysReadPluginsCatalogName(name);
+                apiInstance.SysReadPluginsCatalogName(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8108,7 +8108,7 @@ namespace Example
             try
             {
                 // Unlocks the user with given mount_accessor and alias_identifier
-                apiInstance.SysWriteLockedusersMountAccessorUnlockAliasIdentifier(aliasIdentifier, mountAccessor);
+                apiInstance.SysWriteLockedusersMountAccessorUnlockAliasIdentifier(string aliasIdentifier, string mountAccessor, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8181,7 +8181,7 @@ namespace Example
             try
             {
                 // Register a new plugin, or updates an existing one with the supplied name.
-                apiInstance.SysWritePluginsCatalogName(name, sysWritePluginsCatalogNameRequest);
+                apiInstance.SysWritePluginsCatalogName(SysWritePluginsCatalogNameRequest sysWritePluginsCatalogNameRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8254,7 +8254,7 @@ namespace Example
             try
             {
                 // Generate random bytes
-                apiInstance.SysWriteToolsRandomUrlbytes(urlbytes, sysWriteToolsRandomUrlbytesRequest);
+                apiInstance.SysWriteToolsRandomUrlbytes(SysWriteToolsRandomUrlbytesRequest sysWriteToolsRandomUrlbytesRequest, string urlbytes, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8326,7 +8326,7 @@ namespace Example
             try
             {
                 // Generate random bytes
-                apiInstance.ToolsGenerateRandom(toolsGenerateRandomRequest);
+                apiInstance.ToolsGenerateRandom(ToolsGenerateRandomRequest toolsGenerateRandomRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8398,7 +8398,7 @@ namespace Example
             try
             {
                 // Generate random bytes
-                apiInstance.ToolsGenerateRandomSource(source, toolsGenerateRandomSourceRequest);
+                apiInstance.ToolsGenerateRandomSource(ToolsGenerateRandomSourceRequest toolsGenerateRandomSourceRequest, string source, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8472,7 +8472,7 @@ namespace Example
             try
             {
                 // Generate random bytes
-                apiInstance.ToolsGenerateRandomSourceBytes(source, urlbytes, toolsGenerateRandomSourceBytesRequest);
+                apiInstance.ToolsGenerateRandomSourceBytes(ToolsGenerateRandomSourceBytesRequest toolsGenerateRandomSourceBytesRequest, string source, string urlbytes, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8545,7 +8545,7 @@ namespace Example
             try
             {
                 // Generate a hash sum for input data
-                apiInstance.ToolsHash(toolsHashRequest);
+                apiInstance.ToolsHash(ToolsHashRequest toolsHashRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8617,7 +8617,7 @@ namespace Example
             try
             {
                 // Generate a hash sum for input data
-                apiInstance.ToolsHashWith(urlalgorithm, toolsHashWithRequest);
+                apiInstance.ToolsHashWith(ToolsHashWithRequest toolsHashWithRequest, string urlalgorithm, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8689,7 +8689,7 @@ namespace Example
             try
             {
                 // Unseal the Vault.
-                apiInstance.Unseal(unsealRequest);
+                apiInstance.Unseal(UnsealRequest unsealRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8759,7 +8759,7 @@ namespace Example
             try
             {
                 // Look up wrapping properties for the requester's token.
-                apiInstance.WrappingReadLookup();
+                apiInstance.WrappingReadLookup(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8827,7 +8827,7 @@ namespace Example
             try
             {
                 // Rotates a response-wrapped token.
-                apiInstance.WrappingRewrap(wrappingRewrapRequest);
+                apiInstance.WrappingRewrap(WrappingRewrapRequest wrappingRewrapRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8898,7 +8898,7 @@ namespace Example
             try
             {
                 // Unwraps a response-wrapped token.
-                apiInstance.WrappingUnwrap(wrappingUnwrapRequest);
+                apiInstance.WrappingUnwrap(WrappingUnwrapRequest wrappingUnwrapRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8968,7 +8968,7 @@ namespace Example
             try
             {
                 // Response-wraps an arbitrary JSON object.
-                apiInstance.WrappingWrap();
+                apiInstance.WrappingWrap(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9036,7 +9036,7 @@ namespace Example
             try
             {
                 // Look up wrapping properties for the given token.
-                apiInstance.WrappingWriteLookup(wrappingWriteLookupRequest);
+                apiInstance.WrappingWriteLookup(WrappingWriteLookupRequest wrappingWriteLookupRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9108,7 +9108,7 @@ namespace Example
             try
             {
                 // Enable a new audit device at the supplied path.
-                apiInstance.WriteAuditDevice(path, writeAuditDeviceRequest);
+                apiInstance.WriteAuditDevice(WriteAuditDeviceRequest writeAuditDeviceRequest, string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9183,7 +9183,7 @@ namespace Example
             try
             {
                 // Enables a new auth method.
-                apiInstance.WriteAuthMethod(path, writeAuthMethodRequest);
+                apiInstance.WriteAuthMethod(WriteAuthMethodRequest writeAuthMethodRequest, string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9258,7 +9258,7 @@ namespace Example
             try
             {
                 // Tune configuration parameters for a given auth path.
-                apiInstance.WriteAuthMethodTune(path, writeAuthMethodTuneRequest);
+                apiInstance.WriteAuthMethodTune(WriteAuthMethodTuneRequest writeAuthMethodTuneRequest, string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9330,7 +9330,7 @@ namespace Example
             try
             {
                 // Fetches the capabilities of the given token on the given path.
-                apiInstance.WriteCapabilities(writeCapabilitiesRequest);
+                apiInstance.WriteCapabilities(WriteCapabilitiesRequest writeCapabilitiesRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9401,7 +9401,7 @@ namespace Example
             try
             {
                 // Fetches the capabilities of the token associated with the given token, on the given path.
-                apiInstance.WriteCapabilitiesAccessor(writeCapabilitiesAccessorRequest);
+                apiInstance.WriteCapabilitiesAccessor(WriteCapabilitiesAccessorRequest writeCapabilitiesAccessorRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9472,7 +9472,7 @@ namespace Example
             try
             {
                 // Fetches the capabilities of the given token on the given path.
-                apiInstance.WriteCapabilitiesSelf(writeCapabilitiesSelfRequest);
+                apiInstance.WriteCapabilitiesSelf(WriteCapabilitiesSelfRequest writeCapabilitiesSelfRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9544,7 +9544,7 @@ namespace Example
             try
             {
                 // Enable auditing of a header.
-                apiInstance.WriteConfigAuditingRequestHeader(header, writeConfigAuditingRequestHeaderRequest);
+                apiInstance.WriteConfigAuditingRequestHeader(WriteConfigAuditingRequestHeaderRequest writeConfigAuditingRequestHeaderRequest, string header, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9616,7 +9616,7 @@ namespace Example
             try
             {
                 // Configure the CORS settings.
-                apiInstance.WriteConfigCORS(writeConfigCORSRequest);
+                apiInstance.WriteConfigCORS(WriteConfigCORSRequest writeConfigCORSRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9687,7 +9687,7 @@ namespace Example
             try
             {
                 // Reload the given subsystem
-                apiInstance.WriteConfigReloadSubsystem(subsystem);
+                apiInstance.WriteConfigReloadSubsystem(string subsystem, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9759,7 +9759,7 @@ namespace Example
             try
             {
                 // Configure the values to be returned for the UI header.
-                apiInstance.WriteConfigUIHeader(header, writeConfigUIHeaderRequest);
+                apiInstance.WriteConfigUIHeader(WriteConfigUIHeaderRequest writeConfigUIHeaderRequest, string header, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9833,7 +9833,7 @@ namespace Example
             try
             {
                 // Initializes a new root generation attempt.
-                apiInstance.WriteGenerateRoot(writeGenerateRootRequest);
+                apiInstance.WriteGenerateRoot(WriteGenerateRootRequest writeGenerateRootRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9906,7 +9906,7 @@ namespace Example
             try
             {
                 // Initializes a new root generation attempt.
-                apiInstance.WriteGenerateRootAttempt(writeGenerateRootAttemptRequest);
+                apiInstance.WriteGenerateRootAttempt(WriteGenerateRootAttemptRequest writeGenerateRootAttemptRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9979,7 +9979,7 @@ namespace Example
             try
             {
                 // Enter a single unseal key share to progress the root generation attempt.
-                apiInstance.WriteGenerateRootUpdate(writeGenerateRootUpdateRequest);
+                apiInstance.WriteGenerateRootUpdate(WriteGenerateRootUpdateRequest writeGenerateRootUpdateRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10052,7 +10052,7 @@ namespace Example
             try
             {
                 // Initialize a new Vault.
-                apiInstance.WriteInit(writeInitRequest);
+                apiInstance.WriteInit(WriteInitRequest writeInitRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10123,7 +10123,7 @@ namespace Example
             try
             {
                 // Enable or disable collection of client count, set retention period, or set default reporting period.
-                apiInstance.WriteInternalCountersConfig(writeInternalCountersConfigRequest);
+                apiInstance.WriteInternalCountersConfig(WriteInternalCountersConfigRequest writeInternalCountersConfigRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10194,7 +10194,7 @@ namespace Example
             try
             {
                 // Retrieve lease metadata.
-                apiInstance.WriteLeasesLookup(writeLeasesLookupRequest);
+                apiInstance.WriteLeasesLookup(WriteLeasesLookupRequest writeLeasesLookupRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10265,7 +10265,7 @@ namespace Example
             try
             {
                 // Renews a lease, requesting to extend the lease.
-                apiInstance.WriteLeasesRenew(writeLeasesRenewRequest);
+                apiInstance.WriteLeasesRenew(WriteLeasesRenewRequest writeLeasesRenewRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10337,7 +10337,7 @@ namespace Example
             try
             {
                 // Renews a lease, requesting to extend the lease.
-                apiInstance.WriteLeasesRenew2(urlLeaseId, writeLeasesRenew2Request);
+                apiInstance.WriteLeasesRenew2(WriteLeasesRenew2Request writeLeasesRenew2Request, string urlLeaseId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10409,7 +10409,7 @@ namespace Example
             try
             {
                 // Revokes a lease immediately.
-                apiInstance.WriteLeasesRevoke(writeLeasesRevokeRequest);
+                apiInstance.WriteLeasesRevoke(WriteLeasesRevokeRequest writeLeasesRevokeRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10481,7 +10481,7 @@ namespace Example
             try
             {
                 // Revokes a lease immediately.
-                apiInstance.WriteLeasesRevoke2(urlLeaseId, writeLeasesRevoke2Request);
+                apiInstance.WriteLeasesRevoke2(WriteLeasesRevoke2Request writeLeasesRevoke2Request, string urlLeaseId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10555,7 +10555,7 @@ namespace Example
             try
             {
                 // Revokes all secrets or tokens generated under a given prefix immediately
-                apiInstance.WriteLeasesRevokeForce(prefix);
+                apiInstance.WriteLeasesRevokeForce(string prefix, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10627,7 +10627,7 @@ namespace Example
             try
             {
                 // Revokes all secrets (via a lease ID prefix) or tokens (via the tokens' path property) generated under a given prefix immediately.
-                apiInstance.WriteLeasesRevokePrefix(prefix, writeLeasesRevokePrefixRequest);
+                apiInstance.WriteLeasesRevokePrefix(WriteLeasesRevokePrefixRequest writeLeasesRevokePrefixRequest, string prefix, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10698,7 +10698,7 @@ namespace Example
             try
             {
                 // This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
-                apiInstance.WriteLeasesTidy();
+                apiInstance.WriteLeasesTidy(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10767,7 +10767,7 @@ namespace Example
             try
             {
                 // Modify the log level of a single logger.
-                apiInstance.WriteLogger(name, writeLoggerRequest);
+                apiInstance.WriteLogger(WriteLoggerRequest writeLoggerRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10839,7 +10839,7 @@ namespace Example
             try
             {
                 // Modify the log level for all existing loggers.
-                apiInstance.WriteLoggers(writeLoggersRequest);
+                apiInstance.WriteLoggers(WriteLoggersRequest writeLoggersRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10911,7 +10911,7 @@ namespace Example
             try
             {
                 // Enable a new secrets engine at the given path.
-                apiInstance.WriteMount(path, writeMountRequest);
+                apiInstance.WriteMount(WriteMountRequest writeMountRequest, string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10984,7 +10984,7 @@ namespace Example
             try
             {
                 // Tune backend configuration parameters for this mount.
-                apiInstance.WriteMountsConfig(path, writeMountsConfigRequest);
+                apiInstance.WriteMountsConfig(WriteMountsConfigRequest writeMountsConfigRequest, string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11058,7 +11058,7 @@ namespace Example
             try
             {
                 // Register a new plugin, or updates an existing one with the supplied name.
-                apiInstance.WritePluginsCatalogByTypeByName(name, type, writePluginsCatalogByTypeByNameRequest);
+                apiInstance.WritePluginsCatalogByTypeByName(WritePluginsCatalogByTypeByNameRequest writePluginsCatalogByTypeByNameRequest, string name, string type, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11133,7 +11133,7 @@ namespace Example
             try
             {
                 // Reload mounted plugin backends.
-                apiInstance.WritePluginsReloadBackend(writePluginsReloadBackendRequest);
+                apiInstance.WritePluginsReloadBackend(WritePluginsReloadBackendRequest writePluginsReloadBackendRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11205,7 +11205,7 @@ namespace Example
             try
             {
                 // Add a new or update an existing ACL policy.
-                apiInstance.WritePoliciesACL(name, writePoliciesACLRequest);
+                apiInstance.WritePoliciesACL(WritePoliciesACLRequest writePoliciesACLRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11278,7 +11278,7 @@ namespace Example
             try
             {
                 // Add a new or update an existing password policy.
-                apiInstance.WritePoliciesPassword(name, writePoliciesPasswordRequest);
+                apiInstance.WritePoliciesPassword(WritePoliciesPasswordRequest writePoliciesPasswordRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11351,7 +11351,7 @@ namespace Example
             try
             {
                 // Add a new or update an existing policy.
-                apiInstance.WritePolicy(name, writePolicyRequest);
+                apiInstance.WritePolicy(WritePolicyRequest writePolicyRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11422,7 +11422,7 @@ namespace Example
 
             try
             {
-                apiInstance.WriteQuotasConfig(writeQuotasConfigRequest);
+                apiInstance.WriteQuotasConfig(WriteQuotasConfigRequest writeQuotasConfigRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11493,7 +11493,7 @@ namespace Example
 
             try
             {
-                apiInstance.WriteQuotasRateLimit(name, writeQuotasRateLimitRequest);
+                apiInstance.WriteQuotasRateLimit(WriteQuotasRateLimitRequest writeQuotasRateLimitRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11565,7 +11565,7 @@ namespace Example
             try
             {
                 // Update the value of the key at the given path.
-                apiInstance.WriteRaw(writeRawRequest);
+                apiInstance.WriteRaw(WriteRawRequest writeRawRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11637,7 +11637,7 @@ namespace Example
             try
             {
                 // Update the value of the key at the given path.
-                apiInstance.WriteRawPath(path, writeRawPathRequest);
+                apiInstance.WriteRawPath(WriteRawPathRequest writeRawPathRequest, string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11711,7 +11711,7 @@ namespace Example
             try
             {
                 // Initializes a new rekey attempt.
-                apiInstance.WriteRekeyInit(writeRekeyInitRequest);
+                apiInstance.WriteRekeyInit(WriteRekeyInitRequest writeRekeyInitRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11782,7 +11782,7 @@ namespace Example
             try
             {
                 // Enter a single unseal key share to progress the rekey of the Vault.
-                apiInstance.WriteRekeyUpdate(writeRekeyUpdateRequest);
+                apiInstance.WriteRekeyUpdate(WriteRekeyUpdateRequest writeRekeyUpdateRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11853,7 +11853,7 @@ namespace Example
             try
             {
                 // Enter a single new key share to progress the rekey verification operation.
-                apiInstance.WriteRekeyVerify(writeRekeyVerifyRequest);
+                apiInstance.WriteRekeyVerify(WriteRekeyVerifyRequest writeRekeyVerifyRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11923,7 +11923,7 @@ namespace Example
 
             try
             {
-                apiInstance.WriteRotateConfig(writeRotateConfigRequest);
+                apiInstance.WriteRotateConfig(WriteRotateConfigRequest writeRotateConfigRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {

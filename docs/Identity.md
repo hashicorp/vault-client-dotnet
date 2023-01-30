@@ -143,7 +143,7 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
-                apiInstance.AliasDeleteByID(id);
+                apiInstance.AliasDeleteByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -214,7 +214,7 @@ namespace Example
             try
             {
                 // List all the alias IDs.
-                apiInstance.AliasListByID(list);
+                apiInstance.AliasListByID(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -285,7 +285,7 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
-                apiInstance.AliasReadByID(id);
+                apiInstance.AliasReadByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -356,7 +356,7 @@ namespace Example
             try
             {
                 // Create a new alias.
-                apiInstance.AliasWrite(aliasWriteRequest);
+                apiInstance.AliasWrite(AliasWriteRequest aliasWriteRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -428,7 +428,7 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
-                apiInstance.AliasWriteByID(id, aliasWriteByIDRequest);
+                apiInstance.AliasWriteByID(AliasWriteByIDRequest aliasWriteByIDRequest, string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -500,7 +500,7 @@ namespace Example
             try
             {
                 // Delete all of the entities provided
-                apiInstance.EntityBatchDelete(entityBatchDeleteRequest);
+                apiInstance.EntityBatchDelete(EntityBatchDeleteRequest entityBatchDeleteRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -571,7 +571,7 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
-                apiInstance.EntityDeleteAliasByID(id);
+                apiInstance.EntityDeleteAliasByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -642,7 +642,7 @@ namespace Example
             try
             {
                 // Update, read or delete an entity using entity ID
-                apiInstance.EntityDeleteByID(id);
+                apiInstance.EntityDeleteByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -713,7 +713,7 @@ namespace Example
             try
             {
                 // Update, read or delete an entity using entity name
-                apiInstance.EntityDeleteByName(name);
+                apiInstance.EntityDeleteByName(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -784,7 +784,7 @@ namespace Example
             try
             {
                 // List all the alias IDs.
-                apiInstance.EntityListAliasesByID(list);
+                apiInstance.EntityListAliasesByID(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -855,7 +855,7 @@ namespace Example
             try
             {
                 // List all the entity IDs
-                apiInstance.EntityListByID(list);
+                apiInstance.EntityListByID(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -926,7 +926,7 @@ namespace Example
             try
             {
                 // List all the entity names
-                apiInstance.EntityListByName(list);
+                apiInstance.EntityListByName(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -997,7 +997,7 @@ namespace Example
             try
             {
                 // Query entities based on various properties.
-                apiInstance.EntityLookup(entityLookupRequest);
+                apiInstance.EntityLookup(EntityLookupRequest entityLookupRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1068,7 +1068,7 @@ namespace Example
             try
             {
                 // Merge two or more entities together
-                apiInstance.EntityMerge(entityMergeRequest);
+                apiInstance.EntityMerge(EntityMergeRequest entityMergeRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1139,7 +1139,7 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
-                apiInstance.EntityReadAliasByID(id);
+                apiInstance.EntityReadAliasByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1210,7 +1210,7 @@ namespace Example
             try
             {
                 // Update, read or delete an entity using entity ID
-                apiInstance.EntityReadByID(id);
+                apiInstance.EntityReadByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1281,7 +1281,7 @@ namespace Example
             try
             {
                 // Update, read or delete an entity using entity name
-                apiInstance.EntityReadByName(name);
+                apiInstance.EntityReadByName(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1352,7 +1352,7 @@ namespace Example
             try
             {
                 // Create a new entity
-                apiInstance.EntityWrite(entityWriteRequest);
+                apiInstance.EntityWrite(EntityWriteRequest entityWriteRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1423,7 +1423,7 @@ namespace Example
             try
             {
                 // Create a new alias.
-                apiInstance.EntityWriteAlias(entityWriteAliasRequest);
+                apiInstance.EntityWriteAlias(EntityWriteAliasRequest entityWriteAliasRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1495,7 +1495,7 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
-                apiInstance.EntityWriteAliasByID(id, entityWriteAliasByIDRequest);
+                apiInstance.EntityWriteAliasByID(EntityWriteAliasByIDRequest entityWriteAliasByIDRequest, string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1568,7 +1568,7 @@ namespace Example
             try
             {
                 // Update, read or delete an entity using entity ID
-                apiInstance.EntityWriteByID(id, entityWriteByIDRequest);
+                apiInstance.EntityWriteByID(EntityWriteByIDRequest entityWriteByIDRequest, string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1641,7 +1641,7 @@ namespace Example
             try
             {
                 // Update, read or delete an entity using entity name
-                apiInstance.EntityWriteByName(name, entityWriteByNameRequest);
+                apiInstance.EntityWriteByName(EntityWriteByNameRequest entityWriteByNameRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1712,7 +1712,7 @@ namespace Example
 
             try
             {
-                apiInstance.GroupDeleteAliasByID(id);
+                apiInstance.GroupDeleteAliasByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1783,7 +1783,7 @@ namespace Example
             try
             {
                 // Update or delete an existing group using its ID.
-                apiInstance.GroupDeleteByID(id);
+                apiInstance.GroupDeleteByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1853,7 +1853,7 @@ namespace Example
 
             try
             {
-                apiInstance.GroupDeleteByName(name);
+                apiInstance.GroupDeleteByName(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1924,7 +1924,7 @@ namespace Example
             try
             {
                 // List all the group alias IDs.
-                apiInstance.GroupListAliasesByID(list);
+                apiInstance.GroupListAliasesByID(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1995,7 +1995,7 @@ namespace Example
             try
             {
                 // List all the group IDs.
-                apiInstance.GroupListByID(list);
+                apiInstance.GroupListByID(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2065,7 +2065,7 @@ namespace Example
 
             try
             {
-                apiInstance.GroupListByName(list);
+                apiInstance.GroupListByName(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2136,7 +2136,7 @@ namespace Example
             try
             {
                 // Query groups based on various properties.
-                apiInstance.GroupLookup(groupLookupRequest);
+                apiInstance.GroupLookup(GroupLookupRequest groupLookupRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2206,7 +2206,7 @@ namespace Example
 
             try
             {
-                apiInstance.GroupReadAliasByID(id);
+                apiInstance.GroupReadAliasByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2277,7 +2277,7 @@ namespace Example
             try
             {
                 // Update or delete an existing group using its ID.
-                apiInstance.GroupReadByID(id);
+                apiInstance.GroupReadByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2347,7 +2347,7 @@ namespace Example
 
             try
             {
-                apiInstance.GroupReadByName(name);
+                apiInstance.GroupReadByName(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2418,7 +2418,7 @@ namespace Example
             try
             {
                 // Create a new group.
-                apiInstance.GroupWrite(groupWriteRequest);
+                apiInstance.GroupWrite(GroupWriteRequest groupWriteRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2489,7 +2489,7 @@ namespace Example
             try
             {
                 // Creates a new group alias, or updates an existing one.
-                apiInstance.GroupWriteAlias(groupWriteAliasRequest);
+                apiInstance.GroupWriteAlias(GroupWriteAliasRequest groupWriteAliasRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2560,7 +2560,7 @@ namespace Example
 
             try
             {
-                apiInstance.GroupWriteAliasByID(id, groupWriteAliasByIDRequest);
+                apiInstance.GroupWriteAliasByID(GroupWriteAliasByIDRequest groupWriteAliasByIDRequest, string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2633,7 +2633,7 @@ namespace Example
             try
             {
                 // Update or delete an existing group using its ID.
-                apiInstance.GroupWriteByID(id, groupWriteByIDRequest);
+                apiInstance.GroupWriteByID(GroupWriteByIDRequest groupWriteByIDRequest, string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2705,7 +2705,7 @@ namespace Example
 
             try
             {
-                apiInstance.GroupWriteByName(name, groupWriteByNameRequest);
+                apiInstance.GroupWriteByName(GroupWriteByNameRequest groupWriteByNameRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2777,7 +2777,7 @@ namespace Example
             try
             {
                 // Delete a login enforcement
-                apiInstance.MFADeleteLoginEnforcement(name);
+                apiInstance.MFADeleteLoginEnforcement(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2848,7 +2848,7 @@ namespace Example
             try
             {
                 // List login enforcements
-                apiInstance.MFAListLoginEnforcements(list);
+                apiInstance.MFAListLoginEnforcements(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2919,7 +2919,7 @@ namespace Example
             try
             {
                 // Destroys a TOTP secret for the given MFA method ID on the given entity
-                apiInstance.MFAMethodAdminDestroyTOTP(mFAMethodAdminDestroyTOTPRequest);
+                apiInstance.MFAMethodAdminDestroyTOTP(MFAMethodAdminDestroyTOTPRequest mFAMethodAdminDestroyTOTPRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2990,7 +2990,7 @@ namespace Example
             try
             {
                 // Update or create TOTP secret for the given method ID on the given entity.
-                apiInstance.MFAMethodAdminGenerateTOTP(mFAMethodAdminGenerateTOTPRequest);
+                apiInstance.MFAMethodAdminGenerateTOTP(MFAMethodAdminGenerateTOTPRequest mFAMethodAdminGenerateTOTPRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3061,7 +3061,7 @@ namespace Example
             try
             {
                 // Delete a configuration for the given MFA method
-                apiInstance.MFAMethodDeleteDuo(methodId);
+                apiInstance.MFAMethodDeleteDuo(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3132,7 +3132,7 @@ namespace Example
             try
             {
                 // Delete a configuration for the given MFA method
-                apiInstance.MFAMethodDeleteOkta(methodId);
+                apiInstance.MFAMethodDeleteOkta(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3203,7 +3203,7 @@ namespace Example
             try
             {
                 // Delete a configuration for the given MFA method
-                apiInstance.MFAMethodDeletePingID(methodId);
+                apiInstance.MFAMethodDeletePingID(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3274,7 +3274,7 @@ namespace Example
             try
             {
                 // Delete a configuration for the given MFA method
-                apiInstance.MFAMethodDeleteTOTP(methodId);
+                apiInstance.MFAMethodDeleteTOTP(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3345,7 +3345,7 @@ namespace Example
             try
             {
                 // Update or create TOTP secret for the given method ID on the given entity.
-                apiInstance.MFAMethodGenerateTOTP(mFAMethodGenerateTOTPRequest);
+                apiInstance.MFAMethodGenerateTOTP(MFAMethodGenerateTOTPRequest mFAMethodGenerateTOTPRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3416,7 +3416,7 @@ namespace Example
             try
             {
                 // List MFA method configurations for all MFA methods
-                apiInstance.MFAMethodList(list);
+                apiInstance.MFAMethodList(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3487,7 +3487,7 @@ namespace Example
             try
             {
                 // List MFA method configurations for the given MFA method
-                apiInstance.MFAMethodListDuo(list);
+                apiInstance.MFAMethodListDuo(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3558,7 +3558,7 @@ namespace Example
             try
             {
                 // List MFA method configurations for the given MFA method
-                apiInstance.MFAMethodListOkta(list);
+                apiInstance.MFAMethodListOkta(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3629,7 +3629,7 @@ namespace Example
             try
             {
                 // List MFA method configurations for the given MFA method
-                apiInstance.MFAMethodListPingID(list);
+                apiInstance.MFAMethodListPingID(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3700,7 +3700,7 @@ namespace Example
             try
             {
                 // List MFA method configurations for the given MFA method
-                apiInstance.MFAMethodListTOTP(list);
+                apiInstance.MFAMethodListTOTP(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3771,7 +3771,7 @@ namespace Example
             try
             {
                 // Read the current configuration for the given ID regardless of the MFA method type
-                apiInstance.MFAMethodRead(methodId);
+                apiInstance.MFAMethodRead(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3842,7 +3842,7 @@ namespace Example
             try
             {
                 // Read the current configuration for the given MFA method
-                apiInstance.MFAMethodReadDuo(methodId);
+                apiInstance.MFAMethodReadDuo(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3913,7 +3913,7 @@ namespace Example
             try
             {
                 // Read the current configuration for the given MFA method
-                apiInstance.MFAMethodReadOkta(methodId);
+                apiInstance.MFAMethodReadOkta(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3984,7 +3984,7 @@ namespace Example
             try
             {
                 // Read the current configuration for the given MFA method
-                apiInstance.MFAMethodReadPingID(methodId);
+                apiInstance.MFAMethodReadPingID(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4055,7 +4055,7 @@ namespace Example
             try
             {
                 // Read the current configuration for the given MFA method
-                apiInstance.MFAMethodReadTOTP(methodId);
+                apiInstance.MFAMethodReadTOTP(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4127,7 +4127,7 @@ namespace Example
             try
             {
                 // Update or create a configuration for the given MFA method
-                apiInstance.MFAMethodWriteDuo(methodId, mFAMethodWriteDuoRequest);
+                apiInstance.MFAMethodWriteDuo(MFAMethodWriteDuoRequest mFAMethodWriteDuoRequest, string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4200,7 +4200,7 @@ namespace Example
             try
             {
                 // Update or create a configuration for the given MFA method
-                apiInstance.MFAMethodWriteOkta(methodId, mFAMethodWriteOktaRequest);
+                apiInstance.MFAMethodWriteOkta(MFAMethodWriteOktaRequest mFAMethodWriteOktaRequest, string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4273,7 +4273,7 @@ namespace Example
             try
             {
                 // Update or create a configuration for the given MFA method
-                apiInstance.MFAMethodWritePingID(methodId, mFAMethodWritePingIDRequest);
+                apiInstance.MFAMethodWritePingID(MFAMethodWritePingIDRequest mFAMethodWritePingIDRequest, string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4346,7 +4346,7 @@ namespace Example
             try
             {
                 // Update or create a configuration for the given MFA method
-                apiInstance.MFAMethodWriteTOTP(methodId, mFAMethodWriteTOTPRequest);
+                apiInstance.MFAMethodWriteTOTP(MFAMethodWriteTOTPRequest mFAMethodWriteTOTPRequest, string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4418,7 +4418,7 @@ namespace Example
             try
             {
                 // Read the current login enforcement
-                apiInstance.MFAReadLoginEnforcement(name);
+                apiInstance.MFAReadLoginEnforcement(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4490,7 +4490,7 @@ namespace Example
             try
             {
                 // Create or update a login enforcement
-                apiInstance.MFAWriteLoginEnforcement(name, mFAWriteLoginEnforcementRequest);
+                apiInstance.MFAWriteLoginEnforcement(MFAWriteLoginEnforcementRequest mFAWriteLoginEnforcementRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4561,7 +4561,7 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCDeleteAssignment(name);
+                apiInstance.OIDCDeleteAssignment(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4631,7 +4631,7 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCDeleteClient(name);
+                apiInstance.OIDCDeleteClient(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4702,7 +4702,7 @@ namespace Example
             try
             {
                 // CRUD operations for OIDC keys.
-                apiInstance.OIDCDeleteKey(name);
+                apiInstance.OIDCDeleteKey(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4772,7 +4772,7 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCDeleteProvider(name);
+                apiInstance.OIDCDeleteProvider(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4843,7 +4843,7 @@ namespace Example
             try
             {
                 // CRUD operations on OIDC Roles
-                apiInstance.OIDCDeleteRole(name);
+                apiInstance.OIDCDeleteRole(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4913,7 +4913,7 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCDeleteScope(name);
+                apiInstance.OIDCDeleteScope(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4984,7 +4984,7 @@ namespace Example
             try
             {
                 // Verify the authenticity of an OIDC token
-                apiInstance.OIDCIntrospect(oIDCIntrospectRequest);
+                apiInstance.OIDCIntrospect(OIDCIntrospectRequest oIDCIntrospectRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5054,7 +5054,7 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCListAssignments(list);
+                apiInstance.OIDCListAssignments(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5124,7 +5124,7 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCListClients(list);
+                apiInstance.OIDCListClients(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5195,7 +5195,7 @@ namespace Example
             try
             {
                 // List OIDC keys
-                apiInstance.OIDCListKeys(list);
+                apiInstance.OIDCListKeys(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5266,7 +5266,7 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCListProviders(list, allowedClientId);
+                apiInstance.OIDCListProviders(string allowedClientId = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5338,7 +5338,7 @@ namespace Example
             try
             {
                 // List configured OIDC roles
-                apiInstance.OIDCListRoles(list);
+                apiInstance.OIDCListRoles(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5408,7 +5408,7 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCListScopes(list);
+                apiInstance.OIDCListScopes(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5478,7 +5478,7 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCReadAssignment(name);
+                apiInstance.OIDCReadAssignment(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5548,7 +5548,7 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCReadClient(name);
+                apiInstance.OIDCReadClient(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5618,7 +5618,7 @@ namespace Example
             try
             {
                 // OIDC configuration
-                apiInstance.OIDCReadConfig();
+                apiInstance.OIDCReadConfig(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5686,7 +5686,7 @@ namespace Example
             try
             {
                 // CRUD operations for OIDC keys.
-                apiInstance.OIDCReadKey(name);
+                apiInstance.OIDCReadKey(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5756,7 +5756,7 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCReadProvider(name);
+                apiInstance.OIDCReadProvider(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5826,7 +5826,7 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCReadProviderAuthorize(name);
+                apiInstance.OIDCReadProviderAuthorize(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5896,7 +5896,7 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCReadProviderUserInfo(name);
+                apiInstance.OIDCReadProviderUserInfo(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -5966,7 +5966,7 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCReadProviderWellKnownKeys(name);
+                apiInstance.OIDCReadProviderWellKnownKeys(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6036,7 +6036,7 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCReadProviderWellKnownOpenIDConfiguration(name);
+                apiInstance.OIDCReadProviderWellKnownOpenIDConfiguration(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6107,7 +6107,7 @@ namespace Example
             try
             {
                 // CRUD operations on OIDC Roles
-                apiInstance.OIDCReadRole(name);
+                apiInstance.OIDCReadRole(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6177,7 +6177,7 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCReadScope(name);
+                apiInstance.OIDCReadScope(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6248,7 +6248,7 @@ namespace Example
             try
             {
                 // Generate an OIDC token
-                apiInstance.OIDCReadToken(name);
+                apiInstance.OIDCReadToken(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6318,7 +6318,7 @@ namespace Example
             try
             {
                 // Retrieve public keys
-                apiInstance.OIDCReadWellKnownKeys();
+                apiInstance.OIDCReadWellKnownKeys(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6385,7 +6385,7 @@ namespace Example
             try
             {
                 // Query OIDC configurations
-                apiInstance.OIDCReadWellKnownOpenIDConfiguration();
+                apiInstance.OIDCReadWellKnownOpenIDConfiguration(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6454,7 +6454,7 @@ namespace Example
             try
             {
                 // Rotate a named OIDC key.
-                apiInstance.OIDCRotateKey(name, oIDCRotateKeyRequest);
+                apiInstance.OIDCRotateKey(OIDCRotateKeyRequest oIDCRotateKeyRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6526,7 +6526,7 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCWriteAssignment(name, oIDCWriteAssignmentRequest);
+                apiInstance.OIDCWriteAssignment(OIDCWriteAssignmentRequest oIDCWriteAssignmentRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6598,7 +6598,7 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCWriteClient(name, oIDCWriteClientRequest);
+                apiInstance.OIDCWriteClient(OIDCWriteClientRequest oIDCWriteClientRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6670,7 +6670,7 @@ namespace Example
             try
             {
                 // OIDC configuration
-                apiInstance.OIDCWriteConfig(oIDCWriteConfigRequest);
+                apiInstance.OIDCWriteConfig(OIDCWriteConfigRequest oIDCWriteConfigRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6742,7 +6742,7 @@ namespace Example
             try
             {
                 // CRUD operations for OIDC keys.
-                apiInstance.OIDCWriteKey(name, oIDCWriteKeyRequest);
+                apiInstance.OIDCWriteKey(OIDCWriteKeyRequest oIDCWriteKeyRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6814,7 +6814,7 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCWriteProvider(name, oIDCWriteProviderRequest);
+                apiInstance.OIDCWriteProvider(OIDCWriteProviderRequest oIDCWriteProviderRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6886,7 +6886,7 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCWriteProviderAuthorize(name, oIDCWriteProviderAuthorizeRequest);
+                apiInstance.OIDCWriteProviderAuthorize(OIDCWriteProviderAuthorizeRequest oIDCWriteProviderAuthorizeRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6958,7 +6958,7 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCWriteProviderToken(name, oIDCWriteProviderTokenRequest);
+                apiInstance.OIDCWriteProviderToken(OIDCWriteProviderTokenRequest oIDCWriteProviderTokenRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7029,7 +7029,7 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCWriteProviderUserInfo(name);
+                apiInstance.OIDCWriteProviderUserInfo(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7101,7 +7101,7 @@ namespace Example
             try
             {
                 // CRUD operations on OIDC Roles
-                apiInstance.OIDCWriteRole(name, oIDCWriteRoleRequest);
+                apiInstance.OIDCWriteRole(OIDCWriteRoleRequest oIDCWriteRoleRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7173,7 +7173,7 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCWriteScope(name, oIDCWriteScopeRequest);
+                apiInstance.OIDCWriteScope(OIDCWriteScopeRequest oIDCWriteScopeRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7245,7 +7245,7 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
-                apiInstance.PersonaIDDeleteByID(id);
+                apiInstance.PersonaIDDeleteByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7316,7 +7316,7 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
-                apiInstance.PersonaIDReadByID(id);
+                apiInstance.PersonaIDReadByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7388,7 +7388,7 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
-                apiInstance.PersonaIDWriteByID(id, personaIDWriteByIDRequest);
+                apiInstance.PersonaIDWriteByID(PersonaIDWriteByIDRequest personaIDWriteByIDRequest, string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7460,7 +7460,7 @@ namespace Example
             try
             {
                 // List all the alias IDs.
-                apiInstance.PersonaListByID(list);
+                apiInstance.PersonaListByID(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7531,7 +7531,7 @@ namespace Example
             try
             {
                 // Create a new alias.
-                apiInstance.PersonaWrite(personaWriteRequest);
+                apiInstance.PersonaWrite(PersonaWriteRequest personaWriteRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
