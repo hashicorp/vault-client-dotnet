@@ -1,4 +1,4 @@
-# Vault - the .NET library for the HashiCorp Vault API
+# [Experimental] Vault - the .NET library for the HashiCorp Vault API
 
 A .NET client library [generated][openapi-generator] from `OpenAPI` [specification file][openapi-spec] to interact with [Hashicorp][hashicorp] [Vault][vault].
 
