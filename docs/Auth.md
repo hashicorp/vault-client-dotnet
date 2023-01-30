@@ -270,7 +270,7 @@ Method | HTTP request | Description
 
 <a name="awsconfigdeletecertificate"></a>
 # **AWSConfigDeleteCertificate**
-> void AWSConfigDeleteCertificate (string certName, string awsMountPath = null)
+> void AWSConfigDeleteCertificate (string certName, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -300,13 +300,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigDeleteCertificate(certName, awsMountPath);
+                apiInstance.AWSConfigDeleteCertificate(string certName, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigDeleteCertificate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -343,7 +342,7 @@ No authorization required
 
 <a name="awsconfigdeleteclient"></a>
 # **AWSConfigDeleteClient**
-> void AWSConfigDeleteClient (string awsMountPath = null)
+> void AWSConfigDeleteClient (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -372,13 +371,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigDeleteClient(awsMountPath);
+                apiInstance.AWSConfigDeleteClient(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigDeleteClient: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -414,7 +412,7 @@ No authorization required
 
 <a name="awsconfigdeleteidentityaccesslist"></a>
 # **AWSConfigDeleteIdentityAccessList**
-> void AWSConfigDeleteIdentityAccessList (string awsMountPath = null)
+> void AWSConfigDeleteIdentityAccessList (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -443,13 +441,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigDeleteIdentityAccessList(awsMountPath);
+                apiInstance.AWSConfigDeleteIdentityAccessList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigDeleteIdentityAccessList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -485,7 +482,7 @@ No authorization required
 
 <a name="awsconfigdeleteidentitywhitelist"></a>
 # **AWSConfigDeleteIdentityWhiteList**
-> void AWSConfigDeleteIdentityWhiteList (string awsMountPath = null)
+> void AWSConfigDeleteIdentityWhiteList (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -514,13 +511,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigDeleteIdentityWhiteList(awsMountPath);
+                apiInstance.AWSConfigDeleteIdentityWhiteList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigDeleteIdentityWhiteList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -556,7 +552,7 @@ No authorization required
 
 <a name="awsconfigdeleteroletagblacklist"></a>
 # **AWSConfigDeleteRoleTagBlackList**
-> void AWSConfigDeleteRoleTagBlackList (string awsMountPath = null)
+> void AWSConfigDeleteRoleTagBlackList (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -585,13 +581,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigDeleteRoleTagBlackList(awsMountPath);
+                apiInstance.AWSConfigDeleteRoleTagBlackList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigDeleteRoleTagBlackList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -627,7 +622,7 @@ No authorization required
 
 <a name="awsconfigdeleteroletagdenylist"></a>
 # **AWSConfigDeleteRoleTagDenyList**
-> void AWSConfigDeleteRoleTagDenyList (string awsMountPath = null)
+> void AWSConfigDeleteRoleTagDenyList (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -656,13 +651,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigDeleteRoleTagDenyList(awsMountPath);
+                apiInstance.AWSConfigDeleteRoleTagDenyList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigDeleteRoleTagDenyList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -698,7 +692,7 @@ No authorization required
 
 <a name="awsconfigdeletesecuritytokenserviceaccount"></a>
 # **AWSConfigDeleteSecurityTokenServiceAccount**
-> void AWSConfigDeleteSecurityTokenServiceAccount (string accountId, string awsMountPath = null)
+> void AWSConfigDeleteSecurityTokenServiceAccount (string accountId, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -728,13 +722,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigDeleteSecurityTokenServiceAccount(accountId, awsMountPath);
+                apiInstance.AWSConfigDeleteSecurityTokenServiceAccount(string accountId, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigDeleteSecurityTokenServiceAccount: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -771,7 +764,7 @@ No authorization required
 
 <a name="awsconfiglistcertificates"></a>
 # **AWSConfigListCertificates**
-> void AWSConfigListCertificates (string list, string awsMountPath = null)
+> void AWSConfigListCertificates (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -801,13 +794,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigListCertificates(list, awsMountPath);
+                apiInstance.AWSConfigListCertificates(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigListCertificates: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -844,7 +836,7 @@ No authorization required
 
 <a name="awsconfiglistsecuritytokenservice"></a>
 # **AWSConfigListSecurityTokenService**
-> void AWSConfigListSecurityTokenService (string list, string awsMountPath = null)
+> void AWSConfigListSecurityTokenService (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -874,13 +866,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigListSecurityTokenService(list, awsMountPath);
+                apiInstance.AWSConfigListSecurityTokenService(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigListSecurityTokenService: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -917,7 +908,7 @@ No authorization required
 
 <a name="awsconfigreadcertificate"></a>
 # **AWSConfigReadCertificate**
-> void AWSConfigReadCertificate (string certName, string awsMountPath = null)
+> void AWSConfigReadCertificate (string certName, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -947,13 +938,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigReadCertificate(certName, awsMountPath);
+                apiInstance.AWSConfigReadCertificate(string certName, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigReadCertificate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -990,7 +980,7 @@ No authorization required
 
 <a name="awsconfigreadclient"></a>
 # **AWSConfigReadClient**
-> void AWSConfigReadClient (string awsMountPath = null)
+> void AWSConfigReadClient (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -1019,13 +1009,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigReadClient(awsMountPath);
+                apiInstance.AWSConfigReadClient(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigReadClient: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1061,7 +1050,7 @@ No authorization required
 
 <a name="awsconfigreadidentity"></a>
 # **AWSConfigReadIdentity**
-> void AWSConfigReadIdentity (string awsMountPath = null)
+> void AWSConfigReadIdentity (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -1090,13 +1079,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigReadIdentity(awsMountPath);
+                apiInstance.AWSConfigReadIdentity(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigReadIdentity: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1132,7 +1120,7 @@ No authorization required
 
 <a name="awsconfigreadidentityaccesslist"></a>
 # **AWSConfigReadIdentityAccessList**
-> void AWSConfigReadIdentityAccessList (string awsMountPath = null)
+> void AWSConfigReadIdentityAccessList (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -1161,13 +1149,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigReadIdentityAccessList(awsMountPath);
+                apiInstance.AWSConfigReadIdentityAccessList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigReadIdentityAccessList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1203,7 +1190,7 @@ No authorization required
 
 <a name="awsconfigreadidentitywhitelist"></a>
 # **AWSConfigReadIdentityWhiteList**
-> void AWSConfigReadIdentityWhiteList (string awsMountPath = null)
+> void AWSConfigReadIdentityWhiteList (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -1232,13 +1219,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigReadIdentityWhiteList(awsMountPath);
+                apiInstance.AWSConfigReadIdentityWhiteList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigReadIdentityWhiteList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1274,7 +1260,7 @@ No authorization required
 
 <a name="awsconfigreadroletagblacklist"></a>
 # **AWSConfigReadRoleTagBlackList**
-> void AWSConfigReadRoleTagBlackList (string awsMountPath = null)
+> void AWSConfigReadRoleTagBlackList (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -1303,13 +1289,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigReadRoleTagBlackList(awsMountPath);
+                apiInstance.AWSConfigReadRoleTagBlackList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigReadRoleTagBlackList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1345,7 +1330,7 @@ No authorization required
 
 <a name="awsconfigreadroletagdenylist"></a>
 # **AWSConfigReadRoleTagDenyList**
-> void AWSConfigReadRoleTagDenyList (string awsMountPath = null)
+> void AWSConfigReadRoleTagDenyList (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -1374,13 +1359,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigReadRoleTagDenyList(awsMountPath);
+                apiInstance.AWSConfigReadRoleTagDenyList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigReadRoleTagDenyList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1416,7 +1400,7 @@ No authorization required
 
 <a name="awsconfigreadsecuritytokenserviceaccount"></a>
 # **AWSConfigReadSecurityTokenServiceAccount**
-> void AWSConfigReadSecurityTokenServiceAccount (string accountId, string awsMountPath = null)
+> void AWSConfigReadSecurityTokenServiceAccount (string accountId, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -1446,13 +1430,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigReadSecurityTokenServiceAccount(accountId, awsMountPath);
+                apiInstance.AWSConfigReadSecurityTokenServiceAccount(string accountId, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigReadSecurityTokenServiceAccount: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1489,7 +1472,7 @@ No authorization required
 
 <a name="awsconfigrotateroot"></a>
 # **AWSConfigRotateRoot**
-> void AWSConfigRotateRoot (string awsMountPath = null)
+> void AWSConfigRotateRoot (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -1518,13 +1501,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigRotateRoot(awsMountPath);
+                apiInstance.AWSConfigRotateRoot(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigRotateRoot: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1560,7 +1542,7 @@ No authorization required
 
 <a name="awsconfigwritecertificate"></a>
 # **AWSConfigWriteCertificate**
-> void AWSConfigWriteCertificate (string certName, AWSConfigWriteCertificateRequest aWSConfigWriteCertificateRequest, string awsMountPath = null)
+> void AWSConfigWriteCertificate (AWSConfigWriteCertificateRequest aWSConfigWriteCertificateRequest, string certName, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -1591,13 +1573,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigWriteCertificate(certName, aWSConfigWriteCertificateRequest, awsMountPath);
+                apiInstance.AWSConfigWriteCertificate(AWSConfigWriteCertificateRequest aWSConfigWriteCertificateRequest, string certName, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigWriteCertificate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1635,7 +1616,7 @@ No authorization required
 
 <a name="awsconfigwriteclient"></a>
 # **AWSConfigWriteClient**
-> void AWSConfigWriteClient (AWSConfigWriteClientRequest aWSConfigWriteClientRequest, string awsMountPath = null)
+> void AWSConfigWriteClient (AWSConfigWriteClientRequest aWSConfigWriteClientRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -1665,13 +1646,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigWriteClient(aWSConfigWriteClientRequest, awsMountPath);
+                apiInstance.AWSConfigWriteClient(AWSConfigWriteClientRequest aWSConfigWriteClientRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigWriteClient: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1708,7 +1688,7 @@ No authorization required
 
 <a name="awsconfigwriteidentity"></a>
 # **AWSConfigWriteIdentity**
-> void AWSConfigWriteIdentity (AWSConfigWriteIdentityRequest aWSConfigWriteIdentityRequest, string awsMountPath = null)
+> void AWSConfigWriteIdentity (AWSConfigWriteIdentityRequest aWSConfigWriteIdentityRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -1738,13 +1718,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigWriteIdentity(aWSConfigWriteIdentityRequest, awsMountPath);
+                apiInstance.AWSConfigWriteIdentity(AWSConfigWriteIdentityRequest aWSConfigWriteIdentityRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigWriteIdentity: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1781,7 +1760,7 @@ No authorization required
 
 <a name="awsconfigwriteidentityaccesslist"></a>
 # **AWSConfigWriteIdentityAccessList**
-> void AWSConfigWriteIdentityAccessList (AWSConfigWriteIdentityAccessListRequest aWSConfigWriteIdentityAccessListRequest, string awsMountPath = null)
+> void AWSConfigWriteIdentityAccessList (AWSConfigWriteIdentityAccessListRequest aWSConfigWriteIdentityAccessListRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -1811,13 +1790,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigWriteIdentityAccessList(aWSConfigWriteIdentityAccessListRequest, awsMountPath);
+                apiInstance.AWSConfigWriteIdentityAccessList(AWSConfigWriteIdentityAccessListRequest aWSConfigWriteIdentityAccessListRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigWriteIdentityAccessList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1854,7 +1832,7 @@ No authorization required
 
 <a name="awsconfigwriteidentitywhitelist"></a>
 # **AWSConfigWriteIdentityWhiteList**
-> void AWSConfigWriteIdentityWhiteList (AWSConfigWriteIdentityWhiteListRequest aWSConfigWriteIdentityWhiteListRequest, string awsMountPath = null)
+> void AWSConfigWriteIdentityWhiteList (AWSConfigWriteIdentityWhiteListRequest aWSConfigWriteIdentityWhiteListRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -1884,13 +1862,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigWriteIdentityWhiteList(aWSConfigWriteIdentityWhiteListRequest, awsMountPath);
+                apiInstance.AWSConfigWriteIdentityWhiteList(AWSConfigWriteIdentityWhiteListRequest aWSConfigWriteIdentityWhiteListRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigWriteIdentityWhiteList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1927,7 +1904,7 @@ No authorization required
 
 <a name="awsconfigwriteroletagblacklist"></a>
 # **AWSConfigWriteRoleTagBlackList**
-> void AWSConfigWriteRoleTagBlackList (AWSConfigWriteRoleTagBlackListRequest aWSConfigWriteRoleTagBlackListRequest, string awsMountPath = null)
+> void AWSConfigWriteRoleTagBlackList (AWSConfigWriteRoleTagBlackListRequest aWSConfigWriteRoleTagBlackListRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -1957,13 +1934,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigWriteRoleTagBlackList(aWSConfigWriteRoleTagBlackListRequest, awsMountPath);
+                apiInstance.AWSConfigWriteRoleTagBlackList(AWSConfigWriteRoleTagBlackListRequest aWSConfigWriteRoleTagBlackListRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigWriteRoleTagBlackList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2000,7 +1976,7 @@ No authorization required
 
 <a name="awsconfigwriteroletagdenylist"></a>
 # **AWSConfigWriteRoleTagDenyList**
-> void AWSConfigWriteRoleTagDenyList (AWSConfigWriteRoleTagDenyListRequest aWSConfigWriteRoleTagDenyListRequest, string awsMountPath = null)
+> void AWSConfigWriteRoleTagDenyList (AWSConfigWriteRoleTagDenyListRequest aWSConfigWriteRoleTagDenyListRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -2030,13 +2006,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigWriteRoleTagDenyList(aWSConfigWriteRoleTagDenyListRequest, awsMountPath);
+                apiInstance.AWSConfigWriteRoleTagDenyList(AWSConfigWriteRoleTagDenyListRequest aWSConfigWriteRoleTagDenyListRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigWriteRoleTagDenyList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2073,7 +2048,7 @@ No authorization required
 
 <a name="awsconfigwritesecuritytokenserviceaccount"></a>
 # **AWSConfigWriteSecurityTokenServiceAccount**
-> void AWSConfigWriteSecurityTokenServiceAccount (string accountId, AWSConfigWriteSecurityTokenServiceAccountRequest aWSConfigWriteSecurityTokenServiceAccountRequest, string awsMountPath = null)
+> void AWSConfigWriteSecurityTokenServiceAccount (AWSConfigWriteSecurityTokenServiceAccountRequest aWSConfigWriteSecurityTokenServiceAccountRequest, string accountId, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -2104,13 +2079,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigWriteSecurityTokenServiceAccount(accountId, aWSConfigWriteSecurityTokenServiceAccountRequest, awsMountPath);
+                apiInstance.AWSConfigWriteSecurityTokenServiceAccount(AWSConfigWriteSecurityTokenServiceAccountRequest aWSConfigWriteSecurityTokenServiceAccountRequest, string accountId, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSConfigWriteSecurityTokenServiceAccount: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2148,7 +2122,7 @@ No authorization required
 
 <a name="awsdeleteauthrole"></a>
 # **AWSDeleteAuthRole**
-> void AWSDeleteAuthRole (string role, string awsMountPath = null)
+> void AWSDeleteAuthRole (string role, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -2178,13 +2152,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSDeleteAuthRole(role, awsMountPath);
+                apiInstance.AWSDeleteAuthRole(string role, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSDeleteAuthRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2221,7 +2194,7 @@ No authorization required
 
 <a name="awsdeleteidentityaccesslistfor"></a>
 # **AWSDeleteIdentityAccessListFor**
-> void AWSDeleteIdentityAccessListFor (string instanceId, string awsMountPath = null)
+> void AWSDeleteIdentityAccessListFor (string instanceId, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -2251,13 +2224,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSDeleteIdentityAccessListFor(instanceId, awsMountPath);
+                apiInstance.AWSDeleteIdentityAccessListFor(string instanceId, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSDeleteIdentityAccessListFor: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2294,7 +2266,7 @@ No authorization required
 
 <a name="awsdeleteidentitywhitelistfor"></a>
 # **AWSDeleteIdentityWhiteListFor**
-> void AWSDeleteIdentityWhiteListFor (string instanceId, string awsMountPath = null)
+> void AWSDeleteIdentityWhiteListFor (string instanceId, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -2324,13 +2296,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSDeleteIdentityWhiteListFor(instanceId, awsMountPath);
+                apiInstance.AWSDeleteIdentityWhiteListFor(string instanceId, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSDeleteIdentityWhiteListFor: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2367,7 +2338,7 @@ No authorization required
 
 <a name="awsdeleteroletagblacklistfor"></a>
 # **AWSDeleteRoleTagBlackListFor**
-> void AWSDeleteRoleTagBlackListFor (string roleTag, string awsMountPath = null)
+> void AWSDeleteRoleTagBlackListFor (string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -2397,13 +2368,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSDeleteRoleTagBlackListFor(roleTag, awsMountPath);
+                apiInstance.AWSDeleteRoleTagBlackListFor(string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSDeleteRoleTagBlackListFor: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2440,7 +2410,7 @@ No authorization required
 
 <a name="awsdeleteroletagdenylistfor"></a>
 # **AWSDeleteRoleTagDenyListFor**
-> void AWSDeleteRoleTagDenyListFor (string roleTag, string awsMountPath = null)
+> void AWSDeleteRoleTagDenyListFor (string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -2470,13 +2440,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSDeleteRoleTagDenyListFor(roleTag, awsMountPath);
+                apiInstance.AWSDeleteRoleTagDenyListFor(string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSDeleteRoleTagDenyListFor: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2513,7 +2482,7 @@ No authorization required
 
 <a name="awslistauthroles"></a>
 # **AWSListAuthRoles**
-> void AWSListAuthRoles (string list, string awsMountPath = null)
+> void AWSListAuthRoles (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -2543,13 +2512,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSListAuthRoles(list, awsMountPath);
+                apiInstance.AWSListAuthRoles(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSListAuthRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2586,7 +2554,7 @@ No authorization required
 
 <a name="awslistauthroles2"></a>
 # **AWSListAuthRoles2**
-> void AWSListAuthRoles2 (string list, string awsMountPath = null)
+> void AWSListAuthRoles2 (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -2616,13 +2584,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSListAuthRoles2(list, awsMountPath);
+                apiInstance.AWSListAuthRoles2(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSListAuthRoles2: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2659,7 +2626,7 @@ No authorization required
 
 <a name="awslistidentityaccesslist"></a>
 # **AWSListIdentityAccessList**
-> void AWSListIdentityAccessList (string list, string awsMountPath = null)
+> void AWSListIdentityAccessList (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -2689,13 +2656,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSListIdentityAccessList(list, awsMountPath);
+                apiInstance.AWSListIdentityAccessList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSListIdentityAccessList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2732,7 +2698,7 @@ No authorization required
 
 <a name="awslistidentitywhitelist"></a>
 # **AWSListIdentityWhiteList**
-> void AWSListIdentityWhiteList (string list, string awsMountPath = null)
+> void AWSListIdentityWhiteList (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -2762,13 +2728,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSListIdentityWhiteList(list, awsMountPath);
+                apiInstance.AWSListIdentityWhiteList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSListIdentityWhiteList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2805,7 +2770,7 @@ No authorization required
 
 <a name="awslistroletagblacklist"></a>
 # **AWSListRoleTagBlackList**
-> void AWSListRoleTagBlackList (string list, string awsMountPath = null)
+> void AWSListRoleTagBlackList (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -2835,13 +2800,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSListRoleTagBlackList(list, awsMountPath);
+                apiInstance.AWSListRoleTagBlackList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSListRoleTagBlackList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2878,7 +2842,7 @@ No authorization required
 
 <a name="awslistroletagdenylist"></a>
 # **AWSListRoleTagDenyList**
-> void AWSListRoleTagDenyList (string list, string awsMountPath = null)
+> void AWSListRoleTagDenyList (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -2908,13 +2872,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSListRoleTagDenyList(list, awsMountPath);
+                apiInstance.AWSListRoleTagDenyList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSListRoleTagDenyList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2951,7 +2914,7 @@ No authorization required
 
 <a name="awslogin"></a>
 # **AWSLogin**
-> void AWSLogin (AWSLoginRequest aWSLoginRequest, string awsMountPath = null)
+> void AWSLogin (AWSLoginRequest aWSLoginRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -2981,13 +2944,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSLogin(aWSLoginRequest, awsMountPath);
+                apiInstance.AWSLogin(AWSLoginRequest aWSLoginRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3024,7 +2986,7 @@ No authorization required
 
 <a name="awsreadauthrole"></a>
 # **AWSReadAuthRole**
-> void AWSReadAuthRole (string role, string awsMountPath = null)
+> void AWSReadAuthRole (string role, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -3054,13 +3016,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSReadAuthRole(role, awsMountPath);
+                apiInstance.AWSReadAuthRole(string role, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSReadAuthRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3097,7 +3058,7 @@ No authorization required
 
 <a name="awsreadidentityaccesslistfor"></a>
 # **AWSReadIdentityAccessListFor**
-> void AWSReadIdentityAccessListFor (string instanceId, string awsMountPath = null)
+> void AWSReadIdentityAccessListFor (string instanceId, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -3127,13 +3088,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSReadIdentityAccessListFor(instanceId, awsMountPath);
+                apiInstance.AWSReadIdentityAccessListFor(string instanceId, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSReadIdentityAccessListFor: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3170,7 +3130,7 @@ No authorization required
 
 <a name="awsreadidentitywhitelistfor"></a>
 # **AWSReadIdentityWhiteListFor**
-> void AWSReadIdentityWhiteListFor (string instanceId, string awsMountPath = null)
+> void AWSReadIdentityWhiteListFor (string instanceId, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -3200,13 +3160,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSReadIdentityWhiteListFor(instanceId, awsMountPath);
+                apiInstance.AWSReadIdentityWhiteListFor(string instanceId, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSReadIdentityWhiteListFor: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3243,7 +3202,7 @@ No authorization required
 
 <a name="awsreadroletagblacklistfor"></a>
 # **AWSReadRoleTagBlackListFor**
-> void AWSReadRoleTagBlackListFor (string roleTag, string awsMountPath = null)
+> void AWSReadRoleTagBlackListFor (string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -3273,13 +3232,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSReadRoleTagBlackListFor(roleTag, awsMountPath);
+                apiInstance.AWSReadRoleTagBlackListFor(string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSReadRoleTagBlackListFor: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3316,7 +3274,7 @@ No authorization required
 
 <a name="awsreadroletagdenylistfor"></a>
 # **AWSReadRoleTagDenyListFor**
-> void AWSReadRoleTagDenyListFor (string roleTag, string awsMountPath = null)
+> void AWSReadRoleTagDenyListFor (string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -3346,13 +3304,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSReadRoleTagDenyListFor(roleTag, awsMountPath);
+                apiInstance.AWSReadRoleTagDenyListFor(string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSReadRoleTagDenyListFor: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3389,7 +3346,7 @@ No authorization required
 
 <a name="awswriteauthrole"></a>
 # **AWSWriteAuthRole**
-> void AWSWriteAuthRole (string role, AWSWriteAuthRoleRequest aWSWriteAuthRoleRequest, string awsMountPath = null)
+> void AWSWriteAuthRole (AWSWriteAuthRoleRequest aWSWriteAuthRoleRequest, string role, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -3420,13 +3377,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSWriteAuthRole(role, aWSWriteAuthRoleRequest, awsMountPath);
+                apiInstance.AWSWriteAuthRole(AWSWriteAuthRoleRequest aWSWriteAuthRoleRequest, string role, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSWriteAuthRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3464,7 +3420,7 @@ No authorization required
 
 <a name="awswriteauthroletag"></a>
 # **AWSWriteAuthRoleTag**
-> void AWSWriteAuthRoleTag (string role, AWSWriteAuthRoleTagRequest aWSWriteAuthRoleTagRequest, string awsMountPath = null)
+> void AWSWriteAuthRoleTag (AWSWriteAuthRoleTagRequest aWSWriteAuthRoleTagRequest, string role, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -3495,13 +3451,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSWriteAuthRoleTag(role, aWSWriteAuthRoleTagRequest, awsMountPath);
+                apiInstance.AWSWriteAuthRoleTag(AWSWriteAuthRoleTagRequest aWSWriteAuthRoleTagRequest, string role, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSWriteAuthRoleTag: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3539,7 +3494,7 @@ No authorization required
 
 <a name="awswriteidentityaccesslisttidysettings"></a>
 # **AWSWriteIdentityAccessListTidySettings**
-> void AWSWriteIdentityAccessListTidySettings (AWSWriteIdentityAccessListTidySettingsRequest aWSWriteIdentityAccessListTidySettingsRequest, string awsMountPath = null)
+> void AWSWriteIdentityAccessListTidySettings (AWSWriteIdentityAccessListTidySettingsRequest aWSWriteIdentityAccessListTidySettingsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -3569,13 +3524,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSWriteIdentityAccessListTidySettings(aWSWriteIdentityAccessListTidySettingsRequest, awsMountPath);
+                apiInstance.AWSWriteIdentityAccessListTidySettings(AWSWriteIdentityAccessListTidySettingsRequest aWSWriteIdentityAccessListTidySettingsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSWriteIdentityAccessListTidySettings: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3612,7 +3566,7 @@ No authorization required
 
 <a name="awswriteidentitywhitelisttidysettings"></a>
 # **AWSWriteIdentityWhiteListTidySettings**
-> void AWSWriteIdentityWhiteListTidySettings (AWSWriteIdentityWhiteListTidySettingsRequest aWSWriteIdentityWhiteListTidySettingsRequest, string awsMountPath = null)
+> void AWSWriteIdentityWhiteListTidySettings (AWSWriteIdentityWhiteListTidySettingsRequest aWSWriteIdentityWhiteListTidySettingsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -3642,13 +3596,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSWriteIdentityWhiteListTidySettings(aWSWriteIdentityWhiteListTidySettingsRequest, awsMountPath);
+                apiInstance.AWSWriteIdentityWhiteListTidySettings(AWSWriteIdentityWhiteListTidySettingsRequest aWSWriteIdentityWhiteListTidySettingsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSWriteIdentityWhiteListTidySettings: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3685,7 +3638,7 @@ No authorization required
 
 <a name="awswriteroletagblacklistfor"></a>
 # **AWSWriteRoleTagBlackListFor**
-> void AWSWriteRoleTagBlackListFor (string roleTag, string awsMountPath = null)
+> void AWSWriteRoleTagBlackListFor (string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -3715,13 +3668,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSWriteRoleTagBlackListFor(roleTag, awsMountPath);
+                apiInstance.AWSWriteRoleTagBlackListFor(string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSWriteRoleTagBlackListFor: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3758,7 +3710,7 @@ No authorization required
 
 <a name="awswriteroletagblacklisttidysettings"></a>
 # **AWSWriteRoleTagBlackListTidySettings**
-> void AWSWriteRoleTagBlackListTidySettings (AWSWriteRoleTagBlackListTidySettingsRequest aWSWriteRoleTagBlackListTidySettingsRequest, string awsMountPath = null)
+> void AWSWriteRoleTagBlackListTidySettings (AWSWriteRoleTagBlackListTidySettingsRequest aWSWriteRoleTagBlackListTidySettingsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -3788,13 +3740,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSWriteRoleTagBlackListTidySettings(aWSWriteRoleTagBlackListTidySettingsRequest, awsMountPath);
+                apiInstance.AWSWriteRoleTagBlackListTidySettings(AWSWriteRoleTagBlackListTidySettingsRequest aWSWriteRoleTagBlackListTidySettingsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSWriteRoleTagBlackListTidySettings: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3831,7 +3782,7 @@ No authorization required
 
 <a name="awswriteroletagdenylistfor"></a>
 # **AWSWriteRoleTagDenyListFor**
-> void AWSWriteRoleTagDenyListFor (string roleTag, string awsMountPath = null)
+> void AWSWriteRoleTagDenyListFor (string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -3861,13 +3812,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSWriteRoleTagDenyListFor(roleTag, awsMountPath);
+                apiInstance.AWSWriteRoleTagDenyListFor(string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSWriteRoleTagDenyListFor: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3904,7 +3854,7 @@ No authorization required
 
 <a name="awswriteroletagdenylisttidysettings"></a>
 # **AWSWriteRoleTagDenyListTidySettings**
-> void AWSWriteRoleTagDenyListTidySettings (AWSWriteRoleTagDenyListTidySettingsRequest aWSWriteRoleTagDenyListTidySettingsRequest, string awsMountPath = null)
+> void AWSWriteRoleTagDenyListTidySettings (AWSWriteRoleTagDenyListTidySettingsRequest aWSWriteRoleTagDenyListTidySettingsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -3934,13 +3884,12 @@ namespace Example
 
             try
             {
-                apiInstance.AWSWriteRoleTagDenyListTidySettings(aWSWriteRoleTagDenyListTidySettingsRequest, awsMountPath);
+                apiInstance.AWSWriteRoleTagDenyListTidySettings(AWSWriteRoleTagDenyListTidySettingsRequest aWSWriteRoleTagDenyListTidySettingsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AWSWriteRoleTagDenyListTidySettings: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3977,7 +3926,7 @@ No authorization required
 
 <a name="aliclouddeleteauthrole"></a>
 # **AliCloudDeleteAuthRole**
-> void AliCloudDeleteAuthRole (string role, string alicloudMountPath = null)
+> void AliCloudDeleteAuthRole (string role, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
 
 Create a role and associate policies to it.
 
@@ -4008,13 +3957,12 @@ namespace Example
             try
             {
                 // Create a role and associate policies to it.
-                apiInstance.AliCloudDeleteAuthRole(role, alicloudMountPath);
+                apiInstance.AliCloudDeleteAuthRole(string role, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AliCloudDeleteAuthRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4051,7 +3999,7 @@ No authorization required
 
 <a name="alicloudlistauthroles"></a>
 # **AliCloudListAuthRoles**
-> void AliCloudListAuthRoles (string list, string alicloudMountPath = null)
+> void AliCloudListAuthRoles (string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
 
 Lists all the roles that are registered with Vault.
 
@@ -4082,13 +4030,12 @@ namespace Example
             try
             {
                 // Lists all the roles that are registered with Vault.
-                apiInstance.AliCloudListAuthRoles(list, alicloudMountPath);
+                apiInstance.AliCloudListAuthRoles(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AliCloudListAuthRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4125,7 +4072,7 @@ No authorization required
 
 <a name="alicloudlistauthroles2"></a>
 # **AliCloudListAuthRoles2**
-> void AliCloudListAuthRoles2 (string list, string alicloudMountPath = null)
+> void AliCloudListAuthRoles2 (string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
 
 Lists all the roles that are registered with Vault.
 
@@ -4156,13 +4103,12 @@ namespace Example
             try
             {
                 // Lists all the roles that are registered with Vault.
-                apiInstance.AliCloudListAuthRoles2(list, alicloudMountPath);
+                apiInstance.AliCloudListAuthRoles2(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AliCloudListAuthRoles2: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4199,7 +4145,7 @@ No authorization required
 
 <a name="alicloudlogin"></a>
 # **AliCloudLogin**
-> void AliCloudLogin (AliCloudLoginRequest aliCloudLoginRequest, string alicloudMountPath = null)
+> void AliCloudLogin (AliCloudLoginRequest aliCloudLoginRequest, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
 
 Authenticates an RAM entity with Vault.
 
@@ -4230,13 +4176,12 @@ namespace Example
             try
             {
                 // Authenticates an RAM entity with Vault.
-                apiInstance.AliCloudLogin(aliCloudLoginRequest, alicloudMountPath);
+                apiInstance.AliCloudLogin(AliCloudLoginRequest aliCloudLoginRequest, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AliCloudLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4273,7 +4218,7 @@ No authorization required
 
 <a name="alicloudreadauthrole"></a>
 # **AliCloudReadAuthRole**
-> void AliCloudReadAuthRole (string role, string alicloudMountPath = null)
+> void AliCloudReadAuthRole (string role, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
 
 Create a role and associate policies to it.
 
@@ -4304,13 +4249,12 @@ namespace Example
             try
             {
                 // Create a role and associate policies to it.
-                apiInstance.AliCloudReadAuthRole(role, alicloudMountPath);
+                apiInstance.AliCloudReadAuthRole(string role, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AliCloudReadAuthRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4347,7 +4291,7 @@ No authorization required
 
 <a name="alicloudwriteauthrole"></a>
 # **AliCloudWriteAuthRole**
-> void AliCloudWriteAuthRole (string role, AliCloudWriteAuthRoleRequest aliCloudWriteAuthRoleRequest, string alicloudMountPath = null)
+> void AliCloudWriteAuthRole (AliCloudWriteAuthRoleRequest aliCloudWriteAuthRoleRequest, string role, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
 
 Create a role and associate policies to it.
 
@@ -4379,13 +4323,12 @@ namespace Example
             try
             {
                 // Create a role and associate policies to it.
-                apiInstance.AliCloudWriteAuthRole(role, aliCloudWriteAuthRoleRequest, alicloudMountPath);
+                apiInstance.AliCloudWriteAuthRole(AliCloudWriteAuthRoleRequest aliCloudWriteAuthRoleRequest, string role, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AliCloudWriteAuthRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4423,7 +4366,7 @@ No authorization required
 
 <a name="approledeletebindsecretid"></a>
 # **AppRoleDeleteBindSecretID**
-> void AppRoleDeleteBindSecretID (string roleName, string approleMountPath = null)
+> void AppRoleDeleteBindSecretID (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -4453,13 +4396,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeleteBindSecretID(roleName, approleMountPath);
+                apiInstance.AppRoleDeleteBindSecretID(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleDeleteBindSecretID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4496,7 +4438,7 @@ No authorization required
 
 <a name="approledeleteboundcidrlist"></a>
 # **AppRoleDeleteBoundCIDRList**
-> void AppRoleDeleteBoundCIDRList (string roleName, string approleMountPath = null)
+> void AppRoleDeleteBoundCIDRList (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -4526,13 +4468,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeleteBoundCIDRList(roleName, approleMountPath);
+                apiInstance.AppRoleDeleteBoundCIDRList(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleDeleteBoundCIDRList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4569,7 +4510,7 @@ No authorization required
 
 <a name="approledeleteperiod"></a>
 # **AppRoleDeletePeriod**
-> void AppRoleDeletePeriod (string roleName, string approleMountPath = null)
+> void AppRoleDeletePeriod (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -4599,13 +4540,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeletePeriod(roleName, approleMountPath);
+                apiInstance.AppRoleDeletePeriod(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleDeletePeriod: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4642,7 +4582,7 @@ No authorization required
 
 <a name="approledeletepolicies"></a>
 # **AppRoleDeletePolicies**
-> void AppRoleDeletePolicies (string roleName, string approleMountPath = null)
+> void AppRoleDeletePolicies (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -4672,13 +4612,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeletePolicies(roleName, approleMountPath);
+                apiInstance.AppRoleDeletePolicies(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleDeletePolicies: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4715,7 +4654,7 @@ No authorization required
 
 <a name="approledeleterole"></a>
 # **AppRoleDeleteRole**
-> void AppRoleDeleteRole (string roleName, string approleMountPath = null)
+> void AppRoleDeleteRole (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -4745,13 +4684,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeleteRole(roleName, approleMountPath);
+                apiInstance.AppRoleDeleteRole(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleDeleteRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4788,7 +4726,7 @@ No authorization required
 
 <a name="approledeletesecretidaccessordestroy"></a>
 # **AppRoleDeleteSecretIDAccessorDestroy**
-> void AppRoleDeleteSecretIDAccessorDestroy (string roleName, string approleMountPath = null)
+> void AppRoleDeleteSecretIDAccessorDestroy (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -4818,13 +4756,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeleteSecretIDAccessorDestroy(roleName, approleMountPath);
+                apiInstance.AppRoleDeleteSecretIDAccessorDestroy(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleDeleteSecretIDAccessorDestroy: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4861,7 +4798,7 @@ No authorization required
 
 <a name="approledeletesecretidboundcidrs"></a>
 # **AppRoleDeleteSecretIDBoundCIDRs**
-> void AppRoleDeleteSecretIDBoundCIDRs (string roleName, string approleMountPath = null)
+> void AppRoleDeleteSecretIDBoundCIDRs (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -4891,13 +4828,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeleteSecretIDBoundCIDRs(roleName, approleMountPath);
+                apiInstance.AppRoleDeleteSecretIDBoundCIDRs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleDeleteSecretIDBoundCIDRs: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4934,7 +4870,7 @@ No authorization required
 
 <a name="approledeletesecretiddestroy"></a>
 # **AppRoleDeleteSecretIDDestroy**
-> void AppRoleDeleteSecretIDDestroy (string roleName, string approleMountPath = null)
+> void AppRoleDeleteSecretIDDestroy (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -4964,13 +4900,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeleteSecretIDDestroy(roleName, approleMountPath);
+                apiInstance.AppRoleDeleteSecretIDDestroy(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleDeleteSecretIDDestroy: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5007,7 +4942,7 @@ No authorization required
 
 <a name="approledeletesecretidnumuses"></a>
 # **AppRoleDeleteSecretIDNumUses**
-> void AppRoleDeleteSecretIDNumUses (string roleName, string approleMountPath = null)
+> void AppRoleDeleteSecretIDNumUses (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -5037,13 +4972,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeleteSecretIDNumUses(roleName, approleMountPath);
+                apiInstance.AppRoleDeleteSecretIDNumUses(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleDeleteSecretIDNumUses: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5080,7 +5014,7 @@ No authorization required
 
 <a name="approledeletesecretidttl"></a>
 # **AppRoleDeleteSecretIDTTL**
-> void AppRoleDeleteSecretIDTTL (string roleName, string approleMountPath = null)
+> void AppRoleDeleteSecretIDTTL (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -5110,13 +5044,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeleteSecretIDTTL(roleName, approleMountPath);
+                apiInstance.AppRoleDeleteSecretIDTTL(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleDeleteSecretIDTTL: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5153,7 +5086,7 @@ No authorization required
 
 <a name="approledeletetokenboundcidrs"></a>
 # **AppRoleDeleteTokenBoundCIDRs**
-> void AppRoleDeleteTokenBoundCIDRs (string roleName, string approleMountPath = null)
+> void AppRoleDeleteTokenBoundCIDRs (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -5183,13 +5116,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeleteTokenBoundCIDRs(roleName, approleMountPath);
+                apiInstance.AppRoleDeleteTokenBoundCIDRs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleDeleteTokenBoundCIDRs: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5226,7 +5158,7 @@ No authorization required
 
 <a name="approledeletetokenmaxttl"></a>
 # **AppRoleDeleteTokenMaxTTL**
-> void AppRoleDeleteTokenMaxTTL (string roleName, string approleMountPath = null)
+> void AppRoleDeleteTokenMaxTTL (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -5256,13 +5188,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeleteTokenMaxTTL(roleName, approleMountPath);
+                apiInstance.AppRoleDeleteTokenMaxTTL(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleDeleteTokenMaxTTL: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5299,7 +5230,7 @@ No authorization required
 
 <a name="approledeletetokennumuses"></a>
 # **AppRoleDeleteTokenNumUses**
-> void AppRoleDeleteTokenNumUses (string roleName, string approleMountPath = null)
+> void AppRoleDeleteTokenNumUses (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -5329,13 +5260,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeleteTokenNumUses(roleName, approleMountPath);
+                apiInstance.AppRoleDeleteTokenNumUses(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleDeleteTokenNumUses: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5372,7 +5302,7 @@ No authorization required
 
 <a name="approledeletetokenttl"></a>
 # **AppRoleDeleteTokenTTL**
-> void AppRoleDeleteTokenTTL (string roleName, string approleMountPath = null)
+> void AppRoleDeleteTokenTTL (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -5402,13 +5332,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleDeleteTokenTTL(roleName, approleMountPath);
+                apiInstance.AppRoleDeleteTokenTTL(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleDeleteTokenTTL: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5445,7 +5374,7 @@ No authorization required
 
 <a name="approlelistroles"></a>
 # **AppRoleListRoles**
-> AppRoleListRolesResponse AppRoleListRoles (string list, string approleMountPath = null)
+> AppRoleListRolesResponse AppRoleListRoles (string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -5475,14 +5404,13 @@ namespace Example
 
             try
             {
-                AppRoleListRolesResponse result = apiInstance.AppRoleListRoles(list, approleMountPath);
+                AppRoleListRolesResponse result = apiInstance.AppRoleListRoles(string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleListRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5519,7 +5447,7 @@ No authorization required
 
 <a name="approlelistsecretid"></a>
 # **AppRoleListSecretID**
-> AppRoleListSecretIDResponse AppRoleListSecretID (string roleName, string list, string approleMountPath = null)
+> AppRoleListSecretIDResponse AppRoleListSecretID (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -5550,14 +5478,13 @@ namespace Example
 
             try
             {
-                AppRoleListSecretIDResponse result = apiInstance.AppRoleListSecretID(roleName, list, approleMountPath);
+                AppRoleListSecretIDResponse result = apiInstance.AppRoleListSecretID(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleListSecretID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5595,7 +5522,7 @@ No authorization required
 
 <a name="approlelogin"></a>
 # **AppRoleLogin**
-> void AppRoleLogin (AppRoleLoginRequest appRoleLoginRequest, string approleMountPath = null)
+> void AppRoleLogin (AppRoleLoginRequest appRoleLoginRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -5625,13 +5552,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleLogin(appRoleLoginRequest, approleMountPath);
+                apiInstance.AppRoleLogin(AppRoleLoginRequest appRoleLoginRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5668,7 +5594,7 @@ No authorization required
 
 <a name="approlereadbindsecretid"></a>
 # **AppRoleReadBindSecretID**
-> AppRoleReadBindSecretIDResponse AppRoleReadBindSecretID (string roleName, string approleMountPath = null)
+> AppRoleReadBindSecretIDResponse AppRoleReadBindSecretID (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -5698,14 +5624,13 @@ namespace Example
 
             try
             {
-                AppRoleReadBindSecretIDResponse result = apiInstance.AppRoleReadBindSecretID(roleName, approleMountPath);
+                AppRoleReadBindSecretIDResponse result = apiInstance.AppRoleReadBindSecretID(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleReadBindSecretID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5742,7 +5667,7 @@ No authorization required
 
 <a name="approlereadboundcidrlist"></a>
 # **AppRoleReadBoundCIDRList**
-> AppRoleReadBoundCIDRListResponse AppRoleReadBoundCIDRList (string roleName, string approleMountPath = null)
+> AppRoleReadBoundCIDRListResponse AppRoleReadBoundCIDRList (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -5772,14 +5697,13 @@ namespace Example
 
             try
             {
-                AppRoleReadBoundCIDRListResponse result = apiInstance.AppRoleReadBoundCIDRList(roleName, approleMountPath);
+                AppRoleReadBoundCIDRListResponse result = apiInstance.AppRoleReadBoundCIDRList(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleReadBoundCIDRList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5816,7 +5740,7 @@ No authorization required
 
 <a name="approlereadlocalsecretids"></a>
 # **AppRoleReadLocalSecretIDs**
-> AppRoleReadLocalSecretIDsResponse AppRoleReadLocalSecretIDs (string roleName, string approleMountPath = null)
+> AppRoleReadLocalSecretIDsResponse AppRoleReadLocalSecretIDs (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -5846,14 +5770,13 @@ namespace Example
 
             try
             {
-                AppRoleReadLocalSecretIDsResponse result = apiInstance.AppRoleReadLocalSecretIDs(roleName, approleMountPath);
+                AppRoleReadLocalSecretIDsResponse result = apiInstance.AppRoleReadLocalSecretIDs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleReadLocalSecretIDs: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5890,7 +5813,7 @@ No authorization required
 
 <a name="approlereadperiod"></a>
 # **AppRoleReadPeriod**
-> AppRoleReadPeriodResponse AppRoleReadPeriod (string roleName, string approleMountPath = null)
+> AppRoleReadPeriodResponse AppRoleReadPeriod (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -5920,14 +5843,13 @@ namespace Example
 
             try
             {
-                AppRoleReadPeriodResponse result = apiInstance.AppRoleReadPeriod(roleName, approleMountPath);
+                AppRoleReadPeriodResponse result = apiInstance.AppRoleReadPeriod(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleReadPeriod: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5964,7 +5886,7 @@ No authorization required
 
 <a name="approlereadpolicies"></a>
 # **AppRoleReadPolicies**
-> AppRoleReadPoliciesResponse AppRoleReadPolicies (string roleName, string approleMountPath = null)
+> AppRoleReadPoliciesResponse AppRoleReadPolicies (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -5994,14 +5916,13 @@ namespace Example
 
             try
             {
-                AppRoleReadPoliciesResponse result = apiInstance.AppRoleReadPolicies(roleName, approleMountPath);
+                AppRoleReadPoliciesResponse result = apiInstance.AppRoleReadPolicies(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleReadPolicies: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6038,7 +5959,7 @@ No authorization required
 
 <a name="approlereadrole"></a>
 # **AppRoleReadRole**
-> AppRoleReadRoleResponse AppRoleReadRole (string roleName, string approleMountPath = null)
+> AppRoleReadRoleResponse AppRoleReadRole (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -6068,14 +5989,13 @@ namespace Example
 
             try
             {
-                AppRoleReadRoleResponse result = apiInstance.AppRoleReadRole(roleName, approleMountPath);
+                AppRoleReadRoleResponse result = apiInstance.AppRoleReadRole(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleReadRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6112,7 +6032,7 @@ No authorization required
 
 <a name="approlereadroleid"></a>
 # **AppRoleReadRoleID**
-> AppRoleReadRoleIDResponse AppRoleReadRoleID (string roleName, string approleMountPath = null)
+> AppRoleReadRoleIDResponse AppRoleReadRoleID (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -6142,14 +6062,13 @@ namespace Example
 
             try
             {
-                AppRoleReadRoleIDResponse result = apiInstance.AppRoleReadRoleID(roleName, approleMountPath);
+                AppRoleReadRoleIDResponse result = apiInstance.AppRoleReadRoleID(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleReadRoleID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6186,7 +6105,7 @@ No authorization required
 
 <a name="approlereadsecretidboundcidrs"></a>
 # **AppRoleReadSecretIDBoundCIDRs**
-> AppRoleReadSecretIDBoundCIDRsResponse AppRoleReadSecretIDBoundCIDRs (string roleName, string approleMountPath = null)
+> AppRoleReadSecretIDBoundCIDRsResponse AppRoleReadSecretIDBoundCIDRs (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -6216,14 +6135,13 @@ namespace Example
 
             try
             {
-                AppRoleReadSecretIDBoundCIDRsResponse result = apiInstance.AppRoleReadSecretIDBoundCIDRs(roleName, approleMountPath);
+                AppRoleReadSecretIDBoundCIDRsResponse result = apiInstance.AppRoleReadSecretIDBoundCIDRs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleReadSecretIDBoundCIDRs: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6260,7 +6178,7 @@ No authorization required
 
 <a name="approlereadsecretidnumuses"></a>
 # **AppRoleReadSecretIDNumUses**
-> AppRoleReadSecretIDNumUsesResponse AppRoleReadSecretIDNumUses (string roleName, string approleMountPath = null)
+> AppRoleReadSecretIDNumUsesResponse AppRoleReadSecretIDNumUses (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -6290,14 +6208,13 @@ namespace Example
 
             try
             {
-                AppRoleReadSecretIDNumUsesResponse result = apiInstance.AppRoleReadSecretIDNumUses(roleName, approleMountPath);
+                AppRoleReadSecretIDNumUsesResponse result = apiInstance.AppRoleReadSecretIDNumUses(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleReadSecretIDNumUses: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6334,7 +6251,7 @@ No authorization required
 
 <a name="approlereadsecretidttl"></a>
 # **AppRoleReadSecretIDTTL**
-> AppRoleReadSecretIDTTLResponse AppRoleReadSecretIDTTL (string roleName, string approleMountPath = null)
+> AppRoleReadSecretIDTTLResponse AppRoleReadSecretIDTTL (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -6364,14 +6281,13 @@ namespace Example
 
             try
             {
-                AppRoleReadSecretIDTTLResponse result = apiInstance.AppRoleReadSecretIDTTL(roleName, approleMountPath);
+                AppRoleReadSecretIDTTLResponse result = apiInstance.AppRoleReadSecretIDTTL(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleReadSecretIDTTL: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6408,7 +6324,7 @@ No authorization required
 
 <a name="approlereadtokenboundcidrs"></a>
 # **AppRoleReadTokenBoundCIDRs**
-> AppRoleReadTokenBoundCIDRsResponse AppRoleReadTokenBoundCIDRs (string roleName, string approleMountPath = null)
+> AppRoleReadTokenBoundCIDRsResponse AppRoleReadTokenBoundCIDRs (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -6438,14 +6354,13 @@ namespace Example
 
             try
             {
-                AppRoleReadTokenBoundCIDRsResponse result = apiInstance.AppRoleReadTokenBoundCIDRs(roleName, approleMountPath);
+                AppRoleReadTokenBoundCIDRsResponse result = apiInstance.AppRoleReadTokenBoundCIDRs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleReadTokenBoundCIDRs: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6482,7 +6397,7 @@ No authorization required
 
 <a name="approlereadtokenmaxttl"></a>
 # **AppRoleReadTokenMaxTTL**
-> AppRoleReadTokenMaxTTLResponse AppRoleReadTokenMaxTTL (string roleName, string approleMountPath = null)
+> AppRoleReadTokenMaxTTLResponse AppRoleReadTokenMaxTTL (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -6512,14 +6427,13 @@ namespace Example
 
             try
             {
-                AppRoleReadTokenMaxTTLResponse result = apiInstance.AppRoleReadTokenMaxTTL(roleName, approleMountPath);
+                AppRoleReadTokenMaxTTLResponse result = apiInstance.AppRoleReadTokenMaxTTL(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleReadTokenMaxTTL: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6556,7 +6470,7 @@ No authorization required
 
 <a name="approlereadtokennumuses"></a>
 # **AppRoleReadTokenNumUses**
-> AppRoleReadTokenNumUsesResponse AppRoleReadTokenNumUses (string roleName, string approleMountPath = null)
+> AppRoleReadTokenNumUsesResponse AppRoleReadTokenNumUses (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -6586,14 +6500,13 @@ namespace Example
 
             try
             {
-                AppRoleReadTokenNumUsesResponse result = apiInstance.AppRoleReadTokenNumUses(roleName, approleMountPath);
+                AppRoleReadTokenNumUsesResponse result = apiInstance.AppRoleReadTokenNumUses(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleReadTokenNumUses: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6630,7 +6543,7 @@ No authorization required
 
 <a name="approlereadtokenttl"></a>
 # **AppRoleReadTokenTTL**
-> AppRoleReadTokenTTLResponse AppRoleReadTokenTTL (string roleName, string approleMountPath = null)
+> AppRoleReadTokenTTLResponse AppRoleReadTokenTTL (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -6660,14 +6573,13 @@ namespace Example
 
             try
             {
-                AppRoleReadTokenTTLResponse result = apiInstance.AppRoleReadTokenTTL(roleName, approleMountPath);
+                AppRoleReadTokenTTLResponse result = apiInstance.AppRoleReadTokenTTL(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleReadTokenTTL: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6704,7 +6616,7 @@ No authorization required
 
 <a name="approletidysecretid"></a>
 # **AppRoleTidySecretID**
-> void AppRoleTidySecretID (string approleMountPath = null)
+> void AppRoleTidySecretID (string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 Trigger the clean-up of expired SecretID entries.
 
@@ -6734,13 +6646,12 @@ namespace Example
             try
             {
                 // Trigger the clean-up of expired SecretID entries.
-                apiInstance.AppRoleTidySecretID(approleMountPath);
+                apiInstance.AppRoleTidySecretID(string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleTidySecretID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6776,7 +6687,7 @@ No authorization required
 
 <a name="approlewritebindsecretid"></a>
 # **AppRoleWriteBindSecretID**
-> void AppRoleWriteBindSecretID (string roleName, AppRoleWriteBindSecretIDRequest appRoleWriteBindSecretIDRequest, string approleMountPath = null)
+> void AppRoleWriteBindSecretID (AppRoleWriteBindSecretIDRequest appRoleWriteBindSecretIDRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -6807,13 +6718,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteBindSecretID(roleName, appRoleWriteBindSecretIDRequest, approleMountPath);
+                apiInstance.AppRoleWriteBindSecretID(AppRoleWriteBindSecretIDRequest appRoleWriteBindSecretIDRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleWriteBindSecretID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6851,7 +6761,7 @@ No authorization required
 
 <a name="approlewriteboundcidrlist"></a>
 # **AppRoleWriteBoundCIDRList**
-> void AppRoleWriteBoundCIDRList (string roleName, AppRoleWriteBoundCIDRListRequest appRoleWriteBoundCIDRListRequest, string approleMountPath = null)
+> void AppRoleWriteBoundCIDRList (AppRoleWriteBoundCIDRListRequest appRoleWriteBoundCIDRListRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -6882,13 +6792,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteBoundCIDRList(roleName, appRoleWriteBoundCIDRListRequest, approleMountPath);
+                apiInstance.AppRoleWriteBoundCIDRList(AppRoleWriteBoundCIDRListRequest appRoleWriteBoundCIDRListRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleWriteBoundCIDRList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6926,7 +6835,7 @@ No authorization required
 
 <a name="approlewritecustomsecretid"></a>
 # **AppRoleWriteCustomSecretID**
-> AppRoleWriteCustomSecretIDResponse AppRoleWriteCustomSecretID (string roleName, AppRoleWriteCustomSecretIDRequest appRoleWriteCustomSecretIDRequest, string approleMountPath = null)
+> AppRoleWriteCustomSecretIDResponse AppRoleWriteCustomSecretID (AppRoleWriteCustomSecretIDRequest appRoleWriteCustomSecretIDRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -6957,14 +6866,13 @@ namespace Example
 
             try
             {
-                AppRoleWriteCustomSecretIDResponse result = apiInstance.AppRoleWriteCustomSecretID(roleName, appRoleWriteCustomSecretIDRequest, approleMountPath);
+                AppRoleWriteCustomSecretIDResponse result = apiInstance.AppRoleWriteCustomSecretID(AppRoleWriteCustomSecretIDRequest appRoleWriteCustomSecretIDRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleWriteCustomSecretID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -7002,7 +6910,7 @@ No authorization required
 
 <a name="approlewriteperiod"></a>
 # **AppRoleWritePeriod**
-> void AppRoleWritePeriod (string roleName, AppRoleWritePeriodRequest appRoleWritePeriodRequest, string approleMountPath = null)
+> void AppRoleWritePeriod (AppRoleWritePeriodRequest appRoleWritePeriodRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7033,13 +6941,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWritePeriod(roleName, appRoleWritePeriodRequest, approleMountPath);
+                apiInstance.AppRoleWritePeriod(AppRoleWritePeriodRequest appRoleWritePeriodRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleWritePeriod: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -7077,7 +6984,7 @@ No authorization required
 
 <a name="approlewritepolicies"></a>
 # **AppRoleWritePolicies**
-> void AppRoleWritePolicies (string roleName, AppRoleWritePoliciesRequest appRoleWritePoliciesRequest, string approleMountPath = null)
+> void AppRoleWritePolicies (AppRoleWritePoliciesRequest appRoleWritePoliciesRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7108,13 +7015,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWritePolicies(roleName, appRoleWritePoliciesRequest, approleMountPath);
+                apiInstance.AppRoleWritePolicies(AppRoleWritePoliciesRequest appRoleWritePoliciesRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleWritePolicies: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -7152,7 +7058,7 @@ No authorization required
 
 <a name="approlewriterole"></a>
 # **AppRoleWriteRole**
-> void AppRoleWriteRole (string roleName, AppRoleWriteRoleRequest appRoleWriteRoleRequest, string approleMountPath = null)
+> void AppRoleWriteRole (AppRoleWriteRoleRequest appRoleWriteRoleRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7183,13 +7089,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteRole(roleName, appRoleWriteRoleRequest, approleMountPath);
+                apiInstance.AppRoleWriteRole(AppRoleWriteRoleRequest appRoleWriteRoleRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleWriteRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -7227,7 +7132,7 @@ No authorization required
 
 <a name="approlewriteroleid"></a>
 # **AppRoleWriteRoleID**
-> void AppRoleWriteRoleID (string roleName, AppRoleWriteRoleIDRequest appRoleWriteRoleIDRequest, string approleMountPath = null)
+> void AppRoleWriteRoleID (AppRoleWriteRoleIDRequest appRoleWriteRoleIDRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7258,13 +7163,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteRoleID(roleName, appRoleWriteRoleIDRequest, approleMountPath);
+                apiInstance.AppRoleWriteRoleID(AppRoleWriteRoleIDRequest appRoleWriteRoleIDRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleWriteRoleID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -7302,7 +7206,7 @@ No authorization required
 
 <a name="approlewritesecretid"></a>
 # **AppRoleWriteSecretID**
-> AppRoleWriteSecretIDResponse AppRoleWriteSecretID (string roleName, AppRoleWriteSecretIDRequest appRoleWriteSecretIDRequest, string approleMountPath = null)
+> AppRoleWriteSecretIDResponse AppRoleWriteSecretID (AppRoleWriteSecretIDRequest appRoleWriteSecretIDRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7333,14 +7237,13 @@ namespace Example
 
             try
             {
-                AppRoleWriteSecretIDResponse result = apiInstance.AppRoleWriteSecretID(roleName, appRoleWriteSecretIDRequest, approleMountPath);
+                AppRoleWriteSecretIDResponse result = apiInstance.AppRoleWriteSecretID(AppRoleWriteSecretIDRequest appRoleWriteSecretIDRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleWriteSecretID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -7378,7 +7281,7 @@ No authorization required
 
 <a name="approlewritesecretidaccessordestroy"></a>
 # **AppRoleWriteSecretIDAccessorDestroy**
-> void AppRoleWriteSecretIDAccessorDestroy (string roleName, AppRoleWriteSecretIDAccessorDestroyRequest appRoleWriteSecretIDAccessorDestroyRequest, string approleMountPath = null)
+> void AppRoleWriteSecretIDAccessorDestroy (AppRoleWriteSecretIDAccessorDestroyRequest appRoleWriteSecretIDAccessorDestroyRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7409,13 +7312,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteSecretIDAccessorDestroy(roleName, appRoleWriteSecretIDAccessorDestroyRequest, approleMountPath);
+                apiInstance.AppRoleWriteSecretIDAccessorDestroy(AppRoleWriteSecretIDAccessorDestroyRequest appRoleWriteSecretIDAccessorDestroyRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleWriteSecretIDAccessorDestroy: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -7453,7 +7355,7 @@ No authorization required
 
 <a name="approlewritesecretidaccessorlookup"></a>
 # **AppRoleWriteSecretIDAccessorLookup**
-> AppRoleWriteSecretIDAccessorLookupResponse AppRoleWriteSecretIDAccessorLookup (string roleName, AppRoleWriteSecretIDAccessorLookupRequest appRoleWriteSecretIDAccessorLookupRequest, string approleMountPath = null)
+> AppRoleWriteSecretIDAccessorLookupResponse AppRoleWriteSecretIDAccessorLookup (AppRoleWriteSecretIDAccessorLookupRequest appRoleWriteSecretIDAccessorLookupRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7484,14 +7386,13 @@ namespace Example
 
             try
             {
-                AppRoleWriteSecretIDAccessorLookupResponse result = apiInstance.AppRoleWriteSecretIDAccessorLookup(roleName, appRoleWriteSecretIDAccessorLookupRequest, approleMountPath);
+                AppRoleWriteSecretIDAccessorLookupResponse result = apiInstance.AppRoleWriteSecretIDAccessorLookup(AppRoleWriteSecretIDAccessorLookupRequest appRoleWriteSecretIDAccessorLookupRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleWriteSecretIDAccessorLookup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -7529,7 +7430,7 @@ No authorization required
 
 <a name="approlewritesecretidboundcidrs"></a>
 # **AppRoleWriteSecretIDBoundCIDRs**
-> void AppRoleWriteSecretIDBoundCIDRs (string roleName, AppRoleWriteSecretIDBoundCIDRsRequest appRoleWriteSecretIDBoundCIDRsRequest, string approleMountPath = null)
+> void AppRoleWriteSecretIDBoundCIDRs (AppRoleWriteSecretIDBoundCIDRsRequest appRoleWriteSecretIDBoundCIDRsRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7560,13 +7461,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteSecretIDBoundCIDRs(roleName, appRoleWriteSecretIDBoundCIDRsRequest, approleMountPath);
+                apiInstance.AppRoleWriteSecretIDBoundCIDRs(AppRoleWriteSecretIDBoundCIDRsRequest appRoleWriteSecretIDBoundCIDRsRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleWriteSecretIDBoundCIDRs: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -7604,7 +7504,7 @@ No authorization required
 
 <a name="approlewritesecretiddestroy"></a>
 # **AppRoleWriteSecretIDDestroy**
-> void AppRoleWriteSecretIDDestroy (string roleName, AppRoleWriteSecretIDDestroyRequest appRoleWriteSecretIDDestroyRequest, string approleMountPath = null)
+> void AppRoleWriteSecretIDDestroy (AppRoleWriteSecretIDDestroyRequest appRoleWriteSecretIDDestroyRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7635,13 +7535,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteSecretIDDestroy(roleName, appRoleWriteSecretIDDestroyRequest, approleMountPath);
+                apiInstance.AppRoleWriteSecretIDDestroy(AppRoleWriteSecretIDDestroyRequest appRoleWriteSecretIDDestroyRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleWriteSecretIDDestroy: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -7679,7 +7578,7 @@ No authorization required
 
 <a name="approlewritesecretidlookup"></a>
 # **AppRoleWriteSecretIDLookup**
-> AppRoleWriteSecretIDLookupResponse AppRoleWriteSecretIDLookup (string roleName, AppRoleWriteSecretIDLookupRequest appRoleWriteSecretIDLookupRequest, string approleMountPath = null)
+> AppRoleWriteSecretIDLookupResponse AppRoleWriteSecretIDLookup (AppRoleWriteSecretIDLookupRequest appRoleWriteSecretIDLookupRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7710,14 +7609,13 @@ namespace Example
 
             try
             {
-                AppRoleWriteSecretIDLookupResponse result = apiInstance.AppRoleWriteSecretIDLookup(roleName, appRoleWriteSecretIDLookupRequest, approleMountPath);
+                AppRoleWriteSecretIDLookupResponse result = apiInstance.AppRoleWriteSecretIDLookup(AppRoleWriteSecretIDLookupRequest appRoleWriteSecretIDLookupRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleWriteSecretIDLookup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -7755,7 +7653,7 @@ No authorization required
 
 <a name="approlewritesecretidnumuses"></a>
 # **AppRoleWriteSecretIDNumUses**
-> void AppRoleWriteSecretIDNumUses (string roleName, AppRoleWriteSecretIDNumUsesRequest appRoleWriteSecretIDNumUsesRequest, string approleMountPath = null)
+> void AppRoleWriteSecretIDNumUses (AppRoleWriteSecretIDNumUsesRequest appRoleWriteSecretIDNumUsesRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7786,13 +7684,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteSecretIDNumUses(roleName, appRoleWriteSecretIDNumUsesRequest, approleMountPath);
+                apiInstance.AppRoleWriteSecretIDNumUses(AppRoleWriteSecretIDNumUsesRequest appRoleWriteSecretIDNumUsesRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleWriteSecretIDNumUses: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -7830,7 +7727,7 @@ No authorization required
 
 <a name="approlewritesecretidttl"></a>
 # **AppRoleWriteSecretIDTTL**
-> void AppRoleWriteSecretIDTTL (string roleName, AppRoleWriteSecretIDTTLRequest appRoleWriteSecretIDTTLRequest, string approleMountPath = null)
+> void AppRoleWriteSecretIDTTL (AppRoleWriteSecretIDTTLRequest appRoleWriteSecretIDTTLRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7861,13 +7758,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteSecretIDTTL(roleName, appRoleWriteSecretIDTTLRequest, approleMountPath);
+                apiInstance.AppRoleWriteSecretIDTTL(AppRoleWriteSecretIDTTLRequest appRoleWriteSecretIDTTLRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleWriteSecretIDTTL: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -7905,7 +7801,7 @@ No authorization required
 
 <a name="approlewritetokenboundcidrs"></a>
 # **AppRoleWriteTokenBoundCIDRs**
-> void AppRoleWriteTokenBoundCIDRs (string roleName, AppRoleWriteTokenBoundCIDRsRequest appRoleWriteTokenBoundCIDRsRequest, string approleMountPath = null)
+> void AppRoleWriteTokenBoundCIDRs (AppRoleWriteTokenBoundCIDRsRequest appRoleWriteTokenBoundCIDRsRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7936,13 +7832,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteTokenBoundCIDRs(roleName, appRoleWriteTokenBoundCIDRsRequest, approleMountPath);
+                apiInstance.AppRoleWriteTokenBoundCIDRs(AppRoleWriteTokenBoundCIDRsRequest appRoleWriteTokenBoundCIDRsRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleWriteTokenBoundCIDRs: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -7980,7 +7875,7 @@ No authorization required
 
 <a name="approlewritetokenmaxttl"></a>
 # **AppRoleWriteTokenMaxTTL**
-> void AppRoleWriteTokenMaxTTL (string roleName, AppRoleWriteTokenMaxTTLRequest appRoleWriteTokenMaxTTLRequest, string approleMountPath = null)
+> void AppRoleWriteTokenMaxTTL (AppRoleWriteTokenMaxTTLRequest appRoleWriteTokenMaxTTLRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -8011,13 +7906,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteTokenMaxTTL(roleName, appRoleWriteTokenMaxTTLRequest, approleMountPath);
+                apiInstance.AppRoleWriteTokenMaxTTL(AppRoleWriteTokenMaxTTLRequest appRoleWriteTokenMaxTTLRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleWriteTokenMaxTTL: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -8055,7 +7949,7 @@ No authorization required
 
 <a name="approlewritetokennumuses"></a>
 # **AppRoleWriteTokenNumUses**
-> void AppRoleWriteTokenNumUses (string roleName, AppRoleWriteTokenNumUsesRequest appRoleWriteTokenNumUsesRequest, string approleMountPath = null)
+> void AppRoleWriteTokenNumUses (AppRoleWriteTokenNumUsesRequest appRoleWriteTokenNumUsesRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -8086,13 +7980,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteTokenNumUses(roleName, appRoleWriteTokenNumUsesRequest, approleMountPath);
+                apiInstance.AppRoleWriteTokenNumUses(AppRoleWriteTokenNumUsesRequest appRoleWriteTokenNumUsesRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleWriteTokenNumUses: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -8130,7 +8023,7 @@ No authorization required
 
 <a name="approlewritetokenttl"></a>
 # **AppRoleWriteTokenTTL**
-> void AppRoleWriteTokenTTL (string roleName, AppRoleWriteTokenTTLRequest appRoleWriteTokenTTLRequest, string approleMountPath = null)
+> void AppRoleWriteTokenTTL (AppRoleWriteTokenTTLRequest appRoleWriteTokenTTLRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -8161,13 +8054,12 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteTokenTTL(roleName, appRoleWriteTokenTTLRequest, approleMountPath);
+                apiInstance.AppRoleWriteTokenTTL(AppRoleWriteTokenTTLRequest appRoleWriteTokenTTLRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AppRoleWriteTokenTTL: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -8205,7 +8097,7 @@ No authorization required
 
 <a name="azuredeleteauthconfig"></a>
 # **AzureDeleteAuthConfig**
-> void AzureDeleteAuthConfig (string azureMountPath = null)
+> void AzureDeleteAuthConfig (string azureMountPath = "azure", TimeSpan? wrapTTL = null)
 
 
 
@@ -8234,13 +8126,12 @@ namespace Example
 
             try
             {
-                apiInstance.AzureDeleteAuthConfig(azureMountPath);
+                apiInstance.AzureDeleteAuthConfig(string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AzureDeleteAuthConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -8276,7 +8167,7 @@ No authorization required
 
 <a name="azuredeleteauthrole"></a>
 # **AzureDeleteAuthRole**
-> void AzureDeleteAuthRole (string name, string azureMountPath = null)
+> void AzureDeleteAuthRole (string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null)
 
 
 
@@ -8306,13 +8197,12 @@ namespace Example
 
             try
             {
-                apiInstance.AzureDeleteAuthRole(name, azureMountPath);
+                apiInstance.AzureDeleteAuthRole(string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AzureDeleteAuthRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -8349,7 +8239,7 @@ No authorization required
 
 <a name="azurelistauthroles"></a>
 # **AzureListAuthRoles**
-> void AzureListAuthRoles (string list, string azureMountPath = null)
+> void AzureListAuthRoles (string azureMountPath = "azure", TimeSpan? wrapTTL = null)
 
 
 
@@ -8379,13 +8269,12 @@ namespace Example
 
             try
             {
-                apiInstance.AzureListAuthRoles(list, azureMountPath);
+                apiInstance.AzureListAuthRoles(string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AzureListAuthRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -8422,7 +8311,7 @@ No authorization required
 
 <a name="azurelogin"></a>
 # **AzureLogin**
-> void AzureLogin (AzureLoginRequest azureLoginRequest, string azureMountPath = null)
+> void AzureLogin (AzureLoginRequest azureLoginRequest, string azureMountPath = "azure", TimeSpan? wrapTTL = null)
 
 
 
@@ -8452,13 +8341,12 @@ namespace Example
 
             try
             {
-                apiInstance.AzureLogin(azureLoginRequest, azureMountPath);
+                apiInstance.AzureLogin(AzureLoginRequest azureLoginRequest, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AzureLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -8495,7 +8383,7 @@ No authorization required
 
 <a name="azurereadauthconfig"></a>
 # **AzureReadAuthConfig**
-> void AzureReadAuthConfig (string azureMountPath = null)
+> void AzureReadAuthConfig (string azureMountPath = "azure", TimeSpan? wrapTTL = null)
 
 
 
@@ -8524,13 +8412,12 @@ namespace Example
 
             try
             {
-                apiInstance.AzureReadAuthConfig(azureMountPath);
+                apiInstance.AzureReadAuthConfig(string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AzureReadAuthConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -8566,7 +8453,7 @@ No authorization required
 
 <a name="azurereadauthrole"></a>
 # **AzureReadAuthRole**
-> void AzureReadAuthRole (string name, string azureMountPath = null)
+> void AzureReadAuthRole (string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null)
 
 
 
@@ -8596,13 +8483,12 @@ namespace Example
 
             try
             {
-                apiInstance.AzureReadAuthRole(name, azureMountPath);
+                apiInstance.AzureReadAuthRole(string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AzureReadAuthRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -8639,7 +8525,7 @@ No authorization required
 
 <a name="azurewriteauthconfig"></a>
 # **AzureWriteAuthConfig**
-> void AzureWriteAuthConfig (AzureWriteAuthConfigRequest azureWriteAuthConfigRequest, string azureMountPath = null)
+> void AzureWriteAuthConfig (AzureWriteAuthConfigRequest azureWriteAuthConfigRequest, string azureMountPath = "azure", TimeSpan? wrapTTL = null)
 
 
 
@@ -8669,13 +8555,12 @@ namespace Example
 
             try
             {
-                apiInstance.AzureWriteAuthConfig(azureWriteAuthConfigRequest, azureMountPath);
+                apiInstance.AzureWriteAuthConfig(AzureWriteAuthConfigRequest azureWriteAuthConfigRequest, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AzureWriteAuthConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -8712,7 +8597,7 @@ No authorization required
 
 <a name="azurewriteauthrole"></a>
 # **AzureWriteAuthRole**
-> void AzureWriteAuthRole (string name, AzureWriteAuthRoleRequest azureWriteAuthRoleRequest, string azureMountPath = null)
+> void AzureWriteAuthRole (AzureWriteAuthRoleRequest azureWriteAuthRoleRequest, string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null)
 
 
 
@@ -8743,13 +8628,12 @@ namespace Example
 
             try
             {
-                apiInstance.AzureWriteAuthRole(name, azureWriteAuthRoleRequest, azureMountPath);
+                apiInstance.AzureWriteAuthRole(AzureWriteAuthRoleRequest azureWriteAuthRoleRequest, string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.AzureWriteAuthRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -8787,7 +8671,7 @@ No authorization required
 
 <a name="centrifylogin"></a>
 # **CentrifyLogin**
-> void CentrifyLogin (CentrifyLoginRequest centrifyLoginRequest, string centrifyMountPath = null)
+> void CentrifyLogin (CentrifyLoginRequest centrifyLoginRequest, string centrifyMountPath = "centrify", TimeSpan? wrapTTL = null)
 
 Log in with a username and password.
 
@@ -8818,13 +8702,12 @@ namespace Example
             try
             {
                 // Log in with a username and password.
-                apiInstance.CentrifyLogin(centrifyLoginRequest, centrifyMountPath);
+                apiInstance.CentrifyLogin(CentrifyLoginRequest centrifyLoginRequest, string centrifyMountPath = "centrify", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.CentrifyLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -8861,7 +8744,7 @@ No authorization required
 
 <a name="centrifyreadconfig"></a>
 # **CentrifyReadConfig**
-> void CentrifyReadConfig (string centrifyMountPath = null)
+> void CentrifyReadConfig (string centrifyMountPath = "centrify", TimeSpan? wrapTTL = null)
 
 This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
 
@@ -8891,13 +8774,12 @@ namespace Example
             try
             {
                 // This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
-                apiInstance.CentrifyReadConfig(centrifyMountPath);
+                apiInstance.CentrifyReadConfig(string centrifyMountPath = "centrify", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.CentrifyReadConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -8933,7 +8815,7 @@ No authorization required
 
 <a name="centrifywriteconfig"></a>
 # **CentrifyWriteConfig**
-> void CentrifyWriteConfig (CentrifyWriteConfigRequest centrifyWriteConfigRequest, string centrifyMountPath = null)
+> void CentrifyWriteConfig (CentrifyWriteConfigRequest centrifyWriteConfigRequest, string centrifyMountPath = "centrify", TimeSpan? wrapTTL = null)
 
 This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
 
@@ -8964,13 +8846,12 @@ namespace Example
             try
             {
                 // This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
-                apiInstance.CentrifyWriteConfig(centrifyWriteConfigRequest, centrifyMountPath);
+                apiInstance.CentrifyWriteConfig(CentrifyWriteConfigRequest centrifyWriteConfigRequest, string centrifyMountPath = "centrify", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.CentrifyWriteConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -9007,7 +8888,7 @@ No authorization required
 
 <a name="certificatesdelete"></a>
 # **CertificatesDelete**
-> void CertificatesDelete (string name, string certMountPath = null)
+> void CertificatesDelete (string name, string certMountPath = "cert", TimeSpan? wrapTTL = null)
 
 Manage trusted certificates used for authentication.
 
@@ -9038,13 +8919,12 @@ namespace Example
             try
             {
                 // Manage trusted certificates used for authentication.
-                apiInstance.CertificatesDelete(name, certMountPath);
+                apiInstance.CertificatesDelete(string name, string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.CertificatesDelete: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -9081,7 +8961,7 @@ No authorization required
 
 <a name="certificatesdeletecrl"></a>
 # **CertificatesDeleteCRL**
-> void CertificatesDeleteCRL (string name, string certMountPath = null)
+> void CertificatesDeleteCRL (string name, string certMountPath = "cert", TimeSpan? wrapTTL = null)
 
 Manage Certificate Revocation Lists checked during authentication.
 
@@ -9112,13 +8992,12 @@ namespace Example
             try
             {
                 // Manage Certificate Revocation Lists checked during authentication.
-                apiInstance.CertificatesDeleteCRL(name, certMountPath);
+                apiInstance.CertificatesDeleteCRL(string name, string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.CertificatesDeleteCRL: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -9155,7 +9034,7 @@ No authorization required
 
 <a name="certificateslist"></a>
 # **CertificatesList**
-> void CertificatesList (string list, string certMountPath = null)
+> void CertificatesList (string certMountPath = "cert", TimeSpan? wrapTTL = null)
 
 Manage trusted certificates used for authentication.
 
@@ -9186,13 +9065,12 @@ namespace Example
             try
             {
                 // Manage trusted certificates used for authentication.
-                apiInstance.CertificatesList(list, certMountPath);
+                apiInstance.CertificatesList(string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.CertificatesList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -9229,7 +9107,7 @@ No authorization required
 
 <a name="certificateslistcrls"></a>
 # **CertificatesListCRLs**
-> void CertificatesListCRLs (string list, string certMountPath = null)
+> void CertificatesListCRLs (string certMountPath = "cert", TimeSpan? wrapTTL = null)
 
 
 
@@ -9259,13 +9137,12 @@ namespace Example
 
             try
             {
-                apiInstance.CertificatesListCRLs(list, certMountPath);
+                apiInstance.CertificatesListCRLs(string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.CertificatesListCRLs: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -9302,7 +9179,7 @@ No authorization required
 
 <a name="certificateslogin"></a>
 # **CertificatesLogin**
-> void CertificatesLogin (CertificatesLoginRequest certificatesLoginRequest, string certMountPath = null)
+> void CertificatesLogin (CertificatesLoginRequest certificatesLoginRequest, string certMountPath = "cert", TimeSpan? wrapTTL = null)
 
 
 
@@ -9332,13 +9209,12 @@ namespace Example
 
             try
             {
-                apiInstance.CertificatesLogin(certificatesLoginRequest, certMountPath);
+                apiInstance.CertificatesLogin(CertificatesLoginRequest certificatesLoginRequest, string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.CertificatesLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -9375,7 +9251,7 @@ No authorization required
 
 <a name="certificatesread"></a>
 # **CertificatesRead**
-> void CertificatesRead (string name, string certMountPath = null)
+> void CertificatesRead (string name, string certMountPath = "cert", TimeSpan? wrapTTL = null)
 
 Manage trusted certificates used for authentication.
 
@@ -9406,13 +9282,12 @@ namespace Example
             try
             {
                 // Manage trusted certificates used for authentication.
-                apiInstance.CertificatesRead(name, certMountPath);
+                apiInstance.CertificatesRead(string name, string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.CertificatesRead: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -9449,7 +9324,7 @@ No authorization required
 
 <a name="certificatesreadcrl"></a>
 # **CertificatesReadCRL**
-> void CertificatesReadCRL (string name, string certMountPath = null)
+> void CertificatesReadCRL (string name, string certMountPath = "cert", TimeSpan? wrapTTL = null)
 
 Manage Certificate Revocation Lists checked during authentication.
 
@@ -9480,13 +9355,12 @@ namespace Example
             try
             {
                 // Manage Certificate Revocation Lists checked during authentication.
-                apiInstance.CertificatesReadCRL(name, certMountPath);
+                apiInstance.CertificatesReadCRL(string name, string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.CertificatesReadCRL: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -9523,7 +9397,7 @@ No authorization required
 
 <a name="certificatesreadconfig"></a>
 # **CertificatesReadConfig**
-> void CertificatesReadConfig (string certMountPath = null)
+> void CertificatesReadConfig (string certMountPath = "cert", TimeSpan? wrapTTL = null)
 
 
 
@@ -9552,13 +9426,12 @@ namespace Example
 
             try
             {
-                apiInstance.CertificatesReadConfig(certMountPath);
+                apiInstance.CertificatesReadConfig(string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.CertificatesReadConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -9594,7 +9467,7 @@ No authorization required
 
 <a name="certificateswrite"></a>
 # **CertificatesWrite**
-> void CertificatesWrite (string name, CertificatesWriteRequest certificatesWriteRequest, string certMountPath = null)
+> void CertificatesWrite (CertificatesWriteRequest certificatesWriteRequest, string name, string certMountPath = "cert", TimeSpan? wrapTTL = null)
 
 Manage trusted certificates used for authentication.
 
@@ -9626,13 +9499,12 @@ namespace Example
             try
             {
                 // Manage trusted certificates used for authentication.
-                apiInstance.CertificatesWrite(name, certificatesWriteRequest, certMountPath);
+                apiInstance.CertificatesWrite(CertificatesWriteRequest certificatesWriteRequest, string name, string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.CertificatesWrite: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -9670,7 +9542,7 @@ No authorization required
 
 <a name="certificateswritecrl"></a>
 # **CertificatesWriteCRL**
-> void CertificatesWriteCRL (string name, CertificatesWriteCRLRequest certificatesWriteCRLRequest, string certMountPath = null)
+> void CertificatesWriteCRL (CertificatesWriteCRLRequest certificatesWriteCRLRequest, string name, string certMountPath = "cert", TimeSpan? wrapTTL = null)
 
 Manage Certificate Revocation Lists checked during authentication.
 
@@ -9702,13 +9574,12 @@ namespace Example
             try
             {
                 // Manage Certificate Revocation Lists checked during authentication.
-                apiInstance.CertificatesWriteCRL(name, certificatesWriteCRLRequest, certMountPath);
+                apiInstance.CertificatesWriteCRL(CertificatesWriteCRLRequest certificatesWriteCRLRequest, string name, string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.CertificatesWriteCRL: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -9746,7 +9617,7 @@ No authorization required
 
 <a name="certificateswriteconfig"></a>
 # **CertificatesWriteConfig**
-> void CertificatesWriteConfig (CertificatesWriteConfigRequest certificatesWriteConfigRequest, string certMountPath = null)
+> void CertificatesWriteConfig (CertificatesWriteConfigRequest certificatesWriteConfigRequest, string certMountPath = "cert", TimeSpan? wrapTTL = null)
 
 
 
@@ -9776,13 +9647,12 @@ namespace Example
 
             try
             {
-                apiInstance.CertificatesWriteConfig(certificatesWriteConfigRequest, certMountPath);
+                apiInstance.CertificatesWriteConfig(CertificatesWriteConfigRequest certificatesWriteConfigRequest, string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.CertificatesWriteConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -9819,7 +9689,7 @@ No authorization required
 
 <a name="cloudfoundrydeleteconfig"></a>
 # **CloudFoundryDeleteConfig**
-> void CloudFoundryDeleteConfig (string cfMountPath = null)
+> void CloudFoundryDeleteConfig (string cfMountPath = "cf", TimeSpan? wrapTTL = null)
 
 
 
@@ -9848,13 +9718,12 @@ namespace Example
 
             try
             {
-                apiInstance.CloudFoundryDeleteConfig(cfMountPath);
+                apiInstance.CloudFoundryDeleteConfig(string cfMountPath = "cf", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.CloudFoundryDeleteConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -9890,7 +9759,7 @@ No authorization required
 
 <a name="cloudfoundrydeleterole"></a>
 # **CloudFoundryDeleteRole**
-> void CloudFoundryDeleteRole (string role, string cfMountPath = null)
+> void CloudFoundryDeleteRole (string role, string cfMountPath = "cf", TimeSpan? wrapTTL = null)
 
 
 
@@ -9920,13 +9789,12 @@ namespace Example
 
             try
             {
-                apiInstance.CloudFoundryDeleteRole(role, cfMountPath);
+                apiInstance.CloudFoundryDeleteRole(string role, string cfMountPath = "cf", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.CloudFoundryDeleteRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -9963,7 +9831,7 @@ No authorization required
 
 <a name="cloudfoundrylistroles"></a>
 # **CloudFoundryListRoles**
-> void CloudFoundryListRoles (string list, string cfMountPath = null)
+> void CloudFoundryListRoles (string cfMountPath = "cf", TimeSpan? wrapTTL = null)
 
 
 
@@ -9993,13 +9861,12 @@ namespace Example
 
             try
             {
-                apiInstance.CloudFoundryListRoles(list, cfMountPath);
+                apiInstance.CloudFoundryListRoles(string cfMountPath = "cf", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.CloudFoundryListRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -10036,7 +9903,7 @@ No authorization required
 
 <a name="cloudfoundrylogin"></a>
 # **CloudFoundryLogin**
-> void CloudFoundryLogin (CloudFoundryLoginRequest cloudFoundryLoginRequest, string cfMountPath = null)
+> void CloudFoundryLogin (CloudFoundryLoginRequest cloudFoundryLoginRequest, string cfMountPath = "cf", TimeSpan? wrapTTL = null)
 
 
 
@@ -10066,13 +9933,12 @@ namespace Example
 
             try
             {
-                apiInstance.CloudFoundryLogin(cloudFoundryLoginRequest, cfMountPath);
+                apiInstance.CloudFoundryLogin(CloudFoundryLoginRequest cloudFoundryLoginRequest, string cfMountPath = "cf", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.CloudFoundryLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -10109,7 +9975,7 @@ No authorization required
 
 <a name="cloudfoundryreadconfig"></a>
 # **CloudFoundryReadConfig**
-> void CloudFoundryReadConfig (string cfMountPath = null)
+> void CloudFoundryReadConfig (string cfMountPath = "cf", TimeSpan? wrapTTL = null)
 
 
 
@@ -10138,13 +10004,12 @@ namespace Example
 
             try
             {
-                apiInstance.CloudFoundryReadConfig(cfMountPath);
+                apiInstance.CloudFoundryReadConfig(string cfMountPath = "cf", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.CloudFoundryReadConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -10180,7 +10045,7 @@ No authorization required
 
 <a name="cloudfoundryreadrole"></a>
 # **CloudFoundryReadRole**
-> void CloudFoundryReadRole (string role, string cfMountPath = null)
+> void CloudFoundryReadRole (string role, string cfMountPath = "cf", TimeSpan? wrapTTL = null)
 
 
 
@@ -10210,13 +10075,12 @@ namespace Example
 
             try
             {
-                apiInstance.CloudFoundryReadRole(role, cfMountPath);
+                apiInstance.CloudFoundryReadRole(string role, string cfMountPath = "cf", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.CloudFoundryReadRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -10253,7 +10117,7 @@ No authorization required
 
 <a name="cloudfoundrywriteconfig"></a>
 # **CloudFoundryWriteConfig**
-> void CloudFoundryWriteConfig (CloudFoundryWriteConfigRequest cloudFoundryWriteConfigRequest, string cfMountPath = null)
+> void CloudFoundryWriteConfig (CloudFoundryWriteConfigRequest cloudFoundryWriteConfigRequest, string cfMountPath = "cf", TimeSpan? wrapTTL = null)
 
 
 
@@ -10283,13 +10147,12 @@ namespace Example
 
             try
             {
-                apiInstance.CloudFoundryWriteConfig(cloudFoundryWriteConfigRequest, cfMountPath);
+                apiInstance.CloudFoundryWriteConfig(CloudFoundryWriteConfigRequest cloudFoundryWriteConfigRequest, string cfMountPath = "cf", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.CloudFoundryWriteConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -10326,7 +10189,7 @@ No authorization required
 
 <a name="cloudfoundrywriterole"></a>
 # **CloudFoundryWriteRole**
-> void CloudFoundryWriteRole (string role, CloudFoundryWriteRoleRequest cloudFoundryWriteRoleRequest, string cfMountPath = null)
+> void CloudFoundryWriteRole (CloudFoundryWriteRoleRequest cloudFoundryWriteRoleRequest, string role, string cfMountPath = "cf", TimeSpan? wrapTTL = null)
 
 
 
@@ -10357,13 +10220,12 @@ namespace Example
 
             try
             {
-                apiInstance.CloudFoundryWriteRole(role, cloudFoundryWriteRoleRequest, cfMountPath);
+                apiInstance.CloudFoundryWriteRole(CloudFoundryWriteRoleRequest cloudFoundryWriteRoleRequest, string role, string cfMountPath = "cf", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.CloudFoundryWriteRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -10401,7 +10263,7 @@ No authorization required
 
 <a name="githubdeletemapteam"></a>
 # **GitHubDeleteMapTeam**
-> void GitHubDeleteMapTeam (string key, string githubMountPath = null)
+> void GitHubDeleteMapTeam (string key, string githubMountPath = "github", TimeSpan? wrapTTL = null)
 
 Read/write/delete a single teams mapping
 
@@ -10432,13 +10294,12 @@ namespace Example
             try
             {
                 // Read/write/delete a single teams mapping
-                apiInstance.GitHubDeleteMapTeam(key, githubMountPath);
+                apiInstance.GitHubDeleteMapTeam(string key, string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.GitHubDeleteMapTeam: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -10475,7 +10336,7 @@ No authorization required
 
 <a name="githubdeletemapuser"></a>
 # **GitHubDeleteMapUser**
-> void GitHubDeleteMapUser (string key, string githubMountPath = null)
+> void GitHubDeleteMapUser (string key, string githubMountPath = "github", TimeSpan? wrapTTL = null)
 
 Read/write/delete a single users mapping
 
@@ -10506,13 +10367,12 @@ namespace Example
             try
             {
                 // Read/write/delete a single users mapping
-                apiInstance.GitHubDeleteMapUser(key, githubMountPath);
+                apiInstance.GitHubDeleteMapUser(string key, string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.GitHubDeleteMapUser: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -10549,7 +10409,7 @@ No authorization required
 
 <a name="githublogin"></a>
 # **GitHubLogin**
-> void GitHubLogin (GitHubLoginRequest gitHubLoginRequest, string githubMountPath = null)
+> void GitHubLogin (GitHubLoginRequest gitHubLoginRequest, string githubMountPath = "github", TimeSpan? wrapTTL = null)
 
 
 
@@ -10579,13 +10439,12 @@ namespace Example
 
             try
             {
-                apiInstance.GitHubLogin(gitHubLoginRequest, githubMountPath);
+                apiInstance.GitHubLogin(GitHubLoginRequest gitHubLoginRequest, string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.GitHubLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -10622,7 +10481,7 @@ No authorization required
 
 <a name="githubreadconfig"></a>
 # **GitHubReadConfig**
-> void GitHubReadConfig (string githubMountPath = null)
+> void GitHubReadConfig (string githubMountPath = "github", TimeSpan? wrapTTL = null)
 
 
 
@@ -10651,13 +10510,12 @@ namespace Example
 
             try
             {
-                apiInstance.GitHubReadConfig(githubMountPath);
+                apiInstance.GitHubReadConfig(string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.GitHubReadConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -10693,7 +10551,7 @@ No authorization required
 
 <a name="githubreadmapteam"></a>
 # **GitHubReadMapTeam**
-> void GitHubReadMapTeam (string key, string githubMountPath = null)
+> void GitHubReadMapTeam (string key, string githubMountPath = "github", TimeSpan? wrapTTL = null)
 
 Read/write/delete a single teams mapping
 
@@ -10724,13 +10582,12 @@ namespace Example
             try
             {
                 // Read/write/delete a single teams mapping
-                apiInstance.GitHubReadMapTeam(key, githubMountPath);
+                apiInstance.GitHubReadMapTeam(string key, string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.GitHubReadMapTeam: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -10767,7 +10624,7 @@ No authorization required
 
 <a name="githubreadmapteams"></a>
 # **GitHubReadMapTeams**
-> void GitHubReadMapTeams (string githubMountPath = null, string list = null)
+> void GitHubReadMapTeams (string githubMountPath = "github", string list = default(string), TimeSpan? wrapTTL = null)
 
 Read mappings for teams
 
@@ -10798,13 +10655,12 @@ namespace Example
             try
             {
                 // Read mappings for teams
-                apiInstance.GitHubReadMapTeams(githubMountPath, list);
+                apiInstance.GitHubReadMapTeams(string githubMountPath = "github", string list = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.GitHubReadMapTeams: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -10841,7 +10697,7 @@ No authorization required
 
 <a name="githubreadmapuser"></a>
 # **GitHubReadMapUser**
-> void GitHubReadMapUser (string key, string githubMountPath = null)
+> void GitHubReadMapUser (string key, string githubMountPath = "github", TimeSpan? wrapTTL = null)
 
 Read/write/delete a single users mapping
 
@@ -10872,13 +10728,12 @@ namespace Example
             try
             {
                 // Read/write/delete a single users mapping
-                apiInstance.GitHubReadMapUser(key, githubMountPath);
+                apiInstance.GitHubReadMapUser(string key, string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.GitHubReadMapUser: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -10915,7 +10770,7 @@ No authorization required
 
 <a name="githubreadmapusers"></a>
 # **GitHubReadMapUsers**
-> void GitHubReadMapUsers (string githubMountPath = null, string list = null)
+> void GitHubReadMapUsers (string githubMountPath = "github", string list = default(string), TimeSpan? wrapTTL = null)
 
 Read mappings for users
 
@@ -10946,13 +10801,12 @@ namespace Example
             try
             {
                 // Read mappings for users
-                apiInstance.GitHubReadMapUsers(githubMountPath, list);
+                apiInstance.GitHubReadMapUsers(string githubMountPath = "github", string list = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.GitHubReadMapUsers: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -10989,7 +10843,7 @@ No authorization required
 
 <a name="githubwriteconfig"></a>
 # **GitHubWriteConfig**
-> void GitHubWriteConfig (GitHubWriteConfigRequest gitHubWriteConfigRequest, string githubMountPath = null)
+> void GitHubWriteConfig (GitHubWriteConfigRequest gitHubWriteConfigRequest, string githubMountPath = "github", TimeSpan? wrapTTL = null)
 
 
 
@@ -11019,13 +10873,12 @@ namespace Example
 
             try
             {
-                apiInstance.GitHubWriteConfig(gitHubWriteConfigRequest, githubMountPath);
+                apiInstance.GitHubWriteConfig(GitHubWriteConfigRequest gitHubWriteConfigRequest, string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.GitHubWriteConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -11062,7 +10915,7 @@ No authorization required
 
 <a name="githubwritemapteam"></a>
 # **GitHubWriteMapTeam**
-> void GitHubWriteMapTeam (string key, GitHubWriteMapTeamRequest gitHubWriteMapTeamRequest, string githubMountPath = null)
+> void GitHubWriteMapTeam (GitHubWriteMapTeamRequest gitHubWriteMapTeamRequest, string key, string githubMountPath = "github", TimeSpan? wrapTTL = null)
 
 Read/write/delete a single teams mapping
 
@@ -11094,13 +10947,12 @@ namespace Example
             try
             {
                 // Read/write/delete a single teams mapping
-                apiInstance.GitHubWriteMapTeam(key, gitHubWriteMapTeamRequest, githubMountPath);
+                apiInstance.GitHubWriteMapTeam(GitHubWriteMapTeamRequest gitHubWriteMapTeamRequest, string key, string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.GitHubWriteMapTeam: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -11138,7 +10990,7 @@ No authorization required
 
 <a name="githubwritemapuser"></a>
 # **GitHubWriteMapUser**
-> void GitHubWriteMapUser (string key, GitHubWriteMapUserRequest gitHubWriteMapUserRequest, string githubMountPath = null)
+> void GitHubWriteMapUser (GitHubWriteMapUserRequest gitHubWriteMapUserRequest, string key, string githubMountPath = "github", TimeSpan? wrapTTL = null)
 
 Read/write/delete a single users mapping
 
@@ -11170,13 +11022,12 @@ namespace Example
             try
             {
                 // Read/write/delete a single users mapping
-                apiInstance.GitHubWriteMapUser(key, gitHubWriteMapUserRequest, githubMountPath);
+                apiInstance.GitHubWriteMapUser(GitHubWriteMapUserRequest gitHubWriteMapUserRequest, string key, string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.GitHubWriteMapUser: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -11214,7 +11065,7 @@ No authorization required
 
 <a name="googleclouddeleterole"></a>
 # **GoogleCloudDeleteRole**
-> void GoogleCloudDeleteRole (string name, string gcpMountPath = null)
+> void GoogleCloudDeleteRole (string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
 
 Create a GCP role with associated policies and required attributes.
 
@@ -11245,13 +11096,12 @@ namespace Example
             try
             {
                 // Create a GCP role with associated policies and required attributes.
-                apiInstance.GoogleCloudDeleteRole(name, gcpMountPath);
+                apiInstance.GoogleCloudDeleteRole(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.GoogleCloudDeleteRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -11288,7 +11138,7 @@ No authorization required
 
 <a name="googlecloudlistroles"></a>
 # **GoogleCloudListRoles**
-> void GoogleCloudListRoles (string list, string gcpMountPath = null)
+> void GoogleCloudListRoles (string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
 
 Lists all the roles that are registered with Vault.
 
@@ -11319,13 +11169,12 @@ namespace Example
             try
             {
                 // Lists all the roles that are registered with Vault.
-                apiInstance.GoogleCloudListRoles(list, gcpMountPath);
+                apiInstance.GoogleCloudListRoles(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.GoogleCloudListRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -11362,7 +11211,7 @@ No authorization required
 
 <a name="googlecloudlistroles2"></a>
 # **GoogleCloudListRoles2**
-> void GoogleCloudListRoles2 (string list, string gcpMountPath = null)
+> void GoogleCloudListRoles2 (string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
 
 Lists all the roles that are registered with Vault.
 
@@ -11393,13 +11242,12 @@ namespace Example
             try
             {
                 // Lists all the roles that are registered with Vault.
-                apiInstance.GoogleCloudListRoles2(list, gcpMountPath);
+                apiInstance.GoogleCloudListRoles2(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.GoogleCloudListRoles2: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -11436,7 +11284,7 @@ No authorization required
 
 <a name="googlecloudlogin"></a>
 # **GoogleCloudLogin**
-> void GoogleCloudLogin (GoogleCloudLoginRequest googleCloudLoginRequest, string gcpMountPath = null)
+> void GoogleCloudLogin (GoogleCloudLoginRequest googleCloudLoginRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
 
 
 
@@ -11466,13 +11314,12 @@ namespace Example
 
             try
             {
-                apiInstance.GoogleCloudLogin(googleCloudLoginRequest, gcpMountPath);
+                apiInstance.GoogleCloudLogin(GoogleCloudLoginRequest googleCloudLoginRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.GoogleCloudLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -11509,7 +11356,7 @@ No authorization required
 
 <a name="googlecloudreadauthconfig"></a>
 # **GoogleCloudReadAuthConfig**
-> void GoogleCloudReadAuthConfig (string gcpMountPath = null)
+> void GoogleCloudReadAuthConfig (string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
 
 Configure credentials used to query the GCP IAM API to verify authenticating service accounts
 
@@ -11539,13 +11386,12 @@ namespace Example
             try
             {
                 // Configure credentials used to query the GCP IAM API to verify authenticating service accounts
-                apiInstance.GoogleCloudReadAuthConfig(gcpMountPath);
+                apiInstance.GoogleCloudReadAuthConfig(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.GoogleCloudReadAuthConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -11581,7 +11427,7 @@ No authorization required
 
 <a name="googlecloudreadrole"></a>
 # **GoogleCloudReadRole**
-> void GoogleCloudReadRole (string name, string gcpMountPath = null)
+> void GoogleCloudReadRole (string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
 
 Create a GCP role with associated policies and required attributes.
 
@@ -11612,13 +11458,12 @@ namespace Example
             try
             {
                 // Create a GCP role with associated policies and required attributes.
-                apiInstance.GoogleCloudReadRole(name, gcpMountPath);
+                apiInstance.GoogleCloudReadRole(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.GoogleCloudReadRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -11655,7 +11500,7 @@ No authorization required
 
 <a name="googlecloudwriteauthconfig"></a>
 # **GoogleCloudWriteAuthConfig**
-> void GoogleCloudWriteAuthConfig (GoogleCloudWriteAuthConfigRequest googleCloudWriteAuthConfigRequest, string gcpMountPath = null)
+> void GoogleCloudWriteAuthConfig (GoogleCloudWriteAuthConfigRequest googleCloudWriteAuthConfigRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
 
 Configure credentials used to query the GCP IAM API to verify authenticating service accounts
 
@@ -11686,13 +11531,12 @@ namespace Example
             try
             {
                 // Configure credentials used to query the GCP IAM API to verify authenticating service accounts
-                apiInstance.GoogleCloudWriteAuthConfig(googleCloudWriteAuthConfigRequest, gcpMountPath);
+                apiInstance.GoogleCloudWriteAuthConfig(GoogleCloudWriteAuthConfigRequest googleCloudWriteAuthConfigRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.GoogleCloudWriteAuthConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -11729,7 +11573,7 @@ No authorization required
 
 <a name="googlecloudwriterole"></a>
 # **GoogleCloudWriteRole**
-> void GoogleCloudWriteRole (string name, GoogleCloudWriteRoleRequest googleCloudWriteRoleRequest, string gcpMountPath = null)
+> void GoogleCloudWriteRole (GoogleCloudWriteRoleRequest googleCloudWriteRoleRequest, string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
 
 Create a GCP role with associated policies and required attributes.
 
@@ -11761,13 +11605,12 @@ namespace Example
             try
             {
                 // Create a GCP role with associated policies and required attributes.
-                apiInstance.GoogleCloudWriteRole(name, googleCloudWriteRoleRequest, gcpMountPath);
+                apiInstance.GoogleCloudWriteRole(GoogleCloudWriteRoleRequest googleCloudWriteRoleRequest, string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.GoogleCloudWriteRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -11805,7 +11648,7 @@ No authorization required
 
 <a name="googlecloudwriterolelabels"></a>
 # **GoogleCloudWriteRoleLabels**
-> void GoogleCloudWriteRoleLabels (string name, GoogleCloudWriteRoleLabelsRequest googleCloudWriteRoleLabelsRequest, string gcpMountPath = null)
+> void GoogleCloudWriteRoleLabels (GoogleCloudWriteRoleLabelsRequest googleCloudWriteRoleLabelsRequest, string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
 
 Add or remove labels for an existing 'gce' role
 
@@ -11837,13 +11680,12 @@ namespace Example
             try
             {
                 // Add or remove labels for an existing 'gce' role
-                apiInstance.GoogleCloudWriteRoleLabels(name, googleCloudWriteRoleLabelsRequest, gcpMountPath);
+                apiInstance.GoogleCloudWriteRoleLabels(GoogleCloudWriteRoleLabelsRequest googleCloudWriteRoleLabelsRequest, string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.GoogleCloudWriteRoleLabels: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -11881,7 +11723,7 @@ No authorization required
 
 <a name="googlecloudwriteroleserviceaccounts"></a>
 # **GoogleCloudWriteRoleServiceAccounts**
-> void GoogleCloudWriteRoleServiceAccounts (string name, GoogleCloudWriteRoleServiceAccountsRequest googleCloudWriteRoleServiceAccountsRequest, string gcpMountPath = null)
+> void GoogleCloudWriteRoleServiceAccounts (GoogleCloudWriteRoleServiceAccountsRequest googleCloudWriteRoleServiceAccountsRequest, string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
 
 Add or remove service accounts for an existing `iam` role
 
@@ -11913,13 +11755,12 @@ namespace Example
             try
             {
                 // Add or remove service accounts for an existing `iam` role
-                apiInstance.GoogleCloudWriteRoleServiceAccounts(name, googleCloudWriteRoleServiceAccountsRequest, gcpMountPath);
+                apiInstance.GoogleCloudWriteRoleServiceAccounts(GoogleCloudWriteRoleServiceAccountsRequest googleCloudWriteRoleServiceAccountsRequest, string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.GoogleCloudWriteRoleServiceAccounts: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -11957,7 +11798,7 @@ No authorization required
 
 <a name="jwtdeleterole"></a>
 # **JWTDeleteRole**
-> void JWTDeleteRole (string name, string jwtMountPath = null)
+> void JWTDeleteRole (string name, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
 
 Delete an existing role.
 
@@ -11988,13 +11829,12 @@ namespace Example
             try
             {
                 // Delete an existing role.
-                apiInstance.JWTDeleteRole(name, jwtMountPath);
+                apiInstance.JWTDeleteRole(string name, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.JWTDeleteRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -12031,7 +11871,7 @@ No authorization required
 
 <a name="jwtlistroles"></a>
 # **JWTListRoles**
-> void JWTListRoles (string list, string jwtMountPath = null)
+> void JWTListRoles (string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
 
 Lists all the roles registered with the backend.
 
@@ -12064,13 +11904,12 @@ namespace Example
             try
             {
                 // Lists all the roles registered with the backend.
-                apiInstance.JWTListRoles(list, jwtMountPath);
+                apiInstance.JWTListRoles(string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.JWTListRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -12107,7 +11946,7 @@ No authorization required
 
 <a name="jwtlogin"></a>
 # **JWTLogin**
-> void JWTLogin (JWTLoginRequest jWTLoginRequest, string jwtMountPath = null)
+> void JWTLogin (JWTLoginRequest jWTLoginRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
 
 Authenticates to Vault using a JWT (or OIDC) token.
 
@@ -12138,13 +11977,12 @@ namespace Example
             try
             {
                 // Authenticates to Vault using a JWT (or OIDC) token.
-                apiInstance.JWTLogin(jWTLoginRequest, jwtMountPath);
+                apiInstance.JWTLogin(JWTLoginRequest jWTLoginRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.JWTLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -12181,7 +12019,7 @@ No authorization required
 
 <a name="jwtreadconfig"></a>
 # **JWTReadConfig**
-> void JWTReadConfig (string jwtMountPath = null)
+> void JWTReadConfig (string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
 
 Read the current JWT authentication backend configuration.
 
@@ -12211,13 +12049,12 @@ namespace Example
             try
             {
                 // Read the current JWT authentication backend configuration.
-                apiInstance.JWTReadConfig(jwtMountPath);
+                apiInstance.JWTReadConfig(string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.JWTReadConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -12253,7 +12090,7 @@ No authorization required
 
 <a name="jwtreadoidccallback"></a>
 # **JWTReadOIDCCallback**
-> void JWTReadOIDCCallback (string jwtMountPath = null)
+> void JWTReadOIDCCallback (string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
 
 Callback endpoint to complete an OIDC login.
 
@@ -12283,13 +12120,12 @@ namespace Example
             try
             {
                 // Callback endpoint to complete an OIDC login.
-                apiInstance.JWTReadOIDCCallback(jwtMountPath);
+                apiInstance.JWTReadOIDCCallback(string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.JWTReadOIDCCallback: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -12325,7 +12161,7 @@ No authorization required
 
 <a name="jwtreadrole"></a>
 # **JWTReadRole**
-> void JWTReadRole (string name, string jwtMountPath = null)
+> void JWTReadRole (string name, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
 
 Read an existing role.
 
@@ -12356,13 +12192,12 @@ namespace Example
             try
             {
                 // Read an existing role.
-                apiInstance.JWTReadRole(name, jwtMountPath);
+                apiInstance.JWTReadRole(string name, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.JWTReadRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -12399,7 +12234,7 @@ No authorization required
 
 <a name="jwtwriteconfig"></a>
 # **JWTWriteConfig**
-> void JWTWriteConfig (JWTWriteConfigRequest jWTWriteConfigRequest, string jwtMountPath = null)
+> void JWTWriteConfig (JWTWriteConfigRequest jWTWriteConfigRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
 
 Configure the JWT authentication backend.
 
@@ -12432,13 +12267,12 @@ namespace Example
             try
             {
                 // Configure the JWT authentication backend.
-                apiInstance.JWTWriteConfig(jWTWriteConfigRequest, jwtMountPath);
+                apiInstance.JWTWriteConfig(JWTWriteConfigRequest jWTWriteConfigRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.JWTWriteConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -12475,7 +12309,7 @@ No authorization required
 
 <a name="jwtwriteoidcauthurl"></a>
 # **JWTWriteOIDCAuthURL**
-> void JWTWriteOIDCAuthURL (JWTWriteOIDCAuthURLRequest jWTWriteOIDCAuthURLRequest, string jwtMountPath = null)
+> void JWTWriteOIDCAuthURL (JWTWriteOIDCAuthURLRequest jWTWriteOIDCAuthURLRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
 
 Request an authorization URL to start an OIDC login flow.
 
@@ -12506,13 +12340,12 @@ namespace Example
             try
             {
                 // Request an authorization URL to start an OIDC login flow.
-                apiInstance.JWTWriteOIDCAuthURL(jWTWriteOIDCAuthURLRequest, jwtMountPath);
+                apiInstance.JWTWriteOIDCAuthURL(JWTWriteOIDCAuthURLRequest jWTWriteOIDCAuthURLRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.JWTWriteOIDCAuthURL: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -12549,7 +12382,7 @@ No authorization required
 
 <a name="jwtwriteoidccallback"></a>
 # **JWTWriteOIDCCallback**
-> void JWTWriteOIDCCallback (JWTWriteOIDCCallbackRequest jWTWriteOIDCCallbackRequest, string jwtMountPath = null)
+> void JWTWriteOIDCCallback (JWTWriteOIDCCallbackRequest jWTWriteOIDCCallbackRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
 
 Callback endpoint to handle form_posts.
 
@@ -12580,13 +12413,12 @@ namespace Example
             try
             {
                 // Callback endpoint to handle form_posts.
-                apiInstance.JWTWriteOIDCCallback(jWTWriteOIDCCallbackRequest, jwtMountPath);
+                apiInstance.JWTWriteOIDCCallback(JWTWriteOIDCCallbackRequest jWTWriteOIDCCallbackRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.JWTWriteOIDCCallback: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -12623,7 +12455,7 @@ No authorization required
 
 <a name="jwtwriterole"></a>
 # **JWTWriteRole**
-> void JWTWriteRole (string name, JWTWriteRoleRequest jWTWriteRoleRequest, string jwtMountPath = null)
+> void JWTWriteRole (JWTWriteRoleRequest jWTWriteRoleRequest, string name, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
 
 Register an role with the backend.
 
@@ -12657,13 +12489,12 @@ namespace Example
             try
             {
                 // Register an role with the backend.
-                apiInstance.JWTWriteRole(name, jWTWriteRoleRequest, jwtMountPath);
+                apiInstance.JWTWriteRole(JWTWriteRoleRequest jWTWriteRoleRequest, string name, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.JWTWriteRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -12701,7 +12532,7 @@ No authorization required
 
 <a name="kerberosdeletegroup"></a>
 # **KerberosDeleteGroup**
-> void KerberosDeleteGroup (string name, string kerberosMountPath = null)
+> void KerberosDeleteGroup (string name, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null)
 
 
 
@@ -12731,13 +12562,12 @@ namespace Example
 
             try
             {
-                apiInstance.KerberosDeleteGroup(name, kerberosMountPath);
+                apiInstance.KerberosDeleteGroup(string name, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.KerberosDeleteGroup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -12774,7 +12604,7 @@ No authorization required
 
 <a name="kerberoslistgroups"></a>
 # **KerberosListGroups**
-> void KerberosListGroups (string list, string kerberosMountPath = null)
+> void KerberosListGroups (string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null)
 
 
 
@@ -12804,13 +12634,12 @@ namespace Example
 
             try
             {
-                apiInstance.KerberosListGroups(list, kerberosMountPath);
+                apiInstance.KerberosListGroups(string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.KerberosListGroups: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -12847,7 +12676,7 @@ No authorization required
 
 <a name="kerberoslogin"></a>
 # **KerberosLogin**
-> void KerberosLogin (KerberosLoginRequest kerberosLoginRequest, string kerberosMountPath = null)
+> void KerberosLogin (KerberosLoginRequest kerberosLoginRequest, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null)
 
 
 
@@ -12877,13 +12706,12 @@ namespace Example
 
             try
             {
-                apiInstance.KerberosLogin(kerberosLoginRequest, kerberosMountPath);
+                apiInstance.KerberosLogin(KerberosLoginRequest kerberosLoginRequest, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.KerberosLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -12920,7 +12748,7 @@ No authorization required
 
 <a name="kerberosreadconfig"></a>
 # **KerberosReadConfig**
-> void KerberosReadConfig (string kerberosMountPath = null)
+> void KerberosReadConfig (string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null)
 
 
 
@@ -12949,13 +12777,12 @@ namespace Example
 
             try
             {
-                apiInstance.KerberosReadConfig(kerberosMountPath);
+                apiInstance.KerberosReadConfig(string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.KerberosReadConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -12991,7 +12818,7 @@ No authorization required
 
 <a name="kerberosreadgroup"></a>
 # **KerberosReadGroup**
-> void KerberosReadGroup (string name, string kerberosMountPath = null)
+> void KerberosReadGroup (string name, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null)
 
 
 
@@ -13021,13 +12848,12 @@ namespace Example
 
             try
             {
-                apiInstance.KerberosReadGroup(name, kerberosMountPath);
+                apiInstance.KerberosReadGroup(string name, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.KerberosReadGroup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -13064,7 +12890,7 @@ No authorization required
 
 <a name="kerberosreadldapconfig"></a>
 # **KerberosReadLDAPConfig**
-> void KerberosReadLDAPConfig (string kerberosMountPath = null)
+> void KerberosReadLDAPConfig (string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null)
 
 
 
@@ -13093,13 +12919,12 @@ namespace Example
 
             try
             {
-                apiInstance.KerberosReadLDAPConfig(kerberosMountPath);
+                apiInstance.KerberosReadLDAPConfig(string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.KerberosReadLDAPConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -13135,7 +12960,7 @@ No authorization required
 
 <a name="kerberoswriteconfig"></a>
 # **KerberosWriteConfig**
-> void KerberosWriteConfig (KerberosWriteConfigRequest kerberosWriteConfigRequest, string kerberosMountPath = null)
+> void KerberosWriteConfig (KerberosWriteConfigRequest kerberosWriteConfigRequest, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null)
 
 
 
@@ -13165,13 +12990,12 @@ namespace Example
 
             try
             {
-                apiInstance.KerberosWriteConfig(kerberosWriteConfigRequest, kerberosMountPath);
+                apiInstance.KerberosWriteConfig(KerberosWriteConfigRequest kerberosWriteConfigRequest, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.KerberosWriteConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -13208,7 +13032,7 @@ No authorization required
 
 <a name="kerberoswritegroup"></a>
 # **KerberosWriteGroup**
-> void KerberosWriteGroup (string name, KerberosWriteGroupRequest kerberosWriteGroupRequest, string kerberosMountPath = null)
+> void KerberosWriteGroup (KerberosWriteGroupRequest kerberosWriteGroupRequest, string name, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null)
 
 
 
@@ -13239,13 +13063,12 @@ namespace Example
 
             try
             {
-                apiInstance.KerberosWriteGroup(name, kerberosWriteGroupRequest, kerberosMountPath);
+                apiInstance.KerberosWriteGroup(KerberosWriteGroupRequest kerberosWriteGroupRequest, string name, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.KerberosWriteGroup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -13283,7 +13106,7 @@ No authorization required
 
 <a name="kerberoswriteldapconfig"></a>
 # **KerberosWriteLDAPConfig**
-> void KerberosWriteLDAPConfig (KerberosWriteLDAPConfigRequest kerberosWriteLDAPConfigRequest, string kerberosMountPath = null)
+> void KerberosWriteLDAPConfig (KerberosWriteLDAPConfigRequest kerberosWriteLDAPConfigRequest, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null)
 
 
 
@@ -13313,13 +13136,12 @@ namespace Example
 
             try
             {
-                apiInstance.KerberosWriteLDAPConfig(kerberosWriteLDAPConfigRequest, kerberosMountPath);
+                apiInstance.KerberosWriteLDAPConfig(KerberosWriteLDAPConfigRequest kerberosWriteLDAPConfigRequest, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.KerberosWriteLDAPConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -13356,7 +13178,7 @@ No authorization required
 
 <a name="kubernetesdeleteauthrole"></a>
 # **KubernetesDeleteAuthRole**
-> void KubernetesDeleteAuthRole (string name, string kubernetesMountPath = null)
+> void KubernetesDeleteAuthRole (string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
 
 Register an role with the backend.
 
@@ -13387,13 +13209,12 @@ namespace Example
             try
             {
                 // Register an role with the backend.
-                apiInstance.KubernetesDeleteAuthRole(name, kubernetesMountPath);
+                apiInstance.KubernetesDeleteAuthRole(string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.KubernetesDeleteAuthRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -13430,7 +13251,7 @@ No authorization required
 
 <a name="kuberneteslistauthroles"></a>
 # **KubernetesListAuthRoles**
-> void KubernetesListAuthRoles (string list, string kubernetesMountPath = null)
+> void KubernetesListAuthRoles (string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
 
 Lists all the roles registered with the backend.
 
@@ -13461,13 +13282,12 @@ namespace Example
             try
             {
                 // Lists all the roles registered with the backend.
-                apiInstance.KubernetesListAuthRoles(list, kubernetesMountPath);
+                apiInstance.KubernetesListAuthRoles(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.KubernetesListAuthRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -13504,7 +13324,7 @@ No authorization required
 
 <a name="kuberneteslogin"></a>
 # **KubernetesLogin**
-> void KubernetesLogin (KubernetesLoginRequest kubernetesLoginRequest, string kubernetesMountPath = null)
+> void KubernetesLogin (KubernetesLoginRequest kubernetesLoginRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
 
 Authenticates Kubernetes service accounts with Vault.
 
@@ -13535,13 +13355,12 @@ namespace Example
             try
             {
                 // Authenticates Kubernetes service accounts with Vault.
-                apiInstance.KubernetesLogin(kubernetesLoginRequest, kubernetesMountPath);
+                apiInstance.KubernetesLogin(KubernetesLoginRequest kubernetesLoginRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.KubernetesLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -13578,7 +13397,7 @@ No authorization required
 
 <a name="kubernetesreadauthconfig"></a>
 # **KubernetesReadAuthConfig**
-> void KubernetesReadAuthConfig (string kubernetesMountPath = null)
+> void KubernetesReadAuthConfig (string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
 
 Configures the JWT Public Key and Kubernetes API information.
 
@@ -13608,13 +13427,12 @@ namespace Example
             try
             {
                 // Configures the JWT Public Key and Kubernetes API information.
-                apiInstance.KubernetesReadAuthConfig(kubernetesMountPath);
+                apiInstance.KubernetesReadAuthConfig(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.KubernetesReadAuthConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -13650,7 +13468,7 @@ No authorization required
 
 <a name="kubernetesreadauthrole"></a>
 # **KubernetesReadAuthRole**
-> void KubernetesReadAuthRole (string name, string kubernetesMountPath = null)
+> void KubernetesReadAuthRole (string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
 
 Register an role with the backend.
 
@@ -13681,13 +13499,12 @@ namespace Example
             try
             {
                 // Register an role with the backend.
-                apiInstance.KubernetesReadAuthRole(name, kubernetesMountPath);
+                apiInstance.KubernetesReadAuthRole(string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.KubernetesReadAuthRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -13724,7 +13541,7 @@ No authorization required
 
 <a name="kuberneteswriteauthconfig"></a>
 # **KubernetesWriteAuthConfig**
-> void KubernetesWriteAuthConfig (KubernetesWriteAuthConfigRequest kubernetesWriteAuthConfigRequest, string kubernetesMountPath = null)
+> void KubernetesWriteAuthConfig (KubernetesWriteAuthConfigRequest kubernetesWriteAuthConfigRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
 
 Configures the JWT Public Key and Kubernetes API information.
 
@@ -13755,13 +13572,12 @@ namespace Example
             try
             {
                 // Configures the JWT Public Key and Kubernetes API information.
-                apiInstance.KubernetesWriteAuthConfig(kubernetesWriteAuthConfigRequest, kubernetesMountPath);
+                apiInstance.KubernetesWriteAuthConfig(KubernetesWriteAuthConfigRequest kubernetesWriteAuthConfigRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.KubernetesWriteAuthConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -13798,7 +13614,7 @@ No authorization required
 
 <a name="kuberneteswriteauthrole"></a>
 # **KubernetesWriteAuthRole**
-> void KubernetesWriteAuthRole (string name, KubernetesWriteAuthRoleRequest kubernetesWriteAuthRoleRequest, string kubernetesMountPath = null)
+> void KubernetesWriteAuthRole (KubernetesWriteAuthRoleRequest kubernetesWriteAuthRoleRequest, string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
 
 Register an role with the backend.
 
@@ -13830,13 +13646,12 @@ namespace Example
             try
             {
                 // Register an role with the backend.
-                apiInstance.KubernetesWriteAuthRole(name, kubernetesWriteAuthRoleRequest, kubernetesMountPath);
+                apiInstance.KubernetesWriteAuthRole(KubernetesWriteAuthRoleRequest kubernetesWriteAuthRoleRequest, string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.KubernetesWriteAuthRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -13874,7 +13689,7 @@ No authorization required
 
 <a name="ldapdeletegroup"></a>
 # **LDAPDeleteGroup**
-> void LDAPDeleteGroup (string name, string ldapMountPath = null)
+> void LDAPDeleteGroup (string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
 
 Manage additional groups for users allowed to authenticate.
 
@@ -13905,13 +13720,12 @@ namespace Example
             try
             {
                 // Manage additional groups for users allowed to authenticate.
-                apiInstance.LDAPDeleteGroup(name, ldapMountPath);
+                apiInstance.LDAPDeleteGroup(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.LDAPDeleteGroup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -13948,7 +13762,7 @@ No authorization required
 
 <a name="ldapdeleteuser"></a>
 # **LDAPDeleteUser**
-> void LDAPDeleteUser (string name, string ldapMountPath = null)
+> void LDAPDeleteUser (string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
 
@@ -13979,13 +13793,12 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.LDAPDeleteUser(name, ldapMountPath);
+                apiInstance.LDAPDeleteUser(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.LDAPDeleteUser: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -14022,7 +13835,7 @@ No authorization required
 
 <a name="ldaplistgroups"></a>
 # **LDAPListGroups**
-> void LDAPListGroups (string list, string ldapMountPath = null)
+> void LDAPListGroups (string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
 
 Manage additional groups for users allowed to authenticate.
 
@@ -14053,13 +13866,12 @@ namespace Example
             try
             {
                 // Manage additional groups for users allowed to authenticate.
-                apiInstance.LDAPListGroups(list, ldapMountPath);
+                apiInstance.LDAPListGroups(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.LDAPListGroups: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -14096,7 +13908,7 @@ No authorization required
 
 <a name="ldaplistusers"></a>
 # **LDAPListUsers**
-> void LDAPListUsers (string list, string ldapMountPath = null)
+> void LDAPListUsers (string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
 
@@ -14127,13 +13939,12 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.LDAPListUsers(list, ldapMountPath);
+                apiInstance.LDAPListUsers(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.LDAPListUsers: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -14170,7 +13981,7 @@ No authorization required
 
 <a name="ldaplogin"></a>
 # **LDAPLogin**
-> void LDAPLogin (string username, LDAPLoginRequest lDAPLoginRequest, string ldapMountPath = null)
+> void LDAPLogin (LDAPLoginRequest lDAPLoginRequest, string username, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
 
 Log in with a username and password.
 
@@ -14202,13 +14013,12 @@ namespace Example
             try
             {
                 // Log in with a username and password.
-                apiInstance.LDAPLogin(username, lDAPLoginRequest, ldapMountPath);
+                apiInstance.LDAPLogin(LDAPLoginRequest lDAPLoginRequest, string username, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.LDAPLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -14246,7 +14056,7 @@ No authorization required
 
 <a name="ldapreadauthconfig"></a>
 # **LDAPReadAuthConfig**
-> void LDAPReadAuthConfig (string ldapMountPath = null)
+> void LDAPReadAuthConfig (string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
 
 Configure the LDAP server to connect to, along with its options.
 
@@ -14276,13 +14086,12 @@ namespace Example
             try
             {
                 // Configure the LDAP server to connect to, along with its options.
-                apiInstance.LDAPReadAuthConfig(ldapMountPath);
+                apiInstance.LDAPReadAuthConfig(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.LDAPReadAuthConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -14318,7 +14127,7 @@ No authorization required
 
 <a name="ldapreadgroup"></a>
 # **LDAPReadGroup**
-> void LDAPReadGroup (string name, string ldapMountPath = null)
+> void LDAPReadGroup (string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
 
 Manage additional groups for users allowed to authenticate.
 
@@ -14349,13 +14158,12 @@ namespace Example
             try
             {
                 // Manage additional groups for users allowed to authenticate.
-                apiInstance.LDAPReadGroup(name, ldapMountPath);
+                apiInstance.LDAPReadGroup(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.LDAPReadGroup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -14392,7 +14200,7 @@ No authorization required
 
 <a name="ldapreaduser"></a>
 # **LDAPReadUser**
-> void LDAPReadUser (string name, string ldapMountPath = null)
+> void LDAPReadUser (string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
 
@@ -14423,13 +14231,12 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.LDAPReadUser(name, ldapMountPath);
+                apiInstance.LDAPReadUser(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.LDAPReadUser: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -14466,7 +14273,7 @@ No authorization required
 
 <a name="ldapwriteauthconfig"></a>
 # **LDAPWriteAuthConfig**
-> void LDAPWriteAuthConfig (LDAPWriteAuthConfigRequest lDAPWriteAuthConfigRequest, string ldapMountPath = null)
+> void LDAPWriteAuthConfig (LDAPWriteAuthConfigRequest lDAPWriteAuthConfigRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
 
 Configure the LDAP server to connect to, along with its options.
 
@@ -14497,13 +14304,12 @@ namespace Example
             try
             {
                 // Configure the LDAP server to connect to, along with its options.
-                apiInstance.LDAPWriteAuthConfig(lDAPWriteAuthConfigRequest, ldapMountPath);
+                apiInstance.LDAPWriteAuthConfig(LDAPWriteAuthConfigRequest lDAPWriteAuthConfigRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.LDAPWriteAuthConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -14540,7 +14346,7 @@ No authorization required
 
 <a name="ldapwritegroup"></a>
 # **LDAPWriteGroup**
-> void LDAPWriteGroup (string name, LDAPWriteGroupRequest lDAPWriteGroupRequest, string ldapMountPath = null)
+> void LDAPWriteGroup (LDAPWriteGroupRequest lDAPWriteGroupRequest, string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
 
 Manage additional groups for users allowed to authenticate.
 
@@ -14572,13 +14378,12 @@ namespace Example
             try
             {
                 // Manage additional groups for users allowed to authenticate.
-                apiInstance.LDAPWriteGroup(name, lDAPWriteGroupRequest, ldapMountPath);
+                apiInstance.LDAPWriteGroup(LDAPWriteGroupRequest lDAPWriteGroupRequest, string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.LDAPWriteGroup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -14616,7 +14421,7 @@ No authorization required
 
 <a name="ldapwriteuser"></a>
 # **LDAPWriteUser**
-> void LDAPWriteUser (string name, LDAPWriteUserRequest lDAPWriteUserRequest, string ldapMountPath = null)
+> void LDAPWriteUser (LDAPWriteUserRequest lDAPWriteUserRequest, string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
 
@@ -14648,13 +14453,12 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.LDAPWriteUser(name, lDAPWriteUserRequest, ldapMountPath);
+                apiInstance.LDAPWriteUser(LDAPWriteUserRequest lDAPWriteUserRequest, string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.LDAPWriteUser: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -14692,7 +14496,7 @@ No authorization required
 
 <a name="ocideleteconfig"></a>
 # **OCIDeleteConfig**
-> void OCIDeleteConfig (string ociMountPath = null)
+> void OCIDeleteConfig (string ociMountPath = "oci", TimeSpan? wrapTTL = null)
 
 Manages the configuration for the Vault Auth Plugin.
 
@@ -14722,13 +14526,12 @@ namespace Example
             try
             {
                 // Manages the configuration for the Vault Auth Plugin.
-                apiInstance.OCIDeleteConfig(ociMountPath);
+                apiInstance.OCIDeleteConfig(string ociMountPath = "oci", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OCIDeleteConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -14764,7 +14567,7 @@ No authorization required
 
 <a name="ocideleterole"></a>
 # **OCIDeleteRole**
-> void OCIDeleteRole (string role, string ociMountPath = null)
+> void OCIDeleteRole (string role, string ociMountPath = "oci", TimeSpan? wrapTTL = null)
 
 Create a role and associate policies to it.
 
@@ -14795,13 +14598,12 @@ namespace Example
             try
             {
                 // Create a role and associate policies to it.
-                apiInstance.OCIDeleteRole(role, ociMountPath);
+                apiInstance.OCIDeleteRole(string role, string ociMountPath = "oci", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OCIDeleteRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -14838,7 +14640,7 @@ No authorization required
 
 <a name="ocilistroles"></a>
 # **OCIListRoles**
-> void OCIListRoles (string list, string ociMountPath = null)
+> void OCIListRoles (string ociMountPath = "oci", TimeSpan? wrapTTL = null)
 
 Lists all the roles that are registered with Vault.
 
@@ -14869,13 +14671,12 @@ namespace Example
             try
             {
                 // Lists all the roles that are registered with Vault.
-                apiInstance.OCIListRoles(list, ociMountPath);
+                apiInstance.OCIListRoles(string ociMountPath = "oci", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OCIListRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -14912,7 +14713,7 @@ No authorization required
 
 <a name="ociloginwithrole"></a>
 # **OCILoginWithRole**
-> void OCILoginWithRole (string role, OCILoginWithRoleRequest oCILoginWithRoleRequest, string ociMountPath = null)
+> void OCILoginWithRole (OCILoginWithRoleRequest oCILoginWithRoleRequest, string role, string ociMountPath = "oci", TimeSpan? wrapTTL = null)
 
 Authenticates to Vault using OCI credentials
 
@@ -14944,13 +14745,12 @@ namespace Example
             try
             {
                 // Authenticates to Vault using OCI credentials
-                apiInstance.OCILoginWithRole(role, oCILoginWithRoleRequest, ociMountPath);
+                apiInstance.OCILoginWithRole(OCILoginWithRoleRequest oCILoginWithRoleRequest, string role, string ociMountPath = "oci", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OCILoginWithRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -14988,7 +14788,7 @@ No authorization required
 
 <a name="ocireadconfig"></a>
 # **OCIReadConfig**
-> void OCIReadConfig (string ociMountPath = null)
+> void OCIReadConfig (string ociMountPath = "oci", TimeSpan? wrapTTL = null)
 
 Manages the configuration for the Vault Auth Plugin.
 
@@ -15018,13 +14818,12 @@ namespace Example
             try
             {
                 // Manages the configuration for the Vault Auth Plugin.
-                apiInstance.OCIReadConfig(ociMountPath);
+                apiInstance.OCIReadConfig(string ociMountPath = "oci", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OCIReadConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -15060,7 +14859,7 @@ No authorization required
 
 <a name="ocireadrole"></a>
 # **OCIReadRole**
-> void OCIReadRole (string role, string ociMountPath = null)
+> void OCIReadRole (string role, string ociMountPath = "oci", TimeSpan? wrapTTL = null)
 
 Create a role and associate policies to it.
 
@@ -15091,13 +14890,12 @@ namespace Example
             try
             {
                 // Create a role and associate policies to it.
-                apiInstance.OCIReadRole(role, ociMountPath);
+                apiInstance.OCIReadRole(string role, string ociMountPath = "oci", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OCIReadRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -15134,7 +14932,7 @@ No authorization required
 
 <a name="ociwriteconfig"></a>
 # **OCIWriteConfig**
-> void OCIWriteConfig (OCIWriteConfigRequest oCIWriteConfigRequest, string ociMountPath = null)
+> void OCIWriteConfig (OCIWriteConfigRequest oCIWriteConfigRequest, string ociMountPath = "oci", TimeSpan? wrapTTL = null)
 
 Manages the configuration for the Vault Auth Plugin.
 
@@ -15165,13 +14963,12 @@ namespace Example
             try
             {
                 // Manages the configuration for the Vault Auth Plugin.
-                apiInstance.OCIWriteConfig(oCIWriteConfigRequest, ociMountPath);
+                apiInstance.OCIWriteConfig(OCIWriteConfigRequest oCIWriteConfigRequest, string ociMountPath = "oci", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OCIWriteConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -15208,7 +15005,7 @@ No authorization required
 
 <a name="ociwriterole"></a>
 # **OCIWriteRole**
-> void OCIWriteRole (string role, OCIWriteRoleRequest oCIWriteRoleRequest, string ociMountPath = null)
+> void OCIWriteRole (OCIWriteRoleRequest oCIWriteRoleRequest, string role, string ociMountPath = "oci", TimeSpan? wrapTTL = null)
 
 Create a role and associate policies to it.
 
@@ -15240,13 +15037,12 @@ namespace Example
             try
             {
                 // Create a role and associate policies to it.
-                apiInstance.OCIWriteRole(role, oCIWriteRoleRequest, ociMountPath);
+                apiInstance.OCIWriteRole(OCIWriteRoleRequest oCIWriteRoleRequest, string role, string ociMountPath = "oci", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OCIWriteRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -15284,7 +15080,7 @@ No authorization required
 
 <a name="oidcdeleteauthrole"></a>
 # **OIDCDeleteAuthRole**
-> void OIDCDeleteAuthRole (string name, string oidcMountPath = null)
+> void OIDCDeleteAuthRole (string name, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null)
 
 Delete an existing role.
 
@@ -15315,13 +15111,12 @@ namespace Example
             try
             {
                 // Delete an existing role.
-                apiInstance.OIDCDeleteAuthRole(name, oidcMountPath);
+                apiInstance.OIDCDeleteAuthRole(string name, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OIDCDeleteAuthRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -15358,7 +15153,7 @@ No authorization required
 
 <a name="oidclistauthroles"></a>
 # **OIDCListAuthRoles**
-> void OIDCListAuthRoles (string list, string oidcMountPath = null)
+> void OIDCListAuthRoles (string oidcMountPath = "oidc", TimeSpan? wrapTTL = null)
 
 Lists all the roles registered with the backend.
 
@@ -15391,13 +15186,12 @@ namespace Example
             try
             {
                 // Lists all the roles registered with the backend.
-                apiInstance.OIDCListAuthRoles(list, oidcMountPath);
+                apiInstance.OIDCListAuthRoles(string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OIDCListAuthRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -15434,7 +15228,7 @@ No authorization required
 
 <a name="oidclogin"></a>
 # **OIDCLogin**
-> void OIDCLogin (OIDCLoginRequest oIDCLoginRequest, string oidcMountPath = null)
+> void OIDCLogin (OIDCLoginRequest oIDCLoginRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null)
 
 Authenticates to Vault using a JWT (or OIDC) token.
 
@@ -15465,13 +15259,12 @@ namespace Example
             try
             {
                 // Authenticates to Vault using a JWT (or OIDC) token.
-                apiInstance.OIDCLogin(oIDCLoginRequest, oidcMountPath);
+                apiInstance.OIDCLogin(OIDCLoginRequest oIDCLoginRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OIDCLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -15508,7 +15301,7 @@ No authorization required
 
 <a name="oidcreadauthconfig"></a>
 # **OIDCReadAuthConfig**
-> void OIDCReadAuthConfig (string oidcMountPath = null)
+> void OIDCReadAuthConfig (string oidcMountPath = "oidc", TimeSpan? wrapTTL = null)
 
 Read the current JWT authentication backend configuration.
 
@@ -15538,13 +15331,12 @@ namespace Example
             try
             {
                 // Read the current JWT authentication backend configuration.
-                apiInstance.OIDCReadAuthConfig(oidcMountPath);
+                apiInstance.OIDCReadAuthConfig(string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OIDCReadAuthConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -15580,7 +15372,7 @@ No authorization required
 
 <a name="oidcreadauthrole"></a>
 # **OIDCReadAuthRole**
-> void OIDCReadAuthRole (string name, string oidcMountPath = null)
+> void OIDCReadAuthRole (string name, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null)
 
 Read an existing role.
 
@@ -15611,13 +15403,12 @@ namespace Example
             try
             {
                 // Read an existing role.
-                apiInstance.OIDCReadAuthRole(name, oidcMountPath);
+                apiInstance.OIDCReadAuthRole(string name, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OIDCReadAuthRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -15654,7 +15445,7 @@ No authorization required
 
 <a name="oidcreadcallback"></a>
 # **OIDCReadCallback**
-> void OIDCReadCallback (string oidcMountPath = null)
+> void OIDCReadCallback (string oidcMountPath = "oidc", TimeSpan? wrapTTL = null)
 
 Callback endpoint to complete an OIDC login.
 
@@ -15684,13 +15475,12 @@ namespace Example
             try
             {
                 // Callback endpoint to complete an OIDC login.
-                apiInstance.OIDCReadCallback(oidcMountPath);
+                apiInstance.OIDCReadCallback(string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OIDCReadCallback: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -15726,7 +15516,7 @@ No authorization required
 
 <a name="oidcwriteauthconfig"></a>
 # **OIDCWriteAuthConfig**
-> void OIDCWriteAuthConfig (OIDCWriteAuthConfigRequest oIDCWriteAuthConfigRequest, string oidcMountPath = null)
+> void OIDCWriteAuthConfig (OIDCWriteAuthConfigRequest oIDCWriteAuthConfigRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null)
 
 Configure the JWT authentication backend.
 
@@ -15759,13 +15549,12 @@ namespace Example
             try
             {
                 // Configure the JWT authentication backend.
-                apiInstance.OIDCWriteAuthConfig(oIDCWriteAuthConfigRequest, oidcMountPath);
+                apiInstance.OIDCWriteAuthConfig(OIDCWriteAuthConfigRequest oIDCWriteAuthConfigRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OIDCWriteAuthConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -15802,7 +15591,7 @@ No authorization required
 
 <a name="oidcwriteauthrole"></a>
 # **OIDCWriteAuthRole**
-> void OIDCWriteAuthRole (string name, OIDCWriteAuthRoleRequest oIDCWriteAuthRoleRequest, string oidcMountPath = null)
+> void OIDCWriteAuthRole (OIDCWriteAuthRoleRequest oIDCWriteAuthRoleRequest, string name, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null)
 
 Register an role with the backend.
 
@@ -15836,13 +15625,12 @@ namespace Example
             try
             {
                 // Register an role with the backend.
-                apiInstance.OIDCWriteAuthRole(name, oIDCWriteAuthRoleRequest, oidcMountPath);
+                apiInstance.OIDCWriteAuthRole(OIDCWriteAuthRoleRequest oIDCWriteAuthRoleRequest, string name, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OIDCWriteAuthRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -15880,7 +15668,7 @@ No authorization required
 
 <a name="oidcwriteauthurl"></a>
 # **OIDCWriteAuthURL**
-> void OIDCWriteAuthURL (OIDCWriteAuthURLRequest oIDCWriteAuthURLRequest, string oidcMountPath = null)
+> void OIDCWriteAuthURL (OIDCWriteAuthURLRequest oIDCWriteAuthURLRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null)
 
 Request an authorization URL to start an OIDC login flow.
 
@@ -15911,13 +15699,12 @@ namespace Example
             try
             {
                 // Request an authorization URL to start an OIDC login flow.
-                apiInstance.OIDCWriteAuthURL(oIDCWriteAuthURLRequest, oidcMountPath);
+                apiInstance.OIDCWriteAuthURL(OIDCWriteAuthURLRequest oIDCWriteAuthURLRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OIDCWriteAuthURL: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -15954,7 +15741,7 @@ No authorization required
 
 <a name="oidcwritecallback"></a>
 # **OIDCWriteCallback**
-> void OIDCWriteCallback (OIDCWriteCallbackRequest oIDCWriteCallbackRequest, string oidcMountPath = null)
+> void OIDCWriteCallback (OIDCWriteCallbackRequest oIDCWriteCallbackRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null)
 
 Callback endpoint to handle form_posts.
 
@@ -15985,13 +15772,12 @@ namespace Example
             try
             {
                 // Callback endpoint to handle form_posts.
-                apiInstance.OIDCWriteCallback(oIDCWriteCallbackRequest, oidcMountPath);
+                apiInstance.OIDCWriteCallback(OIDCWriteCallbackRequest oIDCWriteCallbackRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OIDCWriteCallback: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -16028,7 +15814,7 @@ No authorization required
 
 <a name="oktadeletegroup"></a>
 # **OktaDeleteGroup**
-> void OktaDeleteGroup (string name, string oktaMountPath = null)
+> void OktaDeleteGroup (string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
 
@@ -16059,13 +15845,12 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.OktaDeleteGroup(name, oktaMountPath);
+                apiInstance.OktaDeleteGroup(string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OktaDeleteGroup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -16102,7 +15887,7 @@ No authorization required
 
 <a name="oktadeleteuser"></a>
 # **OktaDeleteUser**
-> void OktaDeleteUser (string name, string oktaMountPath = null)
+> void OktaDeleteUser (string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
 
 Manage additional groups for users allowed to authenticate.
 
@@ -16133,13 +15918,12 @@ namespace Example
             try
             {
                 // Manage additional groups for users allowed to authenticate.
-                apiInstance.OktaDeleteUser(name, oktaMountPath);
+                apiInstance.OktaDeleteUser(string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OktaDeleteUser: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -16176,7 +15960,7 @@ No authorization required
 
 <a name="oktalistgroups"></a>
 # **OktaListGroups**
-> void OktaListGroups (string list, string oktaMountPath = null)
+> void OktaListGroups (string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
 
@@ -16207,13 +15991,12 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.OktaListGroups(list, oktaMountPath);
+                apiInstance.OktaListGroups(string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OktaListGroups: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -16250,7 +16033,7 @@ No authorization required
 
 <a name="oktalistusers"></a>
 # **OktaListUsers**
-> void OktaListUsers (string list, string oktaMountPath = null)
+> void OktaListUsers (string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
 
 Manage additional groups for users allowed to authenticate.
 
@@ -16281,13 +16064,12 @@ namespace Example
             try
             {
                 // Manage additional groups for users allowed to authenticate.
-                apiInstance.OktaListUsers(list, oktaMountPath);
+                apiInstance.OktaListUsers(string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OktaListUsers: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -16324,7 +16106,7 @@ No authorization required
 
 <a name="oktalogin"></a>
 # **OktaLogin**
-> void OktaLogin (string username, OktaLoginRequest oktaLoginRequest, string oktaMountPath = null)
+> void OktaLogin (OktaLoginRequest oktaLoginRequest, string username, string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
 
 Log in with a username and password.
 
@@ -16356,13 +16138,12 @@ namespace Example
             try
             {
                 // Log in with a username and password.
-                apiInstance.OktaLogin(username, oktaLoginRequest, oktaMountPath);
+                apiInstance.OktaLogin(OktaLoginRequest oktaLoginRequest, string username, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OktaLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -16400,7 +16181,7 @@ No authorization required
 
 <a name="oktareadconfig"></a>
 # **OktaReadConfig**
-> void OktaReadConfig (string oktaMountPath = null)
+> void OktaReadConfig (string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
 
 This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
 
@@ -16430,13 +16211,12 @@ namespace Example
             try
             {
                 // This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
-                apiInstance.OktaReadConfig(oktaMountPath);
+                apiInstance.OktaReadConfig(string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OktaReadConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -16472,7 +16252,7 @@ No authorization required
 
 <a name="oktareadgroup"></a>
 # **OktaReadGroup**
-> void OktaReadGroup (string name, string oktaMountPath = null)
+> void OktaReadGroup (string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
 
@@ -16503,13 +16283,12 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.OktaReadGroup(name, oktaMountPath);
+                apiInstance.OktaReadGroup(string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OktaReadGroup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -16546,7 +16325,7 @@ No authorization required
 
 <a name="oktareaduser"></a>
 # **OktaReadUser**
-> void OktaReadUser (string name, string oktaMountPath = null)
+> void OktaReadUser (string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
 
 Manage additional groups for users allowed to authenticate.
 
@@ -16577,13 +16356,12 @@ namespace Example
             try
             {
                 // Manage additional groups for users allowed to authenticate.
-                apiInstance.OktaReadUser(name, oktaMountPath);
+                apiInstance.OktaReadUser(string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OktaReadUser: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -16620,7 +16398,7 @@ No authorization required
 
 <a name="oktaverify"></a>
 # **OktaVerify**
-> void OktaVerify (string nonce, string oktaMountPath = null)
+> void OktaVerify (string nonce, string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
 
 
 
@@ -16650,13 +16428,12 @@ namespace Example
 
             try
             {
-                apiInstance.OktaVerify(nonce, oktaMountPath);
+                apiInstance.OktaVerify(string nonce, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OktaVerify: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -16693,7 +16470,7 @@ No authorization required
 
 <a name="oktawriteconfig"></a>
 # **OktaWriteConfig**
-> void OktaWriteConfig (OktaWriteConfigRequest oktaWriteConfigRequest, string oktaMountPath = null)
+> void OktaWriteConfig (OktaWriteConfigRequest oktaWriteConfigRequest, string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
 
 This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
 
@@ -16724,13 +16501,12 @@ namespace Example
             try
             {
                 // This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
-                apiInstance.OktaWriteConfig(oktaWriteConfigRequest, oktaMountPath);
+                apiInstance.OktaWriteConfig(OktaWriteConfigRequest oktaWriteConfigRequest, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OktaWriteConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -16767,7 +16543,7 @@ No authorization required
 
 <a name="oktawritegroup"></a>
 # **OktaWriteGroup**
-> void OktaWriteGroup (string name, OktaWriteGroupRequest oktaWriteGroupRequest, string oktaMountPath = null)
+> void OktaWriteGroup (OktaWriteGroupRequest oktaWriteGroupRequest, string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
 
@@ -16799,13 +16575,12 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.OktaWriteGroup(name, oktaWriteGroupRequest, oktaMountPath);
+                apiInstance.OktaWriteGroup(OktaWriteGroupRequest oktaWriteGroupRequest, string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OktaWriteGroup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -16843,7 +16618,7 @@ No authorization required
 
 <a name="oktawriteuser"></a>
 # **OktaWriteUser**
-> void OktaWriteUser (string name, OktaWriteUserRequest oktaWriteUserRequest, string oktaMountPath = null)
+> void OktaWriteUser (OktaWriteUserRequest oktaWriteUserRequest, string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
 
 Manage additional groups for users allowed to authenticate.
 
@@ -16875,13 +16650,12 @@ namespace Example
             try
             {
                 // Manage additional groups for users allowed to authenticate.
-                apiInstance.OktaWriteUser(name, oktaWriteUserRequest, oktaMountPath);
+                apiInstance.OktaWriteUser(OktaWriteUserRequest oktaWriteUserRequest, string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.OktaWriteUser: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -16919,7 +16693,7 @@ No authorization required
 
 <a name="radiusdeleteuser"></a>
 # **RadiusDeleteUser**
-> void RadiusDeleteUser (string name, string radiusMountPath = null)
+> void RadiusDeleteUser (string name, string radiusMountPath = "radius", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
 
@@ -16950,13 +16724,12 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.RadiusDeleteUser(name, radiusMountPath);
+                apiInstance.RadiusDeleteUser(string name, string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.RadiusDeleteUser: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -16993,7 +16766,7 @@ No authorization required
 
 <a name="radiuslistusers"></a>
 # **RadiusListUsers**
-> void RadiusListUsers (string list, string radiusMountPath = null)
+> void RadiusListUsers (string radiusMountPath = "radius", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
 
@@ -17024,13 +16797,12 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.RadiusListUsers(list, radiusMountPath);
+                apiInstance.RadiusListUsers(string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.RadiusListUsers: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -17067,7 +16839,7 @@ No authorization required
 
 <a name="radiuslogin"></a>
 # **RadiusLogin**
-> void RadiusLogin (RadiusLoginRequest radiusLoginRequest, string radiusMountPath = null)
+> void RadiusLogin (RadiusLoginRequest radiusLoginRequest, string radiusMountPath = "radius", TimeSpan? wrapTTL = null)
 
 Log in with a username and password.
 
@@ -17098,13 +16870,12 @@ namespace Example
             try
             {
                 // Log in with a username and password.
-                apiInstance.RadiusLogin(radiusLoginRequest, radiusMountPath);
+                apiInstance.RadiusLogin(RadiusLoginRequest radiusLoginRequest, string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.RadiusLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -17141,7 +16912,7 @@ No authorization required
 
 <a name="radiusloginwithusername"></a>
 # **RadiusLoginWithUsername**
-> void RadiusLoginWithUsername (string urlusername, RadiusLoginWithUsernameRequest radiusLoginWithUsernameRequest, string radiusMountPath = null)
+> void RadiusLoginWithUsername (RadiusLoginWithUsernameRequest radiusLoginWithUsernameRequest, string urlusername, string radiusMountPath = "radius", TimeSpan? wrapTTL = null)
 
 Log in with a username and password.
 
@@ -17173,13 +16944,12 @@ namespace Example
             try
             {
                 // Log in with a username and password.
-                apiInstance.RadiusLoginWithUsername(urlusername, radiusLoginWithUsernameRequest, radiusMountPath);
+                apiInstance.RadiusLoginWithUsername(RadiusLoginWithUsernameRequest radiusLoginWithUsernameRequest, string urlusername, string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.RadiusLoginWithUsername: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -17217,7 +16987,7 @@ No authorization required
 
 <a name="radiusreadconfig"></a>
 # **RadiusReadConfig**
-> void RadiusReadConfig (string radiusMountPath = null)
+> void RadiusReadConfig (string radiusMountPath = "radius", TimeSpan? wrapTTL = null)
 
 Configure the RADIUS server to connect to, along with its options.
 
@@ -17247,13 +17017,12 @@ namespace Example
             try
             {
                 // Configure the RADIUS server to connect to, along with its options.
-                apiInstance.RadiusReadConfig(radiusMountPath);
+                apiInstance.RadiusReadConfig(string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.RadiusReadConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -17289,7 +17058,7 @@ No authorization required
 
 <a name="radiusreaduser"></a>
 # **RadiusReadUser**
-> void RadiusReadUser (string name, string radiusMountPath = null)
+> void RadiusReadUser (string name, string radiusMountPath = "radius", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
 
@@ -17320,13 +17089,12 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.RadiusReadUser(name, radiusMountPath);
+                apiInstance.RadiusReadUser(string name, string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.RadiusReadUser: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -17363,7 +17131,7 @@ No authorization required
 
 <a name="radiuswriteconfig"></a>
 # **RadiusWriteConfig**
-> void RadiusWriteConfig (RadiusWriteConfigRequest radiusWriteConfigRequest, string radiusMountPath = null)
+> void RadiusWriteConfig (RadiusWriteConfigRequest radiusWriteConfigRequest, string radiusMountPath = "radius", TimeSpan? wrapTTL = null)
 
 Configure the RADIUS server to connect to, along with its options.
 
@@ -17394,13 +17162,12 @@ namespace Example
             try
             {
                 // Configure the RADIUS server to connect to, along with its options.
-                apiInstance.RadiusWriteConfig(radiusWriteConfigRequest, radiusMountPath);
+                apiInstance.RadiusWriteConfig(RadiusWriteConfigRequest radiusWriteConfigRequest, string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.RadiusWriteConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -17437,7 +17204,7 @@ No authorization required
 
 <a name="radiuswriteuser"></a>
 # **RadiusWriteUser**
-> void RadiusWriteUser (string name, RadiusWriteUserRequest radiusWriteUserRequest, string radiusMountPath = null)
+> void RadiusWriteUser (RadiusWriteUserRequest radiusWriteUserRequest, string name, string radiusMountPath = "radius", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
 
@@ -17469,13 +17236,12 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.RadiusWriteUser(name, radiusWriteUserRequest, radiusMountPath);
+                apiInstance.RadiusWriteUser(RadiusWriteUserRequest radiusWriteUserRequest, string name, string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.RadiusWriteUser: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -17513,7 +17279,7 @@ No authorization required
 
 <a name="tokendeleterole"></a>
 # **TokenDeleteRole**
-> void TokenDeleteRole (string roleName, string tokenMountPath = null)
+> void TokenDeleteRole (string roleName, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 
 
@@ -17543,13 +17309,12 @@ namespace Example
 
             try
             {
-                apiInstance.TokenDeleteRole(roleName, tokenMountPath);
+                apiInstance.TokenDeleteRole(string roleName, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.TokenDeleteRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -17586,7 +17351,7 @@ No authorization required
 
 <a name="tokenlistaccessors"></a>
 # **TokenListAccessors**
-> void TokenListAccessors (string list, string tokenMountPath = null)
+> void TokenListAccessors (string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires 'sudo' capability in addition to 'list'.
 
@@ -17617,13 +17382,12 @@ namespace Example
             try
             {
                 // List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires 'sudo' capability in addition to 'list'.
-                apiInstance.TokenListAccessors(list, tokenMountPath);
+                apiInstance.TokenListAccessors(string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.TokenListAccessors: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -17660,7 +17424,7 @@ No authorization required
 
 <a name="tokenlistroles"></a>
 # **TokenListRoles**
-> void TokenListRoles (string list, string tokenMountPath = null)
+> void TokenListRoles (string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint lists configured roles.
 
@@ -17691,13 +17455,12 @@ namespace Example
             try
             {
                 // This endpoint lists configured roles.
-                apiInstance.TokenListRoles(list, tokenMountPath);
+                apiInstance.TokenListRoles(string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.TokenListRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -17734,7 +17497,7 @@ No authorization required
 
 <a name="tokenreadlookup"></a>
 # **TokenReadLookup**
-> void TokenReadLookup (string tokenMountPath = null)
+> void TokenReadLookup (string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint will lookup a token and its properties.
 
@@ -17764,13 +17527,12 @@ namespace Example
             try
             {
                 // This endpoint will lookup a token and its properties.
-                apiInstance.TokenReadLookup(tokenMountPath);
+                apiInstance.TokenReadLookup(string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.TokenReadLookup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -17806,7 +17568,7 @@ No authorization required
 
 <a name="tokenreadlookupself"></a>
 # **TokenReadLookupSelf**
-> void TokenReadLookupSelf (string tokenMountPath = null)
+> void TokenReadLookupSelf (string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint will lookup a token and its properties.
 
@@ -17836,13 +17598,12 @@ namespace Example
             try
             {
                 // This endpoint will lookup a token and its properties.
-                apiInstance.TokenReadLookupSelf(tokenMountPath);
+                apiInstance.TokenReadLookupSelf(string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.TokenReadLookupSelf: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -17878,7 +17639,7 @@ No authorization required
 
 <a name="tokenreadrole"></a>
 # **TokenReadRole**
-> void TokenReadRole (string roleName, string tokenMountPath = null)
+> void TokenReadRole (string roleName, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 
 
@@ -17908,13 +17669,12 @@ namespace Example
 
             try
             {
-                apiInstance.TokenReadRole(roleName, tokenMountPath);
+                apiInstance.TokenReadRole(string roleName, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.TokenReadRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -17951,7 +17711,7 @@ No authorization required
 
 <a name="tokenrenew"></a>
 # **TokenRenew**
-> void TokenRenew (TokenRenewRequest tokenRenewRequest, string tokenMountPath = null)
+> void TokenRenew (TokenRenewRequest tokenRenewRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint will renew the given token and prevent expiration.
 
@@ -17982,13 +17742,12 @@ namespace Example
             try
             {
                 // This endpoint will renew the given token and prevent expiration.
-                apiInstance.TokenRenew(tokenRenewRequest, tokenMountPath);
+                apiInstance.TokenRenew(TokenRenewRequest tokenRenewRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.TokenRenew: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -18025,7 +17784,7 @@ No authorization required
 
 <a name="tokenrenewaccessor"></a>
 # **TokenRenewAccessor**
-> void TokenRenewAccessor (TokenRenewAccessorRequest tokenRenewAccessorRequest, string tokenMountPath = null)
+> void TokenRenewAccessor (TokenRenewAccessorRequest tokenRenewAccessorRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint will renew a token associated with the given accessor and its properties. Response will not contain the token ID.
 
@@ -18056,13 +17815,12 @@ namespace Example
             try
             {
                 // This endpoint will renew a token associated with the given accessor and its properties. Response will not contain the token ID.
-                apiInstance.TokenRenewAccessor(tokenRenewAccessorRequest, tokenMountPath);
+                apiInstance.TokenRenewAccessor(TokenRenewAccessorRequest tokenRenewAccessorRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.TokenRenewAccessor: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -18099,7 +17857,7 @@ No authorization required
 
 <a name="tokenrenewself"></a>
 # **TokenRenewSelf**
-> void TokenRenewSelf (TokenRenewSelfRequest tokenRenewSelfRequest, string tokenMountPath = null)
+> void TokenRenewSelf (TokenRenewSelfRequest tokenRenewSelfRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint will renew the token used to call it and prevent expiration.
 
@@ -18130,13 +17888,12 @@ namespace Example
             try
             {
                 // This endpoint will renew the token used to call it and prevent expiration.
-                apiInstance.TokenRenewSelf(tokenRenewSelfRequest, tokenMountPath);
+                apiInstance.TokenRenewSelf(TokenRenewSelfRequest tokenRenewSelfRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.TokenRenewSelf: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -18173,7 +17930,7 @@ No authorization required
 
 <a name="tokenrevoke"></a>
 # **TokenRevoke**
-> void TokenRevoke (TokenRevokeRequest tokenRevokeRequest, string tokenMountPath = null)
+> void TokenRevoke (TokenRevokeRequest tokenRevokeRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint will delete the given token and all of its child tokens.
 
@@ -18204,13 +17961,12 @@ namespace Example
             try
             {
                 // This endpoint will delete the given token and all of its child tokens.
-                apiInstance.TokenRevoke(tokenRevokeRequest, tokenMountPath);
+                apiInstance.TokenRevoke(TokenRevokeRequest tokenRevokeRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.TokenRevoke: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -18247,7 +18003,7 @@ No authorization required
 
 <a name="tokenrevokeaccessor"></a>
 # **TokenRevokeAccessor**
-> void TokenRevokeAccessor (TokenRevokeAccessorRequest tokenRevokeAccessorRequest, string tokenMountPath = null)
+> void TokenRevokeAccessor (TokenRevokeAccessorRequest tokenRevokeAccessorRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint will delete the token associated with the accessor and all of its child tokens.
 
@@ -18278,13 +18034,12 @@ namespace Example
             try
             {
                 // This endpoint will delete the token associated with the accessor and all of its child tokens.
-                apiInstance.TokenRevokeAccessor(tokenRevokeAccessorRequest, tokenMountPath);
+                apiInstance.TokenRevokeAccessor(TokenRevokeAccessorRequest tokenRevokeAccessorRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.TokenRevokeAccessor: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -18321,7 +18076,7 @@ No authorization required
 
 <a name="tokenrevokeorphan"></a>
 # **TokenRevokeOrphan**
-> void TokenRevokeOrphan (TokenRevokeOrphanRequest tokenRevokeOrphanRequest, string tokenMountPath = null)
+> void TokenRevokeOrphan (TokenRevokeOrphanRequest tokenRevokeOrphanRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint will delete the token and orphan its child tokens.
 
@@ -18352,13 +18107,12 @@ namespace Example
             try
             {
                 // This endpoint will delete the token and orphan its child tokens.
-                apiInstance.TokenRevokeOrphan(tokenRevokeOrphanRequest, tokenMountPath);
+                apiInstance.TokenRevokeOrphan(TokenRevokeOrphanRequest tokenRevokeOrphanRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.TokenRevokeOrphan: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -18395,7 +18149,7 @@ No authorization required
 
 <a name="tokenrevokeself"></a>
 # **TokenRevokeSelf**
-> void TokenRevokeSelf (string tokenMountPath = null)
+> void TokenRevokeSelf (string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint will delete the token used to call it and all of its child tokens.
 
@@ -18425,13 +18179,12 @@ namespace Example
             try
             {
                 // This endpoint will delete the token used to call it and all of its child tokens.
-                apiInstance.TokenRevokeSelf(tokenMountPath);
+                apiInstance.TokenRevokeSelf(string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.TokenRevokeSelf: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -18467,7 +18220,7 @@ No authorization required
 
 <a name="tokentidy"></a>
 # **TokenTidy**
-> void TokenTidy (string tokenMountPath = null)
+> void TokenTidy (string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
 
@@ -18497,13 +18250,12 @@ namespace Example
             try
             {
                 // This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
-                apiInstance.TokenTidy(tokenMountPath);
+                apiInstance.TokenTidy(string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.TokenTidy: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -18539,7 +18291,7 @@ No authorization required
 
 <a name="tokenwritecreate"></a>
 # **TokenWriteCreate**
-> void TokenWriteCreate (TokenWriteCreateRequest tokenWriteCreateRequest, string format = null, string tokenMountPath = null)
+> void TokenWriteCreate (TokenWriteCreateRequest tokenWriteCreateRequest, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null)
 
 The token create path is used to create new tokens.
 
@@ -18571,13 +18323,12 @@ namespace Example
             try
             {
                 // The token create path is used to create new tokens.
-                apiInstance.TokenWriteCreate(tokenWriteCreateRequest, format, tokenMountPath);
+                apiInstance.TokenWriteCreate(TokenWriteCreateRequest tokenWriteCreateRequest, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.TokenWriteCreate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -18615,7 +18366,7 @@ No authorization required
 
 <a name="tokenwritecreateorphan"></a>
 # **TokenWriteCreateOrphan**
-> void TokenWriteCreateOrphan (TokenWriteCreateOrphanRequest tokenWriteCreateOrphanRequest, string format = null, string tokenMountPath = null)
+> void TokenWriteCreateOrphan (TokenWriteCreateOrphanRequest tokenWriteCreateOrphanRequest, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null)
 
 The token create path is used to create new orphan tokens.
 
@@ -18647,13 +18398,12 @@ namespace Example
             try
             {
                 // The token create path is used to create new orphan tokens.
-                apiInstance.TokenWriteCreateOrphan(tokenWriteCreateOrphanRequest, format, tokenMountPath);
+                apiInstance.TokenWriteCreateOrphan(TokenWriteCreateOrphanRequest tokenWriteCreateOrphanRequest, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.TokenWriteCreateOrphan: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -18691,7 +18441,7 @@ No authorization required
 
 <a name="tokenwritecreatewithrole"></a>
 # **TokenWriteCreateWithRole**
-> void TokenWriteCreateWithRole (string roleName, TokenWriteCreateWithRoleRequest tokenWriteCreateWithRoleRequest, string format = null, string tokenMountPath = null)
+> void TokenWriteCreateWithRole (TokenWriteCreateWithRoleRequest tokenWriteCreateWithRoleRequest, string roleName, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null)
 
 This token create path is used to create new tokens adhering to the given role.
 
@@ -18724,13 +18474,12 @@ namespace Example
             try
             {
                 // This token create path is used to create new tokens adhering to the given role.
-                apiInstance.TokenWriteCreateWithRole(roleName, tokenWriteCreateWithRoleRequest, format, tokenMountPath);
+                apiInstance.TokenWriteCreateWithRole(TokenWriteCreateWithRoleRequest tokenWriteCreateWithRoleRequest, string roleName, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.TokenWriteCreateWithRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -18769,7 +18518,7 @@ No authorization required
 
 <a name="tokenwritelookup"></a>
 # **TokenWriteLookup**
-> void TokenWriteLookup (TokenWriteLookupRequest tokenWriteLookupRequest, string tokenMountPath = null)
+> void TokenWriteLookup (TokenWriteLookupRequest tokenWriteLookupRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint will lookup a token and its properties.
 
@@ -18800,13 +18549,12 @@ namespace Example
             try
             {
                 // This endpoint will lookup a token and its properties.
-                apiInstance.TokenWriteLookup(tokenWriteLookupRequest, tokenMountPath);
+                apiInstance.TokenWriteLookup(TokenWriteLookupRequest tokenWriteLookupRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.TokenWriteLookup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -18843,7 +18591,7 @@ No authorization required
 
 <a name="tokenwritelookupaccessor"></a>
 # **TokenWriteLookupAccessor**
-> void TokenWriteLookupAccessor (TokenWriteLookupAccessorRequest tokenWriteLookupAccessorRequest, string tokenMountPath = null)
+> void TokenWriteLookupAccessor (TokenWriteLookupAccessorRequest tokenWriteLookupAccessorRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint will lookup a token associated with the given accessor and its properties. Response will not contain the token ID.
 
@@ -18874,13 +18622,12 @@ namespace Example
             try
             {
                 // This endpoint will lookup a token associated with the given accessor and its properties. Response will not contain the token ID.
-                apiInstance.TokenWriteLookupAccessor(tokenWriteLookupAccessorRequest, tokenMountPath);
+                apiInstance.TokenWriteLookupAccessor(TokenWriteLookupAccessorRequest tokenWriteLookupAccessorRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.TokenWriteLookupAccessor: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -18917,7 +18664,7 @@ No authorization required
 
 <a name="tokenwritelookupself"></a>
 # **TokenWriteLookupSelf**
-> void TokenWriteLookupSelf (TokenWriteLookupSelfRequest tokenWriteLookupSelfRequest, string tokenMountPath = null)
+> void TokenWriteLookupSelf (TokenWriteLookupSelfRequest tokenWriteLookupSelfRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint will lookup a token and its properties.
 
@@ -18948,13 +18695,12 @@ namespace Example
             try
             {
                 // This endpoint will lookup a token and its properties.
-                apiInstance.TokenWriteLookupSelf(tokenWriteLookupSelfRequest, tokenMountPath);
+                apiInstance.TokenWriteLookupSelf(TokenWriteLookupSelfRequest tokenWriteLookupSelfRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.TokenWriteLookupSelf: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -18991,7 +18737,7 @@ No authorization required
 
 <a name="tokenwriterole"></a>
 # **TokenWriteRole**
-> void TokenWriteRole (string roleName, TokenWriteRoleRequest tokenWriteRoleRequest, string tokenMountPath = null)
+> void TokenWriteRole (TokenWriteRoleRequest tokenWriteRoleRequest, string roleName, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 
 
@@ -19022,13 +18768,12 @@ namespace Example
 
             try
             {
-                apiInstance.TokenWriteRole(roleName, tokenWriteRoleRequest, tokenMountPath);
+                apiInstance.TokenWriteRole(TokenWriteRoleRequest tokenWriteRoleRequest, string roleName, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.TokenWriteRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -19066,7 +18811,7 @@ No authorization required
 
 <a name="userpassdeleteuser"></a>
 # **UserpassDeleteUser**
-> void UserpassDeleteUser (string username, string userpassMountPath = null)
+> void UserpassDeleteUser (string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
 
@@ -19097,13 +18842,12 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.UserpassDeleteUser(username, userpassMountPath);
+                apiInstance.UserpassDeleteUser(string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.UserpassDeleteUser: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -19140,7 +18884,7 @@ No authorization required
 
 <a name="userpasslistusers"></a>
 # **UserpassListUsers**
-> void UserpassListUsers (string list, string userpassMountPath = null)
+> void UserpassListUsers (string userpassMountPath = "userpass", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
 
@@ -19171,13 +18915,12 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.UserpassListUsers(list, userpassMountPath);
+                apiInstance.UserpassListUsers(string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.UserpassListUsers: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -19214,7 +18957,7 @@ No authorization required
 
 <a name="userpasslogin"></a>
 # **UserpassLogin**
-> void UserpassLogin (string username, UserpassLoginRequest userpassLoginRequest, string userpassMountPath = null)
+> void UserpassLogin (UserpassLoginRequest userpassLoginRequest, string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null)
 
 Log in with a username and password.
 
@@ -19246,13 +18989,12 @@ namespace Example
             try
             {
                 // Log in with a username and password.
-                apiInstance.UserpassLogin(username, userpassLoginRequest, userpassMountPath);
+                apiInstance.UserpassLogin(UserpassLoginRequest userpassLoginRequest, string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.UserpassLogin: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -19290,7 +19032,7 @@ No authorization required
 
 <a name="userpassreaduser"></a>
 # **UserpassReadUser**
-> void UserpassReadUser (string username, string userpassMountPath = null)
+> void UserpassReadUser (string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
 
@@ -19321,13 +19063,12 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.UserpassReadUser(username, userpassMountPath);
+                apiInstance.UserpassReadUser(string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.UserpassReadUser: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -19364,7 +19105,7 @@ No authorization required
 
 <a name="userpasswriteuser"></a>
 # **UserpassWriteUser**
-> void UserpassWriteUser (string username, UserpassWriteUserRequest userpassWriteUserRequest, string userpassMountPath = null)
+> void UserpassWriteUser (UserpassWriteUserRequest userpassWriteUserRequest, string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
 
@@ -19396,13 +19137,12 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.UserpassWriteUser(username, userpassWriteUserRequest, userpassMountPath);
+                apiInstance.UserpassWriteUser(UserpassWriteUserRequest userpassWriteUserRequest, string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.UserpassWriteUser: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -19440,7 +19180,7 @@ No authorization required
 
 <a name="userpasswriteuserpassword"></a>
 # **UserpassWriteUserPassword**
-> void UserpassWriteUserPassword (string username, UserpassWriteUserPasswordRequest userpassWriteUserPasswordRequest, string userpassMountPath = null)
+> void UserpassWriteUserPassword (UserpassWriteUserPasswordRequest userpassWriteUserPasswordRequest, string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null)
 
 Reset user's password.
 
@@ -19472,13 +19212,12 @@ namespace Example
             try
             {
                 // Reset user's password.
-                apiInstance.UserpassWriteUserPassword(username, userpassWriteUserPasswordRequest, userpassMountPath);
+                apiInstance.UserpassWriteUserPassword(UserpassWriteUserPasswordRequest userpassWriteUserPasswordRequest, string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.UserpassWriteUserPassword: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -19516,7 +19255,7 @@ No authorization required
 
 <a name="userpasswriteuserpolicies"></a>
 # **UserpassWriteUserPolicies**
-> void UserpassWriteUserPolicies (string username, UserpassWriteUserPoliciesRequest userpassWriteUserPoliciesRequest, string userpassMountPath = null)
+> void UserpassWriteUserPolicies (UserpassWriteUserPoliciesRequest userpassWriteUserPoliciesRequest, string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null)
 
 Update the policies associated with the username.
 
@@ -19548,13 +19287,12 @@ namespace Example
             try
             {
                 // Update the policies associated with the username.
-                apiInstance.UserpassWriteUserPolicies(username, userpassWriteUserPoliciesRequest, userpassMountPath);
+                apiInstance.UserpassWriteUserPolicies(UserpassWriteUserPoliciesRequest userpassWriteUserPoliciesRequest, string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Auth.UserpassWriteUserPolicies: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }

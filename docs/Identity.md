@@ -113,7 +113,7 @@ Method | HTTP request | Description
 
 <a name="aliasdeletebyid"></a>
 # **AliasDeleteByID**
-> void AliasDeleteByID (string id)
+> void AliasDeleteByID (string id, TimeSpan? wrapTTL = null)
 
 Update, read or delete an alias ID.
 
@@ -143,13 +143,12 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
-                apiInstance.AliasDeleteByID(id);
+                apiInstance.AliasDeleteByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.AliasDeleteByID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -185,7 +184,7 @@ No authorization required
 
 <a name="aliaslistbyid"></a>
 # **AliasListByID**
-> void AliasListByID (string list)
+> void AliasListByID (TimeSpan? wrapTTL = null)
 
 List all the alias IDs.
 
@@ -215,13 +214,12 @@ namespace Example
             try
             {
                 // List all the alias IDs.
-                apiInstance.AliasListByID(list);
+                apiInstance.AliasListByID(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.AliasListByID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -257,7 +255,7 @@ No authorization required
 
 <a name="aliasreadbyid"></a>
 # **AliasReadByID**
-> void AliasReadByID (string id)
+> void AliasReadByID (string id, TimeSpan? wrapTTL = null)
 
 Update, read or delete an alias ID.
 
@@ -287,13 +285,12 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
-                apiInstance.AliasReadByID(id);
+                apiInstance.AliasReadByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.AliasReadByID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -329,7 +326,7 @@ No authorization required
 
 <a name="aliaswrite"></a>
 # **AliasWrite**
-> void AliasWrite (AliasWriteRequest aliasWriteRequest)
+> void AliasWrite (AliasWriteRequest aliasWriteRequest, TimeSpan? wrapTTL = null)
 
 Create a new alias.
 
@@ -359,13 +356,12 @@ namespace Example
             try
             {
                 // Create a new alias.
-                apiInstance.AliasWrite(aliasWriteRequest);
+                apiInstance.AliasWrite(AliasWriteRequest aliasWriteRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.AliasWrite: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -401,7 +397,7 @@ No authorization required
 
 <a name="aliaswritebyid"></a>
 # **AliasWriteByID**
-> void AliasWriteByID (string id, AliasWriteByIDRequest aliasWriteByIDRequest)
+> void AliasWriteByID (AliasWriteByIDRequest aliasWriteByIDRequest, string id, TimeSpan? wrapTTL = null)
 
 Update, read or delete an alias ID.
 
@@ -432,13 +428,12 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
-                apiInstance.AliasWriteByID(id, aliasWriteByIDRequest);
+                apiInstance.AliasWriteByID(AliasWriteByIDRequest aliasWriteByIDRequest, string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.AliasWriteByID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -475,7 +470,7 @@ No authorization required
 
 <a name="entitybatchdelete"></a>
 # **EntityBatchDelete**
-> void EntityBatchDelete (EntityBatchDeleteRequest entityBatchDeleteRequest)
+> void EntityBatchDelete (EntityBatchDeleteRequest entityBatchDeleteRequest, TimeSpan? wrapTTL = null)
 
 Delete all of the entities provided
 
@@ -505,13 +500,12 @@ namespace Example
             try
             {
                 // Delete all of the entities provided
-                apiInstance.EntityBatchDelete(entityBatchDeleteRequest);
+                apiInstance.EntityBatchDelete(EntityBatchDeleteRequest entityBatchDeleteRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.EntityBatchDelete: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -547,7 +541,7 @@ No authorization required
 
 <a name="entitydeletealiasbyid"></a>
 # **EntityDeleteAliasByID**
-> void EntityDeleteAliasByID (string id)
+> void EntityDeleteAliasByID (string id, TimeSpan? wrapTTL = null)
 
 Update, read or delete an alias ID.
 
@@ -577,13 +571,12 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
-                apiInstance.EntityDeleteAliasByID(id);
+                apiInstance.EntityDeleteAliasByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.EntityDeleteAliasByID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -619,7 +612,7 @@ No authorization required
 
 <a name="entitydeletebyid"></a>
 # **EntityDeleteByID**
-> void EntityDeleteByID (string id)
+> void EntityDeleteByID (string id, TimeSpan? wrapTTL = null)
 
 Update, read or delete an entity using entity ID
 
@@ -649,13 +642,12 @@ namespace Example
             try
             {
                 // Update, read or delete an entity using entity ID
-                apiInstance.EntityDeleteByID(id);
+                apiInstance.EntityDeleteByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.EntityDeleteByID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -691,7 +683,7 @@ No authorization required
 
 <a name="entitydeletebyname"></a>
 # **EntityDeleteByName**
-> void EntityDeleteByName (string name)
+> void EntityDeleteByName (string name, TimeSpan? wrapTTL = null)
 
 Update, read or delete an entity using entity name
 
@@ -721,13 +713,12 @@ namespace Example
             try
             {
                 // Update, read or delete an entity using entity name
-                apiInstance.EntityDeleteByName(name);
+                apiInstance.EntityDeleteByName(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.EntityDeleteByName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -763,7 +754,7 @@ No authorization required
 
 <a name="entitylistaliasesbyid"></a>
 # **EntityListAliasesByID**
-> void EntityListAliasesByID (string list)
+> void EntityListAliasesByID (TimeSpan? wrapTTL = null)
 
 List all the alias IDs.
 
@@ -793,13 +784,12 @@ namespace Example
             try
             {
                 // List all the alias IDs.
-                apiInstance.EntityListAliasesByID(list);
+                apiInstance.EntityListAliasesByID(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.EntityListAliasesByID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -835,7 +825,7 @@ No authorization required
 
 <a name="entitylistbyid"></a>
 # **EntityListByID**
-> void EntityListByID (string list)
+> void EntityListByID (TimeSpan? wrapTTL = null)
 
 List all the entity IDs
 
@@ -865,13 +855,12 @@ namespace Example
             try
             {
                 // List all the entity IDs
-                apiInstance.EntityListByID(list);
+                apiInstance.EntityListByID(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.EntityListByID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -907,7 +896,7 @@ No authorization required
 
 <a name="entitylistbyname"></a>
 # **EntityListByName**
-> void EntityListByName (string list)
+> void EntityListByName (TimeSpan? wrapTTL = null)
 
 List all the entity names
 
@@ -937,13 +926,12 @@ namespace Example
             try
             {
                 // List all the entity names
-                apiInstance.EntityListByName(list);
+                apiInstance.EntityListByName(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.EntityListByName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -979,7 +967,7 @@ No authorization required
 
 <a name="entitylookup"></a>
 # **EntityLookup**
-> void EntityLookup (EntityLookupRequest entityLookupRequest)
+> void EntityLookup (EntityLookupRequest entityLookupRequest, TimeSpan? wrapTTL = null)
 
 Query entities based on various properties.
 
@@ -1009,13 +997,12 @@ namespace Example
             try
             {
                 // Query entities based on various properties.
-                apiInstance.EntityLookup(entityLookupRequest);
+                apiInstance.EntityLookup(EntityLookupRequest entityLookupRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.EntityLookup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1051,7 +1038,7 @@ No authorization required
 
 <a name="entitymerge"></a>
 # **EntityMerge**
-> void EntityMerge (EntityMergeRequest entityMergeRequest)
+> void EntityMerge (EntityMergeRequest entityMergeRequest, TimeSpan? wrapTTL = null)
 
 Merge two or more entities together
 
@@ -1081,13 +1068,12 @@ namespace Example
             try
             {
                 // Merge two or more entities together
-                apiInstance.EntityMerge(entityMergeRequest);
+                apiInstance.EntityMerge(EntityMergeRequest entityMergeRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.EntityMerge: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1123,7 +1109,7 @@ No authorization required
 
 <a name="entityreadaliasbyid"></a>
 # **EntityReadAliasByID**
-> void EntityReadAliasByID (string id)
+> void EntityReadAliasByID (string id, TimeSpan? wrapTTL = null)
 
 Update, read or delete an alias ID.
 
@@ -1153,13 +1139,12 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
-                apiInstance.EntityReadAliasByID(id);
+                apiInstance.EntityReadAliasByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.EntityReadAliasByID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1195,7 +1180,7 @@ No authorization required
 
 <a name="entityreadbyid"></a>
 # **EntityReadByID**
-> void EntityReadByID (string id)
+> void EntityReadByID (string id, TimeSpan? wrapTTL = null)
 
 Update, read or delete an entity using entity ID
 
@@ -1225,13 +1210,12 @@ namespace Example
             try
             {
                 // Update, read or delete an entity using entity ID
-                apiInstance.EntityReadByID(id);
+                apiInstance.EntityReadByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.EntityReadByID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1267,7 +1251,7 @@ No authorization required
 
 <a name="entityreadbyname"></a>
 # **EntityReadByName**
-> void EntityReadByName (string name)
+> void EntityReadByName (string name, TimeSpan? wrapTTL = null)
 
 Update, read or delete an entity using entity name
 
@@ -1297,13 +1281,12 @@ namespace Example
             try
             {
                 // Update, read or delete an entity using entity name
-                apiInstance.EntityReadByName(name);
+                apiInstance.EntityReadByName(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.EntityReadByName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1339,7 +1322,7 @@ No authorization required
 
 <a name="entitywrite"></a>
 # **EntityWrite**
-> void EntityWrite (EntityWriteRequest entityWriteRequest)
+> void EntityWrite (EntityWriteRequest entityWriteRequest, TimeSpan? wrapTTL = null)
 
 Create a new entity
 
@@ -1369,13 +1352,12 @@ namespace Example
             try
             {
                 // Create a new entity
-                apiInstance.EntityWrite(entityWriteRequest);
+                apiInstance.EntityWrite(EntityWriteRequest entityWriteRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.EntityWrite: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1411,7 +1393,7 @@ No authorization required
 
 <a name="entitywritealias"></a>
 # **EntityWriteAlias**
-> void EntityWriteAlias (EntityWriteAliasRequest entityWriteAliasRequest)
+> void EntityWriteAlias (EntityWriteAliasRequest entityWriteAliasRequest, TimeSpan? wrapTTL = null)
 
 Create a new alias.
 
@@ -1441,13 +1423,12 @@ namespace Example
             try
             {
                 // Create a new alias.
-                apiInstance.EntityWriteAlias(entityWriteAliasRequest);
+                apiInstance.EntityWriteAlias(EntityWriteAliasRequest entityWriteAliasRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.EntityWriteAlias: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1483,7 +1464,7 @@ No authorization required
 
 <a name="entitywritealiasbyid"></a>
 # **EntityWriteAliasByID**
-> void EntityWriteAliasByID (string id, EntityWriteAliasByIDRequest entityWriteAliasByIDRequest)
+> void EntityWriteAliasByID (EntityWriteAliasByIDRequest entityWriteAliasByIDRequest, string id, TimeSpan? wrapTTL = null)
 
 Update, read or delete an alias ID.
 
@@ -1514,13 +1495,12 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
-                apiInstance.EntityWriteAliasByID(id, entityWriteAliasByIDRequest);
+                apiInstance.EntityWriteAliasByID(EntityWriteAliasByIDRequest entityWriteAliasByIDRequest, string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.EntityWriteAliasByID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1557,7 +1537,7 @@ No authorization required
 
 <a name="entitywritebyid"></a>
 # **EntityWriteByID**
-> void EntityWriteByID (string id, EntityWriteByIDRequest entityWriteByIDRequest)
+> void EntityWriteByID (EntityWriteByIDRequest entityWriteByIDRequest, string id, TimeSpan? wrapTTL = null)
 
 Update, read or delete an entity using entity ID
 
@@ -1588,13 +1568,12 @@ namespace Example
             try
             {
                 // Update, read or delete an entity using entity ID
-                apiInstance.EntityWriteByID(id, entityWriteByIDRequest);
+                apiInstance.EntityWriteByID(EntityWriteByIDRequest entityWriteByIDRequest, string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.EntityWriteByID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1631,7 +1610,7 @@ No authorization required
 
 <a name="entitywritebyname"></a>
 # **EntityWriteByName**
-> void EntityWriteByName (string name, EntityWriteByNameRequest entityWriteByNameRequest)
+> void EntityWriteByName (EntityWriteByNameRequest entityWriteByNameRequest, string name, TimeSpan? wrapTTL = null)
 
 Update, read or delete an entity using entity name
 
@@ -1662,13 +1641,12 @@ namespace Example
             try
             {
                 // Update, read or delete an entity using entity name
-                apiInstance.EntityWriteByName(name, entityWriteByNameRequest);
+                apiInstance.EntityWriteByName(EntityWriteByNameRequest entityWriteByNameRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.EntityWriteByName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1705,7 +1683,7 @@ No authorization required
 
 <a name="groupdeletealiasbyid"></a>
 # **GroupDeleteAliasByID**
-> void GroupDeleteAliasByID (string id)
+> void GroupDeleteAliasByID (string id, TimeSpan? wrapTTL = null)
 
 
 
@@ -1734,13 +1712,12 @@ namespace Example
 
             try
             {
-                apiInstance.GroupDeleteAliasByID(id);
+                apiInstance.GroupDeleteAliasByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.GroupDeleteAliasByID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1776,7 +1753,7 @@ No authorization required
 
 <a name="groupdeletebyid"></a>
 # **GroupDeleteByID**
-> void GroupDeleteByID (string id)
+> void GroupDeleteByID (string id, TimeSpan? wrapTTL = null)
 
 Update or delete an existing group using its ID.
 
@@ -1806,13 +1783,12 @@ namespace Example
             try
             {
                 // Update or delete an existing group using its ID.
-                apiInstance.GroupDeleteByID(id);
+                apiInstance.GroupDeleteByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.GroupDeleteByID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1848,7 +1824,7 @@ No authorization required
 
 <a name="groupdeletebyname"></a>
 # **GroupDeleteByName**
-> void GroupDeleteByName (string name)
+> void GroupDeleteByName (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -1877,13 +1853,12 @@ namespace Example
 
             try
             {
-                apiInstance.GroupDeleteByName(name);
+                apiInstance.GroupDeleteByName(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.GroupDeleteByName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1919,7 +1894,7 @@ No authorization required
 
 <a name="grouplistaliasesbyid"></a>
 # **GroupListAliasesByID**
-> void GroupListAliasesByID (string list)
+> void GroupListAliasesByID (TimeSpan? wrapTTL = null)
 
 List all the group alias IDs.
 
@@ -1949,13 +1924,12 @@ namespace Example
             try
             {
                 // List all the group alias IDs.
-                apiInstance.GroupListAliasesByID(list);
+                apiInstance.GroupListAliasesByID(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.GroupListAliasesByID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -1991,7 +1965,7 @@ No authorization required
 
 <a name="grouplistbyid"></a>
 # **GroupListByID**
-> void GroupListByID (string list)
+> void GroupListByID (TimeSpan? wrapTTL = null)
 
 List all the group IDs.
 
@@ -2021,13 +1995,12 @@ namespace Example
             try
             {
                 // List all the group IDs.
-                apiInstance.GroupListByID(list);
+                apiInstance.GroupListByID(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.GroupListByID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2063,7 +2036,7 @@ No authorization required
 
 <a name="grouplistbyname"></a>
 # **GroupListByName**
-> void GroupListByName (string list)
+> void GroupListByName (TimeSpan? wrapTTL = null)
 
 
 
@@ -2092,13 +2065,12 @@ namespace Example
 
             try
             {
-                apiInstance.GroupListByName(list);
+                apiInstance.GroupListByName(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.GroupListByName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2134,7 +2106,7 @@ No authorization required
 
 <a name="grouplookup"></a>
 # **GroupLookup**
-> void GroupLookup (GroupLookupRequest groupLookupRequest)
+> void GroupLookup (GroupLookupRequest groupLookupRequest, TimeSpan? wrapTTL = null)
 
 Query groups based on various properties.
 
@@ -2164,13 +2136,12 @@ namespace Example
             try
             {
                 // Query groups based on various properties.
-                apiInstance.GroupLookup(groupLookupRequest);
+                apiInstance.GroupLookup(GroupLookupRequest groupLookupRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.GroupLookup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2206,7 +2177,7 @@ No authorization required
 
 <a name="groupreadaliasbyid"></a>
 # **GroupReadAliasByID**
-> void GroupReadAliasByID (string id)
+> void GroupReadAliasByID (string id, TimeSpan? wrapTTL = null)
 
 
 
@@ -2235,13 +2206,12 @@ namespace Example
 
             try
             {
-                apiInstance.GroupReadAliasByID(id);
+                apiInstance.GroupReadAliasByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.GroupReadAliasByID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2277,7 +2247,7 @@ No authorization required
 
 <a name="groupreadbyid"></a>
 # **GroupReadByID**
-> void GroupReadByID (string id)
+> void GroupReadByID (string id, TimeSpan? wrapTTL = null)
 
 Update or delete an existing group using its ID.
 
@@ -2307,13 +2277,12 @@ namespace Example
             try
             {
                 // Update or delete an existing group using its ID.
-                apiInstance.GroupReadByID(id);
+                apiInstance.GroupReadByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.GroupReadByID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2349,7 +2318,7 @@ No authorization required
 
 <a name="groupreadbyname"></a>
 # **GroupReadByName**
-> void GroupReadByName (string name)
+> void GroupReadByName (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -2378,13 +2347,12 @@ namespace Example
 
             try
             {
-                apiInstance.GroupReadByName(name);
+                apiInstance.GroupReadByName(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.GroupReadByName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2420,7 +2388,7 @@ No authorization required
 
 <a name="groupwrite"></a>
 # **GroupWrite**
-> void GroupWrite (GroupWriteRequest groupWriteRequest)
+> void GroupWrite (GroupWriteRequest groupWriteRequest, TimeSpan? wrapTTL = null)
 
 Create a new group.
 
@@ -2450,13 +2418,12 @@ namespace Example
             try
             {
                 // Create a new group.
-                apiInstance.GroupWrite(groupWriteRequest);
+                apiInstance.GroupWrite(GroupWriteRequest groupWriteRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.GroupWrite: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2492,7 +2459,7 @@ No authorization required
 
 <a name="groupwritealias"></a>
 # **GroupWriteAlias**
-> void GroupWriteAlias (GroupWriteAliasRequest groupWriteAliasRequest)
+> void GroupWriteAlias (GroupWriteAliasRequest groupWriteAliasRequest, TimeSpan? wrapTTL = null)
 
 Creates a new group alias, or updates an existing one.
 
@@ -2522,13 +2489,12 @@ namespace Example
             try
             {
                 // Creates a new group alias, or updates an existing one.
-                apiInstance.GroupWriteAlias(groupWriteAliasRequest);
+                apiInstance.GroupWriteAlias(GroupWriteAliasRequest groupWriteAliasRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.GroupWriteAlias: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2564,7 +2530,7 @@ No authorization required
 
 <a name="groupwritealiasbyid"></a>
 # **GroupWriteAliasByID**
-> void GroupWriteAliasByID (string id, GroupWriteAliasByIDRequest groupWriteAliasByIDRequest)
+> void GroupWriteAliasByID (GroupWriteAliasByIDRequest groupWriteAliasByIDRequest, string id, TimeSpan? wrapTTL = null)
 
 
 
@@ -2594,13 +2560,12 @@ namespace Example
 
             try
             {
-                apiInstance.GroupWriteAliasByID(id, groupWriteAliasByIDRequest);
+                apiInstance.GroupWriteAliasByID(GroupWriteAliasByIDRequest groupWriteAliasByIDRequest, string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.GroupWriteAliasByID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2637,7 +2602,7 @@ No authorization required
 
 <a name="groupwritebyid"></a>
 # **GroupWriteByID**
-> void GroupWriteByID (string id, GroupWriteByIDRequest groupWriteByIDRequest)
+> void GroupWriteByID (GroupWriteByIDRequest groupWriteByIDRequest, string id, TimeSpan? wrapTTL = null)
 
 Update or delete an existing group using its ID.
 
@@ -2668,13 +2633,12 @@ namespace Example
             try
             {
                 // Update or delete an existing group using its ID.
-                apiInstance.GroupWriteByID(id, groupWriteByIDRequest);
+                apiInstance.GroupWriteByID(GroupWriteByIDRequest groupWriteByIDRequest, string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.GroupWriteByID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2711,7 +2675,7 @@ No authorization required
 
 <a name="groupwritebyname"></a>
 # **GroupWriteByName**
-> void GroupWriteByName (string name, GroupWriteByNameRequest groupWriteByNameRequest)
+> void GroupWriteByName (GroupWriteByNameRequest groupWriteByNameRequest, string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -2741,13 +2705,12 @@ namespace Example
 
             try
             {
-                apiInstance.GroupWriteByName(name, groupWriteByNameRequest);
+                apiInstance.GroupWriteByName(GroupWriteByNameRequest groupWriteByNameRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.GroupWriteByName: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2784,7 +2747,7 @@ No authorization required
 
 <a name="mfadeleteloginenforcement"></a>
 # **MFADeleteLoginEnforcement**
-> void MFADeleteLoginEnforcement (string name)
+> void MFADeleteLoginEnforcement (string name, TimeSpan? wrapTTL = null)
 
 Delete a login enforcement
 
@@ -2814,13 +2777,12 @@ namespace Example
             try
             {
                 // Delete a login enforcement
-                apiInstance.MFADeleteLoginEnforcement(name);
+                apiInstance.MFADeleteLoginEnforcement(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFADeleteLoginEnforcement: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2856,7 +2818,7 @@ No authorization required
 
 <a name="mfalistloginenforcements"></a>
 # **MFAListLoginEnforcements**
-> void MFAListLoginEnforcements (string list)
+> void MFAListLoginEnforcements (TimeSpan? wrapTTL = null)
 
 List login enforcements
 
@@ -2886,13 +2848,12 @@ namespace Example
             try
             {
                 // List login enforcements
-                apiInstance.MFAListLoginEnforcements(list);
+                apiInstance.MFAListLoginEnforcements(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFAListLoginEnforcements: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -2928,7 +2889,7 @@ No authorization required
 
 <a name="mfamethodadmindestroytotp"></a>
 # **MFAMethodAdminDestroyTOTP**
-> void MFAMethodAdminDestroyTOTP (MFAMethodAdminDestroyTOTPRequest mFAMethodAdminDestroyTOTPRequest)
+> void MFAMethodAdminDestroyTOTP (MFAMethodAdminDestroyTOTPRequest mFAMethodAdminDestroyTOTPRequest, TimeSpan? wrapTTL = null)
 
 Destroys a TOTP secret for the given MFA method ID on the given entity
 
@@ -2958,13 +2919,12 @@ namespace Example
             try
             {
                 // Destroys a TOTP secret for the given MFA method ID on the given entity
-                apiInstance.MFAMethodAdminDestroyTOTP(mFAMethodAdminDestroyTOTPRequest);
+                apiInstance.MFAMethodAdminDestroyTOTP(MFAMethodAdminDestroyTOTPRequest mFAMethodAdminDestroyTOTPRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFAMethodAdminDestroyTOTP: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3000,7 +2960,7 @@ No authorization required
 
 <a name="mfamethodadmingeneratetotp"></a>
 # **MFAMethodAdminGenerateTOTP**
-> void MFAMethodAdminGenerateTOTP (MFAMethodAdminGenerateTOTPRequest mFAMethodAdminGenerateTOTPRequest)
+> void MFAMethodAdminGenerateTOTP (MFAMethodAdminGenerateTOTPRequest mFAMethodAdminGenerateTOTPRequest, TimeSpan? wrapTTL = null)
 
 Update or create TOTP secret for the given method ID on the given entity.
 
@@ -3030,13 +2990,12 @@ namespace Example
             try
             {
                 // Update or create TOTP secret for the given method ID on the given entity.
-                apiInstance.MFAMethodAdminGenerateTOTP(mFAMethodAdminGenerateTOTPRequest);
+                apiInstance.MFAMethodAdminGenerateTOTP(MFAMethodAdminGenerateTOTPRequest mFAMethodAdminGenerateTOTPRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFAMethodAdminGenerateTOTP: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3072,7 +3031,7 @@ No authorization required
 
 <a name="mfamethoddeleteduo"></a>
 # **MFAMethodDeleteDuo**
-> void MFAMethodDeleteDuo (string methodId)
+> void MFAMethodDeleteDuo (string methodId, TimeSpan? wrapTTL = null)
 
 Delete a configuration for the given MFA method
 
@@ -3102,13 +3061,12 @@ namespace Example
             try
             {
                 // Delete a configuration for the given MFA method
-                apiInstance.MFAMethodDeleteDuo(methodId);
+                apiInstance.MFAMethodDeleteDuo(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFAMethodDeleteDuo: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3144,7 +3102,7 @@ No authorization required
 
 <a name="mfamethoddeleteokta"></a>
 # **MFAMethodDeleteOkta**
-> void MFAMethodDeleteOkta (string methodId)
+> void MFAMethodDeleteOkta (string methodId, TimeSpan? wrapTTL = null)
 
 Delete a configuration for the given MFA method
 
@@ -3174,13 +3132,12 @@ namespace Example
             try
             {
                 // Delete a configuration for the given MFA method
-                apiInstance.MFAMethodDeleteOkta(methodId);
+                apiInstance.MFAMethodDeleteOkta(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFAMethodDeleteOkta: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3216,7 +3173,7 @@ No authorization required
 
 <a name="mfamethoddeletepingid"></a>
 # **MFAMethodDeletePingID**
-> void MFAMethodDeletePingID (string methodId)
+> void MFAMethodDeletePingID (string methodId, TimeSpan? wrapTTL = null)
 
 Delete a configuration for the given MFA method
 
@@ -3246,13 +3203,12 @@ namespace Example
             try
             {
                 // Delete a configuration for the given MFA method
-                apiInstance.MFAMethodDeletePingID(methodId);
+                apiInstance.MFAMethodDeletePingID(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFAMethodDeletePingID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3288,7 +3244,7 @@ No authorization required
 
 <a name="mfamethoddeletetotp"></a>
 # **MFAMethodDeleteTOTP**
-> void MFAMethodDeleteTOTP (string methodId)
+> void MFAMethodDeleteTOTP (string methodId, TimeSpan? wrapTTL = null)
 
 Delete a configuration for the given MFA method
 
@@ -3318,13 +3274,12 @@ namespace Example
             try
             {
                 // Delete a configuration for the given MFA method
-                apiInstance.MFAMethodDeleteTOTP(methodId);
+                apiInstance.MFAMethodDeleteTOTP(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFAMethodDeleteTOTP: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3360,7 +3315,7 @@ No authorization required
 
 <a name="mfamethodgeneratetotp"></a>
 # **MFAMethodGenerateTOTP**
-> void MFAMethodGenerateTOTP (MFAMethodGenerateTOTPRequest mFAMethodGenerateTOTPRequest)
+> void MFAMethodGenerateTOTP (MFAMethodGenerateTOTPRequest mFAMethodGenerateTOTPRequest, TimeSpan? wrapTTL = null)
 
 Update or create TOTP secret for the given method ID on the given entity.
 
@@ -3390,13 +3345,12 @@ namespace Example
             try
             {
                 // Update or create TOTP secret for the given method ID on the given entity.
-                apiInstance.MFAMethodGenerateTOTP(mFAMethodGenerateTOTPRequest);
+                apiInstance.MFAMethodGenerateTOTP(MFAMethodGenerateTOTPRequest mFAMethodGenerateTOTPRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFAMethodGenerateTOTP: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3432,7 +3386,7 @@ No authorization required
 
 <a name="mfamethodlist"></a>
 # **MFAMethodList**
-> void MFAMethodList (string list)
+> void MFAMethodList (TimeSpan? wrapTTL = null)
 
 List MFA method configurations for all MFA methods
 
@@ -3462,13 +3416,12 @@ namespace Example
             try
             {
                 // List MFA method configurations for all MFA methods
-                apiInstance.MFAMethodList(list);
+                apiInstance.MFAMethodList(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFAMethodList: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3504,7 +3457,7 @@ No authorization required
 
 <a name="mfamethodlistduo"></a>
 # **MFAMethodListDuo**
-> void MFAMethodListDuo (string list)
+> void MFAMethodListDuo (TimeSpan? wrapTTL = null)
 
 List MFA method configurations for the given MFA method
 
@@ -3534,13 +3487,12 @@ namespace Example
             try
             {
                 // List MFA method configurations for the given MFA method
-                apiInstance.MFAMethodListDuo(list);
+                apiInstance.MFAMethodListDuo(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFAMethodListDuo: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3576,7 +3528,7 @@ No authorization required
 
 <a name="mfamethodlistokta"></a>
 # **MFAMethodListOkta**
-> void MFAMethodListOkta (string list)
+> void MFAMethodListOkta (TimeSpan? wrapTTL = null)
 
 List MFA method configurations for the given MFA method
 
@@ -3606,13 +3558,12 @@ namespace Example
             try
             {
                 // List MFA method configurations for the given MFA method
-                apiInstance.MFAMethodListOkta(list);
+                apiInstance.MFAMethodListOkta(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFAMethodListOkta: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3648,7 +3599,7 @@ No authorization required
 
 <a name="mfamethodlistpingid"></a>
 # **MFAMethodListPingID**
-> void MFAMethodListPingID (string list)
+> void MFAMethodListPingID (TimeSpan? wrapTTL = null)
 
 List MFA method configurations for the given MFA method
 
@@ -3678,13 +3629,12 @@ namespace Example
             try
             {
                 // List MFA method configurations for the given MFA method
-                apiInstance.MFAMethodListPingID(list);
+                apiInstance.MFAMethodListPingID(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFAMethodListPingID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3720,7 +3670,7 @@ No authorization required
 
 <a name="mfamethodlisttotp"></a>
 # **MFAMethodListTOTP**
-> void MFAMethodListTOTP (string list)
+> void MFAMethodListTOTP (TimeSpan? wrapTTL = null)
 
 List MFA method configurations for the given MFA method
 
@@ -3750,13 +3700,12 @@ namespace Example
             try
             {
                 // List MFA method configurations for the given MFA method
-                apiInstance.MFAMethodListTOTP(list);
+                apiInstance.MFAMethodListTOTP(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFAMethodListTOTP: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3792,7 +3741,7 @@ No authorization required
 
 <a name="mfamethodread"></a>
 # **MFAMethodRead**
-> void MFAMethodRead (string methodId)
+> void MFAMethodRead (string methodId, TimeSpan? wrapTTL = null)
 
 Read the current configuration for the given ID regardless of the MFA method type
 
@@ -3822,13 +3771,12 @@ namespace Example
             try
             {
                 // Read the current configuration for the given ID regardless of the MFA method type
-                apiInstance.MFAMethodRead(methodId);
+                apiInstance.MFAMethodRead(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFAMethodRead: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3864,7 +3812,7 @@ No authorization required
 
 <a name="mfamethodreadduo"></a>
 # **MFAMethodReadDuo**
-> void MFAMethodReadDuo (string methodId)
+> void MFAMethodReadDuo (string methodId, TimeSpan? wrapTTL = null)
 
 Read the current configuration for the given MFA method
 
@@ -3894,13 +3842,12 @@ namespace Example
             try
             {
                 // Read the current configuration for the given MFA method
-                apiInstance.MFAMethodReadDuo(methodId);
+                apiInstance.MFAMethodReadDuo(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFAMethodReadDuo: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -3936,7 +3883,7 @@ No authorization required
 
 <a name="mfamethodreadokta"></a>
 # **MFAMethodReadOkta**
-> void MFAMethodReadOkta (string methodId)
+> void MFAMethodReadOkta (string methodId, TimeSpan? wrapTTL = null)
 
 Read the current configuration for the given MFA method
 
@@ -3966,13 +3913,12 @@ namespace Example
             try
             {
                 // Read the current configuration for the given MFA method
-                apiInstance.MFAMethodReadOkta(methodId);
+                apiInstance.MFAMethodReadOkta(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFAMethodReadOkta: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4008,7 +3954,7 @@ No authorization required
 
 <a name="mfamethodreadpingid"></a>
 # **MFAMethodReadPingID**
-> void MFAMethodReadPingID (string methodId)
+> void MFAMethodReadPingID (string methodId, TimeSpan? wrapTTL = null)
 
 Read the current configuration for the given MFA method
 
@@ -4038,13 +3984,12 @@ namespace Example
             try
             {
                 // Read the current configuration for the given MFA method
-                apiInstance.MFAMethodReadPingID(methodId);
+                apiInstance.MFAMethodReadPingID(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFAMethodReadPingID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4080,7 +4025,7 @@ No authorization required
 
 <a name="mfamethodreadtotp"></a>
 # **MFAMethodReadTOTP**
-> void MFAMethodReadTOTP (string methodId)
+> void MFAMethodReadTOTP (string methodId, TimeSpan? wrapTTL = null)
 
 Read the current configuration for the given MFA method
 
@@ -4110,13 +4055,12 @@ namespace Example
             try
             {
                 // Read the current configuration for the given MFA method
-                apiInstance.MFAMethodReadTOTP(methodId);
+                apiInstance.MFAMethodReadTOTP(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFAMethodReadTOTP: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4152,7 +4096,7 @@ No authorization required
 
 <a name="mfamethodwriteduo"></a>
 # **MFAMethodWriteDuo**
-> void MFAMethodWriteDuo (string methodId, MFAMethodWriteDuoRequest mFAMethodWriteDuoRequest)
+> void MFAMethodWriteDuo (MFAMethodWriteDuoRequest mFAMethodWriteDuoRequest, string methodId, TimeSpan? wrapTTL = null)
 
 Update or create a configuration for the given MFA method
 
@@ -4183,13 +4127,12 @@ namespace Example
             try
             {
                 // Update or create a configuration for the given MFA method
-                apiInstance.MFAMethodWriteDuo(methodId, mFAMethodWriteDuoRequest);
+                apiInstance.MFAMethodWriteDuo(MFAMethodWriteDuoRequest mFAMethodWriteDuoRequest, string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFAMethodWriteDuo: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4226,7 +4169,7 @@ No authorization required
 
 <a name="mfamethodwriteokta"></a>
 # **MFAMethodWriteOkta**
-> void MFAMethodWriteOkta (string methodId, MFAMethodWriteOktaRequest mFAMethodWriteOktaRequest)
+> void MFAMethodWriteOkta (MFAMethodWriteOktaRequest mFAMethodWriteOktaRequest, string methodId, TimeSpan? wrapTTL = null)
 
 Update or create a configuration for the given MFA method
 
@@ -4257,13 +4200,12 @@ namespace Example
             try
             {
                 // Update or create a configuration for the given MFA method
-                apiInstance.MFAMethodWriteOkta(methodId, mFAMethodWriteOktaRequest);
+                apiInstance.MFAMethodWriteOkta(MFAMethodWriteOktaRequest mFAMethodWriteOktaRequest, string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFAMethodWriteOkta: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4300,7 +4242,7 @@ No authorization required
 
 <a name="mfamethodwritepingid"></a>
 # **MFAMethodWritePingID**
-> void MFAMethodWritePingID (string methodId, MFAMethodWritePingIDRequest mFAMethodWritePingIDRequest)
+> void MFAMethodWritePingID (MFAMethodWritePingIDRequest mFAMethodWritePingIDRequest, string methodId, TimeSpan? wrapTTL = null)
 
 Update or create a configuration for the given MFA method
 
@@ -4331,13 +4273,12 @@ namespace Example
             try
             {
                 // Update or create a configuration for the given MFA method
-                apiInstance.MFAMethodWritePingID(methodId, mFAMethodWritePingIDRequest);
+                apiInstance.MFAMethodWritePingID(MFAMethodWritePingIDRequest mFAMethodWritePingIDRequest, string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFAMethodWritePingID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4374,7 +4315,7 @@ No authorization required
 
 <a name="mfamethodwritetotp"></a>
 # **MFAMethodWriteTOTP**
-> void MFAMethodWriteTOTP (string methodId, MFAMethodWriteTOTPRequest mFAMethodWriteTOTPRequest)
+> void MFAMethodWriteTOTP (MFAMethodWriteTOTPRequest mFAMethodWriteTOTPRequest, string methodId, TimeSpan? wrapTTL = null)
 
 Update or create a configuration for the given MFA method
 
@@ -4405,13 +4346,12 @@ namespace Example
             try
             {
                 // Update or create a configuration for the given MFA method
-                apiInstance.MFAMethodWriteTOTP(methodId, mFAMethodWriteTOTPRequest);
+                apiInstance.MFAMethodWriteTOTP(MFAMethodWriteTOTPRequest mFAMethodWriteTOTPRequest, string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFAMethodWriteTOTP: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4448,7 +4388,7 @@ No authorization required
 
 <a name="mfareadloginenforcement"></a>
 # **MFAReadLoginEnforcement**
-> void MFAReadLoginEnforcement (string name)
+> void MFAReadLoginEnforcement (string name, TimeSpan? wrapTTL = null)
 
 Read the current login enforcement
 
@@ -4478,13 +4418,12 @@ namespace Example
             try
             {
                 // Read the current login enforcement
-                apiInstance.MFAReadLoginEnforcement(name);
+                apiInstance.MFAReadLoginEnforcement(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFAReadLoginEnforcement: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4520,7 +4459,7 @@ No authorization required
 
 <a name="mfawriteloginenforcement"></a>
 # **MFAWriteLoginEnforcement**
-> void MFAWriteLoginEnforcement (string name, MFAWriteLoginEnforcementRequest mFAWriteLoginEnforcementRequest)
+> void MFAWriteLoginEnforcement (MFAWriteLoginEnforcementRequest mFAWriteLoginEnforcementRequest, string name, TimeSpan? wrapTTL = null)
 
 Create or update a login enforcement
 
@@ -4551,13 +4490,12 @@ namespace Example
             try
             {
                 // Create or update a login enforcement
-                apiInstance.MFAWriteLoginEnforcement(name, mFAWriteLoginEnforcementRequest);
+                apiInstance.MFAWriteLoginEnforcement(MFAWriteLoginEnforcementRequest mFAWriteLoginEnforcementRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.MFAWriteLoginEnforcement: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4594,7 +4532,7 @@ No authorization required
 
 <a name="oidcdeleteassignment"></a>
 # **OIDCDeleteAssignment**
-> void OIDCDeleteAssignment (string name)
+> void OIDCDeleteAssignment (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -4623,13 +4561,12 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCDeleteAssignment(name);
+                apiInstance.OIDCDeleteAssignment(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCDeleteAssignment: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4665,7 +4602,7 @@ No authorization required
 
 <a name="oidcdeleteclient"></a>
 # **OIDCDeleteClient**
-> void OIDCDeleteClient (string name)
+> void OIDCDeleteClient (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -4694,13 +4631,12 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCDeleteClient(name);
+                apiInstance.OIDCDeleteClient(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCDeleteClient: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4736,7 +4672,7 @@ No authorization required
 
 <a name="oidcdeletekey"></a>
 # **OIDCDeleteKey**
-> void OIDCDeleteKey (string name)
+> void OIDCDeleteKey (string name, TimeSpan? wrapTTL = null)
 
 CRUD operations for OIDC keys.
 
@@ -4766,13 +4702,12 @@ namespace Example
             try
             {
                 // CRUD operations for OIDC keys.
-                apiInstance.OIDCDeleteKey(name);
+                apiInstance.OIDCDeleteKey(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCDeleteKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4808,7 +4743,7 @@ No authorization required
 
 <a name="oidcdeleteprovider"></a>
 # **OIDCDeleteProvider**
-> void OIDCDeleteProvider (string name)
+> void OIDCDeleteProvider (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -4837,13 +4772,12 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCDeleteProvider(name);
+                apiInstance.OIDCDeleteProvider(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCDeleteProvider: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4879,7 +4813,7 @@ No authorization required
 
 <a name="oidcdeleterole"></a>
 # **OIDCDeleteRole**
-> void OIDCDeleteRole (string name)
+> void OIDCDeleteRole (string name, TimeSpan? wrapTTL = null)
 
 CRUD operations on OIDC Roles
 
@@ -4909,13 +4843,12 @@ namespace Example
             try
             {
                 // CRUD operations on OIDC Roles
-                apiInstance.OIDCDeleteRole(name);
+                apiInstance.OIDCDeleteRole(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCDeleteRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -4951,7 +4884,7 @@ No authorization required
 
 <a name="oidcdeletescope"></a>
 # **OIDCDeleteScope**
-> void OIDCDeleteScope (string name)
+> void OIDCDeleteScope (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -4980,13 +4913,12 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCDeleteScope(name);
+                apiInstance.OIDCDeleteScope(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCDeleteScope: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5022,7 +4954,7 @@ No authorization required
 
 <a name="oidcintrospect"></a>
 # **OIDCIntrospect**
-> void OIDCIntrospect (OIDCIntrospectRequest oIDCIntrospectRequest)
+> void OIDCIntrospect (OIDCIntrospectRequest oIDCIntrospectRequest, TimeSpan? wrapTTL = null)
 
 Verify the authenticity of an OIDC token
 
@@ -5052,13 +4984,12 @@ namespace Example
             try
             {
                 // Verify the authenticity of an OIDC token
-                apiInstance.OIDCIntrospect(oIDCIntrospectRequest);
+                apiInstance.OIDCIntrospect(OIDCIntrospectRequest oIDCIntrospectRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCIntrospect: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5094,7 +5025,7 @@ No authorization required
 
 <a name="oidclistassignments"></a>
 # **OIDCListAssignments**
-> void OIDCListAssignments (string list)
+> void OIDCListAssignments (TimeSpan? wrapTTL = null)
 
 
 
@@ -5123,13 +5054,12 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCListAssignments(list);
+                apiInstance.OIDCListAssignments(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCListAssignments: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5165,7 +5095,7 @@ No authorization required
 
 <a name="oidclistclients"></a>
 # **OIDCListClients**
-> void OIDCListClients (string list)
+> void OIDCListClients (TimeSpan? wrapTTL = null)
 
 
 
@@ -5194,13 +5124,12 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCListClients(list);
+                apiInstance.OIDCListClients(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCListClients: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5236,7 +5165,7 @@ No authorization required
 
 <a name="oidclistkeys"></a>
 # **OIDCListKeys**
-> void OIDCListKeys (string list)
+> void OIDCListKeys (TimeSpan? wrapTTL = null)
 
 List OIDC keys
 
@@ -5266,13 +5195,12 @@ namespace Example
             try
             {
                 // List OIDC keys
-                apiInstance.OIDCListKeys(list);
+                apiInstance.OIDCListKeys(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCListKeys: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5308,7 +5236,7 @@ No authorization required
 
 <a name="oidclistproviders"></a>
 # **OIDCListProviders**
-> void OIDCListProviders (string list, string allowedClientId = null)
+> void OIDCListProviders (string allowedClientId = default(string), TimeSpan? wrapTTL = null)
 
 
 
@@ -5338,13 +5266,12 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCListProviders(list, allowedClientId);
+                apiInstance.OIDCListProviders(string allowedClientId = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCListProviders: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5381,7 +5308,7 @@ No authorization required
 
 <a name="oidclistroles"></a>
 # **OIDCListRoles**
-> void OIDCListRoles (string list)
+> void OIDCListRoles (TimeSpan? wrapTTL = null)
 
 List configured OIDC roles
 
@@ -5411,13 +5338,12 @@ namespace Example
             try
             {
                 // List configured OIDC roles
-                apiInstance.OIDCListRoles(list);
+                apiInstance.OIDCListRoles(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCListRoles: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5453,7 +5379,7 @@ No authorization required
 
 <a name="oidclistscopes"></a>
 # **OIDCListScopes**
-> void OIDCListScopes (string list)
+> void OIDCListScopes (TimeSpan? wrapTTL = null)
 
 
 
@@ -5482,13 +5408,12 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCListScopes(list);
+                apiInstance.OIDCListScopes(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCListScopes: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5524,7 +5449,7 @@ No authorization required
 
 <a name="oidcreadassignment"></a>
 # **OIDCReadAssignment**
-> void OIDCReadAssignment (string name)
+> void OIDCReadAssignment (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -5553,13 +5478,12 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCReadAssignment(name);
+                apiInstance.OIDCReadAssignment(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCReadAssignment: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5595,7 +5519,7 @@ No authorization required
 
 <a name="oidcreadclient"></a>
 # **OIDCReadClient**
-> void OIDCReadClient (string name)
+> void OIDCReadClient (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -5624,13 +5548,12 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCReadClient(name);
+                apiInstance.OIDCReadClient(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCReadClient: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5666,7 +5589,7 @@ No authorization required
 
 <a name="oidcreadconfig"></a>
 # **OIDCReadConfig**
-> void OIDCReadConfig ()
+> void OIDCReadConfig (TimeSpan? wrapTTL = null)
 
 OIDC configuration
 
@@ -5695,13 +5618,12 @@ namespace Example
             try
             {
                 // OIDC configuration
-                apiInstance.OIDCReadConfig();
+                apiInstance.OIDCReadConfig(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCReadConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5734,7 +5656,7 @@ No authorization required
 
 <a name="oidcreadkey"></a>
 # **OIDCReadKey**
-> void OIDCReadKey (string name)
+> void OIDCReadKey (string name, TimeSpan? wrapTTL = null)
 
 CRUD operations for OIDC keys.
 
@@ -5764,13 +5686,12 @@ namespace Example
             try
             {
                 // CRUD operations for OIDC keys.
-                apiInstance.OIDCReadKey(name);
+                apiInstance.OIDCReadKey(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCReadKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5806,7 +5727,7 @@ No authorization required
 
 <a name="oidcreadprovider"></a>
 # **OIDCReadProvider**
-> void OIDCReadProvider (string name)
+> void OIDCReadProvider (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -5835,13 +5756,12 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCReadProvider(name);
+                apiInstance.OIDCReadProvider(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCReadProvider: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5877,7 +5797,7 @@ No authorization required
 
 <a name="oidcreadproviderauthorize"></a>
 # **OIDCReadProviderAuthorize**
-> void OIDCReadProviderAuthorize (string name)
+> void OIDCReadProviderAuthorize (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -5906,13 +5826,12 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCReadProviderAuthorize(name);
+                apiInstance.OIDCReadProviderAuthorize(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCReadProviderAuthorize: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -5948,7 +5867,7 @@ No authorization required
 
 <a name="oidcreadprovideruserinfo"></a>
 # **OIDCReadProviderUserInfo**
-> void OIDCReadProviderUserInfo (string name)
+> void OIDCReadProviderUserInfo (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -5977,13 +5896,12 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCReadProviderUserInfo(name);
+                apiInstance.OIDCReadProviderUserInfo(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCReadProviderUserInfo: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6019,7 +5937,7 @@ No authorization required
 
 <a name="oidcreadproviderwellknownkeys"></a>
 # **OIDCReadProviderWellKnownKeys**
-> void OIDCReadProviderWellKnownKeys (string name)
+> void OIDCReadProviderWellKnownKeys (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -6048,13 +5966,12 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCReadProviderWellKnownKeys(name);
+                apiInstance.OIDCReadProviderWellKnownKeys(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCReadProviderWellKnownKeys: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6090,7 +6007,7 @@ No authorization required
 
 <a name="oidcreadproviderwellknownopenidconfiguration"></a>
 # **OIDCReadProviderWellKnownOpenIDConfiguration**
-> void OIDCReadProviderWellKnownOpenIDConfiguration (string name)
+> void OIDCReadProviderWellKnownOpenIDConfiguration (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -6119,13 +6036,12 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCReadProviderWellKnownOpenIDConfiguration(name);
+                apiInstance.OIDCReadProviderWellKnownOpenIDConfiguration(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCReadProviderWellKnownOpenIDConfiguration: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6161,7 +6077,7 @@ No authorization required
 
 <a name="oidcreadrole"></a>
 # **OIDCReadRole**
-> void OIDCReadRole (string name)
+> void OIDCReadRole (string name, TimeSpan? wrapTTL = null)
 
 CRUD operations on OIDC Roles
 
@@ -6191,13 +6107,12 @@ namespace Example
             try
             {
                 // CRUD operations on OIDC Roles
-                apiInstance.OIDCReadRole(name);
+                apiInstance.OIDCReadRole(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCReadRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6233,7 +6148,7 @@ No authorization required
 
 <a name="oidcreadscope"></a>
 # **OIDCReadScope**
-> void OIDCReadScope (string name)
+> void OIDCReadScope (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -6262,13 +6177,12 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCReadScope(name);
+                apiInstance.OIDCReadScope(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCReadScope: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6304,7 +6218,7 @@ No authorization required
 
 <a name="oidcreadtoken"></a>
 # **OIDCReadToken**
-> void OIDCReadToken (string name)
+> void OIDCReadToken (string name, TimeSpan? wrapTTL = null)
 
 Generate an OIDC token
 
@@ -6334,13 +6248,12 @@ namespace Example
             try
             {
                 // Generate an OIDC token
-                apiInstance.OIDCReadToken(name);
+                apiInstance.OIDCReadToken(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCReadToken: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6376,7 +6289,7 @@ No authorization required
 
 <a name="oidcreadwellknownkeys"></a>
 # **OIDCReadWellKnownKeys**
-> void OIDCReadWellKnownKeys ()
+> void OIDCReadWellKnownKeys (TimeSpan? wrapTTL = null)
 
 Retrieve public keys
 
@@ -6405,13 +6318,12 @@ namespace Example
             try
             {
                 // Retrieve public keys
-                apiInstance.OIDCReadWellKnownKeys();
+                apiInstance.OIDCReadWellKnownKeys(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCReadWellKnownKeys: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6444,7 +6356,7 @@ No authorization required
 
 <a name="oidcreadwellknownopenidconfiguration"></a>
 # **OIDCReadWellKnownOpenIDConfiguration**
-> void OIDCReadWellKnownOpenIDConfiguration ()
+> void OIDCReadWellKnownOpenIDConfiguration (TimeSpan? wrapTTL = null)
 
 Query OIDC configurations
 
@@ -6473,13 +6385,12 @@ namespace Example
             try
             {
                 // Query OIDC configurations
-                apiInstance.OIDCReadWellKnownOpenIDConfiguration();
+                apiInstance.OIDCReadWellKnownOpenIDConfiguration(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCReadWellKnownOpenIDConfiguration: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6512,7 +6423,7 @@ No authorization required
 
 <a name="oidcrotatekey"></a>
 # **OIDCRotateKey**
-> void OIDCRotateKey (string name, OIDCRotateKeyRequest oIDCRotateKeyRequest)
+> void OIDCRotateKey (OIDCRotateKeyRequest oIDCRotateKeyRequest, string name, TimeSpan? wrapTTL = null)
 
 Rotate a named OIDC key.
 
@@ -6543,13 +6454,12 @@ namespace Example
             try
             {
                 // Rotate a named OIDC key.
-                apiInstance.OIDCRotateKey(name, oIDCRotateKeyRequest);
+                apiInstance.OIDCRotateKey(OIDCRotateKeyRequest oIDCRotateKeyRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCRotateKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6586,7 +6496,7 @@ No authorization required
 
 <a name="oidcwriteassignment"></a>
 # **OIDCWriteAssignment**
-> void OIDCWriteAssignment (string name, OIDCWriteAssignmentRequest oIDCWriteAssignmentRequest)
+> void OIDCWriteAssignment (OIDCWriteAssignmentRequest oIDCWriteAssignmentRequest, string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -6616,13 +6526,12 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCWriteAssignment(name, oIDCWriteAssignmentRequest);
+                apiInstance.OIDCWriteAssignment(OIDCWriteAssignmentRequest oIDCWriteAssignmentRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCWriteAssignment: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6659,7 +6568,7 @@ No authorization required
 
 <a name="oidcwriteclient"></a>
 # **OIDCWriteClient**
-> void OIDCWriteClient (string name, OIDCWriteClientRequest oIDCWriteClientRequest)
+> void OIDCWriteClient (OIDCWriteClientRequest oIDCWriteClientRequest, string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -6689,13 +6598,12 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCWriteClient(name, oIDCWriteClientRequest);
+                apiInstance.OIDCWriteClient(OIDCWriteClientRequest oIDCWriteClientRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCWriteClient: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6732,7 +6640,7 @@ No authorization required
 
 <a name="oidcwriteconfig"></a>
 # **OIDCWriteConfig**
-> void OIDCWriteConfig (OIDCWriteConfigRequest oIDCWriteConfigRequest)
+> void OIDCWriteConfig (OIDCWriteConfigRequest oIDCWriteConfigRequest, TimeSpan? wrapTTL = null)
 
 OIDC configuration
 
@@ -6762,13 +6670,12 @@ namespace Example
             try
             {
                 // OIDC configuration
-                apiInstance.OIDCWriteConfig(oIDCWriteConfigRequest);
+                apiInstance.OIDCWriteConfig(OIDCWriteConfigRequest oIDCWriteConfigRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCWriteConfig: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6804,7 +6711,7 @@ No authorization required
 
 <a name="oidcwritekey"></a>
 # **OIDCWriteKey**
-> void OIDCWriteKey (string name, OIDCWriteKeyRequest oIDCWriteKeyRequest)
+> void OIDCWriteKey (OIDCWriteKeyRequest oIDCWriteKeyRequest, string name, TimeSpan? wrapTTL = null)
 
 CRUD operations for OIDC keys.
 
@@ -6835,13 +6742,12 @@ namespace Example
             try
             {
                 // CRUD operations for OIDC keys.
-                apiInstance.OIDCWriteKey(name, oIDCWriteKeyRequest);
+                apiInstance.OIDCWriteKey(OIDCWriteKeyRequest oIDCWriteKeyRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCWriteKey: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6878,7 +6784,7 @@ No authorization required
 
 <a name="oidcwriteprovider"></a>
 # **OIDCWriteProvider**
-> void OIDCWriteProvider (string name, OIDCWriteProviderRequest oIDCWriteProviderRequest)
+> void OIDCWriteProvider (OIDCWriteProviderRequest oIDCWriteProviderRequest, string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -6908,13 +6814,12 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCWriteProvider(name, oIDCWriteProviderRequest);
+                apiInstance.OIDCWriteProvider(OIDCWriteProviderRequest oIDCWriteProviderRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCWriteProvider: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -6951,7 +6856,7 @@ No authorization required
 
 <a name="oidcwriteproviderauthorize"></a>
 # **OIDCWriteProviderAuthorize**
-> void OIDCWriteProviderAuthorize (string name, OIDCWriteProviderAuthorizeRequest oIDCWriteProviderAuthorizeRequest)
+> void OIDCWriteProviderAuthorize (OIDCWriteProviderAuthorizeRequest oIDCWriteProviderAuthorizeRequest, string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -6981,13 +6886,12 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCWriteProviderAuthorize(name, oIDCWriteProviderAuthorizeRequest);
+                apiInstance.OIDCWriteProviderAuthorize(OIDCWriteProviderAuthorizeRequest oIDCWriteProviderAuthorizeRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCWriteProviderAuthorize: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -7024,7 +6928,7 @@ No authorization required
 
 <a name="oidcwriteprovidertoken"></a>
 # **OIDCWriteProviderToken**
-> void OIDCWriteProviderToken (string name, OIDCWriteProviderTokenRequest oIDCWriteProviderTokenRequest)
+> void OIDCWriteProviderToken (OIDCWriteProviderTokenRequest oIDCWriteProviderTokenRequest, string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -7054,13 +6958,12 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCWriteProviderToken(name, oIDCWriteProviderTokenRequest);
+                apiInstance.OIDCWriteProviderToken(OIDCWriteProviderTokenRequest oIDCWriteProviderTokenRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCWriteProviderToken: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -7097,7 +7000,7 @@ No authorization required
 
 <a name="oidcwriteprovideruserinfo"></a>
 # **OIDCWriteProviderUserInfo**
-> void OIDCWriteProviderUserInfo (string name)
+> void OIDCWriteProviderUserInfo (string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -7126,13 +7029,12 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCWriteProviderUserInfo(name);
+                apiInstance.OIDCWriteProviderUserInfo(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCWriteProviderUserInfo: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -7168,7 +7070,7 @@ No authorization required
 
 <a name="oidcwriterole"></a>
 # **OIDCWriteRole**
-> void OIDCWriteRole (string name, OIDCWriteRoleRequest oIDCWriteRoleRequest)
+> void OIDCWriteRole (OIDCWriteRoleRequest oIDCWriteRoleRequest, string name, TimeSpan? wrapTTL = null)
 
 CRUD operations on OIDC Roles
 
@@ -7199,13 +7101,12 @@ namespace Example
             try
             {
                 // CRUD operations on OIDC Roles
-                apiInstance.OIDCWriteRole(name, oIDCWriteRoleRequest);
+                apiInstance.OIDCWriteRole(OIDCWriteRoleRequest oIDCWriteRoleRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCWriteRole: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -7242,7 +7143,7 @@ No authorization required
 
 <a name="oidcwritescope"></a>
 # **OIDCWriteScope**
-> void OIDCWriteScope (string name, OIDCWriteScopeRequest oIDCWriteScopeRequest)
+> void OIDCWriteScope (OIDCWriteScopeRequest oIDCWriteScopeRequest, string name, TimeSpan? wrapTTL = null)
 
 
 
@@ -7272,13 +7173,12 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCWriteScope(name, oIDCWriteScopeRequest);
+                apiInstance.OIDCWriteScope(OIDCWriteScopeRequest oIDCWriteScopeRequest, string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.OIDCWriteScope: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -7315,7 +7215,7 @@ No authorization required
 
 <a name="personaiddeletebyid"></a>
 # **PersonaIDDeleteByID**
-> void PersonaIDDeleteByID (string id)
+> void PersonaIDDeleteByID (string id, TimeSpan? wrapTTL = null)
 
 Update, read or delete an alias ID.
 
@@ -7345,13 +7245,12 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
-                apiInstance.PersonaIDDeleteByID(id);
+                apiInstance.PersonaIDDeleteByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.PersonaIDDeleteByID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -7387,7 +7286,7 @@ No authorization required
 
 <a name="personaidreadbyid"></a>
 # **PersonaIDReadByID**
-> void PersonaIDReadByID (string id)
+> void PersonaIDReadByID (string id, TimeSpan? wrapTTL = null)
 
 Update, read or delete an alias ID.
 
@@ -7417,13 +7316,12 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
-                apiInstance.PersonaIDReadByID(id);
+                apiInstance.PersonaIDReadByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.PersonaIDReadByID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -7459,7 +7357,7 @@ No authorization required
 
 <a name="personaidwritebyid"></a>
 # **PersonaIDWriteByID**
-> void PersonaIDWriteByID (string id, PersonaIDWriteByIDRequest personaIDWriteByIDRequest)
+> void PersonaIDWriteByID (PersonaIDWriteByIDRequest personaIDWriteByIDRequest, string id, TimeSpan? wrapTTL = null)
 
 Update, read or delete an alias ID.
 
@@ -7490,13 +7388,12 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
-                apiInstance.PersonaIDWriteByID(id, personaIDWriteByIDRequest);
+                apiInstance.PersonaIDWriteByID(PersonaIDWriteByIDRequest personaIDWriteByIDRequest, string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.PersonaIDWriteByID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -7533,7 +7430,7 @@ No authorization required
 
 <a name="personalistbyid"></a>
 # **PersonaListByID**
-> void PersonaListByID (string list)
+> void PersonaListByID (TimeSpan? wrapTTL = null)
 
 List all the alias IDs.
 
@@ -7563,13 +7460,12 @@ namespace Example
             try
             {
                 // List all the alias IDs.
-                apiInstance.PersonaListByID(list);
+                apiInstance.PersonaListByID(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.PersonaListByID: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -7605,7 +7501,7 @@ No authorization required
 
 <a name="personawrite"></a>
 # **PersonaWrite**
-> void PersonaWrite (PersonaWriteRequest personaWriteRequest)
+> void PersonaWrite (PersonaWriteRequest personaWriteRequest, TimeSpan? wrapTTL = null)
 
 Create a new alias.
 
@@ -7635,13 +7531,12 @@ namespace Example
             try
             {
                 // Create a new alias.
-                apiInstance.PersonaWrite(personaWriteRequest);
+                apiInstance.PersonaWrite(PersonaWriteRequest personaWriteRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling Identity.PersonaWrite: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
             }
         }
     }
