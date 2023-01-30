@@ -2,11 +2,11 @@
 
 A .NET client library [generated][openapi-generator] from `OpenAPI` [specification file][openapi-spec] to interact with [Hashicorp][hashicorp] [Vault][vault].
 
-_**Warning**_: This library is currently marked as **EXPERIMENTAL**. Please 
-try it out and give us feedback! **
+> _**Warning**_: This library is currently marked as **EXPERIMENTAL**. Please 
+> try it out and give us feedback! **
 
-_**Warning**_: The `OpenAPI` [openapi.json][openapi-spec] file included in
-this repository is **NOT** the official Vault `OpenAPI` specification.
+> _**Warning**_: The `OpenAPI` [openapi.json][openapi-spec] file included in
+> this repository is **NOT** the official Vault `OpenAPI` specification.
 
 ## Contents
 
