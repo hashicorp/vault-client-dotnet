@@ -97,7 +97,7 @@ namespace Example
                 // Write a secret
                 var kvRequestData = new KVv2WriteRequest(secretData);
 
-                vaultClient.Secrets.KVv2Write("mypath", kvRequestData);
+                vaultClient.Secrets.KVv2Write(kvRequestData, "mypath");
 
                 // Read a secret
                 VaultResponse<Object> resp = vaultClient.Secrets.KVv2Read("mypath");
