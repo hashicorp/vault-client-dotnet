@@ -38,8 +38,8 @@ Using Nuget CLI:
  nuget install Vault -Version "PackageVersion"
 ```
 
->_**Note**_: You can find the latest package version in the Release
->tab in github
+> _**Note**_: You can find the latest package version in the Release
+> tab in GitHub.
 
 You can add the package to your .Net project using the following command:
 ```shell-session
