@@ -16,6 +16,9 @@ using Vault.Model;
 
 namespace Vault
 {
+    /// <summary>
+    /// The Primary Vault client class
+    /// </summary>
     public class VaultClient
     {
 
