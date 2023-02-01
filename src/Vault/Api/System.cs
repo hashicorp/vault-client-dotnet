@@ -40,7 +40,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> CalculateAuditHash(CalculateAuditHashRequest calculateAuditHashRequest, string path, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> CalculateAuditHash(string path, CalculateAuditHashRequest calculateAuditHashRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Disable the audit device at the given path.
         /// </summary>
@@ -1732,7 +1732,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> RenewFor(RenewForRequest renewForRequest, string urlLeaseId, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> RenewFor(string urlLeaseId, RenewForRequest renewForRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Revokes a lease immediately.
         /// </summary>
@@ -1784,7 +1784,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> RevokeLease(RevokeLeaseRequest revokeLeaseRequest, string urlLeaseId, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> RevokeLease(string urlLeaseId, RevokeLeaseRequest revokeLeaseRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
         /// </summary>
@@ -1802,7 +1802,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> RevokePrefix(RevokePrefixRequest revokePrefixRequest, string prefix, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> RevokePrefix(string prefix, RevokePrefixRequest revokePrefixRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Rotates the backend encryption key used to persist data.
         /// </summary>
@@ -1936,7 +1936,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> SysWritePluginsCatalogName(SysWritePluginsCatalogNameRequest sysWritePluginsCatalogNameRequest, string name, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> SysWritePluginsCatalogName(string name, SysWritePluginsCatalogNameRequest sysWritePluginsCatalogNameRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Generate random bytes
         /// </summary>
@@ -1954,7 +1954,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> SysWriteToolsRandomUrlbytes(SysWriteToolsRandomUrlbytesRequest sysWriteToolsRandomUrlbytesRequest, string urlbytes, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> SysWriteToolsRandomUrlbytes(string urlbytes, SysWriteToolsRandomUrlbytesRequest sysWriteToolsRandomUrlbytesRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Generate random bytes
         /// </summary>
@@ -1989,7 +1989,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> ToolsGenerateRandomSource(ToolsGenerateRandomSourceRequest toolsGenerateRandomSourceRequest, string source, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> ToolsGenerateRandomSource(string source, ToolsGenerateRandomSourceRequest toolsGenerateRandomSourceRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Generate random bytes
         /// </summary>
@@ -2008,7 +2008,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> ToolsGenerateRandomSourceBytes(ToolsGenerateRandomSourceBytesRequest toolsGenerateRandomSourceBytesRequest, string source, string urlbytes, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> ToolsGenerateRandomSourceBytes(string source, string urlbytes, ToolsGenerateRandomSourceBytesRequest toolsGenerateRandomSourceBytesRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Generate a hash sum for input data
         /// </summary>
@@ -2043,7 +2043,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> ToolsHashWith(ToolsHashWithRequest toolsHashWithRequest, string urlalgorithm, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> ToolsHashWith(string urlalgorithm, ToolsHashWithRequest toolsHashWithRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Unseal the Vault.
         /// </summary>
@@ -2161,7 +2161,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> WriteAuditDevice(WriteAuditDeviceRequest writeAuditDeviceRequest, string path, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> WriteAuditDevice(string path, WriteAuditDeviceRequest writeAuditDeviceRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Enables a new auth method.
         /// </summary>
@@ -2179,7 +2179,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> WriteAuthMethod(WriteAuthMethodRequest writeAuthMethodRequest, string path, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> WriteAuthMethod(string path, WriteAuthMethodRequest writeAuthMethodRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Tune configuration parameters for a given auth path.
         /// </summary>
@@ -2197,7 +2197,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> WriteAuthMethodTune(WriteAuthMethodTuneRequest writeAuthMethodTuneRequest, string path, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> WriteAuthMethodTune(string path, WriteAuthMethodTuneRequest writeAuthMethodTuneRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Fetches the capabilities of the given token on the given path.
         /// </summary>
@@ -2266,7 +2266,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> WriteConfigAuditingRequestHeader(WriteConfigAuditingRequestHeaderRequest writeConfigAuditingRequestHeaderRequest, string header, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> WriteConfigAuditingRequestHeader(string header, WriteConfigAuditingRequestHeaderRequest writeConfigAuditingRequestHeaderRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Configure the CORS settings.
         /// </summary>
@@ -2318,7 +2318,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> WriteConfigUIHeader(WriteConfigUIHeaderRequest writeConfigUIHeaderRequest, string header, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> WriteConfigUIHeader(string header, WriteConfigUIHeaderRequest writeConfigUIHeaderRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Initializes a new root generation attempt.
         /// </summary>
@@ -2455,7 +2455,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> WriteLeasesRenew2(WriteLeasesRenew2Request writeLeasesRenew2Request, string urlLeaseId, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> WriteLeasesRenew2(string urlLeaseId, WriteLeasesRenew2Request writeLeasesRenew2Request, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Revokes a lease immediately.
         /// </summary>
@@ -2490,7 +2490,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> WriteLeasesRevoke2(WriteLeasesRevoke2Request writeLeasesRevoke2Request, string urlLeaseId, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> WriteLeasesRevoke2(string urlLeaseId, WriteLeasesRevoke2Request writeLeasesRevoke2Request, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Revokes all secrets or tokens generated under a given prefix immediately
         /// </summary>
@@ -2525,7 +2525,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> WriteLeasesRevokePrefix(WriteLeasesRevokePrefixRequest writeLeasesRevokePrefixRequest, string prefix, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> WriteLeasesRevokePrefix(string prefix, WriteLeasesRevokePrefixRequest writeLeasesRevokePrefixRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
         /// </summary>
@@ -2559,7 +2559,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> WriteLogger(WriteLoggerRequest writeLoggerRequest, string name, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> WriteLogger(string name, WriteLoggerRequest writeLoggerRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Modify the log level for all existing loggers.
         /// </summary>
@@ -2594,7 +2594,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> WriteMount(WriteMountRequest writeMountRequest, string path, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> WriteMount(string path, WriteMountRequest writeMountRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Tune backend configuration parameters for this mount.
         /// </summary>
@@ -2612,7 +2612,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> WriteMountsConfig(WriteMountsConfigRequest writeMountsConfigRequest, string path, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> WriteMountsConfig(string path, WriteMountsConfigRequest writeMountsConfigRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Register a new plugin, or updates an existing one with the supplied name.
         /// </summary>
@@ -2631,7 +2631,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> WritePluginsCatalogByTypeByName(WritePluginsCatalogByTypeByNameRequest writePluginsCatalogByTypeByNameRequest, string name, string type, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> WritePluginsCatalogByTypeByName(string name, string type, WritePluginsCatalogByTypeByNameRequest writePluginsCatalogByTypeByNameRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Reload mounted plugin backends.
         /// </summary>
@@ -2666,7 +2666,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> WritePoliciesACL(WritePoliciesACLRequest writePoliciesACLRequest, string name, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> WritePoliciesACL(string name, WritePoliciesACLRequest writePoliciesACLRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Add a new or update an existing password policy.
         /// </summary>
@@ -2684,7 +2684,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> WritePoliciesPassword(WritePoliciesPasswordRequest writePoliciesPasswordRequest, string name, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> WritePoliciesPassword(string name, WritePoliciesPasswordRequest writePoliciesPasswordRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Add a new or update an existing policy.
         /// </summary>
@@ -2702,7 +2702,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> WritePolicy(WritePolicyRequest writePolicyRequest, string name, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> WritePolicy(string name, WritePolicyRequest writePolicyRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -2737,7 +2737,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> WriteQuotasRateLimit(WriteQuotasRateLimitRequest writeQuotasRateLimitRequest, string name, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> WriteQuotasRateLimit(string name, WriteQuotasRateLimitRequest writeQuotasRateLimitRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Update the value of the key at the given path.
         /// </summary>
@@ -2772,7 +2772,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> WriteRawPath(WriteRawPathRequest writeRawPathRequest, string path, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> WriteRawPath(string path, WriteRawPathRequest writeRawPathRequest, TimeSpan? wrapTTL = null);
         /// <summary>
         /// Initializes a new rekey attempt.
         /// </summary>
@@ -2869,7 +2869,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> CalculateAuditHashAsync(CalculateAuditHashRequest calculateAuditHashRequest, string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> CalculateAuditHashAsync(string path, CalculateAuditHashRequest calculateAuditHashRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Disable the audit device at the given path.
@@ -4767,7 +4767,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> RenewForAsync(RenewForRequest renewForRequest, string urlLeaseId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> RenewForAsync(string urlLeaseId, RenewForRequest renewForRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Revokes a lease immediately.
@@ -4825,7 +4825,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> RevokeLeaseAsync(RevokeLeaseRequest revokeLeaseRequest, string urlLeaseId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> RevokeLeaseAsync(string urlLeaseId, RevokeLeaseRequest revokeLeaseRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately.
@@ -4845,7 +4845,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> RevokePrefixAsync(RevokePrefixRequest revokePrefixRequest, string prefix, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> RevokePrefixAsync(string prefix, RevokePrefixRequest revokePrefixRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Rotates the backend encryption key used to persist data.
@@ -4995,7 +4995,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> SysWritePluginsCatalogNameAsync(SysWritePluginsCatalogNameRequest sysWritePluginsCatalogNameRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> SysWritePluginsCatalogNameAsync(string name, SysWritePluginsCatalogNameRequest sysWritePluginsCatalogNameRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Generate random bytes
@@ -5015,7 +5015,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> SysWriteToolsRandomUrlbytesAsync(SysWriteToolsRandomUrlbytesRequest sysWriteToolsRandomUrlbytesRequest, string urlbytes, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> SysWriteToolsRandomUrlbytesAsync(string urlbytes, SysWriteToolsRandomUrlbytesRequest sysWriteToolsRandomUrlbytesRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Generate random bytes
@@ -5054,7 +5054,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> ToolsGenerateRandomSourceAsync(ToolsGenerateRandomSourceRequest toolsGenerateRandomSourceRequest, string source, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ToolsGenerateRandomSourceAsync(string source, ToolsGenerateRandomSourceRequest toolsGenerateRandomSourceRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Generate random bytes
@@ -5075,7 +5075,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> ToolsGenerateRandomSourceBytesAsync(ToolsGenerateRandomSourceBytesRequest toolsGenerateRandomSourceBytesRequest, string source, string urlbytes, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ToolsGenerateRandomSourceBytesAsync(string source, string urlbytes, ToolsGenerateRandomSourceBytesRequest toolsGenerateRandomSourceBytesRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Generate a hash sum for input data
@@ -5114,7 +5114,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> ToolsHashWithAsync(ToolsHashWithRequest toolsHashWithRequest, string urlalgorithm, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ToolsHashWithAsync(string urlalgorithm, ToolsHashWithRequest toolsHashWithRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Unseal the Vault.
@@ -5246,7 +5246,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> WriteAuditDeviceAsync(WriteAuditDeviceRequest writeAuditDeviceRequest, string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> WriteAuditDeviceAsync(string path, WriteAuditDeviceRequest writeAuditDeviceRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Enables a new auth method.
@@ -5266,7 +5266,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> WriteAuthMethodAsync(WriteAuthMethodRequest writeAuthMethodRequest, string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> WriteAuthMethodAsync(string path, WriteAuthMethodRequest writeAuthMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Tune configuration parameters for a given auth path.
@@ -5286,7 +5286,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> WriteAuthMethodTuneAsync(WriteAuthMethodTuneRequest writeAuthMethodTuneRequest, string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> WriteAuthMethodTuneAsync(string path, WriteAuthMethodTuneRequest writeAuthMethodTuneRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Fetches the capabilities of the given token on the given path.
@@ -5363,7 +5363,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> WriteConfigAuditingRequestHeaderAsync(WriteConfigAuditingRequestHeaderRequest writeConfigAuditingRequestHeaderRequest, string header, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> WriteConfigAuditingRequestHeaderAsync(string header, WriteConfigAuditingRequestHeaderRequest writeConfigAuditingRequestHeaderRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Configure the CORS settings.
@@ -5421,7 +5421,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> WriteConfigUIHeaderAsync(WriteConfigUIHeaderRequest writeConfigUIHeaderRequest, string header, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> WriteConfigUIHeaderAsync(string header, WriteConfigUIHeaderRequest writeConfigUIHeaderRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Initializes a new root generation attempt.
@@ -5574,7 +5574,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> WriteLeasesRenew2Async(WriteLeasesRenew2Request writeLeasesRenew2Request, string urlLeaseId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> WriteLeasesRenew2Async(string urlLeaseId, WriteLeasesRenew2Request writeLeasesRenew2Request, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Revokes a lease immediately.
@@ -5613,7 +5613,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> WriteLeasesRevoke2Async(WriteLeasesRevoke2Request writeLeasesRevoke2Request, string urlLeaseId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> WriteLeasesRevoke2Async(string urlLeaseId, WriteLeasesRevoke2Request writeLeasesRevoke2Request, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Revokes all secrets or tokens generated under a given prefix immediately
@@ -5652,7 +5652,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> WriteLeasesRevokePrefixAsync(WriteLeasesRevokePrefixRequest writeLeasesRevokePrefixRequest, string prefix, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> WriteLeasesRevokePrefixAsync(string prefix, WriteLeasesRevokePrefixRequest writeLeasesRevokePrefixRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
@@ -5690,7 +5690,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> WriteLoggerAsync(WriteLoggerRequest writeLoggerRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> WriteLoggerAsync(string name, WriteLoggerRequest writeLoggerRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Modify the log level for all existing loggers.
@@ -5729,7 +5729,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> WriteMountAsync(WriteMountRequest writeMountRequest, string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> WriteMountAsync(string path, WriteMountRequest writeMountRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Tune backend configuration parameters for this mount.
@@ -5749,7 +5749,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> WriteMountsConfigAsync(WriteMountsConfigRequest writeMountsConfigRequest, string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> WriteMountsConfigAsync(string path, WriteMountsConfigRequest writeMountsConfigRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Register a new plugin, or updates an existing one with the supplied name.
@@ -5770,7 +5770,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> WritePluginsCatalogByTypeByNameAsync(WritePluginsCatalogByTypeByNameRequest writePluginsCatalogByTypeByNameRequest, string name, string type, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> WritePluginsCatalogByTypeByNameAsync(string name, string type, WritePluginsCatalogByTypeByNameRequest writePluginsCatalogByTypeByNameRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Reload mounted plugin backends.
@@ -5809,7 +5809,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> WritePoliciesACLAsync(WritePoliciesACLRequest writePoliciesACLRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> WritePoliciesACLAsync(string name, WritePoliciesACLRequest writePoliciesACLRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Add a new or update an existing password policy.
@@ -5829,7 +5829,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> WritePoliciesPasswordAsync(WritePoliciesPasswordRequest writePoliciesPasswordRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> WritePoliciesPasswordAsync(string name, WritePoliciesPasswordRequest writePoliciesPasswordRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Add a new or update an existing policy.
@@ -5849,7 +5849,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> WritePolicyAsync(WritePolicyRequest writePolicyRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> WritePolicyAsync(string name, WritePolicyRequest writePolicyRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5888,7 +5888,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> WriteQuotasRateLimitAsync(WriteQuotasRateLimitRequest writeQuotasRateLimitRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> WriteQuotasRateLimitAsync(string name, WriteQuotasRateLimitRequest writeQuotasRateLimitRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Update the value of the key at the given path.
@@ -5927,7 +5927,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> WriteRawPathAsync(WriteRawPathRequest writeRawPathRequest, string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> WriteRawPathAsync(string path, WriteRawPathRequest writeRawPathRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Initializes a new rekey attempt.
@@ -6091,7 +6091,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> CalculateAuditHash(CalculateAuditHashRequest calculateAuditHashRequest, string path, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> CalculateAuditHash(string path, CalculateAuditHashRequest calculateAuditHashRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -6153,7 +6153,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> CalculateAuditHashAsync(CalculateAuditHashRequest calculateAuditHashRequest, string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> CalculateAuditHashAsync(string path, CalculateAuditHashRequest calculateAuditHashRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -16723,7 +16723,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> RenewFor(RenewForRequest renewForRequest, string urlLeaseId, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> RenewFor(string urlLeaseId, RenewForRequest renewForRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
@@ -16785,7 +16785,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> RenewForAsync(RenewForRequest renewForRequest, string urlLeaseId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> RenewForAsync(string urlLeaseId, RenewForRequest renewForRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
@@ -17069,7 +17069,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> RevokeLease(RevokeLeaseRequest revokeLeaseRequest, string urlLeaseId, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> RevokeLease(string urlLeaseId, RevokeLeaseRequest revokeLeaseRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
@@ -17131,7 +17131,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> RevokeLeaseAsync(RevokeLeaseRequest revokeLeaseRequest, string urlLeaseId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> RevokeLeaseAsync(string urlLeaseId, RevokeLeaseRequest revokeLeaseRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
@@ -17193,7 +17193,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> RevokePrefix(RevokePrefixRequest revokePrefixRequest, string prefix, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> RevokePrefix(string prefix, RevokePrefixRequest revokePrefixRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
@@ -17255,7 +17255,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> RevokePrefixAsync(RevokePrefixRequest revokePrefixRequest, string prefix, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> RevokePrefixAsync(string prefix, RevokePrefixRequest revokePrefixRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
@@ -18053,7 +18053,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> SysWritePluginsCatalogName(SysWritePluginsCatalogNameRequest sysWritePluginsCatalogNameRequest, string name, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> SysWritePluginsCatalogName(string name, SysWritePluginsCatalogNameRequest sysWritePluginsCatalogNameRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -18115,7 +18115,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> SysWritePluginsCatalogNameAsync(SysWritePluginsCatalogNameRequest sysWritePluginsCatalogNameRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> SysWritePluginsCatalogNameAsync(string name, SysWritePluginsCatalogNameRequest sysWritePluginsCatalogNameRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -18177,7 +18177,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> SysWriteToolsRandomUrlbytes(SysWriteToolsRandomUrlbytesRequest sysWriteToolsRandomUrlbytesRequest, string urlbytes, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> SysWriteToolsRandomUrlbytes(string urlbytes, SysWriteToolsRandomUrlbytesRequest sysWriteToolsRandomUrlbytesRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'urlbytes' is set
             if (urlbytes == null)
@@ -18239,7 +18239,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> SysWriteToolsRandomUrlbytesAsync(SysWriteToolsRandomUrlbytesRequest sysWriteToolsRandomUrlbytesRequest, string urlbytes, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> SysWriteToolsRandomUrlbytesAsync(string urlbytes, SysWriteToolsRandomUrlbytesRequest sysWriteToolsRandomUrlbytesRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'urlbytes' is set
             if (urlbytes == null)
@@ -18413,7 +18413,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> ToolsGenerateRandomSource(ToolsGenerateRandomSourceRequest toolsGenerateRandomSourceRequest, string source, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> ToolsGenerateRandomSource(string source, ToolsGenerateRandomSourceRequest toolsGenerateRandomSourceRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'source' is set
             if (source == null)
@@ -18475,7 +18475,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> ToolsGenerateRandomSourceAsync(ToolsGenerateRandomSourceRequest toolsGenerateRandomSourceRequest, string source, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ToolsGenerateRandomSourceAsync(string source, ToolsGenerateRandomSourceRequest toolsGenerateRandomSourceRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'source' is set
             if (source == null)
@@ -18538,7 +18538,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> ToolsGenerateRandomSourceBytes(ToolsGenerateRandomSourceBytesRequest toolsGenerateRandomSourceBytesRequest, string source, string urlbytes, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> ToolsGenerateRandomSourceBytes(string source, string urlbytes, ToolsGenerateRandomSourceBytesRequest toolsGenerateRandomSourceBytesRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'source' is set
             if (source == null)
@@ -18606,7 +18606,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> ToolsGenerateRandomSourceBytesAsync(ToolsGenerateRandomSourceBytesRequest toolsGenerateRandomSourceBytesRequest, string source, string urlbytes, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ToolsGenerateRandomSourceBytesAsync(string source, string urlbytes, ToolsGenerateRandomSourceBytesRequest toolsGenerateRandomSourceBytesRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'source' is set
             if (source == null)
@@ -18785,7 +18785,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> ToolsHashWith(ToolsHashWithRequest toolsHashWithRequest, string urlalgorithm, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> ToolsHashWith(string urlalgorithm, ToolsHashWithRequest toolsHashWithRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
@@ -18847,7 +18847,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> ToolsHashWithAsync(ToolsHashWithRequest toolsHashWithRequest, string urlalgorithm, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ToolsHashWithAsync(string urlalgorithm, ToolsHashWithRequest toolsHashWithRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'urlalgorithm' is set
             if (urlalgorithm == null)
@@ -19553,7 +19553,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> WriteAuditDevice(WriteAuditDeviceRequest writeAuditDeviceRequest, string path, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> WriteAuditDevice(string path, WriteAuditDeviceRequest writeAuditDeviceRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -19615,7 +19615,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> WriteAuditDeviceAsync(WriteAuditDeviceRequest writeAuditDeviceRequest, string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> WriteAuditDeviceAsync(string path, WriteAuditDeviceRequest writeAuditDeviceRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -19677,7 +19677,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> WriteAuthMethod(WriteAuthMethodRequest writeAuthMethodRequest, string path, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> WriteAuthMethod(string path, WriteAuthMethodRequest writeAuthMethodRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -19739,7 +19739,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> WriteAuthMethodAsync(WriteAuthMethodRequest writeAuthMethodRequest, string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> WriteAuthMethodAsync(string path, WriteAuthMethodRequest writeAuthMethodRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -19801,7 +19801,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> WriteAuthMethodTune(WriteAuthMethodTuneRequest writeAuthMethodTuneRequest, string path, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> WriteAuthMethodTune(string path, WriteAuthMethodTuneRequest writeAuthMethodTuneRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -19863,7 +19863,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> WriteAuthMethodTuneAsync(WriteAuthMethodTuneRequest writeAuthMethodTuneRequest, string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> WriteAuthMethodTuneAsync(string path, WriteAuthMethodTuneRequest writeAuthMethodTuneRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -20261,7 +20261,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> WriteConfigAuditingRequestHeader(WriteConfigAuditingRequestHeaderRequest writeConfigAuditingRequestHeaderRequest, string header, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> WriteConfigAuditingRequestHeader(string header, WriteConfigAuditingRequestHeaderRequest writeConfigAuditingRequestHeaderRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'header' is set
             if (header == null)
@@ -20323,7 +20323,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> WriteConfigAuditingRequestHeaderAsync(WriteConfigAuditingRequestHeaderRequest writeConfigAuditingRequestHeaderRequest, string header, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> WriteConfigAuditingRequestHeaderAsync(string header, WriteConfigAuditingRequestHeaderRequest writeConfigAuditingRequestHeaderRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'header' is set
             if (header == null)
@@ -20607,7 +20607,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> WriteConfigUIHeader(WriteConfigUIHeaderRequest writeConfigUIHeaderRequest, string header, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> WriteConfigUIHeader(string header, WriteConfigUIHeaderRequest writeConfigUIHeaderRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'header' is set
             if (header == null)
@@ -20669,7 +20669,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> WriteConfigUIHeaderAsync(WriteConfigUIHeaderRequest writeConfigUIHeaderRequest, string header, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> WriteConfigUIHeaderAsync(string header, WriteConfigUIHeaderRequest writeConfigUIHeaderRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'header' is set
             if (header == null)
@@ -21515,7 +21515,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> WriteLeasesRenew2(WriteLeasesRenew2Request writeLeasesRenew2Request, string urlLeaseId, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> WriteLeasesRenew2(string urlLeaseId, WriteLeasesRenew2Request writeLeasesRenew2Request, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
@@ -21577,7 +21577,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> WriteLeasesRenew2Async(WriteLeasesRenew2Request writeLeasesRenew2Request, string urlLeaseId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> WriteLeasesRenew2Async(string urlLeaseId, WriteLeasesRenew2Request writeLeasesRenew2Request, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
@@ -21751,7 +21751,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> WriteLeasesRevoke2(WriteLeasesRevoke2Request writeLeasesRevoke2Request, string urlLeaseId, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> WriteLeasesRevoke2(string urlLeaseId, WriteLeasesRevoke2Request writeLeasesRevoke2Request, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
@@ -21813,7 +21813,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> WriteLeasesRevoke2Async(WriteLeasesRevoke2Request writeLeasesRevoke2Request, string urlLeaseId, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> WriteLeasesRevoke2Async(string urlLeaseId, WriteLeasesRevoke2Request writeLeasesRevoke2Request, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'urlLeaseId' is set
             if (urlLeaseId == null)
@@ -21985,7 +21985,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> WriteLeasesRevokePrefix(WriteLeasesRevokePrefixRequest writeLeasesRevokePrefixRequest, string prefix, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> WriteLeasesRevokePrefix(string prefix, WriteLeasesRevokePrefixRequest writeLeasesRevokePrefixRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
@@ -22047,7 +22047,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> WriteLeasesRevokePrefixAsync(WriteLeasesRevokePrefixRequest writeLeasesRevokePrefixRequest, string prefix, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> WriteLeasesRevokePrefixAsync(string prefix, WriteLeasesRevokePrefixRequest writeLeasesRevokePrefixRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
@@ -22207,7 +22207,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> WriteLogger(WriteLoggerRequest writeLoggerRequest, string name, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> WriteLogger(string name, WriteLoggerRequest writeLoggerRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -22269,7 +22269,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> WriteLoggerAsync(WriteLoggerRequest writeLoggerRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> WriteLoggerAsync(string name, WriteLoggerRequest writeLoggerRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -22443,7 +22443,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> WriteMount(WriteMountRequest writeMountRequest, string path, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> WriteMount(string path, WriteMountRequest writeMountRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -22505,7 +22505,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> WriteMountAsync(WriteMountRequest writeMountRequest, string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> WriteMountAsync(string path, WriteMountRequest writeMountRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -22567,7 +22567,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> WriteMountsConfig(WriteMountsConfigRequest writeMountsConfigRequest, string path, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> WriteMountsConfig(string path, WriteMountsConfigRequest writeMountsConfigRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -22629,7 +22629,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> WriteMountsConfigAsync(WriteMountsConfigRequest writeMountsConfigRequest, string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> WriteMountsConfigAsync(string path, WriteMountsConfigRequest writeMountsConfigRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -22692,7 +22692,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> WritePluginsCatalogByTypeByName(WritePluginsCatalogByTypeByNameRequest writePluginsCatalogByTypeByNameRequest, string name, string type, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> WritePluginsCatalogByTypeByName(string name, string type, WritePluginsCatalogByTypeByNameRequest writePluginsCatalogByTypeByNameRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -22760,7 +22760,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> WritePluginsCatalogByTypeByNameAsync(WritePluginsCatalogByTypeByNameRequest writePluginsCatalogByTypeByNameRequest, string name, string type, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> WritePluginsCatalogByTypeByNameAsync(string name, string type, WritePluginsCatalogByTypeByNameRequest writePluginsCatalogByTypeByNameRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -22939,7 +22939,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> WritePoliciesACL(WritePoliciesACLRequest writePoliciesACLRequest, string name, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> WritePoliciesACL(string name, WritePoliciesACLRequest writePoliciesACLRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -23001,7 +23001,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> WritePoliciesACLAsync(WritePoliciesACLRequest writePoliciesACLRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> WritePoliciesACLAsync(string name, WritePoliciesACLRequest writePoliciesACLRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -23063,7 +23063,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> WritePoliciesPassword(WritePoliciesPasswordRequest writePoliciesPasswordRequest, string name, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> WritePoliciesPassword(string name, WritePoliciesPasswordRequest writePoliciesPasswordRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -23125,7 +23125,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> WritePoliciesPasswordAsync(WritePoliciesPasswordRequest writePoliciesPasswordRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> WritePoliciesPasswordAsync(string name, WritePoliciesPasswordRequest writePoliciesPasswordRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -23187,7 +23187,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> WritePolicy(WritePolicyRequest writePolicyRequest, string name, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> WritePolicy(string name, WritePolicyRequest writePolicyRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -23249,7 +23249,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> WritePolicyAsync(WritePolicyRequest writePolicyRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> WritePolicyAsync(string name, WritePolicyRequest writePolicyRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -23423,7 +23423,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> WriteQuotasRateLimit(WriteQuotasRateLimitRequest writeQuotasRateLimitRequest, string name, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> WriteQuotasRateLimit(string name, WriteQuotasRateLimitRequest writeQuotasRateLimitRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -23485,7 +23485,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> WriteQuotasRateLimitAsync(WriteQuotasRateLimitRequest writeQuotasRateLimitRequest, string name, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> WriteQuotasRateLimitAsync(string name, WriteQuotasRateLimitRequest writeQuotasRateLimitRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -23659,7 +23659,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> WriteRawPath(WriteRawPathRequest writeRawPathRequest, string path, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> WriteRawPath(string path, WriteRawPathRequest writeRawPathRequest, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'path' is set
             if (path == null)
@@ -23721,7 +23721,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> WriteRawPathAsync(WriteRawPathRequest writeRawPathRequest, string path, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> WriteRawPathAsync(string path, WriteRawPathRequest writeRawPathRequest, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'path' is set
             if (path == null)

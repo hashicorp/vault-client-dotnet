@@ -113,6 +113,7 @@ Method | HTTP request | Description
 
 <a name="aliasdeletebyid"></a>
 # **AliasDeleteByID**
+
 > void AliasDeleteByID (string id, TimeSpan? wrapTTL = null)
 
 Update, read or delete an alias ID.
@@ -143,6 +144,7 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
+
                 apiInstance.AliasDeleteByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -184,6 +186,7 @@ No authorization required
 
 <a name="aliaslistbyid"></a>
 # **AliasListByID**
+
 > void AliasListByID (TimeSpan? wrapTTL = null)
 
 List all the alias IDs.
@@ -214,6 +217,7 @@ namespace Example
             try
             {
                 // List all the alias IDs.
+
                 apiInstance.AliasListByID(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -255,6 +259,7 @@ No authorization required
 
 <a name="aliasreadbyid"></a>
 # **AliasReadByID**
+
 > void AliasReadByID (string id, TimeSpan? wrapTTL = null)
 
 Update, read or delete an alias ID.
@@ -285,6 +290,7 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
+
                 apiInstance.AliasReadByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -326,6 +332,7 @@ No authorization required
 
 <a name="aliaswrite"></a>
 # **AliasWrite**
+
 > void AliasWrite (AliasWriteRequest aliasWriteRequest, TimeSpan? wrapTTL = null)
 
 Create a new alias.
@@ -356,6 +363,7 @@ namespace Example
             try
             {
                 // Create a new alias.
+
                 apiInstance.AliasWrite(AliasWriteRequest aliasWriteRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -397,7 +405,8 @@ No authorization required
 
 <a name="aliaswritebyid"></a>
 # **AliasWriteByID**
-> void AliasWriteByID (AliasWriteByIDRequest aliasWriteByIDRequest, string id, TimeSpan? wrapTTL = null)
+
+> void AliasWriteByID (string id, AliasWriteByIDRequest aliasWriteByIDRequest, TimeSpan? wrapTTL = null)
 
 Update, read or delete an alias ID.
 
@@ -428,7 +437,8 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
-                apiInstance.AliasWriteByID(AliasWriteByIDRequest aliasWriteByIDRequest, string id, TimeSpan? wrapTTL = null);
+
+                apiInstance.AliasWriteByID(string id, AliasWriteByIDRequest aliasWriteByIDRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -470,6 +480,7 @@ No authorization required
 
 <a name="entitybatchdelete"></a>
 # **EntityBatchDelete**
+
 > void EntityBatchDelete (EntityBatchDeleteRequest entityBatchDeleteRequest, TimeSpan? wrapTTL = null)
 
 Delete all of the entities provided
@@ -500,6 +511,7 @@ namespace Example
             try
             {
                 // Delete all of the entities provided
+
                 apiInstance.EntityBatchDelete(EntityBatchDeleteRequest entityBatchDeleteRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -541,6 +553,7 @@ No authorization required
 
 <a name="entitydeletealiasbyid"></a>
 # **EntityDeleteAliasByID**
+
 > void EntityDeleteAliasByID (string id, TimeSpan? wrapTTL = null)
 
 Update, read or delete an alias ID.
@@ -571,6 +584,7 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
+
                 apiInstance.EntityDeleteAliasByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -612,6 +626,7 @@ No authorization required
 
 <a name="entitydeletebyid"></a>
 # **EntityDeleteByID**
+
 > void EntityDeleteByID (string id, TimeSpan? wrapTTL = null)
 
 Update, read or delete an entity using entity ID
@@ -642,6 +657,7 @@ namespace Example
             try
             {
                 // Update, read or delete an entity using entity ID
+
                 apiInstance.EntityDeleteByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -683,6 +699,7 @@ No authorization required
 
 <a name="entitydeletebyname"></a>
 # **EntityDeleteByName**
+
 > void EntityDeleteByName (string name, TimeSpan? wrapTTL = null)
 
 Update, read or delete an entity using entity name
@@ -713,6 +730,7 @@ namespace Example
             try
             {
                 // Update, read or delete an entity using entity name
+
                 apiInstance.EntityDeleteByName(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -754,6 +772,7 @@ No authorization required
 
 <a name="entitylistaliasesbyid"></a>
 # **EntityListAliasesByID**
+
 > void EntityListAliasesByID (TimeSpan? wrapTTL = null)
 
 List all the alias IDs.
@@ -784,6 +803,7 @@ namespace Example
             try
             {
                 // List all the alias IDs.
+
                 apiInstance.EntityListAliasesByID(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -825,6 +845,7 @@ No authorization required
 
 <a name="entitylistbyid"></a>
 # **EntityListByID**
+
 > void EntityListByID (TimeSpan? wrapTTL = null)
 
 List all the entity IDs
@@ -855,6 +876,7 @@ namespace Example
             try
             {
                 // List all the entity IDs
+
                 apiInstance.EntityListByID(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -896,6 +918,7 @@ No authorization required
 
 <a name="entitylistbyname"></a>
 # **EntityListByName**
+
 > void EntityListByName (TimeSpan? wrapTTL = null)
 
 List all the entity names
@@ -926,6 +949,7 @@ namespace Example
             try
             {
                 // List all the entity names
+
                 apiInstance.EntityListByName(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -967,6 +991,7 @@ No authorization required
 
 <a name="entitylookup"></a>
 # **EntityLookup**
+
 > void EntityLookup (EntityLookupRequest entityLookupRequest, TimeSpan? wrapTTL = null)
 
 Query entities based on various properties.
@@ -997,6 +1022,7 @@ namespace Example
             try
             {
                 // Query entities based on various properties.
+
                 apiInstance.EntityLookup(EntityLookupRequest entityLookupRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1038,6 +1064,7 @@ No authorization required
 
 <a name="entitymerge"></a>
 # **EntityMerge**
+
 > void EntityMerge (EntityMergeRequest entityMergeRequest, TimeSpan? wrapTTL = null)
 
 Merge two or more entities together
@@ -1068,6 +1095,7 @@ namespace Example
             try
             {
                 // Merge two or more entities together
+
                 apiInstance.EntityMerge(EntityMergeRequest entityMergeRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1109,6 +1137,7 @@ No authorization required
 
 <a name="entityreadaliasbyid"></a>
 # **EntityReadAliasByID**
+
 > void EntityReadAliasByID (string id, TimeSpan? wrapTTL = null)
 
 Update, read or delete an alias ID.
@@ -1139,6 +1168,7 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
+
                 apiInstance.EntityReadAliasByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1180,6 +1210,7 @@ No authorization required
 
 <a name="entityreadbyid"></a>
 # **EntityReadByID**
+
 > void EntityReadByID (string id, TimeSpan? wrapTTL = null)
 
 Update, read or delete an entity using entity ID
@@ -1210,6 +1241,7 @@ namespace Example
             try
             {
                 // Update, read or delete an entity using entity ID
+
                 apiInstance.EntityReadByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1251,6 +1283,7 @@ No authorization required
 
 <a name="entityreadbyname"></a>
 # **EntityReadByName**
+
 > void EntityReadByName (string name, TimeSpan? wrapTTL = null)
 
 Update, read or delete an entity using entity name
@@ -1281,6 +1314,7 @@ namespace Example
             try
             {
                 // Update, read or delete an entity using entity name
+
                 apiInstance.EntityReadByName(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1322,6 +1356,7 @@ No authorization required
 
 <a name="entitywrite"></a>
 # **EntityWrite**
+
 > void EntityWrite (EntityWriteRequest entityWriteRequest, TimeSpan? wrapTTL = null)
 
 Create a new entity
@@ -1352,6 +1387,7 @@ namespace Example
             try
             {
                 // Create a new entity
+
                 apiInstance.EntityWrite(EntityWriteRequest entityWriteRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1393,6 +1429,7 @@ No authorization required
 
 <a name="entitywritealias"></a>
 # **EntityWriteAlias**
+
 > void EntityWriteAlias (EntityWriteAliasRequest entityWriteAliasRequest, TimeSpan? wrapTTL = null)
 
 Create a new alias.
@@ -1423,6 +1460,7 @@ namespace Example
             try
             {
                 // Create a new alias.
+
                 apiInstance.EntityWriteAlias(EntityWriteAliasRequest entityWriteAliasRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1464,7 +1502,8 @@ No authorization required
 
 <a name="entitywritealiasbyid"></a>
 # **EntityWriteAliasByID**
-> void EntityWriteAliasByID (EntityWriteAliasByIDRequest entityWriteAliasByIDRequest, string id, TimeSpan? wrapTTL = null)
+
+> void EntityWriteAliasByID (string id, EntityWriteAliasByIDRequest entityWriteAliasByIDRequest, TimeSpan? wrapTTL = null)
 
 Update, read or delete an alias ID.
 
@@ -1495,7 +1534,8 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
-                apiInstance.EntityWriteAliasByID(EntityWriteAliasByIDRequest entityWriteAliasByIDRequest, string id, TimeSpan? wrapTTL = null);
+
+                apiInstance.EntityWriteAliasByID(string id, EntityWriteAliasByIDRequest entityWriteAliasByIDRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1537,7 +1577,8 @@ No authorization required
 
 <a name="entitywritebyid"></a>
 # **EntityWriteByID**
-> void EntityWriteByID (EntityWriteByIDRequest entityWriteByIDRequest, string id, TimeSpan? wrapTTL = null)
+
+> void EntityWriteByID (string id, EntityWriteByIDRequest entityWriteByIDRequest, TimeSpan? wrapTTL = null)
 
 Update, read or delete an entity using entity ID
 
@@ -1568,7 +1609,8 @@ namespace Example
             try
             {
                 // Update, read or delete an entity using entity ID
-                apiInstance.EntityWriteByID(EntityWriteByIDRequest entityWriteByIDRequest, string id, TimeSpan? wrapTTL = null);
+
+                apiInstance.EntityWriteByID(string id, EntityWriteByIDRequest entityWriteByIDRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1610,7 +1652,8 @@ No authorization required
 
 <a name="entitywritebyname"></a>
 # **EntityWriteByName**
-> void EntityWriteByName (EntityWriteByNameRequest entityWriteByNameRequest, string name, TimeSpan? wrapTTL = null)
+
+> void EntityWriteByName (string name, EntityWriteByNameRequest entityWriteByNameRequest, TimeSpan? wrapTTL = null)
 
 Update, read or delete an entity using entity name
 
@@ -1641,7 +1684,8 @@ namespace Example
             try
             {
                 // Update, read or delete an entity using entity name
-                apiInstance.EntityWriteByName(EntityWriteByNameRequest entityWriteByNameRequest, string name, TimeSpan? wrapTTL = null);
+
+                apiInstance.EntityWriteByName(string name, EntityWriteByNameRequest entityWriteByNameRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1683,6 +1727,7 @@ No authorization required
 
 <a name="groupdeletealiasbyid"></a>
 # **GroupDeleteAliasByID**
+
 > void GroupDeleteAliasByID (string id, TimeSpan? wrapTTL = null)
 
 
@@ -1712,6 +1757,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.GroupDeleteAliasByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1753,6 +1799,7 @@ No authorization required
 
 <a name="groupdeletebyid"></a>
 # **GroupDeleteByID**
+
 > void GroupDeleteByID (string id, TimeSpan? wrapTTL = null)
 
 Update or delete an existing group using its ID.
@@ -1783,6 +1830,7 @@ namespace Example
             try
             {
                 // Update or delete an existing group using its ID.
+
                 apiInstance.GroupDeleteByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1824,6 +1872,7 @@ No authorization required
 
 <a name="groupdeletebyname"></a>
 # **GroupDeleteByName**
+
 > void GroupDeleteByName (string name, TimeSpan? wrapTTL = null)
 
 
@@ -1853,6 +1902,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.GroupDeleteByName(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1894,6 +1944,7 @@ No authorization required
 
 <a name="grouplistaliasesbyid"></a>
 # **GroupListAliasesByID**
+
 > void GroupListAliasesByID (TimeSpan? wrapTTL = null)
 
 List all the group alias IDs.
@@ -1924,6 +1975,7 @@ namespace Example
             try
             {
                 // List all the group alias IDs.
+
                 apiInstance.GroupListAliasesByID(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1965,6 +2017,7 @@ No authorization required
 
 <a name="grouplistbyid"></a>
 # **GroupListByID**
+
 > void GroupListByID (TimeSpan? wrapTTL = null)
 
 List all the group IDs.
@@ -1995,6 +2048,7 @@ namespace Example
             try
             {
                 // List all the group IDs.
+
                 apiInstance.GroupListByID(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2036,6 +2090,7 @@ No authorization required
 
 <a name="grouplistbyname"></a>
 # **GroupListByName**
+
 > void GroupListByName (TimeSpan? wrapTTL = null)
 
 
@@ -2065,6 +2120,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.GroupListByName(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2106,6 +2162,7 @@ No authorization required
 
 <a name="grouplookup"></a>
 # **GroupLookup**
+
 > void GroupLookup (GroupLookupRequest groupLookupRequest, TimeSpan? wrapTTL = null)
 
 Query groups based on various properties.
@@ -2136,6 +2193,7 @@ namespace Example
             try
             {
                 // Query groups based on various properties.
+
                 apiInstance.GroupLookup(GroupLookupRequest groupLookupRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2177,6 +2235,7 @@ No authorization required
 
 <a name="groupreadaliasbyid"></a>
 # **GroupReadAliasByID**
+
 > void GroupReadAliasByID (string id, TimeSpan? wrapTTL = null)
 
 
@@ -2206,6 +2265,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.GroupReadAliasByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2247,6 +2307,7 @@ No authorization required
 
 <a name="groupreadbyid"></a>
 # **GroupReadByID**
+
 > void GroupReadByID (string id, TimeSpan? wrapTTL = null)
 
 Update or delete an existing group using its ID.
@@ -2277,6 +2338,7 @@ namespace Example
             try
             {
                 // Update or delete an existing group using its ID.
+
                 apiInstance.GroupReadByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2318,6 +2380,7 @@ No authorization required
 
 <a name="groupreadbyname"></a>
 # **GroupReadByName**
+
 > void GroupReadByName (string name, TimeSpan? wrapTTL = null)
 
 
@@ -2347,6 +2410,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.GroupReadByName(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2388,6 +2452,7 @@ No authorization required
 
 <a name="groupwrite"></a>
 # **GroupWrite**
+
 > void GroupWrite (GroupWriteRequest groupWriteRequest, TimeSpan? wrapTTL = null)
 
 Create a new group.
@@ -2418,6 +2483,7 @@ namespace Example
             try
             {
                 // Create a new group.
+
                 apiInstance.GroupWrite(GroupWriteRequest groupWriteRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2459,6 +2525,7 @@ No authorization required
 
 <a name="groupwritealias"></a>
 # **GroupWriteAlias**
+
 > void GroupWriteAlias (GroupWriteAliasRequest groupWriteAliasRequest, TimeSpan? wrapTTL = null)
 
 Creates a new group alias, or updates an existing one.
@@ -2489,6 +2556,7 @@ namespace Example
             try
             {
                 // Creates a new group alias, or updates an existing one.
+
                 apiInstance.GroupWriteAlias(GroupWriteAliasRequest groupWriteAliasRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2530,7 +2598,8 @@ No authorization required
 
 <a name="groupwritealiasbyid"></a>
 # **GroupWriteAliasByID**
-> void GroupWriteAliasByID (GroupWriteAliasByIDRequest groupWriteAliasByIDRequest, string id, TimeSpan? wrapTTL = null)
+
+> void GroupWriteAliasByID (string id, GroupWriteAliasByIDRequest groupWriteAliasByIDRequest, TimeSpan? wrapTTL = null)
 
 
 
@@ -2560,7 +2629,8 @@ namespace Example
 
             try
             {
-                apiInstance.GroupWriteAliasByID(GroupWriteAliasByIDRequest groupWriteAliasByIDRequest, string id, TimeSpan? wrapTTL = null);
+
+                apiInstance.GroupWriteAliasByID(string id, GroupWriteAliasByIDRequest groupWriteAliasByIDRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2602,7 +2672,8 @@ No authorization required
 
 <a name="groupwritebyid"></a>
 # **GroupWriteByID**
-> void GroupWriteByID (GroupWriteByIDRequest groupWriteByIDRequest, string id, TimeSpan? wrapTTL = null)
+
+> void GroupWriteByID (string id, GroupWriteByIDRequest groupWriteByIDRequest, TimeSpan? wrapTTL = null)
 
 Update or delete an existing group using its ID.
 
@@ -2633,7 +2704,8 @@ namespace Example
             try
             {
                 // Update or delete an existing group using its ID.
-                apiInstance.GroupWriteByID(GroupWriteByIDRequest groupWriteByIDRequest, string id, TimeSpan? wrapTTL = null);
+
+                apiInstance.GroupWriteByID(string id, GroupWriteByIDRequest groupWriteByIDRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2675,7 +2747,8 @@ No authorization required
 
 <a name="groupwritebyname"></a>
 # **GroupWriteByName**
-> void GroupWriteByName (GroupWriteByNameRequest groupWriteByNameRequest, string name, TimeSpan? wrapTTL = null)
+
+> void GroupWriteByName (string name, GroupWriteByNameRequest groupWriteByNameRequest, TimeSpan? wrapTTL = null)
 
 
 
@@ -2705,7 +2778,8 @@ namespace Example
 
             try
             {
-                apiInstance.GroupWriteByName(GroupWriteByNameRequest groupWriteByNameRequest, string name, TimeSpan? wrapTTL = null);
+
+                apiInstance.GroupWriteByName(string name, GroupWriteByNameRequest groupWriteByNameRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2747,6 +2821,7 @@ No authorization required
 
 <a name="mfadeleteloginenforcement"></a>
 # **MFADeleteLoginEnforcement**
+
 > void MFADeleteLoginEnforcement (string name, TimeSpan? wrapTTL = null)
 
 Delete a login enforcement
@@ -2777,6 +2852,7 @@ namespace Example
             try
             {
                 // Delete a login enforcement
+
                 apiInstance.MFADeleteLoginEnforcement(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2818,6 +2894,7 @@ No authorization required
 
 <a name="mfalistloginenforcements"></a>
 # **MFAListLoginEnforcements**
+
 > void MFAListLoginEnforcements (TimeSpan? wrapTTL = null)
 
 List login enforcements
@@ -2848,6 +2925,7 @@ namespace Example
             try
             {
                 // List login enforcements
+
                 apiInstance.MFAListLoginEnforcements(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2889,6 +2967,7 @@ No authorization required
 
 <a name="mfamethodadmindestroytotp"></a>
 # **MFAMethodAdminDestroyTOTP**
+
 > void MFAMethodAdminDestroyTOTP (MFAMethodAdminDestroyTOTPRequest mFAMethodAdminDestroyTOTPRequest, TimeSpan? wrapTTL = null)
 
 Destroys a TOTP secret for the given MFA method ID on the given entity
@@ -2919,6 +2998,7 @@ namespace Example
             try
             {
                 // Destroys a TOTP secret for the given MFA method ID on the given entity
+
                 apiInstance.MFAMethodAdminDestroyTOTP(MFAMethodAdminDestroyTOTPRequest mFAMethodAdminDestroyTOTPRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2960,6 +3040,7 @@ No authorization required
 
 <a name="mfamethodadmingeneratetotp"></a>
 # **MFAMethodAdminGenerateTOTP**
+
 > void MFAMethodAdminGenerateTOTP (MFAMethodAdminGenerateTOTPRequest mFAMethodAdminGenerateTOTPRequest, TimeSpan? wrapTTL = null)
 
 Update or create TOTP secret for the given method ID on the given entity.
@@ -2990,6 +3071,7 @@ namespace Example
             try
             {
                 // Update or create TOTP secret for the given method ID on the given entity.
+
                 apiInstance.MFAMethodAdminGenerateTOTP(MFAMethodAdminGenerateTOTPRequest mFAMethodAdminGenerateTOTPRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3031,6 +3113,7 @@ No authorization required
 
 <a name="mfamethoddeleteduo"></a>
 # **MFAMethodDeleteDuo**
+
 > void MFAMethodDeleteDuo (string methodId, TimeSpan? wrapTTL = null)
 
 Delete a configuration for the given MFA method
@@ -3061,6 +3144,7 @@ namespace Example
             try
             {
                 // Delete a configuration for the given MFA method
+
                 apiInstance.MFAMethodDeleteDuo(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3102,6 +3186,7 @@ No authorization required
 
 <a name="mfamethoddeleteokta"></a>
 # **MFAMethodDeleteOkta**
+
 > void MFAMethodDeleteOkta (string methodId, TimeSpan? wrapTTL = null)
 
 Delete a configuration for the given MFA method
@@ -3132,6 +3217,7 @@ namespace Example
             try
             {
                 // Delete a configuration for the given MFA method
+
                 apiInstance.MFAMethodDeleteOkta(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3173,6 +3259,7 @@ No authorization required
 
 <a name="mfamethoddeletepingid"></a>
 # **MFAMethodDeletePingID**
+
 > void MFAMethodDeletePingID (string methodId, TimeSpan? wrapTTL = null)
 
 Delete a configuration for the given MFA method
@@ -3203,6 +3290,7 @@ namespace Example
             try
             {
                 // Delete a configuration for the given MFA method
+
                 apiInstance.MFAMethodDeletePingID(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3244,6 +3332,7 @@ No authorization required
 
 <a name="mfamethoddeletetotp"></a>
 # **MFAMethodDeleteTOTP**
+
 > void MFAMethodDeleteTOTP (string methodId, TimeSpan? wrapTTL = null)
 
 Delete a configuration for the given MFA method
@@ -3274,6 +3363,7 @@ namespace Example
             try
             {
                 // Delete a configuration for the given MFA method
+
                 apiInstance.MFAMethodDeleteTOTP(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3315,6 +3405,7 @@ No authorization required
 
 <a name="mfamethodgeneratetotp"></a>
 # **MFAMethodGenerateTOTP**
+
 > void MFAMethodGenerateTOTP (MFAMethodGenerateTOTPRequest mFAMethodGenerateTOTPRequest, TimeSpan? wrapTTL = null)
 
 Update or create TOTP secret for the given method ID on the given entity.
@@ -3345,6 +3436,7 @@ namespace Example
             try
             {
                 // Update or create TOTP secret for the given method ID on the given entity.
+
                 apiInstance.MFAMethodGenerateTOTP(MFAMethodGenerateTOTPRequest mFAMethodGenerateTOTPRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3386,6 +3478,7 @@ No authorization required
 
 <a name="mfamethodlist"></a>
 # **MFAMethodList**
+
 > void MFAMethodList (TimeSpan? wrapTTL = null)
 
 List MFA method configurations for all MFA methods
@@ -3416,6 +3509,7 @@ namespace Example
             try
             {
                 // List MFA method configurations for all MFA methods
+
                 apiInstance.MFAMethodList(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3457,6 +3551,7 @@ No authorization required
 
 <a name="mfamethodlistduo"></a>
 # **MFAMethodListDuo**
+
 > void MFAMethodListDuo (TimeSpan? wrapTTL = null)
 
 List MFA method configurations for the given MFA method
@@ -3487,6 +3582,7 @@ namespace Example
             try
             {
                 // List MFA method configurations for the given MFA method
+
                 apiInstance.MFAMethodListDuo(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3528,6 +3624,7 @@ No authorization required
 
 <a name="mfamethodlistokta"></a>
 # **MFAMethodListOkta**
+
 > void MFAMethodListOkta (TimeSpan? wrapTTL = null)
 
 List MFA method configurations for the given MFA method
@@ -3558,6 +3655,7 @@ namespace Example
             try
             {
                 // List MFA method configurations for the given MFA method
+
                 apiInstance.MFAMethodListOkta(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3599,6 +3697,7 @@ No authorization required
 
 <a name="mfamethodlistpingid"></a>
 # **MFAMethodListPingID**
+
 > void MFAMethodListPingID (TimeSpan? wrapTTL = null)
 
 List MFA method configurations for the given MFA method
@@ -3629,6 +3728,7 @@ namespace Example
             try
             {
                 // List MFA method configurations for the given MFA method
+
                 apiInstance.MFAMethodListPingID(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3670,6 +3770,7 @@ No authorization required
 
 <a name="mfamethodlisttotp"></a>
 # **MFAMethodListTOTP**
+
 > void MFAMethodListTOTP (TimeSpan? wrapTTL = null)
 
 List MFA method configurations for the given MFA method
@@ -3700,6 +3801,7 @@ namespace Example
             try
             {
                 // List MFA method configurations for the given MFA method
+
                 apiInstance.MFAMethodListTOTP(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3741,6 +3843,7 @@ No authorization required
 
 <a name="mfamethodread"></a>
 # **MFAMethodRead**
+
 > void MFAMethodRead (string methodId, TimeSpan? wrapTTL = null)
 
 Read the current configuration for the given ID regardless of the MFA method type
@@ -3771,6 +3874,7 @@ namespace Example
             try
             {
                 // Read the current configuration for the given ID regardless of the MFA method type
+
                 apiInstance.MFAMethodRead(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3812,6 +3916,7 @@ No authorization required
 
 <a name="mfamethodreadduo"></a>
 # **MFAMethodReadDuo**
+
 > void MFAMethodReadDuo (string methodId, TimeSpan? wrapTTL = null)
 
 Read the current configuration for the given MFA method
@@ -3842,6 +3947,7 @@ namespace Example
             try
             {
                 // Read the current configuration for the given MFA method
+
                 apiInstance.MFAMethodReadDuo(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3883,6 +3989,7 @@ No authorization required
 
 <a name="mfamethodreadokta"></a>
 # **MFAMethodReadOkta**
+
 > void MFAMethodReadOkta (string methodId, TimeSpan? wrapTTL = null)
 
 Read the current configuration for the given MFA method
@@ -3913,6 +4020,7 @@ namespace Example
             try
             {
                 // Read the current configuration for the given MFA method
+
                 apiInstance.MFAMethodReadOkta(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3954,6 +4062,7 @@ No authorization required
 
 <a name="mfamethodreadpingid"></a>
 # **MFAMethodReadPingID**
+
 > void MFAMethodReadPingID (string methodId, TimeSpan? wrapTTL = null)
 
 Read the current configuration for the given MFA method
@@ -3984,6 +4093,7 @@ namespace Example
             try
             {
                 // Read the current configuration for the given MFA method
+
                 apiInstance.MFAMethodReadPingID(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4025,6 +4135,7 @@ No authorization required
 
 <a name="mfamethodreadtotp"></a>
 # **MFAMethodReadTOTP**
+
 > void MFAMethodReadTOTP (string methodId, TimeSpan? wrapTTL = null)
 
 Read the current configuration for the given MFA method
@@ -4055,6 +4166,7 @@ namespace Example
             try
             {
                 // Read the current configuration for the given MFA method
+
                 apiInstance.MFAMethodReadTOTP(string methodId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4096,7 +4208,8 @@ No authorization required
 
 <a name="mfamethodwriteduo"></a>
 # **MFAMethodWriteDuo**
-> void MFAMethodWriteDuo (MFAMethodWriteDuoRequest mFAMethodWriteDuoRequest, string methodId, TimeSpan? wrapTTL = null)
+
+> void MFAMethodWriteDuo (string methodId, MFAMethodWriteDuoRequest mFAMethodWriteDuoRequest, TimeSpan? wrapTTL = null)
 
 Update or create a configuration for the given MFA method
 
@@ -4127,7 +4240,8 @@ namespace Example
             try
             {
                 // Update or create a configuration for the given MFA method
-                apiInstance.MFAMethodWriteDuo(MFAMethodWriteDuoRequest mFAMethodWriteDuoRequest, string methodId, TimeSpan? wrapTTL = null);
+
+                apiInstance.MFAMethodWriteDuo(string methodId, MFAMethodWriteDuoRequest mFAMethodWriteDuoRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4169,7 +4283,8 @@ No authorization required
 
 <a name="mfamethodwriteokta"></a>
 # **MFAMethodWriteOkta**
-> void MFAMethodWriteOkta (MFAMethodWriteOktaRequest mFAMethodWriteOktaRequest, string methodId, TimeSpan? wrapTTL = null)
+
+> void MFAMethodWriteOkta (string methodId, MFAMethodWriteOktaRequest mFAMethodWriteOktaRequest, TimeSpan? wrapTTL = null)
 
 Update or create a configuration for the given MFA method
 
@@ -4200,7 +4315,8 @@ namespace Example
             try
             {
                 // Update or create a configuration for the given MFA method
-                apiInstance.MFAMethodWriteOkta(MFAMethodWriteOktaRequest mFAMethodWriteOktaRequest, string methodId, TimeSpan? wrapTTL = null);
+
+                apiInstance.MFAMethodWriteOkta(string methodId, MFAMethodWriteOktaRequest mFAMethodWriteOktaRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4242,7 +4358,8 @@ No authorization required
 
 <a name="mfamethodwritepingid"></a>
 # **MFAMethodWritePingID**
-> void MFAMethodWritePingID (MFAMethodWritePingIDRequest mFAMethodWritePingIDRequest, string methodId, TimeSpan? wrapTTL = null)
+
+> void MFAMethodWritePingID (string methodId, MFAMethodWritePingIDRequest mFAMethodWritePingIDRequest, TimeSpan? wrapTTL = null)
 
 Update or create a configuration for the given MFA method
 
@@ -4273,7 +4390,8 @@ namespace Example
             try
             {
                 // Update or create a configuration for the given MFA method
-                apiInstance.MFAMethodWritePingID(MFAMethodWritePingIDRequest mFAMethodWritePingIDRequest, string methodId, TimeSpan? wrapTTL = null);
+
+                apiInstance.MFAMethodWritePingID(string methodId, MFAMethodWritePingIDRequest mFAMethodWritePingIDRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4315,7 +4433,8 @@ No authorization required
 
 <a name="mfamethodwritetotp"></a>
 # **MFAMethodWriteTOTP**
-> void MFAMethodWriteTOTP (MFAMethodWriteTOTPRequest mFAMethodWriteTOTPRequest, string methodId, TimeSpan? wrapTTL = null)
+
+> void MFAMethodWriteTOTP (string methodId, MFAMethodWriteTOTPRequest mFAMethodWriteTOTPRequest, TimeSpan? wrapTTL = null)
 
 Update or create a configuration for the given MFA method
 
@@ -4346,7 +4465,8 @@ namespace Example
             try
             {
                 // Update or create a configuration for the given MFA method
-                apiInstance.MFAMethodWriteTOTP(MFAMethodWriteTOTPRequest mFAMethodWriteTOTPRequest, string methodId, TimeSpan? wrapTTL = null);
+
+                apiInstance.MFAMethodWriteTOTP(string methodId, MFAMethodWriteTOTPRequest mFAMethodWriteTOTPRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4388,6 +4508,7 @@ No authorization required
 
 <a name="mfareadloginenforcement"></a>
 # **MFAReadLoginEnforcement**
+
 > void MFAReadLoginEnforcement (string name, TimeSpan? wrapTTL = null)
 
 Read the current login enforcement
@@ -4418,6 +4539,7 @@ namespace Example
             try
             {
                 // Read the current login enforcement
+
                 apiInstance.MFAReadLoginEnforcement(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4459,7 +4581,8 @@ No authorization required
 
 <a name="mfawriteloginenforcement"></a>
 # **MFAWriteLoginEnforcement**
-> void MFAWriteLoginEnforcement (MFAWriteLoginEnforcementRequest mFAWriteLoginEnforcementRequest, string name, TimeSpan? wrapTTL = null)
+
+> void MFAWriteLoginEnforcement (string name, MFAWriteLoginEnforcementRequest mFAWriteLoginEnforcementRequest, TimeSpan? wrapTTL = null)
 
 Create or update a login enforcement
 
@@ -4490,7 +4613,8 @@ namespace Example
             try
             {
                 // Create or update a login enforcement
-                apiInstance.MFAWriteLoginEnforcement(MFAWriteLoginEnforcementRequest mFAWriteLoginEnforcementRequest, string name, TimeSpan? wrapTTL = null);
+
+                apiInstance.MFAWriteLoginEnforcement(string name, MFAWriteLoginEnforcementRequest mFAWriteLoginEnforcementRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4532,6 +4656,7 @@ No authorization required
 
 <a name="oidcdeleteassignment"></a>
 # **OIDCDeleteAssignment**
+
 > void OIDCDeleteAssignment (string name, TimeSpan? wrapTTL = null)
 
 
@@ -4561,6 +4686,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.OIDCDeleteAssignment(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4602,6 +4728,7 @@ No authorization required
 
 <a name="oidcdeleteclient"></a>
 # **OIDCDeleteClient**
+
 > void OIDCDeleteClient (string name, TimeSpan? wrapTTL = null)
 
 
@@ -4631,6 +4758,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.OIDCDeleteClient(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4672,6 +4800,7 @@ No authorization required
 
 <a name="oidcdeletekey"></a>
 # **OIDCDeleteKey**
+
 > void OIDCDeleteKey (string name, TimeSpan? wrapTTL = null)
 
 CRUD operations for OIDC keys.
@@ -4702,6 +4831,7 @@ namespace Example
             try
             {
                 // CRUD operations for OIDC keys.
+
                 apiInstance.OIDCDeleteKey(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4743,6 +4873,7 @@ No authorization required
 
 <a name="oidcdeleteprovider"></a>
 # **OIDCDeleteProvider**
+
 > void OIDCDeleteProvider (string name, TimeSpan? wrapTTL = null)
 
 
@@ -4772,6 +4903,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.OIDCDeleteProvider(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4813,6 +4945,7 @@ No authorization required
 
 <a name="oidcdeleterole"></a>
 # **OIDCDeleteRole**
+
 > void OIDCDeleteRole (string name, TimeSpan? wrapTTL = null)
 
 CRUD operations on OIDC Roles
@@ -4843,6 +4976,7 @@ namespace Example
             try
             {
                 // CRUD operations on OIDC Roles
+
                 apiInstance.OIDCDeleteRole(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4884,6 +5018,7 @@ No authorization required
 
 <a name="oidcdeletescope"></a>
 # **OIDCDeleteScope**
+
 > void OIDCDeleteScope (string name, TimeSpan? wrapTTL = null)
 
 
@@ -4913,6 +5048,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.OIDCDeleteScope(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4954,6 +5090,7 @@ No authorization required
 
 <a name="oidcintrospect"></a>
 # **OIDCIntrospect**
+
 > void OIDCIntrospect (OIDCIntrospectRequest oIDCIntrospectRequest, TimeSpan? wrapTTL = null)
 
 Verify the authenticity of an OIDC token
@@ -4984,6 +5121,7 @@ namespace Example
             try
             {
                 // Verify the authenticity of an OIDC token
+
                 apiInstance.OIDCIntrospect(OIDCIntrospectRequest oIDCIntrospectRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5025,6 +5163,7 @@ No authorization required
 
 <a name="oidclistassignments"></a>
 # **OIDCListAssignments**
+
 > void OIDCListAssignments (TimeSpan? wrapTTL = null)
 
 
@@ -5054,6 +5193,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.OIDCListAssignments(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5095,6 +5235,7 @@ No authorization required
 
 <a name="oidclistclients"></a>
 # **OIDCListClients**
+
 > void OIDCListClients (TimeSpan? wrapTTL = null)
 
 
@@ -5124,6 +5265,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.OIDCListClients(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5165,6 +5307,7 @@ No authorization required
 
 <a name="oidclistkeys"></a>
 # **OIDCListKeys**
+
 > void OIDCListKeys (TimeSpan? wrapTTL = null)
 
 List OIDC keys
@@ -5195,6 +5338,7 @@ namespace Example
             try
             {
                 // List OIDC keys
+
                 apiInstance.OIDCListKeys(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5236,6 +5380,7 @@ No authorization required
 
 <a name="oidclistproviders"></a>
 # **OIDCListProviders**
+
 > void OIDCListProviders (string allowedClientId = default(string), TimeSpan? wrapTTL = null)
 
 
@@ -5266,6 +5411,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.OIDCListProviders(string allowedClientId = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5308,6 +5454,7 @@ No authorization required
 
 <a name="oidclistroles"></a>
 # **OIDCListRoles**
+
 > void OIDCListRoles (TimeSpan? wrapTTL = null)
 
 List configured OIDC roles
@@ -5338,6 +5485,7 @@ namespace Example
             try
             {
                 // List configured OIDC roles
+
                 apiInstance.OIDCListRoles(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5379,6 +5527,7 @@ No authorization required
 
 <a name="oidclistscopes"></a>
 # **OIDCListScopes**
+
 > void OIDCListScopes (TimeSpan? wrapTTL = null)
 
 
@@ -5408,6 +5557,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.OIDCListScopes(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5449,6 +5599,7 @@ No authorization required
 
 <a name="oidcreadassignment"></a>
 # **OIDCReadAssignment**
+
 > void OIDCReadAssignment (string name, TimeSpan? wrapTTL = null)
 
 
@@ -5478,6 +5629,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.OIDCReadAssignment(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5519,6 +5671,7 @@ No authorization required
 
 <a name="oidcreadclient"></a>
 # **OIDCReadClient**
+
 > void OIDCReadClient (string name, TimeSpan? wrapTTL = null)
 
 
@@ -5548,6 +5701,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.OIDCReadClient(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5589,6 +5743,7 @@ No authorization required
 
 <a name="oidcreadconfig"></a>
 # **OIDCReadConfig**
+
 > void OIDCReadConfig (TimeSpan? wrapTTL = null)
 
 OIDC configuration
@@ -5618,6 +5773,7 @@ namespace Example
             try
             {
                 // OIDC configuration
+
                 apiInstance.OIDCReadConfig(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5656,6 +5812,7 @@ No authorization required
 
 <a name="oidcreadkey"></a>
 # **OIDCReadKey**
+
 > void OIDCReadKey (string name, TimeSpan? wrapTTL = null)
 
 CRUD operations for OIDC keys.
@@ -5686,6 +5843,7 @@ namespace Example
             try
             {
                 // CRUD operations for OIDC keys.
+
                 apiInstance.OIDCReadKey(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5727,6 +5885,7 @@ No authorization required
 
 <a name="oidcreadprovider"></a>
 # **OIDCReadProvider**
+
 > void OIDCReadProvider (string name, TimeSpan? wrapTTL = null)
 
 
@@ -5756,6 +5915,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.OIDCReadProvider(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5797,6 +5957,7 @@ No authorization required
 
 <a name="oidcreadproviderauthorize"></a>
 # **OIDCReadProviderAuthorize**
+
 > void OIDCReadProviderAuthorize (string name, TimeSpan? wrapTTL = null)
 
 
@@ -5826,6 +5987,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.OIDCReadProviderAuthorize(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5867,6 +6029,7 @@ No authorization required
 
 <a name="oidcreadprovideruserinfo"></a>
 # **OIDCReadProviderUserInfo**
+
 > void OIDCReadProviderUserInfo (string name, TimeSpan? wrapTTL = null)
 
 
@@ -5896,6 +6059,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.OIDCReadProviderUserInfo(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5937,6 +6101,7 @@ No authorization required
 
 <a name="oidcreadproviderwellknownkeys"></a>
 # **OIDCReadProviderWellKnownKeys**
+
 > void OIDCReadProviderWellKnownKeys (string name, TimeSpan? wrapTTL = null)
 
 
@@ -5966,6 +6131,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.OIDCReadProviderWellKnownKeys(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -6007,6 +6173,7 @@ No authorization required
 
 <a name="oidcreadproviderwellknownopenidconfiguration"></a>
 # **OIDCReadProviderWellKnownOpenIDConfiguration**
+
 > void OIDCReadProviderWellKnownOpenIDConfiguration (string name, TimeSpan? wrapTTL = null)
 
 
@@ -6036,6 +6203,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.OIDCReadProviderWellKnownOpenIDConfiguration(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -6077,6 +6245,7 @@ No authorization required
 
 <a name="oidcreadrole"></a>
 # **OIDCReadRole**
+
 > void OIDCReadRole (string name, TimeSpan? wrapTTL = null)
 
 CRUD operations on OIDC Roles
@@ -6107,6 +6276,7 @@ namespace Example
             try
             {
                 // CRUD operations on OIDC Roles
+
                 apiInstance.OIDCReadRole(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -6148,6 +6318,7 @@ No authorization required
 
 <a name="oidcreadscope"></a>
 # **OIDCReadScope**
+
 > void OIDCReadScope (string name, TimeSpan? wrapTTL = null)
 
 
@@ -6177,6 +6348,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.OIDCReadScope(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -6218,6 +6390,7 @@ No authorization required
 
 <a name="oidcreadtoken"></a>
 # **OIDCReadToken**
+
 > void OIDCReadToken (string name, TimeSpan? wrapTTL = null)
 
 Generate an OIDC token
@@ -6248,6 +6421,7 @@ namespace Example
             try
             {
                 // Generate an OIDC token
+
                 apiInstance.OIDCReadToken(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -6289,6 +6463,7 @@ No authorization required
 
 <a name="oidcreadwellknownkeys"></a>
 # **OIDCReadWellKnownKeys**
+
 > void OIDCReadWellKnownKeys (TimeSpan? wrapTTL = null)
 
 Retrieve public keys
@@ -6318,6 +6493,7 @@ namespace Example
             try
             {
                 // Retrieve public keys
+
                 apiInstance.OIDCReadWellKnownKeys(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -6356,6 +6532,7 @@ No authorization required
 
 <a name="oidcreadwellknownopenidconfiguration"></a>
 # **OIDCReadWellKnownOpenIDConfiguration**
+
 > void OIDCReadWellKnownOpenIDConfiguration (TimeSpan? wrapTTL = null)
 
 Query OIDC configurations
@@ -6385,6 +6562,7 @@ namespace Example
             try
             {
                 // Query OIDC configurations
+
                 apiInstance.OIDCReadWellKnownOpenIDConfiguration(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -6423,7 +6601,8 @@ No authorization required
 
 <a name="oidcrotatekey"></a>
 # **OIDCRotateKey**
-> void OIDCRotateKey (OIDCRotateKeyRequest oIDCRotateKeyRequest, string name, TimeSpan? wrapTTL = null)
+
+> void OIDCRotateKey (string name, OIDCRotateKeyRequest oIDCRotateKeyRequest, TimeSpan? wrapTTL = null)
 
 Rotate a named OIDC key.
 
@@ -6454,7 +6633,8 @@ namespace Example
             try
             {
                 // Rotate a named OIDC key.
-                apiInstance.OIDCRotateKey(OIDCRotateKeyRequest oIDCRotateKeyRequest, string name, TimeSpan? wrapTTL = null);
+
+                apiInstance.OIDCRotateKey(string name, OIDCRotateKeyRequest oIDCRotateKeyRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6496,7 +6676,8 @@ No authorization required
 
 <a name="oidcwriteassignment"></a>
 # **OIDCWriteAssignment**
-> void OIDCWriteAssignment (OIDCWriteAssignmentRequest oIDCWriteAssignmentRequest, string name, TimeSpan? wrapTTL = null)
+
+> void OIDCWriteAssignment (string name, OIDCWriteAssignmentRequest oIDCWriteAssignmentRequest, TimeSpan? wrapTTL = null)
 
 
 
@@ -6526,7 +6707,8 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCWriteAssignment(OIDCWriteAssignmentRequest oIDCWriteAssignmentRequest, string name, TimeSpan? wrapTTL = null);
+
+                apiInstance.OIDCWriteAssignment(string name, OIDCWriteAssignmentRequest oIDCWriteAssignmentRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6568,7 +6750,8 @@ No authorization required
 
 <a name="oidcwriteclient"></a>
 # **OIDCWriteClient**
-> void OIDCWriteClient (OIDCWriteClientRequest oIDCWriteClientRequest, string name, TimeSpan? wrapTTL = null)
+
+> void OIDCWriteClient (string name, OIDCWriteClientRequest oIDCWriteClientRequest, TimeSpan? wrapTTL = null)
 
 
 
@@ -6598,7 +6781,8 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCWriteClient(OIDCWriteClientRequest oIDCWriteClientRequest, string name, TimeSpan? wrapTTL = null);
+
+                apiInstance.OIDCWriteClient(string name, OIDCWriteClientRequest oIDCWriteClientRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6640,6 +6824,7 @@ No authorization required
 
 <a name="oidcwriteconfig"></a>
 # **OIDCWriteConfig**
+
 > void OIDCWriteConfig (OIDCWriteConfigRequest oIDCWriteConfigRequest, TimeSpan? wrapTTL = null)
 
 OIDC configuration
@@ -6670,6 +6855,7 @@ namespace Example
             try
             {
                 // OIDC configuration
+
                 apiInstance.OIDCWriteConfig(OIDCWriteConfigRequest oIDCWriteConfigRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -6711,7 +6897,8 @@ No authorization required
 
 <a name="oidcwritekey"></a>
 # **OIDCWriteKey**
-> void OIDCWriteKey (OIDCWriteKeyRequest oIDCWriteKeyRequest, string name, TimeSpan? wrapTTL = null)
+
+> void OIDCWriteKey (string name, OIDCWriteKeyRequest oIDCWriteKeyRequest, TimeSpan? wrapTTL = null)
 
 CRUD operations for OIDC keys.
 
@@ -6742,7 +6929,8 @@ namespace Example
             try
             {
                 // CRUD operations for OIDC keys.
-                apiInstance.OIDCWriteKey(OIDCWriteKeyRequest oIDCWriteKeyRequest, string name, TimeSpan? wrapTTL = null);
+
+                apiInstance.OIDCWriteKey(string name, OIDCWriteKeyRequest oIDCWriteKeyRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6784,7 +6972,8 @@ No authorization required
 
 <a name="oidcwriteprovider"></a>
 # **OIDCWriteProvider**
-> void OIDCWriteProvider (OIDCWriteProviderRequest oIDCWriteProviderRequest, string name, TimeSpan? wrapTTL = null)
+
+> void OIDCWriteProvider (string name, OIDCWriteProviderRequest oIDCWriteProviderRequest, TimeSpan? wrapTTL = null)
 
 
 
@@ -6814,7 +7003,8 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCWriteProvider(OIDCWriteProviderRequest oIDCWriteProviderRequest, string name, TimeSpan? wrapTTL = null);
+
+                apiInstance.OIDCWriteProvider(string name, OIDCWriteProviderRequest oIDCWriteProviderRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6856,7 +7046,8 @@ No authorization required
 
 <a name="oidcwriteproviderauthorize"></a>
 # **OIDCWriteProviderAuthorize**
-> void OIDCWriteProviderAuthorize (OIDCWriteProviderAuthorizeRequest oIDCWriteProviderAuthorizeRequest, string name, TimeSpan? wrapTTL = null)
+
+> void OIDCWriteProviderAuthorize (string name, OIDCWriteProviderAuthorizeRequest oIDCWriteProviderAuthorizeRequest, TimeSpan? wrapTTL = null)
 
 
 
@@ -6886,7 +7077,8 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCWriteProviderAuthorize(OIDCWriteProviderAuthorizeRequest oIDCWriteProviderAuthorizeRequest, string name, TimeSpan? wrapTTL = null);
+
+                apiInstance.OIDCWriteProviderAuthorize(string name, OIDCWriteProviderAuthorizeRequest oIDCWriteProviderAuthorizeRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6928,7 +7120,8 @@ No authorization required
 
 <a name="oidcwriteprovidertoken"></a>
 # **OIDCWriteProviderToken**
-> void OIDCWriteProviderToken (OIDCWriteProviderTokenRequest oIDCWriteProviderTokenRequest, string name, TimeSpan? wrapTTL = null)
+
+> void OIDCWriteProviderToken (string name, OIDCWriteProviderTokenRequest oIDCWriteProviderTokenRequest, TimeSpan? wrapTTL = null)
 
 
 
@@ -6958,7 +7151,8 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCWriteProviderToken(OIDCWriteProviderTokenRequest oIDCWriteProviderTokenRequest, string name, TimeSpan? wrapTTL = null);
+
+                apiInstance.OIDCWriteProviderToken(string name, OIDCWriteProviderTokenRequest oIDCWriteProviderTokenRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7000,6 +7194,7 @@ No authorization required
 
 <a name="oidcwriteprovideruserinfo"></a>
 # **OIDCWriteProviderUserInfo**
+
 > void OIDCWriteProviderUserInfo (string name, TimeSpan? wrapTTL = null)
 
 
@@ -7029,6 +7224,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.OIDCWriteProviderUserInfo(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -7070,7 +7266,8 @@ No authorization required
 
 <a name="oidcwriterole"></a>
 # **OIDCWriteRole**
-> void OIDCWriteRole (OIDCWriteRoleRequest oIDCWriteRoleRequest, string name, TimeSpan? wrapTTL = null)
+
+> void OIDCWriteRole (string name, OIDCWriteRoleRequest oIDCWriteRoleRequest, TimeSpan? wrapTTL = null)
 
 CRUD operations on OIDC Roles
 
@@ -7101,7 +7298,8 @@ namespace Example
             try
             {
                 // CRUD operations on OIDC Roles
-                apiInstance.OIDCWriteRole(OIDCWriteRoleRequest oIDCWriteRoleRequest, string name, TimeSpan? wrapTTL = null);
+
+                apiInstance.OIDCWriteRole(string name, OIDCWriteRoleRequest oIDCWriteRoleRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7143,7 +7341,8 @@ No authorization required
 
 <a name="oidcwritescope"></a>
 # **OIDCWriteScope**
-> void OIDCWriteScope (OIDCWriteScopeRequest oIDCWriteScopeRequest, string name, TimeSpan? wrapTTL = null)
+
+> void OIDCWriteScope (string name, OIDCWriteScopeRequest oIDCWriteScopeRequest, TimeSpan? wrapTTL = null)
 
 
 
@@ -7173,7 +7372,8 @@ namespace Example
 
             try
             {
-                apiInstance.OIDCWriteScope(OIDCWriteScopeRequest oIDCWriteScopeRequest, string name, TimeSpan? wrapTTL = null);
+
+                apiInstance.OIDCWriteScope(string name, OIDCWriteScopeRequest oIDCWriteScopeRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7215,6 +7415,7 @@ No authorization required
 
 <a name="personaiddeletebyid"></a>
 # **PersonaIDDeleteByID**
+
 > void PersonaIDDeleteByID (string id, TimeSpan? wrapTTL = null)
 
 Update, read or delete an alias ID.
@@ -7245,6 +7446,7 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
+
                 apiInstance.PersonaIDDeleteByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -7286,6 +7488,7 @@ No authorization required
 
 <a name="personaidreadbyid"></a>
 # **PersonaIDReadByID**
+
 > void PersonaIDReadByID (string id, TimeSpan? wrapTTL = null)
 
 Update, read or delete an alias ID.
@@ -7316,6 +7519,7 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
+
                 apiInstance.PersonaIDReadByID(string id, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -7357,7 +7561,8 @@ No authorization required
 
 <a name="personaidwritebyid"></a>
 # **PersonaIDWriteByID**
-> void PersonaIDWriteByID (PersonaIDWriteByIDRequest personaIDWriteByIDRequest, string id, TimeSpan? wrapTTL = null)
+
+> void PersonaIDWriteByID (string id, PersonaIDWriteByIDRequest personaIDWriteByIDRequest, TimeSpan? wrapTTL = null)
 
 Update, read or delete an alias ID.
 
@@ -7388,7 +7593,8 @@ namespace Example
             try
             {
                 // Update, read or delete an alias ID.
-                apiInstance.PersonaIDWriteByID(PersonaIDWriteByIDRequest personaIDWriteByIDRequest, string id, TimeSpan? wrapTTL = null);
+
+                apiInstance.PersonaIDWriteByID(string id, PersonaIDWriteByIDRequest personaIDWriteByIDRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7430,6 +7636,7 @@ No authorization required
 
 <a name="personalistbyid"></a>
 # **PersonaListByID**
+
 > void PersonaListByID (TimeSpan? wrapTTL = null)
 
 List all the alias IDs.
@@ -7460,6 +7667,7 @@ namespace Example
             try
             {
                 // List all the alias IDs.
+
                 apiInstance.PersonaListByID(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -7501,6 +7709,7 @@ No authorization required
 
 <a name="personawrite"></a>
 # **PersonaWrite**
+
 > void PersonaWrite (PersonaWriteRequest personaWriteRequest, TimeSpan? wrapTTL = null)
 
 Create a new alias.
@@ -7531,6 +7740,7 @@ namespace Example
             try
             {
                 // Create a new alias.
+
                 apiInstance.PersonaWrite(PersonaWriteRequest personaWriteRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)

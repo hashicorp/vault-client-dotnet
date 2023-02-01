@@ -176,7 +176,8 @@ Method | HTTP request | Description
 
 <a name="calculateaudithash"></a>
 # **CalculateAuditHash**
-> void CalculateAuditHash (CalculateAuditHashRequest calculateAuditHashRequest, string path, TimeSpan? wrapTTL = null)
+
+> void CalculateAuditHash (string path, CalculateAuditHashRequest calculateAuditHashRequest, TimeSpan? wrapTTL = null)
 
 The hash of the given string via the given audit backend
 
@@ -207,7 +208,8 @@ namespace Example
             try
             {
                 // The hash of the given string via the given audit backend
-                apiInstance.CalculateAuditHash(CalculateAuditHashRequest calculateAuditHashRequest, string path, TimeSpan? wrapTTL = null);
+
+                apiInstance.CalculateAuditHash(string path, CalculateAuditHashRequest calculateAuditHashRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -249,6 +251,7 @@ No authorization required
 
 <a name="deleteauditdevice"></a>
 # **DeleteAuditDevice**
+
 > void DeleteAuditDevice (string path, TimeSpan? wrapTTL = null)
 
 Disable the audit device at the given path.
@@ -279,6 +282,7 @@ namespace Example
             try
             {
                 // Disable the audit device at the given path.
+
                 apiInstance.DeleteAuditDevice(string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -320,6 +324,7 @@ No authorization required
 
 <a name="deleteauthmethod"></a>
 # **DeleteAuthMethod**
+
 > void DeleteAuthMethod (string path, TimeSpan? wrapTTL = null)
 
 Disable the auth method at the given auth path
@@ -350,6 +355,7 @@ namespace Example
             try
             {
                 // Disable the auth method at the given auth path
+
                 apiInstance.DeleteAuthMethod(string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -391,6 +397,7 @@ No authorization required
 
 <a name="deleteconfigauditingrequestheader"></a>
 # **DeleteConfigAuditingRequestHeader**
+
 > void DeleteConfigAuditingRequestHeader (string header, TimeSpan? wrapTTL = null)
 
 Disable auditing of the given request header.
@@ -421,6 +428,7 @@ namespace Example
             try
             {
                 // Disable auditing of the given request header.
+
                 apiInstance.DeleteConfigAuditingRequestHeader(string header, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -462,6 +470,7 @@ No authorization required
 
 <a name="deleteconfigcors"></a>
 # **DeleteConfigCORS**
+
 > void DeleteConfigCORS (TimeSpan? wrapTTL = null)
 
 Remove any CORS settings.
@@ -491,6 +500,7 @@ namespace Example
             try
             {
                 // Remove any CORS settings.
+
                 apiInstance.DeleteConfigCORS(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -529,6 +539,7 @@ No authorization required
 
 <a name="deleteconfiguiheader"></a>
 # **DeleteConfigUIHeader**
+
 > void DeleteConfigUIHeader (string header, TimeSpan? wrapTTL = null)
 
 Remove a UI header.
@@ -559,6 +570,7 @@ namespace Example
             try
             {
                 // Remove a UI header.
+
                 apiInstance.DeleteConfigUIHeader(string header, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -600,6 +612,7 @@ No authorization required
 
 <a name="deletegenerateroot"></a>
 # **DeleteGenerateRoot**
+
 > void DeleteGenerateRoot (TimeSpan? wrapTTL = null)
 
 Cancels any in-progress root generation attempt.
@@ -629,6 +642,7 @@ namespace Example
             try
             {
                 // Cancels any in-progress root generation attempt.
+
                 apiInstance.DeleteGenerateRoot(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -667,6 +681,7 @@ No authorization required
 
 <a name="deletegeneraterootattempt"></a>
 # **DeleteGenerateRootAttempt**
+
 > void DeleteGenerateRootAttempt (TimeSpan? wrapTTL = null)
 
 Cancels any in-progress root generation attempt.
@@ -696,6 +711,7 @@ namespace Example
             try
             {
                 // Cancels any in-progress root generation attempt.
+
                 apiInstance.DeleteGenerateRootAttempt(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -734,6 +750,7 @@ No authorization required
 
 <a name="deletelogger"></a>
 # **DeleteLogger**
+
 > void DeleteLogger (string name, TimeSpan? wrapTTL = null)
 
 Revert a single logger to use log level provided in config.
@@ -764,6 +781,7 @@ namespace Example
             try
             {
                 // Revert a single logger to use log level provided in config.
+
                 apiInstance.DeleteLogger(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -805,6 +823,7 @@ No authorization required
 
 <a name="deleteloggers"></a>
 # **DeleteLoggers**
+
 > void DeleteLoggers (TimeSpan? wrapTTL = null)
 
 Revert the all loggers to use log level provided in config.
@@ -834,6 +853,7 @@ namespace Example
             try
             {
                 // Revert the all loggers to use log level provided in config.
+
                 apiInstance.DeleteLoggers(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -872,6 +892,7 @@ No authorization required
 
 <a name="deletemount"></a>
 # **DeleteMount**
+
 > void DeleteMount (string path, TimeSpan? wrapTTL = null)
 
 Disable the mount point specified at the given path.
@@ -902,6 +923,7 @@ namespace Example
             try
             {
                 // Disable the mount point specified at the given path.
+
                 apiInstance.DeleteMount(string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -943,6 +965,7 @@ No authorization required
 
 <a name="deletepluginscatalogbytypebyname"></a>
 # **DeletePluginsCatalogByTypeByName**
+
 > void DeletePluginsCatalogByTypeByName (string name, string type, TimeSpan? wrapTTL = null)
 
 Remove the plugin with the given name.
@@ -974,6 +997,7 @@ namespace Example
             try
             {
                 // Remove the plugin with the given name.
+
                 apiInstance.DeletePluginsCatalogByTypeByName(string name, string type, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1016,6 +1040,7 @@ No authorization required
 
 <a name="deletepoliciesacl"></a>
 # **DeletePoliciesACL**
+
 > void DeletePoliciesACL (string name, TimeSpan? wrapTTL = null)
 
 Delete the ACL policy with the given name.
@@ -1046,6 +1071,7 @@ namespace Example
             try
             {
                 // Delete the ACL policy with the given name.
+
                 apiInstance.DeletePoliciesACL(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1087,6 +1113,7 @@ No authorization required
 
 <a name="deletepoliciespassword"></a>
 # **DeletePoliciesPassword**
+
 > void DeletePoliciesPassword (string name, TimeSpan? wrapTTL = null)
 
 Delete a password policy.
@@ -1117,6 +1144,7 @@ namespace Example
             try
             {
                 // Delete a password policy.
+
                 apiInstance.DeletePoliciesPassword(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1158,6 +1186,7 @@ No authorization required
 
 <a name="deletepolicy"></a>
 # **DeletePolicy**
+
 > void DeletePolicy (string name, TimeSpan? wrapTTL = null)
 
 Delete the policy with the given name.
@@ -1188,6 +1217,7 @@ namespace Example
             try
             {
                 // Delete the policy with the given name.
+
                 apiInstance.DeletePolicy(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1229,6 +1259,7 @@ No authorization required
 
 <a name="deletequotasratelimit"></a>
 # **DeleteQuotasRateLimit**
+
 > void DeleteQuotasRateLimit (string name, TimeSpan? wrapTTL = null)
 
 
@@ -1258,6 +1289,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.DeleteQuotasRateLimit(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1299,6 +1331,7 @@ No authorization required
 
 <a name="deleteraw"></a>
 # **DeleteRaw**
+
 > void DeleteRaw (TimeSpan? wrapTTL = null)
 
 Delete the key with given path.
@@ -1328,6 +1361,7 @@ namespace Example
             try
             {
                 // Delete the key with given path.
+
                 apiInstance.DeleteRaw(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1366,6 +1400,7 @@ No authorization required
 
 <a name="deleterawpath"></a>
 # **DeleteRawPath**
+
 > void DeleteRawPath (string path, TimeSpan? wrapTTL = null)
 
 Delete the key with given path.
@@ -1396,6 +1431,7 @@ namespace Example
             try
             {
                 // Delete the key with given path.
+
                 apiInstance.DeleteRawPath(string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1437,6 +1473,7 @@ No authorization required
 
 <a name="deleterekeybackup"></a>
 # **DeleteRekeyBackup**
+
 > void DeleteRekeyBackup (TimeSpan? wrapTTL = null)
 
 Delete the backup copy of PGP-encrypted unseal keys.
@@ -1466,6 +1503,7 @@ namespace Example
             try
             {
                 // Delete the backup copy of PGP-encrypted unseal keys.
+
                 apiInstance.DeleteRekeyBackup(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1504,6 +1542,7 @@ No authorization required
 
 <a name="deleterekeyinit"></a>
 # **DeleteRekeyInit**
+
 > void DeleteRekeyInit (TimeSpan? wrapTTL = null)
 
 Cancels any in-progress rekey.
@@ -1535,6 +1574,7 @@ namespace Example
             try
             {
                 // Cancels any in-progress rekey.
+
                 apiInstance.DeleteRekeyInit(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1573,6 +1613,7 @@ No authorization required
 
 <a name="deleterekeyrecoverykeybackup"></a>
 # **DeleteRekeyRecoveryKeyBackup**
+
 > void DeleteRekeyRecoveryKeyBackup (TimeSpan? wrapTTL = null)
 
 Allows fetching or deleting the backup of the rotated unseal keys.
@@ -1602,6 +1643,7 @@ namespace Example
             try
             {
                 // Allows fetching or deleting the backup of the rotated unseal keys.
+
                 apiInstance.DeleteRekeyRecoveryKeyBackup(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1640,6 +1682,7 @@ No authorization required
 
 <a name="deleterekeyverify"></a>
 # **DeleteRekeyVerify**
+
 > void DeleteRekeyVerify (TimeSpan? wrapTTL = null)
 
 Cancel any in-progress rekey verification operation.
@@ -1671,6 +1714,7 @@ namespace Example
             try
             {
                 // Cancel any in-progress rekey verification operation.
+
                 apiInstance.DeleteRekeyVerify(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1709,6 +1753,7 @@ No authorization required
 
 <a name="listconfiguiheaders"></a>
 # **ListConfigUIHeaders**
+
 > void ListConfigUIHeaders (TimeSpan? wrapTTL = null)
 
 Return a list of configured UI headers.
@@ -1739,6 +1784,7 @@ namespace Example
             try
             {
                 // Return a list of configured UI headers.
+
                 apiInstance.ListConfigUIHeaders(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1780,6 +1826,7 @@ No authorization required
 
 <a name="listleaseslookupprefix"></a>
 # **ListLeasesLookupPrefix**
+
 > void ListLeasesLookupPrefix (string prefix, TimeSpan? wrapTTL = null)
 
 Returns a list of lease ids.
@@ -1811,6 +1858,7 @@ namespace Example
             try
             {
                 // Returns a list of lease ids.
+
                 apiInstance.ListLeasesLookupPrefix(string prefix, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1853,6 +1901,7 @@ No authorization required
 
 <a name="listpluginscatalogbytype"></a>
 # **ListPluginsCatalogByType**
+
 > void ListPluginsCatalogByType (string type, TimeSpan? wrapTTL = null)
 
 List the plugins in the catalog.
@@ -1884,6 +1933,7 @@ namespace Example
             try
             {
                 // List the plugins in the catalog.
+
                 apiInstance.ListPluginsCatalogByType(string type, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1926,6 +1976,7 @@ No authorization required
 
 <a name="listpoliciesacl"></a>
 # **ListPoliciesACL**
+
 > void ListPoliciesACL (TimeSpan? wrapTTL = null)
 
 List the configured access control policies.
@@ -1956,6 +2007,7 @@ namespace Example
             try
             {
                 // List the configured access control policies.
+
                 apiInstance.ListPoliciesACL(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1997,6 +2049,7 @@ No authorization required
 
 <a name="listpoliciespassword"></a>
 # **ListPoliciesPassword**
+
 > void ListPoliciesPassword (TimeSpan? wrapTTL = null)
 
 List the existing password policies.
@@ -2027,6 +2080,7 @@ namespace Example
             try
             {
                 // List the existing password policies.
+
                 apiInstance.ListPoliciesPassword(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2068,6 +2122,7 @@ No authorization required
 
 <a name="listquotasratelimits"></a>
 # **ListQuotasRateLimits**
+
 > void ListQuotasRateLimits (TimeSpan? wrapTTL = null)
 
 
@@ -2097,6 +2152,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.ListQuotasRateLimits(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2138,6 +2194,7 @@ No authorization required
 
 <a name="listversionhistory"></a>
 # **ListVersionHistory**
+
 > void ListVersionHistory (TimeSpan? wrapTTL = null)
 
 Returns map of historical version change entries
@@ -2168,6 +2225,7 @@ namespace Example
             try
             {
                 // Returns map of historical version change entries
+
                 apiInstance.ListVersionHistory(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2209,6 +2267,7 @@ No authorization required
 
 <a name="mfavalidate"></a>
 # **MFAValidate**
+
 > void MFAValidate (MFAValidateRequest mFAValidateRequest, TimeSpan? wrapTTL = null)
 
 Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token
@@ -2239,6 +2298,7 @@ namespace Example
             try
             {
                 // Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token
+
                 apiInstance.MFAValidate(MFAValidateRequest mFAValidateRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2280,6 +2340,7 @@ No authorization required
 
 <a name="monitor"></a>
 # **Monitor**
+
 > void Monitor (string logFormat = default(string), string logLevel = default(string), TimeSpan? wrapTTL = null)
 
 
@@ -2310,6 +2371,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.Monitor(string logFormat = default(string), string logLevel = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2352,6 +2414,7 @@ No authorization required
 
 <a name="pprofread"></a>
 # **PprofRead**
+
 > void PprofRead (TimeSpan? wrapTTL = null)
 
 Returns an HTML page listing the available profiles.
@@ -2383,6 +2446,7 @@ namespace Example
             try
             {
                 // Returns an HTML page listing the available profiles.
+
                 apiInstance.PprofRead(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2421,6 +2485,7 @@ No authorization required
 
 <a name="pprofreadallocs"></a>
 # **PprofReadAllocs**
+
 > void PprofReadAllocs (TimeSpan? wrapTTL = null)
 
 Returns a sampling of all past memory allocations.
@@ -2452,6 +2517,7 @@ namespace Example
             try
             {
                 // Returns a sampling of all past memory allocations.
+
                 apiInstance.PprofReadAllocs(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2490,6 +2556,7 @@ No authorization required
 
 <a name="pprofreadblock"></a>
 # **PprofReadBlock**
+
 > void PprofReadBlock (TimeSpan? wrapTTL = null)
 
 Returns stack traces that led to blocking on synchronization primitives
@@ -2521,6 +2588,7 @@ namespace Example
             try
             {
                 // Returns stack traces that led to blocking on synchronization primitives
+
                 apiInstance.PprofReadBlock(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2559,6 +2627,7 @@ No authorization required
 
 <a name="pprofreadcmdline"></a>
 # **PprofReadCmdline**
+
 > void PprofReadCmdline (TimeSpan? wrapTTL = null)
 
 Returns the running program's command line.
@@ -2590,6 +2659,7 @@ namespace Example
             try
             {
                 // Returns the running program's command line.
+
                 apiInstance.PprofReadCmdline(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2628,6 +2698,7 @@ No authorization required
 
 <a name="pprofreadgoroutine"></a>
 # **PprofReadGoroutine**
+
 > void PprofReadGoroutine (TimeSpan? wrapTTL = null)
 
 Returns stack traces of all current goroutines.
@@ -2659,6 +2730,7 @@ namespace Example
             try
             {
                 // Returns stack traces of all current goroutines.
+
                 apiInstance.PprofReadGoroutine(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2697,6 +2769,7 @@ No authorization required
 
 <a name="pprofreadheap"></a>
 # **PprofReadHeap**
+
 > void PprofReadHeap (TimeSpan? wrapTTL = null)
 
 Returns a sampling of memory allocations of live object.
@@ -2728,6 +2801,7 @@ namespace Example
             try
             {
                 // Returns a sampling of memory allocations of live object.
+
                 apiInstance.PprofReadHeap(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2766,6 +2840,7 @@ No authorization required
 
 <a name="pprofreadmutex"></a>
 # **PprofReadMutex**
+
 > void PprofReadMutex (TimeSpan? wrapTTL = null)
 
 Returns stack traces of holders of contended mutexes
@@ -2797,6 +2872,7 @@ namespace Example
             try
             {
                 // Returns stack traces of holders of contended mutexes
+
                 apiInstance.PprofReadMutex(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2835,6 +2911,7 @@ No authorization required
 
 <a name="pprofreadprofile"></a>
 # **PprofReadProfile**
+
 > void PprofReadProfile (TimeSpan? wrapTTL = null)
 
 Returns a pprof-formatted cpu profile payload.
@@ -2866,6 +2943,7 @@ namespace Example
             try
             {
                 // Returns a pprof-formatted cpu profile payload.
+
                 apiInstance.PprofReadProfile(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2904,6 +2982,7 @@ No authorization required
 
 <a name="pprofreadsymbol"></a>
 # **PprofReadSymbol**
+
 > void PprofReadSymbol (TimeSpan? wrapTTL = null)
 
 Returns the program counters listed in the request.
@@ -2935,6 +3014,7 @@ namespace Example
             try
             {
                 // Returns the program counters listed in the request.
+
                 apiInstance.PprofReadSymbol(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2973,6 +3053,7 @@ No authorization required
 
 <a name="pprofreadthreadcreate"></a>
 # **PprofReadThreadcreate**
+
 > void PprofReadThreadcreate (TimeSpan? wrapTTL = null)
 
 Returns stack traces that led to the creation of new OS threads
@@ -3004,6 +3085,7 @@ namespace Example
             try
             {
                 // Returns stack traces that led to the creation of new OS threads
+
                 apiInstance.PprofReadThreadcreate(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3042,6 +3124,7 @@ No authorization required
 
 <a name="pprofreadtrace"></a>
 # **PprofReadTrace**
+
 > void PprofReadTrace (TimeSpan? wrapTTL = null)
 
 Returns the execution trace in binary form.
@@ -3073,6 +3156,7 @@ namespace Example
             try
             {
                 // Returns the execution trace in binary form.
+
                 apiInstance.PprofReadTrace(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3111,6 +3195,7 @@ No authorization required
 
 <a name="readauditdevices"></a>
 # **ReadAuditDevices**
+
 > void ReadAuditDevices (TimeSpan? wrapTTL = null)
 
 List the enabled audit devices.
@@ -3140,6 +3225,7 @@ namespace Example
             try
             {
                 // List the enabled audit devices.
+
                 apiInstance.ReadAuditDevices(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3178,6 +3264,7 @@ No authorization required
 
 <a name="readauthmethod"></a>
 # **ReadAuthMethod**
+
 > void ReadAuthMethod (string path, TimeSpan? wrapTTL = null)
 
 Read the configuration of the auth engine at the given path.
@@ -3208,6 +3295,7 @@ namespace Example
             try
             {
                 // Read the configuration of the auth engine at the given path.
+
                 apiInstance.ReadAuthMethod(string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3249,6 +3337,7 @@ No authorization required
 
 <a name="readauthmethodtune"></a>
 # **ReadAuthMethodTune**
+
 > void ReadAuthMethodTune (string path, TimeSpan? wrapTTL = null)
 
 Reads the given auth path's configuration.
@@ -3281,6 +3370,7 @@ namespace Example
             try
             {
                 // Reads the given auth path's configuration.
+
                 apiInstance.ReadAuthMethodTune(string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3322,6 +3412,7 @@ No authorization required
 
 <a name="readauthmethods"></a>
 # **ReadAuthMethods**
+
 > void ReadAuthMethods (TimeSpan? wrapTTL = null)
 
 List the currently enabled credential backends.
@@ -3351,6 +3442,7 @@ namespace Example
             try
             {
                 // List the currently enabled credential backends.
+
                 apiInstance.ReadAuthMethods(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3389,6 +3481,7 @@ No authorization required
 
 <a name="readconfigauditingrequestheader"></a>
 # **ReadConfigAuditingRequestHeader**
+
 > void ReadConfigAuditingRequestHeader (string header, TimeSpan? wrapTTL = null)
 
 List the information for the given request header.
@@ -3419,6 +3512,7 @@ namespace Example
             try
             {
                 // List the information for the given request header.
+
                 apiInstance.ReadConfigAuditingRequestHeader(string header, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3460,6 +3554,7 @@ No authorization required
 
 <a name="readconfigauditingrequestheaders"></a>
 # **ReadConfigAuditingRequestHeaders**
+
 > void ReadConfigAuditingRequestHeaders (TimeSpan? wrapTTL = null)
 
 List the request headers that are configured to be audited.
@@ -3489,6 +3584,7 @@ namespace Example
             try
             {
                 // List the request headers that are configured to be audited.
+
                 apiInstance.ReadConfigAuditingRequestHeaders(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3527,6 +3623,7 @@ No authorization required
 
 <a name="readconfigcors"></a>
 # **ReadConfigCORS**
+
 > void ReadConfigCORS (TimeSpan? wrapTTL = null)
 
 Return the current CORS settings.
@@ -3556,6 +3653,7 @@ namespace Example
             try
             {
                 // Return the current CORS settings.
+
                 apiInstance.ReadConfigCORS(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3594,6 +3692,7 @@ No authorization required
 
 <a name="readconfigstatesanitized"></a>
 # **ReadConfigStateSanitized**
+
 > void ReadConfigStateSanitized (TimeSpan? wrapTTL = null)
 
 Return a sanitized version of the Vault server configuration.
@@ -3625,6 +3724,7 @@ namespace Example
             try
             {
                 // Return a sanitized version of the Vault server configuration.
+
                 apiInstance.ReadConfigStateSanitized(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3663,6 +3763,7 @@ No authorization required
 
 <a name="readconfiguiheader"></a>
 # **ReadConfigUIHeader**
+
 > void ReadConfigUIHeader (string header, TimeSpan? wrapTTL = null)
 
 Return the given UI header's configuration
@@ -3693,6 +3794,7 @@ namespace Example
             try
             {
                 // Return the given UI header's configuration
+
                 apiInstance.ReadConfigUIHeader(string header, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3734,6 +3836,7 @@ No authorization required
 
 <a name="readgenerateroot"></a>
 # **ReadGenerateRoot**
+
 > void ReadGenerateRoot (TimeSpan? wrapTTL = null)
 
 Read the configuration and progress of the current root generation attempt.
@@ -3763,6 +3866,7 @@ namespace Example
             try
             {
                 // Read the configuration and progress of the current root generation attempt.
+
                 apiInstance.ReadGenerateRoot(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3801,6 +3905,7 @@ No authorization required
 
 <a name="readgeneraterootattempt"></a>
 # **ReadGenerateRootAttempt**
+
 > void ReadGenerateRootAttempt (TimeSpan? wrapTTL = null)
 
 Read the configuration and progress of the current root generation attempt.
@@ -3830,6 +3935,7 @@ namespace Example
             try
             {
                 // Read the configuration and progress of the current root generation attempt.
+
                 apiInstance.ReadGenerateRootAttempt(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3868,6 +3974,7 @@ No authorization required
 
 <a name="readhastatus"></a>
 # **ReadHAStatus**
+
 > void ReadHAStatus (TimeSpan? wrapTTL = null)
 
 Check the HA status of a Vault cluster
@@ -3897,6 +4004,7 @@ namespace Example
             try
             {
                 // Check the HA status of a Vault cluster
+
                 apiInstance.ReadHAStatus(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3935,6 +4043,7 @@ No authorization required
 
 <a name="readhealth"></a>
 # **ReadHealth**
+
 > void ReadHealth (TimeSpan? wrapTTL = null)
 
 Returns the health status of Vault.
@@ -3964,6 +4073,7 @@ namespace Example
             try
             {
                 // Returns the health status of Vault.
+
                 apiInstance.ReadHealth(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4006,6 +4116,7 @@ No authorization required
 
 <a name="readhostinfo"></a>
 # **ReadHostInfo**
+
 > void ReadHostInfo (TimeSpan? wrapTTL = null)
 
 Information about the host instance that this Vault server is running on.
@@ -4037,6 +4148,7 @@ namespace Example
             try
             {
                 // Information about the host instance that this Vault server is running on.
+
                 apiInstance.ReadHostInfo(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4075,6 +4187,7 @@ No authorization required
 
 <a name="readinflightrequests"></a>
 # **ReadInFlightRequests**
+
 > void ReadInFlightRequests (TimeSpan? wrapTTL = null)
 
 reports in-flight requests
@@ -4106,6 +4219,7 @@ namespace Example
             try
             {
                 // reports in-flight requests
+
                 apiInstance.ReadInFlightRequests(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4144,6 +4258,7 @@ No authorization required
 
 <a name="readinit"></a>
 # **ReadInit**
+
 > void ReadInit (TimeSpan? wrapTTL = null)
 
 Returns the initialization status of Vault.
@@ -4173,6 +4288,7 @@ namespace Example
             try
             {
                 // Returns the initialization status of Vault.
+
                 apiInstance.ReadInit(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4211,6 +4327,7 @@ No authorization required
 
 <a name="readinternalcountersactivity"></a>
 # **ReadInternalCountersActivity**
+
 > void ReadInternalCountersActivity (TimeSpan? wrapTTL = null)
 
 Report the client count metrics, for this namespace and all child namespaces.
@@ -4240,6 +4357,7 @@ namespace Example
             try
             {
                 // Report the client count metrics, for this namespace and all child namespaces.
+
                 apiInstance.ReadInternalCountersActivity(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4278,6 +4396,7 @@ No authorization required
 
 <a name="readinternalcountersactivityexport"></a>
 # **ReadInternalCountersActivityExport**
+
 > void ReadInternalCountersActivityExport (TimeSpan? wrapTTL = null)
 
 Report the client count metrics, for this namespace and all child namespaces.
@@ -4307,6 +4426,7 @@ namespace Example
             try
             {
                 // Report the client count metrics, for this namespace and all child namespaces.
+
                 apiInstance.ReadInternalCountersActivityExport(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4345,6 +4465,7 @@ No authorization required
 
 <a name="readinternalcountersactivitymonthly"></a>
 # **ReadInternalCountersActivityMonthly**
+
 > void ReadInternalCountersActivityMonthly (TimeSpan? wrapTTL = null)
 
 Report the number of clients for this month, for this namespace and all child namespaces.
@@ -4374,6 +4495,7 @@ namespace Example
             try
             {
                 // Report the number of clients for this month, for this namespace and all child namespaces.
+
                 apiInstance.ReadInternalCountersActivityMonthly(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4412,6 +4534,7 @@ No authorization required
 
 <a name="readinternalcountersconfig"></a>
 # **ReadInternalCountersConfig**
+
 > void ReadInternalCountersConfig (TimeSpan? wrapTTL = null)
 
 Read the client count tracking configuration.
@@ -4441,6 +4564,7 @@ namespace Example
             try
             {
                 // Read the client count tracking configuration.
+
                 apiInstance.ReadInternalCountersConfig(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4479,6 +4603,7 @@ No authorization required
 
 <a name="readinternalcountersentities"></a>
 # **ReadInternalCountersEntities**
+
 > void ReadInternalCountersEntities (TimeSpan? wrapTTL = null)
 
 Backwards compatibility is not guaranteed for this API
@@ -4508,6 +4633,7 @@ namespace Example
             try
             {
                 // Backwards compatibility is not guaranteed for this API
+
                 apiInstance.ReadInternalCountersEntities(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4546,6 +4672,7 @@ No authorization required
 
 <a name="readinternalcountersrequests"></a>
 # **ReadInternalCountersRequests**
+
 > void ReadInternalCountersRequests (TimeSpan? wrapTTL = null)
 
 Backwards compatibility is not guaranteed for this API
@@ -4575,6 +4702,7 @@ namespace Example
             try
             {
                 // Backwards compatibility is not guaranteed for this API
+
                 apiInstance.ReadInternalCountersRequests(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4613,6 +4741,7 @@ No authorization required
 
 <a name="readinternalcounterstokens"></a>
 # **ReadInternalCountersTokens**
+
 > void ReadInternalCountersTokens (TimeSpan? wrapTTL = null)
 
 Backwards compatibility is not guaranteed for this API
@@ -4642,6 +4771,7 @@ namespace Example
             try
             {
                 // Backwards compatibility is not guaranteed for this API
+
                 apiInstance.ReadInternalCountersTokens(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4680,6 +4810,7 @@ No authorization required
 
 <a name="readinternalinspectrouter"></a>
 # **ReadInternalInspectRouter**
+
 > void ReadInternalInspectRouter (string tag, TimeSpan? wrapTTL = null)
 
 Expose the route entry and mount entry tables present in the router
@@ -4710,6 +4841,7 @@ namespace Example
             try
             {
                 // Expose the route entry and mount entry tables present in the router
+
                 apiInstance.ReadInternalInspectRouter(string tag, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4751,6 +4883,7 @@ No authorization required
 
 <a name="readinternalspecsopenapi"></a>
 # **ReadInternalSpecsOpenAPI**
+
 > void ReadInternalSpecsOpenAPI (TimeSpan? wrapTTL = null)
 
 Generate an OpenAPI 3 document of all mounted paths.
@@ -4780,6 +4913,7 @@ namespace Example
             try
             {
                 // Generate an OpenAPI 3 document of all mounted paths.
+
                 apiInstance.ReadInternalSpecsOpenAPI(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4818,6 +4952,7 @@ No authorization required
 
 <a name="readinternaluifeatureflags"></a>
 # **ReadInternalUIFeatureFlags**
+
 > void ReadInternalUIFeatureFlags (TimeSpan? wrapTTL = null)
 
 Lists enabled feature flags.
@@ -4847,6 +4982,7 @@ namespace Example
             try
             {
                 // Lists enabled feature flags.
+
                 apiInstance.ReadInternalUIFeatureFlags(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4885,6 +5021,7 @@ No authorization required
 
 <a name="readinternaluimount"></a>
 # **ReadInternalUIMount**
+
 > void ReadInternalUIMount (string path, TimeSpan? wrapTTL = null)
 
 Return information about the given mount.
@@ -4915,6 +5052,7 @@ namespace Example
             try
             {
                 // Return information about the given mount.
+
                 apiInstance.ReadInternalUIMount(string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4956,6 +5094,7 @@ No authorization required
 
 <a name="readinternaluimounts"></a>
 # **ReadInternalUIMounts**
+
 > void ReadInternalUIMounts (TimeSpan? wrapTTL = null)
 
 Lists all enabled and visible auth and secrets mounts.
@@ -4985,6 +5124,7 @@ namespace Example
             try
             {
                 // Lists all enabled and visible auth and secrets mounts.
+
                 apiInstance.ReadInternalUIMounts(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5023,6 +5163,7 @@ No authorization required
 
 <a name="readinternaluinamespaces"></a>
 # **ReadInternalUINamespaces**
+
 > void ReadInternalUINamespaces (TimeSpan? wrapTTL = null)
 
 Backwards compatibility is not guaranteed for this API
@@ -5052,6 +5193,7 @@ namespace Example
             try
             {
                 // Backwards compatibility is not guaranteed for this API
+
                 apiInstance.ReadInternalUINamespaces(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5090,6 +5232,7 @@ No authorization required
 
 <a name="readinternaluiresultantacl"></a>
 # **ReadInternalUIResultantACL**
+
 > void ReadInternalUIResultantACL (TimeSpan? wrapTTL = null)
 
 Backwards compatibility is not guaranteed for this API
@@ -5119,6 +5262,7 @@ namespace Example
             try
             {
                 // Backwards compatibility is not guaranteed for this API
+
                 apiInstance.ReadInternalUIResultantACL(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5157,6 +5301,7 @@ No authorization required
 
 <a name="readkeystatus"></a>
 # **ReadKeyStatus**
+
 > void ReadKeyStatus (TimeSpan? wrapTTL = null)
 
 Provides information about the backend encryption key.
@@ -5186,6 +5331,7 @@ namespace Example
             try
             {
                 // Provides information about the backend encryption key.
+
                 apiInstance.ReadKeyStatus(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5224,6 +5370,7 @@ No authorization required
 
 <a name="readleader"></a>
 # **ReadLeader**
+
 > void ReadLeader (TimeSpan? wrapTTL = null)
 
 Returns the high availability status and current leader instance of Vault.
@@ -5253,6 +5400,7 @@ namespace Example
             try
             {
                 // Returns the high availability status and current leader instance of Vault.
+
                 apiInstance.ReadLeader(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5291,6 +5439,7 @@ No authorization required
 
 <a name="readleases"></a>
 # **ReadLeases**
+
 > void ReadLeases (TimeSpan? wrapTTL = null)
 
 List leases associated with this Vault cluster
@@ -5320,6 +5469,7 @@ namespace Example
             try
             {
                 // List leases associated with this Vault cluster
+
                 apiInstance.ReadLeases(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5358,6 +5508,7 @@ No authorization required
 
 <a name="readleasescount"></a>
 # **ReadLeasesCount**
+
 > void ReadLeasesCount (TimeSpan? wrapTTL = null)
 
 Count of leases associated with this Vault cluster
@@ -5387,6 +5538,7 @@ namespace Example
             try
             {
                 // Count of leases associated with this Vault cluster
+
                 apiInstance.ReadLeasesCount(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5425,6 +5577,7 @@ No authorization required
 
 <a name="readlogger"></a>
 # **ReadLogger**
+
 > void ReadLogger (string name, TimeSpan? wrapTTL = null)
 
 Read the log level for a single logger.
@@ -5455,6 +5608,7 @@ namespace Example
             try
             {
                 // Read the log level for a single logger.
+
                 apiInstance.ReadLogger(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5496,6 +5650,7 @@ No authorization required
 
 <a name="readloggers"></a>
 # **ReadLoggers**
+
 > void ReadLoggers (TimeSpan? wrapTTL = null)
 
 Read the log level for all existing loggers.
@@ -5525,6 +5680,7 @@ namespace Example
             try
             {
                 // Read the log level for all existing loggers.
+
                 apiInstance.ReadLoggers(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5563,6 +5719,7 @@ No authorization required
 
 <a name="readmetrics"></a>
 # **ReadMetrics**
+
 > void ReadMetrics (string format = default(string), TimeSpan? wrapTTL = null)
 
 Export the metrics aggregated for telemetry purpose.
@@ -5593,6 +5750,7 @@ namespace Example
             try
             {
                 // Export the metrics aggregated for telemetry purpose.
+
                 apiInstance.ReadMetrics(string format = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5634,6 +5792,7 @@ No authorization required
 
 <a name="readmount"></a>
 # **ReadMount**
+
 > void ReadMount (string path, TimeSpan? wrapTTL = null)
 
 Read the configuration of the secret engine at the given path.
@@ -5664,6 +5823,7 @@ namespace Example
             try
             {
                 // Read the configuration of the secret engine at the given path.
+
                 apiInstance.ReadMount(string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5705,6 +5865,7 @@ No authorization required
 
 <a name="readmounts"></a>
 # **ReadMounts**
+
 > void ReadMounts (TimeSpan? wrapTTL = null)
 
 List the currently mounted backends.
@@ -5734,6 +5895,7 @@ namespace Example
             try
             {
                 // List the currently mounted backends.
+
                 apiInstance.ReadMounts(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5772,6 +5934,7 @@ No authorization required
 
 <a name="readmountsconfig"></a>
 # **ReadMountsConfig**
+
 > void ReadMountsConfig (string path, TimeSpan? wrapTTL = null)
 
 Tune backend configuration parameters for this mount.
@@ -5802,6 +5965,7 @@ namespace Example
             try
             {
                 // Tune backend configuration parameters for this mount.
+
                 apiInstance.ReadMountsConfig(string path, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5843,6 +6007,7 @@ No authorization required
 
 <a name="readpluginscatalog"></a>
 # **ReadPluginsCatalog**
+
 > void ReadPluginsCatalog (TimeSpan? wrapTTL = null)
 
 Lists all the plugins known to Vault
@@ -5872,6 +6037,7 @@ namespace Example
             try
             {
                 // Lists all the plugins known to Vault
+
                 apiInstance.ReadPluginsCatalog(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5910,6 +6076,7 @@ No authorization required
 
 <a name="readpluginscatalogbytypebyname"></a>
 # **ReadPluginsCatalogByTypeByName**
+
 > void ReadPluginsCatalogByTypeByName (string name, string type, TimeSpan? wrapTTL = null)
 
 Return the configuration data for the plugin with the given name.
@@ -5941,6 +6108,7 @@ namespace Example
             try
             {
                 // Return the configuration data for the plugin with the given name.
+
                 apiInstance.ReadPluginsCatalogByTypeByName(string name, string type, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5983,6 +6151,7 @@ No authorization required
 
 <a name="readpolicies"></a>
 # **ReadPolicies**
+
 > void ReadPolicies (string list = default(string), TimeSpan? wrapTTL = null)
 
 List the configured access control policies.
@@ -6013,6 +6182,7 @@ namespace Example
             try
             {
                 // List the configured access control policies.
+
                 apiInstance.ReadPolicies(string list = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -6054,6 +6224,7 @@ No authorization required
 
 <a name="readpoliciesacl"></a>
 # **ReadPoliciesACL**
+
 > void ReadPoliciesACL (string name, TimeSpan? wrapTTL = null)
 
 Retrieve information about the named ACL policy.
@@ -6084,6 +6255,7 @@ namespace Example
             try
             {
                 // Retrieve information about the named ACL policy.
+
                 apiInstance.ReadPoliciesACL(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -6125,6 +6297,7 @@ No authorization required
 
 <a name="readpoliciespassword"></a>
 # **ReadPoliciesPassword**
+
 > void ReadPoliciesPassword (string name, TimeSpan? wrapTTL = null)
 
 Retrieve an existing password policy.
@@ -6155,6 +6328,7 @@ namespace Example
             try
             {
                 // Retrieve an existing password policy.
+
                 apiInstance.ReadPoliciesPassword(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -6196,6 +6370,7 @@ No authorization required
 
 <a name="readpoliciespasswordgenerate"></a>
 # **ReadPoliciesPasswordGenerate**
+
 > void ReadPoliciesPasswordGenerate (string name, TimeSpan? wrapTTL = null)
 
 Generate a password from an existing password policy.
@@ -6226,6 +6401,7 @@ namespace Example
             try
             {
                 // Generate a password from an existing password policy.
+
                 apiInstance.ReadPoliciesPasswordGenerate(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -6267,6 +6443,7 @@ No authorization required
 
 <a name="readpolicy"></a>
 # **ReadPolicy**
+
 > void ReadPolicy (string name, TimeSpan? wrapTTL = null)
 
 Retrieve the policy body for the named policy.
@@ -6297,6 +6474,7 @@ namespace Example
             try
             {
                 // Retrieve the policy body for the named policy.
+
                 apiInstance.ReadPolicy(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -6338,6 +6516,7 @@ No authorization required
 
 <a name="readquotasconfig"></a>
 # **ReadQuotasConfig**
+
 > void ReadQuotasConfig (TimeSpan? wrapTTL = null)
 
 
@@ -6366,6 +6545,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.ReadQuotasConfig(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -6404,6 +6584,7 @@ No authorization required
 
 <a name="readquotasratelimit"></a>
 # **ReadQuotasRateLimit**
+
 > void ReadQuotasRateLimit (string name, TimeSpan? wrapTTL = null)
 
 
@@ -6433,6 +6614,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.ReadQuotasRateLimit(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -6474,6 +6656,7 @@ No authorization required
 
 <a name="readraw"></a>
 # **ReadRaw**
+
 > void ReadRaw (string list = default(string), TimeSpan? wrapTTL = null)
 
 Read the value of the key at the given path.
@@ -6504,6 +6687,7 @@ namespace Example
             try
             {
                 // Read the value of the key at the given path.
+
                 apiInstance.ReadRaw(string list = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -6545,6 +6729,7 @@ No authorization required
 
 <a name="readrawpath"></a>
 # **ReadRawPath**
+
 > void ReadRawPath (string path, string list = default(string), TimeSpan? wrapTTL = null)
 
 Read the value of the key at the given path.
@@ -6576,6 +6761,7 @@ namespace Example
             try
             {
                 // Read the value of the key at the given path.
+
                 apiInstance.ReadRawPath(string path, string list = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -6618,6 +6804,7 @@ No authorization required
 
 <a name="readrekeybackup"></a>
 # **ReadRekeyBackup**
+
 > void ReadRekeyBackup (TimeSpan? wrapTTL = null)
 
 Return the backup copy of PGP-encrypted unseal keys.
@@ -6647,6 +6834,7 @@ namespace Example
             try
             {
                 // Return the backup copy of PGP-encrypted unseal keys.
+
                 apiInstance.ReadRekeyBackup(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -6685,6 +6873,7 @@ No authorization required
 
 <a name="readrekeyinit"></a>
 # **ReadRekeyInit**
+
 > void ReadRekeyInit (TimeSpan? wrapTTL = null)
 
 Reads the configuration and progress of the current rekey attempt.
@@ -6714,6 +6903,7 @@ namespace Example
             try
             {
                 // Reads the configuration and progress of the current rekey attempt.
+
                 apiInstance.ReadRekeyInit(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -6752,6 +6942,7 @@ No authorization required
 
 <a name="readrekeyrecoverykeybackup"></a>
 # **ReadRekeyRecoveryKeyBackup**
+
 > void ReadRekeyRecoveryKeyBackup (TimeSpan? wrapTTL = null)
 
 Allows fetching or deleting the backup of the rotated unseal keys.
@@ -6781,6 +6972,7 @@ namespace Example
             try
             {
                 // Allows fetching or deleting the backup of the rotated unseal keys.
+
                 apiInstance.ReadRekeyRecoveryKeyBackup(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -6819,6 +7011,7 @@ No authorization required
 
 <a name="readrekeyverify"></a>
 # **ReadRekeyVerify**
+
 > void ReadRekeyVerify (TimeSpan? wrapTTL = null)
 
 Read the configuration and progress of the current rekey verification attempt.
@@ -6848,6 +7041,7 @@ namespace Example
             try
             {
                 // Read the configuration and progress of the current rekey verification attempt.
+
                 apiInstance.ReadRekeyVerify(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -6886,6 +7080,7 @@ No authorization required
 
 <a name="readremountstatus"></a>
 # **ReadRemountStatus**
+
 > void ReadRemountStatus (string migrationId, TimeSpan? wrapTTL = null)
 
 Check status of a mount migration
@@ -6916,6 +7111,7 @@ namespace Example
             try
             {
                 // Check status of a mount migration
+
                 apiInstance.ReadRemountStatus(string migrationId, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -6957,6 +7153,7 @@ No authorization required
 
 <a name="readreplicationstatus"></a>
 # **ReadReplicationStatus**
+
 > void ReadReplicationStatus (TimeSpan? wrapTTL = null)
 
 
@@ -6985,6 +7182,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.ReadReplicationStatus(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -7023,6 +7221,7 @@ No authorization required
 
 <a name="readrotateconfig"></a>
 # **ReadRotateConfig**
+
 > void ReadRotateConfig (TimeSpan? wrapTTL = null)
 
 
@@ -7051,6 +7250,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.ReadRotateConfig(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -7089,6 +7289,7 @@ No authorization required
 
 <a name="readsealstatus"></a>
 # **ReadSealStatus**
+
 > void ReadSealStatus (TimeSpan? wrapTTL = null)
 
 Check the seal status of a Vault.
@@ -7118,6 +7319,7 @@ namespace Example
             try
             {
                 // Check the seal status of a Vault.
+
                 apiInstance.ReadSealStatus(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -7156,6 +7358,7 @@ No authorization required
 
 <a name="remount"></a>
 # **Remount**
+
 > void Remount (RemountRequest remountRequest, TimeSpan? wrapTTL = null)
 
 Initiate a mount migration
@@ -7186,6 +7389,7 @@ namespace Example
             try
             {
                 // Initiate a mount migration
+
                 apiInstance.Remount(RemountRequest remountRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -7227,6 +7431,7 @@ No authorization required
 
 <a name="renew"></a>
 # **Renew**
+
 > void Renew (RenewRequest renewRequest, TimeSpan? wrapTTL = null)
 
 Renews a lease, requesting to extend the lease.
@@ -7257,6 +7462,7 @@ namespace Example
             try
             {
                 // Renews a lease, requesting to extend the lease.
+
                 apiInstance.Renew(RenewRequest renewRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -7298,7 +7504,8 @@ No authorization required
 
 <a name="renewfor"></a>
 # **RenewFor**
-> void RenewFor (RenewForRequest renewForRequest, string urlLeaseId, TimeSpan? wrapTTL = null)
+
+> void RenewFor (string urlLeaseId, RenewForRequest renewForRequest, TimeSpan? wrapTTL = null)
 
 Renews a lease, requesting to extend the lease.
 
@@ -7329,7 +7536,8 @@ namespace Example
             try
             {
                 // Renews a lease, requesting to extend the lease.
-                apiInstance.RenewFor(RenewForRequest renewForRequest, string urlLeaseId, TimeSpan? wrapTTL = null);
+
+                apiInstance.RenewFor(string urlLeaseId, RenewForRequest renewForRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7371,6 +7579,7 @@ No authorization required
 
 <a name="revoke"></a>
 # **Revoke**
+
 > void Revoke (RevokeRequest revokeRequest, TimeSpan? wrapTTL = null)
 
 Revokes a lease immediately.
@@ -7401,6 +7610,7 @@ namespace Example
             try
             {
                 // Revokes a lease immediately.
+
                 apiInstance.Revoke(RevokeRequest revokeRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -7442,6 +7652,7 @@ No authorization required
 
 <a name="revokeforce"></a>
 # **RevokeForce**
+
 > void RevokeForce (string prefix, TimeSpan? wrapTTL = null)
 
 Revokes all secrets or tokens generated under a given prefix immediately
@@ -7474,6 +7685,7 @@ namespace Example
             try
             {
                 // Revokes all secrets or tokens generated under a given prefix immediately
+
                 apiInstance.RevokeForce(string prefix, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -7515,7 +7727,8 @@ No authorization required
 
 <a name="revokelease"></a>
 # **RevokeLease**
-> void RevokeLease (RevokeLeaseRequest revokeLeaseRequest, string urlLeaseId, TimeSpan? wrapTTL = null)
+
+> void RevokeLease (string urlLeaseId, RevokeLeaseRequest revokeLeaseRequest, TimeSpan? wrapTTL = null)
 
 Revokes a lease immediately.
 
@@ -7546,7 +7759,8 @@ namespace Example
             try
             {
                 // Revokes a lease immediately.
-                apiInstance.RevokeLease(RevokeLeaseRequest revokeLeaseRequest, string urlLeaseId, TimeSpan? wrapTTL = null);
+
+                apiInstance.RevokeLease(string urlLeaseId, RevokeLeaseRequest revokeLeaseRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7588,7 +7802,8 @@ No authorization required
 
 <a name="revokeprefix"></a>
 # **RevokePrefix**
-> void RevokePrefix (RevokePrefixRequest revokePrefixRequest, string prefix, TimeSpan? wrapTTL = null)
+
+> void RevokePrefix (string prefix, RevokePrefixRequest revokePrefixRequest, TimeSpan? wrapTTL = null)
 
 Revokes all secrets (via a lease ID prefix) or tokens (via the tokens' path property) generated under a given prefix immediately.
 
@@ -7619,7 +7834,8 @@ namespace Example
             try
             {
                 // Revokes all secrets (via a lease ID prefix) or tokens (via the tokens' path property) generated under a given prefix immediately.
-                apiInstance.RevokePrefix(RevokePrefixRequest revokePrefixRequest, string prefix, TimeSpan? wrapTTL = null);
+
+                apiInstance.RevokePrefix(string prefix, RevokePrefixRequest revokePrefixRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7661,6 +7877,7 @@ No authorization required
 
 <a name="rotate"></a>
 # **Rotate**
+
 > void Rotate (TimeSpan? wrapTTL = null)
 
 Rotates the backend encryption key used to persist data.
@@ -7690,6 +7907,7 @@ namespace Example
             try
             {
                 // Rotates the backend encryption key used to persist data.
+
                 apiInstance.Rotate(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -7728,6 +7946,7 @@ No authorization required
 
 <a name="seal"></a>
 # **Seal**
+
 > void Seal (TimeSpan? wrapTTL = null)
 
 Seal the Vault.
@@ -7757,6 +7976,7 @@ namespace Example
             try
             {
                 // Seal the Vault.
+
                 apiInstance.Seal(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -7795,6 +8015,7 @@ No authorization required
 
 <a name="stepdownleader"></a>
 # **StepDownLeader**
+
 > void StepDownLeader (TimeSpan? wrapTTL = null)
 
 Cause the node to give up active status.
@@ -7826,6 +8047,7 @@ namespace Example
             try
             {
                 // Cause the node to give up active status.
+
                 apiInstance.StepDownLeader(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -7864,6 +8086,7 @@ No authorization required
 
 <a name="sysdeletepluginscatalogname"></a>
 # **SysDeletePluginsCatalogName**
+
 > void SysDeletePluginsCatalogName (string name, TimeSpan? wrapTTL = null)
 
 Remove the plugin with the given name.
@@ -7894,6 +8117,7 @@ namespace Example
             try
             {
                 // Remove the plugin with the given name.
+
                 apiInstance.SysDeletePluginsCatalogName(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -7935,6 +8159,7 @@ No authorization required
 
 <a name="syslistleaseslookup"></a>
 # **SysListLeasesLookup**
+
 > void SysListLeasesLookup (TimeSpan? wrapTTL = null)
 
 Returns a list of lease ids.
@@ -7965,6 +8190,7 @@ namespace Example
             try
             {
                 // Returns a list of lease ids.
+
                 apiInstance.SysListLeasesLookup(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -8006,6 +8232,7 @@ No authorization required
 
 <a name="sysreadpluginscatalogname"></a>
 # **SysReadPluginsCatalogName**
+
 > void SysReadPluginsCatalogName (string name, TimeSpan? wrapTTL = null)
 
 Return the configuration data for the plugin with the given name.
@@ -8036,6 +8263,7 @@ namespace Example
             try
             {
                 // Return the configuration data for the plugin with the given name.
+
                 apiInstance.SysReadPluginsCatalogName(string name, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -8077,6 +8305,7 @@ No authorization required
 
 <a name="syswritelockedusersmountaccessorunlockaliasidentifier"></a>
 # **SysWriteLockedusersMountAccessorUnlockAliasIdentifier**
+
 > void SysWriteLockedusersMountAccessorUnlockAliasIdentifier (string aliasIdentifier, string mountAccessor, TimeSpan? wrapTTL = null)
 
 Unlocks the user with given mount_accessor and alias_identifier
@@ -8108,6 +8337,7 @@ namespace Example
             try
             {
                 // Unlocks the user with given mount_accessor and alias_identifier
+
                 apiInstance.SysWriteLockedusersMountAccessorUnlockAliasIdentifier(string aliasIdentifier, string mountAccessor, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -8150,7 +8380,8 @@ No authorization required
 
 <a name="syswritepluginscatalogname"></a>
 # **SysWritePluginsCatalogName**
-> void SysWritePluginsCatalogName (SysWritePluginsCatalogNameRequest sysWritePluginsCatalogNameRequest, string name, TimeSpan? wrapTTL = null)
+
+> void SysWritePluginsCatalogName (string name, SysWritePluginsCatalogNameRequest sysWritePluginsCatalogNameRequest, TimeSpan? wrapTTL = null)
 
 Register a new plugin, or updates an existing one with the supplied name.
 
@@ -8181,7 +8412,8 @@ namespace Example
             try
             {
                 // Register a new plugin, or updates an existing one with the supplied name.
-                apiInstance.SysWritePluginsCatalogName(SysWritePluginsCatalogNameRequest sysWritePluginsCatalogNameRequest, string name, TimeSpan? wrapTTL = null);
+
+                apiInstance.SysWritePluginsCatalogName(string name, SysWritePluginsCatalogNameRequest sysWritePluginsCatalogNameRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8223,7 +8455,8 @@ No authorization required
 
 <a name="syswritetoolsrandomurlbytes"></a>
 # **SysWriteToolsRandomUrlbytes**
-> void SysWriteToolsRandomUrlbytes (SysWriteToolsRandomUrlbytesRequest sysWriteToolsRandomUrlbytesRequest, string urlbytes, TimeSpan? wrapTTL = null)
+
+> void SysWriteToolsRandomUrlbytes (string urlbytes, SysWriteToolsRandomUrlbytesRequest sysWriteToolsRandomUrlbytesRequest, TimeSpan? wrapTTL = null)
 
 Generate random bytes
 
@@ -8254,7 +8487,8 @@ namespace Example
             try
             {
                 // Generate random bytes
-                apiInstance.SysWriteToolsRandomUrlbytes(SysWriteToolsRandomUrlbytesRequest sysWriteToolsRandomUrlbytesRequest, string urlbytes, TimeSpan? wrapTTL = null);
+
+                apiInstance.SysWriteToolsRandomUrlbytes(string urlbytes, SysWriteToolsRandomUrlbytesRequest sysWriteToolsRandomUrlbytesRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8296,6 +8530,7 @@ No authorization required
 
 <a name="toolsgeneraterandom"></a>
 # **ToolsGenerateRandom**
+
 > void ToolsGenerateRandom (ToolsGenerateRandomRequest toolsGenerateRandomRequest, TimeSpan? wrapTTL = null)
 
 Generate random bytes
@@ -8326,6 +8561,7 @@ namespace Example
             try
             {
                 // Generate random bytes
+
                 apiInstance.ToolsGenerateRandom(ToolsGenerateRandomRequest toolsGenerateRandomRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -8367,7 +8603,8 @@ No authorization required
 
 <a name="toolsgeneraterandomsource"></a>
 # **ToolsGenerateRandomSource**
-> void ToolsGenerateRandomSource (ToolsGenerateRandomSourceRequest toolsGenerateRandomSourceRequest, string source, TimeSpan? wrapTTL = null)
+
+> void ToolsGenerateRandomSource (string source, ToolsGenerateRandomSourceRequest toolsGenerateRandomSourceRequest, TimeSpan? wrapTTL = null)
 
 Generate random bytes
 
@@ -8398,7 +8635,8 @@ namespace Example
             try
             {
                 // Generate random bytes
-                apiInstance.ToolsGenerateRandomSource(ToolsGenerateRandomSourceRequest toolsGenerateRandomSourceRequest, string source, TimeSpan? wrapTTL = null);
+
+                apiInstance.ToolsGenerateRandomSource(string source, ToolsGenerateRandomSourceRequest toolsGenerateRandomSourceRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8440,7 +8678,8 @@ No authorization required
 
 <a name="toolsgeneraterandomsourcebytes"></a>
 # **ToolsGenerateRandomSourceBytes**
-> void ToolsGenerateRandomSourceBytes (ToolsGenerateRandomSourceBytesRequest toolsGenerateRandomSourceBytesRequest, string source, string urlbytes, TimeSpan? wrapTTL = null)
+
+> void ToolsGenerateRandomSourceBytes (string source, string urlbytes, ToolsGenerateRandomSourceBytesRequest toolsGenerateRandomSourceBytesRequest, TimeSpan? wrapTTL = null)
 
 Generate random bytes
 
@@ -8472,7 +8711,8 @@ namespace Example
             try
             {
                 // Generate random bytes
-                apiInstance.ToolsGenerateRandomSourceBytes(ToolsGenerateRandomSourceBytesRequest toolsGenerateRandomSourceBytesRequest, string source, string urlbytes, TimeSpan? wrapTTL = null);
+
+                apiInstance.ToolsGenerateRandomSourceBytes(string source, string urlbytes, ToolsGenerateRandomSourceBytesRequest toolsGenerateRandomSourceBytesRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8515,6 +8755,7 @@ No authorization required
 
 <a name="toolshash"></a>
 # **ToolsHash**
+
 > void ToolsHash (ToolsHashRequest toolsHashRequest, TimeSpan? wrapTTL = null)
 
 Generate a hash sum for input data
@@ -8545,6 +8786,7 @@ namespace Example
             try
             {
                 // Generate a hash sum for input data
+
                 apiInstance.ToolsHash(ToolsHashRequest toolsHashRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -8586,7 +8828,8 @@ No authorization required
 
 <a name="toolshashwith"></a>
 # **ToolsHashWith**
-> void ToolsHashWith (ToolsHashWithRequest toolsHashWithRequest, string urlalgorithm, TimeSpan? wrapTTL = null)
+
+> void ToolsHashWith (string urlalgorithm, ToolsHashWithRequest toolsHashWithRequest, TimeSpan? wrapTTL = null)
 
 Generate a hash sum for input data
 
@@ -8617,7 +8860,8 @@ namespace Example
             try
             {
                 // Generate a hash sum for input data
-                apiInstance.ToolsHashWith(ToolsHashWithRequest toolsHashWithRequest, string urlalgorithm, TimeSpan? wrapTTL = null);
+
+                apiInstance.ToolsHashWith(string urlalgorithm, ToolsHashWithRequest toolsHashWithRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8659,6 +8903,7 @@ No authorization required
 
 <a name="unseal"></a>
 # **Unseal**
+
 > void Unseal (UnsealRequest unsealRequest, TimeSpan? wrapTTL = null)
 
 Unseal the Vault.
@@ -8689,6 +8934,7 @@ namespace Example
             try
             {
                 // Unseal the Vault.
+
                 apiInstance.Unseal(UnsealRequest unsealRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -8730,6 +8976,7 @@ No authorization required
 
 <a name="wrappingreadlookup"></a>
 # **WrappingReadLookup**
+
 > void WrappingReadLookup (TimeSpan? wrapTTL = null)
 
 Look up wrapping properties for the requester's token.
@@ -8759,6 +9006,7 @@ namespace Example
             try
             {
                 // Look up wrapping properties for the requester's token.
+
                 apiInstance.WrappingReadLookup(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -8797,6 +9045,7 @@ No authorization required
 
 <a name="wrappingrewrap"></a>
 # **WrappingRewrap**
+
 > void WrappingRewrap (WrappingRewrapRequest wrappingRewrapRequest, TimeSpan? wrapTTL = null)
 
 Rotates a response-wrapped token.
@@ -8827,6 +9076,7 @@ namespace Example
             try
             {
                 // Rotates a response-wrapped token.
+
                 apiInstance.WrappingRewrap(WrappingRewrapRequest wrappingRewrapRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -8868,6 +9118,7 @@ No authorization required
 
 <a name="wrappingunwrap"></a>
 # **WrappingUnwrap**
+
 > void WrappingUnwrap (WrappingUnwrapRequest wrappingUnwrapRequest, TimeSpan? wrapTTL = null)
 
 Unwraps a response-wrapped token.
@@ -8898,6 +9149,7 @@ namespace Example
             try
             {
                 // Unwraps a response-wrapped token.
+
                 apiInstance.WrappingUnwrap(WrappingUnwrapRequest wrappingUnwrapRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -8939,6 +9191,7 @@ No authorization required
 
 <a name="wrappingwrap"></a>
 # **WrappingWrap**
+
 > void WrappingWrap (TimeSpan? wrapTTL = null)
 
 Response-wraps an arbitrary JSON object.
@@ -8968,6 +9221,7 @@ namespace Example
             try
             {
                 // Response-wraps an arbitrary JSON object.
+
                 apiInstance.WrappingWrap(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -9006,6 +9260,7 @@ No authorization required
 
 <a name="wrappingwritelookup"></a>
 # **WrappingWriteLookup**
+
 > void WrappingWriteLookup (WrappingWriteLookupRequest wrappingWriteLookupRequest, TimeSpan? wrapTTL = null)
 
 Look up wrapping properties for the given token.
@@ -9036,6 +9291,7 @@ namespace Example
             try
             {
                 // Look up wrapping properties for the given token.
+
                 apiInstance.WrappingWriteLookup(WrappingWriteLookupRequest wrappingWriteLookupRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -9077,7 +9333,8 @@ No authorization required
 
 <a name="writeauditdevice"></a>
 # **WriteAuditDevice**
-> void WriteAuditDevice (WriteAuditDeviceRequest writeAuditDeviceRequest, string path, TimeSpan? wrapTTL = null)
+
+> void WriteAuditDevice (string path, WriteAuditDeviceRequest writeAuditDeviceRequest, TimeSpan? wrapTTL = null)
 
 Enable a new audit device at the supplied path.
 
@@ -9108,7 +9365,8 @@ namespace Example
             try
             {
                 // Enable a new audit device at the supplied path.
-                apiInstance.WriteAuditDevice(WriteAuditDeviceRequest writeAuditDeviceRequest, string path, TimeSpan? wrapTTL = null);
+
+                apiInstance.WriteAuditDevice(string path, WriteAuditDeviceRequest writeAuditDeviceRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9150,7 +9408,8 @@ No authorization required
 
 <a name="writeauthmethod"></a>
 # **WriteAuthMethod**
-> void WriteAuthMethod (WriteAuthMethodRequest writeAuthMethodRequest, string path, TimeSpan? wrapTTL = null)
+
+> void WriteAuthMethod (string path, WriteAuthMethodRequest writeAuthMethodRequest, TimeSpan? wrapTTL = null)
 
 Enables a new auth method.
 
@@ -9183,7 +9442,8 @@ namespace Example
             try
             {
                 // Enables a new auth method.
-                apiInstance.WriteAuthMethod(WriteAuthMethodRequest writeAuthMethodRequest, string path, TimeSpan? wrapTTL = null);
+
+                apiInstance.WriteAuthMethod(string path, WriteAuthMethodRequest writeAuthMethodRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9225,7 +9485,8 @@ No authorization required
 
 <a name="writeauthmethodtune"></a>
 # **WriteAuthMethodTune**
-> void WriteAuthMethodTune (WriteAuthMethodTuneRequest writeAuthMethodTuneRequest, string path, TimeSpan? wrapTTL = null)
+
+> void WriteAuthMethodTune (string path, WriteAuthMethodTuneRequest writeAuthMethodTuneRequest, TimeSpan? wrapTTL = null)
 
 Tune configuration parameters for a given auth path.
 
@@ -9258,7 +9519,8 @@ namespace Example
             try
             {
                 // Tune configuration parameters for a given auth path.
-                apiInstance.WriteAuthMethodTune(WriteAuthMethodTuneRequest writeAuthMethodTuneRequest, string path, TimeSpan? wrapTTL = null);
+
+                apiInstance.WriteAuthMethodTune(string path, WriteAuthMethodTuneRequest writeAuthMethodTuneRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9300,6 +9562,7 @@ No authorization required
 
 <a name="writecapabilities"></a>
 # **WriteCapabilities**
+
 > void WriteCapabilities (WriteCapabilitiesRequest writeCapabilitiesRequest, TimeSpan? wrapTTL = null)
 
 Fetches the capabilities of the given token on the given path.
@@ -9330,6 +9593,7 @@ namespace Example
             try
             {
                 // Fetches the capabilities of the given token on the given path.
+
                 apiInstance.WriteCapabilities(WriteCapabilitiesRequest writeCapabilitiesRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -9371,6 +9635,7 @@ No authorization required
 
 <a name="writecapabilitiesaccessor"></a>
 # **WriteCapabilitiesAccessor**
+
 > void WriteCapabilitiesAccessor (WriteCapabilitiesAccessorRequest writeCapabilitiesAccessorRequest, TimeSpan? wrapTTL = null)
 
 Fetches the capabilities of the token associated with the given token, on the given path.
@@ -9401,6 +9666,7 @@ namespace Example
             try
             {
                 // Fetches the capabilities of the token associated with the given token, on the given path.
+
                 apiInstance.WriteCapabilitiesAccessor(WriteCapabilitiesAccessorRequest writeCapabilitiesAccessorRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -9442,6 +9708,7 @@ No authorization required
 
 <a name="writecapabilitiesself"></a>
 # **WriteCapabilitiesSelf**
+
 > void WriteCapabilitiesSelf (WriteCapabilitiesSelfRequest writeCapabilitiesSelfRequest, TimeSpan? wrapTTL = null)
 
 Fetches the capabilities of the given token on the given path.
@@ -9472,6 +9739,7 @@ namespace Example
             try
             {
                 // Fetches the capabilities of the given token on the given path.
+
                 apiInstance.WriteCapabilitiesSelf(WriteCapabilitiesSelfRequest writeCapabilitiesSelfRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -9513,7 +9781,8 @@ No authorization required
 
 <a name="writeconfigauditingrequestheader"></a>
 # **WriteConfigAuditingRequestHeader**
-> void WriteConfigAuditingRequestHeader (WriteConfigAuditingRequestHeaderRequest writeConfigAuditingRequestHeaderRequest, string header, TimeSpan? wrapTTL = null)
+
+> void WriteConfigAuditingRequestHeader (string header, WriteConfigAuditingRequestHeaderRequest writeConfigAuditingRequestHeaderRequest, TimeSpan? wrapTTL = null)
 
 Enable auditing of a header.
 
@@ -9544,7 +9813,8 @@ namespace Example
             try
             {
                 // Enable auditing of a header.
-                apiInstance.WriteConfigAuditingRequestHeader(WriteConfigAuditingRequestHeaderRequest writeConfigAuditingRequestHeaderRequest, string header, TimeSpan? wrapTTL = null);
+
+                apiInstance.WriteConfigAuditingRequestHeader(string header, WriteConfigAuditingRequestHeaderRequest writeConfigAuditingRequestHeaderRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9586,6 +9856,7 @@ No authorization required
 
 <a name="writeconfigcors"></a>
 # **WriteConfigCORS**
+
 > void WriteConfigCORS (WriteConfigCORSRequest writeConfigCORSRequest, TimeSpan? wrapTTL = null)
 
 Configure the CORS settings.
@@ -9616,6 +9887,7 @@ namespace Example
             try
             {
                 // Configure the CORS settings.
+
                 apiInstance.WriteConfigCORS(WriteConfigCORSRequest writeConfigCORSRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -9657,6 +9929,7 @@ No authorization required
 
 <a name="writeconfigreloadsubsystem"></a>
 # **WriteConfigReloadSubsystem**
+
 > void WriteConfigReloadSubsystem (string subsystem, TimeSpan? wrapTTL = null)
 
 Reload the given subsystem
@@ -9687,6 +9960,7 @@ namespace Example
             try
             {
                 // Reload the given subsystem
+
                 apiInstance.WriteConfigReloadSubsystem(string subsystem, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -9728,7 +10002,8 @@ No authorization required
 
 <a name="writeconfiguiheader"></a>
 # **WriteConfigUIHeader**
-> void WriteConfigUIHeader (WriteConfigUIHeaderRequest writeConfigUIHeaderRequest, string header, TimeSpan? wrapTTL = null)
+
+> void WriteConfigUIHeader (string header, WriteConfigUIHeaderRequest writeConfigUIHeaderRequest, TimeSpan? wrapTTL = null)
 
 Configure the values to be returned for the UI header.
 
@@ -9759,7 +10034,8 @@ namespace Example
             try
             {
                 // Configure the values to be returned for the UI header.
-                apiInstance.WriteConfigUIHeader(WriteConfigUIHeaderRequest writeConfigUIHeaderRequest, string header, TimeSpan? wrapTTL = null);
+
+                apiInstance.WriteConfigUIHeader(string header, WriteConfigUIHeaderRequest writeConfigUIHeaderRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9801,6 +10077,7 @@ No authorization required
 
 <a name="writegenerateroot"></a>
 # **WriteGenerateRoot**
+
 > void WriteGenerateRoot (WriteGenerateRootRequest writeGenerateRootRequest, TimeSpan? wrapTTL = null)
 
 Initializes a new root generation attempt.
@@ -9833,6 +10110,7 @@ namespace Example
             try
             {
                 // Initializes a new root generation attempt.
+
                 apiInstance.WriteGenerateRoot(WriteGenerateRootRequest writeGenerateRootRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -9874,6 +10152,7 @@ No authorization required
 
 <a name="writegeneraterootattempt"></a>
 # **WriteGenerateRootAttempt**
+
 > void WriteGenerateRootAttempt (WriteGenerateRootAttemptRequest writeGenerateRootAttemptRequest, TimeSpan? wrapTTL = null)
 
 Initializes a new root generation attempt.
@@ -9906,6 +10185,7 @@ namespace Example
             try
             {
                 // Initializes a new root generation attempt.
+
                 apiInstance.WriteGenerateRootAttempt(WriteGenerateRootAttemptRequest writeGenerateRootAttemptRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -9947,6 +10227,7 @@ No authorization required
 
 <a name="writegeneraterootupdate"></a>
 # **WriteGenerateRootUpdate**
+
 > void WriteGenerateRootUpdate (WriteGenerateRootUpdateRequest writeGenerateRootUpdateRequest, TimeSpan? wrapTTL = null)
 
 Enter a single unseal key share to progress the root generation attempt.
@@ -9979,6 +10260,7 @@ namespace Example
             try
             {
                 // Enter a single unseal key share to progress the root generation attempt.
+
                 apiInstance.WriteGenerateRootUpdate(WriteGenerateRootUpdateRequest writeGenerateRootUpdateRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -10020,6 +10302,7 @@ No authorization required
 
 <a name="writeinit"></a>
 # **WriteInit**
+
 > void WriteInit (WriteInitRequest writeInitRequest, TimeSpan? wrapTTL = null)
 
 Initialize a new Vault.
@@ -10052,6 +10335,7 @@ namespace Example
             try
             {
                 // Initialize a new Vault.
+
                 apiInstance.WriteInit(WriteInitRequest writeInitRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -10093,6 +10377,7 @@ No authorization required
 
 <a name="writeinternalcountersconfig"></a>
 # **WriteInternalCountersConfig**
+
 > void WriteInternalCountersConfig (WriteInternalCountersConfigRequest writeInternalCountersConfigRequest, TimeSpan? wrapTTL = null)
 
 Enable or disable collection of client count, set retention period, or set default reporting period.
@@ -10123,6 +10408,7 @@ namespace Example
             try
             {
                 // Enable or disable collection of client count, set retention period, or set default reporting period.
+
                 apiInstance.WriteInternalCountersConfig(WriteInternalCountersConfigRequest writeInternalCountersConfigRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -10164,6 +10450,7 @@ No authorization required
 
 <a name="writeleaseslookup"></a>
 # **WriteLeasesLookup**
+
 > void WriteLeasesLookup (WriteLeasesLookupRequest writeLeasesLookupRequest, TimeSpan? wrapTTL = null)
 
 Retrieve lease metadata.
@@ -10194,6 +10481,7 @@ namespace Example
             try
             {
                 // Retrieve lease metadata.
+
                 apiInstance.WriteLeasesLookup(WriteLeasesLookupRequest writeLeasesLookupRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -10235,6 +10523,7 @@ No authorization required
 
 <a name="writeleasesrenew"></a>
 # **WriteLeasesRenew**
+
 > void WriteLeasesRenew (WriteLeasesRenewRequest writeLeasesRenewRequest, TimeSpan? wrapTTL = null)
 
 Renews a lease, requesting to extend the lease.
@@ -10265,6 +10554,7 @@ namespace Example
             try
             {
                 // Renews a lease, requesting to extend the lease.
+
                 apiInstance.WriteLeasesRenew(WriteLeasesRenewRequest writeLeasesRenewRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -10306,7 +10596,8 @@ No authorization required
 
 <a name="writeleasesrenew2"></a>
 # **WriteLeasesRenew2**
-> void WriteLeasesRenew2 (WriteLeasesRenew2Request writeLeasesRenew2Request, string urlLeaseId, TimeSpan? wrapTTL = null)
+
+> void WriteLeasesRenew2 (string urlLeaseId, WriteLeasesRenew2Request writeLeasesRenew2Request, TimeSpan? wrapTTL = null)
 
 Renews a lease, requesting to extend the lease.
 
@@ -10337,7 +10628,8 @@ namespace Example
             try
             {
                 // Renews a lease, requesting to extend the lease.
-                apiInstance.WriteLeasesRenew2(WriteLeasesRenew2Request writeLeasesRenew2Request, string urlLeaseId, TimeSpan? wrapTTL = null);
+
+                apiInstance.WriteLeasesRenew2(string urlLeaseId, WriteLeasesRenew2Request writeLeasesRenew2Request, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10379,6 +10671,7 @@ No authorization required
 
 <a name="writeleasesrevoke"></a>
 # **WriteLeasesRevoke**
+
 > void WriteLeasesRevoke (WriteLeasesRevokeRequest writeLeasesRevokeRequest, TimeSpan? wrapTTL = null)
 
 Revokes a lease immediately.
@@ -10409,6 +10702,7 @@ namespace Example
             try
             {
                 // Revokes a lease immediately.
+
                 apiInstance.WriteLeasesRevoke(WriteLeasesRevokeRequest writeLeasesRevokeRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -10450,7 +10744,8 @@ No authorization required
 
 <a name="writeleasesrevoke2"></a>
 # **WriteLeasesRevoke2**
-> void WriteLeasesRevoke2 (WriteLeasesRevoke2Request writeLeasesRevoke2Request, string urlLeaseId, TimeSpan? wrapTTL = null)
+
+> void WriteLeasesRevoke2 (string urlLeaseId, WriteLeasesRevoke2Request writeLeasesRevoke2Request, TimeSpan? wrapTTL = null)
 
 Revokes a lease immediately.
 
@@ -10481,7 +10776,8 @@ namespace Example
             try
             {
                 // Revokes a lease immediately.
-                apiInstance.WriteLeasesRevoke2(WriteLeasesRevoke2Request writeLeasesRevoke2Request, string urlLeaseId, TimeSpan? wrapTTL = null);
+
+                apiInstance.WriteLeasesRevoke2(string urlLeaseId, WriteLeasesRevoke2Request writeLeasesRevoke2Request, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10523,6 +10819,7 @@ No authorization required
 
 <a name="writeleasesrevokeforce"></a>
 # **WriteLeasesRevokeForce**
+
 > void WriteLeasesRevokeForce (string prefix, TimeSpan? wrapTTL = null)
 
 Revokes all secrets or tokens generated under a given prefix immediately
@@ -10555,6 +10852,7 @@ namespace Example
             try
             {
                 // Revokes all secrets or tokens generated under a given prefix immediately
+
                 apiInstance.WriteLeasesRevokeForce(string prefix, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -10596,7 +10894,8 @@ No authorization required
 
 <a name="writeleasesrevokeprefix"></a>
 # **WriteLeasesRevokePrefix**
-> void WriteLeasesRevokePrefix (WriteLeasesRevokePrefixRequest writeLeasesRevokePrefixRequest, string prefix, TimeSpan? wrapTTL = null)
+
+> void WriteLeasesRevokePrefix (string prefix, WriteLeasesRevokePrefixRequest writeLeasesRevokePrefixRequest, TimeSpan? wrapTTL = null)
 
 Revokes all secrets (via a lease ID prefix) or tokens (via the tokens' path property) generated under a given prefix immediately.
 
@@ -10627,7 +10926,8 @@ namespace Example
             try
             {
                 // Revokes all secrets (via a lease ID prefix) or tokens (via the tokens' path property) generated under a given prefix immediately.
-                apiInstance.WriteLeasesRevokePrefix(WriteLeasesRevokePrefixRequest writeLeasesRevokePrefixRequest, string prefix, TimeSpan? wrapTTL = null);
+
+                apiInstance.WriteLeasesRevokePrefix(string prefix, WriteLeasesRevokePrefixRequest writeLeasesRevokePrefixRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10669,6 +10969,7 @@ No authorization required
 
 <a name="writeleasestidy"></a>
 # **WriteLeasesTidy**
+
 > void WriteLeasesTidy (TimeSpan? wrapTTL = null)
 
 This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
@@ -10698,6 +10999,7 @@ namespace Example
             try
             {
                 // This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
+
                 apiInstance.WriteLeasesTidy(TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -10736,7 +11038,8 @@ No authorization required
 
 <a name="writelogger"></a>
 # **WriteLogger**
-> void WriteLogger (WriteLoggerRequest writeLoggerRequest, string name, TimeSpan? wrapTTL = null)
+
+> void WriteLogger (string name, WriteLoggerRequest writeLoggerRequest, TimeSpan? wrapTTL = null)
 
 Modify the log level of a single logger.
 
@@ -10767,7 +11070,8 @@ namespace Example
             try
             {
                 // Modify the log level of a single logger.
-                apiInstance.WriteLogger(WriteLoggerRequest writeLoggerRequest, string name, TimeSpan? wrapTTL = null);
+
+                apiInstance.WriteLogger(string name, WriteLoggerRequest writeLoggerRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10809,6 +11113,7 @@ No authorization required
 
 <a name="writeloggers"></a>
 # **WriteLoggers**
+
 > void WriteLoggers (WriteLoggersRequest writeLoggersRequest, TimeSpan? wrapTTL = null)
 
 Modify the log level for all existing loggers.
@@ -10839,6 +11144,7 @@ namespace Example
             try
             {
                 // Modify the log level for all existing loggers.
+
                 apiInstance.WriteLoggers(WriteLoggersRequest writeLoggersRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -10880,7 +11186,8 @@ No authorization required
 
 <a name="writemount"></a>
 # **WriteMount**
-> void WriteMount (WriteMountRequest writeMountRequest, string path, TimeSpan? wrapTTL = null)
+
+> void WriteMount (string path, WriteMountRequest writeMountRequest, TimeSpan? wrapTTL = null)
 
 Enable a new secrets engine at the given path.
 
@@ -10911,7 +11218,8 @@ namespace Example
             try
             {
                 // Enable a new secrets engine at the given path.
-                apiInstance.WriteMount(WriteMountRequest writeMountRequest, string path, TimeSpan? wrapTTL = null);
+
+                apiInstance.WriteMount(string path, WriteMountRequest writeMountRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10953,7 +11261,8 @@ No authorization required
 
 <a name="writemountsconfig"></a>
 # **WriteMountsConfig**
-> void WriteMountsConfig (WriteMountsConfigRequest writeMountsConfigRequest, string path, TimeSpan? wrapTTL = null)
+
+> void WriteMountsConfig (string path, WriteMountsConfigRequest writeMountsConfigRequest, TimeSpan? wrapTTL = null)
 
 Tune backend configuration parameters for this mount.
 
@@ -10984,7 +11293,8 @@ namespace Example
             try
             {
                 // Tune backend configuration parameters for this mount.
-                apiInstance.WriteMountsConfig(WriteMountsConfigRequest writeMountsConfigRequest, string path, TimeSpan? wrapTTL = null);
+
+                apiInstance.WriteMountsConfig(string path, WriteMountsConfigRequest writeMountsConfigRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11026,7 +11336,8 @@ No authorization required
 
 <a name="writepluginscatalogbytypebyname"></a>
 # **WritePluginsCatalogByTypeByName**
-> void WritePluginsCatalogByTypeByName (WritePluginsCatalogByTypeByNameRequest writePluginsCatalogByTypeByNameRequest, string name, string type, TimeSpan? wrapTTL = null)
+
+> void WritePluginsCatalogByTypeByName (string name, string type, WritePluginsCatalogByTypeByNameRequest writePluginsCatalogByTypeByNameRequest, TimeSpan? wrapTTL = null)
 
 Register a new plugin, or updates an existing one with the supplied name.
 
@@ -11058,7 +11369,8 @@ namespace Example
             try
             {
                 // Register a new plugin, or updates an existing one with the supplied name.
-                apiInstance.WritePluginsCatalogByTypeByName(WritePluginsCatalogByTypeByNameRequest writePluginsCatalogByTypeByNameRequest, string name, string type, TimeSpan? wrapTTL = null);
+
+                apiInstance.WritePluginsCatalogByTypeByName(string name, string type, WritePluginsCatalogByTypeByNameRequest writePluginsCatalogByTypeByNameRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11101,6 +11413,7 @@ No authorization required
 
 <a name="writepluginsreloadbackend"></a>
 # **WritePluginsReloadBackend**
+
 > void WritePluginsReloadBackend (WritePluginsReloadBackendRequest writePluginsReloadBackendRequest, TimeSpan? wrapTTL = null)
 
 Reload mounted plugin backends.
@@ -11133,6 +11446,7 @@ namespace Example
             try
             {
                 // Reload mounted plugin backends.
+
                 apiInstance.WritePluginsReloadBackend(WritePluginsReloadBackendRequest writePluginsReloadBackendRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -11174,7 +11488,8 @@ No authorization required
 
 <a name="writepoliciesacl"></a>
 # **WritePoliciesACL**
-> void WritePoliciesACL (WritePoliciesACLRequest writePoliciesACLRequest, string name, TimeSpan? wrapTTL = null)
+
+> void WritePoliciesACL (string name, WritePoliciesACLRequest writePoliciesACLRequest, TimeSpan? wrapTTL = null)
 
 Add a new or update an existing ACL policy.
 
@@ -11205,7 +11520,8 @@ namespace Example
             try
             {
                 // Add a new or update an existing ACL policy.
-                apiInstance.WritePoliciesACL(WritePoliciesACLRequest writePoliciesACLRequest, string name, TimeSpan? wrapTTL = null);
+
+                apiInstance.WritePoliciesACL(string name, WritePoliciesACLRequest writePoliciesACLRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11247,7 +11563,8 @@ No authorization required
 
 <a name="writepoliciespassword"></a>
 # **WritePoliciesPassword**
-> void WritePoliciesPassword (WritePoliciesPasswordRequest writePoliciesPasswordRequest, string name, TimeSpan? wrapTTL = null)
+
+> void WritePoliciesPassword (string name, WritePoliciesPasswordRequest writePoliciesPasswordRequest, TimeSpan? wrapTTL = null)
 
 Add a new or update an existing password policy.
 
@@ -11278,7 +11595,8 @@ namespace Example
             try
             {
                 // Add a new or update an existing password policy.
-                apiInstance.WritePoliciesPassword(WritePoliciesPasswordRequest writePoliciesPasswordRequest, string name, TimeSpan? wrapTTL = null);
+
+                apiInstance.WritePoliciesPassword(string name, WritePoliciesPasswordRequest writePoliciesPasswordRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11320,7 +11638,8 @@ No authorization required
 
 <a name="writepolicy"></a>
 # **WritePolicy**
-> void WritePolicy (WritePolicyRequest writePolicyRequest, string name, TimeSpan? wrapTTL = null)
+
+> void WritePolicy (string name, WritePolicyRequest writePolicyRequest, TimeSpan? wrapTTL = null)
 
 Add a new or update an existing policy.
 
@@ -11351,7 +11670,8 @@ namespace Example
             try
             {
                 // Add a new or update an existing policy.
-                apiInstance.WritePolicy(WritePolicyRequest writePolicyRequest, string name, TimeSpan? wrapTTL = null);
+
+                apiInstance.WritePolicy(string name, WritePolicyRequest writePolicyRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11393,6 +11713,7 @@ No authorization required
 
 <a name="writequotasconfig"></a>
 # **WriteQuotasConfig**
+
 > void WriteQuotasConfig (WriteQuotasConfigRequest writeQuotasConfigRequest, TimeSpan? wrapTTL = null)
 
 
@@ -11422,6 +11743,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.WriteQuotasConfig(WriteQuotasConfigRequest writeQuotasConfigRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -11463,7 +11785,8 @@ No authorization required
 
 <a name="writequotasratelimit"></a>
 # **WriteQuotasRateLimit**
-> void WriteQuotasRateLimit (WriteQuotasRateLimitRequest writeQuotasRateLimitRequest, string name, TimeSpan? wrapTTL = null)
+
+> void WriteQuotasRateLimit (string name, WriteQuotasRateLimitRequest writeQuotasRateLimitRequest, TimeSpan? wrapTTL = null)
 
 
 
@@ -11493,7 +11816,8 @@ namespace Example
 
             try
             {
-                apiInstance.WriteQuotasRateLimit(WriteQuotasRateLimitRequest writeQuotasRateLimitRequest, string name, TimeSpan? wrapTTL = null);
+
+                apiInstance.WriteQuotasRateLimit(string name, WriteQuotasRateLimitRequest writeQuotasRateLimitRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11535,6 +11859,7 @@ No authorization required
 
 <a name="writeraw"></a>
 # **WriteRaw**
+
 > void WriteRaw (WriteRawRequest writeRawRequest, TimeSpan? wrapTTL = null)
 
 Update the value of the key at the given path.
@@ -11565,6 +11890,7 @@ namespace Example
             try
             {
                 // Update the value of the key at the given path.
+
                 apiInstance.WriteRaw(WriteRawRequest writeRawRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -11606,7 +11932,8 @@ No authorization required
 
 <a name="writerawpath"></a>
 # **WriteRawPath**
-> void WriteRawPath (WriteRawPathRequest writeRawPathRequest, string path, TimeSpan? wrapTTL = null)
+
+> void WriteRawPath (string path, WriteRawPathRequest writeRawPathRequest, TimeSpan? wrapTTL = null)
 
 Update the value of the key at the given path.
 
@@ -11637,7 +11964,8 @@ namespace Example
             try
             {
                 // Update the value of the key at the given path.
-                apiInstance.WriteRawPath(WriteRawPathRequest writeRawPathRequest, string path, TimeSpan? wrapTTL = null);
+
+                apiInstance.WriteRawPath(string path, WriteRawPathRequest writeRawPathRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11679,6 +12007,7 @@ No authorization required
 
 <a name="writerekeyinit"></a>
 # **WriteRekeyInit**
+
 > void WriteRekeyInit (WriteRekeyInitRequest writeRekeyInitRequest, TimeSpan? wrapTTL = null)
 
 Initializes a new rekey attempt.
@@ -11711,6 +12040,7 @@ namespace Example
             try
             {
                 // Initializes a new rekey attempt.
+
                 apiInstance.WriteRekeyInit(WriteRekeyInitRequest writeRekeyInitRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -11752,6 +12082,7 @@ No authorization required
 
 <a name="writerekeyupdate"></a>
 # **WriteRekeyUpdate**
+
 > void WriteRekeyUpdate (WriteRekeyUpdateRequest writeRekeyUpdateRequest, TimeSpan? wrapTTL = null)
 
 Enter a single unseal key share to progress the rekey of the Vault.
@@ -11782,6 +12113,7 @@ namespace Example
             try
             {
                 // Enter a single unseal key share to progress the rekey of the Vault.
+
                 apiInstance.WriteRekeyUpdate(WriteRekeyUpdateRequest writeRekeyUpdateRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -11823,6 +12155,7 @@ No authorization required
 
 <a name="writerekeyverify"></a>
 # **WriteRekeyVerify**
+
 > void WriteRekeyVerify (WriteRekeyVerifyRequest writeRekeyVerifyRequest, TimeSpan? wrapTTL = null)
 
 Enter a single new key share to progress the rekey verification operation.
@@ -11853,6 +12186,7 @@ namespace Example
             try
             {
                 // Enter a single new key share to progress the rekey verification operation.
+
                 apiInstance.WriteRekeyVerify(WriteRekeyVerifyRequest writeRekeyVerifyRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -11894,6 +12228,7 @@ No authorization required
 
 <a name="writerotateconfig"></a>
 # **WriteRotateConfig**
+
 > void WriteRotateConfig (WriteRotateConfigRequest writeRotateConfigRequest, TimeSpan? wrapTTL = null)
 
 
@@ -11923,6 +12258,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.WriteRotateConfig(WriteRotateConfigRequest writeRotateConfigRequest, TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
