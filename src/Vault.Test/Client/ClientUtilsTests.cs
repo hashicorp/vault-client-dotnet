@@ -38,13 +38,12 @@ namespace Vault.Test
         }
 
         [Theory]
-        [InlineData("path/to/sanitize")]
-        [InlineData("/path/to/sanitize")]
-        public void SanitizePath_ShouldSanitizePath(string pathToSanitize)
+        [InlineData("path/to/sanitize", "/path/to/sanitize")]
+        [InlineData("/path/to/sanitize", "/path/to/sanitize")]
+        public void SanitizePath_ShouldSanitizePath(string pathToSanitize, string expected)
         {
             var actual = ClientUtils.SanitizePath(pathToSanitize);
 
-            var expected = "/path/to/sanitize";
             Assert.Equal(expected, actual);
         }
     }
