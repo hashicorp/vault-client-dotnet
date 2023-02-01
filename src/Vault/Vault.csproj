@@ -12,7 +12,7 @@
     <Description>A library generated from a OpenAPI doc</Description>
     <Copyright>No Copyright</Copyright>
     <RootNamespace>Vault</RootNamespace>
-    <Version>0.0.1</Version>
+    <Version>0.1.0-beta</Version>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Vault.xml</DocumentationFile>
     <RepositoryUrl>https://github.com/GIT_USER_ID/GIT_REPO_ID.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
