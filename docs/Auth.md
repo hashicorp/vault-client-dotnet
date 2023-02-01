@@ -270,6 +270,7 @@ Method | HTTP request | Description
 
 <a name="awsconfigdeletecertificate"></a>
 # **AWSConfigDeleteCertificate**
+
 > void AWSConfigDeleteCertificate (string certName, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -300,6 +301,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSConfigDeleteCertificate(string certName, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -342,6 +344,7 @@ No authorization required
 
 <a name="awsconfigdeleteclient"></a>
 # **AWSConfigDeleteClient**
+
 > void AWSConfigDeleteClient (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -371,6 +374,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSConfigDeleteClient(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -412,6 +416,7 @@ No authorization required
 
 <a name="awsconfigdeleteidentityaccesslist"></a>
 # **AWSConfigDeleteIdentityAccessList**
+
 > void AWSConfigDeleteIdentityAccessList (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -441,6 +446,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSConfigDeleteIdentityAccessList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -482,6 +488,7 @@ No authorization required
 
 <a name="awsconfigdeleteidentitywhitelist"></a>
 # **AWSConfigDeleteIdentityWhiteList**
+
 > void AWSConfigDeleteIdentityWhiteList (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -511,6 +518,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSConfigDeleteIdentityWhiteList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -552,6 +560,7 @@ No authorization required
 
 <a name="awsconfigdeleteroletagblacklist"></a>
 # **AWSConfigDeleteRoleTagBlackList**
+
 > void AWSConfigDeleteRoleTagBlackList (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -581,6 +590,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSConfigDeleteRoleTagBlackList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -622,6 +632,7 @@ No authorization required
 
 <a name="awsconfigdeleteroletagdenylist"></a>
 # **AWSConfigDeleteRoleTagDenyList**
+
 > void AWSConfigDeleteRoleTagDenyList (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -651,6 +662,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSConfigDeleteRoleTagDenyList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -692,6 +704,7 @@ No authorization required
 
 <a name="awsconfigdeletesecuritytokenserviceaccount"></a>
 # **AWSConfigDeleteSecurityTokenServiceAccount**
+
 > void AWSConfigDeleteSecurityTokenServiceAccount (string accountId, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -722,6 +735,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSConfigDeleteSecurityTokenServiceAccount(string accountId, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -764,6 +778,7 @@ No authorization required
 
 <a name="awsconfiglistcertificates"></a>
 # **AWSConfigListCertificates**
+
 > void AWSConfigListCertificates (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -794,6 +809,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSConfigListCertificates(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -836,6 +852,7 @@ No authorization required
 
 <a name="awsconfiglistsecuritytokenservice"></a>
 # **AWSConfigListSecurityTokenService**
+
 > void AWSConfigListSecurityTokenService (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -866,6 +883,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSConfigListSecurityTokenService(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -908,6 +926,7 @@ No authorization required
 
 <a name="awsconfigreadcertificate"></a>
 # **AWSConfigReadCertificate**
+
 > void AWSConfigReadCertificate (string certName, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -938,6 +957,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSConfigReadCertificate(string certName, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -980,6 +1000,7 @@ No authorization required
 
 <a name="awsconfigreadclient"></a>
 # **AWSConfigReadClient**
+
 > void AWSConfigReadClient (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -1009,6 +1030,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSConfigReadClient(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1050,6 +1072,7 @@ No authorization required
 
 <a name="awsconfigreadidentity"></a>
 # **AWSConfigReadIdentity**
+
 > void AWSConfigReadIdentity (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -1079,6 +1102,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSConfigReadIdentity(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1120,6 +1144,7 @@ No authorization required
 
 <a name="awsconfigreadidentityaccesslist"></a>
 # **AWSConfigReadIdentityAccessList**
+
 > void AWSConfigReadIdentityAccessList (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -1149,6 +1174,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSConfigReadIdentityAccessList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1190,6 +1216,7 @@ No authorization required
 
 <a name="awsconfigreadidentitywhitelist"></a>
 # **AWSConfigReadIdentityWhiteList**
+
 > void AWSConfigReadIdentityWhiteList (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -1219,6 +1246,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSConfigReadIdentityWhiteList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1260,6 +1288,7 @@ No authorization required
 
 <a name="awsconfigreadroletagblacklist"></a>
 # **AWSConfigReadRoleTagBlackList**
+
 > void AWSConfigReadRoleTagBlackList (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -1289,6 +1318,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSConfigReadRoleTagBlackList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1330,6 +1360,7 @@ No authorization required
 
 <a name="awsconfigreadroletagdenylist"></a>
 # **AWSConfigReadRoleTagDenyList**
+
 > void AWSConfigReadRoleTagDenyList (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -1359,6 +1390,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSConfigReadRoleTagDenyList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1400,6 +1432,7 @@ No authorization required
 
 <a name="awsconfigreadsecuritytokenserviceaccount"></a>
 # **AWSConfigReadSecurityTokenServiceAccount**
+
 > void AWSConfigReadSecurityTokenServiceAccount (string accountId, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -1430,6 +1463,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSConfigReadSecurityTokenServiceAccount(string accountId, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1472,6 +1506,7 @@ No authorization required
 
 <a name="awsconfigrotateroot"></a>
 # **AWSConfigRotateRoot**
+
 > void AWSConfigRotateRoot (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -1501,6 +1536,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSConfigRotateRoot(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1542,7 +1578,8 @@ No authorization required
 
 <a name="awsconfigwritecertificate"></a>
 # **AWSConfigWriteCertificate**
-> void AWSConfigWriteCertificate (AWSConfigWriteCertificateRequest aWSConfigWriteCertificateRequest, string certName, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+
+> void AWSConfigWriteCertificate (string certName, AWSConfigWriteCertificateRequest aWSConfigWriteCertificateRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -1573,7 +1610,8 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigWriteCertificate(AWSConfigWriteCertificateRequest aWSConfigWriteCertificateRequest, string certName, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+
+                apiInstance.AWSConfigWriteCertificate(string certName, AWSConfigWriteCertificateRequest aWSConfigWriteCertificateRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -1616,6 +1654,7 @@ No authorization required
 
 <a name="awsconfigwriteclient"></a>
 # **AWSConfigWriteClient**
+
 > void AWSConfigWriteClient (AWSConfigWriteClientRequest aWSConfigWriteClientRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -1646,6 +1685,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSConfigWriteClient(AWSConfigWriteClientRequest aWSConfigWriteClientRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1688,6 +1728,7 @@ No authorization required
 
 <a name="awsconfigwriteidentity"></a>
 # **AWSConfigWriteIdentity**
+
 > void AWSConfigWriteIdentity (AWSConfigWriteIdentityRequest aWSConfigWriteIdentityRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -1718,6 +1759,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSConfigWriteIdentity(AWSConfigWriteIdentityRequest aWSConfigWriteIdentityRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1760,6 +1802,7 @@ No authorization required
 
 <a name="awsconfigwriteidentityaccesslist"></a>
 # **AWSConfigWriteIdentityAccessList**
+
 > void AWSConfigWriteIdentityAccessList (AWSConfigWriteIdentityAccessListRequest aWSConfigWriteIdentityAccessListRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -1790,6 +1833,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSConfigWriteIdentityAccessList(AWSConfigWriteIdentityAccessListRequest aWSConfigWriteIdentityAccessListRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1832,6 +1876,7 @@ No authorization required
 
 <a name="awsconfigwriteidentitywhitelist"></a>
 # **AWSConfigWriteIdentityWhiteList**
+
 > void AWSConfigWriteIdentityWhiteList (AWSConfigWriteIdentityWhiteListRequest aWSConfigWriteIdentityWhiteListRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -1862,6 +1907,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSConfigWriteIdentityWhiteList(AWSConfigWriteIdentityWhiteListRequest aWSConfigWriteIdentityWhiteListRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1904,6 +1950,7 @@ No authorization required
 
 <a name="awsconfigwriteroletagblacklist"></a>
 # **AWSConfigWriteRoleTagBlackList**
+
 > void AWSConfigWriteRoleTagBlackList (AWSConfigWriteRoleTagBlackListRequest aWSConfigWriteRoleTagBlackListRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -1934,6 +1981,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSConfigWriteRoleTagBlackList(AWSConfigWriteRoleTagBlackListRequest aWSConfigWriteRoleTagBlackListRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -1976,6 +2024,7 @@ No authorization required
 
 <a name="awsconfigwriteroletagdenylist"></a>
 # **AWSConfigWriteRoleTagDenyList**
+
 > void AWSConfigWriteRoleTagDenyList (AWSConfigWriteRoleTagDenyListRequest aWSConfigWriteRoleTagDenyListRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -2006,6 +2055,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSConfigWriteRoleTagDenyList(AWSConfigWriteRoleTagDenyListRequest aWSConfigWriteRoleTagDenyListRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2048,7 +2098,8 @@ No authorization required
 
 <a name="awsconfigwritesecuritytokenserviceaccount"></a>
 # **AWSConfigWriteSecurityTokenServiceAccount**
-> void AWSConfigWriteSecurityTokenServiceAccount (AWSConfigWriteSecurityTokenServiceAccountRequest aWSConfigWriteSecurityTokenServiceAccountRequest, string accountId, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+
+> void AWSConfigWriteSecurityTokenServiceAccount (string accountId, AWSConfigWriteSecurityTokenServiceAccountRequest aWSConfigWriteSecurityTokenServiceAccountRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -2079,7 +2130,8 @@ namespace Example
 
             try
             {
-                apiInstance.AWSConfigWriteSecurityTokenServiceAccount(AWSConfigWriteSecurityTokenServiceAccountRequest aWSConfigWriteSecurityTokenServiceAccountRequest, string accountId, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+
+                apiInstance.AWSConfigWriteSecurityTokenServiceAccount(string accountId, AWSConfigWriteSecurityTokenServiceAccountRequest aWSConfigWriteSecurityTokenServiceAccountRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -2122,6 +2174,7 @@ No authorization required
 
 <a name="awsdeleteauthrole"></a>
 # **AWSDeleteAuthRole**
+
 > void AWSDeleteAuthRole (string role, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -2152,6 +2205,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSDeleteAuthRole(string role, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2194,6 +2248,7 @@ No authorization required
 
 <a name="awsdeleteidentityaccesslistfor"></a>
 # **AWSDeleteIdentityAccessListFor**
+
 > void AWSDeleteIdentityAccessListFor (string instanceId, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -2224,6 +2279,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSDeleteIdentityAccessListFor(string instanceId, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2266,6 +2322,7 @@ No authorization required
 
 <a name="awsdeleteidentitywhitelistfor"></a>
 # **AWSDeleteIdentityWhiteListFor**
+
 > void AWSDeleteIdentityWhiteListFor (string instanceId, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -2296,6 +2353,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSDeleteIdentityWhiteListFor(string instanceId, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2338,6 +2396,7 @@ No authorization required
 
 <a name="awsdeleteroletagblacklistfor"></a>
 # **AWSDeleteRoleTagBlackListFor**
+
 > void AWSDeleteRoleTagBlackListFor (string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -2368,6 +2427,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSDeleteRoleTagBlackListFor(string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2410,6 +2470,7 @@ No authorization required
 
 <a name="awsdeleteroletagdenylistfor"></a>
 # **AWSDeleteRoleTagDenyListFor**
+
 > void AWSDeleteRoleTagDenyListFor (string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -2440,6 +2501,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSDeleteRoleTagDenyListFor(string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2482,6 +2544,7 @@ No authorization required
 
 <a name="awslistauthroles"></a>
 # **AWSListAuthRoles**
+
 > void AWSListAuthRoles (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -2512,6 +2575,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSListAuthRoles(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2554,6 +2618,7 @@ No authorization required
 
 <a name="awslistauthroles2"></a>
 # **AWSListAuthRoles2**
+
 > void AWSListAuthRoles2 (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -2584,6 +2649,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSListAuthRoles2(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2626,6 +2692,7 @@ No authorization required
 
 <a name="awslistidentityaccesslist"></a>
 # **AWSListIdentityAccessList**
+
 > void AWSListIdentityAccessList (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -2656,6 +2723,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSListIdentityAccessList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2698,6 +2766,7 @@ No authorization required
 
 <a name="awslistidentitywhitelist"></a>
 # **AWSListIdentityWhiteList**
+
 > void AWSListIdentityWhiteList (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -2728,6 +2797,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSListIdentityWhiteList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2770,6 +2840,7 @@ No authorization required
 
 <a name="awslistroletagblacklist"></a>
 # **AWSListRoleTagBlackList**
+
 > void AWSListRoleTagBlackList (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -2800,6 +2871,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSListRoleTagBlackList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2842,6 +2914,7 @@ No authorization required
 
 <a name="awslistroletagdenylist"></a>
 # **AWSListRoleTagDenyList**
+
 > void AWSListRoleTagDenyList (string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -2872,6 +2945,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSListRoleTagDenyList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2914,6 +2988,7 @@ No authorization required
 
 <a name="awslogin"></a>
 # **AWSLogin**
+
 > void AWSLogin (AWSLoginRequest aWSLoginRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -2944,6 +3019,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSLogin(AWSLoginRequest aWSLoginRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -2986,6 +3062,7 @@ No authorization required
 
 <a name="awsreadauthrole"></a>
 # **AWSReadAuthRole**
+
 > void AWSReadAuthRole (string role, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -3016,6 +3093,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSReadAuthRole(string role, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3058,6 +3136,7 @@ No authorization required
 
 <a name="awsreadidentityaccesslistfor"></a>
 # **AWSReadIdentityAccessListFor**
+
 > void AWSReadIdentityAccessListFor (string instanceId, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -3088,6 +3167,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSReadIdentityAccessListFor(string instanceId, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3130,6 +3210,7 @@ No authorization required
 
 <a name="awsreadidentitywhitelistfor"></a>
 # **AWSReadIdentityWhiteListFor**
+
 > void AWSReadIdentityWhiteListFor (string instanceId, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -3160,6 +3241,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSReadIdentityWhiteListFor(string instanceId, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3202,6 +3284,7 @@ No authorization required
 
 <a name="awsreadroletagblacklistfor"></a>
 # **AWSReadRoleTagBlackListFor**
+
 > void AWSReadRoleTagBlackListFor (string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -3232,6 +3315,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSReadRoleTagBlackListFor(string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3274,6 +3358,7 @@ No authorization required
 
 <a name="awsreadroletagdenylistfor"></a>
 # **AWSReadRoleTagDenyListFor**
+
 > void AWSReadRoleTagDenyListFor (string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -3304,6 +3389,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSReadRoleTagDenyListFor(string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3346,7 +3432,8 @@ No authorization required
 
 <a name="awswriteauthrole"></a>
 # **AWSWriteAuthRole**
-> void AWSWriteAuthRole (AWSWriteAuthRoleRequest aWSWriteAuthRoleRequest, string role, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+
+> void AWSWriteAuthRole (string role, AWSWriteAuthRoleRequest aWSWriteAuthRoleRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -3377,7 +3464,8 @@ namespace Example
 
             try
             {
-                apiInstance.AWSWriteAuthRole(AWSWriteAuthRoleRequest aWSWriteAuthRoleRequest, string role, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+
+                apiInstance.AWSWriteAuthRole(string role, AWSWriteAuthRoleRequest aWSWriteAuthRoleRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3420,7 +3508,8 @@ No authorization required
 
 <a name="awswriteauthroletag"></a>
 # **AWSWriteAuthRoleTag**
-> void AWSWriteAuthRoleTag (AWSWriteAuthRoleTagRequest aWSWriteAuthRoleTagRequest, string role, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+
+> void AWSWriteAuthRoleTag (string role, AWSWriteAuthRoleTagRequest aWSWriteAuthRoleTagRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
 
@@ -3451,7 +3540,8 @@ namespace Example
 
             try
             {
-                apiInstance.AWSWriteAuthRoleTag(AWSWriteAuthRoleTagRequest aWSWriteAuthRoleTagRequest, string role, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+
+                apiInstance.AWSWriteAuthRoleTag(string role, AWSWriteAuthRoleTagRequest aWSWriteAuthRoleTagRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -3494,6 +3584,7 @@ No authorization required
 
 <a name="awswriteidentityaccesslisttidysettings"></a>
 # **AWSWriteIdentityAccessListTidySettings**
+
 > void AWSWriteIdentityAccessListTidySettings (AWSWriteIdentityAccessListTidySettingsRequest aWSWriteIdentityAccessListTidySettingsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -3524,6 +3615,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSWriteIdentityAccessListTidySettings(AWSWriteIdentityAccessListTidySettingsRequest aWSWriteIdentityAccessListTidySettingsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3566,6 +3658,7 @@ No authorization required
 
 <a name="awswriteidentitywhitelisttidysettings"></a>
 # **AWSWriteIdentityWhiteListTidySettings**
+
 > void AWSWriteIdentityWhiteListTidySettings (AWSWriteIdentityWhiteListTidySettingsRequest aWSWriteIdentityWhiteListTidySettingsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -3596,6 +3689,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSWriteIdentityWhiteListTidySettings(AWSWriteIdentityWhiteListTidySettingsRequest aWSWriteIdentityWhiteListTidySettingsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3638,6 +3732,7 @@ No authorization required
 
 <a name="awswriteroletagblacklistfor"></a>
 # **AWSWriteRoleTagBlackListFor**
+
 > void AWSWriteRoleTagBlackListFor (string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -3668,6 +3763,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSWriteRoleTagBlackListFor(string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3710,6 +3806,7 @@ No authorization required
 
 <a name="awswriteroletagblacklisttidysettings"></a>
 # **AWSWriteRoleTagBlackListTidySettings**
+
 > void AWSWriteRoleTagBlackListTidySettings (AWSWriteRoleTagBlackListTidySettingsRequest aWSWriteRoleTagBlackListTidySettingsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -3740,6 +3837,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSWriteRoleTagBlackListTidySettings(AWSWriteRoleTagBlackListTidySettingsRequest aWSWriteRoleTagBlackListTidySettingsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3782,6 +3880,7 @@ No authorization required
 
 <a name="awswriteroletagdenylistfor"></a>
 # **AWSWriteRoleTagDenyListFor**
+
 > void AWSWriteRoleTagDenyListFor (string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -3812,6 +3911,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSWriteRoleTagDenyListFor(string roleTag, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3854,6 +3954,7 @@ No authorization required
 
 <a name="awswriteroletagdenylisttidysettings"></a>
 # **AWSWriteRoleTagDenyListTidySettings**
+
 > void AWSWriteRoleTagDenyListTidySettings (AWSWriteRoleTagDenyListTidySettingsRequest aWSWriteRoleTagDenyListTidySettingsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
 
 
@@ -3884,6 +3985,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AWSWriteRoleTagDenyListTidySettings(AWSWriteRoleTagDenyListTidySettingsRequest aWSWriteRoleTagDenyListTidySettingsRequest, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3926,6 +4028,7 @@ No authorization required
 
 <a name="aliclouddeleteauthrole"></a>
 # **AliCloudDeleteAuthRole**
+
 > void AliCloudDeleteAuthRole (string role, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
 
 Create a role and associate policies to it.
@@ -3957,6 +4060,7 @@ namespace Example
             try
             {
                 // Create a role and associate policies to it.
+
                 apiInstance.AliCloudDeleteAuthRole(string role, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -3999,6 +4103,7 @@ No authorization required
 
 <a name="alicloudlistauthroles"></a>
 # **AliCloudListAuthRoles**
+
 > void AliCloudListAuthRoles (string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
 
 Lists all the roles that are registered with Vault.
@@ -4030,6 +4135,7 @@ namespace Example
             try
             {
                 // Lists all the roles that are registered with Vault.
+
                 apiInstance.AliCloudListAuthRoles(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4072,6 +4178,7 @@ No authorization required
 
 <a name="alicloudlistauthroles2"></a>
 # **AliCloudListAuthRoles2**
+
 > void AliCloudListAuthRoles2 (string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
 
 Lists all the roles that are registered with Vault.
@@ -4103,6 +4210,7 @@ namespace Example
             try
             {
                 // Lists all the roles that are registered with Vault.
+
                 apiInstance.AliCloudListAuthRoles2(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4145,6 +4253,7 @@ No authorization required
 
 <a name="alicloudlogin"></a>
 # **AliCloudLogin**
+
 > void AliCloudLogin (AliCloudLoginRequest aliCloudLoginRequest, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
 
 Authenticates an RAM entity with Vault.
@@ -4176,6 +4285,7 @@ namespace Example
             try
             {
                 // Authenticates an RAM entity with Vault.
+
                 apiInstance.AliCloudLogin(AliCloudLoginRequest aliCloudLoginRequest, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4218,6 +4328,7 @@ No authorization required
 
 <a name="alicloudreadauthrole"></a>
 # **AliCloudReadAuthRole**
+
 > void AliCloudReadAuthRole (string role, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
 
 Create a role and associate policies to it.
@@ -4249,6 +4360,7 @@ namespace Example
             try
             {
                 // Create a role and associate policies to it.
+
                 apiInstance.AliCloudReadAuthRole(string role, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4291,7 +4403,8 @@ No authorization required
 
 <a name="alicloudwriteauthrole"></a>
 # **AliCloudWriteAuthRole**
-> void AliCloudWriteAuthRole (AliCloudWriteAuthRoleRequest aliCloudWriteAuthRoleRequest, string role, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
+
+> void AliCloudWriteAuthRole (string role, AliCloudWriteAuthRoleRequest aliCloudWriteAuthRoleRequest, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
 
 Create a role and associate policies to it.
 
@@ -4323,7 +4436,8 @@ namespace Example
             try
             {
                 // Create a role and associate policies to it.
-                apiInstance.AliCloudWriteAuthRole(AliCloudWriteAuthRoleRequest aliCloudWriteAuthRoleRequest, string role, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
+
+                apiInstance.AliCloudWriteAuthRole(string role, AliCloudWriteAuthRoleRequest aliCloudWriteAuthRoleRequest, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -4366,6 +4480,7 @@ No authorization required
 
 <a name="approledeletebindsecretid"></a>
 # **AppRoleDeleteBindSecretID**
+
 > void AppRoleDeleteBindSecretID (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -4396,6 +4511,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AppRoleDeleteBindSecretID(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4438,6 +4554,7 @@ No authorization required
 
 <a name="approledeleteboundcidrlist"></a>
 # **AppRoleDeleteBoundCIDRList**
+
 > void AppRoleDeleteBoundCIDRList (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -4468,6 +4585,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AppRoleDeleteBoundCIDRList(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4510,6 +4628,7 @@ No authorization required
 
 <a name="approledeleteperiod"></a>
 # **AppRoleDeletePeriod**
+
 > void AppRoleDeletePeriod (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -4540,6 +4659,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AppRoleDeletePeriod(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4582,6 +4702,7 @@ No authorization required
 
 <a name="approledeletepolicies"></a>
 # **AppRoleDeletePolicies**
+
 > void AppRoleDeletePolicies (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -4612,6 +4733,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AppRoleDeletePolicies(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4654,6 +4776,7 @@ No authorization required
 
 <a name="approledeleterole"></a>
 # **AppRoleDeleteRole**
+
 > void AppRoleDeleteRole (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -4684,6 +4807,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AppRoleDeleteRole(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4726,6 +4850,7 @@ No authorization required
 
 <a name="approledeletesecretidaccessordestroy"></a>
 # **AppRoleDeleteSecretIDAccessorDestroy**
+
 > void AppRoleDeleteSecretIDAccessorDestroy (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -4756,6 +4881,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AppRoleDeleteSecretIDAccessorDestroy(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4798,6 +4924,7 @@ No authorization required
 
 <a name="approledeletesecretidboundcidrs"></a>
 # **AppRoleDeleteSecretIDBoundCIDRs**
+
 > void AppRoleDeleteSecretIDBoundCIDRs (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -4828,6 +4955,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AppRoleDeleteSecretIDBoundCIDRs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4870,6 +4998,7 @@ No authorization required
 
 <a name="approledeletesecretiddestroy"></a>
 # **AppRoleDeleteSecretIDDestroy**
+
 > void AppRoleDeleteSecretIDDestroy (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -4900,6 +5029,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AppRoleDeleteSecretIDDestroy(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -4942,6 +5072,7 @@ No authorization required
 
 <a name="approledeletesecretidnumuses"></a>
 # **AppRoleDeleteSecretIDNumUses**
+
 > void AppRoleDeleteSecretIDNumUses (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -4972,6 +5103,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AppRoleDeleteSecretIDNumUses(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5014,6 +5146,7 @@ No authorization required
 
 <a name="approledeletesecretidttl"></a>
 # **AppRoleDeleteSecretIDTTL**
+
 > void AppRoleDeleteSecretIDTTL (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -5044,6 +5177,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AppRoleDeleteSecretIDTTL(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5086,6 +5220,7 @@ No authorization required
 
 <a name="approledeletetokenboundcidrs"></a>
 # **AppRoleDeleteTokenBoundCIDRs**
+
 > void AppRoleDeleteTokenBoundCIDRs (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -5116,6 +5251,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AppRoleDeleteTokenBoundCIDRs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5158,6 +5294,7 @@ No authorization required
 
 <a name="approledeletetokenmaxttl"></a>
 # **AppRoleDeleteTokenMaxTTL**
+
 > void AppRoleDeleteTokenMaxTTL (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -5188,6 +5325,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AppRoleDeleteTokenMaxTTL(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5230,6 +5368,7 @@ No authorization required
 
 <a name="approledeletetokennumuses"></a>
 # **AppRoleDeleteTokenNumUses**
+
 > void AppRoleDeleteTokenNumUses (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -5260,6 +5399,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AppRoleDeleteTokenNumUses(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5302,6 +5442,7 @@ No authorization required
 
 <a name="approledeletetokenttl"></a>
 # **AppRoleDeleteTokenTTL**
+
 > void AppRoleDeleteTokenTTL (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -5332,6 +5473,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AppRoleDeleteTokenTTL(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5374,6 +5516,7 @@ No authorization required
 
 <a name="approlelistroles"></a>
 # **AppRoleListRoles**
+
 > AppRoleListRolesResponse AppRoleListRoles (string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -5404,7 +5547,9 @@ namespace Example
 
             try
             {
+
                 AppRoleListRolesResponse result = apiInstance.AppRoleListRoles(string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -5447,6 +5592,7 @@ No authorization required
 
 <a name="approlelistsecretid"></a>
 # **AppRoleListSecretID**
+
 > AppRoleListSecretIDResponse AppRoleListSecretID (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -5478,7 +5624,9 @@ namespace Example
 
             try
             {
+
                 AppRoleListSecretIDResponse result = apiInstance.AppRoleListSecretID(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -5522,6 +5670,7 @@ No authorization required
 
 <a name="approlelogin"></a>
 # **AppRoleLogin**
+
 > void AppRoleLogin (AppRoleLoginRequest appRoleLoginRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -5552,6 +5701,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AppRoleLogin(AppRoleLoginRequest appRoleLoginRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -5594,6 +5744,7 @@ No authorization required
 
 <a name="approlereadbindsecretid"></a>
 # **AppRoleReadBindSecretID**
+
 > AppRoleReadBindSecretIDResponse AppRoleReadBindSecretID (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -5624,7 +5775,9 @@ namespace Example
 
             try
             {
+
                 AppRoleReadBindSecretIDResponse result = apiInstance.AppRoleReadBindSecretID(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -5667,6 +5820,7 @@ No authorization required
 
 <a name="approlereadboundcidrlist"></a>
 # **AppRoleReadBoundCIDRList**
+
 > AppRoleReadBoundCIDRListResponse AppRoleReadBoundCIDRList (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -5697,7 +5851,9 @@ namespace Example
 
             try
             {
+
                 AppRoleReadBoundCIDRListResponse result = apiInstance.AppRoleReadBoundCIDRList(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -5740,6 +5896,7 @@ No authorization required
 
 <a name="approlereadlocalsecretids"></a>
 # **AppRoleReadLocalSecretIDs**
+
 > AppRoleReadLocalSecretIDsResponse AppRoleReadLocalSecretIDs (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -5770,7 +5927,9 @@ namespace Example
 
             try
             {
+
                 AppRoleReadLocalSecretIDsResponse result = apiInstance.AppRoleReadLocalSecretIDs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -5813,6 +5972,7 @@ No authorization required
 
 <a name="approlereadperiod"></a>
 # **AppRoleReadPeriod**
+
 > AppRoleReadPeriodResponse AppRoleReadPeriod (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -5843,7 +6003,9 @@ namespace Example
 
             try
             {
+
                 AppRoleReadPeriodResponse result = apiInstance.AppRoleReadPeriod(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -5886,6 +6048,7 @@ No authorization required
 
 <a name="approlereadpolicies"></a>
 # **AppRoleReadPolicies**
+
 > AppRoleReadPoliciesResponse AppRoleReadPolicies (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -5916,7 +6079,9 @@ namespace Example
 
             try
             {
+
                 AppRoleReadPoliciesResponse result = apiInstance.AppRoleReadPolicies(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -5959,6 +6124,7 @@ No authorization required
 
 <a name="approlereadrole"></a>
 # **AppRoleReadRole**
+
 > AppRoleReadRoleResponse AppRoleReadRole (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -5989,7 +6155,9 @@ namespace Example
 
             try
             {
+
                 AppRoleReadRoleResponse result = apiInstance.AppRoleReadRole(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6032,6 +6200,7 @@ No authorization required
 
 <a name="approlereadroleid"></a>
 # **AppRoleReadRoleID**
+
 > AppRoleReadRoleIDResponse AppRoleReadRoleID (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -6062,7 +6231,9 @@ namespace Example
 
             try
             {
+
                 AppRoleReadRoleIDResponse result = apiInstance.AppRoleReadRoleID(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6105,6 +6276,7 @@ No authorization required
 
 <a name="approlereadsecretidboundcidrs"></a>
 # **AppRoleReadSecretIDBoundCIDRs**
+
 > AppRoleReadSecretIDBoundCIDRsResponse AppRoleReadSecretIDBoundCIDRs (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -6135,7 +6307,9 @@ namespace Example
 
             try
             {
+
                 AppRoleReadSecretIDBoundCIDRsResponse result = apiInstance.AppRoleReadSecretIDBoundCIDRs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6178,6 +6352,7 @@ No authorization required
 
 <a name="approlereadsecretidnumuses"></a>
 # **AppRoleReadSecretIDNumUses**
+
 > AppRoleReadSecretIDNumUsesResponse AppRoleReadSecretIDNumUses (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -6208,7 +6383,9 @@ namespace Example
 
             try
             {
+
                 AppRoleReadSecretIDNumUsesResponse result = apiInstance.AppRoleReadSecretIDNumUses(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6251,6 +6428,7 @@ No authorization required
 
 <a name="approlereadsecretidttl"></a>
 # **AppRoleReadSecretIDTTL**
+
 > AppRoleReadSecretIDTTLResponse AppRoleReadSecretIDTTL (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -6281,7 +6459,9 @@ namespace Example
 
             try
             {
+
                 AppRoleReadSecretIDTTLResponse result = apiInstance.AppRoleReadSecretIDTTL(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6324,6 +6504,7 @@ No authorization required
 
 <a name="approlereadtokenboundcidrs"></a>
 # **AppRoleReadTokenBoundCIDRs**
+
 > AppRoleReadTokenBoundCIDRsResponse AppRoleReadTokenBoundCIDRs (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -6354,7 +6535,9 @@ namespace Example
 
             try
             {
+
                 AppRoleReadTokenBoundCIDRsResponse result = apiInstance.AppRoleReadTokenBoundCIDRs(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6397,6 +6580,7 @@ No authorization required
 
 <a name="approlereadtokenmaxttl"></a>
 # **AppRoleReadTokenMaxTTL**
+
 > AppRoleReadTokenMaxTTLResponse AppRoleReadTokenMaxTTL (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -6427,7 +6611,9 @@ namespace Example
 
             try
             {
+
                 AppRoleReadTokenMaxTTLResponse result = apiInstance.AppRoleReadTokenMaxTTL(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6470,6 +6656,7 @@ No authorization required
 
 <a name="approlereadtokennumuses"></a>
 # **AppRoleReadTokenNumUses**
+
 > AppRoleReadTokenNumUsesResponse AppRoleReadTokenNumUses (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -6500,7 +6687,9 @@ namespace Example
 
             try
             {
+
                 AppRoleReadTokenNumUsesResponse result = apiInstance.AppRoleReadTokenNumUses(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6543,6 +6732,7 @@ No authorization required
 
 <a name="approlereadtokenttl"></a>
 # **AppRoleReadTokenTTL**
+
 > AppRoleReadTokenTTLResponse AppRoleReadTokenTTL (string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
@@ -6573,7 +6763,9 @@ namespace Example
 
             try
             {
+
                 AppRoleReadTokenTTLResponse result = apiInstance.AppRoleReadTokenTTL(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6616,6 +6808,7 @@ No authorization required
 
 <a name="approletidysecretid"></a>
 # **AppRoleTidySecretID**
+
 > void AppRoleTidySecretID (string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 Trigger the clean-up of expired SecretID entries.
@@ -6646,6 +6839,7 @@ namespace Example
             try
             {
                 // Trigger the clean-up of expired SecretID entries.
+
                 apiInstance.AppRoleTidySecretID(string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -6687,7 +6881,8 @@ No authorization required
 
 <a name="approlewritebindsecretid"></a>
 # **AppRoleWriteBindSecretID**
-> void AppRoleWriteBindSecretID (AppRoleWriteBindSecretIDRequest appRoleWriteBindSecretIDRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+
+> void AppRoleWriteBindSecretID (string roleName, AppRoleWriteBindSecretIDRequest appRoleWriteBindSecretIDRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -6718,7 +6913,8 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteBindSecretID(AppRoleWriteBindSecretIDRequest appRoleWriteBindSecretIDRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
+                apiInstance.AppRoleWriteBindSecretID(string roleName, AppRoleWriteBindSecretIDRequest appRoleWriteBindSecretIDRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6761,7 +6957,8 @@ No authorization required
 
 <a name="approlewriteboundcidrlist"></a>
 # **AppRoleWriteBoundCIDRList**
-> void AppRoleWriteBoundCIDRList (AppRoleWriteBoundCIDRListRequest appRoleWriteBoundCIDRListRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+
+> void AppRoleWriteBoundCIDRList (string roleName, AppRoleWriteBoundCIDRListRequest appRoleWriteBoundCIDRListRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -6792,7 +6989,8 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteBoundCIDRList(AppRoleWriteBoundCIDRListRequest appRoleWriteBoundCIDRListRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
+                apiInstance.AppRoleWriteBoundCIDRList(string roleName, AppRoleWriteBoundCIDRListRequest appRoleWriteBoundCIDRListRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6835,7 +7033,8 @@ No authorization required
 
 <a name="approlewritecustomsecretid"></a>
 # **AppRoleWriteCustomSecretID**
-> AppRoleWriteCustomSecretIDResponse AppRoleWriteCustomSecretID (AppRoleWriteCustomSecretIDRequest appRoleWriteCustomSecretIDRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+
+> AppRoleWriteCustomSecretIDResponse AppRoleWriteCustomSecretID (string roleName, AppRoleWriteCustomSecretIDRequest appRoleWriteCustomSecretIDRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -6866,7 +7065,9 @@ namespace Example
 
             try
             {
-                AppRoleWriteCustomSecretIDResponse result = apiInstance.AppRoleWriteCustomSecretID(AppRoleWriteCustomSecretIDRequest appRoleWriteCustomSecretIDRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
+                AppRoleWriteCustomSecretIDResponse result = apiInstance.AppRoleWriteCustomSecretID(string roleName, AppRoleWriteCustomSecretIDRequest appRoleWriteCustomSecretIDRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6910,7 +7111,8 @@ No authorization required
 
 <a name="approlewriteperiod"></a>
 # **AppRoleWritePeriod**
-> void AppRoleWritePeriod (AppRoleWritePeriodRequest appRoleWritePeriodRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+
+> void AppRoleWritePeriod (string roleName, AppRoleWritePeriodRequest appRoleWritePeriodRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -6941,7 +7143,8 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWritePeriod(AppRoleWritePeriodRequest appRoleWritePeriodRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
+                apiInstance.AppRoleWritePeriod(string roleName, AppRoleWritePeriodRequest appRoleWritePeriodRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -6984,7 +7187,8 @@ No authorization required
 
 <a name="approlewritepolicies"></a>
 # **AppRoleWritePolicies**
-> void AppRoleWritePolicies (AppRoleWritePoliciesRequest appRoleWritePoliciesRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+
+> void AppRoleWritePolicies (string roleName, AppRoleWritePoliciesRequest appRoleWritePoliciesRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7015,7 +7219,8 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWritePolicies(AppRoleWritePoliciesRequest appRoleWritePoliciesRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
+                apiInstance.AppRoleWritePolicies(string roleName, AppRoleWritePoliciesRequest appRoleWritePoliciesRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7058,7 +7263,8 @@ No authorization required
 
 <a name="approlewriterole"></a>
 # **AppRoleWriteRole**
-> void AppRoleWriteRole (AppRoleWriteRoleRequest appRoleWriteRoleRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+
+> void AppRoleWriteRole (string roleName, AppRoleWriteRoleRequest appRoleWriteRoleRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7089,7 +7295,8 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteRole(AppRoleWriteRoleRequest appRoleWriteRoleRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
+                apiInstance.AppRoleWriteRole(string roleName, AppRoleWriteRoleRequest appRoleWriteRoleRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7132,7 +7339,8 @@ No authorization required
 
 <a name="approlewriteroleid"></a>
 # **AppRoleWriteRoleID**
-> void AppRoleWriteRoleID (AppRoleWriteRoleIDRequest appRoleWriteRoleIDRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+
+> void AppRoleWriteRoleID (string roleName, AppRoleWriteRoleIDRequest appRoleWriteRoleIDRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7163,7 +7371,8 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteRoleID(AppRoleWriteRoleIDRequest appRoleWriteRoleIDRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
+                apiInstance.AppRoleWriteRoleID(string roleName, AppRoleWriteRoleIDRequest appRoleWriteRoleIDRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7206,7 +7415,8 @@ No authorization required
 
 <a name="approlewritesecretid"></a>
 # **AppRoleWriteSecretID**
-> AppRoleWriteSecretIDResponse AppRoleWriteSecretID (AppRoleWriteSecretIDRequest appRoleWriteSecretIDRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+
+> AppRoleWriteSecretIDResponse AppRoleWriteSecretID (string roleName, AppRoleWriteSecretIDRequest appRoleWriteSecretIDRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7237,7 +7447,9 @@ namespace Example
 
             try
             {
-                AppRoleWriteSecretIDResponse result = apiInstance.AppRoleWriteSecretID(AppRoleWriteSecretIDRequest appRoleWriteSecretIDRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
+                AppRoleWriteSecretIDResponse result = apiInstance.AppRoleWriteSecretID(string roleName, AppRoleWriteSecretIDRequest appRoleWriteSecretIDRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -7281,7 +7493,8 @@ No authorization required
 
 <a name="approlewritesecretidaccessordestroy"></a>
 # **AppRoleWriteSecretIDAccessorDestroy**
-> void AppRoleWriteSecretIDAccessorDestroy (AppRoleWriteSecretIDAccessorDestroyRequest appRoleWriteSecretIDAccessorDestroyRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+
+> void AppRoleWriteSecretIDAccessorDestroy (string roleName, AppRoleWriteSecretIDAccessorDestroyRequest appRoleWriteSecretIDAccessorDestroyRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7312,7 +7525,8 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteSecretIDAccessorDestroy(AppRoleWriteSecretIDAccessorDestroyRequest appRoleWriteSecretIDAccessorDestroyRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
+                apiInstance.AppRoleWriteSecretIDAccessorDestroy(string roleName, AppRoleWriteSecretIDAccessorDestroyRequest appRoleWriteSecretIDAccessorDestroyRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7355,7 +7569,8 @@ No authorization required
 
 <a name="approlewritesecretidaccessorlookup"></a>
 # **AppRoleWriteSecretIDAccessorLookup**
-> AppRoleWriteSecretIDAccessorLookupResponse AppRoleWriteSecretIDAccessorLookup (AppRoleWriteSecretIDAccessorLookupRequest appRoleWriteSecretIDAccessorLookupRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+
+> AppRoleWriteSecretIDAccessorLookupResponse AppRoleWriteSecretIDAccessorLookup (string roleName, AppRoleWriteSecretIDAccessorLookupRequest appRoleWriteSecretIDAccessorLookupRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7386,7 +7601,9 @@ namespace Example
 
             try
             {
-                AppRoleWriteSecretIDAccessorLookupResponse result = apiInstance.AppRoleWriteSecretIDAccessorLookup(AppRoleWriteSecretIDAccessorLookupRequest appRoleWriteSecretIDAccessorLookupRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
+                AppRoleWriteSecretIDAccessorLookupResponse result = apiInstance.AppRoleWriteSecretIDAccessorLookup(string roleName, AppRoleWriteSecretIDAccessorLookupRequest appRoleWriteSecretIDAccessorLookupRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -7430,7 +7647,8 @@ No authorization required
 
 <a name="approlewritesecretidboundcidrs"></a>
 # **AppRoleWriteSecretIDBoundCIDRs**
-> void AppRoleWriteSecretIDBoundCIDRs (AppRoleWriteSecretIDBoundCIDRsRequest appRoleWriteSecretIDBoundCIDRsRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+
+> void AppRoleWriteSecretIDBoundCIDRs (string roleName, AppRoleWriteSecretIDBoundCIDRsRequest appRoleWriteSecretIDBoundCIDRsRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7461,7 +7679,8 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteSecretIDBoundCIDRs(AppRoleWriteSecretIDBoundCIDRsRequest appRoleWriteSecretIDBoundCIDRsRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
+                apiInstance.AppRoleWriteSecretIDBoundCIDRs(string roleName, AppRoleWriteSecretIDBoundCIDRsRequest appRoleWriteSecretIDBoundCIDRsRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7504,7 +7723,8 @@ No authorization required
 
 <a name="approlewritesecretiddestroy"></a>
 # **AppRoleWriteSecretIDDestroy**
-> void AppRoleWriteSecretIDDestroy (AppRoleWriteSecretIDDestroyRequest appRoleWriteSecretIDDestroyRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+
+> void AppRoleWriteSecretIDDestroy (string roleName, AppRoleWriteSecretIDDestroyRequest appRoleWriteSecretIDDestroyRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7535,7 +7755,8 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteSecretIDDestroy(AppRoleWriteSecretIDDestroyRequest appRoleWriteSecretIDDestroyRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
+                apiInstance.AppRoleWriteSecretIDDestroy(string roleName, AppRoleWriteSecretIDDestroyRequest appRoleWriteSecretIDDestroyRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7578,7 +7799,8 @@ No authorization required
 
 <a name="approlewritesecretidlookup"></a>
 # **AppRoleWriteSecretIDLookup**
-> AppRoleWriteSecretIDLookupResponse AppRoleWriteSecretIDLookup (AppRoleWriteSecretIDLookupRequest appRoleWriteSecretIDLookupRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+
+> AppRoleWriteSecretIDLookupResponse AppRoleWriteSecretIDLookup (string roleName, AppRoleWriteSecretIDLookupRequest appRoleWriteSecretIDLookupRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7609,7 +7831,9 @@ namespace Example
 
             try
             {
-                AppRoleWriteSecretIDLookupResponse result = apiInstance.AppRoleWriteSecretIDLookup(AppRoleWriteSecretIDLookupRequest appRoleWriteSecretIDLookupRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
+                AppRoleWriteSecretIDLookupResponse result = apiInstance.AppRoleWriteSecretIDLookup(string roleName, AppRoleWriteSecretIDLookupRequest appRoleWriteSecretIDLookupRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -7653,7 +7877,8 @@ No authorization required
 
 <a name="approlewritesecretidnumuses"></a>
 # **AppRoleWriteSecretIDNumUses**
-> void AppRoleWriteSecretIDNumUses (AppRoleWriteSecretIDNumUsesRequest appRoleWriteSecretIDNumUsesRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+
+> void AppRoleWriteSecretIDNumUses (string roleName, AppRoleWriteSecretIDNumUsesRequest appRoleWriteSecretIDNumUsesRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7684,7 +7909,8 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteSecretIDNumUses(AppRoleWriteSecretIDNumUsesRequest appRoleWriteSecretIDNumUsesRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
+                apiInstance.AppRoleWriteSecretIDNumUses(string roleName, AppRoleWriteSecretIDNumUsesRequest appRoleWriteSecretIDNumUsesRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7727,7 +7953,8 @@ No authorization required
 
 <a name="approlewritesecretidttl"></a>
 # **AppRoleWriteSecretIDTTL**
-> void AppRoleWriteSecretIDTTL (AppRoleWriteSecretIDTTLRequest appRoleWriteSecretIDTTLRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+
+> void AppRoleWriteSecretIDTTL (string roleName, AppRoleWriteSecretIDTTLRequest appRoleWriteSecretIDTTLRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7758,7 +7985,8 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteSecretIDTTL(AppRoleWriteSecretIDTTLRequest appRoleWriteSecretIDTTLRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
+                apiInstance.AppRoleWriteSecretIDTTL(string roleName, AppRoleWriteSecretIDTTLRequest appRoleWriteSecretIDTTLRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7801,7 +8029,8 @@ No authorization required
 
 <a name="approlewritetokenboundcidrs"></a>
 # **AppRoleWriteTokenBoundCIDRs**
-> void AppRoleWriteTokenBoundCIDRs (AppRoleWriteTokenBoundCIDRsRequest appRoleWriteTokenBoundCIDRsRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+
+> void AppRoleWriteTokenBoundCIDRs (string roleName, AppRoleWriteTokenBoundCIDRsRequest appRoleWriteTokenBoundCIDRsRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7832,7 +8061,8 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteTokenBoundCIDRs(AppRoleWriteTokenBoundCIDRsRequest appRoleWriteTokenBoundCIDRsRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
+                apiInstance.AppRoleWriteTokenBoundCIDRs(string roleName, AppRoleWriteTokenBoundCIDRsRequest appRoleWriteTokenBoundCIDRsRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7875,7 +8105,8 @@ No authorization required
 
 <a name="approlewritetokenmaxttl"></a>
 # **AppRoleWriteTokenMaxTTL**
-> void AppRoleWriteTokenMaxTTL (AppRoleWriteTokenMaxTTLRequest appRoleWriteTokenMaxTTLRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+
+> void AppRoleWriteTokenMaxTTL (string roleName, AppRoleWriteTokenMaxTTLRequest appRoleWriteTokenMaxTTLRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7906,7 +8137,8 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteTokenMaxTTL(AppRoleWriteTokenMaxTTLRequest appRoleWriteTokenMaxTTLRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
+                apiInstance.AppRoleWriteTokenMaxTTL(string roleName, AppRoleWriteTokenMaxTTLRequest appRoleWriteTokenMaxTTLRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -7949,7 +8181,8 @@ No authorization required
 
 <a name="approlewritetokennumuses"></a>
 # **AppRoleWriteTokenNumUses**
-> void AppRoleWriteTokenNumUses (AppRoleWriteTokenNumUsesRequest appRoleWriteTokenNumUsesRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+
+> void AppRoleWriteTokenNumUses (string roleName, AppRoleWriteTokenNumUsesRequest appRoleWriteTokenNumUsesRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -7980,7 +8213,8 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteTokenNumUses(AppRoleWriteTokenNumUsesRequest appRoleWriteTokenNumUsesRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
+                apiInstance.AppRoleWriteTokenNumUses(string roleName, AppRoleWriteTokenNumUsesRequest appRoleWriteTokenNumUsesRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8023,7 +8257,8 @@ No authorization required
 
 <a name="approlewritetokenttl"></a>
 # **AppRoleWriteTokenTTL**
-> void AppRoleWriteTokenTTL (AppRoleWriteTokenTTLRequest appRoleWriteTokenTTLRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+
+> void AppRoleWriteTokenTTL (string roleName, AppRoleWriteTokenTTLRequest appRoleWriteTokenTTLRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
 
 
 
@@ -8054,7 +8289,8 @@ namespace Example
 
             try
             {
-                apiInstance.AppRoleWriteTokenTTL(AppRoleWriteTokenTTLRequest appRoleWriteTokenTTLRequest, string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+
+                apiInstance.AppRoleWriteTokenTTL(string roleName, AppRoleWriteTokenTTLRequest appRoleWriteTokenTTLRequest, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8097,6 +8333,7 @@ No authorization required
 
 <a name="azuredeleteauthconfig"></a>
 # **AzureDeleteAuthConfig**
+
 > void AzureDeleteAuthConfig (string azureMountPath = "azure", TimeSpan? wrapTTL = null)
 
 
@@ -8126,6 +8363,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AzureDeleteAuthConfig(string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -8167,6 +8405,7 @@ No authorization required
 
 <a name="azuredeleteauthrole"></a>
 # **AzureDeleteAuthRole**
+
 > void AzureDeleteAuthRole (string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null)
 
 
@@ -8197,6 +8436,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AzureDeleteAuthRole(string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -8239,6 +8479,7 @@ No authorization required
 
 <a name="azurelistauthroles"></a>
 # **AzureListAuthRoles**
+
 > void AzureListAuthRoles (string azureMountPath = "azure", TimeSpan? wrapTTL = null)
 
 
@@ -8269,6 +8510,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AzureListAuthRoles(string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -8311,6 +8553,7 @@ No authorization required
 
 <a name="azurelogin"></a>
 # **AzureLogin**
+
 > void AzureLogin (AzureLoginRequest azureLoginRequest, string azureMountPath = "azure", TimeSpan? wrapTTL = null)
 
 
@@ -8341,6 +8584,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AzureLogin(AzureLoginRequest azureLoginRequest, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -8383,6 +8627,7 @@ No authorization required
 
 <a name="azurereadauthconfig"></a>
 # **AzureReadAuthConfig**
+
 > void AzureReadAuthConfig (string azureMountPath = "azure", TimeSpan? wrapTTL = null)
 
 
@@ -8412,6 +8657,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AzureReadAuthConfig(string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -8453,6 +8699,7 @@ No authorization required
 
 <a name="azurereadauthrole"></a>
 # **AzureReadAuthRole**
+
 > void AzureReadAuthRole (string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null)
 
 
@@ -8483,6 +8730,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AzureReadAuthRole(string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -8525,6 +8773,7 @@ No authorization required
 
 <a name="azurewriteauthconfig"></a>
 # **AzureWriteAuthConfig**
+
 > void AzureWriteAuthConfig (AzureWriteAuthConfigRequest azureWriteAuthConfigRequest, string azureMountPath = "azure", TimeSpan? wrapTTL = null)
 
 
@@ -8555,6 +8804,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.AzureWriteAuthConfig(AzureWriteAuthConfigRequest azureWriteAuthConfigRequest, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -8597,7 +8847,8 @@ No authorization required
 
 <a name="azurewriteauthrole"></a>
 # **AzureWriteAuthRole**
-> void AzureWriteAuthRole (AzureWriteAuthRoleRequest azureWriteAuthRoleRequest, string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null)
+
+> void AzureWriteAuthRole (string name, AzureWriteAuthRoleRequest azureWriteAuthRoleRequest, string azureMountPath = "azure", TimeSpan? wrapTTL = null)
 
 
 
@@ -8628,7 +8879,8 @@ namespace Example
 
             try
             {
-                apiInstance.AzureWriteAuthRole(AzureWriteAuthRoleRequest azureWriteAuthRoleRequest, string name, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
+
+                apiInstance.AzureWriteAuthRole(string name, AzureWriteAuthRoleRequest azureWriteAuthRoleRequest, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -8671,6 +8923,7 @@ No authorization required
 
 <a name="centrifylogin"></a>
 # **CentrifyLogin**
+
 > void CentrifyLogin (CentrifyLoginRequest centrifyLoginRequest, string centrifyMountPath = "centrify", TimeSpan? wrapTTL = null)
 
 Log in with a username and password.
@@ -8702,6 +8955,7 @@ namespace Example
             try
             {
                 // Log in with a username and password.
+
                 apiInstance.CentrifyLogin(CentrifyLoginRequest centrifyLoginRequest, string centrifyMountPath = "centrify", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -8744,6 +8998,7 @@ No authorization required
 
 <a name="centrifyreadconfig"></a>
 # **CentrifyReadConfig**
+
 > void CentrifyReadConfig (string centrifyMountPath = "centrify", TimeSpan? wrapTTL = null)
 
 This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
@@ -8774,6 +9029,7 @@ namespace Example
             try
             {
                 // This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
+
                 apiInstance.CentrifyReadConfig(string centrifyMountPath = "centrify", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -8815,6 +9071,7 @@ No authorization required
 
 <a name="centrifywriteconfig"></a>
 # **CentrifyWriteConfig**
+
 > void CentrifyWriteConfig (CentrifyWriteConfigRequest centrifyWriteConfigRequest, string centrifyMountPath = "centrify", TimeSpan? wrapTTL = null)
 
 This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
@@ -8846,6 +9103,7 @@ namespace Example
             try
             {
                 // This path allows you to configure the centrify auth provider to interact with the Centrify Identity Services Platform for authenticating users.
+
                 apiInstance.CentrifyWriteConfig(CentrifyWriteConfigRequest centrifyWriteConfigRequest, string centrifyMountPath = "centrify", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -8888,6 +9146,7 @@ No authorization required
 
 <a name="certificatesdelete"></a>
 # **CertificatesDelete**
+
 > void CertificatesDelete (string name, string certMountPath = "cert", TimeSpan? wrapTTL = null)
 
 Manage trusted certificates used for authentication.
@@ -8919,6 +9178,7 @@ namespace Example
             try
             {
                 // Manage trusted certificates used for authentication.
+
                 apiInstance.CertificatesDelete(string name, string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -8961,6 +9221,7 @@ No authorization required
 
 <a name="certificatesdeletecrl"></a>
 # **CertificatesDeleteCRL**
+
 > void CertificatesDeleteCRL (string name, string certMountPath = "cert", TimeSpan? wrapTTL = null)
 
 Manage Certificate Revocation Lists checked during authentication.
@@ -8992,6 +9253,7 @@ namespace Example
             try
             {
                 // Manage Certificate Revocation Lists checked during authentication.
+
                 apiInstance.CertificatesDeleteCRL(string name, string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -9034,6 +9296,7 @@ No authorization required
 
 <a name="certificateslist"></a>
 # **CertificatesList**
+
 > void CertificatesList (string certMountPath = "cert", TimeSpan? wrapTTL = null)
 
 Manage trusted certificates used for authentication.
@@ -9065,6 +9328,7 @@ namespace Example
             try
             {
                 // Manage trusted certificates used for authentication.
+
                 apiInstance.CertificatesList(string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -9107,6 +9371,7 @@ No authorization required
 
 <a name="certificateslistcrls"></a>
 # **CertificatesListCRLs**
+
 > void CertificatesListCRLs (string certMountPath = "cert", TimeSpan? wrapTTL = null)
 
 
@@ -9137,6 +9402,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.CertificatesListCRLs(string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -9179,6 +9445,7 @@ No authorization required
 
 <a name="certificateslogin"></a>
 # **CertificatesLogin**
+
 > void CertificatesLogin (CertificatesLoginRequest certificatesLoginRequest, string certMountPath = "cert", TimeSpan? wrapTTL = null)
 
 
@@ -9209,6 +9476,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.CertificatesLogin(CertificatesLoginRequest certificatesLoginRequest, string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -9251,6 +9519,7 @@ No authorization required
 
 <a name="certificatesread"></a>
 # **CertificatesRead**
+
 > void CertificatesRead (string name, string certMountPath = "cert", TimeSpan? wrapTTL = null)
 
 Manage trusted certificates used for authentication.
@@ -9282,6 +9551,7 @@ namespace Example
             try
             {
                 // Manage trusted certificates used for authentication.
+
                 apiInstance.CertificatesRead(string name, string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -9324,6 +9594,7 @@ No authorization required
 
 <a name="certificatesreadcrl"></a>
 # **CertificatesReadCRL**
+
 > void CertificatesReadCRL (string name, string certMountPath = "cert", TimeSpan? wrapTTL = null)
 
 Manage Certificate Revocation Lists checked during authentication.
@@ -9355,6 +9626,7 @@ namespace Example
             try
             {
                 // Manage Certificate Revocation Lists checked during authentication.
+
                 apiInstance.CertificatesReadCRL(string name, string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -9397,6 +9669,7 @@ No authorization required
 
 <a name="certificatesreadconfig"></a>
 # **CertificatesReadConfig**
+
 > void CertificatesReadConfig (string certMountPath = "cert", TimeSpan? wrapTTL = null)
 
 
@@ -9426,6 +9699,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.CertificatesReadConfig(string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -9467,7 +9741,8 @@ No authorization required
 
 <a name="certificateswrite"></a>
 # **CertificatesWrite**
-> void CertificatesWrite (CertificatesWriteRequest certificatesWriteRequest, string name, string certMountPath = "cert", TimeSpan? wrapTTL = null)
+
+> void CertificatesWrite (string name, CertificatesWriteRequest certificatesWriteRequest, string certMountPath = "cert", TimeSpan? wrapTTL = null)
 
 Manage trusted certificates used for authentication.
 
@@ -9499,7 +9774,8 @@ namespace Example
             try
             {
                 // Manage trusted certificates used for authentication.
-                apiInstance.CertificatesWrite(CertificatesWriteRequest certificatesWriteRequest, string name, string certMountPath = "cert", TimeSpan? wrapTTL = null);
+
+                apiInstance.CertificatesWrite(string name, CertificatesWriteRequest certificatesWriteRequest, string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9542,7 +9818,8 @@ No authorization required
 
 <a name="certificateswritecrl"></a>
 # **CertificatesWriteCRL**
-> void CertificatesWriteCRL (CertificatesWriteCRLRequest certificatesWriteCRLRequest, string name, string certMountPath = "cert", TimeSpan? wrapTTL = null)
+
+> void CertificatesWriteCRL (string name, CertificatesWriteCRLRequest certificatesWriteCRLRequest, string certMountPath = "cert", TimeSpan? wrapTTL = null)
 
 Manage Certificate Revocation Lists checked during authentication.
 
@@ -9574,7 +9851,8 @@ namespace Example
             try
             {
                 // Manage Certificate Revocation Lists checked during authentication.
-                apiInstance.CertificatesWriteCRL(CertificatesWriteCRLRequest certificatesWriteCRLRequest, string name, string certMountPath = "cert", TimeSpan? wrapTTL = null);
+
+                apiInstance.CertificatesWriteCRL(string name, CertificatesWriteCRLRequest certificatesWriteCRLRequest, string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -9617,6 +9895,7 @@ No authorization required
 
 <a name="certificateswriteconfig"></a>
 # **CertificatesWriteConfig**
+
 > void CertificatesWriteConfig (CertificatesWriteConfigRequest certificatesWriteConfigRequest, string certMountPath = "cert", TimeSpan? wrapTTL = null)
 
 
@@ -9647,6 +9926,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.CertificatesWriteConfig(CertificatesWriteConfigRequest certificatesWriteConfigRequest, string certMountPath = "cert", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -9689,6 +9969,7 @@ No authorization required
 
 <a name="cloudfoundrydeleteconfig"></a>
 # **CloudFoundryDeleteConfig**
+
 > void CloudFoundryDeleteConfig (string cfMountPath = "cf", TimeSpan? wrapTTL = null)
 
 
@@ -9718,6 +9999,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.CloudFoundryDeleteConfig(string cfMountPath = "cf", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -9759,6 +10041,7 @@ No authorization required
 
 <a name="cloudfoundrydeleterole"></a>
 # **CloudFoundryDeleteRole**
+
 > void CloudFoundryDeleteRole (string role, string cfMountPath = "cf", TimeSpan? wrapTTL = null)
 
 
@@ -9789,6 +10072,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.CloudFoundryDeleteRole(string role, string cfMountPath = "cf", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -9831,6 +10115,7 @@ No authorization required
 
 <a name="cloudfoundrylistroles"></a>
 # **CloudFoundryListRoles**
+
 > void CloudFoundryListRoles (string cfMountPath = "cf", TimeSpan? wrapTTL = null)
 
 
@@ -9861,6 +10146,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.CloudFoundryListRoles(string cfMountPath = "cf", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -9903,6 +10189,7 @@ No authorization required
 
 <a name="cloudfoundrylogin"></a>
 # **CloudFoundryLogin**
+
 > void CloudFoundryLogin (CloudFoundryLoginRequest cloudFoundryLoginRequest, string cfMountPath = "cf", TimeSpan? wrapTTL = null)
 
 
@@ -9933,6 +10220,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.CloudFoundryLogin(CloudFoundryLoginRequest cloudFoundryLoginRequest, string cfMountPath = "cf", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -9975,6 +10263,7 @@ No authorization required
 
 <a name="cloudfoundryreadconfig"></a>
 # **CloudFoundryReadConfig**
+
 > void CloudFoundryReadConfig (string cfMountPath = "cf", TimeSpan? wrapTTL = null)
 
 
@@ -10004,6 +10293,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.CloudFoundryReadConfig(string cfMountPath = "cf", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -10045,6 +10335,7 @@ No authorization required
 
 <a name="cloudfoundryreadrole"></a>
 # **CloudFoundryReadRole**
+
 > void CloudFoundryReadRole (string role, string cfMountPath = "cf", TimeSpan? wrapTTL = null)
 
 
@@ -10075,6 +10366,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.CloudFoundryReadRole(string role, string cfMountPath = "cf", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -10117,6 +10409,7 @@ No authorization required
 
 <a name="cloudfoundrywriteconfig"></a>
 # **CloudFoundryWriteConfig**
+
 > void CloudFoundryWriteConfig (CloudFoundryWriteConfigRequest cloudFoundryWriteConfigRequest, string cfMountPath = "cf", TimeSpan? wrapTTL = null)
 
 
@@ -10147,6 +10440,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.CloudFoundryWriteConfig(CloudFoundryWriteConfigRequest cloudFoundryWriteConfigRequest, string cfMountPath = "cf", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -10189,7 +10483,8 @@ No authorization required
 
 <a name="cloudfoundrywriterole"></a>
 # **CloudFoundryWriteRole**
-> void CloudFoundryWriteRole (CloudFoundryWriteRoleRequest cloudFoundryWriteRoleRequest, string role, string cfMountPath = "cf", TimeSpan? wrapTTL = null)
+
+> void CloudFoundryWriteRole (string role, CloudFoundryWriteRoleRequest cloudFoundryWriteRoleRequest, string cfMountPath = "cf", TimeSpan? wrapTTL = null)
 
 
 
@@ -10220,7 +10515,8 @@ namespace Example
 
             try
             {
-                apiInstance.CloudFoundryWriteRole(CloudFoundryWriteRoleRequest cloudFoundryWriteRoleRequest, string role, string cfMountPath = "cf", TimeSpan? wrapTTL = null);
+
+                apiInstance.CloudFoundryWriteRole(string role, CloudFoundryWriteRoleRequest cloudFoundryWriteRoleRequest, string cfMountPath = "cf", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10263,6 +10559,7 @@ No authorization required
 
 <a name="githubdeletemapteam"></a>
 # **GitHubDeleteMapTeam**
+
 > void GitHubDeleteMapTeam (string key, string githubMountPath = "github", TimeSpan? wrapTTL = null)
 
 Read/write/delete a single teams mapping
@@ -10294,6 +10591,7 @@ namespace Example
             try
             {
                 // Read/write/delete a single teams mapping
+
                 apiInstance.GitHubDeleteMapTeam(string key, string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -10336,6 +10634,7 @@ No authorization required
 
 <a name="githubdeletemapuser"></a>
 # **GitHubDeleteMapUser**
+
 > void GitHubDeleteMapUser (string key, string githubMountPath = "github", TimeSpan? wrapTTL = null)
 
 Read/write/delete a single users mapping
@@ -10367,6 +10666,7 @@ namespace Example
             try
             {
                 // Read/write/delete a single users mapping
+
                 apiInstance.GitHubDeleteMapUser(string key, string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -10409,6 +10709,7 @@ No authorization required
 
 <a name="githublogin"></a>
 # **GitHubLogin**
+
 > void GitHubLogin (GitHubLoginRequest gitHubLoginRequest, string githubMountPath = "github", TimeSpan? wrapTTL = null)
 
 
@@ -10439,6 +10740,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.GitHubLogin(GitHubLoginRequest gitHubLoginRequest, string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -10481,6 +10783,7 @@ No authorization required
 
 <a name="githubreadconfig"></a>
 # **GitHubReadConfig**
+
 > void GitHubReadConfig (string githubMountPath = "github", TimeSpan? wrapTTL = null)
 
 
@@ -10510,6 +10813,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.GitHubReadConfig(string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -10551,6 +10855,7 @@ No authorization required
 
 <a name="githubreadmapteam"></a>
 # **GitHubReadMapTeam**
+
 > void GitHubReadMapTeam (string key, string githubMountPath = "github", TimeSpan? wrapTTL = null)
 
 Read/write/delete a single teams mapping
@@ -10582,6 +10887,7 @@ namespace Example
             try
             {
                 // Read/write/delete a single teams mapping
+
                 apiInstance.GitHubReadMapTeam(string key, string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -10624,6 +10930,7 @@ No authorization required
 
 <a name="githubreadmapteams"></a>
 # **GitHubReadMapTeams**
+
 > void GitHubReadMapTeams (string githubMountPath = "github", string list = default(string), TimeSpan? wrapTTL = null)
 
 Read mappings for teams
@@ -10655,6 +10962,7 @@ namespace Example
             try
             {
                 // Read mappings for teams
+
                 apiInstance.GitHubReadMapTeams(string githubMountPath = "github", string list = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -10697,6 +11005,7 @@ No authorization required
 
 <a name="githubreadmapuser"></a>
 # **GitHubReadMapUser**
+
 > void GitHubReadMapUser (string key, string githubMountPath = "github", TimeSpan? wrapTTL = null)
 
 Read/write/delete a single users mapping
@@ -10728,6 +11037,7 @@ namespace Example
             try
             {
                 // Read/write/delete a single users mapping
+
                 apiInstance.GitHubReadMapUser(string key, string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -10770,6 +11080,7 @@ No authorization required
 
 <a name="githubreadmapusers"></a>
 # **GitHubReadMapUsers**
+
 > void GitHubReadMapUsers (string githubMountPath = "github", string list = default(string), TimeSpan? wrapTTL = null)
 
 Read mappings for users
@@ -10801,6 +11112,7 @@ namespace Example
             try
             {
                 // Read mappings for users
+
                 apiInstance.GitHubReadMapUsers(string githubMountPath = "github", string list = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -10843,6 +11155,7 @@ No authorization required
 
 <a name="githubwriteconfig"></a>
 # **GitHubWriteConfig**
+
 > void GitHubWriteConfig (GitHubWriteConfigRequest gitHubWriteConfigRequest, string githubMountPath = "github", TimeSpan? wrapTTL = null)
 
 
@@ -10873,6 +11186,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.GitHubWriteConfig(GitHubWriteConfigRequest gitHubWriteConfigRequest, string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -10915,7 +11229,8 @@ No authorization required
 
 <a name="githubwritemapteam"></a>
 # **GitHubWriteMapTeam**
-> void GitHubWriteMapTeam (GitHubWriteMapTeamRequest gitHubWriteMapTeamRequest, string key, string githubMountPath = "github", TimeSpan? wrapTTL = null)
+
+> void GitHubWriteMapTeam (string key, GitHubWriteMapTeamRequest gitHubWriteMapTeamRequest, string githubMountPath = "github", TimeSpan? wrapTTL = null)
 
 Read/write/delete a single teams mapping
 
@@ -10947,7 +11262,8 @@ namespace Example
             try
             {
                 // Read/write/delete a single teams mapping
-                apiInstance.GitHubWriteMapTeam(GitHubWriteMapTeamRequest gitHubWriteMapTeamRequest, string key, string githubMountPath = "github", TimeSpan? wrapTTL = null);
+
+                apiInstance.GitHubWriteMapTeam(string key, GitHubWriteMapTeamRequest gitHubWriteMapTeamRequest, string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -10990,7 +11306,8 @@ No authorization required
 
 <a name="githubwritemapuser"></a>
 # **GitHubWriteMapUser**
-> void GitHubWriteMapUser (GitHubWriteMapUserRequest gitHubWriteMapUserRequest, string key, string githubMountPath = "github", TimeSpan? wrapTTL = null)
+
+> void GitHubWriteMapUser (string key, GitHubWriteMapUserRequest gitHubWriteMapUserRequest, string githubMountPath = "github", TimeSpan? wrapTTL = null)
 
 Read/write/delete a single users mapping
 
@@ -11022,7 +11339,8 @@ namespace Example
             try
             {
                 // Read/write/delete a single users mapping
-                apiInstance.GitHubWriteMapUser(GitHubWriteMapUserRequest gitHubWriteMapUserRequest, string key, string githubMountPath = "github", TimeSpan? wrapTTL = null);
+
+                apiInstance.GitHubWriteMapUser(string key, GitHubWriteMapUserRequest gitHubWriteMapUserRequest, string githubMountPath = "github", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11065,6 +11383,7 @@ No authorization required
 
 <a name="googleclouddeleterole"></a>
 # **GoogleCloudDeleteRole**
+
 > void GoogleCloudDeleteRole (string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
 
 Create a GCP role with associated policies and required attributes.
@@ -11096,6 +11415,7 @@ namespace Example
             try
             {
                 // Create a GCP role with associated policies and required attributes.
+
                 apiInstance.GoogleCloudDeleteRole(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -11138,6 +11458,7 @@ No authorization required
 
 <a name="googlecloudlistroles"></a>
 # **GoogleCloudListRoles**
+
 > void GoogleCloudListRoles (string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
 
 Lists all the roles that are registered with Vault.
@@ -11169,6 +11490,7 @@ namespace Example
             try
             {
                 // Lists all the roles that are registered with Vault.
+
                 apiInstance.GoogleCloudListRoles(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -11211,6 +11533,7 @@ No authorization required
 
 <a name="googlecloudlistroles2"></a>
 # **GoogleCloudListRoles2**
+
 > void GoogleCloudListRoles2 (string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
 
 Lists all the roles that are registered with Vault.
@@ -11242,6 +11565,7 @@ namespace Example
             try
             {
                 // Lists all the roles that are registered with Vault.
+
                 apiInstance.GoogleCloudListRoles2(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -11284,6 +11608,7 @@ No authorization required
 
 <a name="googlecloudlogin"></a>
 # **GoogleCloudLogin**
+
 > void GoogleCloudLogin (GoogleCloudLoginRequest googleCloudLoginRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
 
 
@@ -11314,6 +11639,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.GoogleCloudLogin(GoogleCloudLoginRequest googleCloudLoginRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -11356,6 +11682,7 @@ No authorization required
 
 <a name="googlecloudreadauthconfig"></a>
 # **GoogleCloudReadAuthConfig**
+
 > void GoogleCloudReadAuthConfig (string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
 
 Configure credentials used to query the GCP IAM API to verify authenticating service accounts
@@ -11386,6 +11713,7 @@ namespace Example
             try
             {
                 // Configure credentials used to query the GCP IAM API to verify authenticating service accounts
+
                 apiInstance.GoogleCloudReadAuthConfig(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -11427,6 +11755,7 @@ No authorization required
 
 <a name="googlecloudreadrole"></a>
 # **GoogleCloudReadRole**
+
 > void GoogleCloudReadRole (string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
 
 Create a GCP role with associated policies and required attributes.
@@ -11458,6 +11787,7 @@ namespace Example
             try
             {
                 // Create a GCP role with associated policies and required attributes.
+
                 apiInstance.GoogleCloudReadRole(string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -11500,6 +11830,7 @@ No authorization required
 
 <a name="googlecloudwriteauthconfig"></a>
 # **GoogleCloudWriteAuthConfig**
+
 > void GoogleCloudWriteAuthConfig (GoogleCloudWriteAuthConfigRequest googleCloudWriteAuthConfigRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
 
 Configure credentials used to query the GCP IAM API to verify authenticating service accounts
@@ -11531,6 +11862,7 @@ namespace Example
             try
             {
                 // Configure credentials used to query the GCP IAM API to verify authenticating service accounts
+
                 apiInstance.GoogleCloudWriteAuthConfig(GoogleCloudWriteAuthConfigRequest googleCloudWriteAuthConfigRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -11573,7 +11905,8 @@ No authorization required
 
 <a name="googlecloudwriterole"></a>
 # **GoogleCloudWriteRole**
-> void GoogleCloudWriteRole (GoogleCloudWriteRoleRequest googleCloudWriteRoleRequest, string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
+
+> void GoogleCloudWriteRole (string name, GoogleCloudWriteRoleRequest googleCloudWriteRoleRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
 
 Create a GCP role with associated policies and required attributes.
 
@@ -11605,7 +11938,8 @@ namespace Example
             try
             {
                 // Create a GCP role with associated policies and required attributes.
-                apiInstance.GoogleCloudWriteRole(GoogleCloudWriteRoleRequest googleCloudWriteRoleRequest, string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
+
+                apiInstance.GoogleCloudWriteRole(string name, GoogleCloudWriteRoleRequest googleCloudWriteRoleRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11648,7 +11982,8 @@ No authorization required
 
 <a name="googlecloudwriterolelabels"></a>
 # **GoogleCloudWriteRoleLabels**
-> void GoogleCloudWriteRoleLabels (GoogleCloudWriteRoleLabelsRequest googleCloudWriteRoleLabelsRequest, string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
+
+> void GoogleCloudWriteRoleLabels (string name, GoogleCloudWriteRoleLabelsRequest googleCloudWriteRoleLabelsRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
 
 Add or remove labels for an existing 'gce' role
 
@@ -11680,7 +12015,8 @@ namespace Example
             try
             {
                 // Add or remove labels for an existing 'gce' role
-                apiInstance.GoogleCloudWriteRoleLabels(GoogleCloudWriteRoleLabelsRequest googleCloudWriteRoleLabelsRequest, string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
+
+                apiInstance.GoogleCloudWriteRoleLabels(string name, GoogleCloudWriteRoleLabelsRequest googleCloudWriteRoleLabelsRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11723,7 +12059,8 @@ No authorization required
 
 <a name="googlecloudwriteroleserviceaccounts"></a>
 # **GoogleCloudWriteRoleServiceAccounts**
-> void GoogleCloudWriteRoleServiceAccounts (GoogleCloudWriteRoleServiceAccountsRequest googleCloudWriteRoleServiceAccountsRequest, string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
+
+> void GoogleCloudWriteRoleServiceAccounts (string name, GoogleCloudWriteRoleServiceAccountsRequest googleCloudWriteRoleServiceAccountsRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
 
 Add or remove service accounts for an existing `iam` role
 
@@ -11755,7 +12092,8 @@ namespace Example
             try
             {
                 // Add or remove service accounts for an existing `iam` role
-                apiInstance.GoogleCloudWriteRoleServiceAccounts(GoogleCloudWriteRoleServiceAccountsRequest googleCloudWriteRoleServiceAccountsRequest, string name, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
+
+                apiInstance.GoogleCloudWriteRoleServiceAccounts(string name, GoogleCloudWriteRoleServiceAccountsRequest googleCloudWriteRoleServiceAccountsRequest, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -11798,6 +12136,7 @@ No authorization required
 
 <a name="jwtdeleterole"></a>
 # **JWTDeleteRole**
+
 > void JWTDeleteRole (string name, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
 
 Delete an existing role.
@@ -11829,6 +12168,7 @@ namespace Example
             try
             {
                 // Delete an existing role.
+
                 apiInstance.JWTDeleteRole(string name, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -11871,6 +12211,7 @@ No authorization required
 
 <a name="jwtlistroles"></a>
 # **JWTListRoles**
+
 > void JWTListRoles (string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
 
 Lists all the roles registered with the backend.
@@ -11904,6 +12245,7 @@ namespace Example
             try
             {
                 // Lists all the roles registered with the backend.
+
                 apiInstance.JWTListRoles(string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -11946,6 +12288,7 @@ No authorization required
 
 <a name="jwtlogin"></a>
 # **JWTLogin**
+
 > void JWTLogin (JWTLoginRequest jWTLoginRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
 
 Authenticates to Vault using a JWT (or OIDC) token.
@@ -11977,6 +12320,7 @@ namespace Example
             try
             {
                 // Authenticates to Vault using a JWT (or OIDC) token.
+
                 apiInstance.JWTLogin(JWTLoginRequest jWTLoginRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -12019,6 +12363,7 @@ No authorization required
 
 <a name="jwtreadconfig"></a>
 # **JWTReadConfig**
+
 > void JWTReadConfig (string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
 
 Read the current JWT authentication backend configuration.
@@ -12049,6 +12394,7 @@ namespace Example
             try
             {
                 // Read the current JWT authentication backend configuration.
+
                 apiInstance.JWTReadConfig(string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -12090,6 +12436,7 @@ No authorization required
 
 <a name="jwtreadoidccallback"></a>
 # **JWTReadOIDCCallback**
+
 > void JWTReadOIDCCallback (string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
 
 Callback endpoint to complete an OIDC login.
@@ -12120,6 +12467,7 @@ namespace Example
             try
             {
                 // Callback endpoint to complete an OIDC login.
+
                 apiInstance.JWTReadOIDCCallback(string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -12161,6 +12509,7 @@ No authorization required
 
 <a name="jwtreadrole"></a>
 # **JWTReadRole**
+
 > void JWTReadRole (string name, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
 
 Read an existing role.
@@ -12192,6 +12541,7 @@ namespace Example
             try
             {
                 // Read an existing role.
+
                 apiInstance.JWTReadRole(string name, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -12234,6 +12584,7 @@ No authorization required
 
 <a name="jwtwriteconfig"></a>
 # **JWTWriteConfig**
+
 > void JWTWriteConfig (JWTWriteConfigRequest jWTWriteConfigRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
 
 Configure the JWT authentication backend.
@@ -12267,6 +12618,7 @@ namespace Example
             try
             {
                 // Configure the JWT authentication backend.
+
                 apiInstance.JWTWriteConfig(JWTWriteConfigRequest jWTWriteConfigRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -12309,6 +12661,7 @@ No authorization required
 
 <a name="jwtwriteoidcauthurl"></a>
 # **JWTWriteOIDCAuthURL**
+
 > void JWTWriteOIDCAuthURL (JWTWriteOIDCAuthURLRequest jWTWriteOIDCAuthURLRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
 
 Request an authorization URL to start an OIDC login flow.
@@ -12340,6 +12693,7 @@ namespace Example
             try
             {
                 // Request an authorization URL to start an OIDC login flow.
+
                 apiInstance.JWTWriteOIDCAuthURL(JWTWriteOIDCAuthURLRequest jWTWriteOIDCAuthURLRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -12382,6 +12736,7 @@ No authorization required
 
 <a name="jwtwriteoidccallback"></a>
 # **JWTWriteOIDCCallback**
+
 > void JWTWriteOIDCCallback (JWTWriteOIDCCallbackRequest jWTWriteOIDCCallbackRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
 
 Callback endpoint to handle form_posts.
@@ -12413,6 +12768,7 @@ namespace Example
             try
             {
                 // Callback endpoint to handle form_posts.
+
                 apiInstance.JWTWriteOIDCCallback(JWTWriteOIDCCallbackRequest jWTWriteOIDCCallbackRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -12455,7 +12811,8 @@ No authorization required
 
 <a name="jwtwriterole"></a>
 # **JWTWriteRole**
-> void JWTWriteRole (JWTWriteRoleRequest jWTWriteRoleRequest, string name, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
+
+> void JWTWriteRole (string name, JWTWriteRoleRequest jWTWriteRoleRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
 
 Register an role with the backend.
 
@@ -12489,7 +12846,8 @@ namespace Example
             try
             {
                 // Register an role with the backend.
-                apiInstance.JWTWriteRole(JWTWriteRoleRequest jWTWriteRoleRequest, string name, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
+
+                apiInstance.JWTWriteRole(string name, JWTWriteRoleRequest jWTWriteRoleRequest, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -12532,6 +12890,7 @@ No authorization required
 
 <a name="kerberosdeletegroup"></a>
 # **KerberosDeleteGroup**
+
 > void KerberosDeleteGroup (string name, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null)
 
 
@@ -12562,6 +12921,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.KerberosDeleteGroup(string name, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -12604,6 +12964,7 @@ No authorization required
 
 <a name="kerberoslistgroups"></a>
 # **KerberosListGroups**
+
 > void KerberosListGroups (string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null)
 
 
@@ -12634,6 +12995,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.KerberosListGroups(string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -12676,6 +13038,7 @@ No authorization required
 
 <a name="kerberoslogin"></a>
 # **KerberosLogin**
+
 > void KerberosLogin (KerberosLoginRequest kerberosLoginRequest, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null)
 
 
@@ -12706,6 +13069,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.KerberosLogin(KerberosLoginRequest kerberosLoginRequest, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -12748,6 +13112,7 @@ No authorization required
 
 <a name="kerberosreadconfig"></a>
 # **KerberosReadConfig**
+
 > void KerberosReadConfig (string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null)
 
 
@@ -12777,6 +13142,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.KerberosReadConfig(string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -12818,6 +13184,7 @@ No authorization required
 
 <a name="kerberosreadgroup"></a>
 # **KerberosReadGroup**
+
 > void KerberosReadGroup (string name, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null)
 
 
@@ -12848,6 +13215,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.KerberosReadGroup(string name, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -12890,6 +13258,7 @@ No authorization required
 
 <a name="kerberosreadldapconfig"></a>
 # **KerberosReadLDAPConfig**
+
 > void KerberosReadLDAPConfig (string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null)
 
 
@@ -12919,6 +13288,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.KerberosReadLDAPConfig(string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -12960,6 +13330,7 @@ No authorization required
 
 <a name="kerberoswriteconfig"></a>
 # **KerberosWriteConfig**
+
 > void KerberosWriteConfig (KerberosWriteConfigRequest kerberosWriteConfigRequest, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null)
 
 
@@ -12990,6 +13361,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.KerberosWriteConfig(KerberosWriteConfigRequest kerberosWriteConfigRequest, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -13032,7 +13404,8 @@ No authorization required
 
 <a name="kerberoswritegroup"></a>
 # **KerberosWriteGroup**
-> void KerberosWriteGroup (KerberosWriteGroupRequest kerberosWriteGroupRequest, string name, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null)
+
+> void KerberosWriteGroup (string name, KerberosWriteGroupRequest kerberosWriteGroupRequest, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null)
 
 
 
@@ -13063,7 +13436,8 @@ namespace Example
 
             try
             {
-                apiInstance.KerberosWriteGroup(KerberosWriteGroupRequest kerberosWriteGroupRequest, string name, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
+
+                apiInstance.KerberosWriteGroup(string name, KerberosWriteGroupRequest kerberosWriteGroupRequest, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13106,6 +13480,7 @@ No authorization required
 
 <a name="kerberoswriteldapconfig"></a>
 # **KerberosWriteLDAPConfig**
+
 > void KerberosWriteLDAPConfig (KerberosWriteLDAPConfigRequest kerberosWriteLDAPConfigRequest, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null)
 
 
@@ -13136,6 +13511,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.KerberosWriteLDAPConfig(KerberosWriteLDAPConfigRequest kerberosWriteLDAPConfigRequest, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -13178,6 +13554,7 @@ No authorization required
 
 <a name="kubernetesdeleteauthrole"></a>
 # **KubernetesDeleteAuthRole**
+
 > void KubernetesDeleteAuthRole (string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
 
 Register an role with the backend.
@@ -13209,6 +13586,7 @@ namespace Example
             try
             {
                 // Register an role with the backend.
+
                 apiInstance.KubernetesDeleteAuthRole(string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -13251,6 +13629,7 @@ No authorization required
 
 <a name="kuberneteslistauthroles"></a>
 # **KubernetesListAuthRoles**
+
 > void KubernetesListAuthRoles (string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
 
 Lists all the roles registered with the backend.
@@ -13282,6 +13661,7 @@ namespace Example
             try
             {
                 // Lists all the roles registered with the backend.
+
                 apiInstance.KubernetesListAuthRoles(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -13324,6 +13704,7 @@ No authorization required
 
 <a name="kuberneteslogin"></a>
 # **KubernetesLogin**
+
 > void KubernetesLogin (KubernetesLoginRequest kubernetesLoginRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
 
 Authenticates Kubernetes service accounts with Vault.
@@ -13355,6 +13736,7 @@ namespace Example
             try
             {
                 // Authenticates Kubernetes service accounts with Vault.
+
                 apiInstance.KubernetesLogin(KubernetesLoginRequest kubernetesLoginRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -13397,6 +13779,7 @@ No authorization required
 
 <a name="kubernetesreadauthconfig"></a>
 # **KubernetesReadAuthConfig**
+
 > void KubernetesReadAuthConfig (string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
 
 Configures the JWT Public Key and Kubernetes API information.
@@ -13427,6 +13810,7 @@ namespace Example
             try
             {
                 // Configures the JWT Public Key and Kubernetes API information.
+
                 apiInstance.KubernetesReadAuthConfig(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -13468,6 +13852,7 @@ No authorization required
 
 <a name="kubernetesreadauthrole"></a>
 # **KubernetesReadAuthRole**
+
 > void KubernetesReadAuthRole (string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
 
 Register an role with the backend.
@@ -13499,6 +13884,7 @@ namespace Example
             try
             {
                 // Register an role with the backend.
+
                 apiInstance.KubernetesReadAuthRole(string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -13541,6 +13927,7 @@ No authorization required
 
 <a name="kuberneteswriteauthconfig"></a>
 # **KubernetesWriteAuthConfig**
+
 > void KubernetesWriteAuthConfig (KubernetesWriteAuthConfigRequest kubernetesWriteAuthConfigRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
 
 Configures the JWT Public Key and Kubernetes API information.
@@ -13572,6 +13959,7 @@ namespace Example
             try
             {
                 // Configures the JWT Public Key and Kubernetes API information.
+
                 apiInstance.KubernetesWriteAuthConfig(KubernetesWriteAuthConfigRequest kubernetesWriteAuthConfigRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -13614,7 +14002,8 @@ No authorization required
 
 <a name="kuberneteswriteauthrole"></a>
 # **KubernetesWriteAuthRole**
-> void KubernetesWriteAuthRole (KubernetesWriteAuthRoleRequest kubernetesWriteAuthRoleRequest, string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
+
+> void KubernetesWriteAuthRole (string name, KubernetesWriteAuthRoleRequest kubernetesWriteAuthRoleRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
 
 Register an role with the backend.
 
@@ -13646,7 +14035,8 @@ namespace Example
             try
             {
                 // Register an role with the backend.
-                apiInstance.KubernetesWriteAuthRole(KubernetesWriteAuthRoleRequest kubernetesWriteAuthRoleRequest, string name, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
+
+                apiInstance.KubernetesWriteAuthRole(string name, KubernetesWriteAuthRoleRequest kubernetesWriteAuthRoleRequest, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -13689,6 +14079,7 @@ No authorization required
 
 <a name="ldapdeletegroup"></a>
 # **LDAPDeleteGroup**
+
 > void LDAPDeleteGroup (string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
 
 Manage additional groups for users allowed to authenticate.
@@ -13720,6 +14111,7 @@ namespace Example
             try
             {
                 // Manage additional groups for users allowed to authenticate.
+
                 apiInstance.LDAPDeleteGroup(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -13762,6 +14154,7 @@ No authorization required
 
 <a name="ldapdeleteuser"></a>
 # **LDAPDeleteUser**
+
 > void LDAPDeleteUser (string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
@@ -13793,6 +14186,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
+
                 apiInstance.LDAPDeleteUser(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -13835,6 +14229,7 @@ No authorization required
 
 <a name="ldaplistgroups"></a>
 # **LDAPListGroups**
+
 > void LDAPListGroups (string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
 
 Manage additional groups for users allowed to authenticate.
@@ -13866,6 +14261,7 @@ namespace Example
             try
             {
                 // Manage additional groups for users allowed to authenticate.
+
                 apiInstance.LDAPListGroups(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -13908,6 +14304,7 @@ No authorization required
 
 <a name="ldaplistusers"></a>
 # **LDAPListUsers**
+
 > void LDAPListUsers (string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
@@ -13939,6 +14336,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
+
                 apiInstance.LDAPListUsers(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -13981,7 +14379,8 @@ No authorization required
 
 <a name="ldaplogin"></a>
 # **LDAPLogin**
-> void LDAPLogin (LDAPLoginRequest lDAPLoginRequest, string username, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
+
+> void LDAPLogin (string username, LDAPLoginRequest lDAPLoginRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
 
 Log in with a username and password.
 
@@ -14013,7 +14412,8 @@ namespace Example
             try
             {
                 // Log in with a username and password.
-                apiInstance.LDAPLogin(LDAPLoginRequest lDAPLoginRequest, string username, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
+
+                apiInstance.LDAPLogin(string username, LDAPLoginRequest lDAPLoginRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14056,6 +14456,7 @@ No authorization required
 
 <a name="ldapreadauthconfig"></a>
 # **LDAPReadAuthConfig**
+
 > void LDAPReadAuthConfig (string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
 
 Configure the LDAP server to connect to, along with its options.
@@ -14086,6 +14487,7 @@ namespace Example
             try
             {
                 // Configure the LDAP server to connect to, along with its options.
+
                 apiInstance.LDAPReadAuthConfig(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -14127,6 +14529,7 @@ No authorization required
 
 <a name="ldapreadgroup"></a>
 # **LDAPReadGroup**
+
 > void LDAPReadGroup (string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
 
 Manage additional groups for users allowed to authenticate.
@@ -14158,6 +14561,7 @@ namespace Example
             try
             {
                 // Manage additional groups for users allowed to authenticate.
+
                 apiInstance.LDAPReadGroup(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -14200,6 +14604,7 @@ No authorization required
 
 <a name="ldapreaduser"></a>
 # **LDAPReadUser**
+
 > void LDAPReadUser (string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
@@ -14231,6 +14636,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
+
                 apiInstance.LDAPReadUser(string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -14273,6 +14679,7 @@ No authorization required
 
 <a name="ldapwriteauthconfig"></a>
 # **LDAPWriteAuthConfig**
+
 > void LDAPWriteAuthConfig (LDAPWriteAuthConfigRequest lDAPWriteAuthConfigRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
 
 Configure the LDAP server to connect to, along with its options.
@@ -14304,6 +14711,7 @@ namespace Example
             try
             {
                 // Configure the LDAP server to connect to, along with its options.
+
                 apiInstance.LDAPWriteAuthConfig(LDAPWriteAuthConfigRequest lDAPWriteAuthConfigRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -14346,7 +14754,8 @@ No authorization required
 
 <a name="ldapwritegroup"></a>
 # **LDAPWriteGroup**
-> void LDAPWriteGroup (LDAPWriteGroupRequest lDAPWriteGroupRequest, string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
+
+> void LDAPWriteGroup (string name, LDAPWriteGroupRequest lDAPWriteGroupRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
 
 Manage additional groups for users allowed to authenticate.
 
@@ -14378,7 +14787,8 @@ namespace Example
             try
             {
                 // Manage additional groups for users allowed to authenticate.
-                apiInstance.LDAPWriteGroup(LDAPWriteGroupRequest lDAPWriteGroupRequest, string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
+
+                apiInstance.LDAPWriteGroup(string name, LDAPWriteGroupRequest lDAPWriteGroupRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14421,7 +14831,8 @@ No authorization required
 
 <a name="ldapwriteuser"></a>
 # **LDAPWriteUser**
-> void LDAPWriteUser (LDAPWriteUserRequest lDAPWriteUserRequest, string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
+
+> void LDAPWriteUser (string name, LDAPWriteUserRequest lDAPWriteUserRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
 
@@ -14453,7 +14864,8 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.LDAPWriteUser(LDAPWriteUserRequest lDAPWriteUserRequest, string name, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
+
+                apiInstance.LDAPWriteUser(string name, LDAPWriteUserRequest lDAPWriteUserRequest, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14496,6 +14908,7 @@ No authorization required
 
 <a name="ocideleteconfig"></a>
 # **OCIDeleteConfig**
+
 > void OCIDeleteConfig (string ociMountPath = "oci", TimeSpan? wrapTTL = null)
 
 Manages the configuration for the Vault Auth Plugin.
@@ -14526,6 +14939,7 @@ namespace Example
             try
             {
                 // Manages the configuration for the Vault Auth Plugin.
+
                 apiInstance.OCIDeleteConfig(string ociMountPath = "oci", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -14567,6 +14981,7 @@ No authorization required
 
 <a name="ocideleterole"></a>
 # **OCIDeleteRole**
+
 > void OCIDeleteRole (string role, string ociMountPath = "oci", TimeSpan? wrapTTL = null)
 
 Create a role and associate policies to it.
@@ -14598,6 +15013,7 @@ namespace Example
             try
             {
                 // Create a role and associate policies to it.
+
                 apiInstance.OCIDeleteRole(string role, string ociMountPath = "oci", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -14640,6 +15056,7 @@ No authorization required
 
 <a name="ocilistroles"></a>
 # **OCIListRoles**
+
 > void OCIListRoles (string ociMountPath = "oci", TimeSpan? wrapTTL = null)
 
 Lists all the roles that are registered with Vault.
@@ -14671,6 +15088,7 @@ namespace Example
             try
             {
                 // Lists all the roles that are registered with Vault.
+
                 apiInstance.OCIListRoles(string ociMountPath = "oci", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -14713,7 +15131,8 @@ No authorization required
 
 <a name="ociloginwithrole"></a>
 # **OCILoginWithRole**
-> void OCILoginWithRole (OCILoginWithRoleRequest oCILoginWithRoleRequest, string role, string ociMountPath = "oci", TimeSpan? wrapTTL = null)
+
+> void OCILoginWithRole (string role, OCILoginWithRoleRequest oCILoginWithRoleRequest, string ociMountPath = "oci", TimeSpan? wrapTTL = null)
 
 Authenticates to Vault using OCI credentials
 
@@ -14745,7 +15164,8 @@ namespace Example
             try
             {
                 // Authenticates to Vault using OCI credentials
-                apiInstance.OCILoginWithRole(OCILoginWithRoleRequest oCILoginWithRoleRequest, string role, string ociMountPath = "oci", TimeSpan? wrapTTL = null);
+
+                apiInstance.OCILoginWithRole(string role, OCILoginWithRoleRequest oCILoginWithRoleRequest, string ociMountPath = "oci", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -14788,6 +15208,7 @@ No authorization required
 
 <a name="ocireadconfig"></a>
 # **OCIReadConfig**
+
 > void OCIReadConfig (string ociMountPath = "oci", TimeSpan? wrapTTL = null)
 
 Manages the configuration for the Vault Auth Plugin.
@@ -14818,6 +15239,7 @@ namespace Example
             try
             {
                 // Manages the configuration for the Vault Auth Plugin.
+
                 apiInstance.OCIReadConfig(string ociMountPath = "oci", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -14859,6 +15281,7 @@ No authorization required
 
 <a name="ocireadrole"></a>
 # **OCIReadRole**
+
 > void OCIReadRole (string role, string ociMountPath = "oci", TimeSpan? wrapTTL = null)
 
 Create a role and associate policies to it.
@@ -14890,6 +15313,7 @@ namespace Example
             try
             {
                 // Create a role and associate policies to it.
+
                 apiInstance.OCIReadRole(string role, string ociMountPath = "oci", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -14932,6 +15356,7 @@ No authorization required
 
 <a name="ociwriteconfig"></a>
 # **OCIWriteConfig**
+
 > void OCIWriteConfig (OCIWriteConfigRequest oCIWriteConfigRequest, string ociMountPath = "oci", TimeSpan? wrapTTL = null)
 
 Manages the configuration for the Vault Auth Plugin.
@@ -14963,6 +15388,7 @@ namespace Example
             try
             {
                 // Manages the configuration for the Vault Auth Plugin.
+
                 apiInstance.OCIWriteConfig(OCIWriteConfigRequest oCIWriteConfigRequest, string ociMountPath = "oci", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -15005,7 +15431,8 @@ No authorization required
 
 <a name="ociwriterole"></a>
 # **OCIWriteRole**
-> void OCIWriteRole (OCIWriteRoleRequest oCIWriteRoleRequest, string role, string ociMountPath = "oci", TimeSpan? wrapTTL = null)
+
+> void OCIWriteRole (string role, OCIWriteRoleRequest oCIWriteRoleRequest, string ociMountPath = "oci", TimeSpan? wrapTTL = null)
 
 Create a role and associate policies to it.
 
@@ -15037,7 +15464,8 @@ namespace Example
             try
             {
                 // Create a role and associate policies to it.
-                apiInstance.OCIWriteRole(OCIWriteRoleRequest oCIWriteRoleRequest, string role, string ociMountPath = "oci", TimeSpan? wrapTTL = null);
+
+                apiInstance.OCIWriteRole(string role, OCIWriteRoleRequest oCIWriteRoleRequest, string ociMountPath = "oci", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15080,6 +15508,7 @@ No authorization required
 
 <a name="oidcdeleteauthrole"></a>
 # **OIDCDeleteAuthRole**
+
 > void OIDCDeleteAuthRole (string name, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null)
 
 Delete an existing role.
@@ -15111,6 +15540,7 @@ namespace Example
             try
             {
                 // Delete an existing role.
+
                 apiInstance.OIDCDeleteAuthRole(string name, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -15153,6 +15583,7 @@ No authorization required
 
 <a name="oidclistauthroles"></a>
 # **OIDCListAuthRoles**
+
 > void OIDCListAuthRoles (string oidcMountPath = "oidc", TimeSpan? wrapTTL = null)
 
 Lists all the roles registered with the backend.
@@ -15186,6 +15617,7 @@ namespace Example
             try
             {
                 // Lists all the roles registered with the backend.
+
                 apiInstance.OIDCListAuthRoles(string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -15228,6 +15660,7 @@ No authorization required
 
 <a name="oidclogin"></a>
 # **OIDCLogin**
+
 > void OIDCLogin (OIDCLoginRequest oIDCLoginRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null)
 
 Authenticates to Vault using a JWT (or OIDC) token.
@@ -15259,6 +15692,7 @@ namespace Example
             try
             {
                 // Authenticates to Vault using a JWT (or OIDC) token.
+
                 apiInstance.OIDCLogin(OIDCLoginRequest oIDCLoginRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -15301,6 +15735,7 @@ No authorization required
 
 <a name="oidcreadauthconfig"></a>
 # **OIDCReadAuthConfig**
+
 > void OIDCReadAuthConfig (string oidcMountPath = "oidc", TimeSpan? wrapTTL = null)
 
 Read the current JWT authentication backend configuration.
@@ -15331,6 +15766,7 @@ namespace Example
             try
             {
                 // Read the current JWT authentication backend configuration.
+
                 apiInstance.OIDCReadAuthConfig(string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -15372,6 +15808,7 @@ No authorization required
 
 <a name="oidcreadauthrole"></a>
 # **OIDCReadAuthRole**
+
 > void OIDCReadAuthRole (string name, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null)
 
 Read an existing role.
@@ -15403,6 +15840,7 @@ namespace Example
             try
             {
                 // Read an existing role.
+
                 apiInstance.OIDCReadAuthRole(string name, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -15445,6 +15883,7 @@ No authorization required
 
 <a name="oidcreadcallback"></a>
 # **OIDCReadCallback**
+
 > void OIDCReadCallback (string oidcMountPath = "oidc", TimeSpan? wrapTTL = null)
 
 Callback endpoint to complete an OIDC login.
@@ -15475,6 +15914,7 @@ namespace Example
             try
             {
                 // Callback endpoint to complete an OIDC login.
+
                 apiInstance.OIDCReadCallback(string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -15516,6 +15956,7 @@ No authorization required
 
 <a name="oidcwriteauthconfig"></a>
 # **OIDCWriteAuthConfig**
+
 > void OIDCWriteAuthConfig (OIDCWriteAuthConfigRequest oIDCWriteAuthConfigRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null)
 
 Configure the JWT authentication backend.
@@ -15549,6 +15990,7 @@ namespace Example
             try
             {
                 // Configure the JWT authentication backend.
+
                 apiInstance.OIDCWriteAuthConfig(OIDCWriteAuthConfigRequest oIDCWriteAuthConfigRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -15591,7 +16033,8 @@ No authorization required
 
 <a name="oidcwriteauthrole"></a>
 # **OIDCWriteAuthRole**
-> void OIDCWriteAuthRole (OIDCWriteAuthRoleRequest oIDCWriteAuthRoleRequest, string name, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null)
+
+> void OIDCWriteAuthRole (string name, OIDCWriteAuthRoleRequest oIDCWriteAuthRoleRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null)
 
 Register an role with the backend.
 
@@ -15625,7 +16068,8 @@ namespace Example
             try
             {
                 // Register an role with the backend.
-                apiInstance.OIDCWriteAuthRole(OIDCWriteAuthRoleRequest oIDCWriteAuthRoleRequest, string name, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
+
+                apiInstance.OIDCWriteAuthRole(string name, OIDCWriteAuthRoleRequest oIDCWriteAuthRoleRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -15668,6 +16112,7 @@ No authorization required
 
 <a name="oidcwriteauthurl"></a>
 # **OIDCWriteAuthURL**
+
 > void OIDCWriteAuthURL (OIDCWriteAuthURLRequest oIDCWriteAuthURLRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null)
 
 Request an authorization URL to start an OIDC login flow.
@@ -15699,6 +16144,7 @@ namespace Example
             try
             {
                 // Request an authorization URL to start an OIDC login flow.
+
                 apiInstance.OIDCWriteAuthURL(OIDCWriteAuthURLRequest oIDCWriteAuthURLRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -15741,6 +16187,7 @@ No authorization required
 
 <a name="oidcwritecallback"></a>
 # **OIDCWriteCallback**
+
 > void OIDCWriteCallback (OIDCWriteCallbackRequest oIDCWriteCallbackRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null)
 
 Callback endpoint to handle form_posts.
@@ -15772,6 +16219,7 @@ namespace Example
             try
             {
                 // Callback endpoint to handle form_posts.
+
                 apiInstance.OIDCWriteCallback(OIDCWriteCallbackRequest oIDCWriteCallbackRequest, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -15814,6 +16262,7 @@ No authorization required
 
 <a name="oktadeletegroup"></a>
 # **OktaDeleteGroup**
+
 > void OktaDeleteGroup (string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
@@ -15845,6 +16294,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
+
                 apiInstance.OktaDeleteGroup(string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -15887,6 +16337,7 @@ No authorization required
 
 <a name="oktadeleteuser"></a>
 # **OktaDeleteUser**
+
 > void OktaDeleteUser (string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
 
 Manage additional groups for users allowed to authenticate.
@@ -15918,6 +16369,7 @@ namespace Example
             try
             {
                 // Manage additional groups for users allowed to authenticate.
+
                 apiInstance.OktaDeleteUser(string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -15960,6 +16412,7 @@ No authorization required
 
 <a name="oktalistgroups"></a>
 # **OktaListGroups**
+
 > void OktaListGroups (string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
@@ -15991,6 +16444,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
+
                 apiInstance.OktaListGroups(string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -16033,6 +16487,7 @@ No authorization required
 
 <a name="oktalistusers"></a>
 # **OktaListUsers**
+
 > void OktaListUsers (string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
 
 Manage additional groups for users allowed to authenticate.
@@ -16064,6 +16519,7 @@ namespace Example
             try
             {
                 // Manage additional groups for users allowed to authenticate.
+
                 apiInstance.OktaListUsers(string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -16106,7 +16562,8 @@ No authorization required
 
 <a name="oktalogin"></a>
 # **OktaLogin**
-> void OktaLogin (OktaLoginRequest oktaLoginRequest, string username, string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
+
+> void OktaLogin (string username, OktaLoginRequest oktaLoginRequest, string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
 
 Log in with a username and password.
 
@@ -16138,7 +16595,8 @@ namespace Example
             try
             {
                 // Log in with a username and password.
-                apiInstance.OktaLogin(OktaLoginRequest oktaLoginRequest, string username, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
+
+                apiInstance.OktaLogin(string username, OktaLoginRequest oktaLoginRequest, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16181,6 +16639,7 @@ No authorization required
 
 <a name="oktareadconfig"></a>
 # **OktaReadConfig**
+
 > void OktaReadConfig (string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
 
 This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
@@ -16211,6 +16670,7 @@ namespace Example
             try
             {
                 // This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
+
                 apiInstance.OktaReadConfig(string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -16252,6 +16712,7 @@ No authorization required
 
 <a name="oktareadgroup"></a>
 # **OktaReadGroup**
+
 > void OktaReadGroup (string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
@@ -16283,6 +16744,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
+
                 apiInstance.OktaReadGroup(string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -16325,6 +16787,7 @@ No authorization required
 
 <a name="oktareaduser"></a>
 # **OktaReadUser**
+
 > void OktaReadUser (string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
 
 Manage additional groups for users allowed to authenticate.
@@ -16356,6 +16819,7 @@ namespace Example
             try
             {
                 // Manage additional groups for users allowed to authenticate.
+
                 apiInstance.OktaReadUser(string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -16398,6 +16862,7 @@ No authorization required
 
 <a name="oktaverify"></a>
 # **OktaVerify**
+
 > void OktaVerify (string nonce, string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
 
 
@@ -16428,6 +16893,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.OktaVerify(string nonce, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -16470,6 +16936,7 @@ No authorization required
 
 <a name="oktawriteconfig"></a>
 # **OktaWriteConfig**
+
 > void OktaWriteConfig (OktaWriteConfigRequest oktaWriteConfigRequest, string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
 
 This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
@@ -16501,6 +16968,7 @@ namespace Example
             try
             {
                 // This endpoint allows you to configure the Okta and its configuration options.  The Okta organization are the characters at the front of the URL for Okta. Example https://ORG.okta.com
+
                 apiInstance.OktaWriteConfig(OktaWriteConfigRequest oktaWriteConfigRequest, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -16543,7 +17011,8 @@ No authorization required
 
 <a name="oktawritegroup"></a>
 # **OktaWriteGroup**
-> void OktaWriteGroup (OktaWriteGroupRequest oktaWriteGroupRequest, string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
+
+> void OktaWriteGroup (string name, OktaWriteGroupRequest oktaWriteGroupRequest, string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
 
@@ -16575,7 +17044,8 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.OktaWriteGroup(OktaWriteGroupRequest oktaWriteGroupRequest, string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
+
+                apiInstance.OktaWriteGroup(string name, OktaWriteGroupRequest oktaWriteGroupRequest, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16618,7 +17088,8 @@ No authorization required
 
 <a name="oktawriteuser"></a>
 # **OktaWriteUser**
-> void OktaWriteUser (OktaWriteUserRequest oktaWriteUserRequest, string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
+
+> void OktaWriteUser (string name, OktaWriteUserRequest oktaWriteUserRequest, string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
 
 Manage additional groups for users allowed to authenticate.
 
@@ -16650,7 +17121,8 @@ namespace Example
             try
             {
                 // Manage additional groups for users allowed to authenticate.
-                apiInstance.OktaWriteUser(OktaWriteUserRequest oktaWriteUserRequest, string name, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
+
+                apiInstance.OktaWriteUser(string name, OktaWriteUserRequest oktaWriteUserRequest, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16693,6 +17165,7 @@ No authorization required
 
 <a name="radiusdeleteuser"></a>
 # **RadiusDeleteUser**
+
 > void RadiusDeleteUser (string name, string radiusMountPath = "radius", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
@@ -16724,6 +17197,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
+
                 apiInstance.RadiusDeleteUser(string name, string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -16766,6 +17240,7 @@ No authorization required
 
 <a name="radiuslistusers"></a>
 # **RadiusListUsers**
+
 > void RadiusListUsers (string radiusMountPath = "radius", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
@@ -16797,6 +17272,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
+
                 apiInstance.RadiusListUsers(string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -16839,6 +17315,7 @@ No authorization required
 
 <a name="radiuslogin"></a>
 # **RadiusLogin**
+
 > void RadiusLogin (RadiusLoginRequest radiusLoginRequest, string radiusMountPath = "radius", TimeSpan? wrapTTL = null)
 
 Log in with a username and password.
@@ -16870,6 +17347,7 @@ namespace Example
             try
             {
                 // Log in with a username and password.
+
                 apiInstance.RadiusLogin(RadiusLoginRequest radiusLoginRequest, string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -16912,7 +17390,8 @@ No authorization required
 
 <a name="radiusloginwithusername"></a>
 # **RadiusLoginWithUsername**
-> void RadiusLoginWithUsername (RadiusLoginWithUsernameRequest radiusLoginWithUsernameRequest, string urlusername, string radiusMountPath = "radius", TimeSpan? wrapTTL = null)
+
+> void RadiusLoginWithUsername (string urlusername, RadiusLoginWithUsernameRequest radiusLoginWithUsernameRequest, string radiusMountPath = "radius", TimeSpan? wrapTTL = null)
 
 Log in with a username and password.
 
@@ -16944,7 +17423,8 @@ namespace Example
             try
             {
                 // Log in with a username and password.
-                apiInstance.RadiusLoginWithUsername(RadiusLoginWithUsernameRequest radiusLoginWithUsernameRequest, string urlusername, string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
+
+                apiInstance.RadiusLoginWithUsername(string urlusername, RadiusLoginWithUsernameRequest radiusLoginWithUsernameRequest, string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -16987,6 +17467,7 @@ No authorization required
 
 <a name="radiusreadconfig"></a>
 # **RadiusReadConfig**
+
 > void RadiusReadConfig (string radiusMountPath = "radius", TimeSpan? wrapTTL = null)
 
 Configure the RADIUS server to connect to, along with its options.
@@ -17017,6 +17498,7 @@ namespace Example
             try
             {
                 // Configure the RADIUS server to connect to, along with its options.
+
                 apiInstance.RadiusReadConfig(string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -17058,6 +17540,7 @@ No authorization required
 
 <a name="radiusreaduser"></a>
 # **RadiusReadUser**
+
 > void RadiusReadUser (string name, string radiusMountPath = "radius", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
@@ -17089,6 +17572,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
+
                 apiInstance.RadiusReadUser(string name, string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -17131,6 +17615,7 @@ No authorization required
 
 <a name="radiuswriteconfig"></a>
 # **RadiusWriteConfig**
+
 > void RadiusWriteConfig (RadiusWriteConfigRequest radiusWriteConfigRequest, string radiusMountPath = "radius", TimeSpan? wrapTTL = null)
 
 Configure the RADIUS server to connect to, along with its options.
@@ -17162,6 +17647,7 @@ namespace Example
             try
             {
                 // Configure the RADIUS server to connect to, along with its options.
+
                 apiInstance.RadiusWriteConfig(RadiusWriteConfigRequest radiusWriteConfigRequest, string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -17204,7 +17690,8 @@ No authorization required
 
 <a name="radiuswriteuser"></a>
 # **RadiusWriteUser**
-> void RadiusWriteUser (RadiusWriteUserRequest radiusWriteUserRequest, string name, string radiusMountPath = "radius", TimeSpan? wrapTTL = null)
+
+> void RadiusWriteUser (string name, RadiusWriteUserRequest radiusWriteUserRequest, string radiusMountPath = "radius", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
 
@@ -17236,7 +17723,8 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.RadiusWriteUser(RadiusWriteUserRequest radiusWriteUserRequest, string name, string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
+
+                apiInstance.RadiusWriteUser(string name, RadiusWriteUserRequest radiusWriteUserRequest, string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -17279,6 +17767,7 @@ No authorization required
 
 <a name="tokendeleterole"></a>
 # **TokenDeleteRole**
+
 > void TokenDeleteRole (string roleName, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 
@@ -17309,6 +17798,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.TokenDeleteRole(string roleName, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -17351,6 +17841,7 @@ No authorization required
 
 <a name="tokenlistaccessors"></a>
 # **TokenListAccessors**
+
 > void TokenListAccessors (string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires 'sudo' capability in addition to 'list'.
@@ -17382,6 +17873,7 @@ namespace Example
             try
             {
                 // List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires 'sudo' capability in addition to 'list'.
+
                 apiInstance.TokenListAccessors(string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -17424,6 +17916,7 @@ No authorization required
 
 <a name="tokenlistroles"></a>
 # **TokenListRoles**
+
 > void TokenListRoles (string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint lists configured roles.
@@ -17455,6 +17948,7 @@ namespace Example
             try
             {
                 // This endpoint lists configured roles.
+
                 apiInstance.TokenListRoles(string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -17497,6 +17991,7 @@ No authorization required
 
 <a name="tokenreadlookup"></a>
 # **TokenReadLookup**
+
 > void TokenReadLookup (string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint will lookup a token and its properties.
@@ -17527,6 +18022,7 @@ namespace Example
             try
             {
                 // This endpoint will lookup a token and its properties.
+
                 apiInstance.TokenReadLookup(string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -17568,6 +18064,7 @@ No authorization required
 
 <a name="tokenreadlookupself"></a>
 # **TokenReadLookupSelf**
+
 > void TokenReadLookupSelf (string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint will lookup a token and its properties.
@@ -17598,6 +18095,7 @@ namespace Example
             try
             {
                 // This endpoint will lookup a token and its properties.
+
                 apiInstance.TokenReadLookupSelf(string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -17639,6 +18137,7 @@ No authorization required
 
 <a name="tokenreadrole"></a>
 # **TokenReadRole**
+
 > void TokenReadRole (string roleName, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 
@@ -17669,6 +18168,7 @@ namespace Example
 
             try
             {
+
                 apiInstance.TokenReadRole(string roleName, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -17711,6 +18211,7 @@ No authorization required
 
 <a name="tokenrenew"></a>
 # **TokenRenew**
+
 > void TokenRenew (TokenRenewRequest tokenRenewRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint will renew the given token and prevent expiration.
@@ -17742,6 +18243,7 @@ namespace Example
             try
             {
                 // This endpoint will renew the given token and prevent expiration.
+
                 apiInstance.TokenRenew(TokenRenewRequest tokenRenewRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -17784,6 +18286,7 @@ No authorization required
 
 <a name="tokenrenewaccessor"></a>
 # **TokenRenewAccessor**
+
 > void TokenRenewAccessor (TokenRenewAccessorRequest tokenRenewAccessorRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint will renew a token associated with the given accessor and its properties. Response will not contain the token ID.
@@ -17815,6 +18318,7 @@ namespace Example
             try
             {
                 // This endpoint will renew a token associated with the given accessor and its properties. Response will not contain the token ID.
+
                 apiInstance.TokenRenewAccessor(TokenRenewAccessorRequest tokenRenewAccessorRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -17857,6 +18361,7 @@ No authorization required
 
 <a name="tokenrenewself"></a>
 # **TokenRenewSelf**
+
 > void TokenRenewSelf (TokenRenewSelfRequest tokenRenewSelfRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint will renew the token used to call it and prevent expiration.
@@ -17888,6 +18393,7 @@ namespace Example
             try
             {
                 // This endpoint will renew the token used to call it and prevent expiration.
+
                 apiInstance.TokenRenewSelf(TokenRenewSelfRequest tokenRenewSelfRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -17930,6 +18436,7 @@ No authorization required
 
 <a name="tokenrevoke"></a>
 # **TokenRevoke**
+
 > void TokenRevoke (TokenRevokeRequest tokenRevokeRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint will delete the given token and all of its child tokens.
@@ -17961,6 +18468,7 @@ namespace Example
             try
             {
                 // This endpoint will delete the given token and all of its child tokens.
+
                 apiInstance.TokenRevoke(TokenRevokeRequest tokenRevokeRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -18003,6 +18511,7 @@ No authorization required
 
 <a name="tokenrevokeaccessor"></a>
 # **TokenRevokeAccessor**
+
 > void TokenRevokeAccessor (TokenRevokeAccessorRequest tokenRevokeAccessorRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint will delete the token associated with the accessor and all of its child tokens.
@@ -18034,6 +18543,7 @@ namespace Example
             try
             {
                 // This endpoint will delete the token associated with the accessor and all of its child tokens.
+
                 apiInstance.TokenRevokeAccessor(TokenRevokeAccessorRequest tokenRevokeAccessorRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -18076,6 +18586,7 @@ No authorization required
 
 <a name="tokenrevokeorphan"></a>
 # **TokenRevokeOrphan**
+
 > void TokenRevokeOrphan (TokenRevokeOrphanRequest tokenRevokeOrphanRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint will delete the token and orphan its child tokens.
@@ -18107,6 +18618,7 @@ namespace Example
             try
             {
                 // This endpoint will delete the token and orphan its child tokens.
+
                 apiInstance.TokenRevokeOrphan(TokenRevokeOrphanRequest tokenRevokeOrphanRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -18149,6 +18661,7 @@ No authorization required
 
 <a name="tokenrevokeself"></a>
 # **TokenRevokeSelf**
+
 > void TokenRevokeSelf (string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint will delete the token used to call it and all of its child tokens.
@@ -18179,6 +18692,7 @@ namespace Example
             try
             {
                 // This endpoint will delete the token used to call it and all of its child tokens.
+
                 apiInstance.TokenRevokeSelf(string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -18220,6 +18734,7 @@ No authorization required
 
 <a name="tokentidy"></a>
 # **TokenTidy**
+
 > void TokenTidy (string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
@@ -18250,6 +18765,7 @@ namespace Example
             try
             {
                 // This endpoint performs cleanup tasks that can be run if certain error conditions have occurred.
+
                 apiInstance.TokenTidy(string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -18291,6 +18807,7 @@ No authorization required
 
 <a name="tokenwritecreate"></a>
 # **TokenWriteCreate**
+
 > void TokenWriteCreate (TokenWriteCreateRequest tokenWriteCreateRequest, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null)
 
 The token create path is used to create new tokens.
@@ -18323,6 +18840,7 @@ namespace Example
             try
             {
                 // The token create path is used to create new tokens.
+
                 apiInstance.TokenWriteCreate(TokenWriteCreateRequest tokenWriteCreateRequest, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -18366,6 +18884,7 @@ No authorization required
 
 <a name="tokenwritecreateorphan"></a>
 # **TokenWriteCreateOrphan**
+
 > void TokenWriteCreateOrphan (TokenWriteCreateOrphanRequest tokenWriteCreateOrphanRequest, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null)
 
 The token create path is used to create new orphan tokens.
@@ -18398,6 +18917,7 @@ namespace Example
             try
             {
                 // The token create path is used to create new orphan tokens.
+
                 apiInstance.TokenWriteCreateOrphan(TokenWriteCreateOrphanRequest tokenWriteCreateOrphanRequest, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -18441,7 +18961,8 @@ No authorization required
 
 <a name="tokenwritecreatewithrole"></a>
 # **TokenWriteCreateWithRole**
-> void TokenWriteCreateWithRole (TokenWriteCreateWithRoleRequest tokenWriteCreateWithRoleRequest, string roleName, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null)
+
+> void TokenWriteCreateWithRole (string roleName, TokenWriteCreateWithRoleRequest tokenWriteCreateWithRoleRequest, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null)
 
 This token create path is used to create new tokens adhering to the given role.
 
@@ -18474,7 +18995,8 @@ namespace Example
             try
             {
                 // This token create path is used to create new tokens adhering to the given role.
-                apiInstance.TokenWriteCreateWithRole(TokenWriteCreateWithRoleRequest tokenWriteCreateWithRoleRequest, string roleName, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null);
+
+                apiInstance.TokenWriteCreateWithRole(string roleName, TokenWriteCreateWithRoleRequest tokenWriteCreateWithRoleRequest, string tokenMountPath = "token", string format = default(string), TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18518,6 +19040,7 @@ No authorization required
 
 <a name="tokenwritelookup"></a>
 # **TokenWriteLookup**
+
 > void TokenWriteLookup (TokenWriteLookupRequest tokenWriteLookupRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint will lookup a token and its properties.
@@ -18549,6 +19072,7 @@ namespace Example
             try
             {
                 // This endpoint will lookup a token and its properties.
+
                 apiInstance.TokenWriteLookup(TokenWriteLookupRequest tokenWriteLookupRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -18591,6 +19115,7 @@ No authorization required
 
 <a name="tokenwritelookupaccessor"></a>
 # **TokenWriteLookupAccessor**
+
 > void TokenWriteLookupAccessor (TokenWriteLookupAccessorRequest tokenWriteLookupAccessorRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint will lookup a token associated with the given accessor and its properties. Response will not contain the token ID.
@@ -18622,6 +19147,7 @@ namespace Example
             try
             {
                 // This endpoint will lookup a token associated with the given accessor and its properties. Response will not contain the token ID.
+
                 apiInstance.TokenWriteLookupAccessor(TokenWriteLookupAccessorRequest tokenWriteLookupAccessorRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -18664,6 +19190,7 @@ No authorization required
 
 <a name="tokenwritelookupself"></a>
 # **TokenWriteLookupSelf**
+
 > void TokenWriteLookupSelf (TokenWriteLookupSelfRequest tokenWriteLookupSelfRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 This endpoint will lookup a token and its properties.
@@ -18695,6 +19222,7 @@ namespace Example
             try
             {
                 // This endpoint will lookup a token and its properties.
+
                 apiInstance.TokenWriteLookupSelf(TokenWriteLookupSelfRequest tokenWriteLookupSelfRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -18737,7 +19265,8 @@ No authorization required
 
 <a name="tokenwriterole"></a>
 # **TokenWriteRole**
-> void TokenWriteRole (TokenWriteRoleRequest tokenWriteRoleRequest, string roleName, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
+
+> void TokenWriteRole (string roleName, TokenWriteRoleRequest tokenWriteRoleRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
 
 
 
@@ -18768,7 +19297,8 @@ namespace Example
 
             try
             {
-                apiInstance.TokenWriteRole(TokenWriteRoleRequest tokenWriteRoleRequest, string roleName, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
+
+                apiInstance.TokenWriteRole(string roleName, TokenWriteRoleRequest tokenWriteRoleRequest, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -18811,6 +19341,7 @@ No authorization required
 
 <a name="userpassdeleteuser"></a>
 # **UserpassDeleteUser**
+
 > void UserpassDeleteUser (string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
@@ -18842,6 +19373,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
+
                 apiInstance.UserpassDeleteUser(string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -18884,6 +19416,7 @@ No authorization required
 
 <a name="userpasslistusers"></a>
 # **UserpassListUsers**
+
 > void UserpassListUsers (string userpassMountPath = "userpass", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
@@ -18915,6 +19448,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
+
                 apiInstance.UserpassListUsers(string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -18957,7 +19491,8 @@ No authorization required
 
 <a name="userpasslogin"></a>
 # **UserpassLogin**
-> void UserpassLogin (UserpassLoginRequest userpassLoginRequest, string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null)
+
+> void UserpassLogin (string username, UserpassLoginRequest userpassLoginRequest, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null)
 
 Log in with a username and password.
 
@@ -18989,7 +19524,8 @@ namespace Example
             try
             {
                 // Log in with a username and password.
-                apiInstance.UserpassLogin(UserpassLoginRequest userpassLoginRequest, string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
+
+                apiInstance.UserpassLogin(string username, UserpassLoginRequest userpassLoginRequest, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -19032,6 +19568,7 @@ No authorization required
 
 <a name="userpassreaduser"></a>
 # **UserpassReadUser**
+
 > void UserpassReadUser (string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
@@ -19063,6 +19600,7 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
+
                 apiInstance.UserpassReadUser(string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
@@ -19105,7 +19643,8 @@ No authorization required
 
 <a name="userpasswriteuser"></a>
 # **UserpassWriteUser**
-> void UserpassWriteUser (UserpassWriteUserRequest userpassWriteUserRequest, string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null)
+
+> void UserpassWriteUser (string username, UserpassWriteUserRequest userpassWriteUserRequest, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null)
 
 Manage users allowed to authenticate.
 
@@ -19137,7 +19676,8 @@ namespace Example
             try
             {
                 // Manage users allowed to authenticate.
-                apiInstance.UserpassWriteUser(UserpassWriteUserRequest userpassWriteUserRequest, string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
+
+                apiInstance.UserpassWriteUser(string username, UserpassWriteUserRequest userpassWriteUserRequest, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -19180,7 +19720,8 @@ No authorization required
 
 <a name="userpasswriteuserpassword"></a>
 # **UserpassWriteUserPassword**
-> void UserpassWriteUserPassword (UserpassWriteUserPasswordRequest userpassWriteUserPasswordRequest, string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null)
+
+> void UserpassWriteUserPassword (string username, UserpassWriteUserPasswordRequest userpassWriteUserPasswordRequest, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null)
 
 Reset user's password.
 
@@ -19212,7 +19753,8 @@ namespace Example
             try
             {
                 // Reset user's password.
-                apiInstance.UserpassWriteUserPassword(UserpassWriteUserPasswordRequest userpassWriteUserPasswordRequest, string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
+
+                apiInstance.UserpassWriteUserPassword(string username, UserpassWriteUserPasswordRequest userpassWriteUserPasswordRequest, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
@@ -19255,7 +19797,8 @@ No authorization required
 
 <a name="userpasswriteuserpolicies"></a>
 # **UserpassWriteUserPolicies**
-> void UserpassWriteUserPolicies (UserpassWriteUserPoliciesRequest userpassWriteUserPoliciesRequest, string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null)
+
+> void UserpassWriteUserPolicies (string username, UserpassWriteUserPoliciesRequest userpassWriteUserPoliciesRequest, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null)
 
 Update the policies associated with the username.
 
@@ -19287,7 +19830,8 @@ namespace Example
             try
             {
                 // Update the policies associated with the username.
-                apiInstance.UserpassWriteUserPolicies(UserpassWriteUserPoliciesRequest userpassWriteUserPoliciesRequest, string username, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
+
+                apiInstance.UserpassWriteUserPolicies(string username, UserpassWriteUserPoliciesRequest userpassWriteUserPoliciesRequest, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
             }
             catch (ApiException  e)
             {
