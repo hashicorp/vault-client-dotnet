@@ -30,8 +30,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="calculateAuditHashRequest"></param>
+        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -397,7 +397,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -406,7 +405,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> ListConfigUIHeaders(string list, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> ListConfigUIHeaders(TimeSpan? wrapTTL = null);
         /// <summary>
         /// Returns a list of lease ids.
         /// </summary>
@@ -415,7 +414,6 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="prefix">The path to list leases under. Example: \&quot;aws/creds/deploy\&quot;</param>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -424,7 +422,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> ListLeasesLookupPrefix(string prefix, string list, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> ListLeasesLookupPrefix(string prefix, TimeSpan? wrapTTL = null);
         /// <summary>
         /// List the plugins in the catalog.
         /// </summary>
@@ -433,7 +431,6 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -442,7 +439,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> ListPluginsCatalogByType(string type, string list, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> ListPluginsCatalogByType(string type, TimeSpan? wrapTTL = null);
         /// <summary>
         /// List the configured access control policies.
         /// </summary>
@@ -450,7 +447,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -459,7 +455,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> ListPoliciesACL(string list, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> ListPoliciesACL(TimeSpan? wrapTTL = null);
         /// <summary>
         /// List the existing password policies.
         /// </summary>
@@ -467,7 +463,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -476,7 +471,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> ListPoliciesPassword(string list, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> ListPoliciesPassword(TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -484,7 +479,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -493,7 +487,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> ListQuotasRateLimits(string list, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> ListQuotasRateLimits(TimeSpan? wrapTTL = null);
         /// <summary>
         /// Returns map of historical version change entries
         /// </summary>
@@ -501,7 +495,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -510,7 +503,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> ListVersionHistory(string list, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> ListVersionHistory(TimeSpan? wrapTTL = null);
         /// <summary>
         /// Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token
         /// </summary>
@@ -1729,8 +1722,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="renewForRequest"></param>
+        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1781,8 +1774,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="revokeLeaseRequest"></param>
+        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1799,8 +1792,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="revokePrefixRequest"></param>
+        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1882,7 +1875,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1891,7 +1883,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> SysListLeasesLookup(string list, TimeSpan? wrapTTL = null);
+        VaultResponse<Object> SysListLeasesLookup(TimeSpan? wrapTTL = null);
         /// <summary>
         /// Return the configuration data for the plugin with the given name.
         /// </summary>
@@ -1934,8 +1926,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
         /// <param name="sysWritePluginsCatalogNameRequest"></param>
+        /// <param name="name">The name of the plugin</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1952,8 +1944,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
         /// <param name="sysWriteToolsRandomUrlbytesRequest"></param>
+        /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1987,8 +1979,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
         /// <param name="toolsGenerateRandomSourceRequest"></param>
+        /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2005,9 +1997,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="toolsGenerateRandomSourceBytesRequest"></param>
         /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
         /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
-        /// <param name="toolsGenerateRandomSourceBytesRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2041,8 +2033,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
         /// <param name="toolsHashWithRequest"></param>
+        /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2159,8 +2151,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="writeAuditDeviceRequest"></param>
+        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2177,8 +2169,8 @@ namespace Vault.Api
         /// After enabling, the auth method can be accessed and configured via the auth path specified as part of the URL. This auth path will be nested under the auth prefix.  For example, enable the \&quot;foo\&quot; auth method will make it accessible at /auth/foo.
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <param name="writeAuthMethodRequest"></param>
+        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2195,8 +2187,8 @@ namespace Vault.Api
         /// This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">Tune the configuration parameters for an auth path.</param>
         /// <param name="writeAuthMethodTuneRequest"></param>
+        /// <param name="path">Tune the configuration parameters for an auth path.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2264,8 +2256,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="header"></param>
         /// <param name="writeConfigAuditingRequestHeaderRequest"></param>
+        /// <param name="header"></param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2316,8 +2308,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="header">The name of the header.</param>
         /// <param name="writeConfigUIHeaderRequest"></param>
+        /// <param name="header">The name of the header.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2453,8 +2445,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="writeLeasesRenew2Request"></param>
+        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2488,8 +2480,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="writeLeasesRevoke2Request"></param>
+        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2523,8 +2515,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="writeLeasesRevokePrefixRequest"></param>
+        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2557,8 +2549,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the logger to be modified.</param>
         /// <param name="writeLoggerRequest"></param>
+        /// <param name="name">The name of the logger to be modified.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2592,8 +2584,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="writeMountRequest"></param>
+        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2610,8 +2602,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="writeMountsConfigRequest"></param>
+        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2628,9 +2620,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="writePluginsCatalogByTypeByNameRequest"></param>
         /// <param name="name">The name of the plugin</param>
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <param name="writePluginsCatalogByTypeByNameRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2664,8 +2656,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="writePoliciesACLRequest"></param>
+        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2682,8 +2674,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the password policy.</param>
         /// <param name="writePoliciesPasswordRequest"></param>
+        /// <param name="name">The name of the password policy.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2700,8 +2692,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="writePolicyRequest"></param>
+        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2735,8 +2727,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the quota rule.</param>
         /// <param name="writeQuotasRateLimitRequest"></param>
+        /// <param name="name">Name of the quota rule.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2770,8 +2762,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path"></param>
         /// <param name="writeRawPathRequest"></param>
+        /// <param name="path"></param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2866,8 +2858,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="calculateAuditHashRequest"></param>
+        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -3277,7 +3269,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -3287,7 +3278,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> ListConfigUIHeadersAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListConfigUIHeadersAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Returns a list of lease ids.
@@ -3297,7 +3288,6 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="prefix">The path to list leases under. Example: \&quot;aws/creds/deploy\&quot;</param>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -3307,7 +3297,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> ListLeasesLookupPrefixAsync(string prefix, string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListLeasesLookupPrefixAsync(string prefix, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// List the plugins in the catalog.
@@ -3317,7 +3307,6 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -3327,7 +3316,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> ListPluginsCatalogByTypeAsync(string type, string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListPluginsCatalogByTypeAsync(string type, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// List the configured access control policies.
@@ -3336,7 +3325,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -3346,7 +3334,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> ListPoliciesACLAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListPoliciesACLAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// List the existing password policies.
@@ -3355,7 +3343,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -3365,7 +3352,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> ListPoliciesPasswordAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListPoliciesPasswordAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -3374,7 +3361,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -3384,7 +3370,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> ListQuotasRateLimitsAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListQuotasRateLimitsAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Returns map of historical version change entries
@@ -3393,7 +3379,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -3403,7 +3388,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> ListVersionHistoryAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> ListVersionHistoryAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Validates the login for the given MFA methods. Upon successful validation, it returns an auth response containing the client token
@@ -4771,8 +4756,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="renewForRequest"></param>
+        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -4829,8 +4814,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="revokeLeaseRequest"></param>
+        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -4849,8 +4834,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="revokePrefixRequest"></param>
+        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -4942,7 +4927,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -4952,7 +4936,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> SysListLeasesLookupAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> SysListLeasesLookupAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Return the configuration data for the plugin with the given name.
@@ -5000,8 +4984,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
         /// <param name="sysWritePluginsCatalogNameRequest"></param>
+        /// <param name="name">The name of the plugin</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5020,8 +5004,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
         /// <param name="sysWriteToolsRandomUrlbytesRequest"></param>
+        /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5059,8 +5043,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
         /// <param name="toolsGenerateRandomSourceRequest"></param>
+        /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5079,9 +5063,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="toolsGenerateRandomSourceBytesRequest"></param>
         /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
         /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
-        /// <param name="toolsGenerateRandomSourceBytesRequest"></param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5119,8 +5103,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
         /// <param name="toolsHashWithRequest"></param>
+        /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5251,8 +5235,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="writeAuditDeviceRequest"></param>
+        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5271,8 +5255,8 @@ namespace Vault.Api
         /// After enabling, the auth method can be accessed and configured via the auth path specified as part of the URL. This auth path will be nested under the auth prefix.  For example, enable the \&quot;foo\&quot; auth method will make it accessible at /auth/foo.
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <param name="writeAuthMethodRequest"></param>
+        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5291,8 +5275,8 @@ namespace Vault.Api
         /// This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">Tune the configuration parameters for an auth path.</param>
         /// <param name="writeAuthMethodTuneRequest"></param>
+        /// <param name="path">Tune the configuration parameters for an auth path.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5368,8 +5352,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="header"></param>
         /// <param name="writeConfigAuditingRequestHeaderRequest"></param>
+        /// <param name="header"></param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5426,8 +5410,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="header">The name of the header.</param>
         /// <param name="writeConfigUIHeaderRequest"></param>
+        /// <param name="header">The name of the header.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5579,8 +5563,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="writeLeasesRenew2Request"></param>
+        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5618,8 +5602,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="writeLeasesRevoke2Request"></param>
+        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5657,8 +5641,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="writeLeasesRevokePrefixRequest"></param>
+        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5695,8 +5679,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the logger to be modified.</param>
         /// <param name="writeLoggerRequest"></param>
+        /// <param name="name">The name of the logger to be modified.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5734,8 +5718,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="writeMountRequest"></param>
+        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5754,8 +5738,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="writeMountsConfigRequest"></param>
+        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5774,9 +5758,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="writePluginsCatalogByTypeByNameRequest"></param>
         /// <param name="name">The name of the plugin</param>
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <param name="writePluginsCatalogByTypeByNameRequest"></param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5814,8 +5798,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="writePoliciesACLRequest"></param>
+        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5834,8 +5818,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the password policy.</param>
         /// <param name="writePoliciesPasswordRequest"></param>
+        /// <param name="name">The name of the password policy.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5854,8 +5838,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="writePolicyRequest"></param>
+        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5893,8 +5877,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the quota rule.</param>
         /// <param name="writeQuotasRateLimitRequest"></param>
+        /// <param name="name">Name of the quota rule.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5932,8 +5916,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path"></param>
         /// <param name="writeRawPathRequest"></param>
+        /// <param name="path"></param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6097,8 +6081,8 @@ namespace Vault.Api
         /// The hash of the given string via the given audit backend 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="calculateAuditHashRequest"></param>
+        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -6158,8 +6142,8 @@ namespace Vault.Api
         /// The hash of the given string via the given audit backend 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="calculateAuditHashRequest"></param>
+        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8435,7 +8419,6 @@ namespace Vault.Api
         /// Return a list of configured UI headers. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -8444,12 +8427,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> ListConfigUIHeaders(string list, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> ListConfigUIHeaders(TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListConfigUIHeaders");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -8470,7 +8449,7 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/config/ui/headers/", requestOptions);
@@ -8489,7 +8468,6 @@ namespace Vault.Api
         /// Return a list of configured UI headers. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8499,12 +8477,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> ListConfigUIHeadersAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListConfigUIHeadersAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListConfigUIHeaders");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8526,7 +8500,7 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/config/ui/headers/", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -8546,7 +8520,6 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="prefix">The path to list leases under. Example: \&quot;aws/creds/deploy\&quot;</param>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -8555,15 +8528,11 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> ListLeasesLookupPrefix(string prefix, string list, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> ListLeasesLookupPrefix(string prefix, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
                 throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->ListLeasesLookupPrefix");
-
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListLeasesLookupPrefix");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8586,7 +8555,7 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/leases/lookup/{prefix}", requestOptions);
@@ -8606,7 +8575,6 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="prefix">The path to list leases under. Example: \&quot;aws/creds/deploy\&quot;</param>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8616,15 +8584,11 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> ListLeasesLookupPrefixAsync(string prefix, string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListLeasesLookupPrefixAsync(string prefix, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'prefix' is set
             if (prefix == null)
                 throw new VaultApiException(400, "Missing required parameter 'prefix' when calling System->ListLeasesLookupPrefix");
-
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListLeasesLookupPrefix");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8648,7 +8612,7 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("prefix", ClientUtils.ParameterToString(prefix)); // path parameter
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/leases/lookup/{prefix}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -8668,7 +8632,6 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -8677,15 +8640,11 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> ListPluginsCatalogByType(string type, string list, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> ListPluginsCatalogByType(string type, TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'type' is set
             if (type == null)
                 throw new VaultApiException(400, "Missing required parameter 'type' when calling System->ListPluginsCatalogByType");
-
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListPluginsCatalogByType");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8708,7 +8667,7 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/plugins/catalog/{type}", requestOptions);
@@ -8728,7 +8687,6 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8738,15 +8696,11 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> ListPluginsCatalogByTypeAsync(string type, string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListPluginsCatalogByTypeAsync(string type, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'type' is set
             if (type == null)
                 throw new VaultApiException(400, "Missing required parameter 'type' when calling System->ListPluginsCatalogByType");
-
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListPluginsCatalogByType");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -8770,7 +8724,7 @@ namespace Vault.Api
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
             requestOptions.PathParameters.Add("type", ClientUtils.ParameterToString(type)); // path parameter
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/plugins/catalog/{type}", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -8789,7 +8743,6 @@ namespace Vault.Api
         /// List the configured access control policies. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -8798,12 +8751,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> ListPoliciesACL(string list, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> ListPoliciesACL(TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListPoliciesACL");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -8824,7 +8773,7 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/policies/acl", requestOptions);
@@ -8843,7 +8792,6 @@ namespace Vault.Api
         /// List the configured access control policies. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8853,12 +8801,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> ListPoliciesACLAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListPoliciesACLAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListPoliciesACL");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8880,7 +8824,7 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/acl", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -8899,7 +8843,6 @@ namespace Vault.Api
         /// List the existing password policies. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -8908,12 +8851,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> ListPoliciesPassword(string list, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> ListPoliciesPassword(TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListPoliciesPassword");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -8934,7 +8873,7 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/policies/password", requestOptions);
@@ -8953,7 +8892,6 @@ namespace Vault.Api
         /// List the existing password policies. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8963,12 +8901,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> ListPoliciesPasswordAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListPoliciesPasswordAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListPoliciesPassword");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -8990,7 +8924,7 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/policies/password", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -9009,7 +8943,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -9018,12 +8951,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> ListQuotasRateLimits(string list, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> ListQuotasRateLimits(TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListQuotasRateLimits");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -9044,7 +8973,7 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/quotas/rate-limit", requestOptions);
@@ -9063,7 +8992,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -9073,12 +9001,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> ListQuotasRateLimitsAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListQuotasRateLimitsAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListQuotasRateLimits");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9100,7 +9024,7 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/quotas/rate-limit", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -9119,7 +9043,6 @@ namespace Vault.Api
         /// Returns map of historical version change entries 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -9128,12 +9051,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> ListVersionHistory(string list, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> ListVersionHistory(TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListVersionHistory");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -9154,7 +9073,7 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/version-history/", requestOptions);
@@ -9173,7 +9092,6 @@ namespace Vault.Api
         /// Returns map of historical version change entries 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -9183,12 +9101,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> ListVersionHistoryAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> ListVersionHistoryAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->ListVersionHistory");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -9210,7 +9124,7 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/version-history/", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -16799,8 +16713,8 @@ namespace Vault.Api
         /// Renews a lease, requesting to extend the lease. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="renewForRequest"></param>
+        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -16860,8 +16774,8 @@ namespace Vault.Api
         /// Renews a lease, requesting to extend the lease. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="renewForRequest"></param>
+        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -17145,8 +17059,8 @@ namespace Vault.Api
         /// Revokes a lease immediately. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="revokeLeaseRequest"></param>
+        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -17206,8 +17120,8 @@ namespace Vault.Api
         /// Revokes a lease immediately. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="revokeLeaseRequest"></param>
+        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -17269,8 +17183,8 @@ namespace Vault.Api
         /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="revokePrefixRequest"></param>
+        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -17330,8 +17244,8 @@ namespace Vault.Api
         /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="revokePrefixRequest"></param>
+        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -17797,7 +17711,6 @@ namespace Vault.Api
         /// Returns a list of lease ids. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -17806,12 +17719,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> SysListLeasesLookup(string list, TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> SysListLeasesLookup(TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->SysListLeasesLookup");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -17832,7 +17741,7 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/sys/leases/lookup/", requestOptions);
@@ -17851,7 +17760,6 @@ namespace Vault.Api
         /// Returns a list of lease ids. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -17861,12 +17769,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> SysListLeasesLookupAsync(string list, TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> SysListLeasesLookupAsync(TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling System->SysListLeasesLookup");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -17888,7 +17792,7 @@ namespace Vault.Api
             var accept = ClientUtils.SelectHeaderAccept(_accepts);
             if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
 
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/sys/leases/lookup/", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -18139,8 +18043,8 @@ namespace Vault.Api
         /// Register a new plugin, or updates an existing one with the supplied name. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
         /// <param name="sysWritePluginsCatalogNameRequest"></param>
+        /// <param name="name">The name of the plugin</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -18200,8 +18104,8 @@ namespace Vault.Api
         /// Register a new plugin, or updates an existing one with the supplied name. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the plugin</param>
         /// <param name="sysWritePluginsCatalogNameRequest"></param>
+        /// <param name="name">The name of the plugin</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -18263,8 +18167,8 @@ namespace Vault.Api
         /// Generate random bytes 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
         /// <param name="sysWriteToolsRandomUrlbytesRequest"></param>
+        /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -18324,8 +18228,8 @@ namespace Vault.Api
         /// Generate random bytes 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
         /// <param name="sysWriteToolsRandomUrlbytesRequest"></param>
+        /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -18499,8 +18403,8 @@ namespace Vault.Api
         /// Generate random bytes 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
         /// <param name="toolsGenerateRandomSourceRequest"></param>
+        /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -18560,8 +18464,8 @@ namespace Vault.Api
         /// Generate random bytes 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
         /// <param name="toolsGenerateRandomSourceRequest"></param>
+        /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -18623,9 +18527,9 @@ namespace Vault.Api
         /// Generate random bytes 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="toolsGenerateRandomSourceBytesRequest"></param>
         /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
         /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
-        /// <param name="toolsGenerateRandomSourceBytesRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -18690,9 +18594,9 @@ namespace Vault.Api
         /// Generate random bytes 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="toolsGenerateRandomSourceBytesRequest"></param>
         /// <param name="source">Which system to source random data from, ether \&quot;platform\&quot;, \&quot;seal\&quot;, or \&quot;all\&quot;.</param>
         /// <param name="urlbytes">The number of bytes to generate (POST URL parameter)</param>
-        /// <param name="toolsGenerateRandomSourceBytesRequest"></param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -18871,8 +18775,8 @@ namespace Vault.Api
         /// Generate a hash sum for input data 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
         /// <param name="toolsHashWithRequest"></param>
+        /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -18932,8 +18836,8 @@ namespace Vault.Api
         /// Generate a hash sum for input data 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
         /// <param name="toolsHashWithRequest"></param>
+        /// <param name="urlalgorithm">Algorithm to use (POST URL parameter)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -19639,8 +19543,8 @@ namespace Vault.Api
         /// Enable a new audit device at the supplied path. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="writeAuditDeviceRequest"></param>
+        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -19700,8 +19604,8 @@ namespace Vault.Api
         /// Enable a new audit device at the supplied path. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="writeAuditDeviceRequest"></param>
+        /// <param name="path">The name of the backend. Cannot be delimited. Example: \&quot;mysql\&quot;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -19763,8 +19667,8 @@ namespace Vault.Api
         /// Enables a new auth method. After enabling, the auth method can be accessed and configured via the auth path specified as part of the URL. This auth path will be nested under the auth prefix.  For example, enable the \&quot;foo\&quot; auth method will make it accessible at /auth/foo.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <param name="writeAuthMethodRequest"></param>
+        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -19824,8 +19728,8 @@ namespace Vault.Api
         /// Enables a new auth method. After enabling, the auth method can be accessed and configured via the auth path specified as part of the URL. This auth path will be nested under the auth prefix.  For example, enable the \&quot;foo\&quot; auth method will make it accessible at /auth/foo.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <param name="writeAuthMethodRequest"></param>
+        /// <param name="path">The path to mount to. Cannot be delimited. Example: \&quot;user\&quot;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -19887,8 +19791,8 @@ namespace Vault.Api
         /// Tune configuration parameters for a given auth path. This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">Tune the configuration parameters for an auth path.</param>
         /// <param name="writeAuthMethodTuneRequest"></param>
+        /// <param name="path">Tune the configuration parameters for an auth path.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -19948,8 +19852,8 @@ namespace Vault.Api
         /// Tune configuration parameters for a given auth path. This endpoint requires sudo capability on the final path, but the same functionality can be achieved without sudo via &#x60;sys/mounts/auth/[auth-path]/tune&#x60;.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">Tune the configuration parameters for an auth path.</param>
         /// <param name="writeAuthMethodTuneRequest"></param>
+        /// <param name="path">Tune the configuration parameters for an auth path.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -20347,8 +20251,8 @@ namespace Vault.Api
         /// Enable auditing of a header. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="header"></param>
         /// <param name="writeConfigAuditingRequestHeaderRequest"></param>
+        /// <param name="header"></param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -20408,8 +20312,8 @@ namespace Vault.Api
         /// Enable auditing of a header. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="header"></param>
         /// <param name="writeConfigAuditingRequestHeaderRequest"></param>
+        /// <param name="header"></param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -20693,8 +20597,8 @@ namespace Vault.Api
         /// Configure the values to be returned for the UI header. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="header">The name of the header.</param>
         /// <param name="writeConfigUIHeaderRequest"></param>
+        /// <param name="header">The name of the header.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -20754,8 +20658,8 @@ namespace Vault.Api
         /// Configure the values to be returned for the UI header. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="header">The name of the header.</param>
         /// <param name="writeConfigUIHeaderRequest"></param>
+        /// <param name="header">The name of the header.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -21601,8 +21505,8 @@ namespace Vault.Api
         /// Renews a lease, requesting to extend the lease. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="writeLeasesRenew2Request"></param>
+        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -21662,8 +21566,8 @@ namespace Vault.Api
         /// Renews a lease, requesting to extend the lease. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="writeLeasesRenew2Request"></param>
+        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -21837,8 +21741,8 @@ namespace Vault.Api
         /// Revokes a lease immediately. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="writeLeasesRevoke2Request"></param>
+        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -21898,8 +21802,8 @@ namespace Vault.Api
         /// Revokes a lease immediately. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="writeLeasesRevoke2Request"></param>
+        /// <param name="urlLeaseId">The lease identifier to renew. This is included with a lease.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -22071,8 +21975,8 @@ namespace Vault.Api
         /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="writeLeasesRevokePrefixRequest"></param>
+        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -22132,8 +22036,8 @@ namespace Vault.Api
         /// Revokes all secrets (via a lease ID prefix) or tokens (via the tokens&#39; path property) generated under a given prefix immediately. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="writeLeasesRevokePrefixRequest"></param>
+        /// <param name="prefix">The path to revoke keys under. Example: \&quot;prod/aws/ops\&quot;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -22293,8 +22197,8 @@ namespace Vault.Api
         /// Modify the log level of a single logger. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the logger to be modified.</param>
         /// <param name="writeLoggerRequest"></param>
+        /// <param name="name">The name of the logger to be modified.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -22354,8 +22258,8 @@ namespace Vault.Api
         /// Modify the log level of a single logger. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the logger to be modified.</param>
         /// <param name="writeLoggerRequest"></param>
+        /// <param name="name">The name of the logger to be modified.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -22529,8 +22433,8 @@ namespace Vault.Api
         /// Enable a new secrets engine at the given path. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="writeMountRequest"></param>
+        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -22590,8 +22494,8 @@ namespace Vault.Api
         /// Enable a new secrets engine at the given path. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="writeMountRequest"></param>
+        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -22653,8 +22557,8 @@ namespace Vault.Api
         /// Tune backend configuration parameters for this mount. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="writeMountsConfigRequest"></param>
+        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -22714,8 +22618,8 @@ namespace Vault.Api
         /// Tune backend configuration parameters for this mount. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="writeMountsConfigRequest"></param>
+        /// <param name="path">The path to mount to. Example: \&quot;aws/east\&quot;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -22777,9 +22681,9 @@ namespace Vault.Api
         /// Register a new plugin, or updates an existing one with the supplied name. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="writePluginsCatalogByTypeByNameRequest"></param>
         /// <param name="name">The name of the plugin</param>
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <param name="writePluginsCatalogByTypeByNameRequest"></param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -22844,9 +22748,9 @@ namespace Vault.Api
         /// Register a new plugin, or updates an existing one with the supplied name. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="writePluginsCatalogByTypeByNameRequest"></param>
         /// <param name="name">The name of the plugin</param>
         /// <param name="type">The type of the plugin, may be auth, secret, or database</param>
-        /// <param name="writePluginsCatalogByTypeByNameRequest"></param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -23025,8 +22929,8 @@ namespace Vault.Api
         /// Add a new or update an existing ACL policy. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="writePoliciesACLRequest"></param>
+        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -23086,8 +22990,8 @@ namespace Vault.Api
         /// Add a new or update an existing ACL policy. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="writePoliciesACLRequest"></param>
+        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -23149,8 +23053,8 @@ namespace Vault.Api
         /// Add a new or update an existing password policy. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the password policy.</param>
         /// <param name="writePoliciesPasswordRequest"></param>
+        /// <param name="name">The name of the password policy.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -23210,8 +23114,8 @@ namespace Vault.Api
         /// Add a new or update an existing password policy. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the password policy.</param>
         /// <param name="writePoliciesPasswordRequest"></param>
+        /// <param name="name">The name of the password policy.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -23273,8 +23177,8 @@ namespace Vault.Api
         /// Add a new or update an existing policy. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="writePolicyRequest"></param>
+        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -23334,8 +23238,8 @@ namespace Vault.Api
         /// Add a new or update an existing policy. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="writePolicyRequest"></param>
+        /// <param name="name">The name of the policy. Example: \&quot;ops\&quot;</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -23509,8 +23413,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the quota rule.</param>
         /// <param name="writeQuotasRateLimitRequest"></param>
+        /// <param name="name">Name of the quota rule.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -23570,8 +23474,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the quota rule.</param>
         /// <param name="writeQuotasRateLimitRequest"></param>
+        /// <param name="name">Name of the quota rule.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -23745,8 +23649,8 @@ namespace Vault.Api
         /// Update the value of the key at the given path. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path"></param>
         /// <param name="writeRawPathRequest"></param>
+        /// <param name="path"></param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -23806,8 +23710,8 @@ namespace Vault.Api
         /// Update the value of the key at the given path. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="path"></param>
         /// <param name="writeRawPathRequest"></param>
+        /// <param name="path"></param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>

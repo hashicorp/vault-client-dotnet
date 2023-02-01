@@ -30,8 +30,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="certName">Name of the certificate.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="certName">Name of the certificate.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -151,7 +151,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -161,7 +160,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> AWSConfigListCertificates(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> AWSConfigListCertificates(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -169,7 +168,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -179,7 +177,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> AWSConfigListSecurityTokenService(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> AWSConfigListSecurityTokenService(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -187,8 +185,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="certName">Name of the certificate.</param>
-        /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -342,9 +340,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="certName">Name of the certificate.</param>
         /// <param name="aWSConfigWriteCertificateRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="certName">Name of the certificate.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -469,8 +467,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="accountId">AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account.</param>
         /// <param name="aWSConfigWriteSecurityTokenServiceAccountRequest"></param>
+        /// <param name="accountId">AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -488,8 +486,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -506,8 +504,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -524,8 +522,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -542,8 +540,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -560,8 +558,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -578,7 +576,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -588,7 +585,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> AWSListAuthRoles(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> AWSListAuthRoles(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -596,7 +593,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -606,7 +602,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> AWSListAuthRoles2(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> AWSListAuthRoles2(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -614,7 +610,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -624,7 +619,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> AWSListIdentityAccessList(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> AWSListIdentityAccessList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -632,7 +627,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -642,7 +636,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> AWSListIdentityWhiteList(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> AWSListIdentityWhiteList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -650,7 +644,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -660,7 +653,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> AWSListRoleTagBlackList(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> AWSListRoleTagBlackList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -668,7 +661,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -678,7 +670,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> AWSListRoleTagDenyList(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> AWSListRoleTagDenyList(string awsMountPath = "aws", TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -704,8 +696,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -722,8 +714,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -740,8 +732,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -758,8 +750,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -776,8 +768,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -794,9 +786,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="aWSWriteAuthRoleRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -813,9 +805,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="aWSWriteAuthRoleTagRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -868,8 +860,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -904,8 +896,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -940,8 +932,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
+        /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -958,7 +950,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -968,7 +959,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> AliCloudListAuthRoles(string list, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> AliCloudListAuthRoles(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
         /// <summary>
         /// Lists all the roles that are registered with Vault.
         /// </summary>
@@ -976,7 +967,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -986,7 +976,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> AliCloudListAuthRoles2(string list, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> AliCloudListAuthRoles2(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null);
         /// <summary>
         /// Authenticates an RAM entity with Vault.
         /// </summary>
@@ -1012,8 +1002,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
+        /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1030,9 +1020,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <param name="aliCloudWriteAuthRoleRequest"></param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
+        /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1049,8 +1039,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1067,8 +1057,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1085,8 +1075,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1103,8 +1093,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1121,8 +1111,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1139,8 +1129,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1157,8 +1147,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1175,8 +1165,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1193,8 +1183,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1211,8 +1201,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1229,8 +1219,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1247,8 +1237,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1265,8 +1255,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1283,8 +1273,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1301,7 +1291,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of AppRoleListRolesResponse</returns>
         /// <param name="wrapTTL">
@@ -1311,7 +1300,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<AppRoleListRolesResponse> AppRoleListRoles(string list, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+        VaultResponse<AppRoleListRolesResponse> AppRoleListRoles(string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1319,9 +1308,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleListSecretIDResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1330,7 +1318,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<AppRoleListSecretIDResponse> AppRoleListSecretID(string roleName, string list, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
+        VaultResponse<AppRoleListSecretIDResponse> AppRoleListSecretID(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1356,8 +1344,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadBindSecretIDResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1374,8 +1362,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadBoundCIDRListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1392,8 +1380,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadLocalSecretIDsResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1410,8 +1398,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadPeriodResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1428,8 +1416,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadPoliciesResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1446,8 +1434,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadRoleResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1464,8 +1452,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadRoleIDResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1482,8 +1470,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadSecretIDBoundCIDRsResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1500,8 +1488,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadSecretIDNumUsesResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1518,8 +1506,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadSecretIDTTLResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1536,8 +1524,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadTokenBoundCIDRsResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1554,8 +1542,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadTokenMaxTTLResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1572,8 +1560,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadTokenNumUsesResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1590,8 +1578,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadTokenTTLResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1625,9 +1613,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteBindSecretIDRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1644,9 +1632,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteBoundCIDRListRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1663,9 +1651,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteCustomSecretIDRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleWriteCustomSecretIDResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1682,9 +1670,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWritePeriodRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1701,9 +1689,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWritePoliciesRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1720,9 +1708,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteRoleRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1739,9 +1727,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteRoleIDRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1758,9 +1746,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleWriteSecretIDResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1777,9 +1765,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDAccessorDestroyRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1796,9 +1784,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDAccessorLookupRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleWriteSecretIDAccessorLookupResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1815,9 +1803,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDBoundCIDRsRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1834,9 +1822,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDDestroyRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1853,9 +1841,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDLookupRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleWriteSecretIDLookupResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1872,9 +1860,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDNumUsesRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1891,9 +1879,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDTTLRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1910,9 +1898,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteTokenBoundCIDRsRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1929,9 +1917,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteTokenMaxTTLRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1948,9 +1936,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteTokenNumUsesRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -1967,9 +1955,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteTokenTTLRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2003,8 +1991,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2021,7 +2009,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -2031,7 +2018,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> AzureListAuthRoles(string list, string azureMountPath = "azure", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> AzureListAuthRoles(string azureMountPath = "azure", TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -2074,8 +2061,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2110,9 +2097,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="azureWriteAuthRoleRequest"></param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2182,8 +2169,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the certificate</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="name">The name of the certificate</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2200,8 +2187,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the certificate</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="name">The name of the certificate</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2218,7 +2205,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -2228,7 +2214,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> CertificatesList(string list, string certMountPath = "cert", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> CertificatesList(string certMountPath = "cert", TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -2236,7 +2222,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -2246,7 +2231,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> CertificatesListCRLs(string list, string certMountPath = "cert", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> CertificatesListCRLs(string certMountPath = "cert", TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -2272,8 +2257,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the certificate</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="name">The name of the certificate</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2290,8 +2275,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the certificate</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="name">The name of the certificate</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2325,9 +2310,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the certificate</param>
         /// <param name="certificatesWriteRequest"></param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="name">The name of the certificate</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2344,9 +2329,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the certificate</param>
         /// <param name="certificatesWriteCRLRequest"></param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="name">The name of the certificate</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2398,8 +2383,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">The name of the role.</param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
+        /// <param name="role">The name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2416,7 +2401,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -2426,7 +2410,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> CloudFoundryListRoles(string list, string cfMountPath = "cf", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> CloudFoundryListRoles(string cfMountPath = "cf", TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -2469,8 +2453,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">The name of the role.</param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
+        /// <param name="role">The name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2505,9 +2489,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">The name of the role.</param>
         /// <param name="cloudFoundryWriteRoleRequest"></param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
+        /// <param name="role">The name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2524,8 +2508,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Key for the teams mapping</param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
+        /// <param name="key">Key for the teams mapping</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2542,8 +2526,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Key for the users mapping</param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
+        /// <param name="key">Key for the users mapping</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2595,8 +2579,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Key for the teams mapping</param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
+        /// <param name="key">Key for the teams mapping</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2631,8 +2615,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Key for the users mapping</param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
+        /// <param name="key">Key for the users mapping</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2685,9 +2669,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Key for the teams mapping</param>
         /// <param name="gitHubWriteMapTeamRequest"></param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
+        /// <param name="key">Key for the teams mapping</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2704,9 +2688,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Key for the users mapping</param>
         /// <param name="gitHubWriteMapUserRequest"></param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
+        /// <param name="key">Key for the users mapping</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2723,8 +2707,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2741,7 +2725,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -2751,7 +2734,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GoogleCloudListRoles(string list, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> GoogleCloudListRoles(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
         /// <summary>
         /// Lists all the roles that are registered with Vault.
         /// </summary>
@@ -2759,7 +2742,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -2769,7 +2751,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> GoogleCloudListRoles2(string list, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> GoogleCloudListRoles2(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -2812,8 +2794,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2848,9 +2830,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="googleCloudWriteRoleRequest"></param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2867,9 +2849,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="googleCloudWriteRoleLabelsRequest"></param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2886,9 +2868,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="googleCloudWriteRoleServiceAccountsRequest"></param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2905,8 +2887,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -2923,7 +2905,6 @@ namespace Vault.Api
         /// The list will contain the names of the roles.
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -2933,7 +2914,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> JWTListRoles(string list, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> JWTListRoles(string jwtMountPath = "jwt", TimeSpan? wrapTTL = null);
         /// <summary>
         /// Authenticates to Vault using a JWT (or OIDC) token.
         /// </summary>
@@ -2993,8 +2974,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3065,9 +3046,9 @@ namespace Vault.Api
         /// A role is required to authenticate with this backend. The role binds   JWT token information with token policies and settings.   The bindings, token polices and token settings can all be configured   using this endpoint
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="jWTWriteRoleRequest"></param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3084,8 +3065,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
+        /// <param name="name">Name of the LDAP group.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3102,7 +3083,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -3112,7 +3092,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> KerberosListGroups(string list, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> KerberosListGroups(string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null);
         /// <summary>
         /// 
         /// </summary>
@@ -3155,8 +3135,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
+        /// <param name="name">Name of the LDAP group.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3208,9 +3188,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="kerberosWriteGroupRequest"></param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
+        /// <param name="name">Name of the LDAP group.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3245,8 +3225,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3263,7 +3243,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -3273,7 +3252,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> KubernetesListAuthRoles(string list, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> KubernetesListAuthRoles(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null);
         /// <summary>
         /// Authenticates Kubernetes service accounts with Vault.
         /// </summary>
@@ -3316,8 +3295,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3352,9 +3331,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="kubernetesWriteAuthRoleRequest"></param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3371,8 +3350,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="name">Name of the LDAP group.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3389,8 +3368,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP user.</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="name">Name of the LDAP user.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3407,7 +3386,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -3417,7 +3395,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> LDAPListGroups(string list, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> LDAPListGroups(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
         /// <summary>
         /// Manage users allowed to authenticate.
         /// </summary>
@@ -3425,7 +3403,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -3435,7 +3412,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> LDAPListUsers(string list, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> LDAPListUsers(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null);
         /// <summary>
         /// Log in with a username and password.
         /// </summary>
@@ -3443,9 +3420,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">DN (distinguished name) to be used for login.</param>
         /// <param name="lDAPLoginRequest"></param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="username">DN (distinguished name) to be used for login.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3479,8 +3456,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="name">Name of the LDAP group.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3497,8 +3474,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP user.</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="name">Name of the LDAP user.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3533,9 +3510,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="lDAPWriteGroupRequest"></param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="name">Name of the LDAP group.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3552,9 +3529,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP user.</param>
         /// <param name="lDAPWriteUserRequest"></param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="name">Name of the LDAP user.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3588,8 +3565,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3606,7 +3583,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -3616,7 +3592,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> OCIListRoles(string list, string ociMountPath = "oci", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> OCIListRoles(string ociMountPath = "oci", TimeSpan? wrapTTL = null);
         /// <summary>
         /// Authenticates to Vault using OCI credentials
         /// </summary>
@@ -3624,9 +3600,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="oCILoginWithRoleRequest"></param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3660,8 +3636,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3696,9 +3672,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="oCIWriteRoleRequest"></param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -3733,7 +3709,6 @@ namespace Vault.Api
         /// The list will contain the names of the roles.
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -3743,7 +3718,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> OIDCListAuthRoles(string list, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> OIDCListAuthRoles(string oidcMountPath = "oidc", TimeSpan? wrapTTL = null);
         /// <summary>
         /// Authenticates to Vault using a JWT (or OIDC) token.
         /// </summary>
@@ -3839,8 +3814,8 @@ namespace Vault.Api
         /// A role is required to authenticate with this backend. The role binds   JWT token information with token policies and settings.   The bindings, token polices and token settings can all be configured   using this endpoint
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="oIDCWriteAuthRoleRequest"></param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -3930,7 +3905,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -3940,7 +3914,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> OktaListGroups(string list, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> OktaListGroups(string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
         /// </summary>
@@ -3948,7 +3922,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -3958,7 +3931,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> OktaListUsers(string list, string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> OktaListUsers(string oktaMountPath = "okta", TimeSpan? wrapTTL = null);
         /// <summary>
         /// Log in with a username and password.
         /// </summary>
@@ -3966,9 +3939,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username to be used for login.</param>
         /// <param name="oktaLoginRequest"></param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
+        /// <param name="username">Username to be used for login.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4074,8 +4047,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the Okta group.</param>
         /// <param name="oktaWriteGroupRequest"></param>
+        /// <param name="name">Name of the Okta group.</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -4093,8 +4066,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the user.</param>
         /// <param name="oktaWriteUserRequest"></param>
+        /// <param name="name">Name of the user.</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -4130,7 +4103,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -4140,7 +4112,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> RadiusListUsers(string list, string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> RadiusListUsers(string radiusMountPath = "radius", TimeSpan? wrapTTL = null);
         /// <summary>
         /// Log in with a username and password.
         /// </summary>
@@ -4166,9 +4138,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlusername">Username to be used for login. (URL parameter)</param>
         /// <param name="radiusLoginWithUsernameRequest"></param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
+        /// <param name="urlusername">Username to be used for login. (URL parameter)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4238,8 +4210,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the RADIUS user.</param>
         /// <param name="radiusWriteUserRequest"></param>
+        /// <param name="name">Name of the RADIUS user.</param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -4275,7 +4247,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -4285,7 +4256,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> TokenListAccessors(string list, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> TokenListAccessors(string tokenMountPath = "token", TimeSpan? wrapTTL = null);
         /// <summary>
         /// This endpoint lists configured roles.
         /// </summary>
@@ -4293,7 +4264,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -4303,7 +4273,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> TokenListRoles(string list, string tokenMountPath = "token", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> TokenListRoles(string tokenMountPath = "token", TimeSpan? wrapTTL = null);
         /// <summary>
         /// This endpoint will lookup a token and its properties.
         /// </summary>
@@ -4506,8 +4476,8 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenWriteCreateRequest"></param>
-        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
+        /// <param name="format">Return json formatted output (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4525,8 +4495,8 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenWriteCreateOrphanRequest"></param>
-        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
+        /// <param name="format">Return json formatted output (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4543,10 +4513,10 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role</param>
         /// <param name="tokenWriteCreateWithRoleRequest"></param>
-        /// <param name="format">Return json formatted output (optional)</param>
+        /// <param name="roleName">Name of the role</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
+        /// <param name="format">Return json formatted output (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4617,8 +4587,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role</param>
         /// <param name="tokenWriteRoleRequest"></param>
+        /// <param name="roleName">Name of the role</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -4654,7 +4624,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -4664,7 +4633,7 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        VaultResponse<Object> UserpassListUsers(string list, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
+        VaultResponse<Object> UserpassListUsers(string userpassMountPath = "userpass", TimeSpan? wrapTTL = null);
         /// <summary>
         /// Log in with a username and password.
         /// </summary>
@@ -4672,8 +4641,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username of the user.</param>
         /// <param name="userpassLoginRequest"></param>
+        /// <param name="username">Username of the user.</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -4709,8 +4678,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username for this user.</param>
         /// <param name="userpassWriteUserRequest"></param>
+        /// <param name="username">Username for this user.</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -4728,8 +4697,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username for this user.</param>
         /// <param name="userpassWriteUserPasswordRequest"></param>
+        /// <param name="username">Username for this user.</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -4747,8 +4716,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username for this user.</param>
         /// <param name="userpassWriteUserPoliciesRequest"></param>
+        /// <param name="username">Username for this user.</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -4776,8 +4745,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="certName">Name of the certificate.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="certName">Name of the certificate.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -4911,7 +4880,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4922,7 +4890,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AWSConfigListCertificatesAsync(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> AWSConfigListCertificatesAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -4931,7 +4899,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -4942,7 +4909,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AWSConfigListSecurityTokenServiceAsync(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> AWSConfigListSecurityTokenServiceAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -4951,8 +4918,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="certName">Name of the certificate.</param>
-        /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5124,9 +5091,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="certName">Name of the certificate.</param>
         /// <param name="aWSConfigWriteCertificateRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="certName">Name of the certificate.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5265,8 +5232,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="accountId">AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account.</param>
         /// <param name="aWSConfigWriteSecurityTokenServiceAccountRequest"></param>
+        /// <param name="accountId">AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -5286,8 +5253,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5306,8 +5273,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5326,8 +5293,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5346,8 +5313,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5366,8 +5333,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5386,7 +5353,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -5397,7 +5363,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AWSListAuthRolesAsync(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> AWSListAuthRolesAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5406,7 +5372,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -5417,7 +5382,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AWSListAuthRoles2Async(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> AWSListAuthRoles2Async(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5426,7 +5391,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -5437,7 +5401,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AWSListIdentityAccessListAsync(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> AWSListIdentityAccessListAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5446,7 +5410,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -5457,7 +5420,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AWSListIdentityWhiteListAsync(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> AWSListIdentityWhiteListAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5466,7 +5429,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -5477,7 +5439,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AWSListRoleTagBlackListAsync(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> AWSListRoleTagBlackListAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5486,7 +5448,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -5497,7 +5458,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AWSListRoleTagDenyListAsync(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> AWSListRoleTagDenyListAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -5526,8 +5487,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5546,8 +5507,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5566,8 +5527,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5586,8 +5547,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5606,8 +5567,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5626,9 +5587,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="aWSWriteAuthRoleRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5647,9 +5608,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="aWSWriteAuthRoleTagRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5708,8 +5669,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5748,8 +5709,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5788,8 +5749,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
+        /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5808,7 +5769,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -5819,7 +5779,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AliCloudListAuthRolesAsync(string list, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> AliCloudListAuthRolesAsync(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Lists all the roles that are registered with Vault.
@@ -5828,7 +5788,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -5839,7 +5798,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AliCloudListAuthRoles2Async(string list, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> AliCloudListAuthRoles2Async(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Authenticates an RAM entity with Vault.
@@ -5868,8 +5827,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
+        /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5888,9 +5847,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <param name="aliCloudWriteAuthRoleRequest"></param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
+        /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5909,8 +5868,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5929,8 +5888,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5949,8 +5908,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5969,8 +5928,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -5989,8 +5948,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6009,8 +5968,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6029,8 +5988,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6049,8 +6008,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6069,8 +6028,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6089,8 +6048,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6109,8 +6068,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6129,8 +6088,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6149,8 +6108,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6169,8 +6128,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6189,7 +6148,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -6200,7 +6158,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (AppRoleListRolesResponse)</returns>
-        Task<VaultResponse<AppRoleListRolesResponse>> AppRoleListRolesAsync(string list, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<AppRoleListRolesResponse>> AppRoleListRolesAsync(string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -6209,9 +6167,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6221,7 +6178,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (AppRoleListSecretIDResponse)</returns>
-        Task<VaultResponse<AppRoleListSecretIDResponse>> AppRoleListSecretIDAsync(string roleName, string list, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<AppRoleListSecretIDResponse>> AppRoleListSecretIDAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -6250,8 +6207,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6270,8 +6227,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6290,8 +6247,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6310,8 +6267,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6330,8 +6287,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6350,8 +6307,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6370,8 +6327,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6390,8 +6347,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6410,8 +6367,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6430,8 +6387,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6450,8 +6407,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6470,8 +6427,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6490,8 +6447,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6510,8 +6467,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6549,9 +6506,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteBindSecretIDRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6570,9 +6527,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteBoundCIDRListRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6591,9 +6548,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteCustomSecretIDRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6612,9 +6569,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWritePeriodRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6633,9 +6590,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWritePoliciesRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6654,9 +6611,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteRoleRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6675,9 +6632,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteRoleIDRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6696,9 +6653,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6717,9 +6674,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDAccessorDestroyRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6738,9 +6695,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDAccessorLookupRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6759,9 +6716,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDBoundCIDRsRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6780,9 +6737,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDDestroyRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6801,9 +6758,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDLookupRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6822,9 +6779,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDNumUsesRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6843,9 +6800,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDTTLRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6864,9 +6821,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteTokenBoundCIDRsRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6885,9 +6842,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteTokenMaxTTLRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6906,9 +6863,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteTokenNumUsesRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6927,9 +6884,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteTokenTTLRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6967,8 +6924,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -6987,7 +6944,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -6998,7 +6954,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> AzureListAuthRolesAsync(string list, string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> AzureListAuthRolesAsync(string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -7046,8 +7002,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7086,9 +7042,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="azureWriteAuthRoleRequest"></param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7166,8 +7122,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the certificate</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="name">The name of the certificate</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7186,8 +7142,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the certificate</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="name">The name of the certificate</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7206,7 +7162,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -7217,7 +7172,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> CertificatesListAsync(string list, string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> CertificatesListAsync(string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -7226,7 +7181,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -7237,7 +7191,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> CertificatesListCRLsAsync(string list, string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> CertificatesListCRLsAsync(string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -7266,8 +7220,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the certificate</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="name">The name of the certificate</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7286,8 +7240,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the certificate</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="name">The name of the certificate</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7325,9 +7279,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the certificate</param>
         /// <param name="certificatesWriteRequest"></param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="name">The name of the certificate</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7346,9 +7300,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the certificate</param>
         /// <param name="certificatesWriteCRLRequest"></param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="name">The name of the certificate</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7406,8 +7360,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">The name of the role.</param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
+        /// <param name="role">The name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7426,7 +7380,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -7437,7 +7390,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> CloudFoundryListRolesAsync(string list, string cfMountPath = "cf", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> CloudFoundryListRolesAsync(string cfMountPath = "cf", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -7485,8 +7438,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">The name of the role.</param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
+        /// <param name="role">The name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7525,9 +7478,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">The name of the role.</param>
         /// <param name="cloudFoundryWriteRoleRequest"></param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
+        /// <param name="role">The name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7546,8 +7499,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Key for the teams mapping</param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
+        /// <param name="key">Key for the teams mapping</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7566,8 +7519,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Key for the users mapping</param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
+        /// <param name="key">Key for the users mapping</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7625,8 +7578,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Key for the teams mapping</param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
+        /// <param name="key">Key for the teams mapping</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7665,8 +7618,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Key for the users mapping</param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
+        /// <param name="key">Key for the users mapping</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7725,9 +7678,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Key for the teams mapping</param>
         /// <param name="gitHubWriteMapTeamRequest"></param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
+        /// <param name="key">Key for the teams mapping</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7746,9 +7699,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Key for the users mapping</param>
         /// <param name="gitHubWriteMapUserRequest"></param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
+        /// <param name="key">Key for the users mapping</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7767,8 +7720,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7787,7 +7740,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -7798,7 +7750,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GoogleCloudListRolesAsync(string list, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GoogleCloudListRolesAsync(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Lists all the roles that are registered with Vault.
@@ -7807,7 +7759,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -7818,7 +7769,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> GoogleCloudListRoles2Async(string list, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> GoogleCloudListRoles2Async(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -7866,8 +7817,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7906,9 +7857,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="googleCloudWriteRoleRequest"></param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7927,9 +7878,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="googleCloudWriteRoleLabelsRequest"></param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7948,9 +7899,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="googleCloudWriteRoleServiceAccountsRequest"></param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7969,8 +7920,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -7989,7 +7940,6 @@ namespace Vault.Api
         /// The list will contain the names of the roles.
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -8000,7 +7950,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> JWTListRolesAsync(string list, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> JWTListRolesAsync(string jwtMountPath = "jwt", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Authenticates to Vault using a JWT (or OIDC) token.
@@ -8067,8 +8017,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8147,9 +8097,9 @@ namespace Vault.Api
         /// A role is required to authenticate with this backend. The role binds   JWT token information with token policies and settings.   The bindings, token polices and token settings can all be configured   using this endpoint
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="jWTWriteRoleRequest"></param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8168,8 +8118,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
+        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8188,7 +8138,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -8199,7 +8148,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> KerberosListGroupsAsync(string list, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> KerberosListGroupsAsync(string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// 
@@ -8247,8 +8196,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
+        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8306,9 +8255,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="kerberosWriteGroupRequest"></param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
+        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8347,8 +8296,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8367,7 +8316,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -8378,7 +8326,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> KubernetesListAuthRolesAsync(string list, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> KubernetesListAuthRolesAsync(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Authenticates Kubernetes service accounts with Vault.
@@ -8426,8 +8374,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8466,9 +8414,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="kubernetesWriteAuthRoleRequest"></param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8487,8 +8435,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8507,8 +8455,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP user.</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="name">Name of the LDAP user.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8527,7 +8475,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -8538,7 +8485,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> LDAPListGroupsAsync(string list, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> LDAPListGroupsAsync(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage users allowed to authenticate.
@@ -8547,7 +8494,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -8558,7 +8504,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> LDAPListUsersAsync(string list, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> LDAPListUsersAsync(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Log in with a username and password.
@@ -8567,9 +8513,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">DN (distinguished name) to be used for login.</param>
         /// <param name="lDAPLoginRequest"></param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="username">DN (distinguished name) to be used for login.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8607,8 +8553,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8627,8 +8573,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP user.</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="name">Name of the LDAP user.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8667,9 +8613,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="lDAPWriteGroupRequest"></param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8688,9 +8634,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP user.</param>
         /// <param name="lDAPWriteUserRequest"></param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="name">Name of the LDAP user.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8728,8 +8674,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8748,7 +8694,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -8759,7 +8704,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> OCIListRolesAsync(string list, string ociMountPath = "oci", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> OCIListRolesAsync(string ociMountPath = "oci", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Authenticates to Vault using OCI credentials
@@ -8768,9 +8713,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="oCILoginWithRoleRequest"></param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8808,8 +8753,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8848,9 +8793,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="oCIWriteRoleRequest"></param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -8889,7 +8834,6 @@ namespace Vault.Api
         /// The list will contain the names of the roles.
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -8900,7 +8844,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> OIDCListAuthRolesAsync(string list, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> OIDCListAuthRolesAsync(string oidcMountPath = "oidc", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Authenticates to Vault using a JWT (or OIDC) token.
@@ -9007,8 +8951,8 @@ namespace Vault.Api
         /// A role is required to authenticate with this backend. The role binds   JWT token information with token policies and settings.   The bindings, token polices and token settings can all be configured   using this endpoint
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="oIDCWriteAuthRoleRequest"></param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -9108,7 +9052,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -9119,7 +9062,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> OktaListGroupsAsync(string list, string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> OktaListGroupsAsync(string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Manage additional groups for users allowed to authenticate.
@@ -9128,7 +9071,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -9139,7 +9081,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> OktaListUsersAsync(string list, string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> OktaListUsersAsync(string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Log in with a username and password.
@@ -9148,9 +9090,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username to be used for login.</param>
         /// <param name="oktaLoginRequest"></param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
+        /// <param name="username">Username to be used for login.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -9268,8 +9210,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the Okta group.</param>
         /// <param name="oktaWriteGroupRequest"></param>
+        /// <param name="name">Name of the Okta group.</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -9289,8 +9231,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the user.</param>
         /// <param name="oktaWriteUserRequest"></param>
+        /// <param name="name">Name of the user.</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -9330,7 +9272,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -9341,7 +9282,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> RadiusListUsersAsync(string list, string radiusMountPath = "radius", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> RadiusListUsersAsync(string radiusMountPath = "radius", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Log in with a username and password.
@@ -9370,9 +9311,9 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlusername">Username to be used for login. (URL parameter)</param>
         /// <param name="radiusLoginWithUsernameRequest"></param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
+        /// <param name="urlusername">Username to be used for login. (URL parameter)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -9450,8 +9391,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the RADIUS user.</param>
         /// <param name="radiusWriteUserRequest"></param>
+        /// <param name="name">Name of the RADIUS user.</param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -9491,7 +9432,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -9502,7 +9442,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> TokenListAccessorsAsync(string list, string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> TokenListAccessorsAsync(string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This endpoint lists configured roles.
@@ -9511,7 +9451,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -9522,7 +9461,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> TokenListRolesAsync(string list, string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> TokenListRolesAsync(string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// This endpoint will lookup a token and its properties.
@@ -9748,8 +9687,8 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenWriteCreateRequest"></param>
-        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
+        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -9769,8 +9708,8 @@ namespace Vault.Api
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenWriteCreateOrphanRequest"></param>
-        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
+        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -9789,10 +9728,10 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role</param>
         /// <param name="tokenWriteCreateWithRoleRequest"></param>
-        /// <param name="format">Return json formatted output (optional)</param>
+        /// <param name="roleName">Name of the role</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
+        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -9871,8 +9810,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role</param>
         /// <param name="tokenWriteRoleRequest"></param>
+        /// <param name="roleName">Name of the role</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -9912,7 +9851,6 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -9923,7 +9861,7 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> UserpassListUsersAsync(string list, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+        Task<VaultResponse<Object>> UserpassListUsersAsync(string userpassMountPath = "userpass", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
    
         /// <summary>
         /// Log in with a username and password.
@@ -9932,8 +9870,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username of the user.</param>
         /// <param name="userpassLoginRequest"></param>
+        /// <param name="username">Username of the user.</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -9973,8 +9911,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username for this user.</param>
         /// <param name="userpassWriteUserRequest"></param>
+        /// <param name="username">Username for this user.</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -9994,8 +9932,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username for this user.</param>
         /// <param name="userpassWriteUserPasswordRequest"></param>
+        /// <param name="username">Username for this user.</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -10015,8 +9953,8 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username for this user.</param>
         /// <param name="userpassWriteUserPoliciesRequest"></param>
+        /// <param name="username">Username for this user.</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -10105,8 +10043,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="certName">Name of the certificate.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="certName">Name of the certificate.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -10164,8 +10102,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="certName">Name of the certificate.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="certName">Name of the certificate.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -10885,7 +10823,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -10895,12 +10832,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> AWSConfigListCertificates(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> AWSConfigListCertificates(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AWSConfigListCertificates");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -10925,7 +10858,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{aws_mount_path}/config/certificates", requestOptions);
@@ -10944,7 +10877,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -10955,12 +10887,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AWSConfigListCertificatesAsync(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> AWSConfigListCertificatesAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AWSConfigListCertificates");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -10986,7 +10914,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{aws_mount_path}/config/certificates", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -11005,7 +10933,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -11015,12 +10942,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> AWSConfigListSecurityTokenService(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> AWSConfigListSecurityTokenService(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AWSConfigListSecurityTokenService");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -11045,7 +10968,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{aws_mount_path}/config/sts", requestOptions);
@@ -11064,7 +10987,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -11075,12 +10997,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AWSConfigListSecurityTokenServiceAsync(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> AWSConfigListSecurityTokenServiceAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AWSConfigListSecurityTokenService");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -11106,7 +11024,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{aws_mount_path}/config/sts", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -11125,8 +11043,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="certName">Name of the certificate.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="certName">Name of the certificate.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -11184,8 +11102,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="certName">Name of the certificate.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="certName">Name of the certificate.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -12121,9 +12039,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="certName">Name of the certificate.</param>
         /// <param name="aWSConfigWriteCertificateRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="certName">Name of the certificate.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -12187,9 +12105,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="certName">Name of the certificate.</param>
         /// <param name="aWSConfigWriteCertificateRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="certName">Name of the certificate.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -12987,8 +12905,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="accountId">AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account.</param>
         /// <param name="aWSConfigWriteSecurityTokenServiceAccountRequest"></param>
+        /// <param name="accountId">AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -13053,8 +12971,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="accountId">AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account.</param>
         /// <param name="aWSConfigWriteSecurityTokenServiceAccountRequest"></param>
+        /// <param name="accountId">AWS account ID to be associated with STS role. If set, Vault will use assumed credentials to verify any login attempts from EC2 instances in this account.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -13121,8 +13039,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -13180,8 +13098,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -13241,8 +13159,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -13300,8 +13218,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -13361,8 +13279,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -13420,8 +13338,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -13481,8 +13399,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -13540,8 +13458,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -13601,8 +13519,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -13660,8 +13578,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -13721,7 +13639,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -13731,12 +13648,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> AWSListAuthRoles(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> AWSListAuthRoles(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AWSListAuthRoles");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -13761,7 +13674,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{aws_mount_path}/role", requestOptions);
@@ -13780,7 +13693,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -13791,12 +13703,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AWSListAuthRolesAsync(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> AWSListAuthRolesAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AWSListAuthRoles");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13822,7 +13730,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{aws_mount_path}/role", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -13841,7 +13749,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -13851,12 +13758,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> AWSListAuthRoles2(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> AWSListAuthRoles2(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AWSListAuthRoles2");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -13881,7 +13784,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{aws_mount_path}/roles", requestOptions);
@@ -13900,7 +13803,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -13911,12 +13813,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AWSListAuthRoles2Async(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> AWSListAuthRoles2Async(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AWSListAuthRoles2");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -13942,7 +13840,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{aws_mount_path}/roles", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -13961,7 +13859,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -13971,12 +13868,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> AWSListIdentityAccessList(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> AWSListIdentityAccessList(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AWSListIdentityAccessList");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -14001,7 +13894,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{aws_mount_path}/identity-accesslist", requestOptions);
@@ -14020,7 +13913,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -14031,12 +13923,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AWSListIdentityAccessListAsync(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> AWSListIdentityAccessListAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AWSListIdentityAccessList");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14062,7 +13950,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{aws_mount_path}/identity-accesslist", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -14081,7 +13969,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -14091,12 +13978,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> AWSListIdentityWhiteList(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> AWSListIdentityWhiteList(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AWSListIdentityWhiteList");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -14121,7 +14004,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{aws_mount_path}/identity-whitelist", requestOptions);
@@ -14140,7 +14023,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -14151,12 +14033,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AWSListIdentityWhiteListAsync(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> AWSListIdentityWhiteListAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AWSListIdentityWhiteList");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14182,7 +14060,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{aws_mount_path}/identity-whitelist", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -14201,7 +14079,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -14211,12 +14088,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> AWSListRoleTagBlackList(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> AWSListRoleTagBlackList(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AWSListRoleTagBlackList");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -14241,7 +14114,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{aws_mount_path}/roletag-blacklist", requestOptions);
@@ -14260,7 +14133,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -14271,12 +14143,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AWSListRoleTagBlackListAsync(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> AWSListRoleTagBlackListAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AWSListRoleTagBlackList");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14302,7 +14170,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{aws_mount_path}/roletag-blacklist", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -14321,7 +14189,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -14331,12 +14198,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> AWSListRoleTagDenyList(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> AWSListRoleTagDenyList(string awsMountPath = "aws", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AWSListRoleTagDenyList");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -14361,7 +14224,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{aws_mount_path}/roletag-denylist", requestOptions);
@@ -14380,7 +14243,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -14391,12 +14253,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AWSListRoleTagDenyListAsync(string list, string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> AWSListRoleTagDenyListAsync(string awsMountPath = "aws", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AWSListRoleTagDenyList");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -14422,7 +14280,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("aws_mount_path", ClientUtils.ParameterToString(awsMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{aws_mount_path}/roletag-denylist", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -14563,8 +14421,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -14622,8 +14480,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -14683,8 +14541,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -14742,8 +14600,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -14803,8 +14661,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -14862,8 +14720,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="instanceId">EC2 instance ID. A successful login operation from an EC2 instance gets cached in this accesslist, keyed off of instance ID.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -14923,8 +14781,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -14982,8 +14840,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -15043,8 +14901,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -15102,8 +14960,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -15163,9 +15021,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="aWSWriteAuthRoleRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -15229,9 +15087,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="aWSWriteAuthRoleRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -15297,9 +15155,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="aWSWriteAuthRoleTagRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -15363,9 +15221,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="aWSWriteAuthRoleTagRequest"></param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -15675,8 +15533,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -15734,8 +15592,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -15917,8 +15775,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -15976,8 +15834,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="awsMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;aws&quot;)</param>
+        /// <param name="roleTag">Role tag to be deny listed. The tag can be supplied as-is. In order to avoid any encoding problems, it can be base64 encoded.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -16159,8 +16017,8 @@ namespace Vault.Api
         /// Create a role and associate policies to it. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
+        /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -16218,8 +16076,8 @@ namespace Vault.Api
         /// Create a role and associate policies to it. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
+        /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -16279,7 +16137,6 @@ namespace Vault.Api
         /// Lists all the roles that are registered with Vault. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -16289,12 +16146,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> AliCloudListAuthRoles(string list, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> AliCloudListAuthRoles(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AliCloudListAuthRoles");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -16319,7 +16172,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("alicloud_mount_path", ClientUtils.ParameterToString(alicloudMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{alicloud_mount_path}/role", requestOptions);
@@ -16338,7 +16191,6 @@ namespace Vault.Api
         /// Lists all the roles that are registered with Vault. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -16349,12 +16201,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AliCloudListAuthRolesAsync(string list, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> AliCloudListAuthRolesAsync(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AliCloudListAuthRoles");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -16380,7 +16228,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("alicloud_mount_path", ClientUtils.ParameterToString(alicloudMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{alicloud_mount_path}/role", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -16399,7 +16247,6 @@ namespace Vault.Api
         /// Lists all the roles that are registered with Vault. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -16409,12 +16256,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> AliCloudListAuthRoles2(string list, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> AliCloudListAuthRoles2(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AliCloudListAuthRoles2");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -16439,7 +16282,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("alicloud_mount_path", ClientUtils.ParameterToString(alicloudMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{alicloud_mount_path}/roles", requestOptions);
@@ -16458,7 +16301,6 @@ namespace Vault.Api
         /// Lists all the roles that are registered with Vault. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -16469,12 +16311,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AliCloudListAuthRoles2Async(string list, string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> AliCloudListAuthRoles2Async(string alicloudMountPath = "alicloud", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AliCloudListAuthRoles2");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -16500,7 +16338,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("alicloud_mount_path", ClientUtils.ParameterToString(alicloudMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{alicloud_mount_path}/roles", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -16641,8 +16479,8 @@ namespace Vault.Api
         /// Create a role and associate policies to it. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
+        /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -16700,8 +16538,8 @@ namespace Vault.Api
         /// Create a role and associate policies to it. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
+        /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -16761,9 +16599,9 @@ namespace Vault.Api
         /// Create a role and associate policies to it. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <param name="aliCloudWriteAuthRoleRequest"></param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
+        /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -16827,9 +16665,9 @@ namespace Vault.Api
         /// Create a role and associate policies to it. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <param name="aliCloudWriteAuthRoleRequest"></param>
         /// <param name="alicloudMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;alicloud&quot;)</param>
+        /// <param name="role">The name of the role as it should appear in Vault.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -16895,8 +16733,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -16954,8 +16792,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -17015,8 +16853,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -17074,8 +16912,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -17135,8 +16973,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -17194,8 +17032,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -17255,8 +17093,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -17314,8 +17152,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -17375,8 +17213,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -17434,8 +17272,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -17495,8 +17333,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -17554,8 +17392,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -17615,8 +17453,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -17674,8 +17512,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -17735,8 +17573,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -17794,8 +17632,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -17855,8 +17693,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -17914,8 +17752,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -17975,8 +17813,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -18034,8 +17872,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -18095,8 +17933,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -18154,8 +17992,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -18215,8 +18053,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -18274,8 +18112,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -18335,8 +18173,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -18394,8 +18232,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -18455,8 +18293,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -18514,8 +18352,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -18575,7 +18413,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <returns>VaultResponse of AppRoleListRolesResponse</returns>
         /// <param name="wrapTTL">
@@ -18585,12 +18422,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<AppRoleListRolesResponse> AppRoleListRoles(string list, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+        public VaultResponse<AppRoleListRolesResponse> AppRoleListRoles(string approleMountPath = "approle", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AppRoleListRoles");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -18616,7 +18449,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("approle_mount_path", ClientUtils.ParameterToString(approleMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<AppRoleListRolesResponse>("/auth/{approle_mount_path}/role", requestOptions);
@@ -18635,7 +18468,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -18646,12 +18478,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (AppRoleListRolesResponse)</returns>
-        public async Task<VaultResponse<AppRoleListRolesResponse>> AppRoleListRolesAsync(string list, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<AppRoleListRolesResponse>> AppRoleListRolesAsync(string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AppRoleListRoles");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -18678,7 +18506,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("approle_mount_path", ClientUtils.ParameterToString(approleMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<AppRoleListRolesResponse>("/auth/{approle_mount_path}/role", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -18697,9 +18525,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleListSecretIDResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -18708,15 +18535,11 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<AppRoleListSecretIDResponse> AppRoleListSecretID(string roleName, string list, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
+        public VaultResponse<AppRoleListSecretIDResponse> AppRoleListSecretID(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null)
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
                 throw new VaultApiException(400, "Missing required parameter 'roleName' when calling Auth->AppRoleListSecretID");
-
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AppRoleListSecretID");
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -18744,7 +18567,7 @@ namespace Vault.Api
                 requestOptions.PathParameters.Add("approle_mount_path", ClientUtils.ParameterToString(approleMountPath)); // path parameter
             }
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<AppRoleListSecretIDResponse>("/auth/{approle_mount_path}/role/{role_name}/secret-id", requestOptions);
@@ -18763,9 +18586,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -18775,15 +18597,11 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse (AppRoleListSecretIDResponse)</returns>
-        public async Task<VaultResponse<AppRoleListSecretIDResponse>> AppRoleListSecretIDAsync(string roleName, string list, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<AppRoleListSecretIDResponse>> AppRoleListSecretIDAsync(string roleName, string approleMountPath = "approle", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'roleName' is set
             if (roleName == null)
                 throw new VaultApiException(400, "Missing required parameter 'roleName' when calling Auth->AppRoleListSecretID");
-
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AppRoleListSecretID");
 
 
             RequestOptions requestOptions = new RequestOptions();
@@ -18812,7 +18630,7 @@ namespace Vault.Api
                 requestOptions.PathParameters.Add("approle_mount_path", ClientUtils.ParameterToString(approleMountPath)); // path parameter
             }
             requestOptions.PathParameters.Add("role_name", ClientUtils.ParameterToString(roleName)); // path parameter
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<AppRoleListSecretIDResponse>("/auth/{approle_mount_path}/role/{role_name}/secret-id", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -18953,8 +18771,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadBindSecretIDResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -19013,8 +18831,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -19075,8 +18893,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadBoundCIDRListResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -19135,8 +18953,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -19197,8 +19015,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadLocalSecretIDsResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -19257,8 +19075,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -19319,8 +19137,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadPeriodResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -19379,8 +19197,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -19441,8 +19259,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadPoliciesResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -19501,8 +19319,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -19563,8 +19381,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadRoleResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -19623,8 +19441,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -19685,8 +19503,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadRoleIDResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -19745,8 +19563,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -19807,8 +19625,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadSecretIDBoundCIDRsResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -19867,8 +19685,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -19929,8 +19747,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadSecretIDNumUsesResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -19989,8 +19807,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -20051,8 +19869,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadSecretIDTTLResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -20111,8 +19929,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -20173,8 +19991,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadTokenBoundCIDRsResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -20233,8 +20051,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -20295,8 +20113,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadTokenMaxTTLResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -20355,8 +20173,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -20417,8 +20235,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadTokenNumUsesResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -20477,8 +20295,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -20539,8 +20357,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleReadTokenTTLResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -20599,8 +20417,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -20769,9 +20587,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteBindSecretIDRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -20835,9 +20653,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteBindSecretIDRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -20903,9 +20721,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteBoundCIDRListRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -20969,9 +20787,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteBoundCIDRListRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -21037,9 +20855,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteCustomSecretIDRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleWriteCustomSecretIDResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -21104,9 +20922,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteCustomSecretIDRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -21173,9 +20991,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWritePeriodRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -21239,9 +21057,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWritePeriodRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -21307,9 +21125,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWritePoliciesRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -21373,9 +21191,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWritePoliciesRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -21441,9 +21259,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteRoleRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -21507,9 +21325,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteRoleRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -21575,9 +21393,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteRoleIDRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -21641,9 +21459,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteRoleIDRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -21709,9 +21527,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleWriteSecretIDResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -21776,9 +21594,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -21845,9 +21663,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDAccessorDestroyRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -21911,9 +21729,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDAccessorDestroyRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -21979,9 +21797,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDAccessorLookupRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleWriteSecretIDAccessorLookupResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -22046,9 +21864,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDAccessorLookupRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -22115,9 +21933,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDBoundCIDRsRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -22181,9 +21999,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDBoundCIDRsRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -22249,9 +22067,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDDestroyRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -22315,9 +22133,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDDestroyRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -22383,9 +22201,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDLookupRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of AppRoleWriteSecretIDLookupResponse</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -22450,9 +22268,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDLookupRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -22519,9 +22337,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDNumUsesRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -22585,9 +22403,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDNumUsesRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -22653,9 +22471,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDTTLRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -22719,9 +22537,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteSecretIDTTLRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -22787,9 +22605,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteTokenBoundCIDRsRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -22853,9 +22671,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteTokenBoundCIDRsRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -22921,9 +22739,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteTokenMaxTTLRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -22987,9 +22805,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteTokenMaxTTLRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -23055,9 +22873,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteTokenNumUsesRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -23121,9 +22939,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteTokenNumUsesRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -23189,9 +23007,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteTokenTTLRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -23255,9 +23073,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="appRoleWriteTokenTTLRequest"></param>
         /// <param name="approleMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;approle&quot;)</param>
+        /// <param name="roleName">Name of the role. Must be less than 4096 bytes.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -23431,8 +23249,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -23490,8 +23308,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -23551,7 +23369,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -23561,12 +23378,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> AzureListAuthRoles(string list, string azureMountPath = "azure", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> AzureListAuthRoles(string azureMountPath = "azure", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AzureListAuthRoles");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -23591,7 +23404,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("azure_mount_path", ClientUtils.ParameterToString(azureMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{azure_mount_path}/role", requestOptions);
@@ -23610,7 +23423,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -23621,12 +23433,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> AzureListAuthRolesAsync(string list, string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> AzureListAuthRolesAsync(string azureMountPath = "azure", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->AzureListAuthRoles");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -23652,7 +23460,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("azure_mount_path", ClientUtils.ParameterToString(azureMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{azure_mount_path}/role", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -23901,8 +23709,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -23960,8 +23768,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -24143,9 +23951,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="azureWriteAuthRoleRequest"></param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -24209,9 +24017,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="azureWriteAuthRoleRequest"></param>
         /// <param name="azureMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;azure&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -24629,8 +24437,8 @@ namespace Vault.Api
         /// Manage trusted certificates used for authentication. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the certificate</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="name">The name of the certificate</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -24688,8 +24496,8 @@ namespace Vault.Api
         /// Manage trusted certificates used for authentication. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the certificate</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="name">The name of the certificate</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -24749,8 +24557,8 @@ namespace Vault.Api
         /// Manage Certificate Revocation Lists checked during authentication. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the certificate</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="name">The name of the certificate</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -24808,8 +24616,8 @@ namespace Vault.Api
         /// Manage Certificate Revocation Lists checked during authentication. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the certificate</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="name">The name of the certificate</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -24869,7 +24677,6 @@ namespace Vault.Api
         /// Manage trusted certificates used for authentication. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -24879,12 +24686,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> CertificatesList(string list, string certMountPath = "cert", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> CertificatesList(string certMountPath = "cert", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->CertificatesList");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -24909,7 +24712,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("cert_mount_path", ClientUtils.ParameterToString(certMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{cert_mount_path}/certs", requestOptions);
@@ -24928,7 +24731,6 @@ namespace Vault.Api
         /// Manage trusted certificates used for authentication. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -24939,12 +24741,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> CertificatesListAsync(string list, string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> CertificatesListAsync(string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->CertificatesList");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -24970,7 +24768,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("cert_mount_path", ClientUtils.ParameterToString(certMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{cert_mount_path}/certs", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -24989,7 +24787,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -24999,12 +24796,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> CertificatesListCRLs(string list, string certMountPath = "cert", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> CertificatesListCRLs(string certMountPath = "cert", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->CertificatesListCRLs");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -25029,7 +24822,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("cert_mount_path", ClientUtils.ParameterToString(certMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{cert_mount_path}/crls", requestOptions);
@@ -25048,7 +24841,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -25059,12 +24851,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> CertificatesListCRLsAsync(string list, string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> CertificatesListCRLsAsync(string certMountPath = "cert", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->CertificatesListCRLs");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -25090,7 +24878,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("cert_mount_path", ClientUtils.ParameterToString(certMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{cert_mount_path}/crls", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -25231,8 +25019,8 @@ namespace Vault.Api
         /// Manage trusted certificates used for authentication. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the certificate</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="name">The name of the certificate</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -25290,8 +25078,8 @@ namespace Vault.Api
         /// Manage trusted certificates used for authentication. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the certificate</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="name">The name of the certificate</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -25351,8 +25139,8 @@ namespace Vault.Api
         /// Manage Certificate Revocation Lists checked during authentication. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the certificate</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="name">The name of the certificate</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -25410,8 +25198,8 @@ namespace Vault.Api
         /// Manage Certificate Revocation Lists checked during authentication. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the certificate</param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="name">The name of the certificate</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -25579,9 +25367,9 @@ namespace Vault.Api
         /// Manage trusted certificates used for authentication. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the certificate</param>
         /// <param name="certificatesWriteRequest"></param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="name">The name of the certificate</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -25645,9 +25433,9 @@ namespace Vault.Api
         /// Manage trusted certificates used for authentication. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the certificate</param>
         /// <param name="certificatesWriteRequest"></param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="name">The name of the certificate</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -25713,9 +25501,9 @@ namespace Vault.Api
         /// Manage Certificate Revocation Lists checked during authentication. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the certificate</param>
         /// <param name="certificatesWriteCRLRequest"></param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="name">The name of the certificate</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -25779,9 +25567,9 @@ namespace Vault.Api
         /// Manage Certificate Revocation Lists checked during authentication. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">The name of the certificate</param>
         /// <param name="certificatesWriteCRLRequest"></param>
         /// <param name="certMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cert&quot;)</param>
+        /// <param name="name">The name of the certificate</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -26077,8 +25865,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">The name of the role.</param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
+        /// <param name="role">The name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -26136,8 +25924,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">The name of the role.</param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
+        /// <param name="role">The name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -26197,7 +25985,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -26207,12 +25994,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> CloudFoundryListRoles(string list, string cfMountPath = "cf", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> CloudFoundryListRoles(string cfMountPath = "cf", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->CloudFoundryListRoles");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -26237,7 +26020,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("cf_mount_path", ClientUtils.ParameterToString(cfMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{cf_mount_path}/roles", requestOptions);
@@ -26256,7 +26039,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -26267,12 +26049,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> CloudFoundryListRolesAsync(string list, string cfMountPath = "cf", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> CloudFoundryListRolesAsync(string cfMountPath = "cf", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->CloudFoundryListRoles");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -26298,7 +26076,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("cf_mount_path", ClientUtils.ParameterToString(cfMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{cf_mount_path}/roles", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -26547,8 +26325,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">The name of the role.</param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
+        /// <param name="role">The name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -26606,8 +26384,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">The name of the role.</param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
+        /// <param name="role">The name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -26789,9 +26567,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">The name of the role.</param>
         /// <param name="cloudFoundryWriteRoleRequest"></param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
+        /// <param name="role">The name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -26855,9 +26633,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">The name of the role.</param>
         /// <param name="cloudFoundryWriteRoleRequest"></param>
         /// <param name="cfMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;cf&quot;)</param>
+        /// <param name="role">The name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -26923,8 +26701,8 @@ namespace Vault.Api
         /// Read/write/delete a single teams mapping 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Key for the teams mapping</param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
+        /// <param name="key">Key for the teams mapping</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -26982,8 +26760,8 @@ namespace Vault.Api
         /// Read/write/delete a single teams mapping 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Key for the teams mapping</param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
+        /// <param name="key">Key for the teams mapping</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -27043,8 +26821,8 @@ namespace Vault.Api
         /// Read/write/delete a single users mapping 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Key for the users mapping</param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
+        /// <param name="key">Key for the users mapping</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -27102,8 +26880,8 @@ namespace Vault.Api
         /// Read/write/delete a single users mapping 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Key for the users mapping</param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
+        /// <param name="key">Key for the users mapping</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -27393,8 +27171,8 @@ namespace Vault.Api
         /// Read/write/delete a single teams mapping 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Key for the teams mapping</param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
+        /// <param name="key">Key for the teams mapping</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -27452,8 +27230,8 @@ namespace Vault.Api
         /// Read/write/delete a single teams mapping 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Key for the teams mapping</param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
+        /// <param name="key">Key for the teams mapping</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -27631,8 +27409,8 @@ namespace Vault.Api
         /// Read/write/delete a single users mapping 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Key for the users mapping</param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
+        /// <param name="key">Key for the users mapping</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -27690,8 +27468,8 @@ namespace Vault.Api
         /// Read/write/delete a single users mapping 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Key for the users mapping</param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
+        /// <param name="key">Key for the users mapping</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -27991,9 +27769,9 @@ namespace Vault.Api
         /// Read/write/delete a single teams mapping 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Key for the teams mapping</param>
         /// <param name="gitHubWriteMapTeamRequest"></param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
+        /// <param name="key">Key for the teams mapping</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -28057,9 +27835,9 @@ namespace Vault.Api
         /// Read/write/delete a single teams mapping 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Key for the teams mapping</param>
         /// <param name="gitHubWriteMapTeamRequest"></param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
+        /// <param name="key">Key for the teams mapping</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -28125,9 +27903,9 @@ namespace Vault.Api
         /// Read/write/delete a single users mapping 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Key for the users mapping</param>
         /// <param name="gitHubWriteMapUserRequest"></param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
+        /// <param name="key">Key for the users mapping</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -28191,9 +27969,9 @@ namespace Vault.Api
         /// Read/write/delete a single users mapping 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="key">Key for the users mapping</param>
         /// <param name="gitHubWriteMapUserRequest"></param>
         /// <param name="githubMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;github&quot;)</param>
+        /// <param name="key">Key for the users mapping</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -28259,8 +28037,8 @@ namespace Vault.Api
         /// Create a GCP role with associated policies and required attributes. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -28318,8 +28096,8 @@ namespace Vault.Api
         /// Create a GCP role with associated policies and required attributes. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -28379,7 +28157,6 @@ namespace Vault.Api
         /// Lists all the roles that are registered with Vault. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -28389,12 +28166,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GoogleCloudListRoles(string list, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> GoogleCloudListRoles(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->GoogleCloudListRoles");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -28419,7 +28192,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{gcp_mount_path}/role", requestOptions);
@@ -28438,7 +28211,6 @@ namespace Vault.Api
         /// Lists all the roles that are registered with Vault. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -28449,12 +28221,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GoogleCloudListRolesAsync(string list, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GoogleCloudListRolesAsync(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->GoogleCloudListRoles");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -28480,7 +28248,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{gcp_mount_path}/role", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -28499,7 +28267,6 @@ namespace Vault.Api
         /// Lists all the roles that are registered with Vault. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -28509,12 +28276,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> GoogleCloudListRoles2(string list, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> GoogleCloudListRoles2(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->GoogleCloudListRoles2");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -28539,7 +28302,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{gcp_mount_path}/roles", requestOptions);
@@ -28558,7 +28321,6 @@ namespace Vault.Api
         /// Lists all the roles that are registered with Vault. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -28569,12 +28331,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> GoogleCloudListRoles2Async(string list, string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> GoogleCloudListRoles2Async(string gcpMountPath = "gcp", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->GoogleCloudListRoles2");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -28600,7 +28358,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("gcp_mount_path", ClientUtils.ParameterToString(gcpMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{gcp_mount_path}/roles", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -28849,8 +28607,8 @@ namespace Vault.Api
         /// Create a GCP role with associated policies and required attributes. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -28908,8 +28666,8 @@ namespace Vault.Api
         /// Create a GCP role with associated policies and required attributes. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -29091,9 +28849,9 @@ namespace Vault.Api
         /// Create a GCP role with associated policies and required attributes. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="googleCloudWriteRoleRequest"></param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -29157,9 +28915,9 @@ namespace Vault.Api
         /// Create a GCP role with associated policies and required attributes. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="googleCloudWriteRoleRequest"></param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -29225,9 +28983,9 @@ namespace Vault.Api
         /// Add or remove labels for an existing &#39;gce&#39; role 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="googleCloudWriteRoleLabelsRequest"></param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -29291,9 +29049,9 @@ namespace Vault.Api
         /// Add or remove labels for an existing &#39;gce&#39; role 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="googleCloudWriteRoleLabelsRequest"></param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -29359,9 +29117,9 @@ namespace Vault.Api
         /// Add or remove service accounts for an existing &#x60;iam&#x60; role 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="googleCloudWriteRoleServiceAccountsRequest"></param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -29425,9 +29183,9 @@ namespace Vault.Api
         /// Add or remove service accounts for an existing &#x60;iam&#x60; role 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="googleCloudWriteRoleServiceAccountsRequest"></param>
         /// <param name="gcpMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;gcp&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -29493,8 +29251,8 @@ namespace Vault.Api
         /// Delete an existing role. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -29552,8 +29310,8 @@ namespace Vault.Api
         /// Delete an existing role. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -29613,7 +29371,6 @@ namespace Vault.Api
         /// Lists all the roles registered with the backend. The list will contain the names of the roles.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -29623,12 +29380,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> JWTListRoles(string list, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> JWTListRoles(string jwtMountPath = "jwt", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->JWTListRoles");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -29653,7 +29406,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("jwt_mount_path", ClientUtils.ParameterToString(jwtMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{jwt_mount_path}/role", requestOptions);
@@ -29672,7 +29425,6 @@ namespace Vault.Api
         /// Lists all the roles registered with the backend. The list will contain the names of the roles.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -29683,12 +29435,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> JWTListRolesAsync(string list, string jwtMountPath = "jwt", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> JWTListRolesAsync(string jwtMountPath = "jwt", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->JWTListRoles");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -29714,7 +29462,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("jwt_mount_path", ClientUtils.ParameterToString(jwtMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{jwt_mount_path}/role", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -30071,8 +29819,8 @@ namespace Vault.Api
         /// Read an existing role. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -30130,8 +29878,8 @@ namespace Vault.Api
         /// Read an existing role. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -30557,9 +30305,9 @@ namespace Vault.Api
         /// Register an role with the backend. A role is required to authenticate with this backend. The role binds   JWT token information with token policies and settings.   The bindings, token polices and token settings can all be configured   using this endpoint
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="jWTWriteRoleRequest"></param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -30623,9 +30371,9 @@ namespace Vault.Api
         /// Register an role with the backend. A role is required to authenticate with this backend. The role binds   JWT token information with token policies and settings.   The bindings, token polices and token settings can all be configured   using this endpoint
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="jWTWriteRoleRequest"></param>
         /// <param name="jwtMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;jwt&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -30691,8 +30439,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
+        /// <param name="name">Name of the LDAP group.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -30750,8 +30498,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
+        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -30811,7 +30559,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -30821,12 +30568,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> KerberosListGroups(string list, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> KerberosListGroups(string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->KerberosListGroups");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -30851,7 +30594,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("kerberos_mount_path", ClientUtils.ParameterToString(kerberosMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{kerberos_mount_path}/groups", requestOptions);
@@ -30870,7 +30613,6 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -30881,12 +30623,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> KerberosListGroupsAsync(string list, string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> KerberosListGroupsAsync(string kerberosMountPath = "kerberos", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->KerberosListGroups");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -30912,7 +30650,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("kerberos_mount_path", ClientUtils.ParameterToString(kerberosMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{kerberos_mount_path}/groups", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -31161,8 +30899,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
+        /// <param name="name">Name of the LDAP group.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -31220,8 +30958,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
+        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -31511,9 +31249,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="kerberosWriteGroupRequest"></param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
+        /// <param name="name">Name of the LDAP group.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -31577,9 +31315,9 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="kerberosWriteGroupRequest"></param>
         /// <param name="kerberosMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kerberos&quot;)</param>
+        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -31767,8 +31505,8 @@ namespace Vault.Api
         /// Register an role with the backend. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -31826,8 +31564,8 @@ namespace Vault.Api
         /// Register an role with the backend. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -31887,7 +31625,6 @@ namespace Vault.Api
         /// Lists all the roles registered with the backend. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -31897,12 +31634,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> KubernetesListAuthRoles(string list, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> KubernetesListAuthRoles(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->KubernetesListAuthRoles");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -31927,7 +31660,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("kubernetes_mount_path", ClientUtils.ParameterToString(kubernetesMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{kubernetes_mount_path}/role", requestOptions);
@@ -31946,7 +31679,6 @@ namespace Vault.Api
         /// Lists all the roles registered with the backend. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -31957,12 +31689,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> KubernetesListAuthRolesAsync(string list, string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> KubernetesListAuthRolesAsync(string kubernetesMountPath = "kubernetes", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->KubernetesListAuthRoles");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -31988,7 +31716,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("kubernetes_mount_path", ClientUtils.ParameterToString(kubernetesMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{kubernetes_mount_path}/role", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -32237,8 +31965,8 @@ namespace Vault.Api
         /// Register an role with the backend. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -32296,8 +32024,8 @@ namespace Vault.Api
         /// Register an role with the backend. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -32479,9 +32207,9 @@ namespace Vault.Api
         /// Register an role with the backend. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="kubernetesWriteAuthRoleRequest"></param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -32545,9 +32273,9 @@ namespace Vault.Api
         /// Register an role with the backend. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="kubernetesWriteAuthRoleRequest"></param>
         /// <param name="kubernetesMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;kubernetes&quot;)</param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -32613,8 +32341,8 @@ namespace Vault.Api
         /// Manage additional groups for users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="name">Name of the LDAP group.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -32672,8 +32400,8 @@ namespace Vault.Api
         /// Manage additional groups for users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -32733,8 +32461,8 @@ namespace Vault.Api
         /// Manage users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP user.</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="name">Name of the LDAP user.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -32792,8 +32520,8 @@ namespace Vault.Api
         /// Manage users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP user.</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="name">Name of the LDAP user.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -32853,7 +32581,6 @@ namespace Vault.Api
         /// Manage additional groups for users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -32863,12 +32590,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> LDAPListGroups(string list, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> LDAPListGroups(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->LDAPListGroups");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -32893,7 +32616,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("ldap_mount_path", ClientUtils.ParameterToString(ldapMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{ldap_mount_path}/groups", requestOptions);
@@ -32912,7 +32635,6 @@ namespace Vault.Api
         /// Manage additional groups for users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -32923,12 +32645,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> LDAPListGroupsAsync(string list, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> LDAPListGroupsAsync(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->LDAPListGroups");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -32954,7 +32672,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("ldap_mount_path", ClientUtils.ParameterToString(ldapMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{ldap_mount_path}/groups", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -32973,7 +32691,6 @@ namespace Vault.Api
         /// Manage users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -32983,12 +32700,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> LDAPListUsers(string list, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> LDAPListUsers(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->LDAPListUsers");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -33013,7 +32726,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("ldap_mount_path", ClientUtils.ParameterToString(ldapMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{ldap_mount_path}/users", requestOptions);
@@ -33032,7 +32745,6 @@ namespace Vault.Api
         /// Manage users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -33043,12 +32755,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> LDAPListUsersAsync(string list, string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> LDAPListUsersAsync(string ldapMountPath = "ldap", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->LDAPListUsers");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -33074,7 +32782,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("ldap_mount_path", ClientUtils.ParameterToString(ldapMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{ldap_mount_path}/users", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -33093,9 +32801,9 @@ namespace Vault.Api
         /// Log in with a username and password. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">DN (distinguished name) to be used for login.</param>
         /// <param name="lDAPLoginRequest"></param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="username">DN (distinguished name) to be used for login.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -33159,9 +32867,9 @@ namespace Vault.Api
         /// Log in with a username and password. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">DN (distinguished name) to be used for login.</param>
         /// <param name="lDAPLoginRequest"></param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="username">DN (distinguished name) to be used for login.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -33335,8 +33043,8 @@ namespace Vault.Api
         /// Manage additional groups for users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="name">Name of the LDAP group.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -33394,8 +33102,8 @@ namespace Vault.Api
         /// Manage additional groups for users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -33455,8 +33163,8 @@ namespace Vault.Api
         /// Manage users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP user.</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="name">Name of the LDAP user.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -33514,8 +33222,8 @@ namespace Vault.Api
         /// Manage users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP user.</param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="name">Name of the LDAP user.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -33697,9 +33405,9 @@ namespace Vault.Api
         /// Manage additional groups for users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="lDAPWriteGroupRequest"></param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="name">Name of the LDAP group.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -33763,9 +33471,9 @@ namespace Vault.Api
         /// Manage additional groups for users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="lDAPWriteGroupRequest"></param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="name">Name of the LDAP group.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -33831,9 +33539,9 @@ namespace Vault.Api
         /// Manage users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP user.</param>
         /// <param name="lDAPWriteUserRequest"></param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="name">Name of the LDAP user.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -33897,9 +33605,9 @@ namespace Vault.Api
         /// Manage users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the LDAP user.</param>
         /// <param name="lDAPWriteUserRequest"></param>
         /// <param name="ldapMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;ldap&quot;)</param>
+        /// <param name="name">Name of the LDAP user.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -34073,8 +33781,8 @@ namespace Vault.Api
         /// Create a role and associate policies to it. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -34132,8 +33840,8 @@ namespace Vault.Api
         /// Create a role and associate policies to it. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -34193,7 +33901,6 @@ namespace Vault.Api
         /// Lists all the roles that are registered with Vault. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -34203,12 +33910,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> OCIListRoles(string list, string ociMountPath = "oci", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> OCIListRoles(string ociMountPath = "oci", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->OCIListRoles");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -34233,7 +33936,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("oci_mount_path", ClientUtils.ParameterToString(ociMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{oci_mount_path}/role", requestOptions);
@@ -34252,7 +33955,6 @@ namespace Vault.Api
         /// Lists all the roles that are registered with Vault. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -34263,12 +33965,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> OCIListRolesAsync(string list, string ociMountPath = "oci", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> OCIListRolesAsync(string ociMountPath = "oci", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->OCIListRoles");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -34294,7 +33992,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("oci_mount_path", ClientUtils.ParameterToString(ociMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{oci_mount_path}/role", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -34313,9 +34011,9 @@ namespace Vault.Api
         /// Authenticates to Vault using OCI credentials 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="oCILoginWithRoleRequest"></param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -34379,9 +34077,9 @@ namespace Vault.Api
         /// Authenticates to Vault using OCI credentials 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="oCILoginWithRoleRequest"></param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -34555,8 +34253,8 @@ namespace Vault.Api
         /// Create a role and associate policies to it. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -34614,8 +34312,8 @@ namespace Vault.Api
         /// Create a role and associate policies to it. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -34797,9 +34495,9 @@ namespace Vault.Api
         /// Create a role and associate policies to it. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="oCIWriteRoleRequest"></param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -34863,9 +34561,9 @@ namespace Vault.Api
         /// Create a role and associate policies to it. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="role">Name of the role.</param>
         /// <param name="oCIWriteRoleRequest"></param>
         /// <param name="ociMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oci&quot;)</param>
+        /// <param name="role">Name of the role.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -35051,7 +34749,6 @@ namespace Vault.Api
         /// Lists all the roles registered with the backend. The list will contain the names of the roles.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -35061,12 +34758,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> OIDCListAuthRoles(string list, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> OIDCListAuthRoles(string oidcMountPath = "oidc", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->OIDCListAuthRoles");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -35091,7 +34784,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("oidc_mount_path", ClientUtils.ParameterToString(oidcMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{oidc_mount_path}/role", requestOptions);
@@ -35110,7 +34803,6 @@ namespace Vault.Api
         /// Lists all the roles registered with the backend. The list will contain the names of the roles.
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -35121,12 +34813,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> OIDCListAuthRolesAsync(string list, string oidcMountPath = "oidc", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> OIDCListAuthRolesAsync(string oidcMountPath = "oidc", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->OIDCListAuthRoles");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -35152,7 +34840,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("oidc_mount_path", ClientUtils.ParameterToString(oidcMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{oidc_mount_path}/role", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -35751,8 +35439,8 @@ namespace Vault.Api
         /// Register an role with the backend. A role is required to authenticate with this backend. The role binds   JWT token information with token policies and settings.   The bindings, token polices and token settings can all be configured   using this endpoint
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="oIDCWriteAuthRoleRequest"></param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -35817,8 +35505,8 @@ namespace Vault.Api
         /// Register an role with the backend. A role is required to authenticate with this backend. The role binds   JWT token information with token policies and settings.   The bindings, token polices and token settings can all be configured   using this endpoint
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the role.</param>
         /// <param name="oIDCWriteAuthRoleRequest"></param>
+        /// <param name="name">Name of the role.</param>
         /// <param name="oidcMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;oidc&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -36369,7 +36057,6 @@ namespace Vault.Api
         /// Manage users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -36379,12 +36066,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> OktaListGroups(string list, string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> OktaListGroups(string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->OktaListGroups");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -36409,7 +36092,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("okta_mount_path", ClientUtils.ParameterToString(oktaMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{okta_mount_path}/groups", requestOptions);
@@ -36428,7 +36111,6 @@ namespace Vault.Api
         /// Manage users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -36439,12 +36121,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> OktaListGroupsAsync(string list, string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> OktaListGroupsAsync(string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->OktaListGroups");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -36470,7 +36148,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("okta_mount_path", ClientUtils.ParameterToString(oktaMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{okta_mount_path}/groups", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -36489,7 +36167,6 @@ namespace Vault.Api
         /// Manage additional groups for users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -36499,12 +36176,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> OktaListUsers(string list, string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> OktaListUsers(string oktaMountPath = "okta", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->OktaListUsers");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -36529,7 +36202,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("okta_mount_path", ClientUtils.ParameterToString(oktaMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{okta_mount_path}/users", requestOptions);
@@ -36548,7 +36221,6 @@ namespace Vault.Api
         /// Manage additional groups for users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -36559,12 +36231,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> OktaListUsersAsync(string list, string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> OktaListUsersAsync(string oktaMountPath = "okta", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->OktaListUsers");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -36590,7 +36258,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("okta_mount_path", ClientUtils.ParameterToString(oktaMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{okta_mount_path}/users", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -36609,9 +36277,9 @@ namespace Vault.Api
         /// Log in with a username and password. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username to be used for login.</param>
         /// <param name="oktaLoginRequest"></param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
+        /// <param name="username">Username to be used for login.</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -36675,9 +36343,9 @@ namespace Vault.Api
         /// Log in with a username and password. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username to be used for login.</param>
         /// <param name="oktaLoginRequest"></param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
+        /// <param name="username">Username to be used for login.</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -37333,8 +37001,8 @@ namespace Vault.Api
         /// Manage users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the Okta group.</param>
         /// <param name="oktaWriteGroupRequest"></param>
+        /// <param name="name">Name of the Okta group.</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -37399,8 +37067,8 @@ namespace Vault.Api
         /// Manage users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the Okta group.</param>
         /// <param name="oktaWriteGroupRequest"></param>
+        /// <param name="name">Name of the Okta group.</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -37467,8 +37135,8 @@ namespace Vault.Api
         /// Manage additional groups for users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the user.</param>
         /// <param name="oktaWriteUserRequest"></param>
+        /// <param name="name">Name of the user.</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -37533,8 +37201,8 @@ namespace Vault.Api
         /// Manage additional groups for users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the user.</param>
         /// <param name="oktaWriteUserRequest"></param>
+        /// <param name="name">Name of the user.</param>
         /// <param name="oktaMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;okta&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -37721,7 +37389,6 @@ namespace Vault.Api
         /// Manage users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -37731,12 +37398,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> RadiusListUsers(string list, string radiusMountPath = "radius", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> RadiusListUsers(string radiusMountPath = "radius", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->RadiusListUsers");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -37761,7 +37424,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("radius_mount_path", ClientUtils.ParameterToString(radiusMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{radius_mount_path}/users", requestOptions);
@@ -37780,7 +37443,6 @@ namespace Vault.Api
         /// Manage users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -37791,12 +37453,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> RadiusListUsersAsync(string list, string radiusMountPath = "radius", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> RadiusListUsersAsync(string radiusMountPath = "radius", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->RadiusListUsers");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -37822,7 +37480,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("radius_mount_path", ClientUtils.ParameterToString(radiusMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{radius_mount_path}/users", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -37963,9 +37621,9 @@ namespace Vault.Api
         /// Log in with a username and password. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlusername">Username to be used for login. (URL parameter)</param>
         /// <param name="radiusLoginWithUsernameRequest"></param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
+        /// <param name="urlusername">Username to be used for login. (URL parameter)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -38029,9 +37687,9 @@ namespace Vault.Api
         /// Log in with a username and password. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="urlusername">Username to be used for login. (URL parameter)</param>
         /// <param name="radiusLoginWithUsernameRequest"></param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
+        /// <param name="urlusername">Username to be used for login. (URL parameter)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -38447,8 +38105,8 @@ namespace Vault.Api
         /// Manage users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the RADIUS user.</param>
         /// <param name="radiusWriteUserRequest"></param>
+        /// <param name="name">Name of the RADIUS user.</param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -38513,8 +38171,8 @@ namespace Vault.Api
         /// Manage users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the RADIUS user.</param>
         /// <param name="radiusWriteUserRequest"></param>
+        /// <param name="name">Name of the RADIUS user.</param>
         /// <param name="radiusMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;radius&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -38701,7 +38359,6 @@ namespace Vault.Api
         /// List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires &#39;sudo&#39; capability in addition to &#39;list&#39;. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -38711,12 +38368,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> TokenListAccessors(string list, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> TokenListAccessors(string tokenMountPath = "token", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->TokenListAccessors");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -38741,7 +38394,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("token_mount_path", ClientUtils.ParameterToString(tokenMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{token_mount_path}/accessors/", requestOptions);
@@ -38760,7 +38413,6 @@ namespace Vault.Api
         /// List token accessors, which can then be be used to iterate and discover their properties or revoke them. Because this can be used to cause a denial of service, this endpoint requires &#39;sudo&#39; capability in addition to &#39;list&#39;. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -38771,12 +38423,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> TokenListAccessorsAsync(string list, string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> TokenListAccessorsAsync(string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->TokenListAccessors");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -38802,7 +38450,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("token_mount_path", ClientUtils.ParameterToString(tokenMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{token_mount_path}/accessors/", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -38821,7 +38469,6 @@ namespace Vault.Api
         /// This endpoint lists configured roles. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -38831,12 +38478,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> TokenListRoles(string list, string tokenMountPath = "token", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> TokenListRoles(string tokenMountPath = "token", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->TokenListRoles");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -38861,7 +38504,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("token_mount_path", ClientUtils.ParameterToString(tokenMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{token_mount_path}/roles", requestOptions);
@@ -38880,7 +38523,6 @@ namespace Vault.Api
         /// This endpoint lists configured roles. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -38891,12 +38533,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> TokenListRolesAsync(string list, string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> TokenListRolesAsync(string tokenMountPath = "token", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->TokenListRoles");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -38922,7 +38560,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("token_mount_path", ClientUtils.ParameterToString(tokenMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{token_mount_path}/roles", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -40226,8 +39864,8 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenWriteCreateRequest"></param>
-        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
+        /// <param name="format">Return json formatted output (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -40291,8 +39929,8 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenWriteCreateRequest"></param>
-        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
+        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -40358,8 +39996,8 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenWriteCreateOrphanRequest"></param>
-        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
+        /// <param name="format">Return json formatted output (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -40423,8 +40061,8 @@ namespace Vault.Api
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="tokenWriteCreateOrphanRequest"></param>
-        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
+        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -40489,10 +40127,10 @@ namespace Vault.Api
         /// This token create path is used to create new tokens adhering to the given role. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role</param>
         /// <param name="tokenWriteCreateWithRoleRequest"></param>
-        /// <param name="format">Return json formatted output (optional)</param>
+        /// <param name="roleName">Name of the role</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
+        /// <param name="format">Return json formatted output (optional)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -40560,10 +40198,10 @@ namespace Vault.Api
         /// This token create path is used to create new tokens adhering to the given role. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role</param>
         /// <param name="tokenWriteCreateWithRoleRequest"></param>
-        /// <param name="format">Return json formatted output (optional)</param>
+        /// <param name="roleName">Name of the role</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
+        /// <param name="format">Return json formatted output (optional)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
         /// <remarks>
@@ -40999,8 +40637,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role</param>
         /// <param name="tokenWriteRoleRequest"></param>
+        /// <param name="roleName">Name of the role</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -41065,8 +40703,8 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="roleName">Name of the role</param>
         /// <param name="tokenWriteRoleRequest"></param>
+        /// <param name="roleName">Name of the role</param>
         /// <param name="tokenMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;token&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -41253,7 +40891,6 @@ namespace Vault.Api
         /// Manage users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -41263,12 +40900,8 @@ namespace Vault.Api
         /// </remarks>
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
-        public VaultResponse<Object> UserpassListUsers(string list, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null)
+        public VaultResponse<Object> UserpassListUsers(string userpassMountPath = "userpass", TimeSpan? wrapTTL = null)
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->UserpassListUsers");
-
             RequestOptions requestOptions = new RequestOptions();
 
             if (wrapTTL != null)
@@ -41293,7 +40926,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("userpass_mount_path", ClientUtils.ParameterToString(userpassMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = this.Client.Get<Object>("/auth/{userpass_mount_path}/users", requestOptions);
@@ -41312,7 +40945,6 @@ namespace Vault.Api
         /// Manage users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="list">Must be set to &#x60;true&#x60;</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -41323,12 +40955,8 @@ namespace Vault.Api
         /// </param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> UserpassListUsersAsync(string list, string userpassMountPath = "userpass", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<VaultResponse<Object>> UserpassListUsersAsync(string userpassMountPath = "userpass", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // verify the required parameter 'list' is set
-            if (list == null)
-                throw new VaultApiException(400, "Missing required parameter 'list' when calling Auth->UserpassListUsers");
-
 
             RequestOptions requestOptions = new RequestOptions();
 
@@ -41354,7 +40982,7 @@ namespace Vault.Api
             {
                 requestOptions.PathParameters.Add("userpass_mount_path", ClientUtils.ParameterToString(userpassMountPath)); // path parameter
             }
-            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", list));
+            requestOptions.QueryParameters.Add(ClientUtils.ParameterToMultiMap("", "list", "true"));
 
             // make the HTTP request
             var response = await this.AsynchronousClient.GetAsync<Object>("/auth/{userpass_mount_path}/users", requestOptions, cancellationToken).ConfigureAwait(false);
@@ -41373,8 +41001,8 @@ namespace Vault.Api
         /// Log in with a username and password. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username of the user.</param>
         /// <param name="userpassLoginRequest"></param>
+        /// <param name="username">Username of the user.</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -41439,8 +41067,8 @@ namespace Vault.Api
         /// Log in with a username and password. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username of the user.</param>
         /// <param name="userpassLoginRequest"></param>
+        /// <param name="username">Username of the user.</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -41627,8 +41255,8 @@ namespace Vault.Api
         /// Manage users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username for this user.</param>
         /// <param name="userpassWriteUserRequest"></param>
+        /// <param name="username">Username for this user.</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -41693,8 +41321,8 @@ namespace Vault.Api
         /// Manage users allowed to authenticate. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username for this user.</param>
         /// <param name="userpassWriteUserRequest"></param>
+        /// <param name="username">Username for this user.</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -41761,8 +41389,8 @@ namespace Vault.Api
         /// Reset user&#39;s password. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username for this user.</param>
         /// <param name="userpassWriteUserPasswordRequest"></param>
+        /// <param name="username">Username for this user.</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -41827,8 +41455,8 @@ namespace Vault.Api
         /// Reset user&#39;s password. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username for this user.</param>
         /// <param name="userpassWriteUserPasswordRequest"></param>
+        /// <param name="username">Username for this user.</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header
@@ -41895,8 +41523,8 @@ namespace Vault.Api
         /// Update the policies associated with the username. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username for this user.</param>
         /// <param name="userpassWriteUserPoliciesRequest"></param>
+        /// <param name="username">Username for this user.</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
         /// <param name="wrapTTL">
@@ -41961,8 +41589,8 @@ namespace Vault.Api
         /// Update the policies associated with the username. 
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="username">Username for this user.</param>
         /// <param name="userpassWriteUserPoliciesRequest"></param>
+        /// <param name="username">Username for this user.</param>
         /// <param name="userpassMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;userpass&quot;)</param>
         /// <param name="wrapTTL">
         /// Sets the X-Vault-Wrap-TTL Header

@@ -17,6 +17,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Security;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
@@ -227,6 +228,8 @@ namespace Vault.Client
             BasePath = basePath.EndsWith("/") ? basePath : basePath + "/";
             HttpClient = new HttpClient(HttpClientHandler);
             HttpClient.Timeout = (TimeSpan)timeout;
+
+            UserAgent = BuildUserAgent();
         }
 
         #endregion Constructors
@@ -303,7 +306,7 @@ namespace Vault.Client
         /// Gets or sets the HTTP user agent.
         /// </summary>
         /// <value>Http user agent.</value>
-        public virtual string UserAgent { get; set; }
+        public string UserAgent { get; }
 
         /// <summary>
         /// Gets or sets the username (HTTP basic authentication).
@@ -334,7 +337,18 @@ namespace Vault.Client
 
             return apiKeyValue;
         }
- 
+
+        /// <summary>
+        /// Build a UserAgent string
+        /// </summary>
+        public string BuildUserAgent()
+        {
+            StringBuilder sb = new StringBuilder("vault-client-dotnet/");
+            string OSName = RuntimeInformation.OSDescription.Substring(0, RuntimeInformation.OSDescription.IndexOf(" "));
+            sb.AppendFormat("{0} ({1} {2}; .Net {3})", Version, OSName, RuntimeInformation.ProcessArchitecture, System.Environment.Version);
+            return sb.ToString();
+        }
+
         /// <summary>
         /// Gets or sets the access token for OAuth2 authentication.
         ///
