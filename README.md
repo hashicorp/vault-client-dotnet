@@ -35,7 +35,7 @@ Using Powershell:
 
 Using Nuget CLI:
 ```shell-session
- nuget install Vault -Version "PackageVersion"
+ nuget install Vault -Version "0.1.0-beta"
 ```
 
 > _**Note**_: You can find the latest package version in the Release
@@ -43,7 +43,7 @@ Using Nuget CLI:
 
 You can add the package to your .Net project using the following command:
 ```shell-session
-dotnet add package Vault -version "PackageVersion" 
+dotnet add package Vault -version "0.1.0-beta" 
 ```
 
 ### Frameworks supported
