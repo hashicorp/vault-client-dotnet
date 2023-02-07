@@ -32,10 +32,6 @@ quickly merge or address your contributions.
 * Provide steps to reproduce the issue, and if possible include the expected 
   results as well as the actual results. Please provide text, not screen shots!
 
-* If you experienced a panic, please create a [gist](https://gist.github.com)
-  of the *entire* generated crash log for us to look at. Double check
-  no sensitive items were in the log.
-
 * Respond as promptly as possible to any questions made by the Vault
   team to your issue.
 
