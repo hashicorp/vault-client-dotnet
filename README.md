@@ -62,6 +62,7 @@ works with a Vault server started in dev mode with a hardcoded root token (e.g.
 ```csharp
 using Vault;
 using Vault.Client;
+using Vault.Model;
 
 namespace Example
 {

@@ -8,8 +8,8 @@
     <OutputType>Library</OutputType>
     <Authors>Vault DevEx</Authors>
     <Company>Hashicorp</Company>
-    <AssemblyTitle>OpenAPI Library</AssemblyTitle>
-    <Description>A library generated from a OpenAPI doc</Description>
+    <AssemblyTitle>Vault OpenAPI Library</AssemblyTitle>
+    <Description>A Vault Client library generated from an OpenAPI doc</Description>
     <Copyright>No Copyright</Copyright>
     <RootNamespace>Vault</RootNamespace>
     <Version>0.1.0-beta</Version>
