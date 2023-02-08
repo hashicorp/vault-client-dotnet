@@ -30,12 +30,12 @@ Vault is a package available at [Hashicorp Nuget][nuget-hashicorp]. We've provid
 
 Using Powershell:
 ```shell-session
- Install-Package Vault -Version "PackageVersion"
+ Install-Package HashiCorp.Vault -Version "0.1.0-beta"
 ```
 
 Using Nuget CLI:
 ```shell-session
- nuget install Vault -Version "0.1.0-beta"
+ nuget install HashiCorp.Vault -Version "0.1.0-beta"
 ```
 
 > _**Note**_: You can find the latest package version in the Release
