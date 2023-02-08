@@ -16,7 +16,7 @@
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Vault.xml</DocumentationFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/GIT_USER_ID/GIT_REPO_ID.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/hashicorp/vault-client-dotnet.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>Minor update</PackageReleaseNotes>
     <NoWarn>CS0612</NoWarn><!-- CS0612 is a warning for obsolete attributes. OpenApi marks all deprecated fields as obsolete making this a very noise warning-->
