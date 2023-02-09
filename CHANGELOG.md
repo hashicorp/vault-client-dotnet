@@ -17,11 +17,11 @@ and this project adheres to
 <!-- diffs -->
 
 [unreleased-diff]:
-  https://github.com/hashicorp/vault-client-dotnet/compare/v0.1.0-beta...HEAD
+  https://github.com/hashicorp/vault-client-dotnet/compare/0.1.0-beta...HEAD
 [0.1.0-beta-diff]:
-  https://github.com/hashicorp/vault-client-dotnet/commits/v0.1.0-beta
+  https://github.com/hashicorp/vault-client-dotnet/commits/0.1.0-beta
 
 <!-- releases -->
 
 [0.1.0-beta]:
-  https://github.com/hashicorp/vault-client-dotnet/releases/tag/v0.1.0-beta
+  https://github.com/hashicorp/vault-client-dotnet/releases/tag/0.1.0-beta
