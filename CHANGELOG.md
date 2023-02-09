@@ -8,7 +8,7 @@ and this project adheres to
 
 ## Unreleased ([diff][unreleased-diff])
 
-## [0.1.0-beta][] ([diff][0.1.0-beta-diff]) - 2023-02-01
+## [0.1.0-beta][] ([diff][0.1.0-beta-diff]) - 2023-02-08
 
 ### Added
 
