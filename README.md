@@ -43,7 +43,7 @@ Using Nuget CLI:
 
 You can add the package to your .Net project using the following command:
 ```shell-session
-dotnet add package Vault -version "0.1.0-beta" 
+dotnet add package Hashicorp.Vault -version "0.1.0-beta" 
 ```
 
 ### Frameworks supported
@@ -253,7 +253,7 @@ Dictionary<string, object> queryParams = new Dictionary<string, object>
 VaultResponse<Object> resp = await vaultClient.ReadAsync<Object>(myPath, queryParams);
 
 // Generic write to a path
-var writePath  "/some/other/path";
+var writePath = "/some/other/path";
 Dictionary<string, object>  secretData = new Dictionary<string, object>
     {
         {"1", "1"},
