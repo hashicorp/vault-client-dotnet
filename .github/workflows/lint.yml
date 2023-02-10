@@ -1,0 +1,26 @@
+name: lint
+on:
+  pull_request:
+    branches: ["**"]
+
+env:
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+  DOTNET_NOLOGO: true
+
+jobs:
+  lint_csharp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: "5.0.x" # SDK Version to use; x will use the latest version of the 5.0 channel
+
+      # Install dotnet format as a global tool
+      - name: Install dotnet format
+        run: dotnet tool update --global dotnet-format
+
+      - name: Run dotnet format
+        run: dotnet format --verify-no-changes ./Vault.sln
