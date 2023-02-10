@@ -10,7 +10,6 @@
     <Company>Hashicorp</Company>
     <AssemblyTitle>Vault OpenAPI Library</AssemblyTitle>
     <Description>A Vault Client library generated from an OpenAPI doc</Description>
-    <Copyright>No Copyright</Copyright>
     <RootNamespace>Vault</RootNamespace>
     <Version>0.1.0-beta</Version>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Vault.xml</DocumentationFile>
