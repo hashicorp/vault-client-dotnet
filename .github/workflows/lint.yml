@@ -23,4 +23,4 @@ jobs:
         run: dotnet tool update --global dotnet-format
 
       - name: Run dotnet format
-        run: dotnet format --verify-no-changes
+        run: dotnet format --verify-no-changes Vault.sln
