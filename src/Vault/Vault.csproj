@@ -10,7 +10,7 @@
     <Company>Hashicorp</Company>
     <AssemblyTitle>Vault OpenAPI Library</AssemblyTitle>
     <Description>A Vault Client library generated from an OpenAPI doc</Description>
-    <Copyright>No Copyright</Copyright>
+    <Copyright>Copyright (c) HashiCorp, Inc.</Copyright>
     <RootNamespace>Vault</RootNamespace>
     <Version>0.1.0-beta</Version>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Vault.xml</DocumentationFile>
@@ -18,7 +18,7 @@
     <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/hashicorp/vault-client-dotnet.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>Minor update</PackageReleaseNotes>
+    <PackageReleaseNotes>https://github.com/hashicorp/vault-client-dotnet/blob/main/CHANGELOG.md</PackageReleaseNotes>
     <NoWarn>CS0612</NoWarn><!-- CS0612 is a warning for obsolete attributes. OpenApi marks all deprecated fields as obsolete making this a very noise warning-->
   </PropertyGroup>
   <ItemGroup>
