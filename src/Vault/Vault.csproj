@@ -18,11 +18,12 @@
     <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/hashicorp/vault-client-dotnet.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>Minor update</PackageReleaseNotes>
+    <PackageReleaseNotes>CHANGELOG.md</PackageReleaseNotes>
     <NoWarn>CS0612</NoWarn><!-- CS0612 is a warning for obsolete attributes. OpenApi marks all deprecated fields as obsolete making this a very noise warning-->
   </PropertyGroup>
   <ItemGroup>
     <None Include="../../README.md" Pack="true" PackagePath="\"/>
+    <None Include="../../CHANGELOG.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="JsonSubTypes" Version="2.0.1" />
