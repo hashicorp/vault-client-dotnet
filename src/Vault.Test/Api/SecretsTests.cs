@@ -744,6 +744,213 @@ namespace Vault.Test.Api
         }
 
         /// <summary>
+        /// Test DatabaseDeleteConfig
+        /// </summary>
+        [Fact]
+        public void DatabaseDeleteConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string databaseMountPath = null;
+            //instance.DatabaseDeleteConfig(name, databaseMountPath);
+        }
+
+        /// <summary>
+        /// Test DatabaseDeleteRole
+        /// </summary>
+        [Fact]
+        public void DatabaseDeleteRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string databaseMountPath = null;
+            //instance.DatabaseDeleteRole(name, databaseMountPath);
+        }
+
+        /// <summary>
+        /// Test DatabaseDeleteStaticRole
+        /// </summary>
+        [Fact]
+        public void DatabaseDeleteStaticRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string databaseMountPath = null;
+            //instance.DatabaseDeleteStaticRole(name, databaseMountPath);
+        }
+
+        /// <summary>
+        /// Test DatabaseListConfig
+        /// </summary>
+        [Fact]
+        public void DatabaseListConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string databaseMountPath = null;
+            //instance.DatabaseListConfig(list, databaseMountPath);
+        }
+
+        /// <summary>
+        /// Test DatabaseListRoles
+        /// </summary>
+        [Fact]
+        public void DatabaseListRolesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string databaseMountPath = null;
+            //instance.DatabaseListRoles(list, databaseMountPath);
+        }
+
+        /// <summary>
+        /// Test DatabaseListStaticRoles
+        /// </summary>
+        [Fact]
+        public void DatabaseListStaticRolesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string list = null;
+            //string databaseMountPath = null;
+            //instance.DatabaseListStaticRoles(list, databaseMountPath);
+        }
+
+        /// <summary>
+        /// Test DatabaseReadConfig
+        /// </summary>
+        [Fact]
+        public void DatabaseReadConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string databaseMountPath = null;
+            //instance.DatabaseReadConfig(name, databaseMountPath);
+        }
+
+        /// <summary>
+        /// Test DatabaseReadCredentials
+        /// </summary>
+        [Fact]
+        public void DatabaseReadCredentialsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string databaseMountPath = null;
+            //instance.DatabaseReadCredentials(name, databaseMountPath);
+        }
+
+        /// <summary>
+        /// Test DatabaseReadRole
+        /// </summary>
+        [Fact]
+        public void DatabaseReadRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string databaseMountPath = null;
+            //instance.DatabaseReadRole(name, databaseMountPath);
+        }
+
+        /// <summary>
+        /// Test DatabaseReadStaticCredentials
+        /// </summary>
+        [Fact]
+        public void DatabaseReadStaticCredentialsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string databaseMountPath = null;
+            //instance.DatabaseReadStaticCredentials(name, databaseMountPath);
+        }
+
+        /// <summary>
+        /// Test DatabaseReadStaticRole
+        /// </summary>
+        [Fact]
+        public void DatabaseReadStaticRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string databaseMountPath = null;
+            //instance.DatabaseReadStaticRole(name, databaseMountPath);
+        }
+
+        /// <summary>
+        /// Test DatabaseReset
+        /// </summary>
+        [Fact]
+        public void DatabaseResetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string databaseMountPath = null;
+            //instance.DatabaseReset(name, databaseMountPath);
+        }
+
+        /// <summary>
+        /// Test DatabaseRotateRole
+        /// </summary>
+        [Fact]
+        public void DatabaseRotateRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string databaseMountPath = null;
+            //instance.DatabaseRotateRole(name, databaseMountPath);
+        }
+
+        /// <summary>
+        /// Test DatabaseRotateRoot
+        /// </summary>
+        [Fact]
+        public void DatabaseRotateRootTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //string databaseMountPath = null;
+            //instance.DatabaseRotateRoot(name, databaseMountPath);
+        }
+
+        /// <summary>
+        /// Test DatabaseWriteConfig
+        /// </summary>
+        [Fact]
+        public void DatabaseWriteConfigTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //DatabaseWriteConfigRequest databaseWriteConfigRequest = null;
+            //string databaseMountPath = null;
+            //instance.DatabaseWriteConfig(name, databaseWriteConfigRequest, databaseMountPath);
+        }
+
+        /// <summary>
+        /// Test DatabaseWriteRole
+        /// </summary>
+        [Fact]
+        public void DatabaseWriteRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //DatabaseWriteRoleRequest databaseWriteRoleRequest = null;
+            //string databaseMountPath = null;
+            //instance.DatabaseWriteRole(name, databaseWriteRoleRequest, databaseMountPath);
+        }
+
+        /// <summary>
+        /// Test DatabaseWriteStaticRole
+        /// </summary>
+        [Fact]
+        public void DatabaseWriteStaticRoleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string name = null;
+            //DatabaseWriteStaticRoleRequest databaseWriteStaticRoleRequest = null;
+            //string databaseMountPath = null;
+            //instance.DatabaseWriteStaticRole(name, databaseWriteStaticRoleRequest, databaseMountPath);
+        }
+
+        /// <summary>
         /// Test GoogleCloudDeleteRoleset
         /// </summary>
         [Fact]
