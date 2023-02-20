@@ -245,7 +245,7 @@ Each generic operation has a synchronous and asynchronous version.
 ```csharp
 // Generic read from a path with query parameters
 var readPath = "/some/path"
-Dictionary<string, object> queryParams = new Dictionary<string, object>
+IDictionary<string, object> queryParams = new Dictionary<string, object>
 {
     {"key", "value"}
 };
@@ -254,7 +254,7 @@ VaultResponse<Object> resp = await vaultClient.ReadAsync<Object>(myPath, queryPa
 
 // Generic write to a path
 var writePath = "/some/other/path";
-Dictionary<string, object>  secretData = new Dictionary<string, object>
+IDictionary<string, object>  secretData = new Dictionary<string, object>
     {
         {"1", "1"},
         {"2", 2},

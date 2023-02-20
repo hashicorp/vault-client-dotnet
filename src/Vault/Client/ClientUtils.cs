@@ -91,9 +91,9 @@ namespace Vault.Client
         /// <summary>
         /// Convert a dictionary 
         /// Used to create a multimap of parameters
-        /// <param name="dictionary">Dictionary of parameters to convert to multimap</param>
+        /// <param name="dictionary">IDictionary of parameters to convert to multimap</param>
         /// </summary>
-        public static Multimap<string, string> DictionaryToMultimap(Dictionary<string, object> dictionary)
+        public static Multimap<string, string> DictionaryToMultimap(IDictionary<string, object> dictionary)
         {
             var parameters = new Multimap<string, string>();
             foreach (KeyValuePair<string, object> entry in dictionary)

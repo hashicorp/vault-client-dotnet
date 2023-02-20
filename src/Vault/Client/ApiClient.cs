@@ -164,7 +164,7 @@ namespace Vault.Client
 
         public int ResponseWrapTTL = 0;
 
-        public Dictionary<string, string> CustomHeaders = new Dictionary<string, string> { };
+        public IDictionary<string, string> CustomHeaders = new Dictionary<string, string> { };
     }
 
     /// <summary>
@@ -251,7 +251,7 @@ namespace Vault.Client
         /// <summary>
         /// Adds a dictionary of custom headers to current list of custom headers.
         /// </summary>
-        internal void AddCustomHeaders(Dictionary<string, string> headersToAdd)
+        internal void AddCustomHeaders(IDictionary<string, string> headersToAdd)
         {
             lock (_requestHeaderLock)
             {

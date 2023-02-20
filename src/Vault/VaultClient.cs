@@ -122,7 +122,7 @@ namespace Vault
         /// <summary>
         /// Adds a dictionary of custom headers to current list of custom headers
         /// </summary>
-        public void AddCustomHeaders(Dictionary<string, string> headersToAdd)
+        public void AddCustomHeaders(IDictionary<string, string> headersToAdd)
         {
             _apiClient.AddCustomHeaders(headersToAdd);
         }
@@ -165,7 +165,7 @@ namespace Vault
         /// <param name="path">Path to read from</param>
         /// <param name="queryParameters">Optional dictionary of query parameters</param>
         /// </summary>
-        public VaultResponse<T> Read<T>(string path, Dictionary<string, object> queryParameters = null)
+        public VaultResponse<T> Read<T>(string path, IDictionary<string, object> queryParameters = null)
         {
             return ReadAsync<T>(path, queryParameters).GetAwaiter().GetResult();
         }
@@ -175,7 +175,7 @@ namespace Vault
         /// <param name="path">Path to read from</param>
         /// <param name="queryParameters">Optional dictionary of query parameters</param>
         /// </summary>
-        public async Task<VaultResponse<T>> ReadAsync<T>(string path, Dictionary<string, object> queryParameters = null)
+        public async Task<VaultResponse<T>> ReadAsync<T>(string path, IDictionary<string, object> queryParameters = null)
         {
             if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("path", "Cannot be null or empty");
 
@@ -198,7 +198,7 @@ namespace Vault
         /// <param name="path">Path to write to</param>
         /// <param name="data">Data to be written</param>
         /// </summary>
-        public VaultResponse<T> Write<T>(string path, Dictionary<string, object> data)
+        public VaultResponse<T> Write<T>(string path, IDictionary<string, object> data)
         {
             return WriteAsync<T>(path, data).GetAwaiter().GetResult();
         }
@@ -208,7 +208,7 @@ namespace Vault
         /// <param name="path">Path to write to</param>
         /// <param name="data">Data to be written</param>
         /// </summary>
-        public async Task<VaultResponse<T>> WriteAsync<T>(string path, Dictionary<string, object> data)
+        public async Task<VaultResponse<T>> WriteAsync<T>(string path, IDictionary<string, object> data)
         {
             if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("path", "Cannot be null or empty");
 
@@ -227,7 +227,7 @@ namespace Vault
         /// <param name="path">Path to delete at</param>
         /// <param name="queryParameters">Optional dictionary of query parameters</param>
         /// </summary>
-        public VaultResponse<T> Delete<T>(string path, Dictionary<string, object> queryParameters = null)
+        public VaultResponse<T> Delete<T>(string path, IDictionary<string, object> queryParameters = null)
         {
             return DeleteAsync<T>(path, queryParameters).GetAwaiter().GetResult();
         }
@@ -237,7 +237,7 @@ namespace Vault
         /// <param name="path">Path to delete at</param>
         /// <param name="queryParameters">Optional dictionary of query parameters</param>
         /// </summary>
-        public async Task<VaultResponse<T>> DeleteAsync<T>(string path, Dictionary<string, object> queryParameters = null)
+        public async Task<VaultResponse<T>> DeleteAsync<T>(string path, IDictionary<string, object> queryParameters = null)
         {
             if (string.IsNullOrEmpty(path)) throw new ArgumentNullException("path", "Cannot be null or empty");
 
