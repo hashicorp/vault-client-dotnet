@@ -39,7 +39,7 @@ namespace Vault.Client
 
             foreach (KeyValuePair<string, object> prop in req.Properties)
                 clone.Properties.Add(prop);
-            
+
             foreach (KeyValuePair<string, IEnumerable<string>> header in req.Headers)
                 clone.Headers.TryAddWithoutValidation(header.Key, header.Value);
 
@@ -76,7 +76,7 @@ namespace Vault.Client
             Match match = Regex.Match(filename, @".*[/\\](.*)$");
             return match.Success ? match.Groups[1].Value : filename;
         }
-        
+
         /// <summary>
         /// Sanitize a path
         /// <param name="path">Path</param>
@@ -125,13 +125,14 @@ namespace Vault.Client
             }
             else if (value is IDictionary dictionary)
             {
-                if(collectionFormat == "deepObject") {
+                if (collectionFormat == "deepObject")
+                {
                     foreach (DictionaryEntry entry in dictionary)
                     {
                         parameters.Add(name + "[" + entry.Key + "]", ParameterToString(entry.Value));
                     }
                 }
-                else 
+                else
                 {
                     foreach (DictionaryEntry entry in dictionary)
                     {
