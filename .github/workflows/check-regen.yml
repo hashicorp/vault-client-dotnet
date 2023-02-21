@@ -16,6 +16,7 @@ jobs:
         run: |
           make regen
           readonly changed_files="$(git diff --stat ':!Vault.sln')"
+          git diff
           if [[ "$changed_files" != "" ]]; then
             echo "found diffs after running 'make regen'"
             echo "please run 'make regen' & commit the changed files:"
