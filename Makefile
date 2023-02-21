@@ -6,9 +6,9 @@ OUTPUT_PATH               ?= .
 
 .PHONY: delete-generated generate clean build build-prod regen
 
-regen: delete-generated generate clean format
+regen: delete-generated generate format clean 
 
-regen-bin: delete-generated generate clean format build
+regen-bin: delete-generated generate format clean build
 
 delete-generated:
 	rm -rf \
