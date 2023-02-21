@@ -146,7 +146,7 @@ vaultClient.ClearNamespace();
 The Vault client also allows for adding custom headers that will be applied to every request.
 
 ```csharp
-var myCustomHeaders = new Dictionary<string, string> 
+IDictionary<string, string> myCustomHeaders = new Dictionary<string, string> 
 {
     { "my-custom-header", "myHeaders"}    
 };
