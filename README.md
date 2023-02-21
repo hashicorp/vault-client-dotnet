@@ -146,7 +146,7 @@ vaultClient.ClearNamespace();
 The Vault client also allows for adding custom headers that will be applied to every request.
 
 ```csharp
-var myCustomHeaders = new Dictionary<string, string> 
+IDictionary<string, string> myCustomHeaders = new Dictionary<string, string> 
 {
     { "my-custom-header", "myHeaders"}    
 };
@@ -245,7 +245,7 @@ Each generic operation has a synchronous and asynchronous version.
 ```csharp
 // Generic read from a path with query parameters
 var readPath = "/some/path"
-Dictionary<string, object> queryParams = new Dictionary<string, object>
+IDictionary<string, object> queryParams = new Dictionary<string, object>
 {
     {"key", "value"}
 };
@@ -254,7 +254,7 @@ VaultResponse<Object> resp = await vaultClient.ReadAsync<Object>(myPath, queryPa
 
 // Generic write to a path
 var writePath = "/some/other/path";
-Dictionary<string, object>  secretData = new Dictionary<string, object>
+IDictionary<string, object>  secretData = new Dictionary<string, object>
     {
         {"1", "1"},
         {"2", 2},
