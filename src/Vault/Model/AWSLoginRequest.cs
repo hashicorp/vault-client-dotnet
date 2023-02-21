@@ -166,47 +166,47 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.IamHttpRequestMethod == input.IamHttpRequestMethod ||
                     (this.IamHttpRequestMethod != null &&
                     this.IamHttpRequestMethod.Equals(input.IamHttpRequestMethod))
-                ) && 
+                ) &&
                 (
                     this.IamRequestBody == input.IamRequestBody ||
                     (this.IamRequestBody != null &&
                     this.IamRequestBody.Equals(input.IamRequestBody))
-                ) && 
+                ) &&
                 (
                     this.IamRequestHeaders == input.IamRequestHeaders ||
                     (this.IamRequestHeaders != null &&
                     this.IamRequestHeaders.Equals(input.IamRequestHeaders))
-                ) && 
+                ) &&
                 (
                     this.IamRequestUrl == input.IamRequestUrl ||
                     (this.IamRequestUrl != null &&
                     this.IamRequestUrl.Equals(input.IamRequestUrl))
-                ) && 
+                ) &&
                 (
                     this.Identity == input.Identity ||
                     (this.Identity != null &&
                     this.Identity.Equals(input.Identity))
-                ) && 
+                ) &&
                 (
                     this.Nonce == input.Nonce ||
                     (this.Nonce != null &&
                     this.Nonce.Equals(input.Nonce))
-                ) && 
+                ) &&
                 (
                     this.Pkcs7 == input.Pkcs7 ||
                     (this.Pkcs7 != null &&
                     this.Pkcs7.Equals(input.Pkcs7))
-                ) && 
+                ) &&
                 (
                     this.Role == input.Role ||
                     (this.Role != null &&
                     this.Role.Equals(input.Role))
-                ) && 
+                ) &&
                 (
                     this.Signature == input.Signature ||
                     (this.Signature != null &&

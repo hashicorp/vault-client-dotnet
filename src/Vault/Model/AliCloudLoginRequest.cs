@@ -41,7 +41,8 @@ namespace Vault.Model
         public AliCloudLoginRequest(string identityRequestHeaders = default(string), string identityRequestUrl = default(string), string role = default(string))
         {
             // to ensure "role" is required (not null)
-            if (role == null) {
+            if (role == null)
+            {
                 throw new ArgumentNullException("role is a required property for AliCloudLoginRequest and cannot be null");
             }
             this.Role = role;
@@ -115,17 +116,17 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.IdentityRequestHeaders == input.IdentityRequestHeaders ||
                     (this.IdentityRequestHeaders != null &&
                     this.IdentityRequestHeaders.Equals(input.IdentityRequestHeaders))
-                ) && 
+                ) &&
                 (
                     this.IdentityRequestUrl == input.IdentityRequestUrl ||
                     (this.IdentityRequestUrl != null &&
                     this.IdentityRequestUrl.Equals(input.IdentityRequestUrl))
-                ) && 
+                ) &&
                 (
                     this.Role == input.Role ||
                     (this.Role != null &&

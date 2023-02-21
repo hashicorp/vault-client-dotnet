@@ -42,22 +42,26 @@ namespace Vault.Model
         public CloudFoundryLoginRequest(string cfInstanceCert = default(string), string role = default(string), string signature = default(string), string signingTime = default(string))
         {
             // to ensure "cfInstanceCert" is required (not null)
-            if (cfInstanceCert == null) {
+            if (cfInstanceCert == null)
+            {
                 throw new ArgumentNullException("cfInstanceCert is a required property for CloudFoundryLoginRequest and cannot be null");
             }
             this.CfInstanceCert = cfInstanceCert;
             // to ensure "role" is required (not null)
-            if (role == null) {
+            if (role == null)
+            {
                 throw new ArgumentNullException("role is a required property for CloudFoundryLoginRequest and cannot be null");
             }
             this.Role = role;
             // to ensure "signature" is required (not null)
-            if (signature == null) {
+            if (signature == null)
+            {
                 throw new ArgumentNullException("signature is a required property for CloudFoundryLoginRequest and cannot be null");
             }
             this.Signature = signature;
             // to ensure "signingTime" is required (not null)
-            if (signingTime == null) {
+            if (signingTime == null)
+            {
                 throw new ArgumentNullException("signingTime is a required property for CloudFoundryLoginRequest and cannot be null");
             }
             this.SigningTime = signingTime;
@@ -137,22 +141,22 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.CfInstanceCert == input.CfInstanceCert ||
                     (this.CfInstanceCert != null &&
                     this.CfInstanceCert.Equals(input.CfInstanceCert))
-                ) && 
+                ) &&
                 (
                     this.Role == input.Role ||
                     (this.Role != null &&
                     this.Role.Equals(input.Role))
-                ) && 
+                ) &&
                 (
                     this.Signature == input.Signature ||
                     (this.Signature != null &&
                     this.Signature.Equals(input.Signature))
-                ) && 
+                ) &&
                 (
                     this.SigningTime == input.SigningTime ||
                     (this.SigningTime != null &&

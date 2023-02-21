@@ -136,34 +136,34 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AllowedRoles == input.AllowedRoles ||
                     this.AllowedRoles != null &&
                     input.AllowedRoles != null &&
                     this.AllowedRoles.SequenceEqual(input.AllowedRoles)
-                ) && 
+                ) &&
                 (
                     this.PasswordPolicy == input.PasswordPolicy ||
                     (this.PasswordPolicy != null &&
                     this.PasswordPolicy.Equals(input.PasswordPolicy))
-                ) && 
+                ) &&
                 (
                     this.PluginName == input.PluginName ||
                     (this.PluginName != null &&
                     this.PluginName.Equals(input.PluginName))
-                ) && 
+                ) &&
                 (
                     this.PluginVersion == input.PluginVersion ||
                     (this.PluginVersion != null &&
                     this.PluginVersion.Equals(input.PluginVersion))
-                ) && 
+                ) &&
                 (
                     this.RootRotationStatements == input.RootRotationStatements ||
                     this.RootRotationStatements != null &&
                     input.RootRotationStatements != null &&
                     this.RootRotationStatements.SequenceEqual(input.RootRotationStatements)
-                ) && 
+                ) &&
                 (
                     this.VerifyConnection == input.VerifyConnection ||
                     this.VerifyConnection.Equals(input.VerifyConnection)

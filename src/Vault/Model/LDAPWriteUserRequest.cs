@@ -96,13 +96,13 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Groups == input.Groups ||
                     this.Groups != null &&
                     input.Groups != null &&
                     this.Groups.SequenceEqual(input.Groups)
-                ) && 
+                ) &&
                 (
                     this.Policies == input.Policies ||
                     this.Policies != null &&

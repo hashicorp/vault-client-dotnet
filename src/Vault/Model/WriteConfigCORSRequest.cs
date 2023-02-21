@@ -106,19 +106,19 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AllowedHeaders == input.AllowedHeaders ||
                     this.AllowedHeaders != null &&
                     input.AllowedHeaders != null &&
                     this.AllowedHeaders.SequenceEqual(input.AllowedHeaders)
-                ) && 
+                ) &&
                 (
                     this.AllowedOrigins == input.AllowedOrigins ||
                     this.AllowedOrigins != null &&
                     input.AllowedOrigins != null &&
                     this.AllowedOrigins.SequenceEqual(input.AllowedOrigins)
-                ) && 
+                ) &&
                 (
                     this.Enable == input.Enable ||
                     this.Enable.Equals(input.Enable)

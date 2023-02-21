@@ -96,13 +96,13 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Add == input.Add ||
                     this.Add != null &&
                     input.Add != null &&
                     this.Add.SequenceEqual(input.Add)
-                ) && 
+                ) &&
                 (
                     this.Remove == input.Remove ||
                     this.Remove != null &&

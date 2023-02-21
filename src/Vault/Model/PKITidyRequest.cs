@@ -157,36 +157,36 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.IssuerSafetyBuffer == input.IssuerSafetyBuffer ||
                     this.IssuerSafetyBuffer.Equals(input.IssuerSafetyBuffer)
-                ) && 
+                ) &&
                 (
                     this.PauseDuration == input.PauseDuration ||
                     (this.PauseDuration != null &&
                     this.PauseDuration.Equals(input.PauseDuration))
-                ) && 
+                ) &&
                 (
                     this.SafetyBuffer == input.SafetyBuffer ||
                     this.SafetyBuffer.Equals(input.SafetyBuffer)
-                ) && 
+                ) &&
                 (
                     this.TidyCertStore == input.TidyCertStore ||
                     this.TidyCertStore.Equals(input.TidyCertStore)
-                ) && 
+                ) &&
                 (
                     this.TidyExpiredIssuers == input.TidyExpiredIssuers ||
                     this.TidyExpiredIssuers.Equals(input.TidyExpiredIssuers)
-                ) && 
+                ) &&
                 (
                     this.TidyRevocationList == input.TidyRevocationList ||
                     this.TidyRevocationList.Equals(input.TidyRevocationList)
-                ) && 
+                ) &&
                 (
                     this.TidyRevokedCertIssuerAssociations == input.TidyRevokedCertIssuerAssociations ||
                     this.TidyRevokedCertIssuerAssociations.Equals(input.TidyRevokedCertIssuerAssociations)
-                ) && 
+                ) &&
                 (
                     this.TidyRevokedCerts == input.TidyRevokedCerts ||
                     this.TidyRevokedCerts.Equals(input.TidyRevokedCerts)

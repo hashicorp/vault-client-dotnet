@@ -86,7 +86,7 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Size == input.Size ||
                     this.Size.Equals(input.Size)

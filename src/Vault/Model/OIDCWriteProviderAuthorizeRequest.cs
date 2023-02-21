@@ -47,22 +47,26 @@ namespace Vault.Model
         public OIDCWriteProviderAuthorizeRequest(string clientId = default(string), string codeChallenge = default(string), string codeChallengeMethod = "plain", int maxAge = default(int), string nonce = default(string), string redirectUri = default(string), string responseType = default(string), string scope = default(string), string state = default(string))
         {
             // to ensure "clientId" is required (not null)
-            if (clientId == null) {
+            if (clientId == null)
+            {
                 throw new ArgumentNullException("clientId is a required property for OIDCWriteProviderAuthorizeRequest and cannot be null");
             }
             this.ClientId = clientId;
             // to ensure "redirectUri" is required (not null)
-            if (redirectUri == null) {
+            if (redirectUri == null)
+            {
                 throw new ArgumentNullException("redirectUri is a required property for OIDCWriteProviderAuthorizeRequest and cannot be null");
             }
             this.RedirectUri = redirectUri;
             // to ensure "responseType" is required (not null)
-            if (responseType == null) {
+            if (responseType == null)
+            {
                 throw new ArgumentNullException("responseType is a required property for OIDCWriteProviderAuthorizeRequest and cannot be null");
             }
             this.ResponseType = responseType;
             // to ensure "scope" is required (not null)
-            if (scope == null) {
+            if (scope == null)
+            {
                 throw new ArgumentNullException("scope is a required property for OIDCWriteProviderAuthorizeRequest and cannot be null");
             }
             this.Scope = scope;
@@ -188,46 +192,46 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.ClientId == input.ClientId ||
                     (this.ClientId != null &&
                     this.ClientId.Equals(input.ClientId))
-                ) && 
+                ) &&
                 (
                     this.CodeChallenge == input.CodeChallenge ||
                     (this.CodeChallenge != null &&
                     this.CodeChallenge.Equals(input.CodeChallenge))
-                ) && 
+                ) &&
                 (
                     this.CodeChallengeMethod == input.CodeChallengeMethod ||
                     (this.CodeChallengeMethod != null &&
                     this.CodeChallengeMethod.Equals(input.CodeChallengeMethod))
-                ) && 
+                ) &&
                 (
                     this.MaxAge == input.MaxAge ||
                     this.MaxAge.Equals(input.MaxAge)
-                ) && 
+                ) &&
                 (
                     this.Nonce == input.Nonce ||
                     (this.Nonce != null &&
                     this.Nonce.Equals(input.Nonce))
-                ) && 
+                ) &&
                 (
                     this.RedirectUri == input.RedirectUri ||
                     (this.RedirectUri != null &&
                     this.RedirectUri.Equals(input.RedirectUri))
-                ) && 
+                ) &&
                 (
                     this.ResponseType == input.ResponseType ||
                     (this.ResponseType != null &&
                     this.ResponseType.Equals(input.ResponseType))
-                ) && 
+                ) &&
                 (
                     this.Scope == input.Scope ||
                     (this.Scope != null &&
                     this.Scope.Equals(input.Scope))
-                ) && 
+                ) &&
                 (
                     this.State == input.State ||
                     (this.State != null &&

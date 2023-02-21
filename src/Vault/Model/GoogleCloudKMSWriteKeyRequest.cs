@@ -146,37 +146,37 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Algorithm == input.Algorithm ||
                     (this.Algorithm != null &&
                     this.Algorithm.Equals(input.Algorithm))
-                ) && 
+                ) &&
                 (
                     this.CryptoKey == input.CryptoKey ||
                     (this.CryptoKey != null &&
                     this.CryptoKey.Equals(input.CryptoKey))
-                ) && 
+                ) &&
                 (
                     this.KeyRing == input.KeyRing ||
                     (this.KeyRing != null &&
                     this.KeyRing.Equals(input.KeyRing))
-                ) && 
+                ) &&
                 (
                     this.Labels == input.Labels ||
                     (this.Labels != null &&
                     this.Labels.Equals(input.Labels))
-                ) && 
+                ) &&
                 (
                     this.ProtectionLevel == input.ProtectionLevel ||
                     (this.ProtectionLevel != null &&
                     this.ProtectionLevel.Equals(input.ProtectionLevel))
-                ) && 
+                ) &&
                 (
                     this.Purpose == input.Purpose ||
                     (this.Purpose != null &&
                     this.Purpose.Equals(input.Purpose))
-                ) && 
+                ) &&
                 (
                     this.RotationPeriod == input.RotationPeriod ||
                     this.RotationPeriod.Equals(input.RotationPeriod)

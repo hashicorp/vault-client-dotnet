@@ -107,16 +107,16 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Bytes == input.Bytes ||
                     this.Bytes.Equals(input.Bytes)
-                ) && 
+                ) &&
                 (
                     this.Format == input.Format ||
                     (this.Format != null &&
                     this.Format.Equals(input.Format))
-                ) && 
+                ) &&
                 (
                     this.Urlbytes == input.Urlbytes ||
                     (this.Urlbytes != null &&

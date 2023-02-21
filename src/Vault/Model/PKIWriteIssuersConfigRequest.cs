@@ -96,12 +96,12 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Default == input.Default ||
                     (this.Default != null &&
                     this.Default.Equals(input.Default))
-                ) && 
+                ) &&
                 (
                     this.DefaultFollowsLatestIssuer == input.DefaultFollowsLatestIssuer ||
                     this.DefaultFollowsLatestIssuer.Equals(input.DefaultFollowsLatestIssuer)

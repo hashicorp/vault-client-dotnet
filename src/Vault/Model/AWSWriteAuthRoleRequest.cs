@@ -372,148 +372,148 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AllowInstanceMigration == input.AllowInstanceMigration ||
                     this.AllowInstanceMigration.Equals(input.AllowInstanceMigration)
-                ) && 
+                ) &&
                 (
                     this.AuthType == input.AuthType ||
                     (this.AuthType != null &&
                     this.AuthType.Equals(input.AuthType))
-                ) && 
+                ) &&
                 (
                     this.BoundAccountId == input.BoundAccountId ||
                     this.BoundAccountId != null &&
                     input.BoundAccountId != null &&
                     this.BoundAccountId.SequenceEqual(input.BoundAccountId)
-                ) && 
+                ) &&
                 (
                     this.BoundAmiId == input.BoundAmiId ||
                     this.BoundAmiId != null &&
                     input.BoundAmiId != null &&
                     this.BoundAmiId.SequenceEqual(input.BoundAmiId)
-                ) && 
+                ) &&
                 (
                     this.BoundEc2InstanceId == input.BoundEc2InstanceId ||
                     this.BoundEc2InstanceId != null &&
                     input.BoundEc2InstanceId != null &&
                     this.BoundEc2InstanceId.SequenceEqual(input.BoundEc2InstanceId)
-                ) && 
+                ) &&
                 (
                     this.BoundIamInstanceProfileArn == input.BoundIamInstanceProfileArn ||
                     this.BoundIamInstanceProfileArn != null &&
                     input.BoundIamInstanceProfileArn != null &&
                     this.BoundIamInstanceProfileArn.SequenceEqual(input.BoundIamInstanceProfileArn)
-                ) && 
+                ) &&
                 (
                     this.BoundIamPrincipalArn == input.BoundIamPrincipalArn ||
                     this.BoundIamPrincipalArn != null &&
                     input.BoundIamPrincipalArn != null &&
                     this.BoundIamPrincipalArn.SequenceEqual(input.BoundIamPrincipalArn)
-                ) && 
+                ) &&
                 (
                     this.BoundIamRoleArn == input.BoundIamRoleArn ||
                     this.BoundIamRoleArn != null &&
                     input.BoundIamRoleArn != null &&
                     this.BoundIamRoleArn.SequenceEqual(input.BoundIamRoleArn)
-                ) && 
+                ) &&
                 (
                     this.BoundRegion == input.BoundRegion ||
                     this.BoundRegion != null &&
                     input.BoundRegion != null &&
                     this.BoundRegion.SequenceEqual(input.BoundRegion)
-                ) && 
+                ) &&
                 (
                     this.BoundSubnetId == input.BoundSubnetId ||
                     this.BoundSubnetId != null &&
                     input.BoundSubnetId != null &&
                     this.BoundSubnetId.SequenceEqual(input.BoundSubnetId)
-                ) && 
+                ) &&
                 (
                     this.BoundVpcId == input.BoundVpcId ||
                     this.BoundVpcId != null &&
                     input.BoundVpcId != null &&
                     this.BoundVpcId.SequenceEqual(input.BoundVpcId)
-                ) && 
+                ) &&
                 (
                     this.DisallowReauthentication == input.DisallowReauthentication ||
                     this.DisallowReauthentication.Equals(input.DisallowReauthentication)
-                ) && 
+                ) &&
                 (
                     this.InferredAwsRegion == input.InferredAwsRegion ||
                     (this.InferredAwsRegion != null &&
                     this.InferredAwsRegion.Equals(input.InferredAwsRegion))
-                ) && 
+                ) &&
                 (
                     this.InferredEntityType == input.InferredEntityType ||
                     (this.InferredEntityType != null &&
                     this.InferredEntityType.Equals(input.InferredEntityType))
-                ) && 
+                ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
                     this.MaxTtl.Equals(input.MaxTtl)
-                ) && 
+                ) &&
                 (
                     this.Period == input.Period ||
                     this.Period.Equals(input.Period)
-                ) && 
+                ) &&
                 (
                     this.Policies == input.Policies ||
                     this.Policies != null &&
                     input.Policies != null &&
                     this.Policies.SequenceEqual(input.Policies)
-                ) && 
+                ) &&
                 (
                     this.ResolveAwsUniqueIds == input.ResolveAwsUniqueIds ||
                     this.ResolveAwsUniqueIds.Equals(input.ResolveAwsUniqueIds)
-                ) && 
+                ) &&
                 (
                     this.RoleTag == input.RoleTag ||
                     (this.RoleTag != null &&
                     this.RoleTag.Equals(input.RoleTag))
-                ) && 
+                ) &&
                 (
                     this.TokenBoundCidrs == input.TokenBoundCidrs ||
                     this.TokenBoundCidrs != null &&
                     input.TokenBoundCidrs != null &&
                     this.TokenBoundCidrs.SequenceEqual(input.TokenBoundCidrs)
-                ) && 
+                ) &&
                 (
                     this.TokenExplicitMaxTtl == input.TokenExplicitMaxTtl ||
                     this.TokenExplicitMaxTtl.Equals(input.TokenExplicitMaxTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenMaxTtl == input.TokenMaxTtl ||
                     this.TokenMaxTtl.Equals(input.TokenMaxTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenNoDefaultPolicy == input.TokenNoDefaultPolicy ||
                     this.TokenNoDefaultPolicy.Equals(input.TokenNoDefaultPolicy)
-                ) && 
+                ) &&
                 (
                     this.TokenNumUses == input.TokenNumUses ||
                     this.TokenNumUses.Equals(input.TokenNumUses)
-                ) && 
+                ) &&
                 (
                     this.TokenPeriod == input.TokenPeriod ||
                     this.TokenPeriod.Equals(input.TokenPeriod)
-                ) && 
+                ) &&
                 (
                     this.TokenPolicies == input.TokenPolicies ||
                     this.TokenPolicies != null &&
                     input.TokenPolicies != null &&
                     this.TokenPolicies.SequenceEqual(input.TokenPolicies)
-                ) && 
+                ) &&
                 (
                     this.TokenTtl == input.TokenTtl ||
                     this.TokenTtl.Equals(input.TokenTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenType == input.TokenType ||
                     (this.TokenType != null &&
                     this.TokenType.Equals(input.TokenType))
-                ) && 
+                ) &&
                 (
                     this.Ttl == input.Ttl ||
                     this.Ttl.Equals(input.Ttl)

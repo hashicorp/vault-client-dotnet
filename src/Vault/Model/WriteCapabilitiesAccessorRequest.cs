@@ -107,18 +107,18 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Accessor == input.Accessor ||
                     (this.Accessor != null &&
                     this.Accessor.Equals(input.Accessor))
-                ) && 
+                ) &&
                 (
                     this.Path == input.Path ||
                     this.Path != null &&
                     input.Path != null &&
                     this.Path.SequenceEqual(input.Path)
-                ) && 
+                ) &&
                 (
                     this.Paths == input.Paths ||
                     this.Paths != null &&

@@ -96,12 +96,12 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.ServiceAccountName == input.ServiceAccountName ||
                     (this.ServiceAccountName != null &&
                     this.ServiceAccountName.Equals(input.ServiceAccountName))
-                ) && 
+                ) &&
                 (
                     this.Ttl == input.Ttl ||
                     this.Ttl.Equals(input.Ttl)

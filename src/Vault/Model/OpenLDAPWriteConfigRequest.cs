@@ -449,138 +449,138 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AnonymousGroupSearch == input.AnonymousGroupSearch ||
                     this.AnonymousGroupSearch.Equals(input.AnonymousGroupSearch)
-                ) && 
+                ) &&
                 (
                     this.Binddn == input.Binddn ||
                     (this.Binddn != null &&
                     this.Binddn.Equals(input.Binddn))
-                ) && 
+                ) &&
                 (
                     this.Bindpass == input.Bindpass ||
                     (this.Bindpass != null &&
                     this.Bindpass.Equals(input.Bindpass))
-                ) && 
+                ) &&
                 (
                     this.CaseSensitiveNames == input.CaseSensitiveNames ||
                     this.CaseSensitiveNames.Equals(input.CaseSensitiveNames)
-                ) && 
+                ) &&
                 (
                     this.Certificate == input.Certificate ||
                     (this.Certificate != null &&
                     this.Certificate.Equals(input.Certificate))
-                ) && 
+                ) &&
                 (
                     this.ClientTlsCert == input.ClientTlsCert ||
                     (this.ClientTlsCert != null &&
                     this.ClientTlsCert.Equals(input.ClientTlsCert))
-                ) && 
+                ) &&
                 (
                     this.ClientTlsKey == input.ClientTlsKey ||
                     (this.ClientTlsKey != null &&
                     this.ClientTlsKey.Equals(input.ClientTlsKey))
-                ) && 
+                ) &&
                 (
                     this.DenyNullBind == input.DenyNullBind ||
                     this.DenyNullBind.Equals(input.DenyNullBind)
-                ) && 
+                ) &&
                 (
                     this.Discoverdn == input.Discoverdn ||
                     this.Discoverdn.Equals(input.Discoverdn)
-                ) && 
+                ) &&
                 (
                     this.Groupattr == input.Groupattr ||
                     (this.Groupattr != null &&
                     this.Groupattr.Equals(input.Groupattr))
-                ) && 
+                ) &&
                 (
                     this.Groupdn == input.Groupdn ||
                     (this.Groupdn != null &&
                     this.Groupdn.Equals(input.Groupdn))
-                ) && 
+                ) &&
                 (
                     this.Groupfilter == input.Groupfilter ||
                     (this.Groupfilter != null &&
                     this.Groupfilter.Equals(input.Groupfilter))
-                ) && 
+                ) &&
                 (
                     this.InsecureTls == input.InsecureTls ||
                     this.InsecureTls.Equals(input.InsecureTls)
-                ) && 
+                ) &&
                 (
                     this.Length == input.Length ||
                     this.Length.Equals(input.Length)
-                ) && 
+                ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
                     this.MaxTtl.Equals(input.MaxTtl)
-                ) && 
+                ) &&
                 (
                     this.PasswordPolicy == input.PasswordPolicy ||
                     (this.PasswordPolicy != null &&
                     this.PasswordPolicy.Equals(input.PasswordPolicy))
-                ) && 
+                ) &&
                 (
                     this.RequestTimeout == input.RequestTimeout ||
                     this.RequestTimeout.Equals(input.RequestTimeout)
-                ) && 
+                ) &&
                 (
                     this.Schema == input.Schema ||
                     (this.Schema != null &&
                     this.Schema.Equals(input.Schema))
-                ) && 
+                ) &&
                 (
                     this.Starttls == input.Starttls ||
                     this.Starttls.Equals(input.Starttls)
-                ) && 
+                ) &&
                 (
                     this.TlsMaxVersion == input.TlsMaxVersion ||
                     this.TlsMaxVersion.Equals(input.TlsMaxVersion)
-                ) && 
+                ) &&
                 (
                     this.TlsMinVersion == input.TlsMinVersion ||
                     this.TlsMinVersion.Equals(input.TlsMinVersion)
-                ) && 
+                ) &&
                 (
                     this.Ttl == input.Ttl ||
                     this.Ttl.Equals(input.Ttl)
-                ) && 
+                ) &&
                 (
                     this.Upndomain == input.Upndomain ||
                     (this.Upndomain != null &&
                     this.Upndomain.Equals(input.Upndomain))
-                ) && 
+                ) &&
                 (
                     this.Url == input.Url ||
                     (this.Url != null &&
                     this.Url.Equals(input.Url))
-                ) && 
+                ) &&
                 (
                     this.UsePre111GroupCnBehavior == input.UsePre111GroupCnBehavior ||
                     this.UsePre111GroupCnBehavior.Equals(input.UsePre111GroupCnBehavior)
-                ) && 
+                ) &&
                 (
                     this.UseTokenGroups == input.UseTokenGroups ||
                     this.UseTokenGroups.Equals(input.UseTokenGroups)
-                ) && 
+                ) &&
                 (
                     this.Userattr == input.Userattr ||
                     (this.Userattr != null &&
                     this.Userattr.Equals(input.Userattr))
-                ) && 
+                ) &&
                 (
                     this.Userdn == input.Userdn ||
                     (this.Userdn != null &&
                     this.Userdn.Equals(input.Userdn))
-                ) && 
+                ) &&
                 (
                     this.Userfilter == input.Userfilter ||
                     (this.Userfilter != null &&
                     this.Userfilter.Equals(input.Userfilter))
-                ) && 
+                ) &&
                 (
                     this.UsernameAsAlias == input.UsernameAsAlias ||
                     this.UsernameAsAlias.Equals(input.UsernameAsAlias)

@@ -116,21 +116,21 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.DisableCheckInEnforcement == input.DisableCheckInEnforcement ||
                     this.DisableCheckInEnforcement.Equals(input.DisableCheckInEnforcement)
-                ) && 
+                ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
                     this.MaxTtl.Equals(input.MaxTtl)
-                ) && 
+                ) &&
                 (
                     this.ServiceAccountNames == input.ServiceAccountNames ||
                     this.ServiceAccountNames != null &&
                     input.ServiceAccountNames != null &&
                     this.ServiceAccountNames.SequenceEqual(input.ServiceAccountNames)
-                ) && 
+                ) &&
                 (
                     this.Ttl == input.Ttl ||
                     this.Ttl.Equals(input.Ttl)

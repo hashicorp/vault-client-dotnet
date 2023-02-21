@@ -116,23 +116,23 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.CrlDistributionPoints == input.CrlDistributionPoints ||
                     this.CrlDistributionPoints != null &&
                     input.CrlDistributionPoints != null &&
                     this.CrlDistributionPoints.SequenceEqual(input.CrlDistributionPoints)
-                ) && 
+                ) &&
                 (
                     this.EnableTemplating == input.EnableTemplating ||
                     this.EnableTemplating.Equals(input.EnableTemplating)
-                ) && 
+                ) &&
                 (
                     this.IssuingCertificates == input.IssuingCertificates ||
                     this.IssuingCertificates != null &&
                     input.IssuingCertificates != null &&
                     this.IssuingCertificates.SequenceEqual(input.IssuingCertificates)
-                ) && 
+                ) &&
                 (
                     this.OcspServers == input.OcspServers ||
                     this.OcspServers != null &&

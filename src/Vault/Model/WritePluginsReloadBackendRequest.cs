@@ -105,18 +105,18 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Mounts == input.Mounts ||
                     this.Mounts != null &&
                     input.Mounts != null &&
                     this.Mounts.SequenceEqual(input.Mounts)
-                ) && 
+                ) &&
                 (
                     this.Plugin == input.Plugin ||
                     (this.Plugin != null &&
                     this.Plugin.Equals(input.Plugin))
-                ) && 
+                ) &&
                 (
                     this.Scope == input.Scope ||
                     (this.Scope != null &&

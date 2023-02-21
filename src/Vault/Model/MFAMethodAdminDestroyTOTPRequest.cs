@@ -40,12 +40,14 @@ namespace Vault.Model
         public MFAMethodAdminDestroyTOTPRequest(string entityId = default(string), string methodId = default(string))
         {
             // to ensure "entityId" is required (not null)
-            if (entityId == null) {
+            if (entityId == null)
+            {
                 throw new ArgumentNullException("entityId is a required property for MFAMethodAdminDestroyTOTPRequest and cannot be null");
             }
             this.EntityId = entityId;
             // to ensure "methodId" is required (not null)
-            if (methodId == null) {
+            if (methodId == null)
+            {
                 throw new ArgumentNullException("methodId is a required property for MFAMethodAdminDestroyTOTPRequest and cannot be null");
             }
             this.MethodId = methodId;
@@ -109,12 +111,12 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.EntityId == input.EntityId ||
                     (this.EntityId != null &&
                     this.EntityId.Equals(input.EntityId))
-                ) && 
+                ) &&
                 (
                     this.MethodId == input.MethodId ||
                     (this.MethodId != null &&

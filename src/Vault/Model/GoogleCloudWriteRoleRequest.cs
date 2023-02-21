@@ -361,140 +361,140 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AddGroupAliases == input.AddGroupAliases ||
                     this.AddGroupAliases.Equals(input.AddGroupAliases)
-                ) && 
+                ) &&
                 (
                     this.AllowGceInference == input.AllowGceInference ||
                     this.AllowGceInference.Equals(input.AllowGceInference)
-                ) && 
+                ) &&
                 (
                     this.BoundInstanceGroup == input.BoundInstanceGroup ||
                     (this.BoundInstanceGroup != null &&
                     this.BoundInstanceGroup.Equals(input.BoundInstanceGroup))
-                ) && 
+                ) &&
                 (
                     this.BoundInstanceGroups == input.BoundInstanceGroups ||
                     this.BoundInstanceGroups != null &&
                     input.BoundInstanceGroups != null &&
                     this.BoundInstanceGroups.SequenceEqual(input.BoundInstanceGroups)
-                ) && 
+                ) &&
                 (
                     this.BoundLabels == input.BoundLabels ||
                     this.BoundLabels != null &&
                     input.BoundLabels != null &&
                     this.BoundLabels.SequenceEqual(input.BoundLabels)
-                ) && 
+                ) &&
                 (
                     this.BoundProjects == input.BoundProjects ||
                     this.BoundProjects != null &&
                     input.BoundProjects != null &&
                     this.BoundProjects.SequenceEqual(input.BoundProjects)
-                ) && 
+                ) &&
                 (
                     this.BoundRegion == input.BoundRegion ||
                     (this.BoundRegion != null &&
                     this.BoundRegion.Equals(input.BoundRegion))
-                ) && 
+                ) &&
                 (
                     this.BoundRegions == input.BoundRegions ||
                     this.BoundRegions != null &&
                     input.BoundRegions != null &&
                     this.BoundRegions.SequenceEqual(input.BoundRegions)
-                ) && 
+                ) &&
                 (
                     this.BoundServiceAccounts == input.BoundServiceAccounts ||
                     this.BoundServiceAccounts != null &&
                     input.BoundServiceAccounts != null &&
                     this.BoundServiceAccounts.SequenceEqual(input.BoundServiceAccounts)
-                ) && 
+                ) &&
                 (
                     this.BoundZone == input.BoundZone ||
                     (this.BoundZone != null &&
                     this.BoundZone.Equals(input.BoundZone))
-                ) && 
+                ) &&
                 (
                     this.BoundZones == input.BoundZones ||
                     this.BoundZones != null &&
                     input.BoundZones != null &&
                     this.BoundZones.SequenceEqual(input.BoundZones)
-                ) && 
+                ) &&
                 (
                     this.MaxJwtExp == input.MaxJwtExp ||
                     this.MaxJwtExp.Equals(input.MaxJwtExp)
-                ) && 
+                ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
                     this.MaxTtl.Equals(input.MaxTtl)
-                ) && 
+                ) &&
                 (
                     this.Period == input.Period ||
                     this.Period.Equals(input.Period)
-                ) && 
+                ) &&
                 (
                     this.Policies == input.Policies ||
                     this.Policies != null &&
                     input.Policies != null &&
                     this.Policies.SequenceEqual(input.Policies)
-                ) && 
+                ) &&
                 (
                     this.ProjectId == input.ProjectId ||
                     (this.ProjectId != null &&
                     this.ProjectId.Equals(input.ProjectId))
-                ) && 
+                ) &&
                 (
                     this.ServiceAccounts == input.ServiceAccounts ||
                     this.ServiceAccounts != null &&
                     input.ServiceAccounts != null &&
                     this.ServiceAccounts.SequenceEqual(input.ServiceAccounts)
-                ) && 
+                ) &&
                 (
                     this.TokenBoundCidrs == input.TokenBoundCidrs ||
                     this.TokenBoundCidrs != null &&
                     input.TokenBoundCidrs != null &&
                     this.TokenBoundCidrs.SequenceEqual(input.TokenBoundCidrs)
-                ) && 
+                ) &&
                 (
                     this.TokenExplicitMaxTtl == input.TokenExplicitMaxTtl ||
                     this.TokenExplicitMaxTtl.Equals(input.TokenExplicitMaxTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenMaxTtl == input.TokenMaxTtl ||
                     this.TokenMaxTtl.Equals(input.TokenMaxTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenNoDefaultPolicy == input.TokenNoDefaultPolicy ||
                     this.TokenNoDefaultPolicy.Equals(input.TokenNoDefaultPolicy)
-                ) && 
+                ) &&
                 (
                     this.TokenNumUses == input.TokenNumUses ||
                     this.TokenNumUses.Equals(input.TokenNumUses)
-                ) && 
+                ) &&
                 (
                     this.TokenPeriod == input.TokenPeriod ||
                     this.TokenPeriod.Equals(input.TokenPeriod)
-                ) && 
+                ) &&
                 (
                     this.TokenPolicies == input.TokenPolicies ||
                     this.TokenPolicies != null &&
                     input.TokenPolicies != null &&
                     this.TokenPolicies.SequenceEqual(input.TokenPolicies)
-                ) && 
+                ) &&
                 (
                     this.TokenTtl == input.TokenTtl ||
                     this.TokenTtl.Equals(input.TokenTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenType == input.TokenType ||
                     (this.TokenType != null &&
                     this.TokenType.Equals(input.TokenType))
-                ) && 
+                ) &&
                 (
                     this.Ttl == input.Ttl ||
                     this.Ttl.Equals(input.Ttl)
-                ) && 
+                ) &&
                 (
                     this.Type == input.Type ||
                     (this.Type != null &&

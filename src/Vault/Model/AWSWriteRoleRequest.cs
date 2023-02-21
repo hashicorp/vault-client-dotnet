@@ -199,63 +199,63 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Arn == input.Arn ||
                     (this.Arn != null &&
                     this.Arn.Equals(input.Arn))
-                ) && 
+                ) &&
                 (
                     this.CredentialType == input.CredentialType ||
                     (this.CredentialType != null &&
                     this.CredentialType.Equals(input.CredentialType))
-                ) && 
+                ) &&
                 (
                     this.DefaultStsTtl == input.DefaultStsTtl ||
                     this.DefaultStsTtl.Equals(input.DefaultStsTtl)
-                ) && 
+                ) &&
                 (
                     this.IamGroups == input.IamGroups ||
                     this.IamGroups != null &&
                     input.IamGroups != null &&
                     this.IamGroups.SequenceEqual(input.IamGroups)
-                ) && 
+                ) &&
                 (
                     this.IamTags == input.IamTags ||
                     (this.IamTags != null &&
                     this.IamTags.Equals(input.IamTags))
-                ) && 
+                ) &&
                 (
                     this.MaxStsTtl == input.MaxStsTtl ||
                     this.MaxStsTtl.Equals(input.MaxStsTtl)
-                ) && 
+                ) &&
                 (
                     this.PermissionsBoundaryArn == input.PermissionsBoundaryArn ||
                     (this.PermissionsBoundaryArn != null &&
                     this.PermissionsBoundaryArn.Equals(input.PermissionsBoundaryArn))
-                ) && 
+                ) &&
                 (
                     this.Policy == input.Policy ||
                     (this.Policy != null &&
                     this.Policy.Equals(input.Policy))
-                ) && 
+                ) &&
                 (
                     this.PolicyArns == input.PolicyArns ||
                     this.PolicyArns != null &&
                     input.PolicyArns != null &&
                     this.PolicyArns.SequenceEqual(input.PolicyArns)
-                ) && 
+                ) &&
                 (
                     this.PolicyDocument == input.PolicyDocument ||
                     (this.PolicyDocument != null &&
                     this.PolicyDocument.Equals(input.PolicyDocument))
-                ) && 
+                ) &&
                 (
                     this.RoleArns == input.RoleArns ||
                     this.RoleArns != null &&
                     input.RoleArns != null &&
                     this.RoleArns.SequenceEqual(input.RoleArns)
-                ) && 
+                ) &&
                 (
                     this.UserPath == input.UserPath ||
                     (this.UserPath != null &&

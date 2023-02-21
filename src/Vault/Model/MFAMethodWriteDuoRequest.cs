@@ -146,36 +146,36 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.ApiHostname == input.ApiHostname ||
                     (this.ApiHostname != null &&
                     this.ApiHostname.Equals(input.ApiHostname))
-                ) && 
+                ) &&
                 (
                     this.IntegrationKey == input.IntegrationKey ||
                     (this.IntegrationKey != null &&
                     this.IntegrationKey.Equals(input.IntegrationKey))
-                ) && 
+                ) &&
                 (
                     this.MethodId == input.MethodId ||
                     (this.MethodId != null &&
                     this.MethodId.Equals(input.MethodId))
-                ) && 
+                ) &&
                 (
                     this.PushInfo == input.PushInfo ||
                     (this.PushInfo != null &&
                     this.PushInfo.Equals(input.PushInfo))
-                ) && 
+                ) &&
                 (
                     this.SecretKey == input.SecretKey ||
                     (this.SecretKey != null &&
                     this.SecretKey.Equals(input.SecretKey))
-                ) && 
+                ) &&
                 (
                     this.UsePasscode == input.UsePasscode ||
                     this.UsePasscode.Equals(input.UsePasscode)
-                ) && 
+                ) &&
                 (
                     this.UsernameFormat == input.UsernameFormat ||
                     (this.UsernameFormat != null &&

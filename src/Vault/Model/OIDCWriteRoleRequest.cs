@@ -42,7 +42,8 @@ namespace Vault.Model
         public OIDCWriteRoleRequest(string clientId = default(string), string key = default(string), string template = default(string), int ttl = default(int))
         {
             // to ensure "key" is required (not null)
-            if (key == null) {
+            if (key == null)
+            {
                 throw new ArgumentNullException("key is a required property for OIDCWriteRoleRequest and cannot be null");
             }
             this.Key = key;
@@ -125,22 +126,22 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.ClientId == input.ClientId ||
                     (this.ClientId != null &&
                     this.ClientId.Equals(input.ClientId))
-                ) && 
+                ) &&
                 (
                     this.Key == input.Key ||
                     (this.Key != null &&
                     this.Key.Equals(input.Key))
-                ) && 
+                ) &&
                 (
                     this.Template == input.Template ||
                     (this.Template != null &&
                     this.Template.Equals(input.Template))
-                ) && 
+                ) &&
                 (
                     this.Ttl == input.Ttl ||
                     this.Ttl.Equals(input.Ttl)

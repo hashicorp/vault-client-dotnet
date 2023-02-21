@@ -278,69 +278,69 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AltNames == input.AltNames ||
                     (this.AltNames != null &&
                     this.AltNames.Equals(input.AltNames))
-                ) && 
+                ) &&
                 (
                     this.CommonName == input.CommonName ||
                     (this.CommonName != null &&
                     this.CommonName.Equals(input.CommonName))
-                ) && 
+                ) &&
                 (
                     this.Csr == input.Csr ||
                     (this.Csr != null &&
                     this.Csr.Equals(input.Csr))
-                ) && 
+                ) &&
                 (
                     this.ExcludeCnFromSans == input.ExcludeCnFromSans ||
                     this.ExcludeCnFromSans.Equals(input.ExcludeCnFromSans)
-                ) && 
+                ) &&
                 (
                     this.Format == input.Format ||
                     this.Format.Equals(input.Format)
-                ) && 
+                ) &&
                 (
                     this.IpSans == input.IpSans ||
                     this.IpSans != null &&
                     input.IpSans != null &&
                     this.IpSans.SequenceEqual(input.IpSans)
-                ) && 
+                ) &&
                 (
                     this.IssuerRef == input.IssuerRef ||
                     (this.IssuerRef != null &&
                     this.IssuerRef.Equals(input.IssuerRef))
-                ) && 
+                ) &&
                 (
                     this.NotAfter == input.NotAfter ||
                     (this.NotAfter != null &&
                     this.NotAfter.Equals(input.NotAfter))
-                ) && 
+                ) &&
                 (
                     this.OtherSans == input.OtherSans ||
                     this.OtherSans != null &&
                     input.OtherSans != null &&
                     this.OtherSans.SequenceEqual(input.OtherSans)
-                ) && 
+                ) &&
                 (
                     this.PrivateKeyFormat == input.PrivateKeyFormat ||
                     this.PrivateKeyFormat.Equals(input.PrivateKeyFormat)
-                ) && 
+                ) &&
                 (
                     this.RemoveRootsFromChain == input.RemoveRootsFromChain ||
                     this.RemoveRootsFromChain.Equals(input.RemoveRootsFromChain)
-                ) && 
+                ) &&
                 (
                     this.SerialNumber == input.SerialNumber ||
                     (this.SerialNumber != null &&
                     this.SerialNumber.Equals(input.SerialNumber))
-                ) && 
+                ) &&
                 (
                     this.Ttl == input.Ttl ||
                     this.Ttl.Equals(input.Ttl)
-                ) && 
+                ) &&
                 (
                     this.UriSans == input.UriSans ||
                     this.UriSans != null &&

@@ -168,50 +168,50 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.CrlDistributionPoints == input.CrlDistributionPoints ||
                     this.CrlDistributionPoints != null &&
                     input.CrlDistributionPoints != null &&
                     this.CrlDistributionPoints.SequenceEqual(input.CrlDistributionPoints)
-                ) && 
+                ) &&
                 (
                     this.EnableAiaUrlTemplating == input.EnableAiaUrlTemplating ||
                     this.EnableAiaUrlTemplating.Equals(input.EnableAiaUrlTemplating)
-                ) && 
+                ) &&
                 (
                     this.IssuerName == input.IssuerName ||
                     (this.IssuerName != null &&
                     this.IssuerName.Equals(input.IssuerName))
-                ) && 
+                ) &&
                 (
                     this.IssuingCertificates == input.IssuingCertificates ||
                     this.IssuingCertificates != null &&
                     input.IssuingCertificates != null &&
                     this.IssuingCertificates.SequenceEqual(input.IssuingCertificates)
-                ) && 
+                ) &&
                 (
                     this.LeafNotAfterBehavior == input.LeafNotAfterBehavior ||
                     (this.LeafNotAfterBehavior != null &&
                     this.LeafNotAfterBehavior.Equals(input.LeafNotAfterBehavior))
-                ) && 
+                ) &&
                 (
                     this.ManualChain == input.ManualChain ||
                     this.ManualChain != null &&
                     input.ManualChain != null &&
                     this.ManualChain.SequenceEqual(input.ManualChain)
-                ) && 
+                ) &&
                 (
                     this.OcspServers == input.OcspServers ||
                     this.OcspServers != null &&
                     input.OcspServers != null &&
                     this.OcspServers.SequenceEqual(input.OcspServers)
-                ) && 
+                ) &&
                 (
                     this.RevocationSignatureAlgorithm == input.RevocationSignatureAlgorithm ||
                     (this.RevocationSignatureAlgorithm != null &&
                     this.RevocationSignatureAlgorithm.Equals(input.RevocationSignatureAlgorithm))
-                ) && 
+                ) &&
                 (
                     this.Usage == input.Usage ||
                     this.Usage != null &&

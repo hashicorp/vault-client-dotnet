@@ -136,32 +136,32 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Jwt == input.Jwt ||
                     (this.Jwt != null &&
                     this.Jwt.Equals(input.Jwt))
-                ) && 
+                ) &&
                 (
                     this.ResourceGroupName == input.ResourceGroupName ||
                     (this.ResourceGroupName != null &&
                     this.ResourceGroupName.Equals(input.ResourceGroupName))
-                ) && 
+                ) &&
                 (
                     this.Role == input.Role ||
                     (this.Role != null &&
                     this.Role.Equals(input.Role))
-                ) && 
+                ) &&
                 (
                     this.SubscriptionId == input.SubscriptionId ||
                     (this.SubscriptionId != null &&
                     this.SubscriptionId.Equals(input.SubscriptionId))
-                ) && 
+                ) &&
                 (
                     this.VmName == input.VmName ||
                     (this.VmName != null &&
                     this.VmName.Equals(input.VmName))
-                ) && 
+                ) &&
                 (
                     this.VmssName == input.VmssName ||
                     (this.VmssName != null &&

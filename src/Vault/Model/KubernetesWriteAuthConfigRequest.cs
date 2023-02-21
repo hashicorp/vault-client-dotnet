@@ -148,36 +148,36 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.DisableIssValidation == input.DisableIssValidation ||
                     this.DisableIssValidation.Equals(input.DisableIssValidation)
-                ) && 
+                ) &&
                 (
                     this.DisableLocalCaJwt == input.DisableLocalCaJwt ||
                     this.DisableLocalCaJwt.Equals(input.DisableLocalCaJwt)
-                ) && 
+                ) &&
                 (
                     this.Issuer == input.Issuer ||
                     (this.Issuer != null &&
                     this.Issuer.Equals(input.Issuer))
-                ) && 
+                ) &&
                 (
                     this.KubernetesCaCert == input.KubernetesCaCert ||
                     (this.KubernetesCaCert != null &&
                     this.KubernetesCaCert.Equals(input.KubernetesCaCert))
-                ) && 
+                ) &&
                 (
                     this.KubernetesHost == input.KubernetesHost ||
                     (this.KubernetesHost != null &&
                     this.KubernetesHost.Equals(input.KubernetesHost))
-                ) && 
+                ) &&
                 (
                     this.PemKeys == input.PemKeys ||
                     this.PemKeys != null &&
                     input.PemKeys != null &&
                     this.PemKeys.SequenceEqual(input.PemKeys)
-                ) && 
+                ) &&
                 (
                     this.TokenReviewerJwt == input.TokenReviewerJwt ||
                     (this.TokenReviewerJwt != null &&

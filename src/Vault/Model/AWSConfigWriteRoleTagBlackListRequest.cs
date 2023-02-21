@@ -96,11 +96,11 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.DisablePeriodicTidy == input.DisablePeriodicTidy ||
                     this.DisablePeriodicTidy.Equals(input.DisablePeriodicTidy)
-                ) && 
+                ) &&
                 (
                     this.SafetyBuffer == input.SafetyBuffer ||
                     this.SafetyBuffer.Equals(input.SafetyBuffer)

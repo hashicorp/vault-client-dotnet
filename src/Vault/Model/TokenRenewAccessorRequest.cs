@@ -96,12 +96,12 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Accessor == input.Accessor ||
                     (this.Accessor != null &&
                     this.Accessor.Equals(input.Accessor))
-                ) && 
+                ) &&
                 (
                     this.Increment == input.Increment ||
                     this.Increment.Equals(input.Increment)

@@ -86,7 +86,7 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.LocalSecretIds == input.LocalSecretIds ||
                     this.LocalSecretIds.Equals(input.LocalSecretIds)

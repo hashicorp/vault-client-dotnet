@@ -153,25 +153,25 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.KeyBits == input.KeyBits ||
                     this.KeyBits.Equals(input.KeyBits)
-                ) && 
+                ) &&
                 (
                     this.KeyName == input.KeyName ||
                     (this.KeyName != null &&
                     this.KeyName.Equals(input.KeyName))
-                ) && 
+                ) &&
                 (
                     this.KeyType == input.KeyType ||
                     this.KeyType.Equals(input.KeyType)
-                ) && 
+                ) &&
                 (
                     this.ManagedKeyId == input.ManagedKeyId ||
                     (this.ManagedKeyId != null &&
                     this.ManagedKeyId.Equals(input.ManagedKeyId))
-                ) && 
+                ) &&
                 (
                     this.ManagedKeyName == input.ManagedKeyName ||
                     (this.ManagedKeyName != null &&

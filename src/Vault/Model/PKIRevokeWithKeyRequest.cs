@@ -106,17 +106,17 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Certificate == input.Certificate ||
                     (this.Certificate != null &&
                     this.Certificate.Equals(input.Certificate))
-                ) && 
+                ) &&
                 (
                     this.PrivateKey == input.PrivateKey ||
                     (this.PrivateKey != null &&
                     this.PrivateKey.Equals(input.PrivateKey))
-                ) && 
+                ) &&
                 (
                     this.SerialNumber == input.SerialNumber ||
                     (this.SerialNumber != null &&

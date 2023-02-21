@@ -126,28 +126,28 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.CidrList == input.CidrList ||
                     this.CidrList != null &&
                     input.CidrList != null &&
                     this.CidrList.SequenceEqual(input.CidrList)
-                ) && 
+                ) &&
                 (
                     this.Metadata == input.Metadata ||
                     (this.Metadata != null &&
                     this.Metadata.Equals(input.Metadata))
-                ) && 
+                ) &&
                 (
                     this.NumUses == input.NumUses ||
                     this.NumUses.Equals(input.NumUses)
-                ) && 
+                ) &&
                 (
                     this.TokenBoundCidrs == input.TokenBoundCidrs ||
                     this.TokenBoundCidrs != null &&
                     input.TokenBoundCidrs != null &&
                     this.TokenBoundCidrs.SequenceEqual(input.TokenBoundCidrs)
-                ) && 
+                ) &&
                 (
                     this.Ttl == input.Ttl ||
                     this.Ttl.Equals(input.Ttl)

@@ -96,12 +96,12 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Lease == input.Lease ||
                     (this.Lease != null &&
                     this.Lease.Equals(input.Lease))
-                ) && 
+                ) &&
                 (
                     this.LeaseMax == input.LeaseMax ||
                     (this.LeaseMax != null &&

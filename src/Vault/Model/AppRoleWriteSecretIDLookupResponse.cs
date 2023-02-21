@@ -162,46 +162,46 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.CidrList == input.CidrList ||
                     this.CidrList != null &&
                     input.CidrList != null &&
                     this.CidrList.SequenceEqual(input.CidrList)
-                ) && 
+                ) &&
                 (
                     this.CreationTime == input.CreationTime ||
                     (this.CreationTime != null &&
                     this.CreationTime.Equals(input.CreationTime))
-                ) && 
+                ) &&
                 (
                     this.ExpirationTime == input.ExpirationTime ||
                     (this.ExpirationTime != null &&
                     this.ExpirationTime.Equals(input.ExpirationTime))
-                ) && 
+                ) &&
                 (
                     this.LastUpdatedTime == input.LastUpdatedTime ||
                     (this.LastUpdatedTime != null &&
                     this.LastUpdatedTime.Equals(input.LastUpdatedTime))
-                ) && 
+                ) &&
                 (
                     this.Metadata == input.Metadata ||
                     (this.Metadata != null &&
                     this.Metadata.Equals(input.Metadata))
-                ) && 
+                ) &&
                 (
                     this.SecretIdAccessor == input.SecretIdAccessor ||
                     (this.SecretIdAccessor != null &&
                     this.SecretIdAccessor.Equals(input.SecretIdAccessor))
-                ) && 
+                ) &&
                 (
                     this.SecretIdNumUses == input.SecretIdNumUses ||
                     this.SecretIdNumUses.Equals(input.SecretIdNumUses)
-                ) && 
+                ) &&
                 (
                     this.SecretIdTtl == input.SecretIdTtl ||
                     this.SecretIdTtl.Equals(input.SecretIdTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenBoundCidrs == input.TokenBoundCidrs ||
                     this.TokenBoundCidrs != null &&

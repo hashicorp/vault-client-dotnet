@@ -117,22 +117,22 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Bindings == input.Bindings ||
                     (this.Bindings != null &&
                     this.Bindings.Equals(input.Bindings))
-                ) && 
+                ) &&
                 (
                     this.Project == input.Project ||
                     (this.Project != null &&
                     this.Project.Equals(input.Project))
-                ) && 
+                ) &&
                 (
                     this.SecretType == input.SecretType ||
                     (this.SecretType != null &&
                     this.SecretType.Equals(input.SecretType))
-                ) && 
+                ) &&
                 (
                     this.TokenScopes == input.TokenScopes ||
                     this.TokenScopes != null &&

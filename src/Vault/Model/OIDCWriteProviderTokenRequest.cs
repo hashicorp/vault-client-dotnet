@@ -44,17 +44,20 @@ namespace Vault.Model
         public OIDCWriteProviderTokenRequest(string clientId = default(string), string clientSecret = default(string), string code = default(string), string codeVerifier = default(string), string grantType = default(string), string redirectUri = default(string))
         {
             // to ensure "code" is required (not null)
-            if (code == null) {
+            if (code == null)
+            {
                 throw new ArgumentNullException("code is a required property for OIDCWriteProviderTokenRequest and cannot be null");
             }
             this.Code = code;
             // to ensure "grantType" is required (not null)
-            if (grantType == null) {
+            if (grantType == null)
+            {
                 throw new ArgumentNullException("grantType is a required property for OIDCWriteProviderTokenRequest and cannot be null");
             }
             this.GrantType = grantType;
             // to ensure "redirectUri" is required (not null)
-            if (redirectUri == null) {
+            if (redirectUri == null)
+            {
                 throw new ArgumentNullException("redirectUri is a required property for OIDCWriteProviderTokenRequest and cannot be null");
             }
             this.RedirectUri = redirectUri;
@@ -153,32 +156,32 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.ClientId == input.ClientId ||
                     (this.ClientId != null &&
                     this.ClientId.Equals(input.ClientId))
-                ) && 
+                ) &&
                 (
                     this.ClientSecret == input.ClientSecret ||
                     (this.ClientSecret != null &&
                     this.ClientSecret.Equals(input.ClientSecret))
-                ) && 
+                ) &&
                 (
                     this.Code == input.Code ||
                     (this.Code != null &&
                     this.Code.Equals(input.Code))
-                ) && 
+                ) &&
                 (
                     this.CodeVerifier == input.CodeVerifier ||
                     (this.CodeVerifier != null &&
                     this.CodeVerifier.Equals(input.CodeVerifier))
-                ) && 
+                ) &&
                 (
                     this.GrantType == input.GrantType ||
                     (this.GrantType != null &&
                     this.GrantType.Equals(input.GrantType))
-                ) && 
+                ) &&
                 (
                     this.RedirectUri == input.RedirectUri ||
                     (this.RedirectUri != null &&

@@ -96,12 +96,12 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AccessKey == input.AccessKey ||
                     (this.AccessKey != null &&
                     this.AccessKey.Equals(input.AccessKey))
-                ) && 
+                ) &&
                 (
                     this.SecretKey == input.SecretKey ||
                     (this.SecretKey != null &&
