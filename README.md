@@ -316,5 +316,5 @@ Install-Package Polly
 [vault]:                        https://www.vaultproject.io/
 [ci-build-badge]:               https://github.com/hashicorp/vault-client-dotnet/actions/workflows/main.yml/badge.svg?brach=main
 [ci-build]:                     https://github.com/hashicorp/vault-client-dotnet/actions/workflows/main.yml?query=branch%3Amain
-[nuget-badge]:                  https://img.shields.io/nuget/v/HashiCorp.Vault.svg?style=plastic&color=blue
+[nuget-badge]:                  https://img.shields.io/nuget/v/HashiCorp.Vault.svg?style=flat&color=blue
 [nuget]:                        https://www.nuget.org/packages/HashiCorp.Vault/
