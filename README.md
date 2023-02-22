@@ -314,7 +314,7 @@ Install-Package Polly
 [openapi-generator]:	        https://openapi-generator.tech/docs/generators/csharp-netcore
 [polly]:                        http://www.thepollyproject.org/
 [vault]:                        https://www.vaultproject.io/
-[ci-build-badge]:               https://github.com/hashicorp/vault-client-go/actions/workflows/main.yml/badge.svg?brach=main
-[ci-build]:                     https://github.com/hashicorp/vault-client-go/actions/workflows/main.yml?query=branch%3Amain
+[ci-build-badge]:               https://github.com/hashicorp/vault-client-dotnet/actions/workflows/main.yml/badge.svg?brach=main
+[ci-build]:                     https://github.com/hashicorp/vault-client-dotnet/actions/workflows/main.yml?query=branch%3Amain
 [nuget-badge]:                  https://img.shields.io/nuget/v/HashiCorp.Vault.svg?style=plastic&color=blue
 [nuget]:                        https://www.nuget.org/packages/HashiCorp.Vault/
