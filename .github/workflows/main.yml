@@ -40,7 +40,7 @@ jobs:
       - name: check regenerated files
         run: |
           function read_changed_files() {
-            readonly changed_files="$(git diff --stat ':!Vault.sln')"
+            changed_files="$(git diff --stat ':!Vault.sln')"
             if [[ "$changed_files" != "" ]]; then
               echo "found diffs after running 'make regen'"
               echo "please run 'make regen' & commit the changed files:"
