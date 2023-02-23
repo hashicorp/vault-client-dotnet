@@ -1,18 +1,17 @@
-# [EXPERIMENTAL] Vault .NET Client Library
+# Vault .NET Client Library
 
 [![Build][ci-build-badge]][ci-build]
 [![NuGet][nuget-badge]][nuget]
 
 A .NET client library [generated][openapi-generator] from `OpenAPI` [specification file][openapi-spec] to interact with [Hashicorp][hashicorp] [Vault][vault].
 
-> _**Warning**_: This library is currently marked as **EXPERIMENTAL**. Please 
+> _**Note**_: This library is currently marked as **BETA**. Please 
 > try it out and give us feedback! Please do not use it in production.
-
-> _**Warning**_: The [openapi.json][openapi-spec] file included in
-> this repository is **NOT** the official Vault `OpenAPI` specification.
 
 ## Contents
 
+- [Vault .NET Client Library](#vault-net-client-library)
+  - [Contents](#contents)
   - [Installation](#installation)
     - [Frameworks supported](#frameworks-supported)
   - [Examples](#examples)
@@ -24,19 +23,22 @@ A .NET client library [generated][openapi-generator] from `OpenAPI` [specificati
     - [Exception Handling](#exception-handling)
     - [Wrapping and Unwrapping Responses](#wrapping-and-unwrapping-responses)
     - [Performing Generic Operations](#performing-generic-operations)
-  - [Contributing to the Vault .Net Library](#contributing-to-vault-net-library)
+  - [Contributing to Vault .Net Library](#contributing-to-vault-net-library)
     - [Local Development](#local-development)
   - [Documentation for API Endpoints](#documentation-for-api-endpoints)
 
 ## Installation
+
 Vault is a package available at [Hashicorp Nuget][nuget-hashicorp]. We've provided install commands below.
 
 Using Powershell:
+
 ```shell-session
  Install-Package HashiCorp.Vault -Version "0.1.0-beta"
 ```
 
 Using Nuget CLI:
+
 ```shell-session
  nuget install HashiCorp.Vault -Version "0.1.0-beta"
 ```
@@ -45,11 +47,13 @@ Using Nuget CLI:
 > tab in GitHub.
 
 You can add the package to your .Net project using the following command:
+
 ```shell-session
 dotnet add package Hashicorp.Vault -version "0.1.0-beta" 
 ```
 
 ### Frameworks supported
+
 - .NET Core >=1.0
 - .NET Framework >=4.6
 - Mono/Xamarin >=vNext
@@ -57,6 +61,7 @@ dotnet add package Hashicorp.Vault -version "0.1.0-beta"
 ## Examples
 
 ### Getting Started
+
 Here is a simple copy-pastable example of using the library to write a secret to the
 kv secrets engine and then read the secret back. This example 
 works with a Vault server started in dev mode with a hardcoded root token (e.g.
@@ -100,11 +105,13 @@ namespace Example
     }
 }
 ```
+
 _**Note**_: the responses are currently generic objects that need
 to be marshalled into an appropriate model. Structured responses are 
 coming soon!
 
 ### Configuring a Vault Client
+
 The VaultClient requires you pass it a `VaultConfiguration` object. 
 
 ```csharp
@@ -133,6 +140,7 @@ VaultConfiguration config = new VaultConfiguration(basePath: address,
 ```
 
 ### Setting Headers
+
 The `SetToken` method can be used to set the `X-Vault-Token` header with the given token for subsequent requests.
 
 ```csharp
@@ -159,6 +167,7 @@ vaultClient.ClearCustomHeaders();
 ```
 
 ### Authenticating with Vault
+
 In the previous example we used an insecure (root token) authentication method.
 For production applications, it is recommended to use [approle][doc-approle] or
 one of the platform-specific authentication methods instead (e.g.
@@ -180,6 +189,7 @@ The secret identifier is often delivered as a wrapped token. In this case, you
 should unwrap it first as demonstrated [here](#wrapping-and-unwrapping-responses).
 
 ### Reading a KV Secret
+
 To call secrets endpoints, simply use the `VaultClient.Secrets` object, as shown below.
 
 All secrets and auth calls have an optional mount path parameter that can be specified,
@@ -198,6 +208,7 @@ VaultResponse<Object> respSync = vaultClient.Secrets.KVv2ReadAsync("path");
 ```
 
 ### Exception Handling
+
 For api level exceptions we provide the `VaultApiException` that provides the Vault
 specific errors, status code and original error content.
 
@@ -221,8 +232,9 @@ catch (VaultApiException e)
 ```
 
 ### Wrapping and Unwrapping Responses
-All functions accept an optional `TimeSpan? wrapTTL` function parameter. Vault will wrap the response and return a response-wrapping token instead. 
-More documentation on response wrapping can be found [here]([vault-response-wrapping]).
+
+All functions accept an optional `TimeSpan? wrapTTL` function parameter. Vault will wrap the response and return a response-wrapping token instead.
+More documentation on response wrapping can be found [here]([doc-response-wrapping]).
 
 ```csharp
 // Get a wrapped response from Vault
@@ -241,7 +253,7 @@ Task<VaultResponse<Object>> unwrappedResp = await vauClient.UnwrapAsync<Object>(
 ### Performing Generic Operations
 
 We provide generic accessors for `Read`, `Write`, `List` and `Delete`, should you need to access an endpoint that is not available in the library (e.g. a plugin that is not builtin
-to Vault). 
+to Vault).
 
 Each generic operation has a synchronous and asynchronous version.
 
@@ -268,6 +280,7 @@ await vaultClient.WriteAsync<Object>(writePath, secretData);
 ```
 
 ## Contributing to Vault .Net Library
+
 ### Local Development
 
 To develop locally with the Vault .Net Library, you can generate the DLL using your preferred tool (e.g. `dotnet build`) in the `src` folder.
@@ -286,12 +299,12 @@ You will also need to include the following dependencies:
 - [Polly][polly]
 
 Using your preferred method:
+
 ```shell-session
 Install-Package Newtonsoft.Json
 Install-Package Polly
 ```
 
-<a name="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
 
 - [Auth](docs/Auth.md)
@@ -299,8 +312,6 @@ Install-Package Polly
 - [Secrets](docs/Secrets.md)
 - [System](docs/System.md)
 
-[access-token]:                 https://www.jfrog.com/confluence/display/JFROG/User+Profile#UserProfile-IdentityTokenidentitytoken
-[artifactory]:                  https://artifactory.hashicorp.engineering/ui/repos/tree/General/vault-devex-nuget-local
 [doc-approle]:                  https://developer.hashicorp.com/vault/docs/auth/approle
 [doc-aws]:                      https://developer.hashicorp.com/vault/docs/auth/aws
 [doc-azure]:                    https://developer.hashicorp.com/vault/docs/auth/azure
@@ -311,7 +322,7 @@ Install-Package Polly
 [http-client-handler-docs]:     https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclienthandler?view=net-6.0
 [newtonsoft-json]:              https://www.nuget.org/packages/Newtonsoft.Json/
 [openapi-spec]:                 openapi.json
-[openapi-generator]:	        https://openapi-generator.tech/docs/generators/csharp-netcore
+[openapi-generator]:            https://openapi-generator.tech/docs/generators/csharp-netcore
 [polly]:                        http://www.thepollyproject.org/
 [vault]:                        https://www.vaultproject.io/
 [ci-build-badge]:               https://github.com/hashicorp/vault-client-dotnet/actions/workflows/main.yml/badge.svg?brach=main
