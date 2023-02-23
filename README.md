@@ -11,7 +11,6 @@ A .NET client library [generated][openapi-generator] from `OpenAPI` [specificati
 ## Contents
 
 - [Vault .NET Client Library](#vault-net-client-library)
-  - [Contents](#contents)
   - [Installation](#installation)
     - [Frameworks supported](#frameworks-supported)
   - [Examples](#examples)
