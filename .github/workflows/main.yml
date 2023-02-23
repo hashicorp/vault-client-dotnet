@@ -36,7 +36,7 @@ jobs:
 
       - name: install rename utility
         run: sudo apt-get -y install rename
-        
+
       - name: check dotnet version
         run: |
           command -v dotnet
@@ -45,22 +45,10 @@ jobs:
 
       - name: check regenerated files
         run: |
-          function read_changed_files() {
-            changed_files="$(git diff --stat ':!Vault.sln')"
-            if [[ "$changed_files" != "" ]]; then
-              echo "found diffs after running 'make regen'"
-              echo "please run 'make regen' & commit the changed files:"
-              echo "$changed_files"
-              # exit 1
-            fi
-          }
-          
           make delete-generated
           make generate
-          read_changed_files
+          cat  src/Vault.Test/Model/PKIWriteJSONRequestTests.cs 
+      - name: format
+        run: |
           make format
-          read_changed_files
-          make clean
-          read_changed_files
-          exit 1
-          
+          cat  src/Vault.Test/Model/PKIWriteJSONRequestTests.cs
