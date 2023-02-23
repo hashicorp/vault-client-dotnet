@@ -71,4 +71,4 @@ build-prod:
 	dotnet build -c release
 
 format:
-	dotnet format
+	dotnet format --verbosity=detailed
