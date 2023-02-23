@@ -1,5 +1,8 @@
 # [EXPERIMENTAL] Vault .NET Client Library
 
+[![Build][ci-build-badge]][ci-build]
+[![NuGet][nuget-badge]][nuget]
+
 A .NET client library [generated][openapi-generator] from `OpenAPI` [specification file][openapi-spec] to interact with [Hashicorp][hashicorp] [Vault][vault].
 
 > _**Warning**_: This library is currently marked as **EXPERIMENTAL**. Please 
@@ -311,3 +314,7 @@ Install-Package Polly
 [openapi-generator]:	        https://openapi-generator.tech/docs/generators/csharp-netcore
 [polly]:                        http://www.thepollyproject.org/
 [vault]:                        https://www.vaultproject.io/
+[ci-build-badge]:               https://github.com/hashicorp/vault-client-dotnet/actions/workflows/main.yml/badge.svg?brach=main
+[ci-build]:                     https://github.com/hashicorp/vault-client-dotnet/actions/workflows/main.yml?query=branch%3Amain
+[nuget-badge]:                  https://img.shields.io/nuget/v/HashiCorp.Vault.svg?style=flat&color=blue
+[nuget]:                        https://www.nuget.org/packages/HashiCorp.Vault/
