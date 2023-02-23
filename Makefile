@@ -11,7 +11,7 @@ regen: delete-generated generate format clean
 regen-bin: delete-generated generate format clean build
 
 delete-generated:
-	rm -rf \
+	@rm -rf \
 		docs \
 		build.bat \
 		build.sh \
@@ -24,7 +24,7 @@ delete-generated:
 
 # --api-name-suffix does not allow empty strings; "REPLACE~ME" is a workaround
 generate:
-	docker run \
+	@docker run \
 		--rm \
 		--volume "${PWD}:/local" \
 		--user="$(shell id -u):$(shell id -g)" \

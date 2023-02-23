@@ -50,11 +50,11 @@ jobs:
           }
           
           make delete-generated
-          make generate > /dev/null
+          make generate
           read_changed_files
-          make format > /dev/null
+          make format
           read_changed_files
-          make clean > /dev/null
+          make clean
           read_changed_files
           exit 1
           
