@@ -36066,7 +36066,7 @@
           }
         }
       },
-      "PkiWriteJsonRequest": {
+      "PKIWriteJSONRequest": {
         "type": "object",
         "properties": {
           "crl_distribution_points": {
