@@ -60,6 +60,7 @@ namespace Vault.Test.Model
         {
             // TODO unit test for the property 'AddBasicConstraints'
         }
+
         /// <summary>
         /// Test the property 'AltNames'
         /// </summary>
