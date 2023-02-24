@@ -106,16 +106,16 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AdditionalAuthenticatedData == input.AdditionalAuthenticatedData ||
                     (this.AdditionalAuthenticatedData != null &&
                     this.AdditionalAuthenticatedData.Equals(input.AdditionalAuthenticatedData))
-                ) && 
+                ) &&
                 (
                     this.KeyVersion == input.KeyVersion ||
                     this.KeyVersion.Equals(input.KeyVersion)
-                ) && 
+                ) &&
                 (
                     this.Plaintext == input.Plaintext ||
                     (this.Plaintext != null &&

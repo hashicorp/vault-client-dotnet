@@ -106,17 +106,17 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Tags == input.Tags ||
                     (this.Tags != null &&
                     this.Tags.Equals(input.Tags))
-                ) && 
+                ) &&
                 (
                     this.VhostTopics == input.VhostTopics ||
                     (this.VhostTopics != null &&
                     this.VhostTopics.Equals(input.VhostTopics))
-                ) && 
+                ) &&
                 (
                     this.Vhosts == input.Vhosts ||
                     (this.Vhosts != null &&

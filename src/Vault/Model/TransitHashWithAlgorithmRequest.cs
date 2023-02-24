@@ -108,17 +108,17 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Algorithm == input.Algorithm ||
                     (this.Algorithm != null &&
                     this.Algorithm.Equals(input.Algorithm))
-                ) && 
+                ) &&
                 (
                     this.Format == input.Format ||
                     (this.Format != null &&
                     this.Format.Equals(input.Format))
-                ) && 
+                ) &&
                 (
                     this.Input == input.Input ||
                     (this.Input != null &&

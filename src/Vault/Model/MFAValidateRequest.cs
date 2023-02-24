@@ -40,12 +40,14 @@ namespace Vault.Model
         public MFAValidateRequest(Object mfaPayload = default(Object), string mfaRequestId = default(string))
         {
             // to ensure "mfaPayload" is required (not null)
-            if (mfaPayload == null) {
+            if (mfaPayload == null)
+            {
                 throw new ArgumentNullException("mfaPayload is a required property for MFAValidateRequest and cannot be null");
             }
             this.MfaPayload = mfaPayload;
             // to ensure "mfaRequestId" is required (not null)
-            if (mfaRequestId == null) {
+            if (mfaRequestId == null)
+            {
                 throw new ArgumentNullException("mfaRequestId is a required property for MFAValidateRequest and cannot be null");
             }
             this.MfaRequestId = mfaRequestId;
@@ -109,12 +111,12 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.MfaPayload == input.MfaPayload ||
                     (this.MfaPayload != null &&
                     this.MfaPayload.Equals(input.MfaPayload))
-                ) && 
+                ) &&
                 (
                     this.MfaRequestId == input.MfaRequestId ||
                     (this.MfaRequestId != null &&

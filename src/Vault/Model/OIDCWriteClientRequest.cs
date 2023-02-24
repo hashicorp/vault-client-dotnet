@@ -138,31 +138,31 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AccessTokenTtl == input.AccessTokenTtl ||
                     this.AccessTokenTtl.Equals(input.AccessTokenTtl)
-                ) && 
+                ) &&
                 (
                     this.Assignments == input.Assignments ||
                     this.Assignments != null &&
                     input.Assignments != null &&
                     this.Assignments.SequenceEqual(input.Assignments)
-                ) && 
+                ) &&
                 (
                     this.ClientType == input.ClientType ||
                     (this.ClientType != null &&
                     this.ClientType.Equals(input.ClientType))
-                ) && 
+                ) &&
                 (
                     this.IdTokenTtl == input.IdTokenTtl ||
                     this.IdTokenTtl.Equals(input.IdTokenTtl)
-                ) && 
+                ) &&
                 (
                     this.Key == input.Key ||
                     (this.Key != null &&
                     this.Key.Equals(input.Key))
-                ) && 
+                ) &&
                 (
                     this.RedirectUris == input.RedirectUris ||
                     this.RedirectUris != null &&

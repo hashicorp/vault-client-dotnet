@@ -86,7 +86,7 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Sync == input.Sync ||
                     this.Sync.Equals(input.Sync)

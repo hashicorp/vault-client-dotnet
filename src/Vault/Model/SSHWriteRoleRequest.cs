@@ -446,142 +446,142 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AdminUser == input.AdminUser ||
                     (this.AdminUser != null &&
                     this.AdminUser.Equals(input.AdminUser))
-                ) && 
+                ) &&
                 (
                     this.AlgorithmSigner == input.AlgorithmSigner ||
                     this.AlgorithmSigner.Equals(input.AlgorithmSigner)
-                ) && 
+                ) &&
                 (
                     this.AllowBareDomains == input.AllowBareDomains ||
                     this.AllowBareDomains.Equals(input.AllowBareDomains)
-                ) && 
+                ) &&
                 (
                     this.AllowHostCertificates == input.AllowHostCertificates ||
                     this.AllowHostCertificates.Equals(input.AllowHostCertificates)
-                ) && 
+                ) &&
                 (
                     this.AllowSubdomains == input.AllowSubdomains ||
                     this.AllowSubdomains.Equals(input.AllowSubdomains)
-                ) && 
+                ) &&
                 (
                     this.AllowUserCertificates == input.AllowUserCertificates ||
                     this.AllowUserCertificates.Equals(input.AllowUserCertificates)
-                ) && 
+                ) &&
                 (
                     this.AllowUserKeyIds == input.AllowUserKeyIds ||
                     this.AllowUserKeyIds.Equals(input.AllowUserKeyIds)
-                ) && 
+                ) &&
                 (
                     this.AllowedCriticalOptions == input.AllowedCriticalOptions ||
                     (this.AllowedCriticalOptions != null &&
                     this.AllowedCriticalOptions.Equals(input.AllowedCriticalOptions))
-                ) && 
+                ) &&
                 (
                     this.AllowedDomains == input.AllowedDomains ||
                     (this.AllowedDomains != null &&
                     this.AllowedDomains.Equals(input.AllowedDomains))
-                ) && 
+                ) &&
                 (
                     this.AllowedDomainsTemplate == input.AllowedDomainsTemplate ||
                     this.AllowedDomainsTemplate.Equals(input.AllowedDomainsTemplate)
-                ) && 
+                ) &&
                 (
                     this.AllowedExtensions == input.AllowedExtensions ||
                     (this.AllowedExtensions != null &&
                     this.AllowedExtensions.Equals(input.AllowedExtensions))
-                ) && 
+                ) &&
                 (
                     this.AllowedUserKeyLengths == input.AllowedUserKeyLengths ||
                     (this.AllowedUserKeyLengths != null &&
                     this.AllowedUserKeyLengths.Equals(input.AllowedUserKeyLengths))
-                ) && 
+                ) &&
                 (
                     this.AllowedUsers == input.AllowedUsers ||
                     (this.AllowedUsers != null &&
                     this.AllowedUsers.Equals(input.AllowedUsers))
-                ) && 
+                ) &&
                 (
                     this.AllowedUsersTemplate == input.AllowedUsersTemplate ||
                     this.AllowedUsersTemplate.Equals(input.AllowedUsersTemplate)
-                ) && 
+                ) &&
                 (
                     this.CidrList == input.CidrList ||
                     (this.CidrList != null &&
                     this.CidrList.Equals(input.CidrList))
-                ) && 
+                ) &&
                 (
                     this.DefaultCriticalOptions == input.DefaultCriticalOptions ||
                     (this.DefaultCriticalOptions != null &&
                     this.DefaultCriticalOptions.Equals(input.DefaultCriticalOptions))
-                ) && 
+                ) &&
                 (
                     this.DefaultExtensions == input.DefaultExtensions ||
                     (this.DefaultExtensions != null &&
                     this.DefaultExtensions.Equals(input.DefaultExtensions))
-                ) && 
+                ) &&
                 (
                     this.DefaultExtensionsTemplate == input.DefaultExtensionsTemplate ||
                     this.DefaultExtensionsTemplate.Equals(input.DefaultExtensionsTemplate)
-                ) && 
+                ) &&
                 (
                     this.DefaultUser == input.DefaultUser ||
                     (this.DefaultUser != null &&
                     this.DefaultUser.Equals(input.DefaultUser))
-                ) && 
+                ) &&
                 (
                     this.DefaultUserTemplate == input.DefaultUserTemplate ||
                     this.DefaultUserTemplate.Equals(input.DefaultUserTemplate)
-                ) && 
+                ) &&
                 (
                     this.ExcludeCidrList == input.ExcludeCidrList ||
                     (this.ExcludeCidrList != null &&
                     this.ExcludeCidrList.Equals(input.ExcludeCidrList))
-                ) && 
+                ) &&
                 (
                     this.InstallScript == input.InstallScript ||
                     (this.InstallScript != null &&
                     this.InstallScript.Equals(input.InstallScript))
-                ) && 
+                ) &&
                 (
                     this.Key == input.Key ||
                     (this.Key != null &&
                     this.Key.Equals(input.Key))
-                ) && 
+                ) &&
                 (
                     this.KeyBits == input.KeyBits ||
                     this.KeyBits.Equals(input.KeyBits)
-                ) && 
+                ) &&
                 (
                     this.KeyIdFormat == input.KeyIdFormat ||
                     (this.KeyIdFormat != null &&
                     this.KeyIdFormat.Equals(input.KeyIdFormat))
-                ) && 
+                ) &&
                 (
                     this.KeyOptionSpecs == input.KeyOptionSpecs ||
                     (this.KeyOptionSpecs != null &&
                     this.KeyOptionSpecs.Equals(input.KeyOptionSpecs))
-                ) && 
+                ) &&
                 (
                     this.KeyType == input.KeyType ||
                     this.KeyType.Equals(input.KeyType)
-                ) && 
+                ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
                     this.MaxTtl.Equals(input.MaxTtl)
-                ) && 
+                ) &&
                 (
                     this.NotBeforeDuration == input.NotBeforeDuration ||
                     this.NotBeforeDuration.Equals(input.NotBeforeDuration)
-                ) && 
+                ) &&
                 (
                     this.Port == input.Port ||
                     this.Port.Equals(input.Port)
-                ) && 
+                ) &&
                 (
                     this.Ttl == input.Ttl ||
                     this.Ttl.Equals(input.Ttl)

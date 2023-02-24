@@ -136,29 +136,29 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.BlockInterval == input.BlockInterval ||
                     this.BlockInterval.Equals(input.BlockInterval)
-                ) && 
+                ) &&
                 (
                     this.Interval == input.Interval ||
                     this.Interval.Equals(input.Interval)
-                ) && 
+                ) &&
                 (
                     this.Path == input.Path ||
                     (this.Path != null &&
                     this.Path.Equals(input.Path))
-                ) && 
+                ) &&
                 (
                     this.Rate == input.Rate ||
                     this.Rate.Equals(input.Rate)
-                ) && 
+                ) &&
                 (
                     this.Role == input.Role ||
                     (this.Role != null &&
                     this.Role.Equals(input.Role))
-                ) && 
+                ) &&
                 (
                     this.Type == input.Type ||
                     (this.Type != null &&

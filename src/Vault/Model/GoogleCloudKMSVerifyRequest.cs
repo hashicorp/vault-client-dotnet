@@ -106,16 +106,16 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Digest == input.Digest ||
                     (this.Digest != null &&
                     this.Digest.Equals(input.Digest))
-                ) && 
+                ) &&
                 (
                     this.KeyVersion == input.KeyVersion ||
                     this.KeyVersion.Equals(input.KeyVersion)
-                ) && 
+                ) &&
                 (
                     this.Signature == input.Signature ||
                     (this.Signature != null &&

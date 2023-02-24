@@ -136,35 +136,35 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.MemberEntityIds == input.MemberEntityIds ||
                     this.MemberEntityIds != null &&
                     input.MemberEntityIds != null &&
                     this.MemberEntityIds.SequenceEqual(input.MemberEntityIds)
-                ) && 
+                ) &&
                 (
                     this.MemberGroupIds == input.MemberGroupIds ||
                     this.MemberGroupIds != null &&
                     input.MemberGroupIds != null &&
                     this.MemberGroupIds.SequenceEqual(input.MemberGroupIds)
-                ) && 
+                ) &&
                 (
                     this.Metadata == input.Metadata ||
                     (this.Metadata != null &&
                     this.Metadata.Equals(input.Metadata))
-                ) && 
+                ) &&
                 (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
-                ) && 
+                ) &&
                 (
                     this.Policies == input.Policies ||
                     this.Policies != null &&
                     input.Policies != null &&
                     this.Policies.SequenceEqual(input.Policies)
-                ) && 
+                ) &&
                 (
                     this.Type == input.Type ||
                     (this.Type != null &&

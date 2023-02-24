@@ -160,38 +160,38 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AutoRebuild == input.AutoRebuild ||
                     this.AutoRebuild.Equals(input.AutoRebuild)
-                ) && 
+                ) &&
                 (
                     this.AutoRebuildGracePeriod == input.AutoRebuildGracePeriod ||
                     (this.AutoRebuildGracePeriod != null &&
                     this.AutoRebuildGracePeriod.Equals(input.AutoRebuildGracePeriod))
-                ) && 
+                ) &&
                 (
                     this.DeltaRebuildInterval == input.DeltaRebuildInterval ||
                     (this.DeltaRebuildInterval != null &&
                     this.DeltaRebuildInterval.Equals(input.DeltaRebuildInterval))
-                ) && 
+                ) &&
                 (
                     this.Disable == input.Disable ||
                     this.Disable.Equals(input.Disable)
-                ) && 
+                ) &&
                 (
                     this.EnableDelta == input.EnableDelta ||
                     this.EnableDelta.Equals(input.EnableDelta)
-                ) && 
+                ) &&
                 (
                     this.Expiry == input.Expiry ||
                     (this.Expiry != null &&
                     this.Expiry.Equals(input.Expiry))
-                ) && 
+                ) &&
                 (
                     this.OcspDisable == input.OcspDisable ||
                     this.OcspDisable.Equals(input.OcspDisable)
-                ) && 
+                ) &&
                 (
                     this.OcspExpiry == input.OcspExpiry ||
                     (this.OcspExpiry != null &&

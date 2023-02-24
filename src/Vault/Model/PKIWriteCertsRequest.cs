@@ -86,7 +86,7 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.PemBundle == input.PemBundle ||
                     (this.PemBundle != null &&

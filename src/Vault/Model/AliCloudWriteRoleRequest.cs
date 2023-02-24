@@ -126,27 +126,27 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.InlinePolicies == input.InlinePolicies ||
                     (this.InlinePolicies != null &&
                     this.InlinePolicies.Equals(input.InlinePolicies))
-                ) && 
+                ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
                     this.MaxTtl.Equals(input.MaxTtl)
-                ) && 
+                ) &&
                 (
                     this.RemotePolicies == input.RemotePolicies ||
                     this.RemotePolicies != null &&
                     input.RemotePolicies != null &&
                     this.RemotePolicies.SequenceEqual(input.RemotePolicies)
-                ) && 
+                ) &&
                 (
                     this.RoleArn == input.RoleArn ||
                     (this.RoleArn != null &&
                     this.RoleArn.Equals(input.RoleArn))
-                ) && 
+                ) &&
                 (
                     this.Ttl == input.Ttl ||
                     this.Ttl.Equals(input.Ttl)

@@ -96,12 +96,12 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.CryptoKey == input.CryptoKey ||
                     (this.CryptoKey != null &&
                     this.CryptoKey.Equals(input.CryptoKey))
-                ) && 
+                ) &&
                 (
                     this.Verify == input.Verify ||
                     this.Verify.Equals(input.Verify)

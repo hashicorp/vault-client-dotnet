@@ -118,23 +118,23 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Ec2Alias == input.Ec2Alias ||
                     (this.Ec2Alias != null &&
                     this.Ec2Alias.Equals(input.Ec2Alias))
-                ) && 
+                ) &&
                 (
                     this.Ec2Metadata == input.Ec2Metadata ||
                     this.Ec2Metadata != null &&
                     input.Ec2Metadata != null &&
                     this.Ec2Metadata.SequenceEqual(input.Ec2Metadata)
-                ) && 
+                ) &&
                 (
                     this.IamAlias == input.IamAlias ||
                     (this.IamAlias != null &&
                     this.IamAlias.Equals(input.IamAlias))
-                ) && 
+                ) &&
                 (
                     this.IamMetadata == input.IamMetadata ||
                     this.IamMetadata != null &&

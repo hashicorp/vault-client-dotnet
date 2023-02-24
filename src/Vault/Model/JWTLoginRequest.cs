@@ -96,12 +96,12 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Jwt == input.Jwt ||
                     (this.Jwt != null &&
                     this.Jwt.Equals(input.Jwt))
-                ) && 
+                ) &&
                 (
                     this.Role == input.Role ||
                     (this.Role != null &&

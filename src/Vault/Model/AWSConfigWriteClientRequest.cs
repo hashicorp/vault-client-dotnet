@@ -173,47 +173,47 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AccessKey == input.AccessKey ||
                     (this.AccessKey != null &&
                     this.AccessKey.Equals(input.AccessKey))
-                ) && 
+                ) &&
                 (
                     this.AllowedStsHeaderValues == input.AllowedStsHeaderValues ||
                     this.AllowedStsHeaderValues != null &&
                     input.AllowedStsHeaderValues != null &&
                     this.AllowedStsHeaderValues.SequenceEqual(input.AllowedStsHeaderValues)
-                ) && 
+                ) &&
                 (
                     this.Endpoint == input.Endpoint ||
                     (this.Endpoint != null &&
                     this.Endpoint.Equals(input.Endpoint))
-                ) && 
+                ) &&
                 (
                     this.IamEndpoint == input.IamEndpoint ||
                     (this.IamEndpoint != null &&
                     this.IamEndpoint.Equals(input.IamEndpoint))
-                ) && 
+                ) &&
                 (
                     this.IamServerIdHeaderValue == input.IamServerIdHeaderValue ||
                     (this.IamServerIdHeaderValue != null &&
                     this.IamServerIdHeaderValue.Equals(input.IamServerIdHeaderValue))
-                ) && 
+                ) &&
                 (
                     this.MaxRetries == input.MaxRetries ||
                     this.MaxRetries.Equals(input.MaxRetries)
-                ) && 
+                ) &&
                 (
                     this.SecretKey == input.SecretKey ||
                     (this.SecretKey != null &&
                     this.SecretKey.Equals(input.SecretKey))
-                ) && 
+                ) &&
                 (
                     this.StsEndpoint == input.StsEndpoint ||
                     (this.StsEndpoint != null &&
                     this.StsEndpoint.Equals(input.StsEndpoint))
-                ) && 
+                ) &&
                 (
                     this.StsRegion == input.StsRegion ||
                     (this.StsRegion != null &&

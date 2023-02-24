@@ -40,12 +40,14 @@ namespace Vault.Model
         public MongoDBAtlasWriteConfigRequest(string privateKey = default(string), string publicKey = default(string))
         {
             // to ensure "privateKey" is required (not null)
-            if (privateKey == null) {
+            if (privateKey == null)
+            {
                 throw new ArgumentNullException("privateKey is a required property for MongoDBAtlasWriteConfigRequest and cannot be null");
             }
             this.PrivateKey = privateKey;
             // to ensure "publicKey" is required (not null)
-            if (publicKey == null) {
+            if (publicKey == null)
+            {
                 throw new ArgumentNullException("publicKey is a required property for MongoDBAtlasWriteConfigRequest and cannot be null");
             }
             this.PublicKey = publicKey;
@@ -109,12 +111,12 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.PrivateKey == input.PrivateKey ||
                     (this.PrivateKey != null &&
                     this.PrivateKey.Equals(input.PrivateKey))
-                ) && 
+                ) &&
                 (
                     this.PublicKey == input.PublicKey ||
                     (this.PublicKey != null &&

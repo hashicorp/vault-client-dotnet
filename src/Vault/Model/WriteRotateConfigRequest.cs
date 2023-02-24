@@ -106,15 +106,15 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Enabled == input.Enabled ||
                     this.Enabled.Equals(input.Enabled)
-                ) && 
+                ) &&
                 (
                     this.Interval == input.Interval ||
                     this.Interval.Equals(input.Interval)
-                ) && 
+                ) &&
                 (
                     this.MaxOperations == input.MaxOperations ||
                     this.MaxOperations.Equals(input.MaxOperations)

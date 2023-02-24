@@ -86,7 +86,7 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Authorization == input.Authorization ||
                     (this.Authorization != null &&

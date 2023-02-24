@@ -167,48 +167,48 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.CreationStatements == input.CreationStatements ||
                     this.CreationStatements != null &&
                     input.CreationStatements != null &&
                     this.CreationStatements.SequenceEqual(input.CreationStatements)
-                ) && 
+                ) &&
                 (
                     this.CredentialConfig == input.CredentialConfig ||
                     (this.CredentialConfig != null &&
                     this.CredentialConfig.Equals(input.CredentialConfig))
-                ) && 
+                ) &&
                 (
                     this.CredentialType == input.CredentialType ||
                     (this.CredentialType != null &&
                     this.CredentialType.Equals(input.CredentialType))
-                ) && 
+                ) &&
                 (
                     this.DbName == input.DbName ||
                     (this.DbName != null &&
                     this.DbName.Equals(input.DbName))
-                ) && 
+                ) &&
                 (
                     this.DefaultTtl == input.DefaultTtl ||
                     this.DefaultTtl.Equals(input.DefaultTtl)
-                ) && 
+                ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
                     this.MaxTtl.Equals(input.MaxTtl)
-                ) && 
+                ) &&
                 (
                     this.RenewStatements == input.RenewStatements ||
                     this.RenewStatements != null &&
                     input.RenewStatements != null &&
                     this.RenewStatements.SequenceEqual(input.RenewStatements)
-                ) && 
+                ) &&
                 (
                     this.RevocationStatements == input.RevocationStatements ||
                     this.RevocationStatements != null &&
                     input.RevocationStatements != null &&
                     this.RevocationStatements.SequenceEqual(input.RevocationStatements)
-                ) && 
+                ) &&
                 (
                     this.RollbackStatements == input.RollbackStatements ||
                     this.RollbackStatements != null &&

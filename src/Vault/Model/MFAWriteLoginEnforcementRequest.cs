@@ -43,7 +43,8 @@ namespace Vault.Model
         public MFAWriteLoginEnforcementRequest(List<string> authMethodAccessors = default(List<string>), List<string> authMethodTypes = default(List<string>), List<string> identityEntityIds = default(List<string>), List<string> identityGroupIds = default(List<string>), List<string> mfaMethodIds = default(List<string>))
         {
             // to ensure "mfaMethodIds" is required (not null)
-            if (mfaMethodIds == null) {
+            if (mfaMethodIds == null)
+            {
                 throw new ArgumentNullException("mfaMethodIds is a required property for MFAWriteLoginEnforcementRequest and cannot be null");
             }
             this.MfaMethodIds = mfaMethodIds;
@@ -135,31 +136,31 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AuthMethodAccessors == input.AuthMethodAccessors ||
                     this.AuthMethodAccessors != null &&
                     input.AuthMethodAccessors != null &&
                     this.AuthMethodAccessors.SequenceEqual(input.AuthMethodAccessors)
-                ) && 
+                ) &&
                 (
                     this.AuthMethodTypes == input.AuthMethodTypes ||
                     this.AuthMethodTypes != null &&
                     input.AuthMethodTypes != null &&
                     this.AuthMethodTypes.SequenceEqual(input.AuthMethodTypes)
-                ) && 
+                ) &&
                 (
                     this.IdentityEntityIds == input.IdentityEntityIds ||
                     this.IdentityEntityIds != null &&
                     input.IdentityEntityIds != null &&
                     this.IdentityEntityIds.SequenceEqual(input.IdentityEntityIds)
-                ) && 
+                ) &&
                 (
                     this.IdentityGroupIds == input.IdentityGroupIds ||
                     this.IdentityGroupIds != null &&
                     input.IdentityGroupIds != null &&
                     this.IdentityGroupIds.SequenceEqual(input.IdentityGroupIds)
-                ) && 
+                ) &&
                 (
                     this.MfaMethodIds == input.MfaMethodIds ||
                     this.MfaMethodIds != null &&

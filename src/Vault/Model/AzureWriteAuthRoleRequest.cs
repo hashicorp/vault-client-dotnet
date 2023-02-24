@@ -282,102 +282,102 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.BoundGroupIds == input.BoundGroupIds ||
                     this.BoundGroupIds != null &&
                     input.BoundGroupIds != null &&
                     this.BoundGroupIds.SequenceEqual(input.BoundGroupIds)
-                ) && 
+                ) &&
                 (
                     this.BoundLocations == input.BoundLocations ||
                     this.BoundLocations != null &&
                     input.BoundLocations != null &&
                     this.BoundLocations.SequenceEqual(input.BoundLocations)
-                ) && 
+                ) &&
                 (
                     this.BoundResourceGroups == input.BoundResourceGroups ||
                     this.BoundResourceGroups != null &&
                     input.BoundResourceGroups != null &&
                     this.BoundResourceGroups.SequenceEqual(input.BoundResourceGroups)
-                ) && 
+                ) &&
                 (
                     this.BoundScaleSets == input.BoundScaleSets ||
                     this.BoundScaleSets != null &&
                     input.BoundScaleSets != null &&
                     this.BoundScaleSets.SequenceEqual(input.BoundScaleSets)
-                ) && 
+                ) &&
                 (
                     this.BoundServicePrincipalIds == input.BoundServicePrincipalIds ||
                     this.BoundServicePrincipalIds != null &&
                     input.BoundServicePrincipalIds != null &&
                     this.BoundServicePrincipalIds.SequenceEqual(input.BoundServicePrincipalIds)
-                ) && 
+                ) &&
                 (
                     this.BoundSubscriptionIds == input.BoundSubscriptionIds ||
                     this.BoundSubscriptionIds != null &&
                     input.BoundSubscriptionIds != null &&
                     this.BoundSubscriptionIds.SequenceEqual(input.BoundSubscriptionIds)
-                ) && 
+                ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
                     this.MaxTtl.Equals(input.MaxTtl)
-                ) && 
+                ) &&
                 (
                     this.NumUses == input.NumUses ||
                     this.NumUses.Equals(input.NumUses)
-                ) && 
+                ) &&
                 (
                     this.Period == input.Period ||
                     this.Period.Equals(input.Period)
-                ) && 
+                ) &&
                 (
                     this.Policies == input.Policies ||
                     this.Policies != null &&
                     input.Policies != null &&
                     this.Policies.SequenceEqual(input.Policies)
-                ) && 
+                ) &&
                 (
                     this.TokenBoundCidrs == input.TokenBoundCidrs ||
                     this.TokenBoundCidrs != null &&
                     input.TokenBoundCidrs != null &&
                     this.TokenBoundCidrs.SequenceEqual(input.TokenBoundCidrs)
-                ) && 
+                ) &&
                 (
                     this.TokenExplicitMaxTtl == input.TokenExplicitMaxTtl ||
                     this.TokenExplicitMaxTtl.Equals(input.TokenExplicitMaxTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenMaxTtl == input.TokenMaxTtl ||
                     this.TokenMaxTtl.Equals(input.TokenMaxTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenNoDefaultPolicy == input.TokenNoDefaultPolicy ||
                     this.TokenNoDefaultPolicy.Equals(input.TokenNoDefaultPolicy)
-                ) && 
+                ) &&
                 (
                     this.TokenNumUses == input.TokenNumUses ||
                     this.TokenNumUses.Equals(input.TokenNumUses)
-                ) && 
+                ) &&
                 (
                     this.TokenPeriod == input.TokenPeriod ||
                     this.TokenPeriod.Equals(input.TokenPeriod)
-                ) && 
+                ) &&
                 (
                     this.TokenPolicies == input.TokenPolicies ||
                     this.TokenPolicies != null &&
                     input.TokenPolicies != null &&
                     this.TokenPolicies.SequenceEqual(input.TokenPolicies)
-                ) && 
+                ) &&
                 (
                     this.TokenTtl == input.TokenTtl ||
                     this.TokenTtl.Equals(input.TokenTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenType == input.TokenType ||
                     (this.TokenType != null &&
                     this.TokenType.Equals(input.TokenType))
-                ) && 
+                ) &&
                 (
                     this.Ttl == input.Ttl ||
                     this.Ttl.Equals(input.Ttl)

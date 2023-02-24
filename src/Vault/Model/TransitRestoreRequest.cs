@@ -106,16 +106,16 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Backup == input.Backup ||
                     (this.Backup != null &&
                     this.Backup.Equals(input.Backup))
-                ) && 
+                ) &&
                 (
                     this.Force == input.Force ||
                     this.Force.Equals(input.Force)
-                ) && 
+                ) &&
                 (
                     this.Name == input.Name ||
                     (this.Name != null &&

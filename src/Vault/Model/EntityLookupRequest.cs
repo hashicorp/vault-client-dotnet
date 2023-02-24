@@ -126,27 +126,27 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AliasId == input.AliasId ||
                     (this.AliasId != null &&
                     this.AliasId.Equals(input.AliasId))
-                ) && 
+                ) &&
                 (
                     this.AliasMountAccessor == input.AliasMountAccessor ||
                     (this.AliasMountAccessor != null &&
                     this.AliasMountAccessor.Equals(input.AliasMountAccessor))
-                ) && 
+                ) &&
                 (
                     this.AliasName == input.AliasName ||
                     (this.AliasName != null &&
                     this.AliasName.Equals(input.AliasName))
-                ) && 
+                ) &&
                 (
                     this.Id == input.Id ||
                     (this.Id != null &&
                     this.Id.Equals(input.Id))
-                ) && 
+                ) &&
                 (
                     this.Name == input.Name ||
                     (this.Name != null &&

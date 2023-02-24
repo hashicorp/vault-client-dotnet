@@ -117,22 +117,22 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Algorithm == input.Algorithm ||
                     (this.Algorithm != null &&
                     this.Algorithm.Equals(input.Algorithm))
-                ) && 
+                ) &&
                 (
                     this.AllowedClientIds == input.AllowedClientIds ||
                     this.AllowedClientIds != null &&
                     input.AllowedClientIds != null &&
                     this.AllowedClientIds.SequenceEqual(input.AllowedClientIds)
-                ) && 
+                ) &&
                 (
                     this.RotationPeriod == input.RotationPeriod ||
                     this.RotationPeriod.Equals(input.RotationPeriod)
-                ) && 
+                ) &&
                 (
                     this.VerificationTtl == input.VerificationTtl ||
                     this.VerificationTtl.Equals(input.VerificationTtl)

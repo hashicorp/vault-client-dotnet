@@ -146,36 +146,36 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AccessKey == input.AccessKey ||
                     (this.AccessKey != null &&
                     this.AccessKey.Equals(input.AccessKey))
-                ) && 
+                ) &&
                 (
                     this.IamEndpoint == input.IamEndpoint ||
                     (this.IamEndpoint != null &&
                     this.IamEndpoint.Equals(input.IamEndpoint))
-                ) && 
+                ) &&
                 (
                     this.MaxRetries == input.MaxRetries ||
                     this.MaxRetries.Equals(input.MaxRetries)
-                ) && 
+                ) &&
                 (
                     this.Region == input.Region ||
                     (this.Region != null &&
                     this.Region.Equals(input.Region))
-                ) && 
+                ) &&
                 (
                     this.SecretKey == input.SecretKey ||
                     (this.SecretKey != null &&
                     this.SecretKey.Equals(input.SecretKey))
-                ) && 
+                ) &&
                 (
                     this.StsEndpoint == input.StsEndpoint ||
                     (this.StsEndpoint != null &&
                     this.StsEndpoint.Equals(input.StsEndpoint))
-                ) && 
+                ) &&
                 (
                     this.UsernameTemplate == input.UsernameTemplate ||
                     (this.UsernameTemplate != null &&

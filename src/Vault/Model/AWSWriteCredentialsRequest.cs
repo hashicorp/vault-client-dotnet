@@ -116,22 +116,22 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
-                ) && 
+                ) &&
                 (
                     this.RoleArn == input.RoleArn ||
                     (this.RoleArn != null &&
                     this.RoleArn.Equals(input.RoleArn))
-                ) && 
+                ) &&
                 (
                     this.RoleSessionName == input.RoleSessionName ||
                     (this.RoleSessionName != null &&
                     this.RoleSessionName.Equals(input.RoleSessionName))
-                ) && 
+                ) &&
                 (
                     this.Ttl == input.Ttl ||
                     this.Ttl.Equals(input.Ttl)

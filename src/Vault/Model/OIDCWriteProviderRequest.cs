@@ -106,18 +106,18 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AllowedClientIds == input.AllowedClientIds ||
                     this.AllowedClientIds != null &&
                     input.AllowedClientIds != null &&
                     this.AllowedClientIds.SequenceEqual(input.AllowedClientIds)
-                ) && 
+                ) &&
                 (
                     this.Issuer == input.Issuer ||
                     (this.Issuer != null &&
                     this.Issuer.Equals(input.Issuer))
-                ) && 
+                ) &&
                 (
                     this.ScopesSupported == input.ScopesSupported ||
                     this.ScopesSupported != null &&

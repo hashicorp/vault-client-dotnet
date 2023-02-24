@@ -106,15 +106,15 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.EnableRateLimitAuditLogging == input.EnableRateLimitAuditLogging ||
                     this.EnableRateLimitAuditLogging.Equals(input.EnableRateLimitAuditLogging)
-                ) && 
+                ) &&
                 (
                     this.EnableRateLimitResponseHeaders == input.EnableRateLimitResponseHeaders ||
                     this.EnableRateLimitResponseHeaders.Equals(input.EnableRateLimitResponseHeaders)
-                ) && 
+                ) &&
                 (
                     this.RateLimitExemptPaths == input.RateLimitExemptPaths ||
                     this.RateLimitExemptPaths != null &&

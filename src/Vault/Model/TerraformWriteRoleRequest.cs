@@ -126,25 +126,25 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.MaxTtl == input.MaxTtl ||
                     this.MaxTtl.Equals(input.MaxTtl)
-                ) && 
+                ) &&
                 (
                     this.Organization == input.Organization ||
                     (this.Organization != null &&
                     this.Organization.Equals(input.Organization))
-                ) && 
+                ) &&
                 (
                     this.TeamId == input.TeamId ||
                     (this.TeamId != null &&
                     this.TeamId.Equals(input.TeamId))
-                ) && 
+                ) &&
                 (
                     this.Ttl == input.Ttl ||
                     this.Ttl.Equals(input.Ttl)
-                ) && 
+                ) &&
                 (
                     this.UserId == input.UserId ||
                     (this.UserId != null &&

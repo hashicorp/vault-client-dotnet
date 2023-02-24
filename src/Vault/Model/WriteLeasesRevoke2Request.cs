@@ -96,12 +96,12 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.LeaseId == input.LeaseId ||
                     (this.LeaseId != null &&
                     this.LeaseId.Equals(input.LeaseId))
-                ) && 
+                ) &&
                 (
                     this.Sync == input.Sync ||
                     this.Sync.Equals(input.Sync)

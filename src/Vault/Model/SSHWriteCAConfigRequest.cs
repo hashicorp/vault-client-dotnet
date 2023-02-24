@@ -127,25 +127,25 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.GenerateSigningKey == input.GenerateSigningKey ||
                     this.GenerateSigningKey.Equals(input.GenerateSigningKey)
-                ) && 
+                ) &&
                 (
                     this.KeyBits == input.KeyBits ||
                     this.KeyBits.Equals(input.KeyBits)
-                ) && 
+                ) &&
                 (
                     this.KeyType == input.KeyType ||
                     (this.KeyType != null &&
                     this.KeyType.Equals(input.KeyType))
-                ) && 
+                ) &&
                 (
                     this.PrivateKey == input.PrivateKey ||
                     (this.PrivateKey != null &&
                     this.PrivateKey.Equals(input.PrivateKey))
-                ) && 
+                ) &&
                 (
                     this.PublicKey == input.PublicKey ||
                     (this.PublicKey != null &&

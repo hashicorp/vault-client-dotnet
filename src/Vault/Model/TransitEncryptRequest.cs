@@ -157,39 +157,39 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AssociatedData == input.AssociatedData ||
                     (this.AssociatedData != null &&
                     this.AssociatedData.Equals(input.AssociatedData))
-                ) && 
+                ) &&
                 (
                     this.Context == input.Context ||
                     (this.Context != null &&
                     this.Context.Equals(input.Context))
-                ) && 
+                ) &&
                 (
                     this.ConvergentEncryption == input.ConvergentEncryption ||
                     this.ConvergentEncryption.Equals(input.ConvergentEncryption)
-                ) && 
+                ) &&
                 (
                     this.KeyVersion == input.KeyVersion ||
                     this.KeyVersion.Equals(input.KeyVersion)
-                ) && 
+                ) &&
                 (
                     this.Nonce == input.Nonce ||
                     (this.Nonce != null &&
                     this.Nonce.Equals(input.Nonce))
-                ) && 
+                ) &&
                 (
                     this.PartialFailureResponseCode == input.PartialFailureResponseCode ||
                     this.PartialFailureResponseCode.Equals(input.PartialFailureResponseCode)
-                ) && 
+                ) &&
                 (
                     this.Plaintext == input.Plaintext ||
                     (this.Plaintext != null &&
                     this.Plaintext.Equals(input.Plaintext))
-                ) && 
+                ) &&
                 (
                     this.Type == input.Type ||
                     (this.Type != null &&

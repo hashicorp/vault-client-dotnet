@@ -85,7 +85,7 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Token == input.Token ||
                     (this.Token != null &&

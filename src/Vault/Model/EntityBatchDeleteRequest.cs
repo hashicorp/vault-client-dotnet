@@ -86,7 +86,7 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.EntityIds == input.EntityIds ||
                     this.EntityIds != null &&

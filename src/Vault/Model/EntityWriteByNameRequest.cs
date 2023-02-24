@@ -116,21 +116,21 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Disabled == input.Disabled ||
                     this.Disabled.Equals(input.Disabled)
-                ) && 
+                ) &&
                 (
                     this.Id == input.Id ||
                     (this.Id != null &&
                     this.Id.Equals(input.Id))
-                ) && 
+                ) &&
                 (
                     this.Metadata == input.Metadata ||
                     (this.Metadata != null &&
                     this.Metadata.Equals(input.Metadata))
-                ) && 
+                ) &&
                 (
                     this.Policies == input.Policies ||
                     this.Policies != null &&

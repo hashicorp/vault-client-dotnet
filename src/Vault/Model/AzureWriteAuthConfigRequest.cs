@@ -126,27 +126,27 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.ClientId == input.ClientId ||
                     (this.ClientId != null &&
                     this.ClientId.Equals(input.ClientId))
-                ) && 
+                ) &&
                 (
                     this.ClientSecret == input.ClientSecret ||
                     (this.ClientSecret != null &&
                     this.ClientSecret.Equals(input.ClientSecret))
-                ) && 
+                ) &&
                 (
                     this.Environment == input.Environment ||
                     (this.Environment != null &&
                     this.Environment.Equals(input.Environment))
-                ) && 
+                ) &&
                 (
                     this.Resource == input.Resource ||
                     (this.Resource != null &&
                     this.Resource.Equals(input.Resource))
-                ) && 
+                ) &&
                 (
                     this.TenantId == input.TenantId ||
                     (this.TenantId != null &&

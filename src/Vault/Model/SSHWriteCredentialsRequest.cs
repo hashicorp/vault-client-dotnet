@@ -96,12 +96,12 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Ip == input.Ip ||
                     (this.Ip != null &&
                     this.Ip.Equals(input.Ip))
-                ) && 
+                ) &&
                 (
                     this.Username == input.Username ||
                     (this.Username != null &&

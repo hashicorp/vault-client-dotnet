@@ -146,36 +146,36 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.ClientId == input.ClientId ||
                     (this.ClientId != null &&
                     this.ClientId.Equals(input.ClientId))
-                ) && 
+                ) &&
                 (
                     this.ClientSecret == input.ClientSecret ||
                     (this.ClientSecret != null &&
                     this.ClientSecret.Equals(input.ClientSecret))
-                ) && 
+                ) &&
                 (
                     this.Environment == input.Environment ||
                     (this.Environment != null &&
                     this.Environment.Equals(input.Environment))
-                ) && 
+                ) &&
                 (
                     this.PasswordPolicy == input.PasswordPolicy ||
                     (this.PasswordPolicy != null &&
                     this.PasswordPolicy.Equals(input.PasswordPolicy))
-                ) && 
+                ) &&
                 (
                     this.RootPasswordTtl == input.RootPasswordTtl ||
                     this.RootPasswordTtl.Equals(input.RootPasswordTtl)
-                ) && 
+                ) &&
                 (
                     this.SubscriptionId == input.SubscriptionId ||
                     (this.SubscriptionId != null &&
                     this.SubscriptionId.Equals(input.SubscriptionId))
-                ) && 
+                ) &&
                 (
                     this.TenantId == input.TenantId ||
                     (this.TenantId != null &&

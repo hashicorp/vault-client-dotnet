@@ -116,21 +116,21 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.SecretId == input.SecretId ||
                     (this.SecretId != null &&
                     this.SecretId.Equals(input.SecretId))
-                ) && 
+                ) &&
                 (
                     this.SecretIdAccessor == input.SecretIdAccessor ||
                     (this.SecretIdAccessor != null &&
                     this.SecretIdAccessor.Equals(input.SecretIdAccessor))
-                ) && 
+                ) &&
                 (
                     this.SecretIdNumUses == input.SecretIdNumUses ||
                     this.SecretIdNumUses.Equals(input.SecretIdNumUses)
-                ) && 
+                ) &&
                 (
                     this.SecretIdTtl == input.SecretIdTtl ||
                     this.SecretIdTtl.Equals(input.SecretIdTtl)

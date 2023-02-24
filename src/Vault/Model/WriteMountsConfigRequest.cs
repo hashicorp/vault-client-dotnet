@@ -205,72 +205,72 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AllowedManagedKeys == input.AllowedManagedKeys ||
                     this.AllowedManagedKeys != null &&
                     input.AllowedManagedKeys != null &&
                     this.AllowedManagedKeys.SequenceEqual(input.AllowedManagedKeys)
-                ) && 
+                ) &&
                 (
                     this.AllowedResponseHeaders == input.AllowedResponseHeaders ||
                     this.AllowedResponseHeaders != null &&
                     input.AllowedResponseHeaders != null &&
                     this.AllowedResponseHeaders.SequenceEqual(input.AllowedResponseHeaders)
-                ) && 
+                ) &&
                 (
                     this.AuditNonHmacRequestKeys == input.AuditNonHmacRequestKeys ||
                     this.AuditNonHmacRequestKeys != null &&
                     input.AuditNonHmacRequestKeys != null &&
                     this.AuditNonHmacRequestKeys.SequenceEqual(input.AuditNonHmacRequestKeys)
-                ) && 
+                ) &&
                 (
                     this.AuditNonHmacResponseKeys == input.AuditNonHmacResponseKeys ||
                     this.AuditNonHmacResponseKeys != null &&
                     input.AuditNonHmacResponseKeys != null &&
                     this.AuditNonHmacResponseKeys.SequenceEqual(input.AuditNonHmacResponseKeys)
-                ) && 
+                ) &&
                 (
                     this.DefaultLeaseTtl == input.DefaultLeaseTtl ||
                     (this.DefaultLeaseTtl != null &&
                     this.DefaultLeaseTtl.Equals(input.DefaultLeaseTtl))
-                ) && 
+                ) &&
                 (
                     this.Description == input.Description ||
                     (this.Description != null &&
                     this.Description.Equals(input.Description))
-                ) && 
+                ) &&
                 (
                     this.ListingVisibility == input.ListingVisibility ||
                     (this.ListingVisibility != null &&
                     this.ListingVisibility.Equals(input.ListingVisibility))
-                ) && 
+                ) &&
                 (
                     this.MaxLeaseTtl == input.MaxLeaseTtl ||
                     (this.MaxLeaseTtl != null &&
                     this.MaxLeaseTtl.Equals(input.MaxLeaseTtl))
-                ) && 
+                ) &&
                 (
                     this.Options == input.Options ||
                     (this.Options != null &&
                     this.Options.Equals(input.Options))
-                ) && 
+                ) &&
                 (
                     this.PassthroughRequestHeaders == input.PassthroughRequestHeaders ||
                     this.PassthroughRequestHeaders != null &&
                     input.PassthroughRequestHeaders != null &&
                     this.PassthroughRequestHeaders.SequenceEqual(input.PassthroughRequestHeaders)
-                ) && 
+                ) &&
                 (
                     this.PluginVersion == input.PluginVersion ||
                     (this.PluginVersion != null &&
                     this.PluginVersion.Equals(input.PluginVersion))
-                ) && 
+                ) &&
                 (
                     this.TokenType == input.TokenType ||
                     (this.TokenType != null &&
                     this.TokenType.Equals(input.TokenType))
-                ) && 
+                ) &&
                 (
                     this.UserLockoutConfig == input.UserLockoutConfig ||
                     (this.UserLockoutConfig != null &&

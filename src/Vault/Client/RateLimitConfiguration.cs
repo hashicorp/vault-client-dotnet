@@ -21,7 +21,7 @@ namespace Vault.Client
         /// Initializes a new instance of the <see cref="RateLimitConfiguration"/> class
         /// </summary>
         public RateLimitConfiguration(int numberOfExecutions, TimeSpan perTimeSpan)
-        {         
+        {
             RateLimitPolicy = Policy.RateLimitAsync<HttpResponseMessage>(numberOfExecutions, perTimeSpan);
         }
 

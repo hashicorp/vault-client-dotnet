@@ -86,7 +86,7 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.VerificationTtl == input.VerificationTtl ||
                     this.VerificationTtl.Equals(input.VerificationTtl)

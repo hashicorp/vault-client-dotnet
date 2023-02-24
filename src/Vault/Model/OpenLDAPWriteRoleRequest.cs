@@ -44,12 +44,14 @@ namespace Vault.Model
         public OpenLDAPWriteRoleRequest(string creationLdif = default(string), int defaultTtl = default(int), string deletionLdif = default(string), int maxTtl = default(int), string rollbackLdif = default(string), string usernameTemplate = default(string))
         {
             // to ensure "creationLdif" is required (not null)
-            if (creationLdif == null) {
+            if (creationLdif == null)
+            {
                 throw new ArgumentNullException("creationLdif is a required property for OpenLDAPWriteRoleRequest and cannot be null");
             }
             this.CreationLdif = creationLdif;
             // to ensure "deletionLdif" is required (not null)
-            if (deletionLdif == null) {
+            if (deletionLdif == null)
+            {
                 throw new ArgumentNullException("deletionLdif is a required property for OpenLDAPWriteRoleRequest and cannot be null");
             }
             this.DeletionLdif = deletionLdif;
@@ -149,30 +151,30 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.CreationLdif == input.CreationLdif ||
                     (this.CreationLdif != null &&
                     this.CreationLdif.Equals(input.CreationLdif))
-                ) && 
+                ) &&
                 (
                     this.DefaultTtl == input.DefaultTtl ||
                     this.DefaultTtl.Equals(input.DefaultTtl)
-                ) && 
+                ) &&
                 (
                     this.DeletionLdif == input.DeletionLdif ||
                     (this.DeletionLdif != null &&
                     this.DeletionLdif.Equals(input.DeletionLdif))
-                ) && 
+                ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
                     this.MaxTtl.Equals(input.MaxTtl)
-                ) && 
+                ) &&
                 (
                     this.RollbackLdif == input.RollbackLdif ||
                     (this.RollbackLdif != null &&
                     this.RollbackLdif.Equals(input.RollbackLdif))
-                ) && 
+                ) &&
                 (
                     this.UsernameTemplate == input.UsernameTemplate ||
                     (this.UsernameTemplate != null &&

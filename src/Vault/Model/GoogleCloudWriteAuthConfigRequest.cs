@@ -149,38 +149,38 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Credentials == input.Credentials ||
                     (this.Credentials != null &&
                     this.Credentials.Equals(input.Credentials))
-                ) && 
+                ) &&
                 (
                     this.CustomEndpoint == input.CustomEndpoint ||
                     (this.CustomEndpoint != null &&
                     this.CustomEndpoint.Equals(input.CustomEndpoint))
-                ) && 
+                ) &&
                 (
                     this.GceAlias == input.GceAlias ||
                     (this.GceAlias != null &&
                     this.GceAlias.Equals(input.GceAlias))
-                ) && 
+                ) &&
                 (
                     this.GceMetadata == input.GceMetadata ||
                     this.GceMetadata != null &&
                     input.GceMetadata != null &&
                     this.GceMetadata.SequenceEqual(input.GceMetadata)
-                ) && 
+                ) &&
                 (
                     this.GoogleCertsEndpoint == input.GoogleCertsEndpoint ||
                     (this.GoogleCertsEndpoint != null &&
                     this.GoogleCertsEndpoint.Equals(input.GoogleCertsEndpoint))
-                ) && 
+                ) &&
                 (
                     this.IamAlias == input.IamAlias ||
                     (this.IamAlias != null &&
                     this.IamAlias.Equals(input.IamAlias))
-                ) && 
+                ) &&
                 (
                     this.IamMetadata == input.IamMetadata ||
                     this.IamMetadata != null &&

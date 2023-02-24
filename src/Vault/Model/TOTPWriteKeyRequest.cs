@@ -197,55 +197,55 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AccountName == input.AccountName ||
                     (this.AccountName != null &&
                     this.AccountName.Equals(input.AccountName))
-                ) && 
+                ) &&
                 (
                     this.Algorithm == input.Algorithm ||
                     (this.Algorithm != null &&
                     this.Algorithm.Equals(input.Algorithm))
-                ) && 
+                ) &&
                 (
                     this.Digits == input.Digits ||
                     this.Digits.Equals(input.Digits)
-                ) && 
+                ) &&
                 (
                     this.Exported == input.Exported ||
                     this.Exported.Equals(input.Exported)
-                ) && 
+                ) &&
                 (
                     this.Generate == input.Generate ||
                     this.Generate.Equals(input.Generate)
-                ) && 
+                ) &&
                 (
                     this.Issuer == input.Issuer ||
                     (this.Issuer != null &&
                     this.Issuer.Equals(input.Issuer))
-                ) && 
+                ) &&
                 (
                     this.Key == input.Key ||
                     (this.Key != null &&
                     this.Key.Equals(input.Key))
-                ) && 
+                ) &&
                 (
                     this.KeySize == input.KeySize ||
                     this.KeySize.Equals(input.KeySize)
-                ) && 
+                ) &&
                 (
                     this.Period == input.Period ||
                     this.Period.Equals(input.Period)
-                ) && 
+                ) &&
                 (
                     this.QrSize == input.QrSize ||
                     this.QrSize.Equals(input.QrSize)
-                ) && 
+                ) &&
                 (
                     this.Skew == input.Skew ||
                     this.Skew.Equals(input.Skew)
-                ) && 
+                ) &&
                 (
                     this.Url == input.Url ||
                     (this.Url != null &&

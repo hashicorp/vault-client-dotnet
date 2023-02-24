@@ -3335,6 +3335,19 @@ namespace Vault.Test.Api
         }
 
         /// <summary>
+        /// Test PKIWriteIssuerRefDerPEM
+        /// </summary>
+        [Fact]
+        public void PKIWriteIssuerRefDerPEMTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string issuerRef = null;
+            //PKIWriteIssuerRefDerPEMRequest pKIWriteIssuerRefDerPEMRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIWriteIssuerRefDerPEM(issuerRef, pKIWriteIssuerRefDerPEMRequest, pkiMountPath);
+        }
+
+        /// <summary>
         /// Test PKIWriteIssuersConfig
         /// </summary>
         [Fact]
@@ -3344,6 +3357,18 @@ namespace Vault.Test.Api
             //PKIWriteIssuersConfigRequest pKIWriteIssuersConfigRequest = null;
             //string pkiMountPath = null;
             //instance.PKIWriteIssuersConfig(pKIWriteIssuersConfigRequest, pkiMountPath);
+        }
+
+        /// <summary>
+        /// Test PKIWriteJSON
+        /// </summary>
+        [Fact]
+        public void PKIWriteJSONTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PKIWriteJSONRequest pKIWriteJSONRequest = null;
+            //string pkiMountPath = null;
+            //instance.PKIWriteJSON(pKIWriteJSONRequest, pkiMountPath);
         }
 
         /// <summary>
@@ -3519,31 +3544,6 @@ namespace Vault.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string pkiMountPath = null;
             //instance.PkiReadPem(pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PkiWriteIssuerRefDerPem
-        /// </summary>
-        [Fact]
-        public void PkiWriteIssuerRefDerPemTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string issuerRef = null;
-            //PkiWriteIssuerRefDerPemRequest pkiWriteIssuerRefDerPemRequest = null;
-            //string pkiMountPath = null;
-            //instance.PkiWriteIssuerRefDerPem(issuerRef, pkiWriteIssuerRefDerPemRequest, pkiMountPath);
-        }
-
-        /// <summary>
-        /// Test PkiWriteJson
-        /// </summary>
-        [Fact]
-        public void PkiWriteJsonTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //PkiWriteJsonRequest pkiWriteJsonRequest = null;
-            //string pkiMountPath = null;
-            //instance.PkiWriteJson(pkiWriteJsonRequest, pkiMountPath);
         }
 
         /// <summary>

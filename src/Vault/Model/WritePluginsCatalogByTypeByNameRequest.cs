@@ -126,29 +126,29 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Args == input.Args ||
                     this.Args != null &&
                     input.Args != null &&
                     this.Args.SequenceEqual(input.Args)
-                ) && 
+                ) &&
                 (
                     this.Command == input.Command ||
                     (this.Command != null &&
                     this.Command.Equals(input.Command))
-                ) && 
+                ) &&
                 (
                     this.Env == input.Env ||
                     this.Env != null &&
                     input.Env != null &&
                     this.Env.SequenceEqual(input.Env)
-                ) && 
+                ) &&
                 (
                     this.Sha256 == input.Sha256 ||
                     (this.Sha256 != null &&
                     this.Sha256.Equals(input.Sha256))
-                ) && 
+                ) &&
                 (
                     this._Version == input._Version ||
                     (this._Version != null &&

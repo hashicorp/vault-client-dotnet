@@ -276,7 +276,9 @@ Method | HTTP request | Description
 [**PKIWriteIntermediateSetSigned**](Secrets.md#pkiwriteintermediatesetsigned) | **POST** /{pki_mount_path}/intermediate/set-signed | 
 [**PKIWriteInternalExported**](Secrets.md#pkiwriteinternalexported) | **POST** /{pki_mount_path}/internal|exported | 
 [**PKIWriteIssueRole**](Secrets.md#pkiwriteissuerole) | **POST** /{pki_mount_path}/issue/{role} | 
+[**PKIWriteIssuerRefDerPEM**](Secrets.md#pkiwriteissuerrefderpem) | **POST** /{pki_mount_path}/{issuer_ref}/der|/pem | 
 [**PKIWriteIssuersConfig**](Secrets.md#pkiwriteissuersconfig) | **POST** /{pki_mount_path}/config/issuers | 
+[**PKIWriteJSON**](Secrets.md#pkiwritejson) | **POST** /{pki_mount_path}//json | 
 [**PKIWriteKMS**](Secrets.md#pkiwritekms) | **POST** /{pki_mount_path}/kms | 
 [**PKIWriteKey**](Secrets.md#pkiwritekey) | **POST** /{pki_mount_path}/key/{key_ref} | 
 [**PKIWriteKeysConfig**](Secrets.md#pkiwritekeysconfig) | **POST** /{pki_mount_path}/config/keys | 
@@ -292,8 +294,6 @@ Method | HTTP request | Description
 [**PkiReadIssuerRefDerPem**](Secrets.md#pkireadissuerrefderpem) | **GET** /{pki_mount_path}/{issuer_ref}/der|/pem | 
 [**PkiReadJson**](Secrets.md#pkireadjson) | **GET** /{pki_mount_path}//json | 
 [**PkiReadPem**](Secrets.md#pkireadpem) | **GET** /{pki_mount_path}//pem | 
-[**PkiWriteIssuerRefDerPem**](Secrets.md#pkiwriteissuerrefderpem) | **POST** /{pki_mount_path}/{issuer_ref}/der|/pem | 
-[**PkiWriteJson**](Secrets.md#pkiwritejson) | **POST** /{pki_mount_path}//json | 
 [**RabbitMQDeleteRole**](Secrets.md#rabbitmqdeleterole) | **DELETE** /{rabbitmq_mount_path}/roles/{name} | Manage the roles that can be created with this backend.
 [**RabbitMQListRoles**](Secrets.md#rabbitmqlistroles) | **GET** /{rabbitmq_mount_path}/roles | Manage the roles that can be created with this backend.
 [**RabbitMQReadCredentials**](Secrets.md#rabbitmqreadcredentials) | **GET** /{rabbitmq_mount_path}/creds/{name} | Request RabbitMQ credentials for a certain role.
@@ -20658,6 +20658,82 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="pkiwriteissuerrefderpem"></a>
+# **PKIWriteIssuerRefDerPEM**
+
+> void PKIWriteIssuerRefDerPEM (string issuerRef, PKIWriteIssuerRefDerPEMRequest pKIWriteIssuerRefDerPEMRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PKIWriteIssuerRefDerPEMExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
+            var pKIWriteIssuerRefDerPEMRequest = new PKIWriteIssuerRefDerPEMRequest(); // PKIWriteIssuerRefDerPEMRequest | 
+            var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+
+            try
+            {
+
+                apiInstance.PKIWriteIssuerRefDerPEM(string issuerRef, PKIWriteIssuerRefDerPEMRequest pKIWriteIssuerRefDerPEMRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PKIWriteIssuerRefDerPEM: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issuerRef** | **string**| Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer. | [default to &quot;default&quot;]
+ **pKIWriteIssuerRefDerPEMRequest** | [**PKIWriteIssuerRefDerPEMRequest**](PKIWriteIssuerRefDerPEMRequest.md)|  | 
+ **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="pkiwriteissuersconfig"></a>
 # **PKIWriteIssuersConfig**
 
@@ -20709,6 +20785,80 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pKIWriteIssuersConfigRequest** | [**PKIWriteIssuersConfigRequest**](PKIWriteIssuersConfigRequest.md)|  | 
+ **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="pkiwritejson"></a>
+# **PKIWriteJSON**
+
+> void PKIWriteJSON (PKIWriteJSONRequest pKIWriteJSONRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Vault.Api;
+using Vault.Client;
+using Vault.Model;
+
+namespace Example
+{
+    public class PKIWriteJSONExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
+            var pKIWriteJSONRequest = new PKIWriteJSONRequest(); // PKIWriteJSONRequest | 
+            var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
+
+            try
+            {
+
+                apiInstance.PKIWriteJSON(PKIWriteJSONRequest pKIWriteJSONRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Secrets.PKIWriteJSON: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pKIWriteJSONRequest** | [**PKIWriteJSONRequest**](PKIWriteJSONRequest.md)|  | 
  **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
 
 ### Return type
@@ -21822,156 +21972,6 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="pkiwriteissuerrefderpem"></a>
-# **PkiWriteIssuerRefDerPem**
-
-> void PkiWriteIssuerRefDerPem (string issuerRef, PkiWriteIssuerRefDerPemRequest pkiWriteIssuerRefDerPemRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class PkiWriteIssuerRefDerPemExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
-            var issuerRef = "\"default\"";  // string | Reference to a existing issuer; either \"default\" for the configured default issuer, an identifier or the name assigned to the issuer. (default to "default")
-            var pkiWriteIssuerRefDerPemRequest = new PkiWriteIssuerRefDerPemRequest(); // PkiWriteIssuerRefDerPemRequest | 
-            var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
-
-            try
-            {
-
-                apiInstance.PkiWriteIssuerRefDerPem(string issuerRef, PkiWriteIssuerRefDerPemRequest pkiWriteIssuerRefDerPemRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Secrets.PkiWriteIssuerRefDerPem: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **issuerRef** | **string**| Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer. | [default to &quot;default&quot;]
- **pkiWriteIssuerRefDerPemRequest** | [**PkiWriteIssuerRefDerPemRequest**](PkiWriteIssuerRefDerPemRequest.md)|  | 
- **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="pkiwritejson"></a>
-# **PkiWriteJson**
-
-> void PkiWriteJson (PkiWriteJsonRequest pkiWriteJsonRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
-
-
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Http;
-using Vault.Api;
-using Vault.Client;
-using Vault.Model;
-
-namespace Example
-{
-    public class PkiWriteJsonExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
-            HttpClient httpClient = new HttpClient();
-            HttpClientHandler httpClientHandler = new HttpClientHandler();
-            var apiInstance = new Secrets(httpClient, config, httpClientHandler);
-            var pkiWriteJsonRequest = new PkiWriteJsonRequest(); // PkiWriteJsonRequest | 
-            var pkiMountPath = "\"pki\"";  // string | Path where the backend was mounted; the endpoint path will be offset by the mount path (optional)  (default to "pki")
-
-            try
-            {
-
-                apiInstance.PkiWriteJson(PkiWriteJsonRequest pkiWriteJsonRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Secrets.PkiWriteJson: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiWriteJsonRequest** | [**PkiWriteJsonRequest**](PkiWriteJsonRequest.md)|  | 
- **pkiMountPath** | **string**| Path where the backend was mounted; the endpoint path will be offset by the mount path | [optional] [default to &quot;pki&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
  - **Accept**: Not defined
 
 

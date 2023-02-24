@@ -136,30 +136,30 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.ApplicationObjectId == input.ApplicationObjectId ||
                     (this.ApplicationObjectId != null &&
                     this.ApplicationObjectId.Equals(input.ApplicationObjectId))
-                ) && 
+                ) &&
                 (
                     this.AzureGroups == input.AzureGroups ||
                     (this.AzureGroups != null &&
                     this.AzureGroups.Equals(input.AzureGroups))
-                ) && 
+                ) &&
                 (
                     this.AzureRoles == input.AzureRoles ||
                     (this.AzureRoles != null &&
                     this.AzureRoles.Equals(input.AzureRoles))
-                ) && 
+                ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
                     this.MaxTtl.Equals(input.MaxTtl)
-                ) && 
+                ) &&
                 (
                     this.PermanentlyDelete == input.PermanentlyDelete ||
                     this.PermanentlyDelete.Equals(input.PermanentlyDelete)
-                ) && 
+                ) &&
                 (
                     this.Ttl == input.Ttl ||
                     this.Ttl.Equals(input.Ttl)

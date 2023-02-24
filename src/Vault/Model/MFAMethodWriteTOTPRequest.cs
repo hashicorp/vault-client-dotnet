@@ -167,42 +167,42 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.Algorithm == input.Algorithm ||
                     (this.Algorithm != null &&
                     this.Algorithm.Equals(input.Algorithm))
-                ) && 
+                ) &&
                 (
                     this.Digits == input.Digits ||
                     this.Digits.Equals(input.Digits)
-                ) && 
+                ) &&
                 (
                     this.Issuer == input.Issuer ||
                     (this.Issuer != null &&
                     this.Issuer.Equals(input.Issuer))
-                ) && 
+                ) &&
                 (
                     this.KeySize == input.KeySize ||
                     this.KeySize.Equals(input.KeySize)
-                ) && 
+                ) &&
                 (
                     this.MaxValidationAttempts == input.MaxValidationAttempts ||
                     this.MaxValidationAttempts.Equals(input.MaxValidationAttempts)
-                ) && 
+                ) &&
                 (
                     this.MethodId == input.MethodId ||
                     (this.MethodId != null &&
                     this.MethodId.Equals(input.MethodId))
-                ) && 
+                ) &&
                 (
                     this.Period == input.Period ||
                     this.Period.Equals(input.Period)
-                ) && 
+                ) &&
                 (
                     this.QrSize == input.QrSize ||
                     this.QrSize.Equals(input.QrSize)
-                ) && 
+                ) &&
                 (
                     this.Skew == input.Skew ||
                     this.Skew.Equals(input.Skew)

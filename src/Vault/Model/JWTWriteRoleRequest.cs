@@ -394,149 +394,149 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AllowedRedirectUris == input.AllowedRedirectUris ||
                     this.AllowedRedirectUris != null &&
                     input.AllowedRedirectUris != null &&
                     this.AllowedRedirectUris.SequenceEqual(input.AllowedRedirectUris)
-                ) && 
+                ) &&
                 (
                     this.BoundAudiences == input.BoundAudiences ||
                     this.BoundAudiences != null &&
                     input.BoundAudiences != null &&
                     this.BoundAudiences.SequenceEqual(input.BoundAudiences)
-                ) && 
+                ) &&
                 (
                     this.BoundCidrs == input.BoundCidrs ||
                     this.BoundCidrs != null &&
                     input.BoundCidrs != null &&
                     this.BoundCidrs.SequenceEqual(input.BoundCidrs)
-                ) && 
+                ) &&
                 (
                     this.BoundClaims == input.BoundClaims ||
                     (this.BoundClaims != null &&
                     this.BoundClaims.Equals(input.BoundClaims))
-                ) && 
+                ) &&
                 (
                     this.BoundClaimsType == input.BoundClaimsType ||
                     (this.BoundClaimsType != null &&
                     this.BoundClaimsType.Equals(input.BoundClaimsType))
-                ) && 
+                ) &&
                 (
                     this.BoundSubject == input.BoundSubject ||
                     (this.BoundSubject != null &&
                     this.BoundSubject.Equals(input.BoundSubject))
-                ) && 
+                ) &&
                 (
                     this.ClaimMappings == input.ClaimMappings ||
                     (this.ClaimMappings != null &&
                     this.ClaimMappings.Equals(input.ClaimMappings))
-                ) && 
+                ) &&
                 (
                     this.ClockSkewLeeway == input.ClockSkewLeeway ||
                     this.ClockSkewLeeway.Equals(input.ClockSkewLeeway)
-                ) && 
+                ) &&
                 (
                     this.ExpirationLeeway == input.ExpirationLeeway ||
                     this.ExpirationLeeway.Equals(input.ExpirationLeeway)
-                ) && 
+                ) &&
                 (
                     this.GroupsClaim == input.GroupsClaim ||
                     (this.GroupsClaim != null &&
                     this.GroupsClaim.Equals(input.GroupsClaim))
-                ) && 
+                ) &&
                 (
                     this.MaxAge == input.MaxAge ||
                     this.MaxAge.Equals(input.MaxAge)
-                ) && 
+                ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
                     this.MaxTtl.Equals(input.MaxTtl)
-                ) && 
+                ) &&
                 (
                     this.NotBeforeLeeway == input.NotBeforeLeeway ||
                     this.NotBeforeLeeway.Equals(input.NotBeforeLeeway)
-                ) && 
+                ) &&
                 (
                     this.NumUses == input.NumUses ||
                     this.NumUses.Equals(input.NumUses)
-                ) && 
+                ) &&
                 (
                     this.OidcScopes == input.OidcScopes ||
                     this.OidcScopes != null &&
                     input.OidcScopes != null &&
                     this.OidcScopes.SequenceEqual(input.OidcScopes)
-                ) && 
+                ) &&
                 (
                     this.Period == input.Period ||
                     this.Period.Equals(input.Period)
-                ) && 
+                ) &&
                 (
                     this.Policies == input.Policies ||
                     this.Policies != null &&
                     input.Policies != null &&
                     this.Policies.SequenceEqual(input.Policies)
-                ) && 
+                ) &&
                 (
                     this.RoleType == input.RoleType ||
                     (this.RoleType != null &&
                     this.RoleType.Equals(input.RoleType))
-                ) && 
+                ) &&
                 (
                     this.TokenBoundCidrs == input.TokenBoundCidrs ||
                     this.TokenBoundCidrs != null &&
                     input.TokenBoundCidrs != null &&
                     this.TokenBoundCidrs.SequenceEqual(input.TokenBoundCidrs)
-                ) && 
+                ) &&
                 (
                     this.TokenExplicitMaxTtl == input.TokenExplicitMaxTtl ||
                     this.TokenExplicitMaxTtl.Equals(input.TokenExplicitMaxTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenMaxTtl == input.TokenMaxTtl ||
                     this.TokenMaxTtl.Equals(input.TokenMaxTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenNoDefaultPolicy == input.TokenNoDefaultPolicy ||
                     this.TokenNoDefaultPolicy.Equals(input.TokenNoDefaultPolicy)
-                ) && 
+                ) &&
                 (
                     this.TokenNumUses == input.TokenNumUses ||
                     this.TokenNumUses.Equals(input.TokenNumUses)
-                ) && 
+                ) &&
                 (
                     this.TokenPeriod == input.TokenPeriod ||
                     this.TokenPeriod.Equals(input.TokenPeriod)
-                ) && 
+                ) &&
                 (
                     this.TokenPolicies == input.TokenPolicies ||
                     this.TokenPolicies != null &&
                     input.TokenPolicies != null &&
                     this.TokenPolicies.SequenceEqual(input.TokenPolicies)
-                ) && 
+                ) &&
                 (
                     this.TokenTtl == input.TokenTtl ||
                     this.TokenTtl.Equals(input.TokenTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenType == input.TokenType ||
                     (this.TokenType != null &&
                     this.TokenType.Equals(input.TokenType))
-                ) && 
+                ) &&
                 (
                     this.Ttl == input.Ttl ||
                     this.Ttl.Equals(input.Ttl)
-                ) && 
+                ) &&
                 (
                     this.UserClaim == input.UserClaim ||
                     (this.UserClaim != null &&
                     this.UserClaim.Equals(input.UserClaim))
-                ) && 
+                ) &&
                 (
                     this.UserClaimJsonPointer == input.UserClaimJsonPointer ||
                     this.UserClaimJsonPointer.Equals(input.UserClaimJsonPointer)
-                ) && 
+                ) &&
                 (
                     this.VerboseOidcLogging == input.VerboseOidcLogging ||
                     this.VerboseOidcLogging.Equals(input.VerboseOidcLogging)

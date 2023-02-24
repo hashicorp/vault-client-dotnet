@@ -216,74 +216,74 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.BoundIssuer == input.BoundIssuer ||
                     (this.BoundIssuer != null &&
                     this.BoundIssuer.Equals(input.BoundIssuer))
-                ) && 
+                ) &&
                 (
                     this.DefaultRole == input.DefaultRole ||
                     (this.DefaultRole != null &&
                     this.DefaultRole.Equals(input.DefaultRole))
-                ) && 
+                ) &&
                 (
                     this.JwksCaPem == input.JwksCaPem ||
                     (this.JwksCaPem != null &&
                     this.JwksCaPem.Equals(input.JwksCaPem))
-                ) && 
+                ) &&
                 (
                     this.JwksUrl == input.JwksUrl ||
                     (this.JwksUrl != null &&
                     this.JwksUrl.Equals(input.JwksUrl))
-                ) && 
+                ) &&
                 (
                     this.JwtSupportedAlgs == input.JwtSupportedAlgs ||
                     this.JwtSupportedAlgs != null &&
                     input.JwtSupportedAlgs != null &&
                     this.JwtSupportedAlgs.SequenceEqual(input.JwtSupportedAlgs)
-                ) && 
+                ) &&
                 (
                     this.JwtValidationPubkeys == input.JwtValidationPubkeys ||
                     this.JwtValidationPubkeys != null &&
                     input.JwtValidationPubkeys != null &&
                     this.JwtValidationPubkeys.SequenceEqual(input.JwtValidationPubkeys)
-                ) && 
+                ) &&
                 (
                     this.NamespaceInState == input.NamespaceInState ||
                     this.NamespaceInState.Equals(input.NamespaceInState)
-                ) && 
+                ) &&
                 (
                     this.OidcClientId == input.OidcClientId ||
                     (this.OidcClientId != null &&
                     this.OidcClientId.Equals(input.OidcClientId))
-                ) && 
+                ) &&
                 (
                     this.OidcClientSecret == input.OidcClientSecret ||
                     (this.OidcClientSecret != null &&
                     this.OidcClientSecret.Equals(input.OidcClientSecret))
-                ) && 
+                ) &&
                 (
                     this.OidcDiscoveryCaPem == input.OidcDiscoveryCaPem ||
                     (this.OidcDiscoveryCaPem != null &&
                     this.OidcDiscoveryCaPem.Equals(input.OidcDiscoveryCaPem))
-                ) && 
+                ) &&
                 (
                     this.OidcDiscoveryUrl == input.OidcDiscoveryUrl ||
                     (this.OidcDiscoveryUrl != null &&
                     this.OidcDiscoveryUrl.Equals(input.OidcDiscoveryUrl))
-                ) && 
+                ) &&
                 (
                     this.OidcResponseMode == input.OidcResponseMode ||
                     (this.OidcResponseMode != null &&
                     this.OidcResponseMode.Equals(input.OidcResponseMode))
-                ) && 
+                ) &&
                 (
                     this.OidcResponseTypes == input.OidcResponseTypes ||
                     this.OidcResponseTypes != null &&
                     input.OidcResponseTypes != null &&
                     this.OidcResponseTypes.SequenceEqual(input.OidcResponseTypes)
-                ) && 
+                ) &&
                 (
                     this.ProviderConfig == input.ProviderConfig ||
                     (this.ProviderConfig != null &&

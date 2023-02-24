@@ -260,86 +260,86 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.BindSecretId == input.BindSecretId ||
                     this.BindSecretId.Equals(input.BindSecretId)
-                ) && 
+                ) &&
                 (
                     this.BoundCidrList == input.BoundCidrList ||
                     this.BoundCidrList != null &&
                     input.BoundCidrList != null &&
                     this.BoundCidrList.SequenceEqual(input.BoundCidrList)
-                ) && 
+                ) &&
                 (
                     this.LocalSecretIds == input.LocalSecretIds ||
                     this.LocalSecretIds.Equals(input.LocalSecretIds)
-                ) && 
+                ) &&
                 (
                     this.Period == input.Period ||
                     this.Period.Equals(input.Period)
-                ) && 
+                ) &&
                 (
                     this.Policies == input.Policies ||
                     this.Policies != null &&
                     input.Policies != null &&
                     this.Policies.SequenceEqual(input.Policies)
-                ) && 
+                ) &&
                 (
                     this.RoleId == input.RoleId ||
                     (this.RoleId != null &&
                     this.RoleId.Equals(input.RoleId))
-                ) && 
+                ) &&
                 (
                     this.SecretIdBoundCidrs == input.SecretIdBoundCidrs ||
                     this.SecretIdBoundCidrs != null &&
                     input.SecretIdBoundCidrs != null &&
                     this.SecretIdBoundCidrs.SequenceEqual(input.SecretIdBoundCidrs)
-                ) && 
+                ) &&
                 (
                     this.SecretIdNumUses == input.SecretIdNumUses ||
                     this.SecretIdNumUses.Equals(input.SecretIdNumUses)
-                ) && 
+                ) &&
                 (
                     this.SecretIdTtl == input.SecretIdTtl ||
                     this.SecretIdTtl.Equals(input.SecretIdTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenBoundCidrs == input.TokenBoundCidrs ||
                     this.TokenBoundCidrs != null &&
                     input.TokenBoundCidrs != null &&
                     this.TokenBoundCidrs.SequenceEqual(input.TokenBoundCidrs)
-                ) && 
+                ) &&
                 (
                     this.TokenExplicitMaxTtl == input.TokenExplicitMaxTtl ||
                     this.TokenExplicitMaxTtl.Equals(input.TokenExplicitMaxTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenMaxTtl == input.TokenMaxTtl ||
                     this.TokenMaxTtl.Equals(input.TokenMaxTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenNoDefaultPolicy == input.TokenNoDefaultPolicy ||
                     this.TokenNoDefaultPolicy.Equals(input.TokenNoDefaultPolicy)
-                ) && 
+                ) &&
                 (
                     this.TokenNumUses == input.TokenNumUses ||
                     this.TokenNumUses.Equals(input.TokenNumUses)
-                ) && 
+                ) &&
                 (
                     this.TokenPeriod == input.TokenPeriod ||
                     this.TokenPeriod.Equals(input.TokenPeriod)
-                ) && 
+                ) &&
                 (
                     this.TokenPolicies == input.TokenPolicies ||
                     this.TokenPolicies != null &&
                     input.TokenPolicies != null &&
                     this.TokenPolicies.SequenceEqual(input.TokenPolicies)
-                ) && 
+                ) &&
                 (
                     this.TokenTtl == input.TokenTtl ||
                     this.TokenTtl.Equals(input.TokenTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenType == input.TokenType ||
                     (this.TokenType != null &&

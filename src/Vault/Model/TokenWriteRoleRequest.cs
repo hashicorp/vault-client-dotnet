@@ -250,86 +250,86 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AllowedEntityAliases == input.AllowedEntityAliases ||
                     this.AllowedEntityAliases != null &&
                     input.AllowedEntityAliases != null &&
                     this.AllowedEntityAliases.SequenceEqual(input.AllowedEntityAliases)
-                ) && 
+                ) &&
                 (
                     this.AllowedPolicies == input.AllowedPolicies ||
                     this.AllowedPolicies != null &&
                     input.AllowedPolicies != null &&
                     this.AllowedPolicies.SequenceEqual(input.AllowedPolicies)
-                ) && 
+                ) &&
                 (
                     this.AllowedPoliciesGlob == input.AllowedPoliciesGlob ||
                     this.AllowedPoliciesGlob != null &&
                     input.AllowedPoliciesGlob != null &&
                     this.AllowedPoliciesGlob.SequenceEqual(input.AllowedPoliciesGlob)
-                ) && 
+                ) &&
                 (
                     this.BoundCidrs == input.BoundCidrs ||
                     this.BoundCidrs != null &&
                     input.BoundCidrs != null &&
                     this.BoundCidrs.SequenceEqual(input.BoundCidrs)
-                ) && 
+                ) &&
                 (
                     this.DisallowedPolicies == input.DisallowedPolicies ||
                     this.DisallowedPolicies != null &&
                     input.DisallowedPolicies != null &&
                     this.DisallowedPolicies.SequenceEqual(input.DisallowedPolicies)
-                ) && 
+                ) &&
                 (
                     this.DisallowedPoliciesGlob == input.DisallowedPoliciesGlob ||
                     this.DisallowedPoliciesGlob != null &&
                     input.DisallowedPoliciesGlob != null &&
                     this.DisallowedPoliciesGlob.SequenceEqual(input.DisallowedPoliciesGlob)
-                ) && 
+                ) &&
                 (
                     this.ExplicitMaxTtl == input.ExplicitMaxTtl ||
                     this.ExplicitMaxTtl.Equals(input.ExplicitMaxTtl)
-                ) && 
+                ) &&
                 (
                     this.Orphan == input.Orphan ||
                     this.Orphan.Equals(input.Orphan)
-                ) && 
+                ) &&
                 (
                     this.PathSuffix == input.PathSuffix ||
                     (this.PathSuffix != null &&
                     this.PathSuffix.Equals(input.PathSuffix))
-                ) && 
+                ) &&
                 (
                     this.Period == input.Period ||
                     this.Period.Equals(input.Period)
-                ) && 
+                ) &&
                 (
                     this.Renewable == input.Renewable ||
                     this.Renewable.Equals(input.Renewable)
-                ) && 
+                ) &&
                 (
                     this.TokenBoundCidrs == input.TokenBoundCidrs ||
                     this.TokenBoundCidrs != null &&
                     input.TokenBoundCidrs != null &&
                     this.TokenBoundCidrs.SequenceEqual(input.TokenBoundCidrs)
-                ) && 
+                ) &&
                 (
                     this.TokenExplicitMaxTtl == input.TokenExplicitMaxTtl ||
                     this.TokenExplicitMaxTtl.Equals(input.TokenExplicitMaxTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenNoDefaultPolicy == input.TokenNoDefaultPolicy ||
                     this.TokenNoDefaultPolicy.Equals(input.TokenNoDefaultPolicy)
-                ) && 
+                ) &&
                 (
                     this.TokenNumUses == input.TokenNumUses ||
                     this.TokenNumUses.Equals(input.TokenNumUses)
-                ) && 
+                ) &&
                 (
                     this.TokenPeriod == input.TokenPeriod ||
                     this.TokenPeriod.Equals(input.TokenPeriod)
-                ) && 
+                ) &&
                 (
                     this.TokenType == input.TokenType ||
                     (this.TokenType != null &&

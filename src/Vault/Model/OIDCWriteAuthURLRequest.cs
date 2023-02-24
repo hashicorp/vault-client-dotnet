@@ -106,17 +106,17 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.ClientNonce == input.ClientNonce ||
                     (this.ClientNonce != null &&
                     this.ClientNonce.Equals(input.ClientNonce))
-                ) && 
+                ) &&
                 (
                     this.RedirectUri == input.RedirectUri ||
                     (this.RedirectUri != null &&
                     this.RedirectUri.Equals(input.RedirectUri))
-                ) && 
+                ) &&
                 (
                     this.Role == input.Role ||
                     (this.Role != null &&

@@ -570,222 +570,222 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AllowAnyName == input.AllowAnyName ||
                     this.AllowAnyName.Equals(input.AllowAnyName)
-                ) && 
+                ) &&
                 (
                     this.AllowBareDomains == input.AllowBareDomains ||
                     this.AllowBareDomains.Equals(input.AllowBareDomains)
-                ) && 
+                ) &&
                 (
                     this.AllowGlobDomains == input.AllowGlobDomains ||
                     this.AllowGlobDomains.Equals(input.AllowGlobDomains)
-                ) && 
+                ) &&
                 (
                     this.AllowIpSans == input.AllowIpSans ||
                     this.AllowIpSans.Equals(input.AllowIpSans)
-                ) && 
+                ) &&
                 (
                     this.AllowLocalhost == input.AllowLocalhost ||
                     this.AllowLocalhost.Equals(input.AllowLocalhost)
-                ) && 
+                ) &&
                 (
                     this.AllowSubdomains == input.AllowSubdomains ||
                     this.AllowSubdomains.Equals(input.AllowSubdomains)
-                ) && 
+                ) &&
                 (
                     this.AllowWildcardCertificates == input.AllowWildcardCertificates ||
                     this.AllowWildcardCertificates.Equals(input.AllowWildcardCertificates)
-                ) && 
+                ) &&
                 (
                     this.AllowedDomains == input.AllowedDomains ||
                     this.AllowedDomains != null &&
                     input.AllowedDomains != null &&
                     this.AllowedDomains.SequenceEqual(input.AllowedDomains)
-                ) && 
+                ) &&
                 (
                     this.AllowedDomainsTemplate == input.AllowedDomainsTemplate ||
                     this.AllowedDomainsTemplate.Equals(input.AllowedDomainsTemplate)
-                ) && 
+                ) &&
                 (
                     this.AllowedOtherSans == input.AllowedOtherSans ||
                     this.AllowedOtherSans != null &&
                     input.AllowedOtherSans != null &&
                     this.AllowedOtherSans.SequenceEqual(input.AllowedOtherSans)
-                ) && 
+                ) &&
                 (
                     this.AllowedSerialNumbers == input.AllowedSerialNumbers ||
                     this.AllowedSerialNumbers != null &&
                     input.AllowedSerialNumbers != null &&
                     this.AllowedSerialNumbers.SequenceEqual(input.AllowedSerialNumbers)
-                ) && 
+                ) &&
                 (
                     this.AllowedUriSans == input.AllowedUriSans ||
                     this.AllowedUriSans != null &&
                     input.AllowedUriSans != null &&
                     this.AllowedUriSans.SequenceEqual(input.AllowedUriSans)
-                ) && 
+                ) &&
                 (
                     this.AllowedUriSansTemplate == input.AllowedUriSansTemplate ||
                     this.AllowedUriSansTemplate.Equals(input.AllowedUriSansTemplate)
-                ) && 
+                ) &&
                 (
                     this.Backend == input.Backend ||
                     (this.Backend != null &&
                     this.Backend.Equals(input.Backend))
-                ) && 
+                ) &&
                 (
                     this.BasicConstraintsValidForNonCa == input.BasicConstraintsValidForNonCa ||
                     this.BasicConstraintsValidForNonCa.Equals(input.BasicConstraintsValidForNonCa)
-                ) && 
+                ) &&
                 (
                     this.ClientFlag == input.ClientFlag ||
                     this.ClientFlag.Equals(input.ClientFlag)
-                ) && 
+                ) &&
                 (
                     this.CnValidations == input.CnValidations ||
                     this.CnValidations != null &&
                     input.CnValidations != null &&
                     this.CnValidations.SequenceEqual(input.CnValidations)
-                ) && 
+                ) &&
                 (
                     this.CodeSigningFlag == input.CodeSigningFlag ||
                     this.CodeSigningFlag.Equals(input.CodeSigningFlag)
-                ) && 
+                ) &&
                 (
                     this.Country == input.Country ||
                     this.Country != null &&
                     input.Country != null &&
                     this.Country.SequenceEqual(input.Country)
-                ) && 
+                ) &&
                 (
                     this.EmailProtectionFlag == input.EmailProtectionFlag ||
                     this.EmailProtectionFlag.Equals(input.EmailProtectionFlag)
-                ) && 
+                ) &&
                 (
                     this.EnforceHostnames == input.EnforceHostnames ||
                     this.EnforceHostnames.Equals(input.EnforceHostnames)
-                ) && 
+                ) &&
                 (
                     this.ExtKeyUsage == input.ExtKeyUsage ||
                     this.ExtKeyUsage != null &&
                     input.ExtKeyUsage != null &&
                     this.ExtKeyUsage.SequenceEqual(input.ExtKeyUsage)
-                ) && 
+                ) &&
                 (
                     this.ExtKeyUsageOids == input.ExtKeyUsageOids ||
                     this.ExtKeyUsageOids != null &&
                     input.ExtKeyUsageOids != null &&
                     this.ExtKeyUsageOids.SequenceEqual(input.ExtKeyUsageOids)
-                ) && 
+                ) &&
                 (
                     this.GenerateLease == input.GenerateLease ||
                     this.GenerateLease.Equals(input.GenerateLease)
-                ) && 
+                ) &&
                 (
                     this.IssuerRef == input.IssuerRef ||
                     (this.IssuerRef != null &&
                     this.IssuerRef.Equals(input.IssuerRef))
-                ) && 
+                ) &&
                 (
                     this.KeyBits == input.KeyBits ||
                     this.KeyBits.Equals(input.KeyBits)
-                ) && 
+                ) &&
                 (
                     this.KeyType == input.KeyType ||
                     this.KeyType.Equals(input.KeyType)
-                ) && 
+                ) &&
                 (
                     this.KeyUsage == input.KeyUsage ||
                     this.KeyUsage != null &&
                     input.KeyUsage != null &&
                     this.KeyUsage.SequenceEqual(input.KeyUsage)
-                ) && 
+                ) &&
                 (
                     this.Locality == input.Locality ||
                     this.Locality != null &&
                     input.Locality != null &&
                     this.Locality.SequenceEqual(input.Locality)
-                ) && 
+                ) &&
                 (
                     this.MaxTtl == input.MaxTtl ||
                     this.MaxTtl.Equals(input.MaxTtl)
-                ) && 
+                ) &&
                 (
                     this.NoStore == input.NoStore ||
                     this.NoStore.Equals(input.NoStore)
-                ) && 
+                ) &&
                 (
                     this.NotAfter == input.NotAfter ||
                     (this.NotAfter != null &&
                     this.NotAfter.Equals(input.NotAfter))
-                ) && 
+                ) &&
                 (
                     this.NotBeforeDuration == input.NotBeforeDuration ||
                     this.NotBeforeDuration.Equals(input.NotBeforeDuration)
-                ) && 
+                ) &&
                 (
                     this.Organization == input.Organization ||
                     this.Organization != null &&
                     input.Organization != null &&
                     this.Organization.SequenceEqual(input.Organization)
-                ) && 
+                ) &&
                 (
                     this.Ou == input.Ou ||
                     this.Ou != null &&
                     input.Ou != null &&
                     this.Ou.SequenceEqual(input.Ou)
-                ) && 
+                ) &&
                 (
                     this.PolicyIdentifiers == input.PolicyIdentifiers ||
                     this.PolicyIdentifiers != null &&
                     input.PolicyIdentifiers != null &&
                     this.PolicyIdentifiers.SequenceEqual(input.PolicyIdentifiers)
-                ) && 
+                ) &&
                 (
                     this.PostalCode == input.PostalCode ||
                     this.PostalCode != null &&
                     input.PostalCode != null &&
                     this.PostalCode.SequenceEqual(input.PostalCode)
-                ) && 
+                ) &&
                 (
                     this.Province == input.Province ||
                     this.Province != null &&
                     input.Province != null &&
                     this.Province.SequenceEqual(input.Province)
-                ) && 
+                ) &&
                 (
                     this.RequireCn == input.RequireCn ||
                     this.RequireCn.Equals(input.RequireCn)
-                ) && 
+                ) &&
                 (
                     this.ServerFlag == input.ServerFlag ||
                     this.ServerFlag.Equals(input.ServerFlag)
-                ) && 
+                ) &&
                 (
                     this.SignatureBits == input.SignatureBits ||
                     this.SignatureBits.Equals(input.SignatureBits)
-                ) && 
+                ) &&
                 (
                     this.StreetAddress == input.StreetAddress ||
                     this.StreetAddress != null &&
                     input.StreetAddress != null &&
                     this.StreetAddress.SequenceEqual(input.StreetAddress)
-                ) && 
+                ) &&
                 (
                     this.Ttl == input.Ttl ||
                     this.Ttl.Equals(input.Ttl)
-                ) && 
+                ) &&
                 (
                     this.UseCsrCommonName == input.UseCsrCommonName ||
                     this.UseCsrCommonName.Equals(input.UseCsrCommonName)
-                ) && 
+                ) &&
                 (
                     this.UseCsrSans == input.UseCsrSans ||
                     this.UseCsrSans.Equals(input.UseCsrSans)
-                ) && 
+                ) &&
                 (
                     this.UsePss == input.UsePss ||
                     this.UsePss.Equals(input.UsePss)

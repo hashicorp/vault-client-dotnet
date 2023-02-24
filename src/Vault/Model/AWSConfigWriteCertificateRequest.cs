@@ -97,12 +97,12 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AwsPublicCert == input.AwsPublicCert ||
                     (this.AwsPublicCert != null &&
                     this.AwsPublicCert.Equals(input.AwsPublicCert))
-                ) && 
+                ) &&
                 (
                     this.Type == input.Type ||
                     (this.Type != null &&

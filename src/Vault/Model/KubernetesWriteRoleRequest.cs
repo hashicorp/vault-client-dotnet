@@ -187,57 +187,57 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.AllowedKubernetesNamespaceSelector == input.AllowedKubernetesNamespaceSelector ||
                     (this.AllowedKubernetesNamespaceSelector != null &&
                     this.AllowedKubernetesNamespaceSelector.Equals(input.AllowedKubernetesNamespaceSelector))
-                ) && 
+                ) &&
                 (
                     this.AllowedKubernetesNamespaces == input.AllowedKubernetesNamespaces ||
                     this.AllowedKubernetesNamespaces != null &&
                     input.AllowedKubernetesNamespaces != null &&
                     this.AllowedKubernetesNamespaces.SequenceEqual(input.AllowedKubernetesNamespaces)
-                ) && 
+                ) &&
                 (
                     this.ExtraAnnotations == input.ExtraAnnotations ||
                     (this.ExtraAnnotations != null &&
                     this.ExtraAnnotations.Equals(input.ExtraAnnotations))
-                ) && 
+                ) &&
                 (
                     this.ExtraLabels == input.ExtraLabels ||
                     (this.ExtraLabels != null &&
                     this.ExtraLabels.Equals(input.ExtraLabels))
-                ) && 
+                ) &&
                 (
                     this.GeneratedRoleRules == input.GeneratedRoleRules ||
                     (this.GeneratedRoleRules != null &&
                     this.GeneratedRoleRules.Equals(input.GeneratedRoleRules))
-                ) && 
+                ) &&
                 (
                     this.KubernetesRoleName == input.KubernetesRoleName ||
                     (this.KubernetesRoleName != null &&
                     this.KubernetesRoleName.Equals(input.KubernetesRoleName))
-                ) && 
+                ) &&
                 (
                     this.KubernetesRoleType == input.KubernetesRoleType ||
                     (this.KubernetesRoleType != null &&
                     this.KubernetesRoleType.Equals(input.KubernetesRoleType))
-                ) && 
+                ) &&
                 (
                     this.NameTemplate == input.NameTemplate ||
                     (this.NameTemplate != null &&
                     this.NameTemplate.Equals(input.NameTemplate))
-                ) && 
+                ) &&
                 (
                     this.ServiceAccountName == input.ServiceAccountName ||
                     (this.ServiceAccountName != null &&
                     this.ServiceAccountName.Equals(input.ServiceAccountName))
-                ) && 
+                ) &&
                 (
                     this.TokenDefaultTtl == input.TokenDefaultTtl ||
                     this.TokenDefaultTtl.Equals(input.TokenDefaultTtl)
-                ) && 
+                ) &&
                 (
                     this.TokenMaxTtl == input.TokenMaxTtl ||
                     this.TokenMaxTtl.Equals(input.TokenMaxTtl)

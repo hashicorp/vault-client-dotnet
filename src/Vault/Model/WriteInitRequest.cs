@@ -156,40 +156,40 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.PgpKeys == input.PgpKeys ||
                     this.PgpKeys != null &&
                     input.PgpKeys != null &&
                     this.PgpKeys.SequenceEqual(input.PgpKeys)
-                ) && 
+                ) &&
                 (
                     this.RecoveryPgpKeys == input.RecoveryPgpKeys ||
                     this.RecoveryPgpKeys != null &&
                     input.RecoveryPgpKeys != null &&
                     this.RecoveryPgpKeys.SequenceEqual(input.RecoveryPgpKeys)
-                ) && 
+                ) &&
                 (
                     this.RecoveryShares == input.RecoveryShares ||
                     this.RecoveryShares.Equals(input.RecoveryShares)
-                ) && 
+                ) &&
                 (
                     this.RecoveryThreshold == input.RecoveryThreshold ||
                     this.RecoveryThreshold.Equals(input.RecoveryThreshold)
-                ) && 
+                ) &&
                 (
                     this.RootTokenPgpKey == input.RootTokenPgpKey ||
                     (this.RootTokenPgpKey != null &&
                     this.RootTokenPgpKey.Equals(input.RootTokenPgpKey))
-                ) && 
+                ) &&
                 (
                     this.SecretShares == input.SecretShares ||
                     this.SecretShares.Equals(input.SecretShares)
-                ) && 
+                ) &&
                 (
                     this.SecretThreshold == input.SecretThreshold ||
                     this.SecretThreshold.Equals(input.SecretThreshold)
-                ) && 
+                ) &&
                 (
                     this.StoredShares == input.StoredShares ||
                     this.StoredShares.Equals(input.StoredShares)

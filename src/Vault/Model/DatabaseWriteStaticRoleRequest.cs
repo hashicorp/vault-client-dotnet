@@ -137,32 +137,32 @@ namespace Vault.Model
             {
                 return false;
             }
-            return 
+            return
                 (
                     this.CredentialConfig == input.CredentialConfig ||
                     (this.CredentialConfig != null &&
                     this.CredentialConfig.Equals(input.CredentialConfig))
-                ) && 
+                ) &&
                 (
                     this.CredentialType == input.CredentialType ||
                     (this.CredentialType != null &&
                     this.CredentialType.Equals(input.CredentialType))
-                ) && 
+                ) &&
                 (
                     this.DbName == input.DbName ||
                     (this.DbName != null &&
                     this.DbName.Equals(input.DbName))
-                ) && 
+                ) &&
                 (
                     this.RotationPeriod == input.RotationPeriod ||
                     this.RotationPeriod.Equals(input.RotationPeriod)
-                ) && 
+                ) &&
                 (
                     this.RotationStatements == input.RotationStatements ||
                     this.RotationStatements != null &&
                     input.RotationStatements != null &&
                     this.RotationStatements.SequenceEqual(input.RotationStatements)
-                ) && 
+                ) &&
                 (
                     this.Username == input.Username ||
                     (this.Username != null &&
