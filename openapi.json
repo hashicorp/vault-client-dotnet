@@ -18990,7 +18990,7 @@
         }
       },
       "post": {
-        "operationId": "PkiWriteJson",
+        "operationId": "PKIWriteJSON",
         "tags": [
           "secrets"
         ],
@@ -18999,7 +18999,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PkiWriteJsonRequest"
+                "$ref": "#/components/schemas/PKIWriteJSONRequest"
               }
             }
           }
