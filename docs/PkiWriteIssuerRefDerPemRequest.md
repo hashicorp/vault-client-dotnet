@@ -1,4 +1,4 @@
-# Vault.Model.PkiWriteIssuerRefDerPemRequest
+# Vault.Model.PKIWriteIssuerRefDerPEMRequest
 
 ## Properties
 

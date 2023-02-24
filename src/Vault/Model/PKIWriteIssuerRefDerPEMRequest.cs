@@ -22,13 +22,13 @@ using FileParameter = Vault.Client.FileParameter;
 namespace Vault.Model
 {
     /// <summary>
-    /// PkiWriteIssuerRefDerPemRequest
+    /// PKIWriteIssuerRefDerPEMRequest
     /// </summary>
-    [DataContract(Name = "PkiWriteIssuerRefDerPemRequest")]
-    public partial class PkiWriteIssuerRefDerPemRequest : IEquatable<PkiWriteIssuerRefDerPemRequest>, IValidatableObject
+    [DataContract(Name = "PKIWriteIssuerRefDerPEMRequest")]
+    public partial class PKIWriteIssuerRefDerPEMRequest : IEquatable<PKIWriteIssuerRefDerPEMRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PkiWriteIssuerRefDerPemRequest" /> class.
+        /// Initializes a new instance of the <see cref="PKIWriteIssuerRefDerPEMRequest" /> class.
         /// </summary>
         /// <param name="crlDistributionPoints">Comma-separated list of URLs to be used for the CRL distribution points attribute. See also RFC 5280 Section 4.2.1.13..</param>
         /// <param name="enableAiaUrlTemplating">Whether or not to enabling templating of the above AIA fields. When templating is enabled the special values &#39;{{issuer_id}}&#39; and &#39;{{cluster_path}}&#39; are available, but the addresses are not checked for URL validity until issuance time. This requires /config/cluster&#39;s path to be set on all PR Secondary clusters. (default to false).</param>
@@ -39,7 +39,7 @@ namespace Vault.Model
         /// <param name="ocspServers">Comma-separated list of URLs to be used for the OCSP servers attribute. See also RFC 5280 Section 4.2.2.1..</param>
         /// <param name="revocationSignatureAlgorithm">Which x509.SignatureAlgorithm name to use for signing CRLs. This parameter allows differentiation between PKCS#1v1.5 and PSS keys and choice of signature hash algorithm. The default (empty string) value is for Go to select the signature algorithm. This can fail if the underlying key does not support the requested signature algorithm, which may not be known at modification time (such as with PKCS#11 managed RSA keys). (default to &quot;&quot;).</param>
         /// <param name="usage">Comma-separated list (or string slice) of usages for this issuer; valid values are \&quot;read-only\&quot;, \&quot;issuing-certificates\&quot;, \&quot;crl-signing\&quot;, and \&quot;ocsp-signing\&quot;. Multiple values may be specified. Read-only is implicit and always set..</param>
-        public PkiWriteIssuerRefDerPemRequest(List<string> crlDistributionPoints = default(List<string>), bool enableAiaUrlTemplating = false, string issuerName = default(string), List<string> issuingCertificates = default(List<string>), string leafNotAfterBehavior = "err", List<string> manualChain = default(List<string>), List<string> ocspServers = default(List<string>), string revocationSignatureAlgorithm = "", List<string> usage = default(List<string>))
+        public PKIWriteIssuerRefDerPEMRequest(List<string> crlDistributionPoints = default(List<string>), bool enableAiaUrlTemplating = false, string issuerName = default(string), List<string> issuingCertificates = default(List<string>), string leafNotAfterBehavior = "err", List<string> manualChain = default(List<string>), List<string> ocspServers = default(List<string>), string revocationSignatureAlgorithm = "", List<string> usage = default(List<string>))
         {
             this.CrlDistributionPoints = crlDistributionPoints;
             this.EnableAiaUrlTemplating = enableAiaUrlTemplating;
@@ -124,7 +124,7 @@ namespace Vault.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PkiWriteIssuerRefDerPemRequest {\n");
+            sb.Append("class PKIWriteIssuerRefDerPEMRequest {\n");
             sb.Append("  CrlDistributionPoints: ").Append(CrlDistributionPoints).Append("\n");
             sb.Append("  EnableAiaUrlTemplating: ").Append(EnableAiaUrlTemplating).Append("\n");
             sb.Append("  IssuerName: ").Append(IssuerName).Append("\n");
@@ -154,15 +154,15 @@ namespace Vault.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PkiWriteIssuerRefDerPemRequest);
+            return this.Equals(input as PKIWriteIssuerRefDerPEMRequest);
         }
 
         /// <summary>
-        /// Returns true if PkiWriteIssuerRefDerPemRequest instances are equal
+        /// Returns true if PKIWriteIssuerRefDerPEMRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of PkiWriteIssuerRefDerPemRequest to be compared</param>
+        /// <param name="input">Instance of PKIWriteIssuerRefDerPEMRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PkiWriteIssuerRefDerPemRequest input)
+        public bool Equals(PKIWriteIssuerRefDerPEMRequest input)
         {
             if (input == null)
             {

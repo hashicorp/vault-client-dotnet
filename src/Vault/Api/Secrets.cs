@@ -4917,6 +4917,25 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pKIWriteIssuerRefDerPEMRequest"></param>
+        /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
+        /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        VaultResponse<Object> PKIWriteIssuerRefDerPEM(string issuerRef, PKIWriteIssuerRefDerPEMRequest pKIWriteIssuerRefDerPEMRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pKIWriteIssuersConfigRequest"></param>
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -5211,25 +5230,6 @@ namespace Vault.Api
         /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
         /// </param>
         VaultResponse<Object> PkiReadPem(string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiWriteIssuerRefDerPemRequest"></param>
-        /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
-        /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        VaultResponse<Object> PkiWriteIssuerRefDerPem(string issuerRef, PkiWriteIssuerRefDerPemRequest pkiWriteIssuerRefDerPemRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null);
         /// <summary>
         /// Manage the roles that can be created with this backend.
         /// </summary>
@@ -12089,6 +12089,27 @@ namespace Vault.Api
         /// 
         /// </remarks>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pKIWriteIssuerRefDerPEMRequest"></param>
+        /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
+        /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        Task<VaultResponse<Object>> PKIWriteIssuerRefDerPEMAsync(string issuerRef, PKIWriteIssuerRefDerPEMRequest pKIWriteIssuerRefDerPEMRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pKIWriteIssuersConfigRequest"></param>
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <param name="wrapTTL">
@@ -12416,27 +12437,6 @@ namespace Vault.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of VaultResponse</returns>
         Task<VaultResponse<Object>> PkiReadPemAsync(string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiWriteIssuerRefDerPemRequest"></param>
-        /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
-        /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        Task<VaultResponse<Object>> PkiWriteIssuerRefDerPemAsync(string issuerRef, PkiWriteIssuerRefDerPemRequest pkiWriteIssuerRefDerPemRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Manage the roles that can be created with this backend.
@@ -46893,6 +46893,140 @@ namespace Vault.Api
         ///  
         /// </summary>
         /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pKIWriteIssuerRefDerPEMRequest"></param>
+        /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
+        /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
+        /// <returns>VaultResponse of Object(void)</returns>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        public VaultResponse<Object> PKIWriteIssuerRefDerPEM(string issuerRef, PKIWriteIssuerRefDerPEMRequest pKIWriteIssuerRefDerPEMRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
+        {
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PKIWriteIssuerRefDerPEM");
+
+            // verify the required parameter 'pKIWriteIssuerRefDerPEMRequest' is set
+            if (pKIWriteIssuerRefDerPEMRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pKIWriteIssuerRefDerPEMRequest' when calling Secrets->PKIWriteIssuerRefDerPEM");
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+            if (pkiMountPath != null)
+            {
+                requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+            }
+            requestOptions.Data = pKIWriteIssuerRefDerPEMRequest;
+
+            // make the HTTP request
+            var response = this.Client.Post<Object>("/{pki_mount_path}/{issuer_ref}/der|/pem", requestOptions);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PKIWriteIssuerRefDerPEM", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
+        /// <param name="pKIWriteIssuerRefDerPEMRequest"></param>
+        /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
+        /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
+        /// <param name="wrapTTL">
+        /// Sets the X-Vault-Wrap-TTL Header
+        /// <remarks>
+        /// This will take precedence over client level wrapTTL value
+        /// </remarks>
+        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
+        /// </param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of VaultResponse</returns>
+        public async Task<VaultResponse<Object>> PKIWriteIssuerRefDerPEMAsync(string issuerRef, PKIWriteIssuerRefDerPEMRequest pKIWriteIssuerRefDerPEMRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'issuerRef' is set
+            if (issuerRef == null)
+                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PKIWriteIssuerRefDerPEM");
+
+            // verify the required parameter 'pKIWriteIssuerRefDerPEMRequest' is set
+            if (pKIWriteIssuerRefDerPEMRequest == null)
+                throw new VaultApiException(400, "Missing required parameter 'pKIWriteIssuerRefDerPEMRequest' when calling Secrets->PKIWriteIssuerRefDerPEM");
+
+
+            RequestOptions requestOptions = new RequestOptions();
+
+            if (wrapTTL != null)
+            {
+                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
+            }
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
+
+            var accept = ClientUtils.SelectHeaderAccept(_accepts);
+            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
+
+            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
+            if (pkiMountPath != null)
+            {
+                requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
+            }
+            requestOptions.Data = pKIWriteIssuerRefDerPEMRequest;
+
+            // make the HTTP request
+            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/{issuer_ref}/der|/pem", requestOptions, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception exception = this.ExceptionFactory("PKIWriteIssuerRefDerPEM", response);
+                if (exception != null) throw exception;
+            }
+
+            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
+        }
+
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
         /// <param name="pKIWriteIssuersConfigRequest"></param>
         /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
         /// <returns>VaultResponse of Object(void)</returns>
@@ -48876,140 +49010,6 @@ namespace Vault.Api
             if (this.ExceptionFactory != null)
             {
                 Exception exception = this.ExceptionFactory("PkiReadPem", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiWriteIssuerRefDerPemRequest"></param>
-        /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
-        /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
-        /// <returns>VaultResponse of Object(void)</returns>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        public VaultResponse<Object> PkiWriteIssuerRefDerPem(string issuerRef, PkiWriteIssuerRefDerPemRequest pkiWriteIssuerRefDerPemRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null)
-        {
-            // verify the required parameter 'issuerRef' is set
-            if (issuerRef == null)
-                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerRefDerPem");
-
-            // verify the required parameter 'pkiWriteIssuerRefDerPemRequest' is set
-            if (pkiWriteIssuerRefDerPemRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerRefDerPemRequest' when calling Secrets->PkiWriteIssuerRefDerPem");
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
-            if (pkiMountPath != null)
-            {
-                requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
-            }
-            requestOptions.Data = pkiWriteIssuerRefDerPemRequest;
-
-            // make the HTTP request
-            var response = this.Client.Post<Object>("/{pki_mount_path}/{issuer_ref}/der|/pem", requestOptions);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("PkiWriteIssuerRefDerPem", response);
-                if (exception != null) throw exception;
-            }
-
-            return ClientUtils.ToVaultResponse<Object>(response.RawContent);
-        }
-
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="VaultApiException">Thrown when fails to make API call</exception>
-        /// <param name="pkiWriteIssuerRefDerPemRequest"></param>
-        /// <param name="issuerRef">Reference to a existing issuer; either \&quot;default\&quot; for the configured default issuer, an identifier or the name assigned to the issuer.</param>
-        /// <param name="pkiMountPath">Path where the backend was mounted; the endpoint path will be offset by the mount path (optional, default to &quot;pki&quot;)</param>
-        /// <param name="wrapTTL">
-        /// Sets the X-Vault-Wrap-TTL Header
-        /// <remarks>
-        /// This will take precedence over client level wrapTTL value
-        /// </remarks>
-        /// <see href="See https://www.vaultproject.io/docs/concepts/response-wrapping">Vault Response Wrapping</see>
-        /// </param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of VaultResponse</returns>
-        public async Task<VaultResponse<Object>> PkiWriteIssuerRefDerPemAsync(string issuerRef, PkiWriteIssuerRefDerPemRequest pkiWriteIssuerRefDerPemRequest, string pkiMountPath = "pki", TimeSpan? wrapTTL = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'issuerRef' is set
-            if (issuerRef == null)
-                throw new VaultApiException(400, "Missing required parameter 'issuerRef' when calling Secrets->PkiWriteIssuerRefDerPem");
-
-            // verify the required parameter 'pkiWriteIssuerRefDerPemRequest' is set
-            if (pkiWriteIssuerRefDerPemRequest == null)
-                throw new VaultApiException(400, "Missing required parameter 'pkiWriteIssuerRefDerPemRequest' when calling Secrets->PkiWriteIssuerRefDerPem");
-
-
-            RequestOptions requestOptions = new RequestOptions();
-
-            if (wrapTTL != null)
-            {
-                requestOptions.HeaderParameters.Add("X-Vault-Wrap-TTL", wrapTTL.Value.TotalSeconds.ToString());
-            }
-
-            string[] _contentTypes = new string[] {
-                "application/json"
-            };
-
-            // to determine the Accept header
-            string[] _accepts = new string[] {
-            };
-
-            var contentType = ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (contentType != null) requestOptions.HeaderParameters.Add("Content-Type", contentType);
-
-            var accept = ClientUtils.SelectHeaderAccept(_accepts);
-            if (accept != null) requestOptions.HeaderParameters.Add("Accept", accept);
-
-            requestOptions.PathParameters.Add("issuer_ref", ClientUtils.ParameterToString(issuerRef)); // path parameter
-            if (pkiMountPath != null)
-            {
-                requestOptions.PathParameters.Add("pki_mount_path", ClientUtils.ParameterToString(pkiMountPath)); // path parameter
-            }
-            requestOptions.Data = pkiWriteIssuerRefDerPemRequest;
-
-            // make the HTTP request
-            var response = await this.AsynchronousClient.PostAsync<Object>("/{pki_mount_path}/{issuer_ref}/der|/pem", requestOptions, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception exception = this.ExceptionFactory("PkiWriteIssuerRefDerPem", response);
                 if (exception != null) throw exception;
             }
 
