@@ -52,3 +52,6 @@ jobs:
         run: |
           make format
           cat  src/Vault.Test/Model/PKIWriteJSONRequestTests.cs
+      - name: final check
+        run: |
+          cat  src/Vault.Test/Model/PKIWriteJSONRequestTests.cs 
