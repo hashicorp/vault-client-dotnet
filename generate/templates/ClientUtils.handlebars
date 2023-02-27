@@ -10,9 +10,6 @@ using System.Net.Http;
 using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
-{{#if useCompareNetObjects}}
-using KellermanSoftware.CompareNetObjects;
-{{/if}}
 
 namespace {{packageName}}.Client
 {
@@ -21,21 +18,6 @@ namespace {{packageName}}.Client
     /// </summary>
     public static class ClientUtils
     {
-        {{#if useCompareNetObjects}}
-        /// <summary>
-        /// An instance of CompareLogic.
-        /// </summary>
-        public static CompareLogic compareLogic;
-
-        /// <summary>
-        /// Static constructor to initialise compareLogic.
-        /// </summary>
-        static ClientUtils()
-        {
-            compareLogic = new CompareLogic();
-        }
-        {{/if}}
-
         /// <summary>
         /// Clones the given HttpRequestMessage and returns a new copy of Http request
         /// </summary>
