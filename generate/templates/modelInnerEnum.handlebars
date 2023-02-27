@@ -18,7 +18,7 @@
             {{#if isString}}
             [EnumMember(Value = "{{{value}}}")]
             {{/if}}
-            {{name}}{{#unless isString}} = {{{value}}}{{/unless}}{{#if isString}} = {{-index}}{{/if}}{{#unless @last}},{{/unless}}
+            {{name}}{{#unless isString}} = {{{value}}}{{/unless}}{{#if isString}} = {{@index}}{{/if}}{{#unless @last}},{{/unless}}
 
             {{/each}}
             {{/each}}
